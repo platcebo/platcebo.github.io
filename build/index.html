@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>tripmir</title>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container-nd">
+            <div class="humburger__wrapper">
+                <div class="humburger">
+                    <span></span>
+                </div>
+                <div class="humburger__list">
+                    <a href="#">Войти</a>
+                    <ul>
+                        <li><a href="#">Маршруты</a></li>
+                        <li><a href="#">Туры</a></li>
+                        <li><a href="#">Объявления</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Разместить маршрут</a></li>
+                        <li><a href="#">Разместить тур</a></li>
+                        <li><a href="#">Разместить отчет</a></li>
+                    </ul>
+                </div>
+                <div class="humburger__overflow"></div>
+            </div>
+            <a href="#">
+                <img src="img/nav_logo.svg" alt="tripmir - логотип" title="главная tripmir" class="nav__logo">
+            </a>
+            <ul>
+                <li><a href="#">Туры</a></li>
+                <li><a href="#">Маршруты</a></li>
+                <li><a href="#">Объявления</a></li>
+                <li><a href="#">Блог</a></li>
+                <li class="nav__dropdown">
+                    Разместить
+                    <ol>
+                        <li><a href="#">Тур</a></li>
+                        <li><a href="#">Маршрут</a></li>
+                        <li><a href="#">Объявление</a></li>
+                        <li><a href="#">Отчет</a></li>
+                    </ol>
+                </li>
+            </ul>
+            <div class="nav__enter">
+                <p>Войти</p>
+                <a href="#"><img src="img/User.svg" alt="user" class="svg"></a>
+            </div>
+        </div>
+    </nav>
+    <header class="header">
+        <picture class="header__bg_wrapper">
+            <source srcset="img/header_bg_1920.jpg" media="(min-width: 1024px)">
+            <source srcset="img/header__bg_1920.webp" media="(min-width: 1024px)">
+            <source srcset="img/header_bg_1280.jpg" media="(min-width: 992p)">
+            <source srcset="img/header_bg_1280.webp" media="(min-width: 992p)">
+            <source srcset="img/header_bg_960.jpg" media="(min-width: 768px)">
+            <source srcset="img/header_bg_960.webp" media="(min-width: 768px)">
+            <source srcset="img/header_bg_720.jpg" media="(min-width: 576px)">
+            <source srcset="img/header_bg_720.webp" media="(min-width: 576px)">
+            <source srcset="img/header_bg_360.jpg" media="(min-width: 260px)">
+            <source srcset="img/header_bg_360.webp" media="(min-width: 260px)">
+            <img src="img/header__bg_1920.webp" alt="Сообщество туристов & Маркетплейс туров и маршрутов - фото" title="Сообщество туристов & Маркетплейс туров и маршрутов - изображение" class="header__bg">
+        </picture>
+        <div class="container-nd">
+            <h1>Tripmir — отдыхай и зарабатывай в приключениях</h1>
+            <h2>Сообщество туристов & Маркетплейс туров и маршрутов</h2>
+            <form action="#" class="header__form">
+                <div class="header__check_wrapper">
+                    <div class="">
+                        <input type="radio" class="header__check" name="header__check" id="header__check_2">
+                        <label for="header__check_2">Маршруты</label>
+                    </div>
+                    <div class="">
+                        <input type="radio" class="header__check" name="header__check" id="header__check_1">
+                        <label for="header__check_1">Туры</label>
+                    </div>
+                </div>
+                <div class="header__close"></div>
+                <select name="header__select" id="header__select">
+                    <option data-display="Туры">Туры</option>
+                    <option value="1">Маршруты</option>
+                </select>
+                <div class="header__input_wrapper">
+                    <input type="text" class="header__input" placeholder="Куда в приключение?" id="header__input">
+                    <ul>
+                        <li>Вариант 1</li>
+                        <li>Вариант 2</li>
+                        <li>Вариант 3</li>
+                    </ul>
+                </div>
+                <button class="header__btn"><img src="img/header_btn.svg" alt="" class="svg"></button>
+            </form>
+            <button class="header__open">Куда в приключение?</button>
+        </div>
+    </header>
+    <section class="adventure">
+        <div class="container-nd">
+            <h3>Отдыхай в приключениях</h3>
+            <div class="adventure__wrapper">
+                <div class="adventure__item">
+                    <a href="#">
+                        <picture>
+                            <source srcset="img/adventure_1.webp">
+                            <img src="img/adventure_1.jpg" alt="Бронируй туры - фото" title="Бронируй туры - изображение">
+                        </picture>
+                    </a>
+                    <a href="#"><h2>Бронируй туры</h2></a>
+                    <p>у исполнителей без наценок</p>
+                </div>
+                <div class="adventure__item">
+                    <a href="#">
+                        <picture>
+                            <source srcset="img/adventure_2.webp">
+                            <img src="img/adventure_2.jpg" alt="Скачивай маршруты - фото" title="Скачивай маршруты - изображение">
+                        </picture>
+                    </a>
+                    <a href="#"><h2>Скачивай маршруты</h2></a>
+                    <p>с готовым треком и путеводителем</p>
+                </div>
+                <div class="adventure__item">
+                    <a href="#">
+                        <picture>
+                            <source srcset="img/adventure_3.webp">
+                            <img src="img/adventure_3.jpg" alt="Находи попутчиков - фото" title="Находи попутчиков - изображение">
+                        </picture>
+                    </a>
+                    <a href="#"><h2>Находи попутчиков</h2></a>
+                    <p>и рекламных партнеров</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="adventure">
+        <div class="container-nd">
+            <h3>Зарабатывай в приключениях</h3>
+            <div class="adventure__wrapper">
+                <div class="adventure__item">
+                    <a href="#">
+                        <picture>
+                            <source srcset="img/adventure_4.webp">
+                            <img src="img/adventure_4.jpg" alt="Размещай туры - фото" title="Размещай туры - изображение">
+                        </picture>
+                    </a>
+                    <a href="#" class="adventure__title">Размещай туры</a>
+                    <p>даже с открытыми контактами</p>
+                </div>
+                <div class="adventure__item">
+                    <a href="#">
+                        <picture>
+                            <source srcset="img/adventure_5.webp">
+                            <img src="img/adventure_5.jpg" alt="Размещай маршруты - фото" title="Размещай маршруты - изображение">
+                        </picture>
+                    </a>
+                    <a href="#" class="adventure__title">Размещай маршруты</a>
+                    <p>с готовым треком и путеводителем</p>
+                </div>
+                <div class="adventure__item">
+                    <a href="#">
+                        <picture>
+                            <source srcset="img/adventure_6.webp">
+                            <img src="img/adventure_6.jpg" alt="Публикуй отчеты - фото" title="Публикуй отчеты - изображение">
+                        </picture>
+                    </a>
+                    <a href="#" class="adventure__title">Публикуй отчеты </a>
+                    <p>и зарабатывай с показов рекламы</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="tape">
+        <div class="container-nd">
+            <h3><a href="#">Зарегистрируйся</a> и стань частью сообщества</h3>
+            <div class="tape__wrapper">
+                <div class="tape__item">
+                    <div class="tape__header">
+                        <a href="#">
+                            <picture>
+                                <source srcset="img/avatar_1.webp">
+                                <img src="img/avatar_1.jpg" alt="avatar">
+                            </picture>
+                        </a>
+                        <div class="tape__header_info">
+                            <p class="tape__name"><a href="#" class="tape__name_link">Клуб “Станник”</a> разместил новый тур</p>
+                            <p class="tape__date">28.07.2021 12:19</p>
+                        </div>
+                    </div>
+                    <div class="tape__slider_wrapper">
+                        <div class="tape__body tape__slider tape__discount">
+                            <div class="tape__slide">
+                                <a href="#" style="background-image: url(img/slider_1.webp);">
+                                </a>
+                            </div>
+                            <div class="tape__slide">
+                                <a href="#" style="background-image: url(img/slider_1.webp);">
+                                </a>
+                            </div>
+                            <div class="tape__slide">
+                                <a href="#" style="background-image: url(img/slider_1.webp);">
+                                </a>
+                            </div>
+                        </div>
+                        <a href="#" class="tape__slider_title"><h2>Активный уикенд в Крыму</h2></a>
+                    </div>
+                    <div class="tape__info">
+                        <div class="tape__info_header">
+                            <div class="tape__info_contact">
+                                <p><img src="img/map.svg" alt="map" class="svg">гора Ай-Петри</p>
+                                <p><img src="img/time.svg" alt="time" class="svg">25 дней</p>
+                            </div>
+                            <div class="tape__info_price">
+                                <p>24 000 ₽</p>
+                            </div>
+                        </div>
+                        <div class="tape__info_text">
+                            <p>Приглашаю в авторский турпоход без тяжелых рюкзаков в который включено все для вашего комфортного отдыха! Великолепные виды на бескрайнее море и горы с отвесными скалами, шум горной реки и свежий воздух будут вас...</p>
+                        </div>
+                    </div>
+                    <div class="tape__link">
+                        <div class="heart">
+                            <img src="img/heart.svg" alt="heart" class="svg">
+                        </div>
+                        <p>Присоединиться</p>
+                    </div>
+                </div>
+                <hr class="tape__line">
+                <div class="tape__item">
+                    <div class="tape__header">
+                        <a href="#">
+                            <picture>
+                                <source srcset="img/avatar_2.webp">
+                                <img src="img/avatar_2.jpg" alt="avatar">
+                            </picture>
+                        </a>
+                        <div class="tape__header_info">
+                            <p class="tape__name"><a href="#" class="tape__name_link">Юрий Жигалов</a> разместил(-а) новый маршрут</p>
+                            <p class="tape__date">28.07.2021 12:19</p>
+                        </div>
+                    </div>
+                    <div class="tape__slider_wrapper tape__status">
+                        <div class="tape__body tape__slider tape__companion tape__status">
+                            <div class="tape__slide">
+                                <a href="#" style="background-image: url(img/slider_2.webp);">
+                                </a>
+                            </div>
+                            <div class="tape__slide">
+                                <a href="#" style="background-image: url(img/slider_2.webp);">
+                                </a>
+                            </div>
+                            <div class="tape__slide">
+                                <a href="#" style="background-image: url(img/slider_2.webp);">
+                                </a>
+                            </div>
+                        </div>
+                        <a href="#" class="tape__slider_title"><h2>Тулымское кольцо</h2></a>
+                    </div>
+                    <div class="tape__info">
+                        <div class="tape__info_header">
+                            <div class="tape__info_contact">
+                                <p><img src="img/map.svg" alt="map" class="svg">гора Монблан</p>
+                                <p><img src="img/time.svg" alt="time" class="svg">12 дней</p>
+                            </div>
+                            <div class="tape__info_price">
+                                <p>200 ₽</p>
+                            </div>
+                        </div>
+                        <div class="tape__info_text">
+                            <p>Несложный и непродолжительный маршрут хорошо подходит начинающим туристам. Начало маршрута из д. Отнурок, где сдается большое количество домиков для отдыха. В теплое время года можно ночевать в палатках - у реки или на поляне...</p>
+                        </div>
+                    </div>
+                    <div class="tape__link">
+                        <div class="heart heart__2">
+                            <img src="img/heart.svg" alt="heart" class="svg">
+                        </div>
+                        <p>Скачать</p>
+                    </div>
+                </div>
+                <hr class="tape__line">
+                <div class="tape__item">
+                    <div class="tape__header">
+                        <a href="#">
+                            <picture>
+                                <source srcset="img/avatar_3.webp">
+                                <img src="img/avatar_3.jpg" alt="avatar">
+                            </picture>
+                        </a>
+                        <div class="tape__header_info">
+                            <p class="tape__name"><a href="#" class="tape__name_link">Дарья Янута</a> добавил(-а) новую статью</p>
+                            <p class="tape__date">28.07.2021 12:19</p>
+                        </div>
+                    </div>
+                    <div class="tape__body">
+                        <div class="tape__slide">
+                            <a href="#" style="background-image: url(img/slider_3.webp);">
+                                <h2>Отдых на озере Круглое Московской области около чудесного леса</h2>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tape__info">
+                        <div class="tape__info_text">
+                            <p>Несложный и непродолжительный маршрут хорошо подходит начинающим туристам. Начало маршрута из д. Отнурок, где сдается большое количество домиков для отдыха. В теплое время года можно ночевать в палатках - у реки или на поляне...</p>
+                        </div>
+                    </div>
+                    <div class="tape__link">
+                        <a href="#">
+                            <img src="img/Chat.svg" alt="heart" class="svg tape__svg">
+                        </a>
+                    </div>
+                </div>
+                <hr class="tape__line">
+                <div class="tape__item">
+                    <div class="tape__header">
+                        <a href="#">
+                            <picture>
+                                <source srcset="img/avatar_4.webp">
+                                <img src="img/avatar_4.jpg" alt="avatar">
+                            </picture>
+                        </a>
+                        <div class="tape__header_info">
+                            <p class="tape__name"><a href="#" class="tape__name_link">Ярослав Величенко</a> разместил(-а) объявление о поиске</p>
+                            <p class="tape__date">28.07.2021 12:19</p>
+                        </div>
+                    </div>
+                    <div class="tape__info">
+                        <div class="tape__info_header">
+                            <div class="tape__info_contact">
+                                <a href="#"><h2>Отдых у Чёрного моря с палаткой</h2></a>
+                                <p><img src="img/map.svg" alt="map" class="svg">берег Чёрного моря</p>
+                            </div>
+                        </div>
+                        <div class="tape__info_text">
+                            <p>Приглашаю в авторский турпоход без тяжелых рюкзаков, в который включено все для вашего комфортного отдыха! Великолепные виды на бескрайнее море и горы с отвесными скалами, шум горной реки и свежий воздух будут вас...</p>
+                        </div>
+                    </div>
+                    <div class="tape__link">
+                        <a href="#">
+                            <img src="img/Chat.svg" alt="heart" class="svg tape__svg">
+                        </a>
+                        <a href="#">
+                            <img src="img/message.svg" alt="" class="svg tape__svg">
+                        </a>
+                    </div>
+                </div>
+                <hr class="tape__line">
+                <div class="tape__item">
+                    <div class="tape__header">
+                        <a href="#">
+                            <picture>
+                                <source srcset="img/avatar_5.webp">
+                                <img src="img/avatar_5.jpg" alt="avatar">
+                            </picture>
+                        </a>
+                        <div class="tape__header_info">
+                            <p class="tape__name"><a href="#" class="tape__name_link">Дарья Берш</a> добавил(-а) комментарий к туру <a href="#" class="tape__name_comment">Тропа Предков (р. Хакасия)</a></p>
+                            <p class="tape__date">28.07.2021 12:19</p>
+                        </div>
+                    </div>
+                    <div class="tape__info">
+                        <div class="tape__info_text">
+                            <p>Приглашаю в авторский турпоход без тяжелых рюкзаков, в который включено все для вашего комфортного отдыха! Великолепные виды на бескрайнее море и горы с отвесными скалами, шум горной реки и свежий воздух будут вас...</p>
+                        </div>
+                    </div>
+                    <div class="tape__link">
+                        <a href="#">
+                            <img src="img/Chat.svg" alt="heart" class="svg tape__svg">
+                        </a>
+                    </div>
+                </div>
+                <hr class="tape__line">
+                <div class="tape__item">
+                    <div class="tape__header">
+                        <a href="#">
+                            <picture>
+                                <source srcset="img/avatar_2.webp">
+                                <img src="img/avatar_2.jpg" alt="avatar">
+                            </picture>
+                        </a>
+                        <div class="tape__header_info">
+                            <p class="tape__name"><a href="#" class="tape__name_link">Юрий Жигалов</a> стал(-а) участником сообщества</p>
+                            <p class="tape__date">28.07.2021 12:19</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tape__show">
+                    <a href="#">Показать еще</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-nd">
+        <div class="container-nd">
+            <div class="footer__wrapper">
+                <ul>
+                    <li>О нас</li>
+                    <li><a href="#">О проекте</a></li>
+                    <li><a href="#">Сотрудничество</a></li>
+                    <li><a href="#">Пользовательское соглашение</a></li>
+                    <li><a href="#">Конфиденциальность</a></li>
+                    <li><a href="#">ПоискПути Карты</a></li>
+                </ul>
+                <ul>
+                    <li>Информация</li>
+                    <li><a href="#">Жилье</a></li>
+                    <li><a href="#">ООПТ</a></li>
+                    <li><a href="#">Карта сайта</a></li>
+                </ul>
+                <ul>
+                    <li>Авторам</li>
+                    <li><a href="#">Туров</a></li>
+                    <li><a href="#">Маршрутов</a></li>
+                    <li><a href="#">Статей</a></li>
+                    <li><a href="#">Рекламодателям</a></li>
+                    <li><a href="#">Спецпредложения</a></li>
+                </ul>
+                <ul>
+                    <li>Поддержка</li>
+                    <li><a href="#">База знаний</a></li>
+                    <li><a href="#">Обратная связь</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__soc">
+                <a href="#"><img src="img/facebook.svg" alt="" class="svg"></a>
+                <a href="#"><img src="img/vk.svg" alt="" class="svg"></a>
+                <a href="#"><img src="img/Telegram.svg" alt="" class="svg"></a>
+                <a href="#"><img src="img/instagram.svg" alt="" class="svg"></a>
+            </div>
+            <div class="footer__subfooter">
+                <p>ПоискПути – официальный сайт © Все права защищены. 2021</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/jquery.nice-select.js"></script>
+    <script src="js/sсript.js"></script>
+</body>
+</html>
