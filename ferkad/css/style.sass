@@ -1,0 +1,763 @@
+.container
+    max-width: 1150px
+    margin: 0 auto
+    padding: 0 35px
+
+body
+    background: #12111a
+
+.nav
+    padding: 10px 0 0
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    .container
+        display: flex
+        justify-content: space-between
+        align-content: center
+    &__info
+        display: flex
+        gap: 30px
+        align-items: center
+        p
+            color: #ffffff;
+            font-family: Montserrat;
+            font-size: 17px;
+            font-weight: 300;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: 20.83px;
+            text-align: right;
+    &__contact
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        a
+            color: #ffffff;
+            font-family: Montserrat;
+            font-size: 17px;
+            font-weight: 300;
+            font-style: normal;
+            letter-spacing: normal;
+            &:nth-child(1)
+                font-size: 21px;
+                margin: 0 0 5px
+
+.nav-list
+    margin: 20px 0 0 auto
+    width: 60%
+    background-color: #ffffff;
+    position: relative
+    // overflow: hidden
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    gap: 30px
+    padding: 0 30px 0 20px
+    li
+        position: relative
+        z-index: 10
+    // &::after
+    //     content: ''
+    //     width: 100%
+    //     height: 100%
+    //     position: absolute
+    //     display: block
+    //     top: 4px
+    //     left: 4px
+    //     background-color: #626262;
+    //     opacity: 0.63;
+    //     z-index: -1
+    a
+        color: #000000;
+        font-family: Montserrat;
+        font-size: 21px;
+        font-weight: 300;
+        font-style: normal;
+        letter-spacing: normal;
+        transition: all .3s
+        padding: 10px
+        display: block
+    &__point
+        z-index: 15
+        box-sizing: border-box
+        border-bottom: 3px solid #fff
+        border-left: 2px solid #fff;
+        border-right: 2px solid #fff;
+        transition: all 0s !important
+        &_active
+            border-bottom: 3px solid #fff
+            border-left: 2px solid #1077bb;
+            border-right: 2px solid #1077bb;
+    &__dropdown
+        display: none
+        gap: 15px
+        grid-template-columns: 100%
+        position: absolute
+        top: calc( 100% - 3px )
+        padding: 14px
+        background-color: #fff
+        &_active
+            display: grid
+            border-left: 2px solid #1077bb;
+            border-top: 2px solid #1077bb
+            z-index: -1
+        a
+            color: #000000;
+            font-family: Montserrat;
+            font-size: 17px;
+            font-weight: 300;
+            font-style: normal;
+            letter-spacing: normal;
+            transition: all .3s
+            position: relative
+            white-space: nowrap
+            padding: 0
+            line-height: 19px
+            display: inline
+            &::before
+                content: ''
+                position: absolute  
+                display: block
+                height: 2px
+                background-color: #1077bb;
+                top: 100%
+                width: 100%
+                left: 0
+                max-width: 0
+                transition: all .3s
+            &:hover
+                &::before
+                    max-width: none
+
+.header
+    min-height: 830px
+    padding: 80px 0 0
+    background-position: center
+    background-size: cover
+    .container
+        margin: 55px auto 0
+        display: grid
+        grid-template-columns: 22% 22% 22% 22%
+        gap: 4%
+        align-items: start
+    &__item
+        background-color: #12111aea;
+        padding: 0 0 16px
+        transition: all .3s
+        img
+            width: 100%
+            height: 298px
+            object-fit: cover
+        p
+            color: #1077bb;
+            font-family: Montserrat;
+            font-size: 21px;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: 29.17px;
+            margin: 35px 14px 0 14px
+        ul
+            transition: all .3s
+            margin: 0
+            display: grid
+            grid-template: 100%
+            gap: 10px
+            max-height: 0
+            opacity: 0
+        li
+            color: #ffffff;
+            font-family: Montserrat;
+            font-size: 17px;
+            font-weight: 300;
+            font-style: normal;
+            letter-spacing: normal;
+        &:hover
+            padding: 0 0 110px
+            ul
+                margin: 32px 0 0 14px
+                max-height: none
+                opacity: 1
+
+.who
+    padding: 165px 0 200px
+    background-size: cover
+    background-position: center
+    position: relative
+    z-index: 1
+    h1
+        position: absolute
+        right: 35px
+        top: -30px
+        font-family: Montserrat
+        font-size: 42px
+        font-weight: 700
+        font-style: normal
+        letter-spacing: normal
+        line-height: normal
+        text-align: right
+        color: #1077bb
+    .container
+        position: relative
+    &__text
+        padding: 44px 37px 44px 0
+        background-color: #12111ae6
+        max-width: calc( 100% - 26%)
+        position: relative
+        box-sizing: border-box
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            width: 100%
+            height: 100%
+            background-color: #12111ae6
+            top: 0
+            right: 100%
+        p
+            color: #ffffff
+            font-family: Montserrat
+            font-size: 25px
+            font-weight: 400
+            font-style: normal
+            letter-spacing: normal
+            line-height: normal
+    &__form
+        max-width: calc( 100% - 52% )
+        margin: 57px auto 0
+        background-color: #12111ae6
+        padding: 35px 25px
+        box-sizing: border-box
+        display: grid
+        grid-template-columns: 1fr 1fr
+        column-gap: 49px
+        row-gap: 20px
+        input,
+        .nice-select
+            height: 36px
+            width: 100%
+            background-color: transparent
+            border: 1px solid #1077bb
+            box-sizing: border-box
+            padding: 0 6px
+        input
+            color: #1077bb
+            font-family: Montserrat
+            font-size: 17px
+            font-weight: 300
+            font-style: normal
+            letter-spacing: normal
+            line-height: normal
+            grid-column: 1/2
+            &::placeholder
+                color: #1077bb
+                font-family: Montserrat
+                font-size: 17px
+                font-weight: 300
+                font-style: normal
+                letter-spacing: normal
+                line-height: normal
+            &::-webkit-input-placeholder
+                color: #1077bb
+                font-family: Montserrat
+                font-size: 17px
+                font-weight: 300
+                font-style: normal
+                letter-spacing: normal
+                line-height: normal
+            &::-ms-input-placeholder
+                color: #1077bb
+                font-family: Montserrat
+                font-size: 17px
+                font-weight: 300
+                font-style: normal
+                letter-spacing: normal
+                line-height: normal
+            &:-moz-placeholder
+                color: #1077bb
+                font-family: Montserrat
+                font-size: 17px
+                font-weight: 300
+                font-style: normal
+                letter-spacing: normal
+                line-height: normal
+            &::-moz-placeholder
+                color: #1077bb
+                font-family: Montserrat
+                font-size: 17px
+                font-weight: 300
+                font-style: normal
+                letter-spacing: normal
+                line-height: normal
+            &:-ms-input-placeholder
+                color: #1077bb
+                font-family: Montserrat
+                font-size: 17px
+                font-weight: 300
+                font-style: normal
+                letter-spacing: normal
+                line-height: normal
+        .nice-select
+            span
+                color: #1077bb
+                font-family: Montserrat
+                font-size: 17px
+                font-weight: 300
+                font-style: normal
+                letter-spacing: normal
+                line-height: normal
+            &::after
+                width: 23px
+                height: 16px
+                transform: none
+                border: none
+                background: url('../img/select_arrow.svg') center no-repeat
+                margin-top: 0
+                top: 8px
+                transform-origin: 50% 50% 0
+            &.open
+                &::after
+                    transform: rotate(180deg)
+            ul
+                margin: 0
+                border-radius: 0
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                padding: 14px
+            li
+                color: #000000;
+                padding: 0
+                font-family: Montserrat;
+                font-size: 17px;
+                font-weight: 300;
+                font-style: normal;
+                letter-spacing: normal;
+                line-height: 37.5px;
+                position: relative
+                display: inline
+                width: auto
+                max-width: none
+                font-weight: 300;
+                min-height: auto
+                &:hover
+                    &::before
+                        opacity: 1
+                &.selected
+                    font-weight: 300;
+                    background-color: #fff
+                    &.focus
+                        background-color: #fff
+                    &::before
+                        opacity: 1
+                &::before
+                    content: ''
+                    display: block
+                    position: absolute
+                    width: 100%
+                    left: 0
+                    bottom: 6px
+                    height: 2px;
+                    background-color: #1077bb;
+                    transition: all .3s
+                    opacity: 0
+        button
+            background-color: #b23434
+            transition: all .3s
+            height: 100%
+            width: 100%
+            color: #ffffff
+            font-family: Montserrat
+            font-size: 17px
+            font-weight: 700
+            font-style: normal
+            letter-spacing: normal
+            line-height: normal
+            border: none
+            &:hover
+                background-color: #ec1616
+
+.why
+    position: relative
+    overflow: hidden
+    background-position: center
+    background-size: cover
+    h2
+        color: #1077bb
+        font-family: Montserrat
+        font-size: 42px
+        font-weight: 700
+        font-style: normal
+        letter-spacing: normal
+        line-height: normal
+        position: absolute
+        top: 43px
+        right: 35px
+    .container
+        position: relative
+    &__wrapper
+        max-width: 50%
+        display: grid
+        grid-template-columns: auto auto
+        column-gap: 50px
+        ul
+            padding: 22px 11px 22px 14px
+            background-color: #12111ae6
+            box-sizing: border-box
+            position: relative
+            &.start
+                padding: 75px 11px 22px 14px
+            &::before
+                content: ''
+                display: block
+                position: absolute
+                width: 10000px
+                height: 2px
+                background-color: #1077bb
+                right: 63px
+                top: calc( 100% - 2px )
+                z-index: 1
+        li
+            color: #ffffff
+            font-family: Montserrat
+            font-size: 17px
+            font-weight: 300
+            font-style: normal
+            letter-spacing: normal
+            line-height: normal
+            &::before
+                content: '- '
+                display: inline
+                color: #1077bb
+                font-style: normal
+                letter-spacing: 1px
+                line-height: normal
+                font-family: Montserrat
+                font-size: 17px
+                font-weight: 300
+    &__name
+        background-color: #12111ae6
+        padding: 0 50px 0 14px
+        box-sizing: border-box
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        &.start
+            padding: 75px 50px 0 14px
+        p
+            color: #1077bb
+            font-family: Montserrat
+            font-size: 29px
+            font-weight: 700
+            font-style: normal
+            letter-spacing: normal
+            line-height: normal
+    .who__form
+        padding: 20px 12px
+        margin: 0
+        position: absolute
+        bottom: 34px
+        right: 90px
+        grid-template-columns: 100%
+        button
+            height: 36px
+
+.price
+    padding: 150px 0
+    background-size: cover
+    background-position: center
+    h2
+        color: #1077bb
+        font-family: Montserrat
+        font-size: 42px
+        font-weight: 700
+        font-style: normal
+        letter-spacing: normal
+        line-height: normal
+    .who__form
+        margin: 117px auto
+        max-width: 900px
+        column-gap: 200px
+        padding: 46px 42px
+        input,
+        button
+            grid-column: 2/3
+        .nice-select
+            grid-column: 1/2
+
+.fire
+    padding: 100px 0 
+    overflow: hidden
+    position: relative
+    background-size: cover
+    h2
+        color: #1077bb
+        font-family: Montserrat
+        font-size: 42px
+        font-weight: 700
+        font-style: normal
+        letter-spacing: normal
+        line-height: normal
+        position: relative
+        display: inline
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: 100%
+            right: 40px
+            width: 1000px
+            height: 2px
+            background-color: #1077bb
+    &__text
+        max-width: 55%
+        margin: 0 0 0 auto
+        padding: 14px 100px 14px 17px
+        background-color: #12111ae6
+        p
+            color: #ffffff
+            font-family: Montserrat
+            font-size: 21px
+            font-weight: 300
+            font-style: normal
+            letter-spacing: normal
+            line-height: normal
+            text-align: left
+    .who__form
+        padding: 20px 12px
+        margin: -10px 0 0
+        max-width: 251px
+        grid-template-columns: 100%
+        button
+            height: 36px
+
+.safety
+    padding: 150px 0 50px
+    background-size: cover
+    position: relative
+    overflow: hidden
+    width: 100%
+    h2
+        font-family: Montserrat
+        font-size: 42px
+        font-weight: 700
+        font-style: normal
+        letter-spacing: normal
+        line-height: normal
+        text-align: right
+        position: relative
+        display: block
+        max-width: 430px
+        margin: 0 0 0 auto
+        color: #1077bb
+        text-align: right
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: 100%
+            left: 190px
+            height: 2px
+            width: 1000px
+            background-color: #1077bb   
+    &__text
+        background-color: #12111ae6
+        max-width: 62%
+        margin: 15px 0 0
+        padding: 19px 32px 21px 13px
+        p
+            color: #ffffff
+            font-family: Montserrat
+            font-size: 21px
+            font-weight: 300
+            font-style: normal
+            letter-spacing: normal
+            line-height: normal
+    .who__form
+        padding: 20px 12px
+        margin: 50px 0 0 auto
+        max-width: 251px
+        grid-template-columns: 100%
+        button
+            height: 36px
+
+.footer
+    padding: 0 0 120px
+    .container
+        margin: 55px auto 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+@media ( max-width: 1200px )
+    .header
+        min-height: 1300px
+        .container
+            grid-template-columns: 48% 48%
+    .why
+        &__wrapper
+            max-width: 60%
+
+@media ( max-width: 768px )
+    .nav
+        img
+            width: 100px
+        &__info
+            gap: 15px
+            p
+                font-size: 8px;
+                line-height: 9px
+            a
+                font-size: 8px;
+                &:nth-child(1)
+                    font-size: 10px
+                    margin: 0
+    .nav-list
+        width: 100%
+        justify-content: space-between
+        box-sizing: border-box
+        padding: 0 35px
+        a
+            font-size: 12px;
+            padding: 4px 10px
+    .header
+        .container
+            grid-template-columns: 100%
+            gap: 30px
+        &__item
+            padding: 0 0 110px
+            ul
+                margin: 32px 0 0 14px
+                max-height: none
+                opacity: 1
+    .who
+        padding: 50px 0
+        h1
+            position: relative
+            top: auto
+            right: auto
+            text-align-last: left
+        &__text
+            margin: 38px 0 0
+            max-width: 100%
+            padding: 20px 10px 15px
+            p
+                font-size: 13px;
+            &::before
+                content: none
+        &__form
+            margin: 10px 0 0
+            max-width: 100% 
+            grid-template-columns: 100% 
+            button
+                height: 36px
+    .why
+        h2
+            position: relative
+            top: auto
+            right: auto
+        &__wrapper
+            max-width: 100%
+            grid-template-columns: 100%
+            margin: 80px 0 0
+            ul
+                display: none
+        &__name
+            padding: 35px 0 25px 14px
+            position: relative
+            &::before
+                content: ''
+                display: block
+                position: absolute
+                top: calc( 100% + 10px )
+                right: 48px
+                width: 1000px
+                height: 2px
+                background-color: #1077bb;
+                z-index: 1
+            &.start
+                padding: 30px 0 35px 14px
+        .who__form
+            position: relative
+            bottom: auto
+            right: auto
+            margin: 50px 0 0
+    .price
+        padding: 50px 0
+        .who__form
+            margin: 70px 0 0
+            padding: 20px 12px
+            input,
+            button,
+            .nice-select
+                grid-column: auto
+                order: 2
+            .nice-select
+                order: 1
+    .fire
+        padding: 50px 0
+        h2
+            font-size: 33px;
+        &__text
+            margin: 50px 0 0
+            max-width: 100%
+            padding: 15px 5px 
+            p
+                font-size: 13px;
+        .who__form
+            max-width: 100%
+            margin: 30px 0 0
+    .safety
+        padding: 50px 0
+        h2
+            max-width: 100%
+            display: inline
+            font-size: 21px
+            &::before
+                right: 33px
+                left: auto
+        &__text
+            margin: 50px 0 0
+            max-width: 100%
+            padding: 15px 5px 
+            p
+                font-size: 13px;
+        .who__form
+            max-width: 100%
+            margin: 30px 0 0
+    .footer
+        padding: 0 0 25px
+        iframe
+            height: 200px
+        .container
+            margin: 15px 0 0
+        img
+            width: 100px
+
+@media ( max-width: 425px )
+    .nav-list
+        margin: 0
+        gap: 0
+        a
+            padding: 3px 5px
+            white-space: nowrap
+    .header
+        .container
+            margin: 27px auto 0
+        &__item
+            padding: 0
+            position: relative
+            ul
+                display: none
+            p
+                margin: 0
+                position: absolute
+                left: 14px
+                bottom: 18px
+    .why
+        h2
+            max-width: 200px

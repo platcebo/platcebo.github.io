@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ferkad</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <img src="img/logo.png" alt="">
+            <div class="nav__info">
+                <div class="nav__adress">
+                    <p>Москва <br> ткацкая 46</p>
+                </div>
+                <div class="nav__contact">
+                    <a href="#">+7 915 460 92 07</a>
+                    <a href="#">info@pherkad.ru</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="header" style="background-image: url(img/block_1.png);">
+        <ul class="nav-list">
+            <li>
+                <a href="#who">О КОМПАНИИ</a>
+            </li>
+            <li>
+                <a href="#" class="nav-list__point">УСЛУГИ</a>
+                <ol class="nav-list__dropdown">
+                    <li><a href="#fire">Пожарные системы</a></li>
+                    <li><a href="#safety">Имущественная безопасность</a></li>
+                    <li><a href="#cabel">Кабельные сети</a></li>
+                    <li><a href="#programm">Программное обеспечение</a></li>
+                </ol>
+            </li>
+            <li>
+                <a href="#footer">КОНТАКТЫ</a>
+            </li>
+        </ul>
+        <div class="container">
+            <div class="header__item" id="">
+                <img src="img/header_item.png" alt="">
+                <p>ПОЖАРНЫЕ <br> СИСТЕМЫ</p>
+                <ul>
+                    <li>Системы пожаротушения</li>
+                    <li>Системы дымоудаления</li>
+                    <li>Расчёт рисков</li>
+                    <li>Проектная документация</li>
+                </ul>
+            </div>
+            <div class="header__item" id="">
+                <img src="img/header_item_2.png" alt="">
+                <p>ИМУЩЕСТВЕННАЯ <br> БЕЗОПАСНОСТЬ</p>
+                <ul>
+                    <li>Видеонаблюдения</li>
+                    <li>СКУД</li>
+                    <li>Тревожная сигнализация</li>
+                    <li>Противокражные меры</li>
+                </ul>
+            </div>
+            <div class="header__item">
+                <img src="img/header_item_3.png" alt="">
+                <p>КАБЕЛЬНЫЕ <br> СЕТИ</p>
+                <ul>
+                    <li>Вычислительные системы</li>
+                    <li>Оптические линии</li>
+                    <li>Наружные сети связи</li>
+                    <li>Серверные помещения</li>
+                </ul>
+            </div>
+            <div class="header__item">
+                <img src="img/header_item_4.png" alt="">
+                <p>ПРОГРАММНОЕ <br> ОБЕСПЕЧЕНИЕ</p>
+                <ul>
+                    <li>Диспетчеризация</li>
+                    <li>Бухгалтерия</li>
+                    <li>Учёт склада</li>
+                    <li>Интеграция</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="who" style="background-image: url(img/block_2.png);" id="who">
+        <div class="container">
+            <h1>КТО МЫ</h1>
+            <div class="who__text">
+                <p>Мы предлагаем комплексные инженерные решения для объектов любой сложности. Имеем передовой опыт по проектированию, осуществим оптимальный подбор оборудования и произведем специализированный монтаж.</p>
+            </div>
+            <form action="mail.php" class="who__form" method="POST">
+                <select name="" id="" name="user_select">
+                    <option value="Пожарные системы">Пожарные системы</option>
+                    <option value="Имущественная безопасность">Имущественная безопасность</option>
+                    <option value="Кабельные сети" selected>Кабельные сети</option>
+                    <option value="Программное обеспечение">Программное обеспечение</option>
+                </select>
+                <input type="text" placeholder="ФИО" name="user_name">
+                <input type="text" placeholder="Телефон" name="user_phone">
+                <button>ЗАКАЗАТЬ УСЛУГУ</button>
+            </form>
+        </div>
+    </section>
+    <section class="why" style="background-image: url(img/block_3.png);">
+        <div class="container">
+            <h2>ПОЧЕМУ МЫ</h2>
+            <div class="why__wrapper">
+                <div class="why__name start">
+                    <p>Контроль <br> процессов</p>
+                </div>
+                <ul class="start">
+                    <li>Прозрачные для клиента условия и сроки выполнения работ.</li>
+                    <li>Обратная связь и консультации на всех этапахработы.</li>
+                </ul>
+                <div class="why__name">
+                    <p>Выгодные <br> цены</p>
+                </div>
+                <ul>
+                    <li>Отсутствие переплат каждому подрядчику.</li>
+                    <li>Экономия времени работ.</li>
+                </ul>
+                <div class="why__name">
+                    <p>Единый <br> подрядчик</p>
+                </div>
+                <ul>
+                    <li>Единое контактное лицо, отвечающий за весь цикл работ.</li>
+                    <li>Экономия времени на согласованиях.</li>
+                </ul>
+                <div class="why__name">
+                    <p>Гарантия <br> качества</p>
+                </div>
+                <ul>
+                    <li>Единый акт разграничения ответственности и поставок.</li>
+                    <li>Соответствующие лицензии на проведение всех работ.</li>
+                </ul>
+            </div>
+            <form action="#" class="who__form" method="POST">
+                <select name="" id="" name="user_select">
+                    <option value="Пожарные системы">Пожарные системы</option>
+                    <option value="Имущественная безопасность">Имущественная безопасность</option>
+                    <option value="Кабельные сети" selected>Кабельные сети</option>
+                    <option value="Программное обеспечение">Программное обеспечение</option>
+                </select>
+                <input type="text" placeholder="ФИО" name="user_name">
+                <input type="text" placeholder="Телефон" name="user_phone">
+                <button>ЗАКАЗАТЬ УСЛУГУ</button>
+            </form>
+        </div>
+    </section>
+    <section class="price" style="background-image: url(img/block_4.png);">
+        <div class="container">
+            <h2>РАСЧЁТ СТОИМОСТИ</h2>
+            <form action="#" class="who__form" method="POST">
+                <select name="" id="" name="user_select">
+                    <option value="Пожарные системы">Пожарные системы</option>
+                    <option value="Имущественная безопасность">Имущественная безопасность</option>
+                    <option value="Кабельные сети" selected>Услуга</option>
+                    <option value="Программное обеспечение">Программное обеспечение</option>
+                </select>
+                <input type="text" placeholder="ФИО" name="user_name">
+                <select name="" id="" name="user_select">
+                    <option value="Пожарные системы">Пожарные системы</option>
+                    <option value="Имущественная безопасность">Имущественная безопасность</option>
+                    <option value="Кабельные сети" selected>Площадь</option>
+                    <option value="Программное обеспечение">Программное обеспечение</option>
+                </select>
+                <input type="text" placeholder="Почта" name="user_name">
+                <select name="" id="" name="user_select">
+                    <option value="Пожарные системы">Пожарные системы</option>
+                    <option value="Имущественная безопасность">Имущественная безопасность</option>
+                    <option value="Кабельные сети" selected>Вид объекта</option>
+                    <option value="Программное обеспечение">Программное обеспечение</option>
+                </select>
+                <input type="text" placeholder="Телефон" name="user_phone">
+                <select name="" id="" name="user_select">
+                    <option value="Пожарные системы">Пожарные системы</option>
+                    <option value="Имущественная безопасность">Имущественная безопасность</option>
+                    <option value="Кабельные сети" selected>Вид оборудования</option>
+                    <option value="Программное обеспечение">Программное обеспечение</option>
+                </select>
+                <button>РАСЧИТАТЬ СТОИМОСТЬ</button>
+            </form>
+        </div>
+    </section>
+    <section class="fire" style="background-image: url(img/block_5.png);" id="fire">
+        <div class="container">
+            <h2>ПОЖАРНЫЕ <br> СИСТЕМЫ</h2>
+            <div class="fire__text">
+                <p>Система пожарной сигнализации является неотъемлемой частью инженерных коммуникаций практически всех общественных, коммерческих и большинства жилых зданий и сооружений. Она может включать в себя элементы СОУЭ (система оповещения и управления эвакуацией), охранной сигнализации, управлять системами автоматического пожаротушения, дымоудаления, вентиляции и т.п.</p>
+            </div>
+            <form action="#" class="who__form" method="POST">
+                <input type="text" placeholder="ФИО">
+                <input type="text" placeholder="Mail">
+                <input type="text" placeholder="Телефон">
+                <button>ЗАКАЗАТЬ УСЛУГУ</button>
+            </form>
+        </div>
+    </section>
+    <section class="safety" style="background-image: url(img/block_6.png);" id="safety">
+        <div class="container">
+            <h2>ИМУЩЕСТВЕННАЯ <br>БЕЗОПАСНОСТЬ</h2>
+            <div class="safety__text">
+                <p>Обеспечим полноценную охрану вашей коммерческой недвижимости с помощью надежной сигнализации, подключенной к системе круглосуточного мониторинга. Наш охранный комплекс даст полную уверенность в том, что на объект никто не проникнет без вашего ведома, а техногенная обстановка будет под полным котролем</p>
+            </div>
+            <form action="#" class="who__form" method="POST">
+                <input type="text" placeholder="ФИО">
+                <input type="text" placeholder="Mail">
+                <input type="text" placeholder="Телефон">
+                <button>ЗАКАЗАТЬ УСЛУГУ</button>
+            </form>
+        </div>
+    </section>
+    <section class="fire" style="background-image: url(img/block_7.png);" id="cabel">
+        <div class="container">
+            <h2>КАБЕЛЬНЫЕ <br>СЕТИ</h2>
+            <div class="fire__text">
+                <p>Мы организуем структурированные кабельные сети в магазинах, офисах, торговых центрах, складах, предприятиях и крупных компаний. Наши решения позволяют создавать в зданиях высоконадежные и скоростные локальные компьютерные сети (ЛВС), проводить современную IP-телефонию и слаботочные линии на охранные системы безопасности и видеонаблюдение.</p>
+            </div>
+            <form action="#" class="who__form" method="POST">
+                <input type="text" placeholder="ФИО">
+                <input type="text" placeholder="Mail">
+                <input type="text" placeholder="Телефон">
+                <button>ЗАКАЗАТЬ УСЛУГУ</button>
+            </form>
+        </div>
+    </section>
+    <section class="programm safety" style="background-image: url(img/block_8.png);">
+        <div class="container">
+            <h2>ПРОГРАММНОЕ <br> ОБЕСПЕЧЕНИЕ</h2>
+            <div class="safety__text">
+                <p>Встроенный язык программирования 1С 
+                    является предметно-ориентированным. 
+                    Сложность заключается в том, что программисту 
+                    нужно вникнуть в предметную область, 
+                    которую автоматизирует программа – бухгалтерия, 
+                    производство, управленческий учет и т.д.  
+                    Наши специалисты справятся с поставленной задачей
+                    любой сложности</p>
+            </div>
+            <form action="#" class="who__form" method="POST">
+                <input type="text" placeholder="ФИО">
+                <input type="text" placeholder="Mail">
+                <input type="text" placeholder="Телефон">
+                <button>ЗАКАЗАТЬ УСЛУГУ</button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer" id="footer">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A36f27b8a32428e05979f5078e043cb52c5ab197a772101d8d6a086b9e0c3fcf4&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+        <div class="container">
+            <img src="img/logo.svg" alt="">
+            <div class="nav__info">
+                <div class="nav__adress">
+                    <p>Москва <br> ткацкая 46</p>
+                </div>
+                <div class="nav__contact">
+                    <a href="#">+7 915 460 92 07</a>
+                    <a href="#">info@pherkad.ru</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
