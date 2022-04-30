@@ -1,7 +1,0 @@
-.new-nav {
-  background: -webkit-gradient(linear, left top, right top, from(#E5EFFE), to(#FEF1F3));
-  background: linear-gradient(90deg, #E5EFFE 0%, #FEF1F3 100%);
-  -webkit-box-shadow: 0px 4px 10px rgba(153, 143, 143, 0.25);
-          box-shadow: 0px 4px 10px rgba(153, 143, 143, 0.25);
-}
-/*# sourceMappingURL=style.css.map */
