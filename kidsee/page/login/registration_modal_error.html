@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kidsee</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav__container">
+            <a href="#" class="nav__logo">
+                <img src="../../img/logo.svg" alt="">
+            </a>
+        </div>
+    </nav>
+    <section class="registr">
+        <div class="container container__two">
+            <div class="registr__info">
+                <h2>Видеосервис для детей с безопасным контентом</h2>
+                <p>Чтобы не переживать за контент, который смотрят ваши дети</p>
+                <form action="#" class="registr__info_wrapper">
+                    <h1>авторизация</h1>
+                    <input type="text" placeholder="номер телефона">
+                    <button class="button__blue">войти</button>
+                    <a href="#">проблемы со входом?</a>
+                </form>
+            </div>
+            <div class="registr__img">
+                <img src="../../img/registr_img.jpg" alt="" class="registr__bg">
+                <img src="../../img/registr_bg_1.svg" alt="" class="registr__bg_first">
+                <img src="../../img/registr_bg_2.svg" alt="" class="registr__bg_second">
+                <img src="../../img/registr_bg_3.svg" alt="" class="registr__bg_therd">
+            </div>
+        </div>
+    </section>
+    <div class="modal-reg modal-reg__active modal-reg__error">
+        <div class="modal-reg__overflow"></div>
+        <div class="modal-reg__wrapper">
+            <h2>Введите код из смс</h2>
+            <p>Мы отправили вам код на номер +7 999 999 99 00</p>
+            <div class="modal-reg__input">
+                <input type="text" maxlength="1" placeholder="__">
+                <input type="text" maxlength="1" placeholder="__">
+                <input type="text" maxlength="1" placeholder="__">
+                <input type="text" maxlength="1" placeholder="__">
+            </div>
+            <p class="modal-reg__text_error">неверный код</p>
+            <a href="#">не получили код?</a>
+            <div class="modal-reg__wait">
+                <img src="../../img/reg_modal_wait.svg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
