@@ -1,0 +1,2508 @@
+@font-face
+    font-family: 'Stem';
+    src: local('Stem SemiLight'), local('Stem-SemiLight')
+    src: url('../fonts/Stem-SemiLight.woff2') format('woff2')
+    src: url('../fonts/Stem-SemiLight.woff') format('woff')
+    src: url('../fonts/Stem-SemiLight.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+
+@font-face 
+    font-family: 'Stem';
+    src: local('Stem Medium'), local('Stem-Medium')
+    src: url('../fonts/Stem-Medium.woff2') format('woff2')
+    src: url('../fonts/Stem-Medium.woff') format('woff')
+    src: url('../fonts/Stem-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+
+body
+    font-family: 'Stem';
+    font-style: normal;
+    position: relative
+
+h1
+    font-family: 'Stem';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    color: #000000;
+
+h2
+    font-family: 'Stem';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 34px;
+    color: #000000;
+
+h3
+    font-family: 'Stem';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+
+.container
+    max-width: 1015px
+    margin: 0 auto
+    padding: 0 20px 0 135px
+    box-sizing: content-box
+    &__two
+        padding: 0 20px 
+        max-width: 1360px 
+        margin: 0 auto
+        box-sizing: content-box
+
+.button
+    &__blue
+        background: #855CF6;
+        border-radius: 16px;
+        border: none
+        width: 100%
+        height: 64px
+        font-family: 'Stem';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        color: #FFFFFF;
+        &[disabled]
+            opacity: 0.5;
+    &__pink
+        background: #FEA8D9;
+        border-radius: 16px;
+        border: none
+        width: 100%
+        height: 64px
+        font-family: 'Stem';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        color: #FFFFFF;
+    &__wht
+        border: 2px solid #000000;
+        border-radius: 16px;
+        background-color: #fff
+        font-family: 'Stem';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        color: #000000;
+        width: 100%
+        height: 64px
+
+.nav
+    padding: 24px 0
+    top: 0
+    left: 0
+    width: 100%
+    background-color: #fff
+    &__container
+        padding: 0 20px 
+        max-width: 1360px 
+        margin: 0 auto
+        box-sizing: content-box
+        display: flex
+        justify-content: space-between
+    &__logo
+        display: block
+
+.registr
+    padding: 65px 0 300px
+    h2
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 45px;
+        &+p
+            margin: 20px 0 0
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+            color: #363636;
+    .container
+        display: grid
+        grid-template-columns: 33% 59%
+        gap: 8%
+        align-items: center
+    &__info
+        &_wrapper
+            background: #FFFFFF;
+            box-shadow: 0px 14px 65px rgba(0, 0, 0, 0.07);
+            border-radius: 24px;
+            margin: 35px 0 0
+            padding: 36px
+    input
+        margin: 22px 0 0
+        background: #F7F7F7;
+        border-radius: 16px;
+        height: 64px
+        padding: 0 24px
+        font-family: 'Stem';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        color: #979797;
+        border: none
+        width: 100%
+        box-sizing: border-box
+    button
+        margin: 22px 0 0
+    a
+        font-family: 'Stem';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        color: #808080;
+        margin: 22px 0 0
+        text-align: center
+        display: block
+    &__img
+        position: relative
+        padding: 0 67px 0 92px
+    &__bg
+        width: 100%
+        object-fit: contain
+        &_first
+            position: absolute
+            left: 0
+            bottom: 0
+        &_second
+            position: absolute
+            left: 92px
+            bottom: -140px
+        &_therd
+            bottom: -60px
+            right: 0
+            position: absolute
+
+@media ( max-width: 1440px )
+    h1
+        font-size: 24px
+        line-height: 30px
+    .registr
+        h2
+            font-size: 30px
+            line-height: 36px
+            &+p
+                font-size: 20px
+                line-height: 30px
+        .container
+            grid-template-columns: 1fr 1fr
+            gap: 40px
+        &__img
+            padding: 0
+        &__bg
+            &_first
+                bottom: 20px
+                left: -20px
+                width: 100px
+            &_second
+                width: 150px
+                bottom: -70px
+            &_therd
+                width: 100px
+                bottom: 20px
+
+@media ( max-width: 768px )
+    .button
+        &__blue
+            height: 50px
+            font-size: 20px
+        &__pink
+            height: 50px
+            font-size: 20px
+        &__wht
+            height: 50px
+            font-size: 20px
+    .registr
+        &__img
+            display: none
+        .container
+            display: block
+        input
+            height: 50px
+            font-size: 20px
+            padding: 0 15px
+        &__info
+            &_wrapper
+                max-width: 450px
+                margin: 35px auto 0
+        a
+            font-size: 20px
+
+@media ( max-width: 425px )
+    .registr
+        &__info
+            &_wrapper
+                padding: 30px 10px 
+
+@keyframes wait
+    0%
+        transform: translateY(-50%)
+    50%
+        transform: translateY(50%)
+    100%
+        transform: translateY(-50%)
+
+.modal-reg
+    position: fixed
+    width: 100vw
+    height: 100vh
+    top: 0
+    left: 0
+    display: none
+    z-index: -10
+    justify-content: center
+    align-items: center
+    &__active
+        z-index: 100
+        display: flex
+    &__overflow
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 0
+        background: #00000066;
+    &__wrapper
+        z-index: 1
+        max-width: 578px
+        padding: 48px
+        background-color: #fff
+        width: 100%
+        box-shadow: 0px 14px 65px rgba(0, 0, 0, 0.07);
+        border-radius: 24px;
+        position: relative
+        overflow: hidden
+    h2
+        font-family: 'Stem';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 40px;
+        text-align: center;
+        color: #000000;
+        &+p
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 34px;
+            text-align: center;
+            color: #363636;
+            margin: 24px auto 0
+            max-width: 350px
+    &__input
+        margin: 24px 0 0
+        display: flex
+        justify-content: center
+        align-items: center
+    input
+        height: 64px
+        width: 52px
+        text-align: center
+        font-family: 'Stem';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 42px;
+        color: #000000;
+        border: none
+        background: #F7F7F7;
+        border-radius: 16px;
+        margin: 0 5px 0
+        border: 2px solid transparent;
+        transition: all .3s
+        &:focus
+            border: 2px solid #855CF6;
+    a
+        margin: 16px 0 0
+        text-align: center
+        font-family: 'Stem';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        color: #808080;
+        display: block
+    &__text_error
+        display: none
+    &__error
+        .modal-reg
+            &__text_error
+                display: block
+                font-family: 'Stem';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 25px;
+                margin: 16px 0 0
+                text-align: center
+                color: #FB8073;
+        input
+            background: #FFF5F4;
+    &__wait
+        display: none
+        &_wrapper
+            .modal-reg
+                &__wait
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    background: #ffffffde;
+                    box-shadow: 0px 14px 65px rgba(0, 0, 0, 0.07);
+                    border-radius: 24px;
+                    img
+                        animation: wait 2s infinite ease-in-out
+
+@media ( max-width: 425px )
+    .modal-reg
+        &__wrapper
+            height: 100%
+            border-radius: 0
+            padding: 50px 20px
+        h2
+            font-size: 26px
+            &+p
+                font-size: 16px
+                line-height: 20px
+                max-width: 255px
+        input
+            height: 50px
+            font-size: 30px 
+            line-height: 1  
+            width: 35px
+        
+.onboard
+    padding: 50px 0 250px
+    &__wrapper
+        max-width: 750px
+        margin: 0 auto
+        background: #FFFFFF;
+        box-shadow: 0px 14px 65px rgba(0, 0, 0, 0.07);
+        border-radius: 24px;
+        padding: 50px 75px 68px
+        h1,
+        h2
+            text-align: center
+            margin: 35px 0 0
+            &+p
+                font-family: 'Stem';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 22px;
+                line-height: 34px;
+                text-align: center;
+                color: #363636;
+                margin: 12px 0 0
+    &__collage
+        position: relative
+        max-width: 400px
+        margin: 0 auto
+        display: grid
+        grid-template-columns: 1fr 1fr
+        column-gap: 50px
+        img
+            display: block
+            width: 100%
+            &:nth-child(2)
+                grid-column: 1/3
+                margin: -150px auto 0
+                width: 60%
+                order: 1
+    &__link
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 32px
+        margin: 36px 0 0
+        &_btn
+            max-width: 260px
+            margin: 36px auto 0
+        &_hello
+            max-width: 370px
+    &__logo
+        max-width: 400px
+        margin: 0 auto
+        img
+            width: 100%
+            object-fit: contain
+    &__test
+        margin: 24px 0 0
+        p
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 45px;
+            text-align: center;
+            color: #000000;
+            &.error
+                font-family: 'Stem';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 25px;
+                color: #FB8073;
+                margin: 16px 0 0
+                display: none
+        input
+            height: 64px
+            width: 52px
+            text-align: center
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 42px;
+            color: #000000;
+            border: none
+            background: #F7F7F7;
+            border-radius: 16px;
+            margin: 0 5px 0
+            border: 2px solid transparent;
+            transition: all .3s
+            &:focus
+                border: 2px solid #855CF6;
+        div
+            margin: 24px 0 0
+            display: flex
+            justify-content: center
+            align-items: center
+            &.error
+                input
+                    background: #FFF5F4;
+                &+p.error
+                    display: block
+    &__slider
+        margin: 48px 0 0
+        display: flex
+        justify-content: center
+        align-items: flex-start
+        img
+            width: 100%
+        div
+            padding: 0 10px
+    &__arrow
+        margin: 24px 0 0
+        display: flex
+        justify-content: center
+        align-items: center
+        a
+            display: block
+            margin: 0 8px 0
+        &_prev
+            img
+                transform: rotate(180deg)
+    &__name
+        margin: 36px auto 0
+        max-width: 370px
+        display: grid
+        grid-template-columns: 100%
+        gap: 16px
+        input
+            height: 64px
+            background: #F7F7F7;
+            border-radius: 16px;
+            border: none
+            padding: 0 24px
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+    &__time
+        margin: 36px auto 0
+        max-width: 450px
+        h2
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 34px;
+            text-align: center;
+            color: #333333;
+            &+p
+                font-family: 'Stem';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 26px;
+                text-align: center;
+                color: #787878;
+                margin: 12px 0 0
+        input
+            background: #F7F7F7;
+            border-radius: 24px;
+            border: none
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+            color: #000000;
+            text-align: center
+            margin: 0 12px 0 
+            height: 64px
+            &+p
+                font-family: 'Stem';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 36px;
+                color: #000000;
+        div
+            display: flex
+            justify-content: center
+            align-items: center
+            margin: 22px 0 0
+    &__hour
+        width: 64px
+    &__min
+        width: 84px
+    &__avatar
+        max-width: 170px
+        padding: 4px
+        border-radius: 100%
+        box-sizing: border-box
+        background: linear-gradient(214.05deg, #855CF6 -9.21%, #FEA8D9 88.45%)
+        margin: 0 auto
+        img
+            width: 100%
+    &__profile
+        p
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 36px;
+            text-align: center;
+            color: #000000;
+            margin: 24px 0 0
+    &__slide
+        width: 12%
+        opacity: 0.4;
+        &_active
+            width: 20%
+            opacity: 0.6;
+        &_center
+            width: 25%
+
+@media (max-width: 425px)
+    .onboard
+        &__wrapper
+            padding: 50px 20px 
+        &__slide
+            display: none
+            &_active
+                width: 25%
+            &_center
+                width: 35%
+
+@media (max-width: 768px) 
+    .onboard
+        &__link
+            grid-template-columns: 100%
+            max-width: 260px
+            margin: 30px auto 0
+            gap: 15px
+        &__test
+            input
+                height: 50px
+                font-size: 30px 
+                line-height: 1  
+                width: 35px
+        &__name
+            input
+                height: 50px
+                font-size: 20px
+                padding: 0 15px
+        &__time
+            input
+                height: 50px
+                font-size: 30px 
+                line-height: 1  
+        &__hour
+            width: 35px
+        &__min
+            width: 70px
+        &__slide
+            width: 15%
+            &_active
+                width: 22%
+            
+
+.onboard-slider
+    .onboard
+        &__wrapper
+            max-width: 1200px
+            padding: 68px 230px 48px
+    &__slide
+        display: none
+        border-radius: 32px;
+        max-width: 620px
+        margin: 0 auto
+        position: relative
+        overflow: hidden
+        img
+            width: 100%
+        &_active
+            display: block
+        &_pink
+            border: 8px solid #FEA8D9;
+        &_green
+            border: 8px solid #4ED78B;
+        &_yellow
+            border: 8px solid #FFE772;
+    &__wrapper
+        position: relative
+    &__arrow
+        width: 48px
+        img
+            width: 100%
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        &_next
+            right: -50px
+        &_prev
+            left: -50px
+            img
+                transform: rotate(-180deg)
+        &_none
+            display: none
+    &__dots
+        margin: 36px 0 0
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        li
+            width: 12px
+            height: 12px
+            background: #C4C4C4;
+            border-radius: 100%
+            margin: 0 6px 0
+            cursor: pointer
+        &_active
+            background: #855CF6 !important
+
+@media (max-width: 1024px)
+    .onboard-slider 
+        .onboard__wrapper
+            padding: 60px 70px 40px
+
+@media (max-width: 768px)
+    .onboard-slider
+        &__arrow
+            display: none
+        &__slide
+            border-width: 4px
+
+@media (max-width: 425px)
+    .onboard-slider .onboard__wrapper
+        padding: 50px 20px
+
+.nav
+    &__list
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 36px
+        p
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+            color: #000000;
+            opacity: 0.5;
+            transition: all .3s
+        a
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            &:hover
+                p
+                    opacity: 1
+    &__container
+        align-items: center
+        gap: 20px
+    &__search
+        display: flex
+        align-items: center
+        justify-content: center
+        a
+            display: block
+            background: #F7F7F7;
+            border-radius: 24px;
+            padding: 19px
+            margin: 0 8px
+
+.main
+    margin: 16px auto 0
+    position: relative
+
+.slider
+    width: 100%
+    &__name
+        width: 66%
+        background: #FFE772;
+        position: relative
+        padding: 0 0 0 25px
+        z-index: 2
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+        img
+            position: absolute
+            z-index: -1
+            &:nth-child(1)
+                top: 0
+                right: 107px
+            &:nth-child(2)
+                right: 0
+                top: 0
+            &:nth-child(3)
+                bottom: 0
+                right: 150px
+            &:nth-child(4)
+                bottom: 0
+                right: 3px
+        p
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 40px;
+            color: #333333;
+            display: block
+            padding: 10px
+            background: #FFFFFF;
+            border-radius: 47px;
+            &:nth-child(5)
+                transform: rotate(-8.14deg);
+            &:nth-child(6)
+                transform: rotate(5.85deg);
+                margin: 0 0 0 65px
+                position: relative
+                &::before
+                    content: ''
+                    display: block
+                    width: 36px
+                    height: 54px
+                    position: absolute
+                    top: 0
+                    left: calc( 100% + 10px )
+                    background: url('../img/slider_name.svg') center no-repeat
+                    transform: rotate(-5.85deg);
+    &__slide
+        border-radius: 24px;
+        height: 312px
+    &__track
+        display: flex
+        justify-content: space-between
+        align-items: stretch
+    &__timer
+        width: 32%
+        background: #855CF6;
+        padding: 32px 
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-end
+        img
+            position: absolute
+            top: 0
+            right: 30px
+            &+p
+                font-family: 'Stem';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 28px;
+                line-height: 34px;
+                color: #FFFFFF;
+        p+p
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 34px;
+            color: #333333;
+            display: block
+            padding: 10px 17px
+            background: #FFFFFF;
+            border-radius: 47px;
+            margin: 19px 0 0
+    &__dots
+        margin: 16px 0 0
+        display: flex
+        justify-content: center
+        align-items: center
+        li
+            width: 10px
+            height: 7px
+            background: #EBEBEB;
+            border-radius: 24px;
+            margin: 0 2px
+            cursor: pointer
+            &.active
+                width: 34px
+                background: #C4C4C4;
+    &__downloud
+        width: 32%
+        background: #855CF6;
+        padding: 32px 
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+        a
+            display: block
+            padding: 10px 17px
+            background: #FFFFFF;
+            border-radius: 47px;
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 34px;
+            color: #333333;
+        p
+            margin: 10px 0 0
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 34px;
+            color: #FFFFFF;
+        img
+            position: absolute
+            left: 50%
+            bottom: 0
+
+
+.resume
+    padding: 32px 0 64px
+    &__title
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__arrow
+        display: flex
+        a
+            margin: 0 8px
+            display: block
+            &:nth-child(1)
+                transform: rotate(180deg)
+            &.unactive
+                opacity: 0.3;
+    &__wrapper
+        margin: 12px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 20px
+
+.video
+    &__prev
+        display: block
+        position: relative
+        border-radius: 24px;
+        overflow: hidden
+        img
+            width: 100%
+    &__time
+        position: absolute
+        bottom: 12px
+        right: 12px
+        padding: 3px 12px
+        background: #FFFFFF;
+        border-radius: 47px;
+        p
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: #000000;
+    &__info
+        margin: 16px 0 0
+        position: relative
+    &__name
+        display: block
+        font-family: 'Stem';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 25px;
+        color: #000000;
+        max-width: 90%
+    &__autor
+        display: block
+        margin: 8px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        img
+            width: 24px
+            height: 24px
+            object-fit: cover
+            margin: 0 12px 0 0
+            border-radius: 100%
+        p
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #000000;
+    &__more
+        position: absolute
+        right: 0
+        top: 15px
+        display: grid
+        grid-template-columns: 100%
+        gap: 4px
+        cursor: pointer
+        &::before,
+        &::after,
+        span
+            content: ''
+            display: block
+            width: 4px
+            height: 4px
+            border-radius: 100%
+            background: #000000;
+
+.nav-fix
+    position: fixed
+    padding: 160px 0 0
+    height: 100vh
+    top: 0
+    right: calc(50% + 470px)
+    width: 250px
+    li
+        padding: 16px 0 16px 40px
+        width: 100%
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        cursor: pointer
+        position: relative
+        img
+            width: 48px
+            margin: 0 12px 0 0
+        p
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 26px;
+            text-transform: lowercase;
+            color: #787878;
+        &.active
+            background: #FFFFFF;
+            box-shadow: 0px 14px 65px rgba(0, 0, 0, 0.07);
+            border-radius: 0px 24px 24px 0px;
+            p
+                font-weight: 500;
+                color: #000000;
+    &__movie
+        margin: 16px 0 0 40px
+        width: 187px;
+        height: 55px;
+        background: #FFE772;
+        border-radius: 16px;
+        display: flex
+        justify-content: center
+        align-items: center
+        font-family: 'Stem';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 27px;
+        text-align: center;
+        color: #000000;
+    &__pers
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 24px 30px 24px 40px
+        position: absolute
+        bottom: 30px
+        left: 0
+        width: 100%
+        &.active
+            background: #FFFFFF;
+            box-shadow: 0px 14px 65px rgba(0, 0, 0, 0.07);
+            border-radius: 0px 24px 24px 0px;
+        p
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 26px;
+            text-transform: lowercase;
+            color: #000000;
+
+@media ( max-width: 1440px )
+    .nav-fix
+        left: 0
+        right: auto
+    .main.container
+        padding: 0 20px 0 260px
+
+@media ( max-width: 1260px )
+    .nav
+        &__list
+            gap: 20px
+            img
+                width: 30px
+            p
+                line-height: 30px
+                font-size: 20px
+    .nav-fix
+        padding: 134px 0 0
+    .slider
+        &__track
+            // flex-direction: column
+        &__name
+            width: 49%
+            img
+                display: none
+                &:nth-child(4)
+                    display: block
+                &:nth-child(2)
+                    display: block
+            p
+                font-size: 20px
+                line-height: 30px
+        &__timer
+            width: 49%
+        &__downloud
+            width: 49%
+
+@media ( max-width: 1024px )
+    .nav
+        &__list
+            max-width: 55%
+            overflow-x: scroll
+            justify-content: space-between
+    .slider
+        &__slide
+            height: 270px
+    .main.container
+        padding: 0 20px
+
+.nav
+    &__container
+        position: relative
+
+a.nav__search_active
+    background: #855CF6;
+    path
+        fill: #fff
+
+.history
+    position: absolute
+    top: calc( 100% + 40px )
+    background: #855CF6;
+    border-radius: 24px;
+    right: 20px
+    z-index: 50
+    max-width: 440px
+    width: 100%
+    display: none
+    padding: 29px 30px 50px
+    &__active
+        display: block
+    &__title
+        display: grid
+        grid-template-columns: 1fr 48px
+        gap: 20px
+        img
+            width: 100%
+        input
+            width: 100%
+            height: 100%
+            border: none
+            background-color: transparent
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+            color: #FFFFFF;
+            &::-webkit-input-placeholder
+                color:    rgba(255, 255, 255, 0.51);
+            &:-moz-placeholder  
+                color:    rgba(255, 255, 255, 0.51);
+                opacity:  1;
+            &::-moz-placeholder  
+                color:    rgba(255, 255, 255, 0.51);
+                opacity:  1;
+            &:-ms-input-placeholder  
+                color:    rgba(255, 255, 255, 0.51);
+            &::-ms-input-placeholder  
+                color:    rgba(255, 255, 255, 0.51);
+            &::placeholder  
+                color:    rgba(255, 255, 255, 0.51);
+    &__other
+        margin: 30px 0 0
+        h3
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+            color: #FFFFFF;
+        &_wrapper
+            margin: 8px 0 0
+            display: flex
+            flex-wrap: wrap
+            justify-content: flex-start
+            align-items: center
+        p
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: #FFFFFF;
+            padding: 6px 12px
+            margin: 0 12px 12px 0
+            display: block
+            background: #9D7AFE;
+            border-radius: 47px;
+    &__history
+        &_clear
+            margin: 50px 0 0
+            position: relative
+            p
+                font-family: 'Stem';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 36px;
+                text-align: center;
+                color: #FFFFFF;
+                max-width: 300px 
+                margin: 74px auto 0
+            img
+                &:nth-child(1)
+                    margin: 0 0 0 30px
+                    display: block
+                &:nth-child(2)
+                    position: absolute
+                    top: 40px
+                    right: 30px
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 100% 
+        gap: 16px
+        a
+            display: flex
+            justify-content: flex-start
+            align-items: center
+        p
+            margin: 0 0 0 12px
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 27px;
+            color: #FFFFFF;
+
+.result
+    padding: 0 0 64px
+    &__search
+        max-width: 650px
+        margin: 0 auto 32px
+        position: relative
+        a
+            display: none
+        input
+            width: 100%
+            height: 64px
+            background: #F7F7F7;
+            border-radius: 24px;
+            border: none
+            padding: 0 24px
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+            color: #000000;
+            border: 2px solid #F7F7F7;
+            transition: all .3s
+            box-sizing: border-box
+            &:focus
+                background: #FFFFFF;
+                border: 2px solid #855CF6;
+                border-bottom: 1px solid #DFDFDF
+                border-radius: 24px 24px 0 0
+                &+ul
+                    z-index: 1
+                    opacity: 1
+        ul
+            display: grid
+            grid-template-columns: 100% 
+            padding: 16px 24px 32px 
+            border: 2px solid #855CF6;
+            border-top: none
+            border-radius: 0 0 24px 24px
+            position: absolute
+            top: 100%
+            left: 0
+            width: 100%
+            z-index: -111
+            opacity: 0
+            transition: opacity .3s
+            gap: 16px
+            background-color: #fff
+            li
+                font-family: 'Stem';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 22px;
+                line-height: 27px;
+                color: #000000;
+            img
+                margin: 0 12px 0 0
+        &::after 
+            content: ''
+            display: block
+            position: absolute
+            top: 50%
+            right: 16px
+            transform: translateY(-50%)
+            width: 32px
+            height: 32px
+            background: url('../img/result_search.svg') center no-repeat
+            background-size: contain
+        &_active
+            input
+                background: #FFFFFF;
+                border: 2px solid #855CF6;
+                border-bottom: 1px solid #DFDFDF
+                border-radius: 24px 24px 0 0
+            &::after
+                content: none
+            a
+                display: block
+                position: absolute
+                top: 50%
+                right: 10px
+                transform: translateY(-50%)
+                width: 48px
+                height: 48px
+            ul
+                z-index: 1
+                opacity: 1
+    &__clear
+        margin: 112px 0 0
+        img
+            display: block
+            margin: 0 auto
+            max-width: 310px
+            object-fit: contain
+        h1
+            max-width: 445px
+            margin: 40px auto 0
+            text-align: center
+
+@media ( max-width: 768px )
+    .nav
+        &__logo
+            width: 100px
+            min-width: 100px
+            img
+                width: 100%
+        &__search
+            a
+                padding: 10px
+            img,
+            svg
+                width: 20px
+                height: 20px
+    .slider
+        &__name
+            display: none
+        &__timer,
+        &__downloud
+            width: 100%
+    .resume
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+
+@media ( max-width: 425px )
+    .resume
+        &__wrapper
+            grid-template-columns: 1fr 
+
+@media ( max-width: 1024px )
+    .nav-fix
+        position: relative
+        height: auto
+        padding: 0 0 50px
+        margin: 0
+        width: 100%
+        &__pers
+            position: relative
+            bottom: auto
+            justify-content: flex-start
+            margin: 30px 0 0
+            &.active
+                border-radius: 24px
+            p
+                margin: 0 10px
+        li.active
+            border-radius: 24px
+
+@media ( max-width: 425px )
+    .nav
+        &__list
+            order: 1
+            width: 100%
+            max-width: 100%
+        &__container
+            flex-wrap: wrap
+    .nav-fix
+        li
+            padding: 16px
+            justify-content: center
+        &__movie
+            margin: 16px auto 0
+        &__pers
+            justify-content: center
+    .history
+        right: 0
+        top: 60px
+        &__history_clear
+            img
+                width: 50%
+                &:nth-child(1)
+                    margin: 0
+                &:nth-child(2)
+                    right: 0
+    .slider
+        &__downloud
+            a
+                font-size: 20px
+                line-height: 25px
+    .result__search_active ul
+        padding: 16px
+        li
+            font-size: 16px
+            line-height: 20px
+    .result
+        &__clear
+            img
+                width: 100%
+
+.modal
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    z-index: 100
+    justify-content: center
+    align-items: center
+    display: none
+    &__active
+        display: flex
+    &__wrapper
+        position: relative
+        width: 100%
+    &__overflow
+        z-index: -1
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        background: rgba(0, 0, 0, 0.4);
+    h2+p
+        max-width: 500px
+        margin: 12px auto 0
+    &__close
+        position: absolute
+        top: 32px
+        right: 32px
+        cursor: pointer
+    &__time
+        p   
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 34px;
+            text-align: center;
+            color: #333333;
+            &+p
+                margin: 12px auto 0
+                font-family: 'Stem';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 26px;
+                text-align: center;
+                color: #787878;
+                max-width: 444px
+
+@media ( max-width: 1024px )
+    .modal
+        &__wrapper
+            width: 100%
+            height: 100%
+            border-radius: 0
+            overflow-y: scroll
+            
+@media ( max-width: 1024px )
+    .modal
+        &__wrapper
+            padding: 90px 20px 50px
+
+.nav-fix
+    z-index: 20
+    li
+        .hint
+            left: calc(100% + 40px)
+            top: -10px
+            &::before
+                content: ''
+                display: block
+                position: absolute
+                width: 48px
+                height: 48px
+                top: 31px
+                left: -12px
+                background: #FFFFFF;
+                transform: rotate(-45deg);
+                z-index: -1
+
+.nav-fix__pers
+    .hint
+        bottom: -20px
+        left: calc(100% + 40px)
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            width: 48px
+            height: 48px
+            bottom: 14px
+            left: -12px
+            background: #FFFFFF;
+            transform: rotate(-45deg);
+            z-index: -1
+
+.nav__list a
+    position: relative
+    .hint
+        top: calc( 100% + 50px )
+        left: -80px
+        width: 490px
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            width: 48px
+            height: 48px
+            left: 80px
+            top: -12px
+            background: #FFFFFF;
+            transform: rotate(-45deg);
+            z-index: -1
+
+.nav__search a
+    position: relative
+    .hint
+        top: calc( 100% + 40px )
+        right: -70px
+        width: 490px
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            width: 48px
+            height: 48px
+            right: 80px
+            top: -12px
+            background: #FFFFFF;
+            transform: rotate(-45deg);
+            z-index: -1
+
+.hint
+    position: absolute
+    box-shadow: 16px 14px 65px rgba(123, 123, 123, 0.38)
+    background-color: #fff
+    background: #FFFFFF;
+    border-radius: 24px;
+    z-index: 20
+    width: 456px
+    padding: 36px
+    p
+        font-family: 'Stem';
+        font-style: normal;
+        font-weight: 400 !important
+        font-size: 20px !important
+        line-height: 28px !important
+        color: #000000;
+        margin: 14px 0 0
+    &__btn
+        display: block
+        background: #000000;
+        border-radius: 16px;
+        border: none
+        width: 190px
+        height: 50px
+        font-family: 'Stem';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+        margin: 28px auto 0
+    &__title
+        display: grid
+        grid-template-columns: 68px auto
+        gap: 12px
+    &__modal
+        position: fixed
+        bottom: 30px
+        left: 40px
+        width: 536px
+    &__link
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 24px
+        margin: 28px auto 0
+        max-width: 400px
+        button
+            font-size: 18px;
+            line-height: 22px;
+
+@media ( max-width: 768px )
+    .hint
+        &__modal
+            bottom: 0
+            width: 100%
+            left: 0
+            border-radius: 24px 24px 0 0
+
+.player
+    display: grid
+    grid-template-columns: 70% 28%
+    gap: 2%
+    &__more
+        display: grid
+        grid-template-columns: 100%
+        gap: 24px
+    &__main
+        iframe
+            width: 100%
+            border-radius: 24px;
+            height: 400px
+    &__title
+        margin: 24px 0 0
+        display: grid
+        grid-template-columns: 1fr 115px
+        gap: 24px
+        align-items: start
+        h1
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 32px;
+            color: #000000;
+    &__func
+        position: relative
+        display: flex
+        justify-content: space-between
+        align-items: center
+        div
+            display: block
+            width: 32px
+            position: relative
+            img
+                width: 100%
+                object-fit: contain
+    &__autor
+        margin: 12px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        img
+            width: 32px
+        p
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 26px;
+            color: #000000;
+            margin: 0 0 0 12px
+    &__info
+        margin: 24px 0 0
+        p
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            color: #000000;
+    .player__block
+        position: absolute
+        top: calc(100% + 24px)
+        right: 0
+        width: auto
+        background: #FFFFFF;
+        box-shadow: 0px 14px 65px rgba(0, 0, 0, 0.14);
+        border-radius: 16px 0px 16px 16px;
+        padding: 16px
+        display: grid
+        grid-template-columns: 24px auto
+        gap: 10px
+        cursor: pointer
+        align-items: center
+        img
+            width: 100%
+        p
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            color: #000000;
+            white-space: nowrap
+
+@media ( max-width: 768px )
+    .player
+        grid-template-columns: 100%
+        gap: 24px
+        &__more
+            grid-template-columns: 1fr 1fr
+
+@media ( max-width: 425px )
+    .player
+        iframe
+            height: 200px
+        &__title
+            grid-template-columns: 100%
+        &__func
+            width: 115px
+            margin: 0 0 0 auto
+        &__more
+            grid-template-columns: 100%
+
+.channel
+    // position: relative
+    // overflow: hidden
+    &__baner
+        height: 200px
+        background-position: center
+        background-size: cover
+        border-radius: 32px
+        display: flex
+        justify-content: flex-start
+        align-items: flex-end
+        position: relative
+        padding: 16px
+        img
+            width: 60px
+            height: 60px
+            border-radius: 100%
+        h1
+            line-height: 60px
+            padding: 0 17px
+            background: #FFFFFF;
+            border-radius: 47px;
+    &__seting
+        height: 20px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        position: absolute
+        top: 32px
+        right: 32px
+        cursor: pointer
+        &::before,
+        &::after,
+        span
+            content: ''
+            display: block
+            width: 4px
+            height: 4px
+            background: #FFFFFF;
+            border-radius: 100%
+        ul
+            display: none
+        &_active
+            ul
+                display: grid
+                position: absolute
+                right: 0
+                top: calc(100% + 24px)
+                background: #FFFFFF;
+                box-shadow: 0px 14px 65px rgba(0, 0, 0, 0.14);
+                border-radius: 16px 0px 16px 16px;
+                grid-template-columns: 100%
+                gap: 12px
+                padding: 16px
+                z-index: 5
+            li
+                display: grid
+                grid-template-columns: 24px auto
+                gap: 10px
+            img
+                width: 100%
+                height: 24px
+            p
+                font-family: 'Stem';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 26px;
+                color: #000000;
+                white-space: nowrap
+    &__tab
+        margin: 36px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 60px
+        li
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 36px;
+            color: #000000;
+            opacity: 0.4;
+            transition: all .3s
+            cursor: pointer
+            position: relative
+            &:hover
+                opacity: 1
+            &.active
+                opacity: 1  
+                &::before
+                    content: ''
+                    display: block
+                    position: absolute
+                    width: 100%
+                    height: 4px
+                    background: #855CF6;
+                    border-radius: 26px;
+                    left: 0
+                    top: calc( 100% + 6px )
+    &__wrapper
+        position: absolute
+        opacity: 0
+        z-index: -121
+        top: 0
+        &_active
+            opacity: 1
+            position: relative
+            z-index: 1
+            top: auto
+    &__about
+        padding: 24px 0 127px
+        display: grid
+        grid-template-columns: 68% 26%
+        gap: 6%
+        &_wrapper
+            position: relative
+            padding: 46px 28px
+            background: #FFFFFF;
+            box-shadow: 0px 3px 65px rgba(0, 0, 0, 0.07);
+            border-radius: 24px;
+            padding: 46px 173px 58px 28px
+            h3
+                font-family: 'Stem';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 40px;
+                color: #FFFFFF;
+                padding: 10px 17px
+                background: #FB8073;
+                border-radius: 47px;
+                display: inline-block
+            p
+                font-family: 'Stem';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 30px;
+                color: #000000;
+                margin: 28px 0 0
+            img
+                position: absolute
+                right: 0
+                &:nth-child(1)
+                    top: 0
+                    z-index: 1
+                &:nth-child(2)
+                    bottom: 0
+    &__link
+        h3
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 40px;
+            color: #000000;
+            text-align: center
+        a
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 100%
+            margin: 18px 0 0
+            padding: 10px 0
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 40px;
+            color: #000000;
+            background: #FEA8D9;
+            border-radius: 47px;
+
+@media ( max-width: 768px )
+    .channel
+        &__baner
+            height: 150px
+        &__about
+            grid-template-columns: 1fr
+
+@media ( max-width: 425px )
+    .channel
+        &__baner
+            height: 100px
+            padding: 10px
+            h1
+                line-height: 40px
+                font-size: 20px
+            img
+                height: 40px
+                width: 40px
+        &__about
+            &_wrapper
+                padding: 50px 20px
+                img
+                    display: none
+        &__seting_active
+            img
+                width: 100%
+                height: 24px
+
+.channel-block
+    position: fixed
+    left: 40px
+    bottom: 40px
+    background: #FFFFFF;
+    box-shadow: 0px 14px 65px rgba(0, 0, 0, 0.14);
+    border-radius: 24px;
+    width: 350px
+    padding: 35px
+    z-index: 50
+    p
+        margin: 14px 0 0
+        font-family: 'Stem';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        color: #000000;
+    button
+        width: 187px;
+        height: 50px;
+        background: #000000;
+        border-radius: 16px;
+        display: block
+        margin: 28px auto 0
+        font-family: 'Stem';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        color: #FFFFFF;
+
+@media ( max-width: 425px )
+    .channel-block
+        bottom: 0
+        left: 0
+        width: 100%
+        border-radius: 24px 24px 0 0
+    
+.favourite
+    padding: 0 0 70px
+
+.favourite-clear
+    padding: 80px 0 300px
+    img
+        width: 100%
+        max-width: 320px
+        margin: 0 auto
+        display: block
+    h1
+        margin: 30px auto 0
+        max-width: 510px
+        text-align: center
+    button
+        display: block
+        margin: 30px auto 0
+        max-width: 250px
+    &__history
+        h1
+            max-width: 400px
+
+.history-clear
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+        width: 24px
+        height: 24px
+    p
+        font-family: 'Stem';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 27px;
+        text-align: center;
+        color: #FB8073;
+        margin: 0 0 0 12px
+    
+@media ( max-width: 768px )
+    .history-clear
+        margin: 24px 0 0
+        &__wrapper
+            flex-direction: column
+            align-items: flex-start
+
+.video__more
+    ul
+        display: none
+    &_active
+        ul
+            display: grid
+            position: absolute
+            background: #FFFFFF;
+            box-shadow: 0px 14px 65px rgba(0, 0, 0, 0.14);
+            border-radius: 16px 0px 16px 16px;
+            padding: 12px 0
+            right: 0
+            top: calc( 100% + 24px )
+            z-index: 5
+        a
+            padding: 4px 16px
+            display: grid
+            grid-template-columns: 24px auto
+            gap: 10px
+            transition: all .3s
+            &:hover
+                background: #F7F7F7;
+        p
+            white-space: nowrap
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            color: #000000;
+        img
+            width: 100%
+
+.parents-setting
+    position: relative
+    padding: 0 0 120px
+    &__wrapper
+        max-width: 440px
+        margin: 0 auto
+    h1,
+    h2
+        text-align: center
+    &__profile
+        margin: 36px 0 0
+        display: flex
+        justify-content: space-between
+        div
+            display: flex
+            flex-direction: column
+            align-items: center
+        p
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+            color: #000000;
+            margin: 12px 0 0
+            text-align: center
+        img
+            width: 70px
+            padding: 3px
+            border-radius: 100%
+        &_stat
+            max-width: 273px
+            margin: 44px auto 0
+    &__acc
+        &_active
+            img
+                background: linear-gradient(214.05deg, #855CF6 -9.21%, #FEA8D9 88.45%)
+        &_add
+            div
+                width: 70px
+                height: 70px
+                position: relative
+                background: #F7F7F7;
+                border-radius: 100%
+                &::before
+                    content: ''
+                    display: block
+                    position: absolute
+                    width: 32px
+                    height: 4px
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    background: #979797;
+                    border-radius: 2px
+                &::after
+                    content: ''
+                    display: block
+                    position: absolute
+                    width: 4px
+                    height: 32px
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    background: #979797;
+                    border-radius: 2px
+    &__name
+        margin: 28px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 16px
+        input
+            background: #F7F7F7;
+            border-radius: 24px;
+            width: 100%
+            height: 64px
+            border: none
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+            color: #000000;
+            padding: 0 24px
+            box-sizing: border-box
+    &__check
+        display: grid
+        gap: 16px
+        margin: 56px auto 0
+        max-width: 400px
+        h2
+            padding: 0 0 16px
+        div
+            position: relative
+        input
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            opacity: 0
+            z-index: 5
+        label
+            display: flex
+            justify-content: flex-start
+            align-items: center
+        p
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 26px;
+            color: #000000;
+            margin: 0 0 0 12px
+        span
+            background: rgba(120, 120, 128, 0.08);
+            display: block
+            width: 51px
+            height: 31px
+            border-radius: 15px
+            margin: 0 0 0 auto
+            position: relative
+            transition: all .3s
+            &::before
+                content: ''
+                display: block
+                background: #FFFFFF;
+                border: 0.5px solid rgba(0, 0, 0, 0.04);
+                box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15), 0px 3px 1px rgba(0, 0, 0, 0.06);
+                width: 27px
+                height: 27px
+                box-sizing: border-box
+                border-radius: 100%
+                position: absolute
+                top: 2px
+                left: 2px
+                transition: all .3s
+        input:checked+label
+            span
+                background: #855CF6;
+                &::before
+                    left: 22px
+    &__block
+        margin: 56px auto 0
+        max-width: 400px
+        &_wrapper
+            margin: 32px 0 0
+            display: grid
+            gap: 16px
+            div
+                display: flex
+                justify-content: flex-start
+                align-items: center
+        img
+            width: 24px
+            border-radius: 100%
+        p
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #000000;
+            margin: 0 0 0 12px
+        a
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: right;
+            text-transform: lowercase;
+            color: #787878;
+            margin: 0 0 0 auto
+        &_block
+            a
+                color: #FB8073;
+        button
+            margin: 56px 0 0
+            display: block
+    &__list
+        position: absolute
+        top: 0
+        right: 0
+        display: grid
+        gap: 21px
+        a
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 26px;
+            text-transform: lowercase;
+            color: #787878;
+            white-space: nowrap
+        a.parents-setting__list_active
+            color: #000000;
+    &__back
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        top: 0
+        left: 0
+        font-family: 'Stem';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        color: #787878;
+        &::before
+            content: ''
+            display: block
+            width: 24px
+            height: 24px
+            margin: 0 4px 0 0
+            background: url('../img/setting_back.svg') center no-repeat
+            background-size: contain
+    &__code
+        p
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            text-align: center;
+            color: #787878;
+            max-width: 350px
+            margin: 12px auto 0
+        &_wrapper
+            display: grid
+            gap: 16px
+            margin: 22px 0 auto
+        input
+            background: #F7F7F7;
+            border-radius: 24px;
+            width: 100%
+            height: 64px
+            border: none
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+            color: #000000;
+            padding: 0 24px
+            box-sizing: border-box
+        button
+            margin: 32px 0 0
+    &__title
+        h1+p
+            margin: 12px auto 0
+            max-width: 354px
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            text-align: center;
+            color: #787878;
+    &__stat
+        position: relative
+        margin: 30px 0 0
+        p
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 36px;
+            color: #000000;
+            margin: 0 0 0 58px
+        &_wrapper
+            position: relative
+            height: 280px
+            padding: 0 0 0 58px
+            margin: 30px 0 0
+            display: flex
+            justify-content: space-between
+            ul
+                display: flex
+                justify-content: space-between
+                align-items: center
+                position: absolute
+            li
+                font-family: 'Stem';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 26px;
+                text-align: center;
+                color: #787878;
+            div
+                height: 100%
+                width: 30px
+                background: #F7F7F7;
+                border-radius: 32px;
+                display: flex
+                align-items: flex-end
+            span
+                border-radius: 32px;
+                display: block
+                width: 100%
+        &_left
+            top: 0
+            left: 0
+            flex-direction: column
+            height: 100%
+        &_bottom
+            bottom: -42px
+            left: 58px
+            width: calc( 100% - 58px )
+
+@media ( max-width: 768px )
+    .parents-setting
+        &__back
+            position: relative
+            justify-content: flex-start
+        &__list
+            position: relative
+            margin: 30px 0 30px
+        &__name
+            input
+                height: 50px
+                font-size: 20px
+                padding: 0 15px
+        &__code
+            input
+                height: 50px
+                font-size: 20px
+                padding: 0 15px
+
+@media ( max-width: 425px )
+    .parents-setting
+        &__profile
+            flex-direction: column
+            gap: 20px
+        &__stat
+            &_wrapper
+                height: 200px
+                div
+                    width: 24px
+
+.setting-child
+    padding: 0 0 90px
+    max-width: 900px
+    &__baner
+        background: #FEA8D9;
+        border-radius: 32px;
+        padding: 30px 48px 30px 210px
+        position: relative
+        display: flex
+        justify-content: space-between
+        align-items: center
+        img
+            position: absolute
+            bottom: 0
+            left: 50px
+        h1
+            color: #FFFFFF;
+            margin: 4px 0 0
+        a
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 40px;
+            color: #333333;
+            padding: 10px 17px
+            background: #FFFFFF;
+            border-radius: 47px;
+        button
+            width: 220px
+            display: flex
+            justify-content: center
+            align-items: center
+            &::after
+                content: ''
+                display: block
+                width: 32px
+                height: 32px
+                margin: 0 0 0 10px
+                background: url('../img/button_arrow.svg') center no-repeat
+        div
+            display: flex
+            flex-direction: column
+            align-items: center
+    &__wrapper
+        max-width: 600px
+        margin: 36px auto 0
+        h2
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 40px;
+            text-align: center;
+            color: #333333;
+    &__name
+        margin: 32px auto 0
+        max-width: 440px
+        p
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+            color: #787878;
+        input
+            background: #F7F7F7;
+            border-radius: 24px;
+            width: 100%
+            height: 64px
+            border: none
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+            color: #000000;
+            padding: 0 24px
+            box-sizing: border-box
+            margin: 12px 0 0
+        button
+            margin: 28px 0 0
+        a
+            font-family: 'Stem';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+            text-align: center;
+            color: #FB8073;
+            display: block
+            margin: 50px 0 0
+
+@media ( max-width: 1440px )
+    .setting-child
+        &__baner
+            a
+                font-size: 24px;
+                line-height: 30px;
+                padding: 10px
+            
+@media ( max-width: 768px )
+    .setting-child
+        &__baner
+            padding: 30px
+            img
+                display: none
+        &__name
+            input
+                height: 50px
+                font-size: 20px
+                padding: 0 15px
+
+@media ( max-width: 600px )
+    .setting-child
+        &__baner
+            flex-direction: column
+            button
+                margin: 12px 0 0
+
+@media ( max-width: 425px )
+    .setting-child
+        &__baner
+            padding: 10px
