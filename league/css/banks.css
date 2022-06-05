@@ -1,0 +1,266 @@
+.bank-credit__wrap{
+	margin-bottom: 14px;
+    margin-top: 16px;
+    padding-top: 9px;
+    width: 100%;
+    background-color: #fff;
+    padding: 16px;
+}
+
+.result__sort__wrap{
+    min-width: 85px;
+}
+
+.credit__label__select-sort {
+    min-width: 85px;
+}
+
+.search__tittle{
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 35px;
+}
+
+.search__form{
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.search__input{
+	background-color: #EEEEEE;
+    color: #A1A1A1;
+    line-height: 40px;
+    padding: 0 9px 0 40px;
+    font-size: 14px;
+}
+
+.search__input::placeholder{
+	line-height: 40px;
+	color: #B4B4B4;
+}
+
+.dark-blue_button{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	font-size: 14px;
+}
+
+.search__icon{
+	position: absolute;
+	top: 9px;
+	left: 16px;
+	width: 16px;
+	height: 16px;
+}
+
+.letter__list{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	font-weight: 700;
+	line-height: 19px;
+	text-transform: uppercase;
+}
+
+.letter{
+	color: #4A90E2;
+	letter-spacing: 0.2em;
+}
+
+.all{
+	color: #000000;
+	letter-spacing: 0;
+	border-bottom: 1px solid #000;
+}
+
+.all:hover{
+	color: #000000;
+	letter-spacing: 0;
+	border-bottom: 1px solid transparent;
+}
+
+/*------------------------------------
+##SEARCH
+--------------------------------------*/
+.col-lg-push-3.banks__info{
+	left: 28%;
+}
+
+.result__sort__item {
+    margin: 0 1px 0 2px;
+}
+
+.search-credit__result__item{
+	padding: 15px 18px 14px 16px;
+    margin-bottom: 16px;
+}
+
+.search-credit__result__item:last-of-type{
+    margin-bottom: 0;
+}
+
+.bank_description {
+    margin-left: 24px;
+}
+
+.banks__info{
+	margin-left: auto;
+	text-align: right;
+	color: #3A3A3A;
+}
+
+.result__sort__wrap:last-of-type .credit__label__select-sort {
+    min-width: 81px;
+}
+
+.result__sort__wrap:last-of-type{
+	margin-right: 0;
+}
+
+.bank__place{
+	font-weight: 700;
+	line-height: 24px;
+	margin-top: -9px;
+    margin-bottom: 3px;
+}
+
+.bank__place__numb,
+.bank__otz__numb{
+	color: #4A90E2;
+	font-weight: 700;
+	margin-right: 5px;
+}
+
+.result__item__bank-info{
+	margin: 0;
+	padding: 12px 0 0;
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.main-info__img{
+	vertical-align: text-bottom;
+}
+
+
+.main-content__bottom-text{
+	margin-top: 16px;
+}
+
+.news__mailing {
+    border: 0;
+    padding: 13px 14px 8px 12px;
+}
+.news{
+	margin-top: 24px;
+}
+
+.select-selected {
+    width: 83px;
+}
+
+.result__sort__wrap:last-of-type .select-selected {
+    width: 79px;
+}
+
+@-moz-document url-prefix()
+{
+	.select__vallet__wrap .select__period_green::before {
+	    bottom: -3px;
+	}
+}
+
+
+@media all and (-ms-high-contrast:none){
+    *::-ms-backdrop, .search__input{
+        height: 40px;
+    }
+ }
+
+@media(max-width: 1024px){
+	.bank-credit__wrap {
+    	padding: 7px 19px 15px 16px;
+	}
+}
+
+@media(max-width: 991px){
+	
+	.bank_description{
+		margin-top: 0;
+	}
+
+	.col-lg-push-3.banks__info {
+	    left: 39%;
+	}
+}
+
+@media(max-width: 768px){
+	.dark-blue_button {
+    	width: 87px;
+	}
+
+	.search-credit__result,
+	.bank-credit__wrap{
+	    margin-top: 0px;
+	}
+	
+	.bank-credit__wrap{
+		z-index: 999;
+	}
+	
+}
+
+@media(max-width: 767px){
+	.col-lg-push-3.banks__info {
+	    left: 0;
+	}
+
+	.bank__place{
+		margin-bottom: 0;
+	}
+	
+	.bank-info__item{
+		width: 50%;
+	}
+	
+	.banks_page .main-info__key{
+		width: 72%;
+	}
+	.search-credit__result__header {
+	    align-items: baseline;
+	}
+
+}
+
+@media(max-width: 375px){
+	.letter {
+	    font-size: 12px;
+	}
+}
+
+@media(max-width: 320px){
+
+	.select-selected {
+	    width: 75px;
+	}
+
+	.result__sort__wrap:last-of-type .select-selected {
+	    width: 70px;
+	}
+
+	.bank-credit__wrap, .search-credit__wrap {
+	    padding: 14px 9px 15px 8px;
+	}
+
+	.banks_page .main-info__key {
+	    width: 66%;
+	}
+}

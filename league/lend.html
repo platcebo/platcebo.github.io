@@ -479,7 +479,7 @@
                     <input type="text" class="cost__name" placeholder="Ваше имя">
                     <input type="text" class="cost__name" placeholder="Контактный телефон" name="phone">
                     <label for="">
-                        <input type="checkbox">
+                        <input type="checkbox" checked>
                         <span>Я принимаю условия <br> передачи информации *</span>
                     </label>
                     <button class="button_green animate_btn">бесплатная консультация</button>
@@ -515,6 +515,10 @@
                 <button class="button_green animate_btn modal-lend__btn">Узнать стоимость списания моих долгов</button>
                 <img src="img/lawyers_img.png" alt="" class="lawyers__bg">
             </div>
+            <div class="lawyers-modal">
+                <div class="lawyers-modal__overflow"></div>
+                <img src="img/lawyers_doc_modal.jpg" alt="">
+            </div>
             <div class="modal-lend">
                 <div class="modal-lend__overflow"></div>
                 <form action="#" class="cost__form modal-lend__wrapper">
@@ -522,7 +526,7 @@
                     <input type="text" class="cost__name" placeholder="Ваше имя">
                     <input type="text" class="cost__name" placeholder="Контактный телефон" name="phone">
                     <label for="">
-                        <input type="checkbox">
+                        <input type="checkbox" checked>
                         <span>Я принимаю условия <br> передачи информации *</span>
                     </label>
                     <button class="button_green animate_btn">Узнать стоимость списания моих долгов</button>
@@ -585,7 +589,7 @@
                         <input type="text" class="cost__name" placeholder="Ваше имя">
                         <input type="text" class="cost__name" placeholder="Контактный телефон" name="phone">
                         <label for="">
-                            <input type="checkbox">
+                            <input type="checkbox" checked>
                             <span>Я принимаю условия <br> передачи информации *</span>
                         </label>
                         <button class="button_green animate_btn">жду звонка!</button>
@@ -753,7 +757,7 @@
                         <button class="button_green animate_btn">получить бесплатную консультацию</button>
                     </div>
                     <label for="">
-                        <input type="checkbox">
+                        <input type="checkbox" checked>
                         <span>Я принимаю условия передачи информации *</span>
                     </label>
                 </form>
@@ -796,7 +800,7 @@
                 </div>
             </div>
         </section>
-        <section class="comment">
+        <section class="comment" itemtype="//schema.org/Product" itemscope>
             <div class="container">
                 <h2><span>Отзывы</span> о компании</h2>
                 <div class="comment__wrapper owl-carousel">
@@ -807,7 +811,7 @@
                                 <img src="img/comment_play.svg" alt="">
                             </div>
                         </div>
-                        <p class="comment__name">Блинкова Ирина</p>
+                        <p class="comment__name" itemprop="name" content="Блинкова Ирина">Блинкова Ирина</p>
                         <p class="comment__save">Дело №А40-308131/2019</p>
                     </div>
                     <div class="comment__item">
@@ -817,7 +821,7 @@
                                 <img src="img/comment_play.svg" alt="">
                             </div>
                         </div>
-                        <p class="comment__name">Блинкова Ирина</p>
+                        <p class="comment__name" itemprop="name" content="Блинкова Ирина">Блинкова Ирина</p>
                         <p class="comment__save">Дело №А40-308131/2019</p>
                     </div>
                     <div class="comment__item">
@@ -827,7 +831,7 @@
                                 <img src="img/comment_play.svg" alt="">
                             </div>
                         </div>
-                        <p class="comment__name">Блинкова Ирина</p>
+                        <p class="comment__name" itemprop="name" content="Блинкова Ирина">Блинкова Ирина</p>
                         <p class="comment__save">Дело №А40-308131/2019</p>
                     </div>
                     <div class="comment__item">
@@ -837,7 +841,7 @@
                                 <img src="img/comment_play.svg" alt="">
                             </div>
                         </div>
-                        <p class="comment__name">Блинкова Ирина</p>
+                        <p class="comment__name" itemprop="name" content="Блинкова Ирина">Блинкова Ирина</p>
                         <p class="comment__save">Дело №А40-308131/2019</p>
                     </div>
                 </div>
@@ -847,49 +851,49 @@
                 </div>
             </div>
         </section>
-        <section class="quest">
+        <section class="quest" itemscope itemtype="//schema.org/FAQPage">
             <div class="container">
                 <h2><span>Частые вопросы</span> <br>по банкротству физ. лиц</h2>
                 <div class="quest__tab">
-                    <div class="quest__btn quest__btn_active">
-                        <p>Какие долги можно списать в процедуре банкротства?</p>
+                    <div class="quest__btn quest__btn_active" itemscope itemprop="mainEntity" itemtype="//schema.org/Question">
+                        <p itemprop="name"></p>>Какие долги можно списать в процедуре банкротства?</p>
                         <div class="quest__close"></div>
                     </div>
-                    <div class="quest__wrapper quest__wrapper_active">
-                        <p>Обычно за списанием долгов обращаются люди, которые погрязли в кредитах. Да, кредиты в банках и займы в МФО вам спишут. А также долги по коммунальным услугам и за связь — мобильную или стационарную, долги физическим лицам — по распискам или без них.</p>
-                        <p>Недоплаченные налоги, штрафы ГИБДД и за парковку в неположенном месте, или за разжигание костров в лесу и курение на лестничной площадке вашего подъезда — тоже спишут.</p>
+                    <div class="quest__wrapper quest__wrapper_active" itemscope itemprop="acceptedAnswer" itemtype="//schema.org/Answer">
+                        <p itemprop="text">Обычно за списанием долгов обращаются люди, которые погрязли в кредитах. Да, кредиты в банках и займы в МФО вам спишут. А также долги по коммунальным услугам и за связь — мобильную или стационарную, долги физическим лицам — по распискам или без них.</p>
+                        <p itemprop="text">Недоплаченные налоги, штрафы ГИБДД и за парковку в неположенном месте, или за разжигание костров в лесу и курение на лестничной площадке вашего подъезда — тоже спишут.</p>
                     </div>
-                    <div class="quest__btn">
-                        <p>Может ли мне кто-то из тех, кому я должен сейчас, до начала банкротства, припомнить мои долги через год и вновь начать их требовать?</p>
+                    <div class="quest__btn" itemscope itemprop="mainEntity" itemtype="//schema.org/Question">
+                        <p itemprop="name"></p>>Может ли мне кто-то из тех, кому я должен сейчас, до начала банкротства, припомнить мои долги через год и вновь начать их требовать?</p>
                         <div class="quest__close"></div>
                     </div>
-                    <div class="quest__wrapper">
-                        <p>Обычно за списанием долгов обращаются люди, которые погрязли в кредитах. Да, кредиты в банках и займы в МФО вам спишут. А также долги по коммунальным услугам и за связь — мобильную или стационарную, долги физическим лицам — по распискам или без них.</p>
-                        <p>Недоплаченные налоги, штрафы ГИБДД и за парковку в неположенном месте, или за разжигание костров в лесу и курение на лестничной площадке вашего подъезда — тоже спишут.</p>
+                    <div class="quest__wrapper" itemscope itemprop="acceptedAnswer" itemtype="//schema.org/Answer">
+                        <p itemprop="text">Обычно за списанием долгов обращаются люди, которые погрязли в кредитах. Да, кредиты в банках и займы в МФО вам спишут. А также долги по коммунальным услугам и за связь — мобильную или стационарную, долги физическим лицам — по распискам или без них.</p>
+                        <p itemprop="text">Недоплаченные налоги, штрафы ГИБДД и за парковку в неположенном месте, или за разжигание костров в лесу и курение на лестничной площадке вашего подъезда — тоже спишут.</p>
                     </div>
-                    <div class="quest__btn">
-                        <p>Есть ли такие долги, которые мне не спишут в процедуре банкротства?</p>
+                    <div class="quest__btn" itemscope itemprop="mainEntity" itemtype="//schema.org/Question">
+                        <p itemprop="name"></p>>Есть ли такие долги, которые мне не спишут в процедуре банкротства?</p>
                         <div class="quest__close"></div>
                     </div>
-                    <div class="quest__wrapper">
-                        <p>Обычно за списанием долгов обращаются люди, которые погрязли в кредитах. Да, кредиты в банках и займы в МФО вам спишут. А также долги по коммунальным услугам и за связь — мобильную или стационарную, долги физическим лицам — по распискам или без них.</p>
-                        <p>Недоплаченные налоги, штрафы ГИБДД и за парковку в неположенном месте, или за разжигание костров в лесу и курение на лестничной площадке вашего подъезда — тоже спишут.</p>
+                    <div class="quest__wrapper" itemscope itemprop="acceptedAnswer" itemtype="//schema.org/Answer">
+                        <p itemprop="text">Обычно за списанием долгов обращаются люди, которые погрязли в кредитах. Да, кредиты в банках и займы в МФО вам спишут. А также долги по коммунальным услугам и за связь — мобильную или стационарную, долги физическим лицам — по распискам или без них.</p>
+                        <p itemprop="text">Недоплаченные налоги, штрафы ГИБДД и за парковку в неположенном месте, или за разжигание костров в лесу и курение на лестничной площадке вашего подъезда — тоже спишут.</p>
                     </div>
-                    <div class="quest__btn">
-                        <p>Какие долги можно списать в процедуре банкротства?</p>
+                    <div class="quest__btn" itemscope itemprop="mainEntity" itemtype="//schema.org/Question">
+                        <p itemprop="name"></p>>Какие долги можно списать в процедуре банкротства?</p>
                         <div class="quest__close"></div>
                     </div>
-                    <div class="quest__wrapper">
-                        <p>Обычно за списанием долгов обращаются люди, которые погрязли в кредитах. Да, кредиты в банках и займы в МФО вам спишут. А также долги по коммунальным услугам и за связь — мобильную или стационарную, долги физическим лицам — по распискам или без них.</p>
-                        <p>Недоплаченные налоги, штрафы ГИБДД и за парковку в неположенном месте, или за разжигание костров в лесу и курение на лестничной площадке вашего подъезда — тоже спишут.</p>
+                    <div class="quest__wrapper" itemscope itemprop="acceptedAnswer" itemtype="//schema.org/Answer">
+                        <p itemprop="text">Обычно за списанием долгов обращаются люди, которые погрязли в кредитах. Да, кредиты в банках и займы в МФО вам спишут. А также долги по коммунальным услугам и за связь — мобильную или стационарную, долги физическим лицам — по распискам или без них.</p>
+                        <p itemprop="text">Недоплаченные налоги, штрафы ГИБДД и за парковку в неположенном месте, или за разжигание костров в лесу и курение на лестничной площадке вашего подъезда — тоже спишут.</p>
                     </div>
-                    <div class="quest__btn">
-                        <p>Есть ли такие долги, которые мне не спишут в процедуре банкротства?</p>
+                    <div class="quest__btn" itemscope itemprop="mainEntity" itemtype="//schema.org/Question">
+                        <p itemprop="name"></p>>Есть ли такие долги, которые мне не спишут в процедуре банкротства?</p>
                         <div class="quest__close"></div>
                     </div>
-                    <div class="quest__wrapper">
-                        <p>Обычно за списанием долгов обращаются люди, которые погрязли в кредитах. Да, кредиты в банках и займы в МФО вам спишут. А также долги по коммунальным услугам и за связь — мобильную или стационарную, долги физическим лицам — по распискам или без них.</p>
-                        <p>Недоплаченные налоги, штрафы ГИБДД и за парковку в неположенном месте, или за разжигание костров в лесу и курение на лестничной площадке вашего подъезда — тоже спишут.</p>
+                    <div class="quest__wrapper" itemscope itemprop="acceptedAnswer" itemtype="//schema.org/Answer">
+                        <p itemprop="text">Обычно за списанием долгов обращаются люди, которые погрязли в кредитах. Да, кредиты в банках и займы в МФО вам спишут. А также долги по коммунальным услугам и за связь — мобильную или стационарную, долги физическим лицам — по распискам или без них.</p>
+                        <p itemprop="text">Недоплаченные налоги, штрафы ГИБДД и за парковку в неположенном месте, или за разжигание костров в лесу и курение на лестничной площадке вашего подъезда — тоже спишут.</p>
                     </div>
                 </div>
             </div>
@@ -909,7 +913,7 @@
                     <input type="text" class="cost__name" placeholder="Ваше имя">
                     <input type="text" class="cost__name" placeholder="Контактный телефон" name="phone">
                     <label for="">
-                        <input type="checkbox">
+                        <input type="checkbox" checked>
                         <span>Я принимаю условия <br> передачи информации *</span>
                     </label>
                     <button class="button_green animate_btn">жду звонка!</button>
@@ -920,15 +924,15 @@
         <section class="tag">
             <div class="container">
                 <div class="tag__wrapper">
-                    <p>Банкротство физ. лиц в Одинцово</p>
-                    <p>Банкротство физ. лица в рассрочку в Одинцово</p>
-                    <p>Помощь должникам по кредитам  в Одинцово</p>
-                    <p>Бесплатное банкротство через МФЦ в Одинцово</p>
-                    <p>Стоимость банкротства физ. лиц в Одинцово</p>
-                    <p>Юрист по банкротству физ. лиц в Одинцово</p>
-                    <p>Юрист по кредитным долгам в Одинцово</p>
-                    <p>Бесплатная консультация по банкротству физ. лиц в Одинцово</p>
-                    <p>Банкротство физ. лиц под ключ в Одинцово</p>
+                    <a href="#">Банкротство физ. лиц в Одинцово</a>
+                    <a href="#">Банкротство физ. лица в рассрочку в Одинцово</a>
+                    <a href="#">Помощь должникам по кредитам  в Одинцово</a>
+                    <a href="#">Бесплатное банкротство через МФЦ в Одинцово</a>
+                    <a href="#">Стоимость банкротства физ. лиц в Одинцово</a>
+                    <a href="#">Юрист по банкротству физ. лиц в Одинцово</a>
+                    <a href="#">Юрист по кредитным долгам в Одинцово</a>
+                    <a href="#">Бесплатная консультация по банкротству физ. лиц в Одинцово</a>
+                    <a href="#">Банкротство физ. лиц под ключ в Одинцово</a>
                 </div>
             </div>
         </section>
