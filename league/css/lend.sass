@@ -1499,3 +1499,21 @@
                 transition: all .3s
                 &.active
                     background: #4A90E2
+
+@media ( max-width: 768px )
+    .head-bottom_new
+        padding: 15px 0
+        .head__search-wrap
+            display: flex !important
+            width: 100%
+            padding: 0 !important
+        .head-bottom__wrap
+            width: 100%
+            margin: 0
+
+@media ( max-width: 425px )
+    .head-bottom_new
+        .head__search-wrap
+            flex-direction: column
+            gap: 20px
+            

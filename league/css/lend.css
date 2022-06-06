@@ -2208,4 +2208,31 @@
     background: #4A90E2;
   }
 }
+
+@media (max-width: 768px) {
+  .head-bottom_new {
+    padding: 15px 0;
+  }
+  .head-bottom_new .head__search-wrap {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    width: 100%;
+    padding: 0 !important;
+  }
+  .head-bottom_new .head-bottom__wrap {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .head-bottom_new .head__search-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+}
 /*# sourceMappingURL=lend.css.map */
