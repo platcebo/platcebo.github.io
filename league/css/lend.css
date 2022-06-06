@@ -1923,6 +1923,12 @@
   .cost__list_info div:nth-child(3) {
     grid-column: auto/auto;
   }
+  .cost__garant {
+    padding: 30px;
+  }
+  .cost__garant img {
+    display: none;
+  }
   .service h2 {
     margin: 0 auto;
     text-align: center;
