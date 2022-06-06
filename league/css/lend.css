@@ -1909,6 +1909,52 @@
 }
 
 @media (max-width: 425px) {
+  .header-lend__prev h1 {
+    text-align: center;
+  }
+  .debt h2 {
+    text-align: center;
+  }
+  .lawyers h2 {
+    text-align: center;
+  }
+  .lawyers__stat {
+    text-align: center;
+  }
+  .lawyers__stat p + p {
+    margin: 20px auto 0;
+  }
+  .cost__info h2 {
+    text-align: center;
+  }
+  .cost__price {
+    font-size: 20px;
+    margin: 30px auto 0;
+  }
+  .cost__garant {
+    display: block;
+  }
+  .cost__garant p {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .cost__form h3 {
+    text-align: center;
+  }
+  .result h2 {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .result__list h3 {
+    text-align: center;
+  }
+  .result__list p {
+    text-align: center;
+  }
+  .aftermath h2 {
+    text-align: center;
+    margin: 0 auto;
+  }
   .team__pers {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
@@ -1971,6 +2017,9 @@
   .comment .owl-dots button.active {
     background: #4A90E2;
   }
+  .conduct h2 {
+    text-align: center;
+  }
   .conduct .owl-dots {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1994,6 +2043,29 @@
   }
   .conduct .owl-dots button.active {
     background: #4A90E2;
+  }
+  .quest h2 {
+    text-align: center;
+  }
+  .entry__info {
+    margin: 0;
+    max-width: 100%;
+  }
+  .entry__info h2 {
+    text-align: center;
+  }
+  .entry__info h2 + p {
+    text-align: center;
+  }
+  .entry__item {
+    margin: 30px auto 0;
+  }
+  .entry__item img {
+    display: block;
+    margin: 0 auto;
+  }
+  .entry__item p {
+    text-align: center;
   }
 }
 
