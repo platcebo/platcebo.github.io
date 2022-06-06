@@ -284,6 +284,7 @@ $(function() {
 
 let commentBtn = document.querySelectorAll('.comment__play'),
 	commentPopup = document.querySelector('.comment__popup'),
+	// commentVideo = document.querySelectorAll('.comment__popup iframe'),
 	commentOverflow = document.querySelector('.comment__overflow');
 
 for(let i = 0; i < commentBtn.length; i++) {
@@ -292,6 +293,7 @@ for(let i = 0; i < commentBtn.length; i++) {
 	});
 	commentOverflow.addEventListener('click', ()=>{
 		commentPopup.classList.remove('comment__popup_active');
+		// commentPopup.removeChild('iframe');
 	});
 }
 
@@ -321,7 +323,7 @@ for(let i = 0; i < modal.length; i++) {
 }
 
 let lawyersModal = document.querySelector('.lawyers-modal'),
-	lawyersImg = document.querySelector('.lawyers__wrapper img'),
+	lawyersImg = document.querySelector('.lawyers__zoom'),
 	lawyersOverflow = document.querySelector('.lawyers-modal__overflow');
 
 lawyersImg.addEventListener('click', ()=>{
@@ -330,4 +332,25 @@ lawyersImg.addEventListener('click', ()=>{
 lawyersOverflow.addEventListener('click', ()=>{
 	lawyersModal.classList.remove('lawyers-modal__active');
 });
+
+let conductModal = document.querySelector('.conduct__modal'),
+	conductImg = document.querySelectorAll('.conduct__wrapper a'),
+	conductOverflow = document.querySelector('.conduct__overflow');
+
+for( let i = 0; i < conductImg.length; i++) {
+	conductImg[i].addEventListener('click', ()=>{
+		conductModal.classList.add('conduct__modal_active');
+	});
+	conductOverflow.addEventListener('click', ()=>{
+		conductModal.classList.remove('conduct__modal_active');
+	});
+}
+
+
+$(function(){
+    $('.comment__overflow').click(function(){      
+        $('.comment__popup iframe').attr('src', $('.comment__popup iframe').attr('src'));
+    });
+});
+
 });
