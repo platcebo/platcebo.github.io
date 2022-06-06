@@ -244,6 +244,7 @@ $(function() {
 		items: 1,
 		nav: false,
 		margin: 23,
+		dots: true,
 		responsive:{
 			426:{
 				items: 2,
@@ -266,7 +267,13 @@ $(function() {
 		items: 1,
 		nav: false,
 		margin: 23,
+		dots: true,
 		responsive:{
+			426:{
+				items: 1,
+				nav: false,
+				margin: 23,
+			},
 			601:{
 				items: 2,
 				nav: false,
@@ -281,6 +288,19 @@ $(function() {
 		}	
 	});
 });
+
+if ($(window).width() < 501) {
+	$(function() {
+		// Owl Carousel
+		var owl = $(".team .owl-carousel");
+		owl.owlCarousel({
+			items: 1,
+			nav: false,
+			margin: 23,
+			dots: true
+		});
+	});
+}
 
 let commentBtn = document.querySelectorAll('.comment__play'),
 	commentPopup = document.querySelector('.comment__popup'),

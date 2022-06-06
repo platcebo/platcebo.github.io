@@ -1321,6 +1321,36 @@
         &__list
             grid-template-columns: 100%
             gap: 20px
+    .comment
+        .owl-dots
+            display: flex
+            justify-content: center
+            align-items: center
+            margin: 20px 0 0
+            button
+                width: 10px
+                height: 10px
+                background: #EAEAEA
+                margin: 0 5px
+                border-radius: 100%
+                transition: all .3s
+                &.active
+                    background: #4A90E2
+    .conduct
+        .owl-dots
+            display: flex
+            justify-content: center
+            align-items: center
+            margin: 20px 0 0
+            button
+                width: 10px
+                height: 10px
+                background: #EAEAEA
+                margin: 0 5px
+                border-radius: 100%
+                transition: all .3s
+                &.active
+                    background: #4A90E2
 
 @keyframes animate_btn 
     from
@@ -1389,3 +1419,20 @@
         height: 80%
         max-width: 90%
         object-fit: contain
+
+@media ( max-width: 501px )
+    .team
+        .owl-dots
+            display: flex
+            justify-content: center
+            align-items: center
+            margin: 20px 0 0
+            button
+                width: 10px
+                height: 10px
+                background: #EAEAEA
+                margin: 0 5px
+                border-radius: 100%
+                transition: all .3s
+                &.active
+                    background: #4A90E2

@@ -1947,6 +1947,54 @@
         grid-template-columns: 100%;
     gap: 20px;
   }
+  .comment .owl-dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 20px 0 0;
+  }
+  .comment .owl-dots button {
+    width: 10px;
+    height: 10px;
+    background: #EAEAEA;
+    margin: 0 5px;
+    border-radius: 100%;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  .comment .owl-dots button.active {
+    background: #4A90E2;
+  }
+  .conduct .owl-dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 20px 0 0;
+  }
+  .conduct .owl-dots button {
+    width: 10px;
+    height: 10px;
+    background: #EAEAEA;
+    margin: 0 5px;
+    border-radius: 100%;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  .conduct .owl-dots button.active {
+    background: #4A90E2;
+  }
 }
 
 @-webkit-keyframes animate_btn {
@@ -2060,5 +2108,32 @@
   max-width: 90%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+@media (max-width: 501px) {
+  .team .owl-dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 20px 0 0;
+  }
+  .team .owl-dots button {
+    width: 10px;
+    height: 10px;
+    background: #EAEAEA;
+    margin: 0 5px;
+    border-radius: 100%;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  .team .owl-dots button.active {
+    background: #4A90E2;
+  }
 }
 /*# sourceMappingURL=lend.css.map */
