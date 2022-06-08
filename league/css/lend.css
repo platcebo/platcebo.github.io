@@ -1721,6 +1721,8 @@
 .new-footer {
   background: #213246;
   padding: 40px 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .new-footer .container {
