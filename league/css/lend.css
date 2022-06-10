@@ -526,7 +526,9 @@
 .cost__garant img {
   position: absolute;
   right: -70px;
-  top: -35px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 255px;
   height: 200px;
   max-height: none;
@@ -783,7 +785,7 @@
   line-height: 100%;
   color: #434343;
   margin: 0;
-  max-width: 240px;
+  max-width: 460px;
 }
 
 .result h2 span {
@@ -834,7 +836,6 @@
   line-height: 100%;
   margin: 0;
   color: #434343;
-  max-width: 240px;
 }
 
 .aftermath h2 span {
@@ -1288,7 +1289,8 @@
   z-index: 150;
 }
 
-.conduct__modal img {
+.conduct__modal img,
+.conduct__modal iframe {
   height: 80%;
   max-width: 90%;
   -o-object-fit: contain;
@@ -1626,7 +1628,7 @@
 }
 
 .entry__info {
-  max-width: 354px;
+  max-width: 355px;
 }
 
 .entry__info h2 {

@@ -355,7 +355,8 @@
         img
             position: absolute
             right: -70px
-            top: -35px
+            top: 50%
+            transform: translateY(-50%)
             width: 255px
             height: 200px
             max-height: none
@@ -525,7 +526,7 @@
         line-height: 100%;
         color: #434343;
         margin: 0
-        max-width: 240px
+        max-width: 460px
         span
             color: #4A90E2;
     &__list
@@ -562,7 +563,6 @@
         line-height: 100%;
         margin: 0
         color: #434343;
-        max-width: 240px
         span
             color: #4A90E2;
     &__wrapper
@@ -873,7 +873,8 @@
         height: 100vh
         display: none
         z-index: 150
-        img
+        img,
+        iframe
             height: 80%
             max-width: 90%
             object-fit: contain
@@ -1095,7 +1096,7 @@
         justify-content: space-between
         align-items: flex-end
     &__info
-        max-width: 354px
+        max-width: 355px
         h2
             font-family: 'Ubuntu';
             font-style: normal;
