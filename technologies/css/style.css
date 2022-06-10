@@ -567,6 +567,10 @@ h2 {
   margin: 0;
 }
 
+.catalog__mob {
+  display: none;
+}
+
 .catalog__wrapper {
   margin: 34px 0 0;
 }
