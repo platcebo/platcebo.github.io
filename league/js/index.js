@@ -353,16 +353,21 @@ lawyersOverflow.addEventListener('click', ()=>{
 	lawyersModal.classList.remove('lawyers-modal__active');
 });
 
-let conductModal = document.querySelector('.conduct__modal'),
+let conductModal = document.querySelectorAll('.conduct__modal'),
 	conductImg = document.querySelectorAll('.conduct__wrapper a'),
-	conductOverflow = document.querySelector('.conduct__overflow');
+	conductOverflow = document.querySelectorAll('.conduct__overflow'),
+	conductPicture = document.querySelectorAll('.conduct__item img');
 
 for( let i = 0; i < conductImg.length; i++) {
-	conductImg[i].addEventListener('click', ()=>{
-		conductModal.classList.add('conduct__modal_active');
+	conductImg[i].addEventListener('click', (e)=>{
+		conductModal[i].classList.add('conduct__modal_active');
+		e.preventDefault();
 	});
-	conductOverflow.addEventListener('click', ()=>{
-		conductModal.classList.remove('conduct__modal_active');
+	conductPicture[i].addEventListener('click', (e)=>{
+		conductModal[i].classList.add('conduct__modal_active');
+	});
+	conductOverflow[i].addEventListener('click', ()=>{
+		conductModal[i].classList.remove('conduct__modal_active');
 	});
 }
 
