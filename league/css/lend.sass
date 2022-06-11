@@ -147,6 +147,7 @@
         span
             color: #4A90E2;
     p
+        text-align: justify
         font-family: 'Ubuntu';
         font-style: normal;
         font-weight: 400;
@@ -168,11 +169,7 @@
         span
             color: #4A90E2;
     &__wrapper
-        display: grid
-        grid-template-columns: 61% 33%
-        gap: 6%
         margin: 40px 0 0
-        align-items: end
         p
             font-family: 'Ubuntu';
             font-style: normal;
@@ -181,13 +178,14 @@
             line-height: 160%;
             color: #434343;
             margin: 0 0 16px
+            text-align: justify
             span
                 font-weight: 700
         img
             width: 100%
     &__stat
         display: grid
-        grid-template-columns: 220px auto
+        grid-template-columns: 1fr 1fr 1fr
         gap: 1px
         background: #E2E2E2
         margin: 30px 0 0
@@ -202,6 +200,7 @@
             line-height: 100%;
             color: #4A90E2;
             margin: 0
+            text-align: left
             &+p
                 font-family: 'Ubuntu';
                 font-style: normal;
@@ -225,6 +224,9 @@
         width: 100%
     &__img
         position: relative
+        width: 340px
+        float: right
+        margin: 0 0 0 30px
     &__zoom
         position: absolute
         bottom: 30px
@@ -263,7 +265,7 @@
         line-height: 160%;
         text-align: center;
         color: #434343;
-        max-width: 890px
+        text-align: justify
     &__wrapper
         display: grid
         grid-template-columns: 1fr 1fr
@@ -273,7 +275,7 @@
         display: grid
         grid-template-columns: 210px auto
         gap: 20px
-        align-items: start
+        align-items: center
         img
             width: 100%
             max-width: 180px
@@ -288,7 +290,6 @@
                 line-height: 100%;
                 text-align: center;
                 color: #434343;
-                margin: 20px 0 0
                 &+p
                     font-family: 'Ubuntu';
                     font-style: normal;
@@ -298,14 +299,15 @@
                     text-align: center;
                     color: #4A90E2;
                     margin: 16px 0 0
-    &__desc
-        margin: 70px 0 0
-        font-family: 'Ubuntu';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 160%;
-        color: #67717F;
+                &+.team__desc
+                    margin: 20px 0 0
+                    font-family: 'Ubuntu';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 160%;
+                    color: #67717F;
+                    text-align: left
 
 .cost
     padding: 80px 0 
@@ -514,7 +516,7 @@
     &__item
         background: #FFFFFF;
         box-shadow: 0px 0px 6px rgba(224, 224, 224, 0.5);
-        padding: 24px 30px
+        padding: 14px
         display: grid
         grid-template-columns: 36px auto
         gap: 16px
@@ -1212,6 +1214,10 @@
     .team
         &__wrapper
             grid-template-columns: 1fr
+        &__pers
+            div
+                p
+                    text-align: left !important
     .service
         .container
             flex-direction: column
@@ -1250,9 +1256,10 @@
         &__list
             margin: 20px 0 0
     .lawyers
-        &__wrapper
+        &__stat
             grid-template-columns: 100%
-            gap: 20px
+        &__img
+            width: 300px
     .cost
         &__wrapper
             grid-template-columns: 100%
@@ -1286,8 +1293,14 @@
                 background-size: contain
                 margin: 0 10px 0 0
     .lawyers
-        &__stat
-            grid-template-columns: 100%
+        &__wrapper
+            display: flex
+            flex-direction: column
+        &__img
+            float: none
+            order: 1
+            width: 100%
+            margin: 30px 0 0
     .new-footer
         .container
             flex-direction: column
@@ -1341,6 +1354,9 @@
     .team
         &__pers
             grid-template-columns: 100%
+            div
+                p
+                    text-align: center !important
         &__desc
             margin: 0
     .cost

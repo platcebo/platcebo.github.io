@@ -238,6 +238,7 @@
 }
 
 .debt p {
+  text-align: justify;
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 400;
@@ -266,15 +267,7 @@
 }
 
 .lawyers__wrapper {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 61% 33%;
-      grid-template-columns: 61% 33%;
-  gap: 6%;
   margin: 40px 0 0;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
 }
 
 .lawyers__wrapper p {
@@ -285,6 +278,7 @@
   line-height: 160%;
   color: #434343;
   margin: 0 0 16px;
+  text-align: justify;
 }
 
 .lawyers__wrapper p span {
@@ -298,8 +292,8 @@
 .lawyers__stat {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 220px auto;
-      grid-template-columns: 220px auto;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
   gap: 1px;
   background: #E2E2E2;
   margin: 30px 0 0;
@@ -318,6 +312,7 @@
   line-height: 100%;
   color: #4A90E2;
   margin: 0;
+  text-align: left;
 }
 
 .lawyers__stat p + p {
@@ -349,6 +344,9 @@
 
 .lawyers__img {
   position: relative;
+  width: 340px;
+  float: right;
+  margin: 0 0 0 30px;
 }
 
 .lawyers__zoom {
@@ -403,7 +401,7 @@
   line-height: 160%;
   text-align: center;
   color: #434343;
-  max-width: 890px;
+  text-align: justify;
 }
 
 .team__wrapper {
@@ -421,9 +419,9 @@
   -ms-grid-columns: 210px auto;
       grid-template-columns: 210px auto;
   gap: 20px;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .team__pers img {
@@ -441,7 +439,6 @@
   line-height: 100%;
   text-align: center;
   color: #434343;
-  margin: 20px 0 0;
 }
 
 .team__pers div p + p {
@@ -455,14 +452,15 @@
   margin: 16px 0 0;
 }
 
-.team__desc {
-  margin: 70px 0 0;
+.team__pers div p + .team__desc {
+  margin: 20px 0 0;
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 160%;
   color: #67717F;
+  text-align: left;
 }
 
 .cost {
@@ -769,7 +767,7 @@
   background: #FFFFFF;
   -webkit-box-shadow: 0px 0px 6px rgba(224, 224, 224, 0.5);
           box-shadow: 0px 0px 6px rgba(224, 224, 224, 0.5);
-  padding: 24px 30px;
+  padding: 14px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 36px auto;
@@ -1801,6 +1799,9 @@
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  .team__pers div p {
+    text-align: left !important;
+  }
   .service .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1853,10 +1854,12 @@
   .header-lend__list {
     margin: 20px 0 0;
   }
-  .lawyers__wrapper {
+  .lawyers__stat {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-    gap: 20px;
+  }
+  .lawyers__img {
+    width: 300px;
   }
   .cost__wrapper {
     -ms-grid-columns: 100%;
@@ -1897,9 +1900,22 @@
     background-size: contain;
     margin: 0 10px 0 0;
   }
-  .lawyers__stat {
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
+  .lawyers__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .lawyers__img {
+    float: none;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    margin: 30px 0 0;
   }
   .new-footer .container {
     -webkit-box-orient: vertical;
@@ -1966,6 +1982,9 @@
   .team__pers {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
+  }
+  .team__pers div p {
+    text-align: center !important;
   }
   .team__desc {
     margin: 0;
