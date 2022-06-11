@@ -46,6 +46,10 @@ body {
   padding: 20px 34px;
 }
 
+.aside .dropdown {
+  display: none;
+}
+
 .aside .nav {
   display: none;
 }
@@ -1081,6 +1085,26 @@ h2 {
     overflow-y: scroll;
     background: #F5F5F5;
     padding: 10px 10px 20px;
+  }
+  .aside .dropdown {
+    display: block;
+    margin: 20px 0 0;
+  }
+  .aside .dropdown-toggle {
+    background: #FDEA6F;
+    width: 100%;
+    height: 60px;
+    border: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #214D7E;
+  }
+  .aside .show > .btn-secondary.dropdown-toggle {
+    background: #214D7E;
   }
   .aside .nav {
     display: -webkit-box;
