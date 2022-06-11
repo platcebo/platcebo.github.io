@@ -496,6 +496,8 @@
 
 .result
     padding: 35px 0 80px
+    .variant__form
+        grid-column: 1/3
     .container
         display: grid
         grid-template-columns: 1fr 1fr
@@ -800,6 +802,7 @@
     &__item
         img
             width: 100%
+            cursor: pointer
         a
             display: flex
             justify-content: center
@@ -1320,6 +1323,8 @@
             text-align: center
         &__stat
             text-align: center
+            p
+                text-align: center
             p+p
                 margin: 20px auto 0
     .cost
@@ -1368,7 +1373,14 @@
         &__garant
             padding: 30px
             img
-                display: none
+                display: block
+                position: relative
+                margin: 20px 0 0
+                width: 100%
+                transform: none
+                top: auto
+                right: auto
+                height: auto
     .service
         h2
             margin: 0 auto
@@ -1538,3 +1550,9 @@
             gap: 20px
         .new-nav__item:nth-child(3)
             display: none
+
+@media ( max-width: 600px )
+    .lawyers-modal img
+        height: auto
+        width: 80%
+        max-height: none
