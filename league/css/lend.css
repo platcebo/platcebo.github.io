@@ -1293,8 +1293,7 @@
   z-index: 150;
 }
 
-.conduct__modal img,
-.conduct__modal iframe {
+.conduct__modal img {
   height: 80%;
   max-width: 90%;
   -o-object-fit: contain;
@@ -2285,6 +2284,11 @@
 
 @media (max-width: 600px) {
   .lawyers-modal img {
+    height: auto;
+    width: 80%;
+    max-height: none;
+  }
+  .conduct__modal img {
     height: auto;
     width: 80%;
     max-height: none;

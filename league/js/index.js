@@ -359,10 +359,10 @@ let conductModal = document.querySelectorAll('.conduct__modal'),
 	conductPicture = document.querySelectorAll('.conduct__item img');
 
 for( let i = 0; i < conductImg.length; i++) {
-	conductImg[i].addEventListener('click', (e)=>{
-		conductModal[i].classList.add('conduct__modal_active');
-		e.preventDefault();
-	});
+	// conductImg[i].addEventListener('click', (e)=>{
+	// 	conductModal[i].classList.add('conduct__modal_active');
+	// 	e.preventDefault();
+	// });
 	conductPicture[i].addEventListener('click', (e)=>{
 		conductModal[i].classList.add('conduct__modal_active');
 	});
