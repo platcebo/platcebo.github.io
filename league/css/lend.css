@@ -2280,6 +2280,9 @@
   .head-bottom_new .new-nav__item:nth-child(3) {
     display: none;
   }
+  .header-lend__work p {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 600px) {
