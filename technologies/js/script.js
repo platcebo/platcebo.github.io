@@ -20,6 +20,7 @@ $(document).ready(function(){
         fade: true,
         asNavFor: '.product__slider_nav'
     });
+
     $('.product__slider_nav').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -30,19 +31,60 @@ $(document).ready(function(){
         adaptiveHeight: false,
     });
 
-    let nav = document.querySelectorAll('.nav__humburger'),
-        aside = document.querySelector('.aside');
+    $( "#slider-range" ).slider({
+        range: true,
+        min: 1,
+        max: 999,
+        values: [ 1, 999 ],
+        slide: function( event, ui ) {
+            $( ".set__range_one" ).val( ui.values[ 0 ] );
+            $( ".set__range_second" ).val( ui.values[ 1 ] );
+        }
+    });
 
+    $( "#slider-range-set" ).slider({
+        range: true,
+        min: 1,
+        max: 999,
+        values: [ 1, 999 ],
+        slide: function( event, ui ) {
+            $( ".set__range_third" ).val( ui.values[ 0 ] );
+            $( ".set__range_four" ).val( ui.values[ 1 ] );
+        }
+    });
+});
+
+let nav = document.querySelectorAll('.nav__humburger'),
+    aside = document.querySelector('.aside');
+
+if(nav !== null) {
     for(let i = 0; i < nav.length; i++) {
         nav[i].addEventListener('click', ()=>{
             aside.classList.toggle('aside__active');
         });
     }
+}
 
-    let tab = document.querySelectorAll('.har__point'),
-        info = document.querySelector('.har__title'),
-        tabContent = document.querySelectorAll('.har__wrapper');
+let input = document.querySelectorAll('.product__sum_input'),
+    plus = document.querySelectorAll('.product__sum_plus'),
+    min = document.querySelectorAll('.product__sum_min');
 
+if (input !== null) {
+    for (let i = 0; i < input.length; i++) {
+        plus[i].addEventListener('click', ()=>{
+            input[i].setAttribute('value', (parseInt(input[i].getAttribute('value')) + 1).toString());
+        });
+        min[i].addEventListener('click', ()=>{
+            input[i].setAttribute('value', (parseInt(input[i].getAttribute('value')) - 1).toString());
+        });
+    }
+}
+
+let tab = document.querySelectorAll('.har__point'),
+    info = document.querySelector('.har__title'),
+    tabContent = document.querySelectorAll('.har__wrapper');
+
+if (tab !== null) {
     function hideTabContent(a) {
         for (let i = a; i < tabContent.length; i++) {
             tabContent[i].classList.remove('har__wrapper_active');
@@ -70,19 +112,5 @@ $(document).ready(function(){
                 }
             }
         }
-
     });
-
-    let input = document.querySelectorAll('.product__sum_input'),
-        plus = document.querySelectorAll('.product__sum_plus'),
-        min = document.querySelectorAll('.product__sum_min');
-
-    for (let i = 0; i < input.length; i++) {
-        plus[i].addEventListener('click', ()=>{
-            input[i].setAttribute('value', (parseInt(input[i].getAttribute('value')) + 1).toString());
-        });
-        min[i].addEventListener('click', ()=>{
-            input[i].setAttribute('value', (parseInt(input[i].getAttribute('value')) - 1).toString());
-        });
-    }
-});
+}

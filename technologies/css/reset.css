@@ -466,3 +466,21 @@ textarea {
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'TT Interfaces';
+    src: local('TT Interfaces Extra Bold'), local('TT-Interfaces-Extra-Bold'),
+        url('../fonts/TTInterfaces-ExtraBold.woff2') format('woff2'),
+        url('../fonts/TTInterfaces-ExtraBold.woff') format('woff'),
+        url('../fonts/TTInterfaces-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TT Interfaces';
+    src: local('TT Interfaces Regular'), local('TT-Interfaces-Regular'),
+        url('../fonts/TTInterfaces-Regular.woff2') format('woff2'),
+        url('../fonts/TTInterfaces-Regular.woff') format('woff'),
+        url('../fonts/TTInterfaces-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
