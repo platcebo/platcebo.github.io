@@ -2482,3 +2482,106 @@ h2
         width: 100%
         max-width: 150px
         height: 60px
+
+.catalog-grid
+    margin: 24px 0 100px
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 21px
+
+.card-product
+    background: #FFFFFF;
+    box-shadow: 0px 9px 25px rgba(0, 0, 0, 0.04);
+    border-radius: 16px;
+    padding: 20px 25px
+    img
+        width: 100%
+        max-width: 270px
+        height: 150px
+        object-fit: contain
+        display: block
+        margin: 0 auto
+    &__name
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 23px;
+        line-height: 42px;
+        letter-spacing: 0.01em;
+        color: #343F4E;
+        margin: 13px 0 0
+    .product__sum
+        margin: 55px 0 0 auto
+    &__row
+        display: flex
+        justify-content: flex-end
+        margin: 18px 0 0
+        align-items: flex-start
+        flex-wrap: wrap
+        p
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: rgba(52, 63, 78, 0.64);
+            margin: 0
+            &+p
+                font-weight: 800;
+                font-size: 35px;
+                line-height: 42px;
+                letter-spacing: 0.01em;
+                color: #343F4E;
+                margin: 2px 0 0
+    &__btn
+        border: 1px solid #214D7E;
+        border-radius: 5px;
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 60px
+        width: 190px
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 16px;
+        color: #214D7E;
+        background-color: #fff
+        margin: 10px 0 0 auto
+        &::before
+            content: ''
+            display: block
+            width: 31px
+            height: 25px
+            margin: 0 10px 0 0
+            background: url('../img/basket_icon.svg') center no-repeat
+            background-size: contain
+
+@media ( max-width: 1440px )
+    .set
+        &__row
+            grid-template-columns: 1fr 1fr !important
+            button
+                max-width: 100%
+            &:nth-child(2)
+                margin: 18px 0 0
+    .catalog-grid
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+
+@media ( max-width: 600px )
+    .set
+        &__row
+            grid-template-columns: 100% !important
+    .catalog-grid
+        &__wrapper
+            grid-template-columns: 100%
+    .card-product
+        .product__sum
+            margin: 30px 0 0
+        &__row
+            flex-direction: column
+        &__btn
+            margin: 20px 0 0
