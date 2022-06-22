@@ -1,0 +1,921 @@
+body
+    background: #F8F8F8;
+
+section
+    padding: 100px 0
+
+.container
+    max-width: 1310px
+    margin: 0 auto
+    padding: 0 15px
+    box-sizing: content-box 
+
+.btn
+    &__blue
+        padding: 24px 32px
+        background: linear-gradient(82.73deg, #2583BE 0%, #2583BE 100%);;
+        border: none
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 130%;
+        color: #FFFFFF;
+        &:hover
+            background: linear-gradient(82.73deg, #2583BE 0%, #63A3D9 100%);
+        &:active
+            background: #1C6C9E;
+
+.nav
+    padding: 20px 0
+    border-bottom: 1px solid #D9D9D9
+    background: #1C1C1C;
+    &__humburger
+        display: none
+    .container
+        display: flex
+        justify-content: flex-start
+        align-items: center
+    ul
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0 auto 0 100px
+        a
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 23px;
+            color: #FFFFFF;
+            transition: all .3s
+            border-bottom: 1px solid transparent
+            &:hover
+                color: #63A3D9;
+                border-bottom: 1px solid #2583BE
+        li
+            margin: 0 60px 0 0
+    &__phone
+        display: grid
+        justify-items: end
+        p
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 23px;
+            color: #FFFFFF;
+        a
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            color: #FFFFFF;
+            opacity: 0.7;  
+            border-bottom: 1px solid #FFFFFF  
+            transition: all .3s
+            &:hover
+                color: #63A3D9;
+                border-bottom: 1px solid #2583BE
+
+.header
+    background: #1C1C1C;
+    padding: 100px 0
+    h1
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 110%;
+        color: #FFFFFF;
+    p
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        color: #FFFFFF;
+        opacity: 0.7;
+        margin: 20px 0 0
+    ul
+        margin: 40px 0 0
+        padding: 15px 0 15px 17px
+        border-left: 1px solid #BBBBBB 
+        display: grid
+        gap: 20px
+    li
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 130%;
+        color: #FFFFFF;
+        opacity: 0.7;
+        position: relative
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: calc( 100% + 12px )
+            width: 11px
+            height: 11px
+            border-radius: 100%
+            background: #2583BE;
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: calc( 100% + 10px )
+            width: 13px
+            height: 13px
+            border-radius: 100%
+            border: 1px solid #63A3D9
+
+.product
+    h2
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 110%;
+        color: #323232;
+        text-align: center
+    &__wrapper
+        margin: 30px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 10px
+    &__col
+        display: grid
+        gap: 20px
+    &__row
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 10px
+    img
+        width: 100%
+        object-fit: cover
+    p
+        position: absolute
+        bottom: 0
+        left: 0
+        padding: 20px
+        background: #FFFFFF;
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        color: #323232;
+        transition: all .3s
+    &__item
+        position: relative
+        display: block
+        &:hover
+            p
+                color: #FFFFFF;
+                background: #2583BE;
+
+.company
+    background: #1C1C1C;
+    padding: 100px 0 120px
+    .container
+        display: grid
+        grid-template-columns: minmax(300px, 540px) 655px
+        justify-content: space-between
+        gap: 30px
+    h2
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 110%;
+        color: #FFFFFF;
+    &__text
+        margin: 40px 0 0
+        display: grid
+        gap: 25px
+        p
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 130%;
+            color: #FFFFFF;
+            opacity: 0.7;
+    .btn__blue
+        margin: 40px 0 0
+    &__img
+        display: flex
+        align-items: center
+        img
+            display: block
+            object-fit: cover
+            &:nth-child(2)
+                height: 100%
+                object-fit: cover
+                width: 100%
+            &:nth-child(1)
+                margin: 0 -20px 0 0
+                z-index: 1
+
+.why
+    h2
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 110%;
+        color: #323232;
+        text-align: center
+    &__wrapper
+        margin: 40px 0 0 
+        display: grid
+        gap: 40px
+    &__info
+        padding: 20px 60px
+        background: #FFFFFF;
+        min-height: 235px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: center
+        width: calc( 100% - 600px )
+        margin: 0 0 0 -20px
+        z-index: 2
+    &__item
+        display: flex
+        align-items: center
+        img
+            width: 620px
+        &:nth-child(2n)
+            .why__info
+                margin: 0 -20px 0 0
+    p
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 110%;
+        color: #2583BE;
+        &+p
+            margin: 10px 0 0
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 130%;
+            color: #323232;
+
+.prev
+    background: #1C1C1C;
+    position: relative
+    h2
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 120%;
+        color: #FFFFFF;
+        max-width: 1090px
+    img
+        position: absolute
+        top: 0
+        right: 0
+        height: 100%
+        object-fit: contain
+
+.service
+    h2
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 110%;
+        color: #323232;
+        text-align: center  
+    &__wrapper
+        margin: 40px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 10px
+    p
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 110%;
+        color: #000000;
+        margin: 10px 0 0
+    img
+        width: 100%
+        height: 182px
+        object-fit: cover
+    &__item
+        &:nth-child(2n)
+            padding: 182px 0 0
+
+.form
+    background: #1C1C1C;
+    h2
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 120%;
+        color: #FFFFFF;
+        &+p
+            margin: 15px 0 0
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 130%;
+            color: #FFFFFF;
+            opacity: 0.7;
+    &__form
+        margin: 40px 0 0
+        &+p
+            margin: 40px 0 0
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            color: #BBBBBB;
+            a
+                color: #63A3D9;
+                border-bottom: 1px solid #63A3D9 
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 10px
+    &__col
+        display: grid
+        gap: 20px
+    input
+        background: #FFFFFF;
+        border: none
+        width: 100%
+        height: 66px
+        padding: 0 15px
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        box-sizing: border-box  
+        color: #323232;
+    textarea
+        height: 152px
+        resize: none
+        padding: 23px 15px
+        background: #FFFFFF;
+        border: none
+        box-sizing: border-box
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        color: #323232;
+    .btn__blue
+        margin: 20px 0 0
+
+.client
+    h2
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 110%;
+        color: #323232;
+        text-align: center
+    &__wrapper
+        margin: 40px 0 0
+        img
+            width: 180px
+            height: 115px
+            object-fit: contain
+    &__slide
+        border: 1px solid #63A3D9;
+        display: flex !important
+        justify-content: center
+        align-items: center
+        padding: 22px 0 
+        position: relative
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            bottom: -1px
+            width: 20px
+            height: 10px
+            right: -10px
+            background-color: #F5F5F5
+            z-index: 3
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            top: -1px
+            width: 20px
+            height: 10px
+            right: -10px
+            background-color: #F5F5F5
+            z-index: 3
+    .slick
+        &-dots
+            display: flex
+            justify-content: center
+            align-items: center
+            margin: 40px 0 0
+            button
+                border: none
+                padding: 0
+                margin: 0 5px
+                width: 10px
+                height: 10px
+                border: 1px solid #2583BE;
+                font-size: 0
+                border-radius: 100%
+                background: transparent
+                transition: all .3s
+                &:hover
+                    border: 1px solid #63A3D9;
+            .slick-active
+                button
+                    background: #2583BE;
+
+.contact
+    position: relative
+    z-index: 1
+    iframe
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+    &__wrapper
+        max-width: 320px
+        padding: 40px 30px
+        background: rgba(28, 28, 28, 0.75);
+        backdrop-filter: blur(35px);
+    h2
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 110%;
+        color: #FFFFFF;
+    p
+        margin: 15px 0 0
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 130%;
+        color: #FFFFFF;
+        opacity: 0.7;
+    &__link
+        margin: 15px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        a
+            margin: 0 10px 0 0
+            width: 40px
+            height: 40px
+            display: flex
+            justify-content: center
+            align-items: center
+            background: #63A3D9;
+            border-radius: 100%
+            transition: all .3s
+            path
+                transition: all .3s
+            &:hover
+                background: #FFFFFF;
+                path
+                    fill: #63A3D9
+.footer
+    background: #1C1C1C;
+    padding: 80px 0 40px
+    ul
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0 auto 0 100px
+        a
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 23px;
+            color: #FFFFFF;
+            transition: all .3s
+            border-bottom: 1px solid transparent
+            &:hover
+                color: #63A3D9;
+                border-bottom: 1px solid #2583BE
+        li
+            margin: 0 60px 0 0
+    &__phone
+        display: grid
+        justify-items: end
+        p
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 23px;
+            color: #FFFFFF;
+        a
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            color: #FFFFFF;
+            opacity: 0.7;  
+            border-bottom: 1px solid #FFFFFF  
+            transition: all .3s
+            &:hover
+                color: #63A3D9;
+                border-bottom: 1px solid #2583BE
+    &__row
+        display: flex
+        justify-content: flex-start
+        align-items: center
+    &__pol
+        margin: 30px 0 0
+        display: block
+        text-align: center
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        color: #2583BE;
+        text-decoration: underline  
+        &+p
+            margin: 30px 0 0
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 130%;
+            color: #FFFFFF;
+            opacity: 0.7;
+            text-align: center
+
+@media ( max-width: 1150px )
+    .nav
+        img
+            max-width: 150px
+        ul
+            margin: 0 auto 0 30px
+            li
+                margin: 0 30px 0 0
+            a
+                font-size: 16px
+    .footer
+        img
+            max-width: 150px
+        ul
+            margin: 0 auto 0 30px
+            li
+                margin: 0 30px 0 0
+            a
+                font-size: 16px
+
+@media ( max-width: 1024px )
+    .product
+        p
+            font-size: 18px
+            padding: 15px
+    .company
+        &__img
+            img
+                &:nth-child(1)
+                    display: none
+        .container
+            grid-template-columns: 1fr 1fr
+    .why
+        &__item
+            flex-direction: column
+            img
+                width: 100%
+                height: 200px
+                object-fit: cover
+                order: -1
+        &__info
+            margin: 0 !important
+            width: 100%
+    .service
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+
+@media ( max-width: 768px )
+    .nav
+        .container
+            justify-content: space-between
+            align-items: center
+        ul
+            display: none
+        &__phone
+            display: none
+        &__humburger
+            width: 20px
+            height: 15px
+            display: flex
+            justify-content: space-between
+            flex-direction: column
+            cursor: pointer
+            position: relative
+            &::before,
+            &::after,
+            span
+                content: ''
+                display: block
+                width: 100%
+                height: 2px
+                background-color: #fff
+                transition: all .3s
+        &__active
+            position: fixed
+            top: 0
+            left: 0
+            width: 100vw
+            height: 100vh
+            z-index: 150
+            border-bottom: none
+            .nav
+                &__humburger
+                    span
+                        opacity: 0
+                    &::before,
+                    &::after
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%) rotate(45deg)
+                    &::after
+                        transform: translate(-50%, -50%) rotate(-45deg)
+                &__phone
+                    position: absolute
+                    left: 50%
+                    bottom: 20px
+                    transform: translateX(-50%)
+                    display: grid
+                    justify-items: center
+            ul
+                display: grid
+                gap: 10px
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                margin: 0
+                justify-items: center
+    h1
+        font-size: 40px !important
+    h2
+        font-size: 30px !important
+    .header
+        padding: 50px 0
+    section
+        padding: 50px 0
+    .product
+        &__wrapper
+            grid-template-columns: 100%
+    .company
+        .container
+            grid-template-columns: 100%
+    .form
+        &__wrapper
+            grid-template-columns: 100%
+        &__col
+            gap: 10px
+    .client
+        &__wrapper
+            img
+                width: 100px
+                height: 75px
+    .footer
+        &__row
+            flex-direction: column
+            align-items: flex-start
+        ul
+            margin: 30px 0 0
+            display: grid
+            gap: 10px
+        &__phone
+            margin: 30px 0 0
+            justify-items: start
+        &__pol
+            text-align-last: left
+            &+p
+                text-align-last: left
+
+@media ( max-width: 425px )
+    .service
+        &__wrapper
+            grid-template-columns: 100%
+        &__item
+            padding: 0 !important
+    .contact
+        iframe
+            position: relative
+            height: 200px
+            margin: 20px 0 0
+            z-index: 2
+        &__wrapper
+            width: 100%
+            max-width: 100%
+    .why
+        &__info
+            padding: 20px
+            min-height: auto
+
+.modal
+    position: fixed
+    z-index: 200
+    width: 100vw
+    height: 100vh
+    display: none
+    justify-content: center
+    align-items: center
+    top: 0
+    left: 0
+    padding: 40px 15px
+    &__active
+        display: flex
+    &__overflow
+        background: rgba(4, 4, 4, 0.65);
+        backdrop-filter: blur(22px);
+        z-index: -1
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+    &__wrapper
+        max-width: 650px
+        width: 100%
+        overflow: scroll
+        max-height: 100%
+        padding: 30px
+        background: #F8F8F8;
+        position: relative
+    h2
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 110%;
+        color: #323232;
+        text-align: center  
+        &+p
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 130%;
+            text-align: center;
+            color: #323232;
+            opacity: 0.7;
+            margin: 10px auto 0
+            max-width: 290px
+    input
+        background: #FFFFFF;
+        border: none
+        width: 100%
+        height: 66px
+        padding: 0 15px
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        box-sizing: border-box  
+        margin: 20px 0 0
+        color: #323232;
+    textarea
+        margin: 20px 0 0
+        display: block
+        width: 100%
+        height: 152px
+        resize: none
+        padding: 23px 15px
+        background: #FFFFFF;
+        border: none
+        box-sizing: border-box
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        color: #323232;
+    .btn__blue
+        margin: 20px 0 0
+        width: 100%
+    &__pol
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        color: #BBBBBB;
+        text-align: center
+        margin: 10px 0 0
+        a
+            color: #63A3D9;
+            border-bottom: 1px solid #63A3D9
+    &__close
+        position: absolute
+        top: 20px
+        right: 20px
+        width: 24px
+        height: 24px
+        cursor: pointer
+        background: url(../img/modal_close.svg)
+        background-size: contain
+
+.breadcrumbs
+    padding: 30px 0 0
+    .container
+        display: flex
+        justify-content: flex-start
+        align-items: center
+    a
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 130%;
+        color: #323232;
+        &::after
+            content: '-'
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 130%;
+            color: #323232;
+            margin: 0 15px
+    p
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 130%;
+        color: #323232;
+
+.text
+    padding: 50px 0 100px
+    h1
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 110%;
+        color: #323232;
+    &__wrapper
+        margin: 30px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        column-gap: 30px
+        row-gap: 60px
+    img
+        width: 100%
+        object-fit: cover
+    &__full
+        grid-column: 1/3
+    &__img
+        img
+            height: 100%
+    &__info
+        display: grid
+        gap: 20px
+    p
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 130%;
+        color: #767676;
+
+@media ( max-width: 768px )
+    .text
+        &__wrapper
+            grid-template-columns: 100%
+            row-gap: 30px
+        &__full
+            grid-column: auto/auto
