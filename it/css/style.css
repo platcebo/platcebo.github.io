@@ -16,7 +16,7 @@ section {
 
 .btn__blue {
   padding: 24px 32px;
-  background: linear-gradient(82.73deg, #2583BE 0%, #63A3D9 100%);
+  background: linear-gradient(82.73deg, #2583BE 0%, #2583BE 100%);
   border: none;
   font-family: 'Source Sans Pro';
   font-style: normal;
@@ -24,6 +24,14 @@ section {
   font-size: 20px;
   line-height: 130%;
   color: #FFFFFF;
+}
+
+.btn__blue:hover {
+  background: linear-gradient(82.73deg, #2583BE 0%, #63A3D9 100%);
+}
+
+.btn__blue:active {
+  background: #1C6C9E;
 }
 
 .nav {
@@ -68,6 +76,14 @@ section {
   font-size: 18px;
   line-height: 23px;
   color: #FFFFFF;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border-bottom: 1px solid transparent;
+}
+
+.nav ul a:hover {
+  color: #63A3D9;
+  border-bottom: 1px solid #2583BE;
 }
 
 .nav ul li {
@@ -98,6 +114,13 @@ section {
   color: #FFFFFF;
   opacity: 0.7;
   border-bottom: 1px solid #FFFFFF;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.nav__phone a:hover {
+  color: #63A3D9;
+  border-bottom: 1px solid #2583BE;
 }
 
 .header {
@@ -212,10 +235,6 @@ section {
      object-fit: cover;
 }
 
-.product__item {
-  position: relative;
-}
-
 .product p {
   position: absolute;
   bottom: 0;
@@ -228,6 +247,18 @@ section {
   font-size: 24px;
   line-height: 130%;
   color: #323232;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.product__item {
+  position: relative;
+  display: block;
+}
+
+.product__item:hover p {
+  color: #FFFFFF;
+  background: #2583BE;
 }
 
 .company {
@@ -512,6 +543,7 @@ section {
   line-height: 130%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  color: #323232;
 }
 
 .form textarea {
@@ -527,6 +559,7 @@ section {
   font-weight: 400;
   font-size: 16px;
   line-height: 130%;
+  color: #323232;
 }
 
 .form .btn__blue {
@@ -620,6 +653,10 @@ section {
   transition: all .3s;
 }
 
+.client .slick-dots button:hover {
+  border: 1px solid #63A3D9;
+}
+
 .client .slick-dots .slick-active button {
   background: #2583BE;
 }
@@ -668,10 +705,47 @@ section {
 
 .contact__link {
   margin: 15px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contact__link a {
-  margin: 0 5px 0 0;
+  margin: 0 10px 0 0;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #63A3D9;
+  border-radius: 100%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.contact__link a path {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.contact__link a:hover {
+  background: #FFFFFF;
+}
+
+.contact__link a:hover path {
+  fill: #63A3D9;
 }
 
 .footer {
@@ -699,6 +773,14 @@ section {
   font-size: 18px;
   line-height: 23px;
   color: #FFFFFF;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border-bottom: 1px solid transparent;
+}
+
+.footer ul a:hover {
+  color: #63A3D9;
+  border-bottom: 1px solid #2583BE;
 }
 
 .footer ul li {
@@ -729,6 +811,13 @@ section {
   color: #FFFFFF;
   opacity: 0.7;
   border-bottom: 1px solid #FFFFFF;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.footer__phone a:hover {
+  color: #63A3D9;
+  border-bottom: 1px solid #2583BE;
 }
 
 .footer__row {
@@ -1082,6 +1171,7 @@ section {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 20px 0 0;
+  color: #323232;
 }
 
 .modal textarea {
@@ -1100,6 +1190,7 @@ section {
   font-weight: 400;
   font-size: 16px;
   line-height: 130%;
+  color: #323232;
 }
 
 .modal .btn__blue {
