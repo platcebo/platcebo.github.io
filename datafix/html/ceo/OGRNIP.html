@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>datafix</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body style="background: #FFFFFF;">
+    <nav class="nav">
+        <div class="container">
+            <img src="../../icons/logo.svg" alt="" class="nav__logo">
+            <div class="nav__search">
+                <input type="text" placeholder="Введите ОГРН, ИНН, название, адрес или ФИО">
+            </div>
+            <div class="nav__list">
+                <p class="nav__list_btn nav__list_btn_active"><a href="#">О сервисе</a></p>
+                <ul class="active">
+                    <li><a href="#">ЕГРЮЛ</a></li>
+                    <li><a href="#">ОГРНИП</a></li>
+                    <li><a href="#">ОГРН</a></li>
+                    <li><a href="#">ЕГРИП/ЕГРЮЛ</a></li>
+                    <li><a href="#">ЕГРЮЛ</a></li>
+                    <li><a href="#">ОГРНИП</a></li>
+                    <li><a href="#">ОГРН</a></li>
+                    <li><a href="#">ЕГРИП/ЕГРЮЛ</a></li>
+                    <li><a href="#">ЕГРЮЛ</a></li>
+                    <li><a href="#">ОГРНИП</a></li>
+                    <li><a href="#">ОГРН</a></li>
+                    <li><a href="#">ЕГРИП/ЕГРЮЛ</a></li>
+                    <li><a href="#">ЕГРЮЛ</a></li>
+                    <li><a href="#">ОГРНИП</a></li>
+                    <li><a href="#">ОГРН</a></li>
+                    <li><a href="#">ЕГРИП/ЕГРЮЛ</a></li>
+                    <li><a href="#">ЕГРЮЛ</a></li>
+                    <li><a href="#">ОГРНИП</a></li>
+                    <li><a href="#">ОГРН</a></li>
+                    <li><a href="#">ЕГРИП/ЕГРЮЛ</a></li>
+                </ul>
+                <p><a href="#">Источники данных</a></p>    
+                <p><a href="#">Тарифы</a></p>
+                <p><a href="#">FAQ</a></p>
+            </div>
+            <a href="#" class="nav__acc">Личный кабинет</a>
+            <button class="btn__green">Ввести промокод</button>
+            <div class="nav__humburger">
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <section class="ceo-title ceo-title__egrip">
+        <div class="container">
+            <h1>ОГРНИП</h1>
+            <p>Все предприниматели при регистрации государственном реестре получают основной государственный регистрационный номер индивидуального предпринимателя, состоящий из 15 цифр. Он кратко называется ОГРНИП.</p>
+        </div>
+    </section>
+    <section class="affril-list affril-list__activities">
+        <div class="container">
+            <div class="affril-list__name">
+                <h2>О чем расскажет ОГРНИП</h2>
+                <p>В последовательности знаков зашифрована важная информация об ИП:</p>
+            </div>
+            <ul>
+                <li>У индивидуальный предпринимателей первая цифра всегда равна 3.</li>
+                <li>Второй и третий знаки отражают последние 2 цифры года регистрации. Так для 2021 года это будет 21.</li>
+                <li>4 и 5-й знаки — номер региона. Для Санкт-Петербурга они равны 78.</li>
+                <li>С 6 по 14-й знак — запись в ЕГРИП (номер).</li>
+                <li>На последнем месте стоит контрольная цифра.</li>
+                <p class="affril-list__activities_more">При возникновении сомнений относительно достоверности сведений, которые дал вам предприниматель, ОГРНИП можно проверить арифметическими действиями.</p>
+            </ul>
+        </div>
+    </section>
+    <section class="affril-list affril-list__ogrn">
+        <div class="container">
+            <div class="affril-list__name">
+                <h2>Как проверить корректность ОГРН предпринимателя</h2>
+                <p>Рассмотрим последовательность контрольных действий на примере. <br>
+                    ОГРНИП = 314 220 119 000 137. <br>
+                    3 — индивидуальный предприниматель. <br>
+                    14 — 2014 год.  <br>
+                    22 — Алтайский край.</p>
+            </div>
+            <ul>
+                <li>Убираем контрольную цифру и получаем 31 422 011 900 013. Назовем это число А.</li>
+                <li>Полученное число А делим на 13 (это константа для ИП). Получилось 2417077838462,538. </li>
+                <li>Если получилась дробь — отбрасываем все, что после запятой, а оставшееся целое число умножаем на константу 13. У нас получится 31 422 011 900 006. Назовем этот ответ В.</li>
+                <li>Далее надо подсчитать разность С = А - В. 31422011900013- 31422011900006= 7. </li>
+                <li>Сравниваем полученный результат (С) с последней (контрольной) цифрой из ОГРНИП. Если совпало — ОГРНИП корректен. В вашем случае С может оказаться больше 9. Из такого числа нас интересует только вторая цифра.</li>
+                <p class="affril-list__ogrn_more">Официально узнать ОГРНИП можно по ИНН предпринимателя. Если такового не найдется — значит, ваш контрагент не зарегистрирован, как ИП и вводит вас в заблуждение.</p>
+            </ul>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__row">
+                <div class="footer__list">
+                    <img src="../../icons/logo_footer.svg" alt="" class="footer__logo">
+                    <div class="">
+                        <p>Компания</p>
+                        <ul>
+                            <li><a href="#">О сервисе</a></li>
+                            <li><a href="#">Личный кабинет</a></li>
+                            <li><a href="#">Тарифы</a></li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <p>Разделы</p>
+                        <ul>
+                            <li><a href="#">База данных</a></li>
+                            <li><a href="#">Руководитель</a></li>
+                            <li><a href="#">Учредители</a></li>
+                            <li><a href="#">Аффилированность</a></li>
+                            <li><a href="#">Юридический адрес</a></li>
+                            <li><a href="#">ЕГРЮЛ</a></li>
+                            <li><a href="#">ОГРНИП</a></li>
+                            <li><a href="#">ОГРН</a></li>
+                            <li><a href="#">ЕГРИП/ЕГРЮЛ</a></li>
+                            <li><a href="#">ЕГРИП</a></li>
+                            <li><a href="#">Отчетность компаний</a></li>
+                            <li><a href="#">Арбитраж</a></li>
+                            <li><a href="#">Закупки</a></li>
+                        </ul>
+                        <a href="#" class="footer__more">Показать все</a>
+                    </div>
+                </div>
+                <div class="footer__info">
+                    <p>Свидетельство о регистрации СМИ ЭЛ № ФС77-70272 выдано Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор) 10.07.2017 г.</p>
+                    <button class="footer__btn">Обратная связь</button>
+                </div>
+            </div>
+            <div class="footer__desc">
+                <ul>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                    <li><a href="#">Пользовательское соглашение</a></li>
+                    <li><a href="#">Договор оферты</a></li>
+                    <li><a href="#">Разработка и дизайн <span>Oktta</span></a></li>
+                </ul>
+                <a href="#" class="footer__link">info@datafix.tech</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>
