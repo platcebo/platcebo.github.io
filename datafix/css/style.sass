@@ -286,6 +286,8 @@ input
             max-width: 151px
         
 @media ( max-width: 768px )
+    h1
+        font-size: 24px;
     .nav
         .container
             grid-template-columns: 1fr 48px
@@ -4604,7 +4606,7 @@ input
         align-items: center
         justify-content: flex-start
     &__select
-        opacity: 0.3
+        // opacity: 0.3
         position: relative
         max-width: 343px
         width: 100%
@@ -4614,6 +4616,7 @@ input
             height: 52px
             font-size: 18px;
             width: 100%
+            color: #2728334d
         &::before
             content: ''
             display: block
@@ -4625,14 +4628,17 @@ input
             height: 16px
             background: url('../icons/main-llc_arrow.svg') center no-repeat
             background-size: contain
+            opacity: 0.3
         ul
             display: none
         &_active
-            opacity: 1
+            // opacity: 1
             input
                 border: 1px solid #C4C4C4;
+                color: #272833
             &::before
                 transform: translateY(-50%) rotate(180deg)
+                opacity: 1
             ul
                 display: grid
                 grid-template-columns: 100%
@@ -5243,8 +5249,6 @@ input
                 color: #272833;
                 &::before
                     opacity: 1
-
-.license
     &__wrapper
         display: grid
         grid-template-columns: 100%
@@ -5297,3 +5301,626 @@ input
             align-items: flex-start
         &__green
             margin: 8px 0 0
+
+.custom
+    &__list
+        margin: 32px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        border-bottom: 1px solid #E6E6E6 
+        overflow: scroll
+        li
+            margin: 0 32px 0 0
+            padding: 0 0 21px
+            position: relative
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 136%;
+            letter-spacing: -0.02em;
+            color: #9E9E9E;
+            cursor: pointer
+            white-space: nowrap
+            &::before
+                content: ''
+                display: block
+                position: absolute
+                bottom: 0
+                left: 0
+                width: 100%
+                background: #00D45F;
+                border-radius: 8px 8px 0px 0px;
+                height: 4px
+                opacity: 0;
+            &.active
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 136%;
+                letter-spacing: -0.02em;
+                color: #272833;
+                &::before
+                    opacity: 1
+    &__chart
+        margin: 56px 0 0
+        img
+            width: 100%
+    &__form
+        margin: 56px 0 0
+    &__wrapper
+        margin: 32px 0 0
+    &__row
+        display: grid
+        grid-template-columns: 1fr 162px 202px
+        border-bottom: 1px solid #E7E7ED;
+        div
+            padding: 12px
+            max-width: 830px
+            &:nth-child(2),
+            &:nth-child(3)
+                p
+                    text-align: right   
+        p
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 150%;
+            color: #272833;
+            &+p
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                opacity: 0.7;
+    &__title
+        background: #F9F9F9;
+        box-shadow: inset 0px -1px 0px #E7E7ED;
+        p
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 150%;
+            color: #272833;
+
+@media ( max-width: 768px )
+    .custom
+        &__row
+            grid-template-columns: 1fr 162px
+            div
+                &:nth-child(3)
+                    display: none
+
+@media ( max-width: 425px )
+    .custom
+        &__row
+            grid-template-columns: 1fr 1fr
+
+.connect
+    &__form
+        margin: 32px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        .arbitration__select
+            &:nth-child(2)
+                max-width: 247px
+            &:nth-child(3)
+                max-width: 247px
+    &__wrapper
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 20px
+        height: 650px
+        h3
+            span
+                color: #AEAEAE;
+    &__item
+        margin: 32px 0 0
+    &__name
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 157.5%;
+        color: #272833;
+    &__info
+        margin: 8px 0 0
+        span
+            &:nth-child(1)
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 157.5%;
+                color: #737373;
+            &:nth-child(2)
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 157.5%;
+                color: #00D45F;
+                margin: 0 4px
+            &:nth-child(3)
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 157.5%;
+                color: #272833;
+    &__parag
+        margin: 8px 0 0
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 157.5%;
+        color: #000000;
+        span
+            font-weight: 400;
+            color: #737373;
+    &__row
+        margin: 8px 0 0
+        display: flex
+        align-items: flex-start
+        justify-content: flex-start
+        gap: 16px
+        flex-wrap: wrap
+        p
+            margin: 0
+    &__text
+        overflow-y: scroll
+        padding: 0 12px 0 0
+        &::-webkit-scrollbar
+            width: 4px
+        &::-webkit-scrollbar-track
+            background: #F5F5F5
+        &::-webkit-scrollbar-thumb
+            background: #00D45F;
+            border-radius: 4px;
+    &__mob
+        display: none
+    &__func
+        height: 100%
+        border-radius: 12px;
+        overflow: hidden
+        img
+            height: 100%
+            width: 100%
+            object-fit: cover
+
+@media ( max-width: 1024px )
+    .connect
+        &__form
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 8px
+            .arbitration__select
+                max-width: 100% !important
+                &:nth-child(3)
+                    display: none
+        &__wrapper
+            grid-template-columns: 100%
+            height: auto
+        &__text
+            overflow: hidden
+            order: 1
+            padding: 0
+            margin: 15px 0 0
+        &__func
+            height: 150px
+            position: relative
+        &__mob
+            display: flex
+            align-items: center
+            justify-content: center
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: rgba(0, 0, 0, 0.4);
+            .btn__green
+                max-width: 154px
+                height: 38px
+                font-size: 16px;
+
+@media ( max-width: 425px )
+    .connect
+        &__func
+            height: 88px
+
+.founder
+    &__form
+        .arbitration
+            &__select
+                &:nth-child(2)
+                    max-width: 247px
+                &:nth-child(3)
+                    max-width: 375px
+    &__wrapper
+        margin: 32px 0 0
+        border-bottom: 1px solid #E7E7ED;
+        border-radius: 8px;
+    &__row
+        border-bottom: 1px solid #E7E7ED;
+        display: grid
+        grid-template-columns: 1fr 176px 152px 106px 184px
+        &:last-child
+            border-bottom: none 
+        div
+            padding: 12px
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            &:nth-child(4)
+                justify-content: flex-end
+            &:nth-child(5)
+                justify-content: flex-end
+        a
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            color: #656DC4;
+        p
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            color: #272833;
+            span
+                display: none
+    &__title
+        background: #F9F9F9;
+        box-shadow: inset 0px -1px 0px #E7E7ED;
+        p
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 150%;
+            color: #272833;
+        div
+            &:nth-child(1)
+                display: flex
+                justify-content: flex-start
+                align-items: center
+                img
+                    margin: 0 8px 0 0
+    p.founder__blue
+        padding: 4px 8px
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 157.5%;
+        color: #6693F7;
+        background: #F3F7FF;
+        border-radius: 8px;
+    p.founder__yellow
+        padding: 4px 8px
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 157.5%;
+        color: #C79261;
+        background: #FAF4E2;
+        border-radius: 8px;
+
+@media ( max-width: 1024px )
+    .founder
+        &__title
+            display: none
+        &__wrapper
+            display: grid
+            grid-template-columns: 100%
+            gap: 24px
+        &__row
+            grid-template-columns: 100%
+            gap: 8px
+            padding: 0 0 24px
+            div
+                padding: 0
+                &:nth-child(4)
+                    justify-content: flex-start
+                &:nth-child(5)
+                    justify-content: flex-start
+                p
+                    span
+                        display: inline
+                        font-weight: 400;
+                        color: #737373;
+
+@media ( max-width: 768px )
+    .founder
+        .arbitration
+            &__form
+                display: grid
+                grid-template-columns: 100%
+                gap: 10px
+            &__select
+                margin: 0 !important
+                max-width: 100% !important
+
+.requisit
+    &__wrapper
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 24px
+    &__item
+        padding: 0 0 24px
+        border-bottom: 1px solid #D9D9D9
+        &:last-child
+            padding: 0
+            border-bottom: none
+    &__table
+        margin: 16px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 4px
+    &__row
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        padding: 4px 8px
+        p
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 157.5%;
+            color: #737373;
+            width: 100%
+            max-width: 230px
+            margin: 0 60px 0 0
+            &+p
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 157.5%;
+                color: #272833;
+                margin: 0 
+                width: auto
+                max-width: none
+        a
+            margin: 0 0 0 12px
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 157.5%;
+            color: #00D45F;
+            display: none
+            align-items: center
+            &::before
+                content: ''
+                display: block
+                margin: 0 4px 0 0
+                width: 20px
+                height: 20px
+                background: url('../icons/copy.svg') center no-repeat
+                background-size: contain
+        &:hover
+            a
+                display: flex
+        &:nth-child(even)
+            background: #F7F7F7;
+            border-radius: 6px;
+    &__subtitle
+        margin: 32px 0 0
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 160%;
+        color: #272833;
+
+@media ( max-width: 768px )
+    .requisit
+        &__row
+            display: block
+            gap: 0
+            padding: 4px 0
+            p
+                margin: 0
+                width: auto
+                max-width: none
+                display: inline
+                &+p
+                    margin: 0 0 0 5px
+            a 
+                display: none !important
+            &:nth-child(even)
+                background-color: #fff
+        &__table
+            gap: 0
+
+.fillial
+    &__wrapper
+        margin: 32px 0 0
+        height: 550px
+        display: grid
+        grid-template-columns: 2fr 3fr
+        gap: 20px
+    &__text
+        height: 100%
+        overflow-y: scroll
+        display: grid
+        grid-template-columns: 100%
+        gap: 32px
+        &::-webkit-scrollbar
+            width: 4px
+        &::-webkit-scrollbar-track
+            background: #F5F5F5
+        &::-webkit-scrollbar-thumb
+            background: #00D45F;
+            border-radius: 4px;
+        a
+            display: none
+    &__name
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 160%;
+        color: #272833;
+        img
+            height: 20px
+            width: 20px
+            margin: 0 5px 4px 0
+            display: inline
+            object-fit: contain
+    ul
+        margin: 16px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 4px
+        p
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 157.5%;
+            letter-spacing: -0.03em;
+            color: #272833;
+        span
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 157.5%;
+            color: #737373;
+            margin: 0 8px 0 0
+
+@media ( max-width: 1024px )
+    .fillial
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+
+@media ( max-width: 768px )
+    .fillial
+        &__wrapper
+            display: block
+            height: auto
+        &__map
+            display: none
+        &__text
+            overflow: hidden
+            a
+                display: flex
+                align-items: center
+                margin: 8px 0 0
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 157.5%;
+                color: #00D45F;
+                &::after
+                    width: 16px
+                    height: 16px
+                    display: block
+                    margin: 0 0 0 4px
+                    background: url('../icons/fillial_link.svg') center no-repeat
+                    background-size: contain
+
+.active
+    &__main
+        margin: 32px -16px 0
+        padding: 16px
+        background: #ECF8EE;
+        border: 1px solid #35EE88;
+        border-radius: 8px;
+    &__dop
+        margin: 48px 0 0
+    &__item
+        margin: 32px 0 0
+        ul
+            margin: 8px 0 0
+            display: grid
+            grid-template-columns: 100%
+            gap: 4px
+            p
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 157.5%;
+                color: #272833;
+            span
+                font-weight: 400;
+                color: #737373;
+                margin: 0 6px 0 0
+    &__row
+        p
+            display: inline
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 160%;
+            &:nth-child(1)
+                color: #00D45F;
+                margin: 0 8px 0 0
+            &:nth-child(2)
+                color: #272833;
+
+@media ( max-width: 768px )
+    .active
+        &__main
+            padding: 12px
+            margin: 32px -12px 0
+        &__item
+            margin: 24px 0 0
+
+.product
+    &__form
+        .arbitration
+            &__select
+                &:nth-child(2)
+                    margin: 0 0 0 auto
+    &__wrapper
+        margin: 32px 0 0
+        border-bottom: 1px solid #E7E7ED;
+        border-radius: 8px;
+    p.product__blue
+        display: inline
+        padding: 4px 8px
+        background: #F3F7FF;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 157.5%;
+        color: #6693F7;
+    &__row
+        display: grid
+        grid-template-columns: 2fr 1fr 1fr 2fr 2fr
+        border-bottom: 1px solid #E7E7ED;
+        a
+            display: none
+        span
+            display: none
+        div
+            padding: 16px 12px
+            &:nth-child(3)
+                p
+                    text-align: right
+        p
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            color: #272833;
+            &+p
+                font-weight: 400;
+                opacity: 0.7;
+    &__title
+        background: #F9F9F9;
+        box-shadow: inset 0px -1px 0px #E7E7ED;
+        align-items: center
+        p
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 150%;
+            color: #272833;
+        div
+            &:nth-child(3)
+                p
+                    text-align: left
+
+@media ( max-width: 1024px )
+    .product
+        &__title
+            display: none !important
+        &__wrapper
+            border-bottom: none 
+            margin: 32px 0 0
+        &__row
+            margin: 24px 0 0
+            padding: 0 0 24px
+            &:last-child
+                border-bottom: none 
+            display: block
+            div
+                padding: 4px 0
+            p
+                text-align-last: left !important
+            span
+                display: inline
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 157.5%;
+                color: #737373;
+
+@media ( max-width: 768px )
+    .product
+        &__form
+            .arbitration
+                &__select
+                    max-width: 100%
+                    margin: 0 !important
+            display: grid
+            grid-template-columns: 100%
+            gap: 10px
