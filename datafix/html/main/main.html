@@ -9,18 +9,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body style="background: #FFFFFF;">
-    <nav class="nav">
+    <nav class="nav nav-user">
         <div class="container">
             <img src="../../icons/logo.svg" alt="" class="nav__logo">
-            <div class="nav__search">
-                <input type="text" placeholder="Введите ОГРН, ИНН, название, адрес или ФИО">
-            </div>
             <div class="nav__list">
-                <p class="nav__list_btn nav__list_btn_active"><a href="#">О сервисе</a></p>
-                <ul class="active">
+                <p class="nav__list_btn"><a href="#">О сервисе</a></p>
+                <ul class="">
                     <li><a href="#">ЕГРЮЛ</a></li>
                     <li><a href="#">ОГРНИП</a></li>
                     <li><a href="#">ОГРН</a></li>
@@ -46,7 +46,7 @@
                 <p><a href="#">Тарифы</a></p>
                 <p><a href="#">FAQ</a></p>
             </div>
-            <a href="#" class="nav__acc">Личный кабинет</a>
+            <a href="#" class="nav__acc">Вход</a>
             <button class="btn__green">Ввести промокод</button>
             <div class="nav__humburger">
                 <span></span>
@@ -60,7 +60,14 @@
                 <p>Помогаем быстро и эффективно оценить надежность контрагента</p>
                 <button class="btn__green">Изучить тарифы</button>
             </div>
-            <img src="../../img/main_header.svg" alt="">
+            <div class="main-header__img">
+                <img src="../../img/main-header_1.svg" alt="">
+                <img src="../../img/main-header_2.svg" alt="">
+                <img src="../../img/main-header_3.svg" alt="">
+                <img src="../../img/main-header_4.svg" alt="">
+                <img src="../../img/main-header_5.svg" alt="">
+            </div>
+            <!-- <img src="../../img/main_header.svg" alt=""> -->
         </div>
     </section>
     <section class="main-har">
@@ -81,9 +88,10 @@
     </section>
     <section class="main-est">
         <div class="container">
+            <img src="../../img/main-est_bg.svg" alt="" class="main-est__bg">
             <h2>Удобная оценка контрагентов по всем ключевым сведениям</h2>
             <div class="main-est__wrapper">
-                <img src="../../img/est_img.jpg" alt="" class="main-est__img">
+                <img src="../../img/est-img.svg" alt="" class="main-est__img">
                 <div class="main-est__grid">
                     <div class="main-est__item">
                         <img src="../../icons/est_1.svg" alt="">
@@ -147,7 +155,12 @@
                 </div>
             </div>
             <h2>Визуализация связей</h2>
-            <img src="../../img/visual.svg" alt="" class="visual__img">
+            <!-- <img src="../../img/visual.svg" alt="" class="visual__img"> -->
+            <div class="visual__img">
+                <img src="../../img/visual_1.svg" alt="">
+                <img src="../../img/visual_2.svg" alt="">
+                <img src="../../img/visual_3.svg" alt="">
+            </div>
         </div>
     </section>
     <section class="main-banner">
@@ -340,7 +353,6 @@
     <section class="main-info">
         <div class="container">
             <div class="main-info__logo">
-                <h2>Удобная оценка контрагентов по всем ключевым сведениям</h2>
                 <img src="../../img/main-info__logo.jpg" alt="">
             </div>
             <div class="main-info__info">

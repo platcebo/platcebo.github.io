@@ -1,6 +1,6 @@
 body
     background: #F9F9F9;
-    font-family: 'Manrope';
+    font-family: 'Inter';
     font-style: normal;
     
 .container
@@ -10,7 +10,7 @@ body
     margin: 0 auto
 
 h1
-    font-family: 'Manrope';
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -18,7 +18,7 @@ h1
     color: #272833;
 
 h2
-    font-family: 'Manrope';
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 32px;
@@ -27,7 +27,7 @@ h2
     color: #272833;
 
 h3
-    font-family: 'Manrope';
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -35,7 +35,7 @@ h3
     color: #272833;
 
 h4
-    font-family: 'Manrope';
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
@@ -44,7 +44,7 @@ h4
     color: #272833;
 
 p
-    font-family: 'Manrope';
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -52,7 +52,7 @@ p
     color: #272833;
 
 p.med
-    font-family: 'Manrope';
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -60,7 +60,7 @@ p.med
     color: #272833;
 
 p.bold
-    font-family: 'Manrope';
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -68,7 +68,7 @@ p.bold
     color: #272833;
 
 p.reg
-    font-family: 'Manrope';
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -76,7 +76,7 @@ p.reg
     color: #272833;
 
 p.bold_s
-    font-family: 'Manrope';
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -90,7 +90,7 @@ input
     width: 100%
     height: 60px
     padding: 0 20px
-    font-family: 'Manrope';
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -108,14 +108,17 @@ input
         background: #00D45F;
         border-radius: 8px;
         border: none
-        font-family: 'Manrope';
+        font-family: 'Inter';
         font-style: normal;
         font-weight: 700;
         font-size: 16px;
         line-height: 113.5%;
         color: #FFFFFF;
+        transition: all .3s
         &:disabled
             color: #ffffff80
+        &:hover
+            background: #00c358
     &__gray
         height: 50px
         width: 100%
@@ -125,7 +128,7 @@ input
         display: flex
         justify-content: center
         align-items: center
-        font-family: 'Manrope';
+        font-family: 'Inter';
         font-style: normal;
         font-weight: 700;
         font-size: 16px;
@@ -140,7 +143,7 @@ input
         display: flex
         justify-content: center
         align-items: center
-        font-family: 'Manrope';
+        font-family: 'Inter';
         font-style: normal;
         font-weight: 700;
         font-size: 16px;
@@ -195,7 +198,7 @@ input
         display: flex
         justify-content: center
         align-items: center
-        font-family: 'Manrope';
+        font-family: 'Inter';
         font-style: normal;
         font-weight: 700;
         font-size: 14px;
@@ -229,6 +232,7 @@ input
         width: 100%
         max-width: 542px
         margin: 0 20px 0 auto
+        border-radius: 8px;
         input
             background: transparent
             border-radius: 8px;
@@ -237,6 +241,7 @@ input
             width: 100%
             box-sizing: border-box
             padding: 0 50px
+            border-radius: 8px;
         &::before
             content: ''
             display: block
@@ -364,7 +369,7 @@ input
                     gap: 24px
                     position: relative
                     p>a
-                        font-family: 'Manrope';
+                        font-family: 'Inter';
                         font-style: normal;
                         font-weight: 500;
                         font-size: 20px;
@@ -394,7 +399,7 @@ input
                         &.active
                             display: grid
                         a
-                            font-family: 'Manrope';
+                            font-family: 'Inter';
                             font-style: normal;
                             font-weight: 500;
                             font-size: 16px;
@@ -478,18 +483,22 @@ input
     height: 100%
     display: flex
     flex-direction: column
-    justify-content: space-between
+    justify-content: flex-start
     background: #FFFFFF;
     border-radius: 16px;
     padding: 40px
-    p.bold+p
-        font-family: 'Manrope';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 157.5%;
-        color: #737373;
-        margin: 2px 0 0
+    p.bold
+        margin: 15px 0 0
+        &+p
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 157.5%;
+            color: #737373;
+            margin: 2px 0 0
+    .info__block
+        margin: 12px 0 auto
     &__wrapper
         display: grid
         grid-template-columns: 1fr 1fr
@@ -511,6 +520,8 @@ input
                 font-size: 16px;
                 color: #737373;
                 margin: 0
+    .btn__gray
+        margin:  auto 0 0
 
 .acc-card
     height: 100%
@@ -561,7 +572,7 @@ input
                 box-shadow: 0px 17.8781px 50.2429px rgba(57, 54, 67, 0.07), 3.9729px 3.57561px 8.16448px rgba(57, 54, 67, 0.035);
                 border-radius: 7px;
                 padding: 6px 12px
-                font-family: 'Manrope';
+                font-family: 'Inter';
                 font-style: normal;
                 font-weight: 400;
                 font-size: 16px;
@@ -716,7 +727,7 @@ input
             flex-wrap: wrap
             max-height: 206px
             a
-                font-family: 'Manrope';
+                font-family: 'Inter';
                 font-style: normal;
                 font-weight: 500;
                 font-size: 16px;
@@ -743,7 +754,7 @@ input
         border-radius: 8px;
         background: transparent
         height: 48px
-        font-family: 'Manrope';
+        font-family: 'Inter';
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
@@ -761,7 +772,7 @@ input
             justify-content: flex-start
             align-items: center
             a
-                font-family: 'Manrope';
+                font-family: 'Inter';
                 font-style: normal;
                 font-weight: 500;
                 font-size: 14px;
@@ -771,7 +782,7 @@ input
             span
                 color: #FFFFFF
     &__link
-        font-family: 'Manrope';
+        font-family: 'Inter';
         font-style: normal;
         font-weight: 500;
         font-size: 14px;
@@ -827,7 +838,7 @@ input
             justify-content: flex-start
             align-items: center
             margin: 16px 0 0
-            font-family: 'Manrope';
+            font-family: 'Inter';
             font-style: normal;
             font-weight: 700;
             font-size: 16px;
@@ -932,6 +943,7 @@ input
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: #737373;
+        margin: 20px 0 0
         span
             color: #272833;
             margin: 0 0 0 5px
@@ -1017,7 +1029,7 @@ input
         box-sizing: border-box
         border: none
         height: 120px
-        font-family: 'Manrope';
+        font-family: 'Inter';
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
@@ -1066,7 +1078,7 @@ input
             gap: 16px
             li
                 p
-                    font-family: 'Manrope';
+                    font-family: 'Inter';
                     font-style: normal;
                     font-weight: 600;
                     font-size: 18px;
@@ -1229,7 +1241,7 @@ input
             margin: 24px 0 0
             display: block
             text-align: center
-            font-family: 'Manrope';
+            font-family: 'Inter';
             font-style: normal;
             font-weight: 500;
             font-size: 16px;
@@ -1323,7 +1335,7 @@ input
             display: block
             text-align: center
             margin: 16px 0 0
-            font-family: 'Manrope';
+            font-family: 'Inter';
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
@@ -1374,7 +1386,7 @@ input
             height: 50px
             background: #D9F9E0;
             border-radius: 8px;
-            font-family: 'Manrope';
+            font-family: 'Inter';
             font-style: normal;
             font-weight: 700;
             font-size: 16px;
@@ -1456,7 +1468,7 @@ input
         row-gap: 8px
         margin: 32px 0 0
         li
-            font-family: 'Manrope';
+            font-family: 'Inter';
             font-style: normal;
             font-weight: 400;
             font-size: 18px;
@@ -1478,7 +1490,10 @@ input
         text-align: center
     &__form
         margin: 56px 0 0
+        .btn__green
+            height: 60px
         form
+            max-width: 1065px
             display: grid
             grid-template-columns: 1fr 1fr 1fr
             gap: 16px
@@ -1486,11 +1501,11 @@ input
             background: #FFFFFF;
             box-shadow: 0px 42px 80px rgba(33, 32, 55, 0.07), 0px -1px 25px rgba(33, 32, 55, 0.05);
             border-radius: 16px;
-            margin: 24px 0 0
+            margin: 24px auto 0
         p
             margin: 24px auto 0
             max-width: 470px
-            font-family: 'Manrope';
+            font-family: 'Inter';
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
@@ -1571,6 +1586,17 @@ input
 
 .potential
     padding: 120px 0
+    position: relative
+    overflow: hidden
+    img
+        position: absolute
+        top: 150px
+        left: 0
+        &+img
+            left: auto
+            top: auto
+            right: 20px
+            bottom: -50px
     &__ceo
         background: #FBFBFB;
     h2
@@ -1785,7 +1811,7 @@ input
         &::before
             content: "0"counter(ceo) 
             counter-increment: ceo
-            font-family: 'Manrope';
+            font-family: 'Inter';
             font-style: normal;
             font-weight: 700;
             font-size: 16px;
@@ -1828,7 +1854,7 @@ input
         &::before
             content: counter(ceo, decimal-leading-zero) " ";
             counter-increment: ceo
-            font-family: 'Manrope';
+            font-family: 'Inter';
             font-style: normal;
             font-weight: 700;
             font-size: 16px;
@@ -1859,6 +1885,8 @@ input
 .ceo-info
     background: #FBFBFB;
     padding: 120px 0
+    &__wht
+        background: #FFFFFF;
     .container
         display: grid
         grid-template-columns: 1fr 430px
@@ -1908,6 +1936,9 @@ input
         .container
             grid-template-columns: 1fr 276px
             align-items: center
+    &__center
+        .container
+            grid-template-columns: minmax(auto, 700px) 276px
 
 .affril-list
     padding: 120px 0
@@ -1935,7 +1966,7 @@ input
         &::before
             content: counter(ceo, decimal-leading-zero) " ";
             counter-increment: ceo
-            font-family: 'Manrope';
+            font-family: 'Inter';
             font-style: normal;
             font-weight: 700;
             font-size: 16px;
@@ -2031,6 +2062,10 @@ input
             &:nth-child(4)
                 margin: 32px 0 0
                 grid-template-columns: 1fr 1fr
+    &__padding
+        padding: 0
+    &__pb
+        padding: 120px 0 0
 
 .reliab-check
     padding: 93px 0 0
@@ -2084,6 +2119,8 @@ input
         padding: 120px 0
         .container
             align-items: center
+    &__wht
+        background-color: #fff
 
 .ceo-check
     padding: 120px 0 0
@@ -2108,7 +2145,7 @@ input
         &::before
             content: counter(ceo, decimal-leading-zero) " ";
             counter-increment: ceo
-            font-family: 'Manrope';
+            font-family: 'Inter';
             font-style: normal;
             font-weight: 700;
             font-size: 16px;
@@ -2150,7 +2187,7 @@ input
         &::before
             content: counter(ceo, decimal-leading-zero) " ";
             counter-increment: ceo
-            font-family: 'Manrope';
+            font-family: 'Inter';
             font-style: normal;
             font-weight: 700;
             font-size: 16px;
@@ -2160,6 +2197,8 @@ input
 
 .ceo-error
     padding: 120px 0
+    &__padding
+        padding: 0
     &__wrapper
         max-width: 1080px
         margin: 0 auto
@@ -2245,7 +2284,7 @@ input
         &::before
             content: counter(ceo, decimal-leading-zero) " ";
             counter-increment: ceo
-            font-family: 'Manrope';
+            font-family: 'Inter';
             font-style: normal;
             font-weight: 700;
             font-size: 16px;
@@ -2325,7 +2364,7 @@ input
         &::before
             content: counter(ceo, decimal-leading-zero) " ";
             counter-increment: ceo
-            font-family: 'Manrope';
+            font-family: 'Inter';
             font-style: normal;
             font-weight: 700;
             font-size: 16px;
@@ -2453,6 +2492,11 @@ input
         h2
             font-size: 24px;
     .potential
+        img
+            top: 27px
+            left: -169px
+            &+img
+                right: -180px
         p
             font-size: 24px;
         padding: 80px 0
@@ -2621,8 +2665,6 @@ input
         grid-template-columns: 1fr 550px
         gap: 20px
         align-items: center
-    img
-        width: 100%
     h1
         font-weight: 700;
         font-size: 40px;
@@ -2639,6 +2681,45 @@ input
     .btn__green
         margin: 42px 0 0
         max-width: 218px
+    // img
+    //     width: 100%
+    &__img
+        position: relative
+        // overflow: hidden
+        z-index: 1
+        img
+            box-shadow: 18.5824px 16.7241px 47px rgba(57, 54, 67, 0.07), -12px -8px 22px rgba(57, 54, 67, 0.035);
+            border-radius: 8.73014px;
+            &:nth-child(1)
+                display: block
+                width: 100%
+                max-width: 75%
+                position: absolute
+                left: 15%
+                top: 33%
+            &:nth-child(2)
+                width: 100%
+                max-width: 52%
+                display: block
+            &:nth-child(3)
+                position: absolute
+                top: 28px
+                right: 0
+                width: 100%
+                max-width: 20%
+            &:nth-child(4)
+                display: block
+                margin: 31% 0 0
+                width: 100%
+                max-width: 20%
+            &:nth-child(5)
+                display: block
+                position: absolute
+                top: calc( 94% - 8px )
+                box-shadow: none
+                left: 23%
+                width: 100%
+                max-width: 53%
 
 .main-har
     padding: 56px 0
@@ -2685,6 +2766,7 @@ input
 
 .main-est
     padding: 120px 0 90px
+    position: relative
     h2
         font-weight: 700;
         max-width: 475px
@@ -2714,6 +2796,10 @@ input
         font-size: 18px;
         line-height: 160%;
         color: #737373;
+    &__bg
+        position: absolute
+        bottom: 82px
+        left: 0
 
 .interface
     padding: 120px 0 150px
@@ -2767,6 +2853,7 @@ input
         .btn__gray
             max-width: 180px
             margin: 32px 0 0
+            background: transparent
 
 .visual
     padding: 120px 0
@@ -2797,8 +2884,34 @@ input
     &__img
         margin: 32px auto 0
         width: 100%
-        max-width: 1050px
+        max-width: 962px
         display: block
+        position: relative
+        img
+            &:nth-child(1)
+                position: absolute
+                left: 0
+                bottom: -05%
+                display: block
+                width: 100%
+                max-width: 42%
+                box-shadow: 8.74741px 25.5694px 71.9979px rgba(0, 0, 0, 0.05), 0px -4.03727px 14.8033px rgba(0, 0, 0, 0.025);
+                backdrop-filter: blur(47.1014px);
+                border-radius: 10.766px;
+            &:nth-child(2)
+                display: block
+                margin: 0 auto
+                max-width: 85%
+            &:nth-child(3)
+                position: absolute
+                right: 0
+                top: 25%
+                display: block
+                width: 100%
+                max-width: 38%
+                box-shadow: 8.74741px 25.5694px 71.9979px rgba(0, 0, 0, 0.05), 0px -4.03727px 14.8033px rgba(0, 0, 0, 0.025);
+                backdrop-filter: blur(47.1014px);
+                border-radius: 10.766px;
 
 .main-banner
     &__wrapper
@@ -2915,8 +3028,8 @@ input
     padding: 120px 0 
     .container
         display: grid
-        grid-template-columns: 484px 1fr
-        gap: 50px
+        grid-template-columns: 450px 1fr
+        gap: 87px
     h2
         font-weight: 700;
         font-size: 32px;
@@ -2926,7 +3039,6 @@ input
     img
         width: 100%
         display: block
-        margin: 55px 0 0
     &__info
         display: grid
         gap: 25px
@@ -3130,6 +3242,10 @@ input
                 height: 20px
                 background: url('../icons/main-llc_arrow.svg') center no-repeat
                 background-size: contain
+            &.active
+                &::after
+                    background: url('../icons/active_arrow.svg') center no-repeat
+                    background-size: contain
         &_full
             justify-content: space-between
         li
@@ -4273,7 +4389,7 @@ input
 .llc-pdf__ip
     display: grid
     grid-template-columns: 1fr 1fr
-    column-gap: 16px
+    column-gap: 13px
     row-gap: 32px
     .llc-pdf
         &__item
@@ -4352,6 +4468,8 @@ input
                 color: #272833;
     &__title
         margin: 0 0 40px
+    .info__block
+        border-radius: 32px;
 
 .reliab
     &__title
@@ -4497,6 +4615,8 @@ input
     &__table
         overflow: scroll
         display: grid
+        border-bottom: 1px solid #E7E7ED;
+        border-radius: 8px;
     &__row
         display: grid
         grid-template-columns: 22% 1fr 1fr 1fr 1fr 1fr
@@ -4667,6 +4787,7 @@ input
                         content: ''
                         display: block
                         width: 16px
+                        min-width: 16px
                         height: 16px
                         margin: 5px 12px 0 0
                         background: #F6F6F6;
@@ -4815,6 +4936,9 @@ input
 .crash
     &__table
         margin: 32px 0 0
+        border-bottom: 1px solid #E7E7ED;
+        border-radius: 8px;
+        overflow: hidden
     &__row
         display: grid
         grid-template-columns: 1fr 150px 215px
@@ -5167,6 +5291,12 @@ input
         font-size: 14px;
         line-height: 157.5%;
         color: #43BD4F;
+    &__row
+        display: grid
+        grid-template-columns: auto auto
+        gap: 24px
+        justify-content: start
+
 
 @media ( max-width: 768px )
     .check
@@ -5175,7 +5305,7 @@ input
             gap: 16px
             ul
                 li
-                    &:nth-child(6),
+                    &:nth-child(3),
                     &:nth-child(5),
                     &:nth-child(4)
                         display: none
@@ -5197,7 +5327,10 @@ input
             &_active
                 ul
                     li
-                        display: block !important
+                        &:nth-child(3),
+                        &:nth-child(5),
+                        &:nth-child(4)
+                            display: block 
                     &+a
                         &::after
                             transform: rotate(180deg)
@@ -5210,6 +5343,9 @@ input
                 font-size: 22px;
             div
                 margin: 0
+        &__row
+            grid-template-columns: 100%
+            gap: 8px
 
 .license
     &__list
@@ -5348,6 +5484,9 @@ input
         margin: 56px 0 0
     &__wrapper
         margin: 32px 0 0
+        border-bottom: 1px solid #E7E7ED;
+        border-radius: 8px;
+        overflow: hidden
     &__row
         display: grid
         grid-template-columns: 1fr 162px 202px
@@ -5529,6 +5668,7 @@ input
         margin: 32px 0 0
         border-bottom: 1px solid #E7E7ED;
         border-radius: 8px;
+        overflow: hidden
     &__row
         border-bottom: 1px solid #E7E7ED;
         display: grid
@@ -5846,6 +5986,7 @@ input
         margin: 32px 0 0
         border-bottom: 1px solid #E7E7ED;
         border-radius: 8px;
+        overflow: hidden
     p.product__blue
         display: inline
         padding: 4px 8px
@@ -5924,3 +6065,167 @@ input
             display: grid
             grid-template-columns: 100%
             gap: 10px
+
+.nav-user
+    .container
+        grid-template-columns: 151px 1fr 195px 83px
+    .nav
+        &__list
+            display: flex
+            justify-content: space-between
+            align-items: center
+            max-width: 521px
+            a
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 113.5%;
+                color: #272833;
+            ul
+                display: none
+            &_btn
+                display: flex
+                justify-content: flex-start
+                align-items: center
+                &::after
+                    content: ''
+                    display: block
+                    width: 16px
+                    height: 16px
+                    margin: 0 0 0 8px
+                    background: url('../icons/list_arrow.svg') center no-repeat
+                    background-size: contain
+                    transition: all .3s
+                &_active
+                    a
+                        color: #272833 !important
+                    &::after
+                        transform: rotate(180deg)
+        &__acc
+            order: 1
+            color: #272833;
+            &::before
+                background: url('../icons/profile_blc.svg') center no-repeat
+                background-size: contain
+    .btn__green
+        padding: 0
+        width: auto
+        background: transparent
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 113.5%;
+        color: #272833;
+        height: auto
+        &::before
+            background: url('../icons/gift_blc.svg') center no-repeat
+            background-size: contain
+
+@media ( max-width: 1024px )
+    .nav-user
+        .container
+            grid-template-columns: 1fr 48px
+        .nav
+            &__list
+                display: none
+            &__humburger
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                padding: 16px 13px
+                width: 48px
+                height: 48px
+                border: 1px solid #000000;
+                border-radius: 100%
+                cursor: pointer
+                position: relative
+                &::before,
+                &::after,
+                span
+                    content: ''
+                    display: block
+                    width: 100%
+                    height: 2px
+                    background: #000
+                    transition: transform .3s
+            &__acc
+                display: none
+        .btn__green
+            display: none
+        &.nav__active
+            position: fixed
+            top: 0
+            left: 0
+            width: 100vw
+            height: 100vh
+            z-index: 100
+            .container
+                height: 100%
+                align-items: start
+            .btn__green
+                display: flex
+                grid-column: 1/3
+                order: 1
+            .nav
+                &__humburger
+                    span
+                        opacity: 0
+                    &::before,
+                    &::after
+                        width: calc( 100% - 26px )
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%) rotate(-45deg)
+                    &::before
+                        transform: translate(-50%, -50%) rotate(45deg)
+                &__acc
+                    display: flex
+                    order: 1
+                    grid-column: 1/3
+                    max-width: 82px 
+                    margin: 0 auto
+                    width: 100%
+                &__list
+                    display: grid
+                    height: 100%
+                    grid-column: 1/3
+                    overflow-y: scroll
+                    order: 1
+                    gap: 24px
+                    position: relative
+                    p>a
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 113.5%;
+                        color: #737373;
+                    &_btn
+                        display: flex
+                        justify-content: flex-start
+                        align-items: center
+                        &::after
+                            content: ''
+                            display: block
+                            width: 16px
+                            height: 16px
+                            margin: 0 0 0 8px
+                            background: url('../icons/list_arrow.svg') center no-repeat
+                            background-size: contain
+                            transition: all .3s
+                        &_active
+                            a
+                                color: #272833 !important
+                            &::after
+                                transform: rotate(180deg)
+                    ul
+                        display: none
+                        gap: 12px
+                        &.active
+                            display: grid
+                        a
+                            font-family: 'Inter';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 133.5%;
+                            color: #272833;
