@@ -298,6 +298,7 @@ input
     .nav
         .container
             grid-template-columns: 1fr 48px
+            row-gap: 16px
         &__humburger
             display: flex
             flex-direction: column
@@ -1157,6 +1158,7 @@ input
     justify-content: center
     align-items: center
     padding: 42px 8px
+    overflow: hidden
     &__active
         display: flex
     &__overflow
@@ -1883,10 +1885,15 @@ input
             &+p
                 text-align: center
                 margin: 32px auto 0
+    &__pt
+        padding: 0 0 120px
 
 .ceo-info
     background: #FBFBFB;
     padding: 120px 0
+    position: relative
+    overflow: hidden
+    z-index: 1
     &__wht
         background: #FFFFFF;
     .container
@@ -1941,7 +1948,16 @@ input
     &__center
         .container
             grid-template-columns: minmax(auto, 700px) 276px
-
+    &__bg
+        position: absolute
+        width: 434px !important
+        z-index: -1
+        &:nth-child(1)
+            top: -30px
+            right: 320px
+        &:nth-child(2)
+            bottom: 77px
+            right: -90px
 .affril-list
     padding: 120px 0
     .container
@@ -2068,6 +2084,8 @@ input
         padding: 0
     &__pb
         padding: 120px 0 0
+    &__pt
+        padding: 0 0 120px
 
 .reliab-check
     padding: 93px 0 0
@@ -2472,6 +2490,8 @@ input
         &__reliab
             .ceo-info__img
                 max-width: 600px
+        &__bg
+            display: none
     .ceo-title
         padding: 80px 0 0
         h1
@@ -2769,6 +2789,7 @@ input
 .main-est
     padding: 120px 0 90px
     position: relative
+    z-index: 1
     h2
         font-weight: 700;
         max-width: 475px
@@ -2802,8 +2823,9 @@ input
         position: absolute
         bottom: 82px
         left: 0
+        z-index: -1
 
-.Manropeface
+.interface
     padding: 120px 0 150px
     background: #FBFBFB;
     h2
@@ -3070,7 +3092,7 @@ input
             max-width: 400px
             margin: 0 auto
             display: block
-    .Manropeface
+    .interface
         padding: 80px 0 
         &__wrapper
             grid-template-columns: 100%
@@ -3144,7 +3166,7 @@ input
             margin: 8px 0 0
         h3
             margin: 16px 0 0
-    .Manropeface
+    .interface
         h2
             font-size: 24px
         &__wrapper
@@ -3208,7 +3230,7 @@ input
     .main-header
         .btn__green
             max-width: 100%
-    .Manropeface
+    .interface
         .btn__gray
             max-width: 100%
     .main-banner
@@ -3233,6 +3255,8 @@ input
         justify-content: flex-start
         align-items: center
         overflow-x: scroll
+        &::-webkit-scrollbar
+            width: 0
         &_more
             display: flex
             align-items: center
@@ -4583,6 +4607,8 @@ input
         &__tab
             li.active
                 order: -1
+                &.main-llc__tab_more
+                    margin: 0 16px 0 0
         
 @media ( max-width: 425px )
     .inner-page
@@ -5594,6 +5620,7 @@ input
         justify-content: flex-start
         gap: 16px
         flex-wrap: wrap
+        row-gap: 8px
         p
             margin: 0
     &__text
@@ -5616,6 +5643,8 @@ input
             height: 100%
             width: 100%
             object-fit: cover
+    &__more
+        display: none
 
 @media ( max-width: 1024px )
     .connect
@@ -5625,6 +5654,7 @@ input
             gap: 8px
             .arbitration__select
                 max-width: 100% !important
+                margin: 0 !important
                 &:nth-child(3)
                     display: none
         &__wrapper
@@ -5655,8 +5685,47 @@ input
 
 @media ( max-width: 425px )
     .connect
+        &__form
+            grid-template-columns: 100%
         &__func
             height: 88px
+        &__more
+            display: flex
+            align-items: center
+            margin: 8px 0 0
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 157.5%;
+            color: #00D45F;
+            order: 3
+            &::after
+                content: ''
+                width: 20px
+                height: 20px
+                display: block
+                background: url('../icons/check_arrow.svg') center no-repeat
+                background-size: contain
+                margin: 0 4px 0
+        &__parag
+            &:nth-child(4)
+                order: 1
+                display: none
+            &:nth-child(6)
+                order: 2
+                display: none
+        &__item
+            display: grid
+            grid-template-columns: 100%
+            &_active
+                .connect
+                    &__more
+                        &::after
+                            transform: rotate(180deg)
+                    &__parag
+                        &:nth-child(4)
+                            display: block
+                        &:nth-child(6)
+                            display: block
 
 .founder
     &__form
@@ -5851,6 +5920,14 @@ input
                 background-color: #fff
         &__table
             gap: 0
+        &__item
+            &:nth-child(1)
+                .requisit__row
+                    display: flex
+                    flex-wrap: wrap
+                    &:nth-child(1)
+                        a
+                            display: flex !important
 
 .fillial
     &__wrapper
@@ -5926,6 +6003,7 @@ input
                 line-height: 157.5%;
                 color: #00D45F;
                 &::after
+                    content: ''
                     width: 16px
                     height: 16px
                     display: block
@@ -6056,6 +6134,22 @@ input
                 font-size: 16px;
                 line-height: 157.5%;
                 color: #737373;
+            a
+                display: flex
+                align-items: center
+                margin: 24px 0 0
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 157.5%;
+                letter-spacing: -0.03em;
+                color: #9E9E9E;
+                &::after
+                    content: ''
+                    display: block
+                    margin: 0 0 0 4px
+                    width: 16px
+                    height: 16px
+                    background: url('../icons/arb_link.svg') center no-repeat
 
 @media ( max-width: 768px )
     .product
@@ -6231,3 +6325,16 @@ input
                             font-size: 16px;
                             line-height: 133.5%;
                             color: #272833;
+
+.main-llc
+    &__mob
+        display: none
+
+@media ( max-width: 680px )
+    .main-llc
+        &__mob
+            display: block
+            &.llc-pdf__ip
+                display: grid
+        &__desktop
+            display: none
