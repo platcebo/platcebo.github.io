@@ -4889,6 +4889,11 @@ input {
 
 .main-llc__tab::-webkit-scrollbar {
   width: 0;
+  height: 0;
+}
+
+.main-llc__tab::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .main-llc__tab_more {
