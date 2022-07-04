@@ -5055,8 +5055,8 @@ input
     &__item
         &_wrapper
             display: grid
-            grid-template-columns: 180px 1fr
-            gap: 60px
+            grid-template-columns: 176px 1fr
+            gap: 64px
             padding: 0 0 24px
             border-bottom: 1px solid #E1E1E1
             &:last-child
@@ -5076,6 +5076,8 @@ input
             color: #737373;
         .btn__green
             margin: 12px 0 0
+            font-size: 14px;
+            height: 36px
     &__list
         margin: 24px 0 0
         display: grid
@@ -5685,6 +5687,7 @@ input
                 max-width: 154px
                 height: 38px
                 font-size: 16px;
+                white-space: nowrap
 
 @media ( max-width: 425px )
     .connect
@@ -6129,6 +6132,9 @@ input
             display: block
             div
                 padding: 4px 0
+                &:nth-child(3)
+                    p
+                        text-align: left
             p
                 text-align-last: left !important
             span

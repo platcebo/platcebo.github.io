@@ -7580,9 +7580,9 @@ input {
 .change__item_wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 180px 1fr;
-      grid-template-columns: 180px 1fr;
-  gap: 60px;
+  -ms-grid-columns: 176px 1fr;
+      grid-template-columns: 176px 1fr;
+  gap: 64px;
   padding: 0 0 24px;
   border-bottom: 1px solid #E1E1E1;
 }
@@ -7608,6 +7608,8 @@ input {
 
 .change__prev .btn__green {
   margin: 12px 0 0;
+  font-size: 14px;
+  height: 36px;
 }
 
 .change__list {
@@ -8519,6 +8521,7 @@ input {
     max-width: 154px;
     height: 38px;
     font-size: 16px;
+    white-space: nowrap;
   }
 }
 
@@ -9175,6 +9178,9 @@ input {
   }
   .product__row div {
     padding: 4px 0;
+  }
+  .product__row div:nth-child(3) p {
+    text-align: left;
   }
   .product__row p {
     text-align-last: left !important;
