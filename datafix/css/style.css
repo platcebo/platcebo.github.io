@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
   background: #F9F9F9;
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
 }
 
@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -23,7 +23,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -33,7 +33,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -42,7 +42,7 @@ h3 {
 }
 
 h4 {
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
   font-size: 22px;
@@ -52,7 +52,7 @@ h4 {
 }
 
 p {
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -61,7 +61,7 @@ p {
 }
 
 p.med {
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -70,7 +70,7 @@ p.med {
 }
 
 p.bold {
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -79,7 +79,7 @@ p.bold {
 }
 
 p.reg {
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -88,7 +88,7 @@ p.reg {
 }
 
 p.bold_s {
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -103,7 +103,7 @@ input {
   width: 100%;
   height: 60px;
   padding: 0 20px;
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -128,7 +128,7 @@ input {
   background: #00D45F;
   border-radius: 8px;
   border: none;
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -161,7 +161,7 @@ input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -184,7 +184,7 @@ input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -203,7 +203,7 @@ input {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  cursor: pointer;
+  cursor: poManrope;
 }
 
 .input-check span {
@@ -266,7 +266,7 @@ input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -423,7 +423,7 @@ input {
     height: 48px;
     border: 1px solid #000000;
     border-radius: 100%;
-    cursor: pointer;
+    cursor: poManrope;
     position: relative;
   }
   .nav__humburger::before, .nav__humburger::after,
@@ -524,7 +524,7 @@ input {
     position: relative;
   }
   .nav__active .nav__list p > a {
-    font-family: 'Inter';
+    font-family: 'Manrope';
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -569,7 +569,7 @@ input {
     display: grid;
   }
   .nav__active .nav__list ul a {
-    font-family: 'Inter';
+    font-family: 'Manrope';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -712,7 +712,7 @@ input {
 }
 
 .sub p.bold + p {
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -812,7 +812,7 @@ input {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 16px;
-  cursor: pointer;
+  cursor: poManrope;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -846,7 +846,7 @@ input {
           box-shadow: 0px 17.8781px 50.2429px rgba(57, 54, 67, 0.07), 3.9729px 3.57561px 8.16448px rgba(57, 54, 67, 0.035);
   border-radius: 7px;
   padding: 6px 12px;
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -877,7 +877,7 @@ input {
   background: #F9F9F9;
   border: 1px solid #F3F3F3;
   border-radius: 16px;
-  cursor: pointer;
+  cursor: poManrope;
 }
 
 .acc-card__add::before {
@@ -1091,7 +1091,7 @@ input {
 }
 
 .footer__list ul a {
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -1126,7 +1126,7 @@ input {
   border-radius: 8px;
   background: transparent;
   height: 48px;
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -1162,7 +1162,7 @@ input {
 }
 
 .footer__desc ul a {
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -1176,7 +1176,7 @@ input {
 }
 
 .footer__link {
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -1256,7 +1256,7 @@ input {
         -ms-flex-align: center;
             align-items: center;
     margin: 16px 0 0;
-    font-family: 'Inter';
+    font-family: 'Manrope';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -1580,7 +1580,7 @@ input {
           box-sizing: border-box;
   border: none;
   height: 120px;
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -1658,7 +1658,7 @@ input {
 }
 
 .rate__item ul li p {
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -1804,7 +1804,7 @@ input {
   height: 48px;
   border: 1.5px solid #1B1B1E;
   border-radius: 100%;
-  cursor: pointer;
+  cursor: poManrope;
 }
 
 .modal__close::after, .modal__close::before {
@@ -1900,7 +1900,7 @@ input {
   margin: 24px 0 0;
   display: block;
   text-align: center;
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -2061,7 +2061,7 @@ input {
   display: block;
   text-align: center;
   margin: 16px 0 0;
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -2136,7 +2136,7 @@ input {
   height: 50px;
   background: #D9F9E0;
   border-radius: 8px;
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -2265,7 +2265,7 @@ input {
 }
 
 .header-lend ul li {
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -2323,7 +2323,7 @@ input {
 .header-lend__form p {
   margin: 24px auto 0;
   max-width: 470px;
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -2760,7 +2760,7 @@ input {
 .arb-court li::before {
   content: "0" counter(ceo);
   counter-increment: ceo;
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -2826,7 +2826,7 @@ input {
 .ceo-list li::before {
   content: counter(ceo, decimal-leading-zero) " ";
   counter-increment: ceo;
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -3006,7 +3006,7 @@ input {
 .affril-list li::before {
   content: counter(ceo, decimal-leading-zero) " ";
   counter-increment: ceo;
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -3298,7 +3298,7 @@ input {
 .ceo-check li::before {
   content: counter(ceo, decimal-leading-zero) " ";
   counter-increment: ceo;
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -3362,7 +3362,7 @@ input {
 .ceo-ver li::before {
   content: counter(ceo, decimal-leading-zero) " ";
   counter-increment: ceo;
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -3492,7 +3492,7 @@ input {
 .ceo-rating li::before {
   content: counter(ceo, decimal-leading-zero) " ";
   counter-increment: ceo;
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -3614,7 +3614,7 @@ input {
 .ceo-phone li::before {
   content: counter(ceo, decimal-leading-zero) " ";
   counter-increment: ceo;
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -4216,17 +4216,17 @@ input {
   left: 0;
 }
 
-.interface {
+.Manropeface {
   padding: 120px 0 150px;
   background: #FBFBFB;
 }
 
-.interface h2 {
+.Manropeface h2 {
   font-weight: 700;
   text-align: center;
 }
 
-.interface__wrapper {
+.Manropeface__wrapper {
   margin: 55px 0 0;
   display: -ms-grid;
   display: grid;
@@ -4238,30 +4238,30 @@ input {
   gap: 94px;
 }
 
-.interface ul {
+.Manropeface ul {
   display: -ms-grid;
   display: grid;
   gap: 8px;
   justify-items: start;
 }
 
-.interface li {
+.Manropeface li {
   padding: 16px;
   border-radius: 52px;
   font-weight: 400;
   font-size: 18px;
   line-height: 160%;
   color: #272833;
-  cursor: pointer;
+  cursor: poManrope;
 }
 
-.interface li.active {
+.Manropeface li.active {
   background: #00D45F;
   font-weight: 700;
   color: #FFFFFF;
 }
 
-.interface__block {
+.Manropeface__block {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 530px minmax(auto, 300px);
@@ -4272,14 +4272,14 @@ input {
           justify-content: space-between;
 }
 
-.interface__block img {
+.Manropeface__block img {
   width: 100%;
   -webkit-filter: drop-shadow(18.5824px 16.7241px 47px rgba(57, 54, 67, 0.07)) drop-shadow(3.71647px 3.34482px 7.6375px rgba(57, 54, 67, 0.035));
           filter: drop-shadow(18.5824px 16.7241px 47px rgba(57, 54, 67, 0.07)) drop-shadow(3.71647px 3.34482px 7.6375px rgba(57, 54, 67, 0.035));
   border-radius: 16px;
 }
 
-.interface__info {
+.Manropeface__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4292,11 +4292,11 @@ input {
           align-items: flex-start;
 }
 
-.interface__info h3 {
+.Manropeface__info h3 {
   font-weight: 500;
 }
 
-.interface__info p {
+.Manropeface__info p {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -4304,7 +4304,7 @@ input {
   margin: 16px 0 auto;
 }
 
-.interface__info .btn__gray {
+.Manropeface__info .btn__gray {
   max-width: 180px;
   margin: 32px 0 0;
   background: transparent;
@@ -4475,7 +4475,7 @@ input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  cursor: pointer;
+  cursor: poManrope;
 }
 
 .quest__btn:last-child {
@@ -4620,14 +4620,14 @@ input {
     margin: 0 auto;
     display: block;
   }
-  .interface {
+  .Manropeface {
     padding: 80px 0;
   }
-  .interface__wrapper {
+  .Manropeface__wrapper {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
   }
-  .interface ul {
+  .Manropeface ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4639,7 +4639,7 @@ input {
             align-items: center;
     overflow-x: scroll;
   }
-  .interface li {
+  .Manropeface li {
     white-space: nowrap;
   }
   .main-banner__desktop {
@@ -4727,18 +4727,18 @@ input {
   .main-est h3 {
     margin: 16px 0 0;
   }
-  .interface h2 {
+  .Manropeface h2 {
     font-size: 24px;
   }
-  .interface__wrapper {
+  .Manropeface__wrapper {
     margin: 40px 0 0;
     gap: 30px;
   }
-  .interface li {
+  .Manropeface li {
     font-size: 16px;
     padding: 12px 16px;
   }
-  .interface__block {
+  .Manropeface__block {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     gap: 40px;
@@ -4813,7 +4813,7 @@ input {
   .main-header .btn__green {
     max-width: 100%;
   }
-  .interface .btn__gray {
+  .Manropeface .btn__gray {
     max-width: 100%;
   }
   .main-banner__mob {
@@ -4889,7 +4889,7 @@ input {
   letter-spacing: -0.02em;
   color: #272833;
   margin: 0 16px 0 0;
-  cursor: pointer;
+  cursor: poManrope;
   white-space: nowrap;
 }
 
@@ -5221,7 +5221,7 @@ input {
   line-height: 136%;
   letter-spacing: -0.02em;
   color: #9E9E9E;
-  cursor: pointer;
+  cursor: poManrope;
   white-space: nowrap;
 }
 
@@ -5280,7 +5280,7 @@ input {
   line-height: 136%;
   letter-spacing: -0.02em;
   color: #9E9E9E;
-  cursor: pointer;
+  cursor: poManrope;
 }
 
 .llc-procur ul li::before {
@@ -5638,7 +5638,7 @@ input {
   line-height: 136%;
   letter-spacing: -0.02em;
   color: #9E9E9E;
-  cursor: pointer;
+  cursor: poManrope;
 }
 
 .llc-arb__list li::before {
@@ -6764,7 +6764,7 @@ input {
   line-height: 136%;
   letter-spacing: -0.02em;
   color: #9E9E9E;
-  cursor: pointer;
+  cursor: poManrope;
   white-space: nowrap;
 }
 
@@ -7050,7 +7050,7 @@ input {
   line-height: 136%;
   letter-spacing: -0.02em;
   color: #9E9E9E;
-  cursor: pointer;
+  cursor: poManrope;
   white-space: nowrap;
 }
 
@@ -7795,7 +7795,7 @@ input {
     height: 32px;
     background: url("../icons/change_close.svg") center no-repeat;
     background-size: contain;
-    cursor: pointer;
+    cursor: poManrope;
   }
   .change__item_active .change__prev {
     -webkit-box-ordinal-group: 0;
@@ -8022,7 +8022,7 @@ input {
   line-height: 136%;
   letter-spacing: -0.02em;
   color: #9E9E9E;
-  cursor: pointer;
+  cursor: poManrope;
   white-space: nowrap;
 }
 
@@ -8162,7 +8162,7 @@ input {
   line-height: 136%;
   letter-spacing: -0.02em;
   color: #9E9E9E;
-  cursor: pointer;
+  cursor: poManrope;
   white-space: nowrap;
 }
 
@@ -9190,7 +9190,7 @@ input {
     height: 48px;
     border: 1px solid #000000;
     border-radius: 100%;
-    cursor: pointer;
+    cursor: poManrope;
     position: relative;
   }
   .nav-user .nav__humburger::before, .nav-user .nav__humburger::after,
@@ -9280,7 +9280,7 @@ input {
     position: relative;
   }
   .nav-user.nav__active .nav__list p > a {
-    font-family: 'Inter';
+    font-family: 'Manrope';
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -9325,7 +9325,7 @@ input {
     display: grid;
   }
   .nav-user.nav__active .nav__list ul a {
-    font-family: 'Inter';
+    font-family: 'Manrope';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
