@@ -380,6 +380,10 @@ input {
   background-size: contain;
 }
 
+.nav__lend {
+  border-bottom: none;
+}
+
 @media (max-width: 1024px) {
   .nav .container {
     -ms-grid-columns: 1fr 185px 230px;
