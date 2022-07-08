@@ -2525,14 +2525,14 @@ input {
   margin: 0 auto;
 }
 
-.mac img {
+.mac embed {
   margin: 0 auto;
   display: block;
   width: 100%;
   max-width: 1000px;
 }
 
-.mac img + p {
+.mac embed + p {
   margin: 75px auto 0;
   max-width: 1030px;
   font-weight: 400;
@@ -2690,7 +2690,8 @@ input {
   position: relative;
 }
 
-.ceo-title__director img {
+.ceo-title__director img,
+.ceo-title__director embed {
   position: absolute;
   bottom: -60px;
   right: 0;
@@ -2704,7 +2705,8 @@ input {
   max-width: 835px;
 }
 
-.ceo-title__phone img {
+.ceo-title__phone img,
+.ceo-title__phone embed {
   position: absolute;
   right: 0;
   bottom: -30px;
@@ -2735,7 +2737,7 @@ input {
           align-items: center;
 }
 
-.arb-court img {
+.arb-court embed {
   width: 100%;
 }
 
@@ -2898,7 +2900,8 @@ input {
   gap: 100px;
 }
 
-.ceo-info img {
+.ceo-info img,
+.ceo-info embed {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -2933,7 +2936,8 @@ input {
       grid-template-columns: 1fr 530px;
 }
 
-.ceo-info__reliab img {
+.ceo-info__reliab img,
+.ceo-info__reliab embed {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -3356,7 +3360,8 @@ input {
           column-gap: 87px;
 }
 
-.ceo-ver img {
+.ceo-ver img,
+.ceo-ver embed {
   width: 100%;
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
@@ -3537,7 +3542,7 @@ input {
   color: #C4C4C4;
 }
 
-.ceo-rating img {
+.ceo-rating embed {
   width: 100%;
 }
 
@@ -3574,7 +3579,7 @@ input {
           align-items: center;
 }
 
-.ceo-procur img {
+.ceo-procur embed {
   width: 100%;
 }
 
@@ -3696,7 +3701,7 @@ input {
         grid-template-columns: 100%;
     gap: 30px;
   }
-  .arb-court img {
+  .arb-court embed {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -3863,7 +3868,7 @@ input {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
   }
-  .reliab-check img {
+  .reliab-check embed {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -3910,7 +3915,8 @@ input {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
   }
-  .ceo-ver img {
+  .ceo-ver img,
+  .ceo-ver embed {
     max-width: 275px;
     display: block;
     grid-row: auto/auto;
@@ -3959,7 +3965,7 @@ input {
         grid-template-columns: 100%;
     gap: 0;
   }
-  .ceo-procur img {
+  .ceo-procur embed {
     max-width: 300px;
     display: block;
     margin: 0 auto;
@@ -4085,13 +4091,13 @@ input {
   z-index: 1;
 }
 
-.main-header__img img {
+.main-header__img embed {
   -webkit-box-shadow: 18.5824px 16.7241px 47px rgba(57, 54, 67, 0.07), -12px -8px 22px rgba(57, 54, 67, 0.035);
           box-shadow: 18.5824px 16.7241px 47px rgba(57, 54, 67, 0.07), -12px -8px 22px rgba(57, 54, 67, 0.035);
   border-radius: 8.73014px;
 }
 
-.main-header__img img:nth-child(1) {
+.main-header__img embed:nth-child(1) {
   display: block;
   width: 100%;
   max-width: 75%;
@@ -4100,13 +4106,13 @@ input {
   top: 33%;
 }
 
-.main-header__img img:nth-child(2) {
+.main-header__img embed:nth-child(2) {
   width: 100%;
   max-width: 52%;
   display: block;
 }
 
-.main-header__img img:nth-child(3) {
+.main-header__img embed:nth-child(3) {
   position: absolute;
   top: 28px;
   right: 0;
@@ -4114,14 +4120,14 @@ input {
   max-width: 20%;
 }
 
-.main-header__img img:nth-child(4) {
+.main-header__img embed:nth-child(4) {
   display: block;
   margin: 31% 0 0;
   width: 100%;
   max-width: 20%;
 }
 
-.main-header__img img:nth-child(5) {
+.main-header__img embed:nth-child(5) {
   display: block;
   position: absolute;
   top: calc( 94% - 8px);
@@ -4401,7 +4407,7 @@ input {
   position: relative;
 }
 
-.visual__img img:nth-child(1) {
+.visual__img embed:nth-child(1) {
   position: absolute;
   left: 0;
   bottom: -05%;
@@ -4415,13 +4421,13 @@ input {
   border-radius: 10.766px;
 }
 
-.visual__img img:nth-child(2) {
+.visual__img embed:nth-child(2) {
   display: block;
   margin: 0 auto;
   max-width: 85%;
 }
 
-.visual__img img:nth-child(3) {
+.visual__img embed:nth-child(3) {
   position: absolute;
   right: 0;
   top: 25%;
@@ -4553,7 +4559,7 @@ input {
   row-gap: 42px;
 }
 
-.source__item img {
+.source__item embed {
   display: block;
   margin: 0 auto;
   display: block;
@@ -4573,7 +4579,7 @@ input {
   color: #272833;
 }
 
-.source__logo img {
+.source__logo embed {
   width: 100%;
   height: 105px;
   -o-object-fit: contain;
@@ -4865,11 +4871,11 @@ input {
   .source p {
     font-size: 14px;
   }
-  .source__item img {
+  .source__item embed {
     width: 70px;
     height: 70px;
   }
-  .source__logo img {
+  .source__logo embed {
     height: 70px;
   }
 }
