@@ -87,13 +87,13 @@ h1
             object-fit: contain
         &_wrapper
             margin: 15px 0 0
-            a
-                display: flex
-                justify-content: flex-start
-                align-items: center
-                padding: 15px 0 30px 
-                border-bottom: 0.5px solid #D6D6D6 
-                text-decoration: none
+            // a
+            //     display: flex
+            //     justify-content: flex-start
+            //     align-items: center
+            //     padding: 15px 0 30px 
+            //     border-bottom: 0.5px solid #D6D6D6 
+            //     text-decoration: none
             p
                 font-family: 'Roboto';
                 font-style: normal;
@@ -104,6 +104,39 @@ h1
                 margin: 0 0 0 20px
         &_arrow
             margin: 0 0 0 auto
+        &_point
+            padding: 15px 0 30px 
+            border-top: 0.5px solid #D6D6D6 
+            &:nth-child(1)
+                border-top: none  
+            &:last-child
+                border-bottom: 0.5px solid #D6D6D6   
+            div
+                display: flex
+                justify-content: flex-start
+                align-items: center
+            &+ul
+                display: none
+                padding: 10px
+                grid-template-columns: 100%
+                gap: 5px
+                a
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #214D7E;
+                    margin: 0 0 0 20px
+                &.active
+                    display: grid
+                ol
+                    display: none
+                    padding: 10px
+                    grid-template-columns: 100%
+                    gap: 5px
+                    &.active
+                        display: grid
     &__catalog
         margin: 30px auto
     &__doc

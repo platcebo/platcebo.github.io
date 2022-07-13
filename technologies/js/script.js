@@ -65,6 +65,26 @@ if(nav !== null) {
     }
 }
 
+let asidePoint = document.querySelectorAll('.aside__tab_point'),
+    asidePointUl = document.querySelectorAll('.aside__tab_wrapper ul'),
+    asidePointUlli = document.querySelectorAll('.aside__tab_point_ulli'),
+    asidePointOl = document.querySelectorAll('.aside__tab_wrapper ol'),
+    asidePointolli = document.querySelectorAll('.aside__tab_point_olli');
+
+if (asidePoint !== null) {
+    for (let i = 0; i < asidePoint.length; i++) {
+        asidePoint[i].addEventListener('click', function(event) {
+            asidePointUl[i].classList.toggle('active');
+        });
+    }
+    for (let i = 0; i < asidePointUlli.length; i++) {
+        asidePointUlli[i].addEventListener('click', function(event){
+            // event.preventDefault();
+            asidePointOl[i].classList.toggle('active');
+        });
+    }
+}
+
 let input = document.querySelectorAll('.product__sum_input'),
     plus = document.querySelectorAll('.product__sum_plus'),
     min = document.querySelectorAll('.product__sum_min');
@@ -114,3 +134,4 @@ if (tab !== null) {
         }
     });
 }
+
