@@ -1,0 +1,1963 @@
+body
+    font-family: 'Nunito';
+    font-style: normal;
+    
+.container
+    max-width: 1290px
+    margin: 0 auto
+    padding: 0 16px 
+    box-sizing: content-box
+
+.breadcrumbs
+    padding: 11px 0 0
+    a,
+    p
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: #434343;
+    a
+        color: #000000;
+    .container
+        display: flex
+        justify-content: flex-start
+        align-items: center
+
+.pickup
+    padding: 32px 0 80px
+    &__container
+        display: grid
+        grid-template-columns: 1fr 417px
+        gap: 32px
+    &__block
+        max-width: 580px
+    h1
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 44px;
+        text-transform: uppercase;
+        color: #000000;
+    &__addres
+        margin: 24px 0 0
+        display: grid
+        grid-template-columns: auto auto
+        justify-content: space-between
+        align-items: center
+        p
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 33px;
+            color: #000000;
+        a
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #FF0000;
+            white-space: nowrap
+            &+p
+                margin: 24px 0 0
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 25px;
+                color: #000000;
+                max-width: 480px
+                grid-column: 1/3
+    &__form
+        margin: 40px 0 0
+        &_info
+            display: grid
+            grid-template-columns: 100%
+            gap: 17px
+            p
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                color: #8C8C8C;
+            input
+                background: #F3F3F3;
+                border-radius: 6px;
+                border: none
+                margin: 8px 0 0
+                width: 100%
+                height: 50px
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                color: #000000;
+                padding: 0 16px
+                box-sizing: border-box
+        &_row
+            margin: 16px 0
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr 1fr
+            gap: 16px
+    &__time
+        margin: 80px 0 0
+        h2
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 33px;
+            color: #000000;
+        &_wrapper
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 17px
+            row-gap: 24px
+            margin: 32px 0 0
+        &_radio
+            display: block
+            position: relative
+            span
+                background: #F3F3F3;
+                border-radius: 6px;
+                display: flex
+                justify-content: center
+                align-items: center
+                height: 50px
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                color: #8C8C8C;
+                transition: all .3s
+            input
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                opacity: 0
+                &:checked
+                    &+span
+                        background: #FF0000;
+                        color: #FFFFFF;
+        &_interval
+            grid-column: 1/3
+            background: #FFF8EB;
+            border-radius: 6px;
+            height: 50px
+            text-align: center
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            color: #000000;
+            border: none
+            cursor: pointer
+    &__pay
+        margin: 80px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 80px
+        max-width: 400px
+        h2
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 33px;
+            color: #000000;
+        &_wrapper
+            margin: 32px 0 0
+            display: grid
+            grid-template-columns: 100%
+            gap: 28px
+        &_radio
+            position: relative
+            display: block
+            display: grid
+            grid-template-columns: 28px 1fr
+            gap: 16px
+            p
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 25px;
+                color: #000000;
+            h3
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 25px;
+                color: #000000;
+                &+p
+                    margin: 16px 0 0
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: #000000;
+            span
+                margin: 4px 0 0
+                width: 18px
+                height: 18px
+                background: #FF0000;
+                border-radius: 100%;
+                border: 4px solid #FF0000
+                transition: all .3s
+                display: block
+            input
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                opacity: 0
+                &:checked
+                    &+span
+                        background: #FFFFFF;
+        &_check
+            position: relative
+            display: block
+            display: grid
+            align-items: center
+            grid-template-columns: 28px 1fr
+            gap: 16px
+            p
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 25px;
+                color: #000000;
+            span
+                width: 28px
+                height: 28px
+                background: #F3F3F3;
+                border-radius: 4px;
+                transition: all .3s
+                display: flex
+                justify-content: center
+                align-items: center
+                &::before
+                    content: ''
+                    display: block
+                    width: 22px
+                    height: 15px
+                    background: url('../img/check.svg') center no-repeat
+                    background-size: contain
+                    opacity: 0
+                    transition: all .3s
+            input
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                opacity: 0
+                &:checked
+                    &+span
+                        background: #FF0000;
+                        &::before
+                            opacity: 1
+    &__yellow
+        background: #FFF8EB;
+        border-radius: 16px;
+        padding: 24px 32px
+        &_title
+            display: flex
+            justify-content: space-between
+            align-items: center
+            h2
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 27px;
+                color: #000000;
+            &+p
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                color: #000000;
+                margin: 16px 0 0
+        &_clock
+            position: relative
+            div
+                display: block
+                position: absolute
+                bottom: calc( 100% + 17px )
+                left: 50%
+                transform: translateX(-50%)
+                padding: 7px 12px
+                background: #353535e6;
+                border-radius: 10px;
+                width: 127px
+                z-index: 2
+                opacity: 0
+                transition: all .3s
+                p
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 19px;
+                    text-align: center;
+                    color: #FFFFFF;
+                &::before
+                    content: ''
+                    display: block
+                    position: absolute
+                    top: 100%
+                    left: 50%
+                    border-top: 7px solid #353535e6
+                    border-left: 7px solid transparent
+                    border-right: 7px solid transparent
+                    transform: translateX(-50%);
+                    z-index: -1
+            &:hover
+                div
+                    opacity: 1
+        ul
+            margin: 16px 0 0
+            display: grid
+            grid-template-columns: 100%
+            gap: 16px
+            li
+                display: flex
+                justify-content: space-between
+                align-items: center
+            p
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 25px;
+                color: #000000;
+                &.red
+                    color: #FF0000;
+        &_row
+            display: grid
+            grid-template-columns: 1fr 120px
+            gap: 8px
+            margin: 32px 0 0
+            button
+                background: #FFC34C;
+                border-radius: 6px;
+                border: none
+                height: 53px
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 25px;
+                color: #FFFFFF;
+            input
+                background: #FFFFFF;
+                border-radius: 6px;
+                height: 53px
+                padding: 0 12px
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 25px;
+                border: none
+        &_price
+            margin: 32px 0 0
+            display: flex
+            justify-content: space-between
+            align-items: center
+            p
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 25px;
+                color: #000000;
+                &+p
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 33px;
+                    color: #000000;
+        &_btn
+            margin: 16px 0 0
+            background: #FF0000;
+            border: 2px solid #FF0000;
+            border-radius: 31px;
+            width: 100%
+            height: 56px
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 33px;
+            color: #FFFFFF;
+            &+p
+                margin: 16px 0 0
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                color: #000000;
+                text-align: center
+    &__red
+        background: #FFEDED;
+        border-radius: 16px;
+        padding: 24px
+        margin: 24px 0 0
+        position: relative
+        display: grid
+        grid-template-columns: 100%
+        gap: 22px
+        p
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #000000;
+        img
+            top: 51%
+            transform: translateY(-50%)
+            right: 24px
+            position: absolute
+            width: 68px
+    &__modal
+        display: none
+        justify-content: center
+        align-items: center
+        z-index: -1
+        position: fixed
+        top: 0
+        left: 0
+        width: 100vw
+        height: 100vh
+        &_active
+            display: flex
+            z-index: 100
+        &_overflow
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: rgba(0, 0, 0, 0.3);
+            z-index: -1
+        &_container
+            padding: 40px 120px 80px 40px
+            background: #FFFFFF;
+            position: relative
+            width: 100%
+            max-width: 1140px
+        h2
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 44px;
+        &_close
+            position: absolute
+            top: 24px
+            right: 24px
+            width: 42px
+            height: 42px
+            background: url('../img/close.svg') center no-repeat
+            background-size: contain
+            cursor: pointer
+        &_wrapper
+            margin: 32px 0 0
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+            p
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 25px;
+                color: #FFC34C;
+        &_grid
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 8px
+            row-gap: 16px
+            margin: 16px 0 0
+            a
+                display: flex
+                align-items: center
+                justify-content: center
+                height: 54px
+                background: #F3F3F3;
+                border-radius: 6px;
+                padding: 16px
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                color: #000000;
+
+@media ( max-width: 1360px )
+    .pickup__yellow_clock 
+        div
+            left: auto
+            right: -15px
+            transform: none
+            &::before
+                left: auto
+                right: 15px
+                transform: none
+
+@media ( max-width: 1024px )
+    .pickup
+        h1
+            font-size: 24px;
+            line-height: 33px;
+        &__addres
+            margin: 16px 0 0
+            grid-template-columns: 100%
+            gap: 8px
+            p
+                font-size: 18px;
+                line-height: 25px;
+            a
+                font-size: 16px;
+                line-height: 22px;
+                margin: 8px 0 0
+                order: 1
+                &+p
+                    grid-column: auto/auto
+                    font-size: 16px;
+                    line-height: 22px;
+                    margin: 0
+        &__form
+            margin: 32px 0 0
+            &_info
+                gap: 24px
+            &_row
+                margin: 0
+                grid-template-columns: 1fr 1fr
+                gap: 8px
+                row-gap: 24px   
+        &__time
+            margin: 32px 0 0
+            h2
+                font-size: 18px;
+                line-height: 25px;
+            &_wrapper
+                grid-template-columns: 100%
+                gap: 16px
+            &_interval
+                grid-column: auto/auto
+        &__pay
+            gap: 32px
+            h2
+                font-size: 18px;
+                line-height: 25px;
+            &_wrapper
+                margin: 16px 0 0
+                gap: 24px
+        &__modal
+            h2
+                font-size: 24px;
+                line-height: 33px;
+            &_container
+                width: 100%
+                height: 100%
+                overflow: scroll
+            &_close
+                top: 16px
+                right: 16px
+                width: 24px
+                height: 24px
+            &_wrapper
+                display: grid
+                grid-template-columns: 100%
+                gap: 24px
+                margin: 24px 0 0
+            &_grid
+                gap: 8px
+
+@media ( max-width: 768px )
+    .pickup
+        &__container
+            grid-template-columns: 100%
+        &__block
+            max-width: 100%
+        &__red
+            z-index: 1
+            img
+                z-index: -1
+                right: 9px
+                top: 60px
+                transform: none
+                width: 46px
+        &__modal
+            &_container
+                padding: 56px 16px 40px
+
+.acc
+    padding: 56px 0 114px
+    h1
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 44px;
+        text-transform: uppercase;
+        color: #000000;
+    &__tab
+        margin: 38px 0 0
+        display: flex
+        justify-content: flex-start
+        position: relative
+        z-index: 1
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            width: 100%
+            height: 4px
+            background: #E0E0E0;
+            border-radius: 9px;
+            bottom: 0
+            left: 0
+            z-index: -1
+        &_point
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 30px;
+            color: rgba(0, 0, 0, 0.5);
+            transition: all .3s
+            padding: 0 14px 10px
+            position: relative
+            cursor: pointer
+            &::before
+                content: ''
+                display: block
+                position: absolute
+                width: 100%
+                height: 4px
+                background: #FF0000;;
+                border-radius: 9px;
+                bottom: 0
+                left: 0
+                z-index: -1
+                opacity: 0
+                transition: all .3s
+            &:hover
+                color: #000000;
+            &_active
+                color: #000000;
+                &::before
+                    opacity: 1
+    &__block
+        display: none
+        &_active
+            display: block
+    
+.acc-form
+    padding: 56px 0 0
+    display: grid
+    grid-template-columns: 1fr 395px
+    gap: 30px
+    align-items: start
+    &__form
+        max-width: 575px
+        display: grid
+        grid-template-columns: 100%
+        gap: 25px
+    &__input
+        display: grid
+        grid-template-columns: 310px 1fr
+        gap: 20px
+        align-items: end
+        position: relative
+        input
+            background: #F3F3F7;
+            border: 1px solid #E2E2E9;
+            border-radius: 10px;
+            width: 100%
+            height: 46px
+            padding: 0 24px
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+            color: #000000;
+            margin: 2px 0 0
+            box-sizing: border-box
+        div
+            position: relative
+            p
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                color: #888888;
+            &+p
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                color: #000000;
+        a
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #888888;
+            position: absolute
+            bottom: 11px
+            right: 10px
+    &__link
+        margin: 76px 0 0
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #888888;
+        display: block
+    &__card
+        padding: 12px 10px 12px 20px
+        background: #F3F3F7;
+        border: 1px solid #E2E2E9;
+        border-radius: 10px;
+        display: grid
+        grid-template-columns: 1fr 121px
+        gap: 16px
+        &_mob
+            display: none
+        &_info
+            p
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 22px;
+                text-transform: uppercase;
+                color: #000000;
+                &+p
+                    margin: 25px 0 0
+        &_red
+            background: #FF0000;
+            border: 1px solid #FF0000;
+            border-radius: 8px;
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+            padding: 10px
+            p
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 22px;
+                color: #FFE9E9;
+                &+p
+                    font-weight: 700;
+                    font-size: 32px;
+                    line-height: 44px;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+
+.acc-history
+    padding: 26px 0 0
+    &__info
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #888888;
+    &__wrapper
+        margin: 39px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 21px
+        row-gap: 39px
+    &__item
+        border: 1px solid #DADADA;
+        border-radius: 10px;
+        position: relative
+        padding: 36px 19px 24px
+        box-sizing: border-box
+        &::before
+            content: 'выполнен'
+            display: block
+            position: absolute
+            top: -1px
+            z-index: 2
+            left: -1px
+            background: #8E8E8E;
+            border-radius: 10px 0px;
+            padding: 0 13px 1px 15px
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            color: #FFFFFF;
+        &_active
+            border: 1px solid #FF0000;
+            &::before
+                content: 'в работе'
+                padding: 0 8px 1px 15px
+                background: #FF0000;
+    &__num
+        position: absolute
+        top: 7px
+        right: 18px
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        color: #000000;
+    &__title
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &+p
+            margin: 6px 0 0
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            color: #434343;
+    &__type
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 27px;
+        color: #000000;
+        &+p
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            color: #434343;
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        margin: 8px 0 0
+    &__price
+        display: grid
+        grid-template-columns: 100px auto
+        align-items: center
+        p
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 33px;
+            color: #000000;
+            &+p
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                color: #434343;
+    &__btn
+        border: 1px solid #8E8E8E;
+        border-radius: 60px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        color: #8E8E8E;
+        display: flex
+        justify-content: space-between
+        padding: 0 21px 0 7px
+        align-items: center
+        height: 42px
+        background-color: #fff
+        width: 148px
+        &::before
+            content: ''
+            display: block
+            width: 30px
+            height: 30px
+            background: url('../img/restart.svg') center no-repeat
+    &__item_active
+        .acc-history__btn
+            justify-content: center
+            padding: 0
+            border: 1px solid #FF0000;
+            color: #FF0000;
+            &::before
+                content: none
+
+.acc-track
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    display: none
+    justify-content: center
+    align-items: center
+    z-index: 100
+    &__active
+        display: flex
+    &__overflow
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+    &__container
+        background: #FFFFFF;
+        border-radius: 20px;
+        position: relative
+        width: 100%
+        max-width: 577px
+        padding: 20px 30px 70px
+    &__close
+        position: absolute
+        top: 10px
+        right: 10px
+        width: 38px
+        height: 38px
+        border-radius: 100%
+        background: #F2F3F5;
+        cursor: pointer
+        &::before,
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%) rotate(-45deg)
+            width: 19px
+            height: 3px
+            background: #AAAAAA;
+        &::after
+            transform: translate(-50%, -50%) rotate(45deg)
+    &__name
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 44px;
+        color: #000000;
+        max-width: 438px
+        &+p
+            margin: 30px 0 0
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+            color: #000000;
+    &__wrapper
+        margin: 60px auto 0
+        display: grid
+        grid-template-columns: auto auto auto auto
+        justify-content: space-between
+        align-items: center
+        position: relative
+        z-index: 2
+        max-width: 464px
+        &::before
+            content: ''
+            display: block
+            width: 99%
+            left: 1px
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            height: 4px
+            background-color: #FF0000
+            z-index: -1
+    &__pass
+        display: flex
+        flex-direction: column
+        align-items: center
+        span
+            width: 33px
+            height: 33px
+            box-sizing: content-box
+            background: #FF0000;
+            border: 3px solid #FFFFFF;
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 100%
+            &::before
+                content: ''
+                display: block
+                width: 16px
+                height: 12px
+                background: url('../img/check.svg') center no-repeat
+                background-size: contain
+    &__be
+        span
+            width: 51px
+            height: 51px
+            background: #ff000080;
+            box-sizing: content-box
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 100%
+            &::before
+                content: ''
+                display: block
+                width: 33px
+                height: 33px
+                background: #FF0000
+                border-radius: 100%
+    &__will
+        span
+            display: block
+            width: 33px
+            height: 33px
+            box-sizing: content-box
+            border: 3px solid rgba(255, 0, 0, 0.5);
+            border-radius: 100%
+            background-color: #fff
+    &__row
+        display: flex
+        justify-content: space-between
+        margin: 18px auto 0
+        max-width: 504px
+        p
+            display: inline
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+            text-align: center;
+            color: #000000;
+
+.acc-restart
+    display: none
+    justify-content: center
+    align-items: center
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    z-index: 100
+    &__active
+        display: flex
+    &__overflow
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+    &__container
+        padding: 48px 66px 66px
+        background: #FFFFFF;
+        border-radius: 20px;
+        position: relative
+        overflow: scroll
+        max-height: 90%
+        width: 100%
+        max-width: 1290px
+    &__close
+        position: absolute
+        top: 10px
+        right: 10px
+        width: 38px
+        height: 38px
+        border-radius: 100%
+        background: #F2F3F5;
+        cursor: pointer
+        &::before,
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%) rotate(-45deg)
+            width: 19px
+            height: 3px
+            background: #AAAAAA;
+        &::after
+            transform: translate(-50%, -50%) rotate(45deg)
+    &__title
+        display: flex
+        align-items: flex-end
+        justify-content: flex-start
+        p
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 44px;
+            color: #000000;
+        a
+            margin: 0 0 4px 32px
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+            text-decoration-line: underline;
+            color: #000000;
+    &__grid
+        margin: 16px 0 0
+        display: grid
+        grid-template-columns: 1fr 340px
+        gap: 20px
+    &__text
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 27px;
+        color: #000000;
+        &:nth-child(2)
+            margin: 11px 0 0
+        &:nth-child(3)
+            margin: 20px 0 0
+    &__price
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        color: #000000;
+        margin: 28px 0 0
+        &+ul
+            margin: 27px 0 0
+            display: flex
+            justify-content: flex-start
+            align-items: flex-end
+            li
+                margin: 0 24px 0 0
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 27px;
+                color: #434343;
+                &.red
+                    span
+                        color: #FB0000;
+    &__wrapper
+        max-width: 638px
+    &__product
+        margin: 24px 0 0
+    &__item
+        padding: 15px 0
+        border-bottom: 1px solid #C4C4C4 
+        &:nth-child(1)
+            border-top: 1px solid #C4C4C4 
+        display: grid
+        grid-template-columns: 130px 1fr 110px
+        gap: 40px
+    &__prev
+        width: 100%
+        position: relative
+        overflow: hidden
+        border-radius: 20px;
+        img
+            width: 100%
+        &_sell
+            &::before
+                content: '%'
+                display: block
+                position: absolute
+                top: 0
+                left: 0
+                padding: 3px 11px 1px 12px
+                background: #FF0000;
+                border-radius: 20px 0px;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 27px;
+                color: #FFFFFF;
+    &__info
+        display: flex
+        flex-direction: column
+        &_name
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 27px;
+            color: #000000;
+        &_vol
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            color: #434343;
+            margin: auto 0 0
+            &_error
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                color: #C76C6C;
+                margin: auto 0 0
+        &_sell
+            margin: 5px 0 0
+            display: flex
+            justify-content: flex-start
+            align-items: flex-end
+            p
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 33px;
+                color: #CF0000;
+                &+p
+                    margin: 0 0 4px 12px
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 19px;
+                    text-decoration-line: line-through;
+                    color: #434343;
+        &_price
+            margin: auto 0 0
+            p
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 33px;
+                color: #000000;
+    &__par
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        p
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 27px;
+            text-align: right;
+            color: #000000;
+            &+p
+                margin: 6px 0 0
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                text-align: right;
+                color: #434343;
+        button
+            margin: auto 0 0
+            width: 100%
+            height: 42px
+            border: 1px solid #FF0000;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+            color: #FF0000;
+            background-color: #fff
+    &__aside
+        ul
+            display: grid
+            grid-template-columns: 100%
+            gap: 5px
+        li
+            display: flex
+            justify-content: space-between
+            align-items: center
+            p
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 27px;
+                color: #000000;
+                &+p
+                    font-weight: 700;
+                &.red
+                    color: #FF0000;
+    &__pay
+        margin: 29px 0 0
+        padding: 9px 0 0
+        border-top: 1px solid #C4C4C4  
+        p
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+            color: #000000;
+            &+p
+                font-weight: 700;
+        &_row
+            display: flex
+            justify-content: space-between
+            align-items: flex-end
+            padding: 0 0 21px
+            border-bottom: 1px solid #C4C4C4 
+        button
+            margin: 20px 0 0 auto
+            width: 100%
+            max-width: 150px
+            border: 1px solid #FF0000;
+            border-radius: 60px;
+            background-color: #fff
+            height: 42px
+            padding: 0 21px 0 7px
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+            color: #FF0000;
+            display: flex
+            justify-content: space-between
+            align-items: center
+            &::before
+                content: ''
+                display: block
+                width: 30px
+                height: 30px
+                background: url('../img/restart_red.svg') center no-repeat
+                background-size: contain
+
+.acc-fav
+    margin: 67px 0 0
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    gap: 24px
+    &__item
+        border: 1px solid #DADADA;
+        border-radius: 20px;
+        padding: 0 20px 25px
+        display: flex
+        flex-direction: column
+        position: relative
+        &_sell
+            &::before
+                content: '%'
+                display: block
+                position: absolute
+                top: -1px
+                left: -1px
+                padding: 3px 15px 0 14px
+                background: #FF0000;
+                border-radius: 20px 0px;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 33px;
+                color: #FFFFFF;
+    &__heart
+        position: absolute
+        top: 17px
+        right: 20px
+        img
+            width: 22px
+    &__prev
+        img
+            width: 100%
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: center
+        p
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            color: #434343;
+            &.red
+                color: #BF7373;
+        &+p
+            margin: 7px 0 auto
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 27px;
+            color: #000000;
+    &__price
+        margin: 7px 0 0
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        p
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 33px;
+            color: #000000;
+        &_sell
+            position: relative
+            p
+                color: #CF0000;
+                &+p
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 19px;
+                    text-decoration-line: line-through;
+                    color: #434343;
+                    position: absolute
+                    bottom: -4px
+                    left: 0
+        button
+            margin: 0 4px 0 0
+            display: block
+            width: 100%
+            max-width: 109px
+            border: 1px solid #FF0000;
+            border-radius: 60px;
+            background-color: #fff
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+            color: #FF0000;
+            height: 42px
+
+@media ( max-width: 1280px )
+    .acc-fav
+        grid-template-columns: 1fr 1fr 1fr
+    .acc-history__wrapper
+        grid-template-columns: 1fr 1fr
+
+@media ( max-width: 1024px )
+    .acc-form
+        &__input
+            grid-template-columns: 100%
+            gap: 12px
+        &__link
+            margin: 12px 0 0
+    .acc-restart
+        &__container
+            max-width: 100%
+            height: 100%
+            max-height: 100%
+            border-radius: 0
+        &__grid
+            grid-template-columns: 100%
+        &__wrapper
+            max-width: 100%
+    .acc-fav
+        gap: 12px
+        &__row
+            p
+                font-size: 8.99998px;
+                line-height: 12px;
+            &+p
+                margin: 2px 0 auto
+                font-size: 11.25px;
+                line-height: 15px;
+        &__price
+            display: block
+            p
+                font-size: 13.5px;
+                line-height: 18px;
+                &+p
+                    font-size: 14px;
+                    line-height: 19px;
+                    position: relative
+                    bottom: auto
+            button
+                margin: 6px 0 0
+                width: 100%
+                max-width: 100%
+    .acc    
+        h1
+            font-size: 22.5px;
+            line-height: 31px;
+
+@media ( max-width: 768px )
+    .acc
+        &__tab
+            overflow-x: scroll
+            &_point
+                font-size: 16px;
+                line-height: 18px;
+                white-space: nowrap
+                &::before
+                    opacity: 1
+                    background-color: #E0E0E0
+                &_active
+                    &::before
+                        background: #FF0000
+    .acc-form
+        grid-template-columns: 100%
+        &__card
+            order: -1
+    .acc-history
+        &__price
+            grid-template-columns: 65px auto
+            p
+                font-size: 18px
+                line-height: 25px
+                &+p
+                    font-size: 10px;
+                    line-height: 14px;
+        &__btn
+            padding: 0 15px 0 5px
+            font-size: 12px
+            line-height: 16px;
+            width: 111px
+            height: 32px
+            &::before
+                width: 22px
+                height: 22px
+                background-size: contain
+        &__item
+            padding: 27px 14px 20px 
+            &::before
+                font-size: 12px;
+                line-height: 16px
+            &_active
+                &::before
+                    padding: 0 6px 1px 11px
+                .acc-history
+                    &__btn
+                        height: 32px
+                        font-size: 12px;
+                        line-height: 16px;
+                        max-width: 111px
+        &__num
+            font-size: 12px
+            line-height: 16px
+            top: 6px
+            right: 14px
+        &__type
+            font-size: 15px
+            line-height: 21px;
+            &+p
+                font-size: 10px 
+                line-height: 14px;
+        &__title
+            &+p
+                margin: 5px 0 0
+                line-height: 14px;
+                font-size: 10px
+    .acc-restart
+        &__title
+            p
+                font-size: 24px;
+                line-height: 33px;
+            a
+                font-size: 16px;
+                line-height: 22px;
+        &__text
+            font-size: 18px;
+            line-height: 25px;
+            margin: 10px 0 0
+            &:nth-child(1)
+                margin: 20px 0 0
+            &:nth-child(2)
+                margin: 10px 0 0
+            &:nth-child(3)
+                margin: 10px 0 0
+        &__price
+            font-size: 18px;
+            line-height: 25px;
+            margin: 36px 0 0
+            &+ul
+                flex-direction: column
+                align-items: flex-start
+                margin: 0
+                li
+                    margin: 4px 0 0
+                    font-size: 18px;
+                    line-height: 25px;
+        &__aside
+            li
+                p
+                    font-size: 18px;
+                    line-height: 25px;
+        &__pay
+            p
+                font-size: 18px;
+                line-height: 25px;
+
+@media  ( max-width: 700px )
+    .acc-restart
+        &__container
+            padding: 40px 20px 20px
+        &__item
+            grid-template-columns: 100px 1fr
+            gap: 10px
+            column-gap: 18px
+        &__prev
+            grid-row: 1/3
+            &_sell
+                &::before
+                    padding: 3px 8px 1px 9px
+                    font-size: 18px;
+                    line-height: 25px;
+        &__par
+            display: grid
+            grid-template-columns: 109px 1fr
+            justify-content: space-between
+            button
+                grid-row: 1/3
+            p
+                &+p
+                    font-size: 14px;
+                    margin: 0
+                    order: -1
+                    
+
+@media ( max-width: 580px )
+    .acc-history
+        &__wrapper
+            grid-template-columns: 100%
+            gap: 20px
+    .acc-fav
+        grid-template-columns: 1fr 1fr
+        &__item
+            &::before
+                font-size: 10px
+                line-height: 16px
+        &__heart
+            img
+                width: 12px
+
+@media ( max-width: 425px )
+    .acc-form
+        &__card
+            padding: 10px 8px 9px 18px
+            grid-template-columns: 1fr 100px
+            &_info
+                p
+                    font-size: 13px
+                    line-height: 18px;   
+                    &+p
+                        margin: 20px 0 0
+            &_red
+                padding: 8px
+                p
+                    font-size: 13px
+                    line-height: 18px;
+                    &+p
+                        font-size: 26px
+                        line-height: 36px;
+    .acc-restart
+        &__pay
+            button
+                max-width: 100%
+                justify-content: center
+                padding: 0
+                &::before
+                    margin: 0 7px 0 0
+        &__title
+            flex-direction: column
+            align-items: flex-start
+            a
+                margin: 6px 0 0
+    .acc-track
+        &__container
+            height: 100%
+            width: 100%
+            border-radius: 0
+            overflow-y: scroll
+            padding: 40px 
+        &__name
+            font-size: 24px;
+            line-height: 33px;
+            &+p
+                margin: 24px 0 0
+                font-size: 18px;
+                line-height: 25px;
+        &__block
+            margin: 35px 0 0
+            display: grid
+            grid-template-columns: 40px 1fr
+            gap: 30px
+        &__wrapper
+            margin: 0
+            display: flex
+            flex-direction: column-reverse
+            align-items: center
+            justify-content: space-between
+            height: 270px
+            &::before
+                height: 100%
+                width: 4px
+                left: 50%
+                top: 0
+                transform: translateX(-50%)
+        &__pass
+            span
+                width: 25px
+                height: 25px
+                border: 2.31111px solid #FFFFFF;
+                &::before
+                    width: 12px
+                    height: 9px
+        &__be
+            span
+                width: 39px
+                height: 39px
+                &::before
+                    width: 25px
+                    height: 25px
+        &__will
+            span
+                width: 25px
+                height: 25px
+                border: 2.31111px solid rgba(255, 0, 0, 0.5);
+        &__row
+            flex-direction: column-reverse
+            justify-content: space-between
+            align-items: flex-start
+            margin: 0
+            br
+                display: none
+            p
+                font-size: 20px;
+                line-height: 27px;
+
+@media ( max-width: 375px )
+    .acc-fav
+        grid-template-columns: 100%
+
+.crate
+    padding: 56px 0 164px
+    .container
+        display: grid
+        grid-template-columns: 1fr 417px
+        gap: 20px
+        align-items: start
+    &__title
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        a
+            margin: 0 0 3px
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            color: #6B6B6B;
+        h1
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 44px
+            text-transform: uppercase;
+            color: #000000;
+    &__wrapper
+        margin: 38px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 18px
+    &__item
+        display: grid
+        grid-template-columns: 130px 1fr 90px 120px 44px auto
+        gap: 10px
+        align-items: start
+    &__prev
+        border-radius: 20px;
+        overflow: hidden
+        p
+            display: none
+        img
+            width: 100%
+        &_sell
+            position: relative
+            &::before
+                content: '%'
+                display: block
+                position: absolute
+                top: 0
+                left: 0
+                padding: 3px 11px 1px 12px
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 27px;
+                color: #FFFFFF;
+                background: #FF0000;
+                border-radius: 20px 0px;
+    &__name
+        margin: 0 10px 0 30px
+        display: flex
+        flex-direction: column
+        p
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 27px;
+            color: #000000;
+            &+p
+                margin: auto 0
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                color: #434343;
+    &__price
+        p
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 27px;
+            color: #000000;
+            text-align: center  
+        &_sell
+            p
+                color: #CF0000;
+                &+p
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 19px;
+                    text-decoration-line: line-through;
+                    color: #434343;
+    &__input
+        width: 100%
+        padding: 10px 16px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        background: #FFF8EB;
+        border: 1px solid #FFE7B9;
+        border-radius: 58px;
+        input
+            width: 30px
+            border: none
+            background-color: transparent
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+            color: #FFA900;
+            height: 22px
+        p
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+            color: #FFA900;
+    &__heart
+        width: 44px
+        height: 44px
+        border: 1px solid #DADADA;
+        border-radius: 60px;
+        display: flex
+        justify-content: center
+        align-items: center
+    &__vol
+        margin: 0 0 0 30px
+        p
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 27px;
+            text-align: right;
+            color: #000000;
+            &+p
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                color: #434343;
+    &__yellow
+        padding: 24px 33px 27px
+        background: #FFECCA;
+        border: 1px solid #FFE7B9;
+        border-radius: 16px;
+        &_title
+            display: flex
+            justify-content: space-between
+            align-items: flex-end
+            p
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 27px;
+                color: #000000;
+            a
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                color: #FF0000;
+                margin: 0 0 3px
+            &+p
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                margin: 11px 0 0
+                color: #000000;
+        &_prom
+            margin: 22px 0 0
+            position: relative
+            input
+                padding: 0 125px 0 22px
+                height: 54px
+                background: #FFFFFF;
+                border-radius: 13px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                width: 100%
+                box-sizing: border-box
+                border: none
+            button
+                border: 1px solid #FF0000;
+                border-radius: 11px;
+                right: 5px
+                top: 4px
+                height: 45px
+                width: 114px
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 22px;
+                color: #FF0000;
+                position: absolute
+                background-color: #fff
+        &_check
+            margin: 18px 0 0
+            display: grid
+            grid-template-columns: 14px 1fr
+            gap: 8px
+            position: relative
+            p
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                color: #000000;
+                strong
+                    font-weight: 700;
+                    margin: 0 7px 0 0
+                span
+                    color: #FF0000;
+            div
+                margin: 1px 0 0
+                display: block
+                width: 14px
+                height: 14px
+                border-radius: 100%
+                transition: all .3s
+                border: 4px solid #fff
+                background-color: #fff
+            input
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                opacity: 0
+                &:checked
+                    &+div
+                        background: #FF0000;
+        ul
+            margin: 32px 0 0
+            display: grid
+            grid-template-columns: 100%
+            gap: 5px
+            li
+                display: flex
+                justify-content: space-between
+                align-items: center
+            p
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 27px;
+                color: #000000;
+                &+p
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 27px;
+                    color: #000000;
+                &.red
+                    color: #FF0000;
+        &_price
+            margin: 23px 0 0
+            display: flex
+            justify-content: space-between
+            align-items: flex-end
+            p
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 27px;
+                color: #000000;
+                margin: 0 0 2px
+                &+p
+                    margin: 0
+                    font-weight: 700;
+                    font-size: 26px;
+                    line-height: 35px;
+                    color: #000000;
+        &_btn
+            width: 100%
+            height: 56px
+            background: #FF0000;
+            border: 2px solid #FF0000;
+            border-radius: 31px;
+            margin: 25px 0 0
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 30px;
+            color: #FFFFFF;
+            &+p
+                margin: 10px 0 0
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                color: #000000;
+                text-align: center
+
+@media ( max-width: 1250px )
+    .crate
+        &__item
+            grid-template-columns: 100px 1fr 1fr
+            gap: 0px
+            column-gap: 20px
+        &__prev
+            grid-row: 1/4
+        &__name
+            grid-column: 2/4
+            margin: 0
+            p+p
+                display: none
+        &__heart
+            display: none
+        &__price
+            margin: 16px 0 0
+            grid-column: 2/4
+            display: flex
+            justify-content: flex-start
+            align-items: flex-end
+            p
+                text-align: left 
+                font-size: 16px;
+                line-height: 22px;
+                &+p
+                    order: -1
+                    margin: 0 8px 0 0
+                    font-size: 14px;
+                    line-height: 19px;
+        &__input
+            max-width: 110px
+            margin: 10px 0 0
+        &__vol
+            margin: 0 
+            height: 100%
+            display: flex
+            justify-content: flex-end
+            align-items: center
+            p+p
+                display: none
+
+@media ( max-width: 1024px )
+    .crate
+        .container
+            grid-template-columns: 1fr 350px
+
+@media ( max-width: 768px )
+    .crate
+        .container
+            grid-template-columns: 100%
+
+@media ( max-width: 425px )
+    .crate
+        &__yellow
+            padding: 20px 14px
+            &_title
+                flex-direction: column
+                align-items: flex-start
+                a
+                    margin: 4px 0 0
