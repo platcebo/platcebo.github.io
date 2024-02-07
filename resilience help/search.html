@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resilience help</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <a href="#" class="nav__logo">
+                <img src="img/logo.svg" alt="">
+            </a>
+            <ul>
+                <li><a href="#" class="active">Тренінги</a></li>
+                <li><a href="#">Ресурси</a></li>
+                <li><a href="#">Блоги</a></li>
+            </ul>
+            <a href="#" class="nav__search">
+                <img src="img/search.svg" alt="">
+            </a>
+            <button class="nav__button">Підтримати проєкт</button>
+            <a href="#" class="nav__pers">
+                <img src="img/pers.svg" alt="">
+            </a>
+            <a href="#" class="nav__language">en</a>
+        </div>
+    </nav>
+    <section class="search">
+        <div class="container">
+            <div class="search__container">
+                <div class="">
+                    <h1>Що шукаємо?</h1>
+                    <div class="search__search">
+                        <input type="text" placeholder="Стрес і травма у дітей">
+                    </div>
+                    <div class="search__tab">
+                        <p class="search__tab_link active">Лише у заголовках</p>
+                        <p class="search__tab_link">По всьому тексту</p>
+                    </div>
+                    <div class="search__wrapper search__wrapper_active">
+                        <div class="search__item">
+                            <div class="page-title">
+                                <h3>Тренінги</h3>
+                            </div>
+                            <a href="#" class="search__block">
+                                <div class="search__block_time">
+                                    <p>15 травня</p>
+                                </div>
+                                <p class="search__block_name">Працюємо із <span>травмою</span> за методом ЕМДР (протокол ASSYST)</p>
+                                <p class="search__block_text">Тренінг з кризового втручання за методом ЕМДР від EMDR Europ ASSYST Humanitarian Psychosocial Project(c) та ГО “Асоціація ЕМДР в Україні – фахове об’єднання...</p>
+                            </a>
+                        </div>
+                        <div class="search__item">
+                            <div class="page-title">
+                                <h3>Ресурси</h3>
+                            </div>
+                            <a href="#" class="search__block">
+                                <div class="search__block_time">
+                                    <p>Старша школа... | Посібники та керівництва</p>
+                                    <div class="search__block_mark">
+                                        <img src="img/bookmark_active.svg" alt="">
+                                    </div>
+                                </div>
+                                <p class="search__block_name">Як подолати надмірний <span>стрес</span> (виклики війни)</p>
+                                <p class="search__block_text">Довідник, покликаний допомогти впоратись з наслідками надмірного стресу в часі війни.  Довідник, покликаний допомогти впоратись з наслідками надмірного стресу в часі війни. </p>
+                            </a>
+                            <a href="#" class="search__block">
+                                <div class="search__block_time">
+                                    <p>Середня школа | Навчальні програми</p>
+                                    <div class="search__block_mark">
+                                        <img src="img/bookmark.svg" alt="">
+                                    </div>
+                                </div>
+                                <p class="search__block_name">Підтримка учнів, що зазнали <span>травми</span></p>
+                                <p class="search__block_text">Програма розроблена для зменшення стресу дітей і підлітків, які пережили травму або насильство. Програма розроблена для зменшення стресу дітей і підлітків, які пережили травму або насильство.</p>
+                            </a>
+                        </div>
+                        <div class="search__item">
+                            <div class="page-title">
+                                <h3>Блоги</h3>
+                            </div>
+                            <a href="#" class="search__block">
+                                <div class="search__block_time">
+                                    <p>1 січ 2023 | Марія Марковська</p>
+                                </div>
+                                <p class="search__block_name">Як учительки працюють із дітьми, зі травмою </p>
+                                <p class="search__block_text">Війна дуже сильно впливає на стан і поведінку дітей. Вони можуть бути неспокійними, дратівливими, полохливими, боятися голосних звуків. Учителям варто знати...</p>
+                            </a>
+                        </div>
+                        <p class="search__vol">1 / 1</p>
+                    </div>
+                    <div class="search__wrapper">
+                        <div class="search__item">
+                            <div class="page-title">
+                                <h3>Ресурси</h3>
+                            </div>
+                            <a href="#" class="search__block">
+                                <div class="search__block_time">
+                                    <p>15 травня</p>
+                                    <div class="search__block_mark">
+                                        <img src="img/bookmark_active.svg" alt="">
+                                    </div>
+                                </div>
+                                <p class="search__block_name">Працюємо із <span>травмою</span> за методом ЕМДР (протокол ASSYST)</p>
+                                <p class="search__block_text">Тренінг з кризового втручання за методом <span class="bold">ЕМДР</span> від EMDR Europ ASSYST Humanitarian Psychosocial Project(c) та ГО “Асоціація ЕМДР в Україні – фахове об’єднання...</p>
+                            </a>
+                            <a href="#" class="search__block">
+                                <div class="search__block_time">
+                                    <p>15 травня</p>
+                                    <div class="search__block_mark">
+                                        <img src="img/bookmark_active.svg" alt="">
+                                    </div>
+                                </div>
+                                <p class="search__block_name">Працюємо із <span>травмою</span> за методом ЕМДР (протокол ASSYST)</p>
+                                <p class="search__block_text">Тренінг з кризового втручання за методом <span class="color">ЕМДР</span> від EMDR Europ ASSYST Humanitarian Psychosocial Project(c) та ГО “Асоціація ЕМДР в Україні – фахове об’єднання...</p>
+                            </a>
+                            <a href="#" class="search__block">
+                                <div class="search__block_time">
+                                    <p>15 травня</p>
+                                    <div class="search__block_mark">
+                                        <img src="img/bookmark_active.svg" alt="">
+                                    </div>
+                                </div>
+                                <p class="search__block_name">Працюємо із <span>травмою</span> за методом ЕМДР (протокол ASSYST)</p>
+                                <p class="search__block_text">Тренінг з кризового втручання за методом ЕМДР від EMDR Europ ASSYST Humanitarian Psychosocial Project(c) та ГО “Асоціація ЕМДР в Україні – фахове об’єднання...</p>
+                            </a>
+                            <a href="#" class="search__block">
+                                <div class="search__block_time">
+                                    <p>15 травня</p>
+                                    <div class="search__block_mark">
+                                        <img src="img/bookmark_active.svg" alt="">
+                                    </div>
+                                </div>
+                                <p class="search__block_name">Працюємо із <span>травмою</span> за методом ЕМДР (протокол ASSYST)</p>
+                                <p class="search__block_text">Тренінг з кризового втручання за методом ЕМДР від EMDR Europ ASSYST Humanitarian Psychosocial Project(c) та ГО “Асоціація ЕМДР в Україні – фахове об’єднання...</p>
+                            </a>
+                            <a href="#" class="search__block">
+                                <div class="search__block_time">
+                                    <p>15 травня</p>
+                                    <div class="search__block_mark">
+                                        <img src="img/bookmark_active.svg" alt="">
+                                    </div>
+                                </div>
+                                <p class="search__block_name">Працюємо із <span>травмою</span> за методом ЕМДР (протокол ASSYST)</p>
+                                <p class="search__block_text">Тренінг з кризового втручання за методом ЕМДР від EMDR Europ ASSYST Humanitarian Psychosocial Project(c) та ГО “Асоціація ЕМДР в Україні – фахове об’єднання...</p>
+                            </a>
+                            <a href="#" class="search__block">
+                                <div class="search__block_time">
+                                    <p>15 травня</p>
+                                    <div class="search__block_mark">
+                                        <img src="img/bookmark_active.svg" alt="">
+                                    </div>
+                                </div>
+                                <p class="search__block_name">Працюємо із <span>травмою</span> за методом ЕМДР (протокол ASSYST)</p>
+                                <p class="search__block_text">Тренінг з кризового втручання за методом ЕМДР від EMDR Europ ASSYST Humanitarian Psychosocial Project(c) та ГО “Асоціація ЕМДР в Україні – фахове об’єднання...</p>
+                            </a>
+                            <a href="#" class="search__block">
+                                <div class="search__block_time">
+                                    <p>15 травня</p>
+                                    <div class="search__block_mark">
+                                        <img src="img/bookmark_active.svg" alt="">
+                                    </div>
+                                </div>
+                                <p class="search__block_name">Працюємо із <span>травмою</span> за методом ЕМДР (протокол ASSYST)</p>
+                                <p class="search__block_text">Тренінг з кризового втручання за методом ЕМДР від EMDR Europ ASSYST Humanitarian Psychosocial Project(c) та ГО “Асоціація ЕМДР в Україні – фахове об’єднання...</p>
+                            </a>
+                            <a href="#" class="search__block">
+                                <div class="search__block_time">
+                                    <p>15 травня</p>
+                                    <div class="search__block_mark">
+                                        <img src="img/bookmark_active.svg" alt="">
+                                    </div>
+                                </div>
+                                <p class="search__block_name">Працюємо із <span>травмою</span> за методом ЕМДР (протокол ASSYST)</p>
+                                <p class="search__block_text">Тренінг з кризового втручання за методом ЕМДР від EMDR Europ ASSYST Humanitarian Psychosocial Project(c) та ГО “Асоціація ЕМДР в Україні – фахове об’єднання...</p>
+                            </a>
+                            <a href="#" class="search__block">
+                                <div class="search__block_time">
+                                    <p>15 травня</p>
+                                    <div class="search__block_mark">
+                                        <img src="img/bookmark_active.svg" alt="">
+                                    </div>
+                                </div>
+                                <p class="search__block_name">Працюємо із <span>травмою</span> за методом ЕМДР (протокол ASSYST)</p>
+                                <p class="search__block_text">Тренінг з кризового втручання за методом ЕМДР від EMDR Europ ASSYST Humanitarian Psychosocial Project(c) та ГО “Асоціація ЕМДР в Україні – фахове об’єднання...</p>
+                            </a>
+                        </div>
+                        <p class="search__vol">1 / 25</p>
+                        <div class="search__pag">
+                            <a href="#" class="search__pag_arrow search__pag_prev">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="16" cy="16" r="15.5" stroke="#93D4D0"/>
+                                    <path d="M18.6667 16.0003L13.333 10.6668L14.6662 9.33366L21.333 16.0003L14.6662 22.667L13.333 21.3338L18.6667 16.0003Z" fill="#68C5C0"/>
+                                </svg>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#" class="active"> 
+                                        <p>1</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>2</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>3</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#" class="search__pag_arrow search__pag_next">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="16" cy="16" r="15.5" stroke="#93D4D0"/>
+                                    <path d="M18.6667 16.0003L13.333 10.6668L14.6662 9.33366L21.333 16.0003L14.6662 22.667L13.333 21.3338L18.6667 16.0003Z" fill="#68C5C0"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="search__sidebar">
+                    <div class="page-title">
+                        <h3>У розділах:</h3>
+                    </div>
+                    <div class="search__sidebar_wrapper">
+                        <div class="search__sidebar_item">
+                            <input type="checkbox">
+                            <p>Тренінги</p>
+                        </div>
+                        <div class="search__sidebar_item">
+                            <input type="checkbox">
+                            <p>Ресурси</p>
+                        </div>
+                        <div class="search__sidebar_item">
+                            <input type="checkbox">
+                            <p>Блоги</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__logo">
+                <img src="img/footer_logo.svg" alt="">
+            </div>
+            <div class="footer__wrapper">
+                <div class="footer__block">
+                    <div class="footer__img">
+                        <img src="img/footer_svg.svg" alt="">
+                        <p>За підтримки Міжнародного фонду «Відродження» в межах програми «Соціальний капітал»</p>
+                    </div>
+                    <div class="footer__contact">
+                        <p>контакти</p>
+                        <a href="#">info@resilience.help</a>
+                        <a href="#">+38 067 111 11 11</a>
+                        <a href="#">address Facebook page </a>
+                    </div>
+                </div>
+                <div class="footer__info">
+                    <ul>
+                        <li><a href="#">Про проЄкт</a></li>
+                        <li><a href="#">Допомогти</a></li>
+                        <li><a href="#">Навчальна платформа</a></li>
+                        <li><a href="#">тренінги</a></li>
+                        <li><a href="#">Знайти сертифікат</a></li>
+                        <li><a href="#">Ресурси</a></li>
+                        <li><a href="#">ГО «Смарт освіта»</a></li>
+                        <li><a href="#">Блоги</a></li>
+                    </ul>
+                    <div class="footer__search">
+                        <a href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_401_1678" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                <rect width="24" height="24" fill="#D9D9D9"/>
+                                </mask>
+                                <g mask="url(#mask0_401_1678)">
+                                <path d="M19.8 20.9834L13.3167 14.5001C12.8167 14.9223 12.2363 15.2528 11.5757 15.4917C10.915 15.7306 10.212 15.8501 9.46668 15.8501C7.65933 15.8501 6.12971 15.2237 4.87783 13.9709C3.62594 12.7181 3 11.2001 3 9.41675C3 7.63342 3.62639 6.11536 4.87918 4.86257C6.13194 3.60979 7.65278 2.9834 9.44168 2.9834C11.2306 2.9834 12.7486 3.60979 13.9958 4.86257C15.2431 6.11536 15.8667 7.63425 15.8667 9.41925C15.8667 10.1398 15.75 10.8306 15.5167 11.4917C15.2833 12.1528 14.9445 12.7612 14.5 13.3167L21 19.7834L19.8 20.9834ZM9.45 14.1834C10.7695 14.1834 11.891 13.7181 12.8146 12.7876C13.7382 11.857 14.2 10.7334 14.2 9.41675C14.2 8.10007 13.7382 6.97645 12.8146 6.0459C11.891 5.11535 10.7695 4.65007 9.45 4.65007C8.1213 4.65007 6.9919 5.11535 6.0618 6.0459C5.1317 6.97645 4.66665 8.10007 4.66665 9.41675C4.66665 10.7334 5.1317 11.857 6.0618 12.7876C6.9919 13.7181 8.1213 14.1834 9.45 14.1834Z" fill="#8A8894"/>
+                                </g>
+                            </svg>
+                        </a>
+                        <input type="text" placeholder="Пошук...">
+                    </div>
+                </div>
+            </div>
+            <div class="footer__row">
+                <p>© ГО “Смарт освіта”  |   All right reserved</p>
+                <p>Terms and conditions</p>
+            </div>
+        </div>
+        <img src="img/footer_molecule.svg" alt="" class="footer__bg_left">
+        <img src="img/footer_right.svg" alt="" class="footer__bg_right">
+    </footer>
+    <div class="mob-sidebar">
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="#">
+                        <div class="mob-sidebar__img">
+                            <span>
+                                <img src="img/sidebar_1.svg" alt="">
+                            </span>
+                        </div>
+                        <p>Головна</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="active">
+                        <div class="mob-sidebar__img">
+                            <span>
+                                <img src="img/sidebar_2.svg" alt="">
+                            </span>
+                        </div>
+                        <p>Тренінги</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="mob-sidebar__img">
+                            <span>
+                                <img src="img/sidebar_3.svg" alt="">
+                            </span>
+                        </div>
+                        <p>Ресурси</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="mob-sidebar__img">
+                            <span>
+                                <img src="img/sidebar_4.svg" alt="">
+                            </span>
+                        </div>
+                        <p>Блоги</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="mob-sidebar__img">
+                            <span>
+                                <img src="img/sidebar_5.svg" alt="">
+                            </span>
+                        </div>
+                        <p>Вхід</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <a href="#" class="nav-mobile">
+        <div class="container">
+            <div class="nav-mobile__logo">
+                <img src="img/molecule_nav.svg" alt="">
+            </div>
+            <p>Підтримати проєкт</p>
+        </div>
+    </a>
+
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/stickjaw.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
