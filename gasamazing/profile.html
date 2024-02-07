@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gasamazing</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/datepicker.material.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background: #F9FAFC;">
+    <aside class="aside">
+        <div class="aside__logo">
+            <img src="img/logo.svg" alt="">
+        </div>
+        <ul>
+            <li><a href="#">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.83463 9.85956C8.835 10.029 8.76499 10.1916 8.63998 10.3117C8.51498 10.4318 8.3452 10.4996 8.16797 10.5001H2.83464C2.74685 10.4999 2.65996 10.4832 2.57894 10.4509C2.49791 10.4186 2.42434 10.3714 2.36242 10.3119C2.30051 10.2524 2.25147 10.1818 2.2181 10.1042C2.18474 10.0266 2.1677 9.94347 2.16797 9.85956V2.80727C2.16779 2.72333 2.18491 2.64017 2.21835 2.56255C2.25179 2.48493 2.3009 2.41437 2.36287 2.35489C2.42484 2.29542 2.49845 2.24819 2.57952 2.21591C2.66058 2.18362 2.7475 2.16692 2.83532 2.16675L8.16865 2.17524C8.34577 2.17594 8.51537 2.24377 8.64022 2.36385C8.76508 2.48394 8.835 2.64646 8.83463 2.81577V9.85956Z" stroke="#D80F3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M18.8346 5.73958C18.8334 5.89811 18.7624 6.0497 18.6374 6.16105C18.5124 6.27239 18.3436 6.33438 18.168 6.3334H12.8346C12.7477 6.33397 12.6614 6.31906 12.5808 6.28951C12.5002 6.25997 12.4269 6.21638 12.365 6.16123C12.3031 6.10608 12.2538 6.04045 12.22 5.9681C12.1862 5.89575 12.1685 5.8181 12.168 5.73958V2.76861C12.1691 2.61024 12.2397 2.45874 12.3645 2.3474C12.4892 2.23605 12.6578 2.17397 12.8333 2.17479L18.1666 2.16676C18.3424 2.16561 18.5115 2.22751 18.6368 2.33886C18.762 2.45021 18.8332 2.60189 18.8346 2.76059V5.73958Z" stroke="#D80F3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.83464 18.1187C8.8341 18.2131 8.81639 18.3065 8.78253 18.3936C8.74867 18.4806 8.69931 18.5596 8.63728 18.626C8.57524 18.6923 8.50175 18.7448 8.42099 18.7804C8.34023 18.816 8.25379 18.8341 8.1666 18.8335L2.83327 18.8239C2.65766 18.8246 2.48895 18.7499 2.3642 18.616C2.23945 18.4821 2.16887 18.3 2.16797 18.1098V14.5476C2.16842 14.4533 2.18602 14.36 2.21977 14.273C2.25353 14.1861 2.30277 14.1072 2.36469 14.0409C2.4266 13.9745 2.49997 13.9221 2.58061 13.8865C2.66125 13.8509 2.74757 13.8329 2.83464 13.8335H8.16797C8.34376 13.8325 8.51271 13.9072 8.63772 14.0411C8.76272 14.175 8.83355 14.3571 8.83464 14.5476V18.1187Z" stroke="#D80F3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12.8353 18.8334C12.7474 18.8332 12.6605 18.8148 12.5794 18.7793C12.4983 18.7437 12.4246 18.6917 12.3626 18.6262C12.3006 18.5607 12.2516 18.483 12.2182 18.3975C12.1848 18.3121 12.1677 18.2205 12.168 18.1281V10.372C12.1677 10.2797 12.1847 10.1882 12.2181 10.1028C12.2514 10.0174 12.3005 9.93971 12.3624 9.87422C12.4243 9.80872 12.4979 9.75669 12.5789 9.7211C12.6599 9.6855 12.7468 9.66703 12.8346 9.66675H18.168C18.2558 9.66703 18.3427 9.6855 18.4237 9.7211C18.5047 9.75669 18.5783 9.80872 18.6402 9.87422C18.7021 9.93971 18.7512 10.0174 18.7845 10.1028C18.8179 10.1882 18.8349 10.2797 18.8346 10.372V18.1188C18.835 18.3051 18.7651 18.4839 18.6403 18.6161C18.5154 18.7483 18.3458 18.8231 18.1686 18.8241L12.8353 18.8334Z" stroke="#D80F3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Dashboard</span>
+            </a></li>
+            <li><a href="#">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 15.5001L6.33333 12.1667M18 5.50008H3H18ZM18 5.50008L14.6667 8.83341L18 5.50008ZM18 5.50008L14.6667 2.16675L18 5.50008ZM3 15.5001H18H3ZM3 15.5001L6.33333 18.8334L3 15.5001Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>NFT Market</span>
+            </a></li>
+            <li><a href="#" class="active">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.1654 18V16.3333C17.1654 15.4493 16.8142 14.6014 16.1891 13.9763C15.5639 13.3512 14.7161 13 13.832 13H7.16536C6.28131 13 5.43346 13.3512 4.80834 13.9763C4.18322 14.6014 3.83203 15.4493 3.83203 16.3333V18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.5013 9.66667C12.3423 9.66667 13.8346 8.17428 13.8346 6.33333C13.8346 4.49238 12.3423 3 10.5013 3C8.66035 3 7.16797 4.49238 7.16797 6.33333C7.16797 8.17428 8.66035 9.66667 10.5013 9.66667Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Profil</span>                    
+            </a></li>
+            <li><a href="#">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_4116_948)">
+                    <path d="M19.6395 5.15074C19.5526 5.06306 19.4492 4.99353 19.3352 4.94619C19.2212 4.89885 19.0989 4.87465 18.9755 4.875H18.3125V3.3125C18.3122 3.06395 18.2134 2.82565 18.0376 2.6499C17.8618 2.47414 17.6236 2.37528 17.375 2.375H3.88387C3.15217 2.37501 2.45045 2.66568 1.93306 3.18306C1.41568 3.70045 1.12501 4.40217 1.125 5.13387V15.8661C1.12501 16.5978 1.41568 17.2995 1.93306 17.8169C2.45045 18.3343 3.15217 18.625 3.88387 18.625H18.9386C19.1865 18.6245 19.4242 18.526 19.5999 18.3509C19.7755 18.1759 19.8748 17.9385 19.8761 17.6905L19.9129 5.8157C19.9137 5.69228 19.8899 5.56993 19.843 5.45577C19.7961 5.34161 19.7269 5.23793 19.6395 5.15074ZM18.6271 17.375H3.88387C3.48369 17.375 3.0999 17.216 2.81694 16.9331C2.53397 16.6501 2.375 16.2663 2.375 15.8661V5.13387C2.375 4.73369 2.53397 4.3499 2.81694 4.06694C3.0999 3.78397 3.48369 3.625 3.88387 3.625H17.0625V4.875H3.9375V6.125H18.662L18.6271 17.375Z" fill="black" stroke="black" stroke-width="0.5"/>
+                    <path d="M15.8125 10.8125H17.0625V12.0625H15.8125V10.8125Z" fill="black" stroke="black" stroke-width="0.5"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_4116_948">
+                    <rect width="20" height="20" fill="white" transform="translate(0.5 0.5)"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+                <span>Wallet</span>
+            </a></li>
+        </ul>
+        <a href="#" class="aside__exit">
+            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.5 18H15.8333C16.2754 18 16.6993 17.8244 17.0118 17.5118C17.3244 17.1993 17.5 16.7754 17.5 16.3333V4.66667C17.5 4.22464 17.3244 3.80072 17.0118 3.48816C16.6993 3.17559 16.2754 3 15.8333 3H12.5" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6.66602 14.6666L2.49935 10.4999L6.66602 6.33325" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2.5 10.5H12.5" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Log out</span>
+        </a>
+    </aside>
+    <main class="main">
+        <nav class="nav">
+            <div class="main__container">
+                <div class="nav__logo">
+                    <img src="img/logo.svg" alt="">
+                </div>
+                <ul>
+                    <li><a href="#">Home page</a></li>
+                    <li><a href="#">Catalogue</a></li>
+                </ul>
+                <div class="nav__input">
+                    <a href="#">
+                        <img src="img/search.svg" alt="">
+                    </a>
+                    <input type="text" placeholder="Search here ... ">
+                </div>
+                <div class="nav__humburger">
+                    <span></span>
+                </div>
+                <div class="main-nav__lang">
+                    <div class="">
+                        <p>EN</p>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 7.5L10 12.5L15 7.5" stroke="#1B1B1B" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <ol>
+                        <li><a href="#">CS</a></li>
+                        <li><a href="#">EN</a></li>
+                    </ol>
+                </div>
+                <div class="nav__pers">
+                    <a href="#" class="nav__message">
+                        <span></span>
+                        <img src="img/bell.svg" alt="">
+                    </a>
+                    <div class="nav__avatar">
+                        <div class="">
+                            <p>SavignonBlanc</p>
+                            <p>5,000 usdt </p>
+                        </div>
+                        <img src="img/avatar.jpg" alt="">
+                    </div>
+                </div>
+                <div class="aside aside__mob">
+                    <div class="aside__logo">
+                        <img src="img/logo.svg" alt="">
+                    </div>
+                    <ul>
+                        <li><a href="#">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.83463 9.85956C8.835 10.029 8.76499 10.1916 8.63998 10.3117C8.51498 10.4318 8.3452 10.4996 8.16797 10.5001H2.83464C2.74685 10.4999 2.65996 10.4832 2.57894 10.4509C2.49791 10.4186 2.42434 10.3714 2.36242 10.3119C2.30051 10.2524 2.25147 10.1818 2.2181 10.1042C2.18474 10.0266 2.1677 9.94347 2.16797 9.85956V2.80727C2.16779 2.72333 2.18491 2.64017 2.21835 2.56255C2.25179 2.48493 2.3009 2.41437 2.36287 2.35489C2.42484 2.29542 2.49845 2.24819 2.57952 2.21591C2.66058 2.18362 2.7475 2.16692 2.83532 2.16675L8.16865 2.17524C8.34577 2.17594 8.51537 2.24377 8.64022 2.36385C8.76508 2.48394 8.835 2.64646 8.83463 2.81577V9.85956Z" stroke="#D80F3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18.8346 5.73958C18.8334 5.89811 18.7624 6.0497 18.6374 6.16105C18.5124 6.27239 18.3436 6.33438 18.168 6.3334H12.8346C12.7477 6.33397 12.6614 6.31906 12.5808 6.28951C12.5002 6.25997 12.4269 6.21638 12.365 6.16123C12.3031 6.10608 12.2538 6.04045 12.22 5.9681C12.1862 5.89575 12.1685 5.8181 12.168 5.73958V2.76861C12.1691 2.61024 12.2397 2.45874 12.3645 2.3474C12.4892 2.23605 12.6578 2.17397 12.8333 2.17479L18.1666 2.16676C18.3424 2.16561 18.5115 2.22751 18.6368 2.33886C18.762 2.45021 18.8332 2.60189 18.8346 2.76059V5.73958Z" stroke="#D80F3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8.83464 18.1187C8.8341 18.2131 8.81639 18.3065 8.78253 18.3936C8.74867 18.4806 8.69931 18.5596 8.63728 18.626C8.57524 18.6923 8.50175 18.7448 8.42099 18.7804C8.34023 18.816 8.25379 18.8341 8.1666 18.8335L2.83327 18.8239C2.65766 18.8246 2.48895 18.7499 2.3642 18.616C2.23945 18.4821 2.16887 18.3 2.16797 18.1098V14.5476C2.16842 14.4533 2.18602 14.36 2.21977 14.273C2.25353 14.1861 2.30277 14.1072 2.36469 14.0409C2.4266 13.9745 2.49997 13.9221 2.58061 13.8865C2.66125 13.8509 2.74757 13.8329 2.83464 13.8335H8.16797C8.34376 13.8325 8.51271 13.9072 8.63772 14.0411C8.76272 14.175 8.83355 14.3571 8.83464 14.5476V18.1187Z" stroke="#D80F3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.8353 18.8334C12.7474 18.8332 12.6605 18.8148 12.5794 18.7793C12.4983 18.7437 12.4246 18.6917 12.3626 18.6262C12.3006 18.5607 12.2516 18.483 12.2182 18.3975C12.1848 18.3121 12.1677 18.2205 12.168 18.1281V10.372C12.1677 10.2797 12.1847 10.1882 12.2181 10.1028C12.2514 10.0174 12.3005 9.93971 12.3624 9.87422C12.4243 9.80872 12.4979 9.75669 12.5789 9.7211C12.6599 9.6855 12.7468 9.66703 12.8346 9.66675H18.168C18.2558 9.66703 18.3427 9.6855 18.4237 9.7211C18.5047 9.75669 18.5783 9.80872 18.6402 9.87422C18.7021 9.93971 18.7512 10.0174 18.7845 10.1028C18.8179 10.1882 18.8349 10.2797 18.8346 10.372V18.1188C18.835 18.3051 18.7651 18.4839 18.6403 18.6161C18.5154 18.7483 18.3458 18.8231 18.1686 18.8241L12.8353 18.8334Z" stroke="#D80F3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Dashboard</span>
+                        </a></li>
+                        <li><a href="#">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 15.5001L6.33333 12.1667M18 5.50008H3H18ZM18 5.50008L14.6667 8.83341L18 5.50008ZM18 5.50008L14.6667 2.16675L18 5.50008ZM3 15.5001H18H3ZM3 15.5001L6.33333 18.8334L3 15.5001Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>NFT Market</span>
+                        </a></li>
+                        <li><a href="#" class="active">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.1654 18V16.3333C17.1654 15.4493 16.8142 14.6014 16.1891 13.9763C15.5639 13.3512 14.7161 13 13.832 13H7.16536C6.28131 13 5.43346 13.3512 4.80834 13.9763C4.18322 14.6014 3.83203 15.4493 3.83203 16.3333V18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10.5013 9.66667C12.3423 9.66667 13.8346 8.17428 13.8346 6.33333C13.8346 4.49238 12.3423 3 10.5013 3C8.66035 3 7.16797 4.49238 7.16797 6.33333C7.16797 8.17428 8.66035 9.66667 10.5013 9.66667Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Profil</span>                    
+                        </a></li>
+                        <li><a href="#">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_4116_948)">
+                                <path d="M19.6395 5.15074C19.5526 5.06306 19.4492 4.99353 19.3352 4.94619C19.2212 4.89885 19.0989 4.87465 18.9755 4.875H18.3125V3.3125C18.3122 3.06395 18.2134 2.82565 18.0376 2.6499C17.8618 2.47414 17.6236 2.37528 17.375 2.375H3.88387C3.15217 2.37501 2.45045 2.66568 1.93306 3.18306C1.41568 3.70045 1.12501 4.40217 1.125 5.13387V15.8661C1.12501 16.5978 1.41568 17.2995 1.93306 17.8169C2.45045 18.3343 3.15217 18.625 3.88387 18.625H18.9386C19.1865 18.6245 19.4242 18.526 19.5999 18.3509C19.7755 18.1759 19.8748 17.9385 19.8761 17.6905L19.9129 5.8157C19.9137 5.69228 19.8899 5.56993 19.843 5.45577C19.7961 5.34161 19.7269 5.23793 19.6395 5.15074ZM18.6271 17.375H3.88387C3.48369 17.375 3.0999 17.216 2.81694 16.9331C2.53397 16.6501 2.375 16.2663 2.375 15.8661V5.13387C2.375 4.73369 2.53397 4.3499 2.81694 4.06694C3.0999 3.78397 3.48369 3.625 3.88387 3.625H17.0625V4.875H3.9375V6.125H18.662L18.6271 17.375Z" fill="black" stroke="black" stroke-width="0.5"/>
+                                <path d="M15.8125 10.8125H17.0625V12.0625H15.8125V10.8125Z" fill="black" stroke="black" stroke-width="0.5"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_4116_948">
+                                <rect width="20" height="20" fill="white" transform="translate(0.5 0.5)"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <span>Wallet</span>
+                        </a></li>
+                    </ul>
+                    <a href="#" class="aside__exit">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.5 18H15.8333C16.2754 18 16.6993 17.8244 17.0118 17.5118C17.3244 17.1993 17.5 16.7754 17.5 16.3333V4.66667C17.5 4.22464 17.3244 3.80072 17.0118 3.48816C16.6993 3.17559 16.2754 3 15.8333 3H12.5" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.66602 14.6666L2.49935 10.4999L6.66602 6.33325" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.5 10.5H12.5" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Log out</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="dashboard-tab">
+            <div class="main__container">
+                <ul>
+                    <li><a href="#">Deposit</a></li>
+                    <li><a href="#" class="active">Withdraw</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main__content">
+            <section class="deposit">
+                <h3>Withdraw</h3>
+                <div class="deposit__container">
+                    <div class="">
+                        <div class="deposit__title">
+                            <p>Select Currency</p>
+                            <ul class="deposit__tab">
+                                <li class="deposit__tab_point deposit__tab_point_active">USDT</li>
+                                <li class="deposit__tab_point">NFT</li>
+                            </ul>
+                        </div>
+                        <div class="deposit__wrapper deposit__wrapper_usdt deposit__wrapper_active">
+                            <div class="deposit__usdt">
+                                <div class="deposit__usdt_item">
+                                    <div class="deposit__usdt_img">
+                                        <img src="img/crypt_3.svg" alt="">
+                                    </div>
+                                    <div class="">
+                                        <p>Available balance</p>
+                                        <p>60 842.5 EUR</p>
+                                    </div>
+                                </div>
+                                <div class="deposit__usdt_form">
+                                    <label for="">
+                                        <input type="text" placeholder="Amount">
+                                        <span>USDT</span>
+                                    </label>
+                                    <input type="text" placeholder="Address">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="deposit__wrapper deposit__wrapper_nft">
+                            <div class="deposit__nft">
+                                <div class="deposit__nft_item">
+                                    <img src="img/details_img.jpg" alt="">
+                                    <p>NFT 001</p>
+                                    <p>Other</p>
+                                </div>
+                                <div class="deposit__nft_form">
+                                    <p>Address</p>
+                                    <input type="text" placeholder="Address"> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deposit__list">
+                        <div class="deposit__list_title">
+                            <div>
+                                <img src="img/info.svg" alt="">
+                            </div>
+                            <p>From EUR to USDT</p>
+                        </div>
+                        <ul>
+                            <li>Double check, if you typed the correct adress and that it’s on the right network.</li>
+                            <li>Your funds will be withdrawn within 24 hours (if you have not received any crypto in this timeframe, please contact customer support).</li>
+                            <li>We are currently not operating in EUR on our platform. When you want to withdraw in EUR, we exchange from USDC to EUR first with current exchange rate and then send it to your bank account.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <div class="withdraw">
+                <ul>
+                    <li>
+                        <p>Transaction fee</p>
+                        <p>2.54 USDT <span>(2 EUR)</span></p>
+                    </li>
+                    <li>
+                        <p>Recipient receives</p>
+                        <p>105.43 USDT <span>(100 EUR)</span></p>
+                    </li>
+                </ul>
+                <button class="btn__red dashboard-modal__ver_btn">Confirm Withdrawal</button>
+            </div>
+        </div>
+    </main>
+
+    <div class="dashboard-modal dashboard-modal__ver">
+        <div class="dashboard-modal__overflow"></div>
+        <div class="dashboard-modal__wrapper">
+            <div class="dashboard-modal__close"></div>
+            <div class="dashboard-modal__header">
+                <h3>Verify your identity</h3>
+            </div>
+            <div class="dashboard-modal__body">
+                <p>Enter the 6-digit code we have sent it to your phone</p>
+                <input type="text">
+                <p>Didn’t received the code? <a href="#">Resend SMS</a></p>
+                <button class="btn__red dashboard-modal__suc_btn">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-modal dashboard-modal__suc">
+        <div class="dashboard-modal__overflow"></div>
+        <div class="dashboard-modal__wrapper">
+            <div class="dashboard-modal__close"></div>
+            <div class="dashboard-modal__body">
+                <img src="img/modal_suc.png" alt="">
+                <h3>Withdrawal Successful</h3>
+                <p>Your withdrawal request processed successfully.</p>
+                <button class="btn__red dashboard-modal__suc_close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

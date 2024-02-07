@@ -1,0 +1,1362 @@
+body
+    background: var(--background)
+    min-height: 100vh
+    font-style: normal
+.container
+    max-width: 1820px
+    margin: 0 auto
+    padding: 0 15px
+    box-sizing: content-box
+h1
+    font-family: 'Nunito Sans'
+    font-weight: 800
+    font-size: 31px
+    line-height: 42px
+    color: var(--text-blc)
+h2
+    font-family: 'Nunito Sans'
+    font-weight: 800
+    font-size: 20px
+    line-height: 27px
+    color: var(--text-blc)
+.link
+    font-family: 'Nunito Sans'
+    font-weight: 400
+    font-size: 16px
+    line-height: 22px
+    text-decoration-line: underline
+    color: var(--blue)
+.nice-select
+    width: 100%
+    padding: 8px 0
+    float: none
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    height: auto
+    border: 1px solid var(--blue) !important
+    border-radius: 8px
+    background: transparent
+    box-sizing: border-box
+    .current
+        font-family: 'Nunito Sans'
+        font-style: normal
+        font-weight: 700
+        font-size: 18px
+        line-height: 25px
+        text-transform: uppercase
+        color: var(--blue)
+        margin: 0 5px 0 0
+        order: -1
+    &::after
+        content: none
+    &::before
+        content: ''
+        display: block
+        width: 20px
+        height: 20px
+        background: url('../img/arrow.svg')
+        transition: all .3s
+    .list
+        width: 100%
+        border-radius: 8px
+        border: none
+        margin: 1px 0 0
+        li
+            font-family: 'Nunito Sans'
+            font-style: normal
+            font-weight: 700
+            font-size: 18px
+            line-height: 25px
+            text-transform: uppercase
+            min-height: auto
+            padding: 10px
+            color: var(--text-blc)
+            &.selected
+                color: var(--blue)
+    &.open
+        &::before
+            transform: rotate(180deg)
+.btn
+    &__blue
+        display: block
+        width: 100%
+        font-family: 'Nunito Sans'
+        font-weight: 700
+        font-size: 18px
+        line-height: 25px
+        color: var(--white)
+        transition: all .3s
+        padding: 9px 30px
+        border: none
+        background: var(--blue)
+        border-radius: 8px
+        &_arrow
+            display: flex
+            justify-content: center
+            align-items: center
+            svg
+                transform: rotate(-90deg)
+                margin: 0 0 0 10px
+                width: 20px 
+                height: 20px
+    &__wht
+        display: block
+        padding: 8px 29px
+        border: 1px solid var(--blue)
+        border-radius: 8px
+        font-family: 'Nunito Sans'
+        font-weight: 400
+        font-size: 18px
+        line-height: 25px
+        color: var(--blue)
+        background: transparent
+        &_arrow
+            display: flex
+            justify-content: center
+            align-items: center
+            svg
+                transform: rotate(-90deg)
+                margin: 0 0 0 10px
+                width: 20px 
+                height: 20px
+
+.input
+    display: block
+    width: 100%
+    box-sizing: border-box
+    padding: 9px 9px 9px 9px
+    background: var(--white)
+    border: 1px solid var(--placeholder)
+    border-radius: 8px
+    font-family: 'Nunito Sans'
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 22px
+    color: var(--text-blc)
+    &::placeholder
+        color: var(--placeholder)
+    &.error
+        background: rgba(240, 28, 28, 0.1)
+        border: 1px solid var(--placeholder)
+        color: var(--red)
+        &::placeholder
+            color: var(--red)
+            opacity: 0.5
+.textarea
+    display: block
+    width: 100%
+    box-sizing: border-box
+    padding: 9px 9px 9px 9px
+    background: var(--white)
+    border: 1px solid var(--placeholder)
+    border-radius: 8px
+    font-family: 'Nunito Sans'
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 22px
+    color: var(--text-blc)
+    resize: none
+    &::placeholder
+        color: var(--placeholder)
+    &.error
+        background: rgba(240, 28, 28, 0.1)
+        border: 1px solid var(--placeholder)
+        color: var(--red)
+        &::placeholder
+            color: var(--red)
+            opacity: 0.5
+.mt30
+    margin-top: 30px
+
+.sign-up
+    min-height: 100vh
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    padding: 40px 15px
+    &__container
+        margin: auto
+        width: 100%
+        max-width: 600px
+    &__logo
+        display: block
+        margin: 0 auto
+        width: 100%
+        max-width: 200px
+        &_min
+            display: block
+            margin: 0 auto
+            width: 100%
+            max-width: 97px
+    h1
+        text-align: center
+        margin: 30px 0 0
+    &__wrapper
+        margin: 30px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 20px
+    &__input
+        div
+            position: relative
+        p
+            padding: 0 0 0 10px
+            font-family: 'Nunito Sans'
+            font-style: normal
+            font-weight: 400
+            font-size: 14px
+            line-height: 19px
+            text-transform: uppercase
+            color: var(--text-blc)
+        .input
+            margin: 7px 0 0
+            padding: 9px 9px 9px 39px
+        img
+            width: 20px
+            height: 20px
+            position: absolute
+            left: 10px
+            top: 50%
+            transform: translateY(-50%)
+            object-fit: contain
+    &__row
+        margin: 30px 0 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__check
+        position: relative
+        display: grid
+        grid-template-columns: 13px 1fr
+        gap: 7px
+        align-items: center
+        p
+            font-family: 'Nunito Sans'
+            font-weight: 400
+            font-size: 16px
+            line-height: 22px
+            color: var(--text-blc)
+        span
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 13px
+            height: 13px
+            border: 1px solid var(--blue)
+            border-radius: 3px
+            transition: all .3s
+            &::before
+                content: ''
+                display: block
+                width: 8px
+                height: 8px
+                background: url('../img/check.svg') center no-repeat
+                background-size: contain
+                opacity: 0
+                transition: all .3s
+        input
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            opacity: 0
+            z-index: 1
+            &:checked
+                &+span
+                    background: var(--blue)
+                    &::before
+                        opacity: 1
+    &__link
+        display: grid
+        grid-template-columns: 1fr 75px
+        gap: 10px
+        margin: 30px 0 0
+        align-items: center
+    &__footer
+        margin: 30px 0 0
+        display: flex
+        justify-content: center
+    &__subtitle
+        margin: 10px 0 0
+        font-family: 'Nunito Sans'
+        font-weight: 400
+        font-size: 16px
+        line-height: 22px
+        color: var(--text-blc)
+        text-align: center
+    h2
+        text-align: center
+        margin: 30px 0 0
+    &__forgot
+        margin: 40px 0 0 
+        display: grid
+        grid-template-columns: 1fr 105px
+        gap: 10px
+        align-items: stretch
+    &__reg
+        margin: 50px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 20px
+        &_row
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 20px
+        &_input
+            p
+                padding: 0 0 0 10px
+                font-family: 'Nunito Sans'
+                font-style: normal
+                font-weight: 400
+                font-size: 14px
+                line-height: 19px
+                text-transform: uppercase
+                color: var(--text-blc)
+            .input
+                margin: 7px 0 0
+    &__error
+        margin: 20px 0 0
+        text-align: center
+        font-family: 'Nunito Sans'
+        font-weight: 400
+        font-size: 16px
+        line-height: 22px
+        color: var(--red)
+
+@media ( max-width: 500px )
+    .sign-up
+        &__forgot
+            grid-template-columns: 100%
+        &__reg
+            &_row
+                grid-template-columns: 100%
+        &__row
+            flex-direction: column
+            align-items: center
+            .link
+                margin: 10px 0 0
+
+.nav
+    background: var(--white)
+    border-bottom: 1px solid var(--placeholder)
+    padding: 15px 0
+    .container
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__logo
+        width: 100%
+        max-width: 142px
+        display: block
+        img
+            width: 100%
+    &__list
+        display: flex
+        justify-content: center
+        align-items: center
+        li
+            margin: 0 50px 0 0
+            &:last-child
+                margin: 0   
+        a
+            font-family: 'Nunito'
+            font-style: normal
+            font-weight: 400
+            font-size: 14px
+            line-height: 19px
+            color: var(--text-blc)
+            transition: all .3s
+            &:hover
+                color: var(--blue)
+    &__block
+        display: flex
+        justify-content: center
+        align-items: center
+    &__func
+        display: grid
+        grid-template-columns: 20px 20px 20px
+        gap: 22px
+        align-items: center
+        margin: 0 20px 0 0
+        a
+            display: block
+            width: 20px
+            height: 20px
+        svg
+            width: 20px
+            height: 20px
+    &__profile
+        display: block
+        width: 30px
+        img
+            width: 100%
+            border-radius: 5px
+
+.page-body
+    padding: 30px 0 38px
+    .container
+        display: grid
+        grid-template-columns: 992fr 808fr
+        gap: 20px
+    &__title
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        h2,
+        h1
+            font-weight: 700
+            font-size: 31px
+            line-height: 42px
+        &_img
+            display: block
+            width: 100%
+            max-width: 32px
+            margin: 0 10px 0 0
+    &__func
+        display: flex
+        justify-content: center
+        align-items: stretch
+        margin: 0 0 0 92px
+        a,
+        div
+            margin: 0 20px 0 0
+            display: grid
+            grid-template-columns: 20px 1fr
+            gap: 10px
+            align-items: center
+            padding: 9px 14px
+            border: 1px solid var(--blue)
+            border-radius: 8px
+            position: relative
+            img
+                width: 100%
+            span
+                font-family: 'Nunito Sans'
+                font-style: normal
+                font-weight: 400
+                font-size: 16px
+                line-height: 22px
+                color: var(--blue)
+            &:last-child
+                margin: 0
+            input
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                opacity: 0
+        
+.profile
+    &__container
+        margin: 20px 0 0
+        background: var(--white)
+        border: 1px solid var(--placeholder)
+        border-radius: 8px
+        padding: 12px 30px 30px
+    &__header
+        padding: 0 0 11px
+        border-bottom: 1px solid var(--border)
+    &__name
+        font-family: 'Nunito Sans'
+        font-style: normal
+        font-weight: 800
+        font-size: 24px
+        line-height: 33px
+        color: var(--text-blc)
+    &__wrapper
+        display: grid
+        grid-template-columns: 120px 1fr 1fr
+        gap: 80px
+        margin: 17px 0 0
+        align-items: start
+    &__pers
+        img
+            width: 100%
+            border-radius: 100%
+    &__info
+        ul
+            display: grid
+            grid-template-columns: 100%
+            gap: 10px
+        li
+            display: flex
+            justify-content: flex-start
+            align-items: center
+        &_name
+            font-family: 'Nunito Sans'
+            font-style: normal
+            font-weight: 700
+            font-size: 16px
+            line-height: 22px
+            color: var(--text-blc)
+        &_text
+            margin: 0 0 0 20px
+            font-family: 'Nunito Sans'
+            font-weight: 400
+            font-size: 16px
+            line-height: 22px
+            color: var(--text-blc)
+    &__online
+        margin: 10px 0 0
+        font-family: 'Nunito Sans'
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 19px
+        color: vra(--text-blc)
+        opacity: 0.4
+    &__language
+        &_title
+            font-family: 'Nunito Sans'
+            font-weight: 700
+            font-size: 16px
+            line-height: 22px
+            color: var(--text-blc)
+        ul
+            display: inline-grid
+            grid-template-columns: 100%
+            gap: 5px
+        li
+            display: grid
+            grid-template-columns: auto auto
+            gap: 30px
+            justify-items: space-between
+            p
+                font-family: 'Nunito Sans'
+                font-weight: 400
+                font-size: 14px
+                line-height: 19px
+                color: var(--text-blc)
+                &+p
+                    text-align: right
+    &__skills
+        display: grid
+        grid-template-columns: auto 1fr
+        gap: 48px
+        align-items: center
+        margin: 27px 0 0
+        &_title
+            display: grid
+            grid-template-columns: 20px 1fr
+            gap: 10px
+            align-items: center
+            img
+                width: 100%
+            p
+                font-family: 'Nunito Sans'
+                font-weight: 700
+                font-size: 14px
+                line-height: 19px
+                color: var(--text-blc)
+                white-space: nowrap
+        &_row
+            display: flex
+            justify-content: flex-start
+            align-items: stretch
+            overflow-x: scroll
+            &::-webkit-scrollbar 
+                width: 0
+                display: none
+                opacity: 0
+                height: 0
+            p
+                white-space: nowrap
+                margin: 0 10px 0 0
+                padding: 5px 10px
+                border: 1px solid var(--grey)
+                border-radius: 5px
+                color: var(--grey)
+                font-family: 'Nunito Sans'
+                font-weight: 400
+                font-size: 12px
+                line-height: 16px
+                &:last-child
+                    margin: 0
+
+.data
+    grid-column: 2/3
+    grid-row: 1/3
+    display: grid
+    grid-template-rows: auto 1fr
+    gap: 20px
+    &__container
+        background: var(--white)
+        border: 1px solid var(--placeholder)
+        border-radius: 8px
+        height: 100%
+
+.profile-tab
+    background: var(--white)
+    border: 1px solid var(--placeholder)
+    border-radius: 8px
+    padding: 28px 30px 60px
+    &__header
+        ul
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            border-bottom: 0.5px solid var(--placeholder)
+            overflow-x: scroll
+            &::-webkit-scrollbar 
+                width: 0
+                display: none
+                opacity: 0
+                height: 0
+            li
+                margin: 0 40px 0 0
+                font-family: 'Nunito Sans'
+                font-weight: 400
+                font-size: 14px
+                line-height: 19px
+                color: var(--text-blc)
+                cursor: pointer
+                padding: 0 0 20px
+                position: relative
+                white-space: nowrap
+                &::before
+                    content: ''
+                    display: block
+                    width: 100%
+                    height: 1px
+                    background: var(--blue)
+                    bottom: 0
+                    left: 0
+                    position: absolute
+                    opacity: 0
+                    transition: all .3s
+                &.active
+                    font-weight: 700
+                    &::before
+                        opacity: 1
+                &:last-child
+                    margin: 0
+    &__wrapper
+        display: none
+        margin: 30px 0 0
+        &_active
+            display: block
+            &.grid
+                display: grid
+                grid-template-columns: 100%
+                gap: 20px
+    &__item
+        display: grid
+        grid-template-columns: 30px 1fr
+        gap: 20px
+        &:last-child
+            .profile-tab
+                &__num
+                    &::before
+                        content: none
+    &__num
+        position: relative
+        p
+            width: 30px
+            height: 30px
+            border: 1px solid var(--blue)
+            display: flex
+            justify-content: center
+            align-items: center
+            font-family: 'Nunito Sans'
+            font-weight: 400
+            font-size: 14px
+            line-height: 25px
+            color: var(--blue)
+            border-radius: 100%
+        &::before
+            content: ''
+            display: block
+            height: calc( 100% - 10px )
+            border-right: 0.5px dashed var(--placeholder)
+            top: 30px
+            left: 50%
+            transform: translateX(-50%)
+            position: absolute
+    &__title
+        display: flex
+        justify-content: flex-start
+        align-items: flex-end
+        padding: 2px 0 0
+    &__name
+        font-family: 'Nunito Sans'
+        font-weight: 400
+        font-size: 14px
+        line-height: 25px
+        text-transform: uppercase
+        color: var(--text-blc)
+    &__date
+        margin: 0 0 0 10px
+        font-family: 'Nunito Sans'
+        font-weight: 400
+        font-size: 12px
+        line-height: 25px
+        color: var(--blue)
+    &__bold
+        margin: 10px 0 0
+        font-family: 'Nunito Sans'
+        font-weight: 700
+        font-size: 14px
+        line-height: 25px
+        color: var(--text-blc)
+    &__text
+        margin: 10px 0 0
+        font-family: 'Nunito'
+        font-weight: 400
+        font-size: 14px
+        line-height: 25px
+        color: var(--text-blc)
+    &__info
+        display: grid
+        grid-template-columns: 100%
+        gap: 20px
+        p
+            font-family: 'Nunito Sans'
+            font-weight: 400
+            font-size: 14px
+            line-height: 23px
+            color: var(--text-blc)
+
+@media ( max-width: 1350px )
+    .page-body
+        .container
+            grid-template-columns: 100%
+    .data
+        grid-column: auto
+        grid-row: auto
+        &__container
+            min-height: 200px
+
+@media ( max-width: 1024px )
+    .nav
+        &__list
+            display: none
+        &__active
+            position: fixed
+            top: 0
+            left: 0
+            width: 100vw
+            height: 100vh
+            z-index: 100
+            .container
+                flex-wrap: wrap
+            .nav
+                &__list
+                    position: relative
+                    display: grid
+                    grid-template-columns: 100%
+                    gap: 15px
+                    width: 100%
+                    order: 2
+                    margin: 30px 0 0
+                    li
+                        margin: 0
+
+@media ( max-width: 768px )
+    .page-body
+        &__title 
+            h2,
+            h1
+                font-size: 20px
+                line-height: 120%
+        &__func
+            margin: 0 0 0 auto
+            a
+                padding: 5px
+                margin: 0 10px 0 0
+                span
+                    font-size: 12px
+                    line-height: 120%
+    .profile
+        &__container
+            padding: 15px
+        &__name
+            font-size: 18px
+            line-height: 120%
+        &__wrapper
+            grid-template-columns: 60px auto 1fr
+            gap: 50px
+        &__skills
+            grid-template-columns: 100%
+            gap: 10px
+    .profile-tab
+        padding: 15px
+        &__header
+            ul
+                li
+                    padding: 0 0 10px
+                    margin: 0 15px 0 0
+        &__wrapper
+            margin: 20px 0 0
+
+@media ( max-width: 600px )
+    .profile-tab
+        &__title
+            flex-direction: column
+            align-items: flex-start
+        &__date
+            margin: 5px 0 0
+            line-height: 120%
+    .profile
+        &__wrapper
+            grid-template-columns: 100%
+            gap: 30px
+        &__pers
+            max-width: 120px
+
+@media ( max-width: 500px )
+    .page-body
+        &__title
+            flex-wrap: wrap
+        &__func
+            width: 100%
+            margin: 10px 0 0
+            justify-content: flex-start
+
+@media ( max-width: 375px )
+    .profile
+        &__info
+            li
+                flex-direction: column
+                align-items: flex-start
+            &_text
+                margin: 0
+    .page-body
+        &__func
+            flex-direction: column
+            align-items: flex-start
+            a
+                margin: 0 0 5px
+    .nav
+        &__logo
+            max-width: 100px
+
+.form-acc
+    padding: 30px 0 76px
+    .page-body
+        &__save
+            width: auto
+            margin: 0 0 0 auto
+            padding: 9px 30px
+            &::after
+                content: ''
+                display: block
+                width: 20px
+                height: 20px
+                margin: 0 0 0 10px
+                background: url('../img/check.svg') center no-repeat
+                background-size: contain
+    &__container
+        margin: 20px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 20px
+    &__block
+        background: var(--white)
+        border: 1px solid var(--placeholder)
+        border-radius: 8px
+        padding: 30px
+        counter-reset: form-acc 0
+        &_pers
+            display: grid
+            grid-template-columns: 690fr 620fr 336fr
+            gap: 57px
+    h3
+        font-family: 'Nunito Sans'
+        font-style: normal
+        font-weight: 800
+        font-size: 24px
+        line-height: 33px
+        color: var(--text-blc)
+    &__wrapper
+        display: grid
+        grid-template-columns: 100%
+        gap: 30px
+        margin: 20px 0 0
+    &__row
+        display: grid
+        gap: 20px
+    &__name
+        grid-template-columns: 250fr 250fr 150fr
+    &__input
+        p
+            padding: 0 0 0 10px
+            font-family: 'Nunito Sans'
+            font-style: normal
+            font-weight: 400
+            font-size: 14px
+            line-height: 19px
+            text-transform: uppercase
+            color: var(--text-blc)
+            span
+                color: var(--red)
+        .input
+            margin: 7px 0 0
+    &__textarea
+        display: grid
+        grid-template-rows: auto 1fr
+        .textarea
+            margin: 7px 0 0
+        p
+            padding: 0 0 0 10px
+            font-family: 'Nunito Sans'
+            font-style: normal
+            font-weight: 400
+            font-size: 14px
+            line-height: 19px
+            text-transform: uppercase
+            color: var(--text-blc)
+            span
+                color: var(--red)
+    &__pers
+        grid-template-columns: 150fr 200fr 300fr
+    .nice-select
+        background: var(--white)
+        border: 1px solid var(--placeholder) !important
+        border-radius: 8px
+        margin: 8px 0 0
+        padding: 9px 30px 9px 9px
+        justify-content: flex-start
+        position: relative
+        .current
+            font-weight: 400
+            font-size: 16px
+            line-height: 22px
+            color: var(--text-blc)
+            margin: 0
+            text-transform: none
+        &::before
+            width: 15px
+            height: 10px
+            background: url('../img/select-blc.svg') center no-repeat
+            background-size: contain
+            position: absolute
+            top: 50%
+            right: 10px
+            transform: translateY(-50%)
+        .list
+            li
+                font-weight: 400
+                font-size: 16px
+                line-height: 22px
+                color: var(--text-blc)
+                margin: 0
+                text-transform: none
+                &:hover
+                    color: var(--blue)
+    &__half
+        grid-template-columns: 1fr 1fr
+    &__adress
+        grid-template-columns: 450fr 150fr
+    &__num
+        display: flex
+        justify-content: space-between
+        margin: 26px 0 0
+        position: relative
+        z-index: 1  
+        &::after  
+            content: ''
+            display: block
+            width: 100%
+            height: 1px
+            border-bottom: 0.5px dashed var(--placeholder)
+            position: absolute
+            top: 50%
+            left: 0
+            transform: translateY(-50%)
+            z-index: -1
+        &::before
+            width: 30px
+            height: 30px
+            border-radius: 100%
+            border: 1px solid var(--blue)
+            display: flex
+            justify-content: center
+            align-items: center
+            font-family: 'Nunito Sans'
+            font-weight: 400
+            font-size: 14px
+            line-height: 25px
+            color: var(--blue)
+            background: var(--white)
+            counter-increment: form-acc 1
+            content: counter(form-acc)
+    &__plus
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 30px
+        height: 30px
+        background: var(--blue)
+        border-radius: 100%
+        font-family: 'Nunito Sans'
+        font-weight: 400
+        font-size: 14px
+        line-height: 25px
+        color: var(--white)
+        position: relative
+        cursor: pointer
+    &__form
+        margin: 26px 0 0
+        display: grid
+        grid-template-columns: 109fr 65fr
+        gap: 20px
+        .form-acc__wrapper
+            margin: 0
+    &__education
+        grid-template-columns: 30fr 25fr 50fr
+    &__job
+        grid-template-columns: 25fr 40fr 40fr
+    &__employment
+        grid-template-columns: 25fr 82fr
+    &__about
+        margin: 20px 0 0
+        .textarea
+            margin: 7px 0 0
+            height: 134px
+    &__func
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        position: relative
+        overflow-x: scroll
+        &::-webkit-scrollbar 
+            width: 0
+            display: none
+            opacity: 0
+            height: 0
+        p
+            font-family: 'Nunito Sans'
+            font-weight: 400
+            font-size: 18px
+            line-height: 25px
+            text-transform: uppercase
+            color: var(--text-blc)
+            margin: 0 40px 0 0
+        div
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            margin: 0 40px 0 0
+            &:last-child
+                margin: 0
+        a
+            display: block
+            margin: 0 10px 0 0
+            &:last-child
+                margin: 0
+        img
+            width: 20px
+            height: 20px
+    &__btn
+        margin: 0 20px 0 0
+        &::after
+            content: ''
+            display: block
+            width: 20px
+            height: 20px
+            background: url('../img/cancel.svg') center no-repeat
+            margin: 0 0 0 10px
+            background-size: contain
+    &__link
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        .btn__blue
+            margin: 0
+    h1
+        font-weight: 800
+
+@media ( max-width: 1600px )
+    .form-acc
+        &__input
+            p
+                font-size: 12px
+
+@media ( max-width: 1440px )
+    .form-acc
+        &__block
+            &_pers
+                grid-template-columns: 6fr 5fr 3fr
+                gap: 30px
+        &__pers
+            grid-template-columns: 1fr 1fr 1fr
+        &__adress
+            grid-template-columns: 2fr 1fr
+    
+@media ( max-width: 1024px )
+    .form-acc
+        &__block
+            padding: 10px
+            &_pers
+                grid-template-columns: 100%
+        &__form
+            grid-template-columns: 100%
+        &__wrapper
+            gap: 20px
+        &__textarea
+            .textarea
+                min-height: 134px
+        .page-body
+            &__func
+                margin: 0 0 0 auto
+
+@media ( max-width: 768px )
+    .form-acc
+        &__name
+            grid-template-columns: 1fr 1fr 1fr
+        &__education
+            grid-template-columns: 1fr 1fr 1fr
+        &__job
+            grid-template-columns: 1fr 1fr 2fr
+        &__employment
+            grid-template-columns: 1fr 1fr
+        .page-body
+            &__title
+                flex-wrap: wrap
+        .btn
+            &__blue
+                padding: 6px 11px
+                font-size: 12px
+                line-height: 20px
+            &__wht
+                padding: 5px 10px
+                font-size: 12px
+                line-height: 20px
+        h3
+            font-size: 18px
+            line-height: 120%
+
+
+@media ( max-width: 550px )
+    .form-acc
+        &__row
+            grid-template-columns: 100%
+        .page-body
+            &__func
+                width: 100%
+                margin: 10px 0 0
+                justify-content: flex-start
+            &__save
+                margin: 10px 0 0
+        &__link
+            .btn__blue
+                margin: 0
+
+.vacancy
+    padding: 30px 0 218px
+    &__filter
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        position: relative
+        overflow-x: scroll
+        &::-webkit-scrollbar 
+            width: 0
+            display: none
+            opacity: 0
+            height: 0
+        .nice-select
+            width: auto
+            margin: 0 20px 0 0
+            padding: 8px 30px
+            &:last-child
+                margin: 0
+    &__container
+        margin: 20px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 20px
+    &__wrapper
+        background: var(--white)
+        border: 1px solid var(--vacancy)
+        border-radius: 8px
+        display: grid
+        grid-template-columns: 1fr 184px
+        position: relative
+        overflow: hidden
+    &__flex
+        display: flex
+        flex-direction: column
+        padding: 20px 40px 10px 20px
+    &__block
+        display: grid
+        grid-template-columns: 35fr 25fr
+        gap: 30px
+        margin: 0 0 auto
+    &__title
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        .link
+            font-weight: 800
+            font-size: 24px
+            line-height: 33px
+            margin: 0 20px 0 0
+    &__text
+        font-family: 'Nunito Sans'
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 23px
+        color: var(--text-blc)
+        margin: 5px 0 0
+    &__req
+        font-family: 'Nunito Sans'
+        font-weight: 700
+        font-size: 14px
+        line-height: 19px
+        color: var(--text-blc)
+        margin: 0 0 0 10px
+        &_wrapper
+            margin: 20px 0 0
+            display: flex
+            justify-content: flex-start
+            align-items: stretch
+            flex-wrap: wrap
+            gap: 10px
+            p
+                padding: 4px 9px
+                border: 1px solid var(--grey)
+                border-radius: 5px
+                font-family: 'Nunito Sans'
+                font-style: normal
+                font-weight: 400
+                font-size: 12px
+                line-height: 16px
+                color: var(--grey)
+                white-space: nowrap
+    &__footer
+        margin: 15px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        padding: 10px 0 0
+        border-top: 0.5px solid var(--placeholder)
+    &__salary
+        width: 100%
+        max-width: 270px
+        margin: 0 0 0 auto
+        p
+            font-family: 'Nunito'
+            font-style: normal
+            font-weight: 800
+            font-size: 28px
+            line-height: 38px
+            color: var(--blue)
+            span
+                font-weight: 400
+                font-size: 20px
+                line-height: 27px
+                color: var(--text-blc)
+    &__info
+        img
+            width: 100%
+            max-width: 100%
+    &__place
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0 0 0 20px
+        img
+            margin: 0 5px 0 0
+            width: 14px
+        p
+            font-family: 'Nunito'
+            font-style: normal
+            font-weight: 400
+            font-size: 18px
+            line-height: 25px
+            color: var(--text-blc)
+    &__sidebar
+        background: var(--vacancy)
+        padding: 20px 30px
+        display: flex
+        flex-direction: column
+        ul
+            display: grid
+            grid-template-columns: 100%
+            gap: 15px
+            margin: 0 0 auto
+            li
+                display: flex
+                justify-content: flex-start
+                align-items: center
+            p
+                font-family: 'Nunito'
+                font-style: normal
+                font-weight: 400
+                font-size: 14px
+                line-height: 19px
+                text-transform: lowercase
+                color: var(--white)
+                &.bold
+                    font-weight: 800
+                    font-size: 16px
+                    line-height: 22px
+                    text-transform: uppercase
+            img
+                width: 20px 
+                margin: 0 10px 0 0
+        .btn__wht
+            margin: 18px 0 0
+            width: 100%
+            border: solid 1px var(--white)
+            color: var(--white)
+            justify-content: flex-start
+            align-items: center
+            font-size: 16px
+            line-height: 22px
+            padding: 4px 9px
+            &::after
+                content: ''
+                display: block
+                width: 20px
+                height: 20px
+                margin: 0 0 0 4px
+                background: url('../img/arrow_wht.svg') center no-repeat
+                background-size: contain
+
+@media ( max-width: 1500px )
+    .vacancy
+        &__footer
+            flex-wrap: wrap
+        &__salary
+            width: 100%
+            margin: 10px 0 0
+            max-width: 100%
+        &__flex
+            padding: 20px 20px 10px
+        &__block
+            grid-template-columns: 100%
+            gap: 20px
+
+@media ( max-width: 1024px )
+    .vacancy
+        &__container
+            grid-template-columns: 100%
+
+@media ( max-width: 768px )
+    .vacancy
+        &__filter
+            .nice-select
+                padding: 5px 10px
+                margin: 0 10px 0 0
+                .current
+                    font-size: 14px
+                    font-size: 120%
+
+@media ( max-width: 550px )
+    .vacancy
+        &__wrapper
+            grid-template-columns: 100%
+
+@media ( max-width: 425px )
+    .vacancy
+        &__flex
+            padding: 10px

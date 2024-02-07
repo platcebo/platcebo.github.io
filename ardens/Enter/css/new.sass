@@ -1,0 +1,406 @@
+.stars
+    position: relative
+    overflow: hidden
+    &__space
+        padding: 120px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        position: relative
+        z-index: 1
+        img
+            max-width: 100%
+            width: 57%
+        &::before
+            content: ''
+            position: absolute
+            display: block
+            width: 100vw
+            height: 100%
+            left: 50%
+            transform: translateX(-50%)
+            top: 0
+            background: url('../img/page-recruiter/space.jpg') bottom right no-repeat
+            background-size: cover
+            z-index: -1
+        &_info
+            max-width: 455px
+            margin: 0 0 0 25px
+            padding: 0 0 307px
+            h1
+                color: #F9F9F9
+                font-family: Nunito
+                font-size: 36px
+                font-style: normal
+                font-weight: 600
+                line-height: normal
+                max-width: 335px
+            p
+                color: #F9F9F9
+                font-family: Nunito
+                font-size: 24px
+                font-style: normal
+                font-weight: 400
+                line-height: normal
+                margin: 36px 0 0
+    &__block
+        position: relative
+        margin: -307px 0 0
+        z-index: 2
+        background: #F9F9F9
+        padding: 50px 0 208px
+        &::before
+            content: ''
+            height: calc( 150% + 5px )
+            right: 0
+            width: 46%
+            background: url('../img/page-recruiter/stars_block.svg') top right no-repeat
+            background-size: contain
+            position: absolute
+            top: -5px
+            bottom: -50%
+            z-index: -1
+        h2
+            max-width: 470px
+            color: #1F1B2C
+            font-family: Nunito
+            font-size: 36px
+            font-style: normal
+            font-weight: 600
+            line-height: normal
+            span
+                color: #3173F7
+        &_wrapper
+            max-width: 89%
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 28px
+            margin: 60px 0 0
+            position: relative
+            z-index: 1
+            img
+                position: relative
+                z-index: -1
+                width: 70%
+                right: 0
+                position: absolute
+                top: 0
+                transform: translateY(-40%)
+                max-width: 770px
+        &_item
+            padding: 20px 
+            border-radius: 6px
+            background: linear-gradient(130deg, #FFF 27.14%, #FFFAFA 121.63%, #E8E8E8 121.64%)
+            box-shadow: 0px 0px 0px 1px rgba(50, 29, 107, 0.08), -4px 5px 17px 0px rgba(24, 14, 55, 0.09)
+            &:nth-child(2)
+                grid-column: 1/2
+            .name
+                margin: 0
+                color: #1F1B2C
+                font-family: Nunito
+                font-size: 24px
+                font-style: normal
+                font-weight: 700
+                line-height: normal
+            .text
+                margin: 30px 0 0
+                color: #1F1B2C
+                font-family: Nunito
+                font-size: 24px
+                font-style: normal
+                font-weight: 400
+                line-height: normal
+                max-width: 495px
+
+.talk
+    padding: 133px 0 124px
+    background: url('../img/page-recruiter/talk_bg.jpg') center no-repeat
+    background-size: cover
+    position: relative
+    overflow: hidden
+    z-index: 1
+    &::before
+        content: ''
+        display: block
+        width: 44vw
+        height: 100%
+        right: 38px
+        background: url('../img/page-recruiter/talk_img.png') center no-repeat
+        background-size: contain
+        position: absolute
+        z-index: -1
+        top: 0
+    h2
+        max-width: 400px
+        color: #F9F9F9
+        font-family: Nunito
+        font-size: 36px
+        font-style: normal
+        font-weight: 600
+        line-height: normal
+    &__wrapper
+        margin: 36px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 32px
+        max-width: 59%
+        div
+            padding: 20px
+            border-radius: 6px
+            border: 2px solid #F9F9F9
+            box-shadow: 0px 0px 0px 1px rgba(50, 29, 107, 0.50), -4px 5px 17px 0px rgba(24, 14, 55, 0.08)
+        p
+            margin: 0
+            color: #F9F9F9
+            font-family: Nunito
+            font-size: 24px
+            font-style: normal
+            font-weight: 400
+            line-height: normal
+
+.easy
+    padding: 180px 0 133px
+    &__title
+        position: relative
+        z-index: 2
+        h2
+            color: #1F1B2C
+            font-family: Ermilov-Bold
+            font-size: 128px
+            font-style: normal
+            font-weight: 700
+            line-height: normal
+            text-transform: uppercase
+            max-width: 600px
+            span
+                background: linear-gradient(180deg, #D23DF6 0%, #2FDFED 61.46%)
+                background-clip: text
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+        img
+            position: absolute
+            width: 64%
+            top: 50%
+            transform: translateY(-50%)
+            right: 0
+            max-width: 788px
+    &__wrapper
+        position: relative
+        margin: 86px 0 0
+        z-index: 1
+        &::before
+            content: ''
+            display: block
+            width: 100%
+            left: 50%
+            transform: translateX(-50%)
+            top: -40px
+            bottom: 128px
+            background: url('../img/page-recruiter/easy_way.svg') center no-repeat
+            background-size: contain
+            position: absolute
+            z-index: -1
+    &__item
+        margin: 23px 0 0
+        max-width: calc( 50% - 22px )
+        padding: 20px 36px
+        border-radius: 12px
+        background: linear-gradient(155deg, #FFF 80.8%, #C0C0C0 438.53%)
+        box-shadow: 0px 0px 0px 1px rgba(50, 29, 107, 0.08), -4px 5px 17px 0px rgba(24, 14, 55, 0.08)
+        display: grid
+        grid-template-columns: auto 1fr
+        gap: 34px
+        align-items: center
+        &:nth-child(even)
+            margin-left: auto
+    &__num
+        color: #6538E0
+        font-family: Ermilov-Bold
+        font-size: 128px
+        font-style: normal
+        font-weight: 700
+        line-height: normal
+        text-transform: uppercase
+        margin: 0
+    &__text
+        color: #1F1B2C
+        font-family: Nunito
+        font-size: 24px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        max-width: 410px
+        margin: 0
+
+.wave
+    padding: 100px 0 300px
+    background: url('../img/page-recruiter/wave.jpg') center no-repeat
+    background-size: cover
+    h2
+        max-width: 790px
+        color: #F9F9F9
+        font-family: Ermilov-Bold
+        font-size: 64px
+        font-style: normal
+        font-weight: 700
+        line-height: normal
+        text-transform: uppercase
+    &__btn
+        padding: 41px 82px 38px
+        font-size: 24px
+        margin: 71px 0 0
+
+@media ( max-width: 1440px )
+    .stars
+        &__block
+            &_wrapper
+                img
+                    right: -200px
+
+
+@media ( max-width: 1024px )
+    .stars
+        &__block
+            &_wrapper
+                max-width: 100% 
+
+@media ( max-width: 991px )
+    .stars
+        // z-index: 1
+        background: #F9F9F9
+        &__space
+            display: grid
+            grid-template-columns: 100%
+            gap: 33px
+            img
+                order: 2
+                display: block
+                width: 100%
+                max-width: 373px
+                margin: 0 auto
+                height: 303px
+                object-position: top
+                object-fit: cover
+            &_info
+                padding: 0
+                margin: 0
+                max-width: 280px
+                h1
+                    font-size: 32px
+                p
+                    margin: 13px 0 0
+                    font-size: 14px
+        &__block
+            margin: 0
+            padding: 70px 0
+            z-index: 5
+            background: transparent
+            h2
+                max-width: 207px
+                font-size: 24px
+            &::before
+                content: none
+            &_wrapper
+                grid-template-columns: 100%
+                gap: 15px
+                margin: 207px 0 0
+                img
+                    right: 0
+                    left: 50%
+                    width: 147%
+                    max-width: 470px
+                    transform: translate(-50%, -56%)
+                    top: 0
+            &_item
+                z-index: 3
+                .name
+                    font-size: 14px
+                .text
+                    font-size: 14px
+    .talk
+        padding: 100px 0 550px
+        &::before
+            background: url('../img/page-recruiter/talk_img_mob.png') center no-repeat
+            max-width: 478px
+            width: 150%
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+            height: 630px
+            background-size: contain
+            background-position: center
+            right: auto
+            top: auto
+        &__wrapper
+            margin: 25px 0 0
+            max-width: 100%
+            gap: 15px
+            p
+                font-size: 14px
+        h2
+            font-size: 24px
+    .easy
+        padding: 36px 0 43px
+        &__title
+            h2
+                font-size: 64px
+                max-width: 300px
+            img
+                top: calc( 100% - 10px )
+                transform: none
+                max-width: 461px
+                left: 0
+                transform: translateX(-30%)
+                width: 159%
+        &__wrapper
+            margin: 335px auto 0
+            max-width: 100%
+            max-width: 400px
+            &::before
+                content: none
+        &__item
+            max-width: none
+            margin: 18px 0 0
+            width: calc( 100% + 50px )
+            padding: 20px 50px 20px 30px
+            gap: 20px
+            &:nth-child(even)
+                margin: 18px 0 0 -50px
+                padding: 20px 30px 20px 50px
+                grid-template-columns: 1fr auto
+                .easy__num
+                    order: 2
+        &__num
+            font-size: 64px
+        &__text
+            font-size: 12px
+    .wave
+        padding: 46px 0 31px
+        &__btn
+            margin: 240px 0 0
+            max-width: 100%
+            width: 100%
+            padding: 35px 0 30px
+            font-size: 24px
+        h2
+            font-size: 32px
+            max-width: 320px
+
+@media  ( max-width: 425px )
+    .talk
+        padding: 156px 0 537px
+        overflow: visible
+        z-index: 2
+        background: #F9F9F9
+        &::after
+            content: ''
+            display: block
+            width: 100%
+            position: absolute
+            bottom: 0
+            left: 0
+            bottom: 0
+            background: url('../img/page-recruiter/talk_bg_mob.svg') bottom no-repeat
+            background-size: contain
+            z-index: -2
+            height: 3000px
