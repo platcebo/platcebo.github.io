@@ -1,0 +1,15 @@
+.light-theme {
+    --background: #F5F5F5;
+    --text-blc: #222222;
+    --white: #fff;
+    --blue: #307FE2;
+    --btn: #4AD1A9;
+    --btn-hover: #5EE5BD;
+    --btn-active: #00704A;
+    --text-grey: #969696;
+    --slider-hover: #4E9DFF;
+    --slider-active: #1261C4;
+    --dots: #D7E3F2;
+    --about: #EBF1F9;
+    --red: #F94242;
+}
