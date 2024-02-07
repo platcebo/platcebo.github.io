@@ -1,0 +1,1783 @@
+.result__sort__wrap{
+	display: inline-block;
+	position: relative;
+	margin-right: 14px;
+	vertical-align: bottom;
+}
+
+.result__sort__wrap:first-of-type{
+	margin-left: 8px;
+}
+
+.result__sort__wrap:last-of-type{
+	margin-right: 0;
+}
+
+.credit__label__select-sort{
+	position: relative;
+	min-width: 121px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid #4A90E2;
+    font-weight: 700;
+    line-height: 17px;
+    color: #4A90E2;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    margin-top: 5px;
+    background-color: #f5f5f5;
+    border-radius: 0;
+}
+
+.credit_page .credit__label__select-sort{
+    min-width: 159px;
+}
+
+.vklad_page .credit__label__select-sort{
+    min-width: 142px;
+}
+
+.result__sort__wrap:last-of-type .credit__label__select-sort{
+	min-width: 244px;
+}
+
+.select__sort_blue{
+	pointer-events: none;
+}
+
+/*.select__sort_blue::after{
+	pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.87687 5.71259L0.258134 1.67788C-0.0860453 1.29318 -0.0860453 0.670647 0.258134 0.287118C0.602313 -0.095706 1.16063 -0.095706 1.5046 0.287118L4.50011 3.62691L7.49477 0.288058C7.83895 -0.095706 8.39705 -0.095706 8.74123 0.288058C9.08626 0.671587 9.08626 1.29412 8.74123 1.67788L5.12249 5.71259C4.95051 5.90459 4.72562 6 4.50011 6C4.27459 6 4.04802 5.90459 3.87687 5.71259Z' fill='%2367717F'/%3E%3Cmask id='mask0' mask-type='alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='9' height='6'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.87687 5.71259L0.258134 1.67788C-0.0860453 1.29318 -0.0860453 0.670647 0.258134 0.287118C0.602313 -0.095706 1.16063 -0.095706 1.5046 0.287118L4.50011 3.62691L7.49477 0.288058C7.83895 -0.095706 8.39705 -0.095706 8.74123 0.288058C9.08626 0.671587 9.08626 1.29412 8.74123 1.67788L5.12249 5.71259C4.95051 5.90459 4.72562 6 4.50011 6C4.27459 6 4.04802 5.90459 3.87687 5.71259Z' fill='white'/%3E%3C/mask%3E%3Cg mask='url(%23mask0)'%3E%3Crect x='-1' y='-1' width='11' height='8' rx='4' fill='%234A90E2'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    right: 0px;
+    bottom: -2px;
+    height: 100%;
+    z-index: 999;
+    background-color: #f5f5f5;
+    width: 9px;
+    margin-left: 3px;
+}*/
+
+
+
+
+
+
+/*-----------------------------------------------
+## ABOUT MICROCREDIT
+-------------------------------------------------*/
+.about-credit__wrap,
+.search-credit__wrap{
+    background-color: #fff;
+    padding: 14px 19px 15px 16px;
+    box-shadow: 0px 1px 6px rgba(224, 224, 224, 0.489838);
+}
+
+.about-credit__tittle{
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 29px;
+	color: #5F5F5F;
+	margin-bottom: 13px;
+	margin-top: 0;
+}
+
+.about-credit__tittle_sm{
+	font-weight: 700;
+	font-size: 22px;
+}
+
+.blue_select__wrap{
+	position: relative;
+	display: inline-block;
+}
+
+.blue_select{
+    display: inline-block;
+    line-height: 24px;
+    margin-left: 5px;
+    border: 0;
+    border-bottom: 1px solid #4A90E2;
+    font-weight: 500;
+    color: #4A90E2;
+    position: relative;
+    background-color: #fff;
+}
+
+.blue_select:after{
+	content: '';
+	display: inline-block;
+	width: 18px;
+	right: -24px;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    z-index: 99;
+	position: absolute;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg width='17' height='11' viewBox='0 0 17 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.10902 9.93237L0.675701 3.49943C0.0638275 2.88606 0.0638275 1.8935 0.675701 1.282C1.28757 0.671625 2.28014 0.671625 2.89164 1.282L8.21698 6.60697L13.5408 1.2835C14.1527 0.671625 15.1449 0.671625 15.7568 1.2835C16.3701 1.895 16.3701 2.88756 15.7568 3.49943L9.32345 9.93237C9.0177 10.2385 8.61791 10.3906 8.21698 10.3906C7.81606 10.3906 7.41327 10.2385 7.10902 9.93237Z' fill='%234A90E2'/%3E%3C/svg%3E ");
+}
+
+
+.about-credit__tittle__link{
+	font-size: 18px;
+	text-decoration-line: none;
+	color: #4A90E2;
+	display: inline-block;
+    vertical-align: top;
+}
+
+.about-credit__tittle__link_closer{
+	margin-left: 0px;
+}
+
+
+.credit_city{
+	border-bottom: 1px solid #4A90E2;
+}
+
+.credit__arrow_down svg{
+	width: 16px;
+	height: 13px;
+	margin-left: 5px;
+}
+
+.about-credit__img{
+	width: 256px;
+	max-height: 176px;
+	display: inline-block;
+	margin-right: 13px;
+}
+.about-credit__text{
+	display: inline-block;
+	vertical-align: top;
+	max-width: 64%;
+}
+
+.about-credit__text__paragraph{
+	line-height: 21px;
+	color: #3a3a3a;
+	margin-bottom: 9px;
+}
+
+.about-credit__text__paragraph:last-of-type{
+	margin-top: 14px;
+}
+
+/*---------------------------------------------
+## CREDIT FORM
+--------------------------------------------------*/
+.search-credit__wrap{
+	margin: 22px 0 20px;
+	width: 100%;
+	position: relative;
+}
+
+.search-credit__wrap{
+	margin: 0;
+}
+
+.tittle__icon{
+	margin-right: 5px;
+}
+
+.search-credit__form{
+	height: 166px;
+	overflow: hidden;
+}
+
+
+.vklad_page .search-credit__form,
+.credit_page .search-credit__form{
+	overflow: visible;
+}
+
+.vklad_page .credit__smth-important,
+.credit_page .credit__smth-important{
+	opacity: 0;
+}
+
+/*------------------------------
+## RANGE
+---------------------------------*/
+.credit__label{
+	position: relative;
+	width: 100%;
+	margin-top: 24px;
+}
+
+.credit__label_sm-m{
+	margin-top: 27px;
+}
+
+.credit__type-get{
+	margin-top: 29px;
+}
+
+.credit__smth-important{
+	margin-top: 16px;
+}
+
+.credit__label:first-of-type{
+	margin-top: 0;
+}
+
+.credit__label__info {
+	box-sizing: border-box;
+	padding: 0;
+	width: 100%;
+	text-align: right;
+	justify-content: space-between;
+	align-items: baseline;
+	-ms-flex-align: baseline;
+	display: flex;
+	display: -ms-flex;
+	margin-bottom: 5px;
+}
+
+.credit__label__tittle{
+	font-weight: 700;
+	line-height: 17px;
+	text-transform: uppercase;
+	color: #5F5F5F;
+}
+
+.credit__label__info__place{
+	width: 200px;
+	font-size: 18px;
+	line-height: 23px;
+	background-color: transparent;
+	border-radius: 21px;
+	border: 2px solid #EEEEEE;
+	margin-bottom: 0;
+}
+
+.credit__label__info__value{
+	color: #5F5F5F;
+	width: inherit;
+	border: none;
+	font-weight: 700;
+	padding-right: 21px;
+	background-color: transparent;
+	text-align: right;
+}
+
+.box-minmax{
+  width: 100%;
+  display: flex;
+  display: -ms-flex;
+  justify-content: space-between;
+  line-height: 19px;
+  color: #3A3A3A;
+  margin-bottom: 7px
+}
+
+.range_value {
+	font-size: 17px;
+	color: #4A90E2;
+	position: relative;
+    background: transparent;
+    line-height: 19px;
+    text-align: center;
+    font-weight: 700;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+    margin-left: 21px;
+}
+/*-----------------
+## PAYMENT
+--------------------*/
+.type-get__item{
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	border: 2px solid #eee;
+	box-sizing: border-box;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 11px;
+	line-height: 14px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #5F5F5F;
+	padding: 16px;
+	width: 182px;
+	max-height: 88px;
+	margin-right: 12px;
+	margin-top: 6px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.type-get__item:last-of-type{
+	margin-right: 0;
+}
+
+.type-get__item:hover{
+	border: 2px solid #B2B2B2;
+}
+
+.type-get__img{
+	display: block;
+	margin: auto;
+	height: 32px
+}
+
+.type-get__name{
+	margin-top: 8px;
+}
+
+.type-get__input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    height: 100%;
+}
+
+.type-get__input:checked + .checkmark__radio:before,
+.type-get__input:not(:checked) + .checkmark__radio:before {
+    content: '';
+    display: block;
+	width: 24px;
+	height: 24px;
+	border: 2px solid #D9D9D9;
+	border-radius: 100%;
+	position: absolute;
+	top: 12px;
+	left: 12px;
+	transition: all 0.3s ease;
+}
+
+.type-get__input:checked + .checkmark__radio:after{
+	display: block;
+	content: '';
+	width: 24px;
+	height: 24px;
+	background-image: url("data:image/svg+xml,%3Csvg width='16' height='13' viewBox='0 0 16 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.931 0.979807C13.4322 0.459856 12.5771 0.459856 12.0782 0.979807L6.15798 7.12487L3.59837 4.43487C3.09972 3.91491 2.24438 3.91491 1.74574 4.43487L0.712365 5.51244C0.213717 6.03262 0.213717 6.92421 0.712365 7.44416L5.23739 12.1997C5.73626 12.7199 6.59131 12.7199 7.09018 12.1997L8.12339 11.1224C8.17882 11.0646 8.22809 11.0022 8.2712 10.9363L14.9642 3.9891C15.4631 3.46915 15.4631 2.57728 14.9642 2.05733L13.931 0.979807Z' fill='white'/%3E%3C/svg%3E%0A");
+	background-color: #66BB6A;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 100%;
+	position: absolute;
+	top: 12px;
+	left: 12px;
+	right: 0;
+	bottom: 0;
+}
+
+/*-----------------------------
+## CHECKBOX
+-----------------------------*/
+.important__wrap{
+	display: inline-block;
+	width: 49%;
+	line-height: 22px;
+	color: #3A3A3A;
+	margin-top: 6px;
+	vertical-align: text-top;
+}
+
+.important__item{
+	position: relative;
+	padding-left: 0px;
+	margin-bottom: 10px; 
+}
+
+.important__item_check{
+	padding-left: 24px;
+}
+
+.important__wrap:last-of-type{
+	padding-left: 15px; 
+}
+
+
+.important__input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.checkmark__box{
+	display: block;
+	width: 16px;
+	height: 16px;
+	border: 2px solid #D9D9D9;
+	border-radius: 2px;
+	position: absolute;
+	top: 3px;
+	left: 0px;
+	margin-right: 8px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.important__input:checked + .checkmark__box:after{
+	display: block;
+	content: '';
+	width: 16px;
+	height: 16px;
+	background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.09768 0.307446C8.78136 -0.00873186 8.2392 -0.00873186 7.92288 0.307446L4.16903 4.0442L2.54606 2.40843C2.22988 2.09226 1.68754 2.09226 1.37137 2.40843L0.716137 3.0637C0.39996 3.38002 0.39996 3.92218 0.716137 4.23836L3.58531 7.13016C3.90163 7.44648 4.4438 7.44648 4.76012 7.13016L5.41524 6.47508C5.45038 6.43993 5.48162 6.402 5.50896 6.3619L9.75281 2.13737C10.0691 1.82119 10.0691 1.27885 9.75281 0.962675L9.09768 0.307446Z' fill='white'/%3E%3C/svg%3E ");
+	background-color: #66BB6A;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 2px;
+	position: absolute;
+	top: -2px;
+	left: -1px;
+	right: 0;
+	bottom: 0;
+}
+
+.show-hide__filters {
+    display: inline-block;
+    width: 100%;
+    background-color: #fafafa;
+   	padding: 12px 3px 10px 0;
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #67717F;
+    margin-top: 6px;
+    position: relative;
+    z-index: 999;
+}
+
+/*.show-hide__filters_margin {
+    margin-top: 6px;
+}*/
+
+.show-hide__filters:hover, 
+.show-hide__filters:focus,
+.show-hide__filters:active {
+   text-decoration: none;
+    color: #67717F;
+}
+
+.show-hide__filters:after{
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    width: 9px;
+    height: 9px;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+}
+
+.show__filter:after{
+    background-image: url("data:image/svg+xml,%3Csvg width='9' height='7' viewBox='0 0 9 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.87687 6.21259L0.258134 2.17788C-0.0860453 1.79318 -0.0860453 1.17065 0.258134 0.787118C0.602313 0.404294 1.16063 0.404294 1.5046 0.787118L4.50011 4.12691L7.49477 0.788058C7.83895 0.404294 8.39705 0.404294 8.74123 0.788058C9.08626 1.17159 9.08626 1.79412 8.74123 2.17788L5.12249 6.21259C4.95051 6.40459 4.72562 6.5 4.50011 6.5C4.27459 6.5 4.04802 6.40459 3.87687 6.21259Z' fill='%2367717F'/%3E%3C/svg%3E%0A");
+}
+
+.hide-filter:after{
+    background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.12313 0.757523L8.74187 4.37605C9.08605 4.72107 9.08605 5.27939 8.74187 5.62336C8.39769 5.96669 7.83937 5.96669 7.4954 5.62336L4.49989 2.62806L1.50523 5.62251C1.16105 5.96669 0.602945 5.96669 0.258767 5.62251C-0.0862555 5.27855 -0.0862555 4.72023 0.258767 4.37605L3.87751 0.757523C4.04949 0.585328 4.27438 0.499757 4.49989 0.499757C4.72541 0.499757 4.95198 0.585328 5.12313 0.757523Z' fill='%2367717F'/%3E%3C/svg%3E%0A");
+}
+
+/*-------------------------------------
+## BUTTON
+----------------------------------------*/
+.button__wrap{
+	display: block;
+	text-align: right;
+	padding-right: 0px;
+}
+
+.orange_button{
+	font-weight: 700;
+	line-height: 17px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	background: #F59D22;
+	border-radius: 21px;
+	border: 0;
+	padding: 9.5px 0;
+	width: 149px;
+	transition: all 0.3s ease;
+	display: inline-block;
+}
+
+.orange_button:hover{
+	box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.3);
+	color: #fff;
+}
+
+.orange_button:focus,
+.orange_button:active{
+	color: #fff;
+}
+
+/*-----------------------------------------------
+## SEARCH RESULT
+----------------------------------------------------*/
+.search-credit__result{
+	width: 100%;
+}
+
+.search-credit__result__header{
+	display: flex;
+	display: -ms-flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.result__tittle{
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 24px;
+	color: #5F5F5F;
+}
+
+.result__number{
+	color: #4A90E2;
+	margin-left: 4px;
+}
+
+.result__sort{
+	text-align: right;
+	font-weight: 400;
+	line-height: 17px;
+	text-align: right;
+	color: #3A3A3A;
+}
+
+.arr_down{
+	width: 13px;
+    height: 16px;
+    display: inline-block;
+}
+
+.result__sort__item{
+	border-bottom: 1px solid #4A90E2;
+	color: #4A90E2;
+	margin: 0 3px 0 7px;
+}
+
+.result__sort__wrap:hover,
+.result__sort__wrap:active,
+.result__sort__wrap:focus{
+	text-decoration: none;
+}
+/*----
+HEAD RESULT
+-----*/
+.search-credit__result__item{
+	background-color: #fff;
+	padding: 14px 18px 14px 16px;
+	margin-bottom: 17px;
+}
+
+.result__item__head,
+.result__item__main-info{
+	border-bottom: 1px solid #e2e2e2;
+	display: flex;
+	display: -ms-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	-ms-flex-align: center;
+	justify-content: flex-start;
+	padding-bottom: 16px;
+	margin: 0;
+}
+
+.bank_description{
+	margin-left: 34px;
+	max-height: 44px;
+}
+
+.bank_description__item{
+	font-weight: 700;
+	line-height: 20px;
+	margin-bottom: 6px;
+	color: #050505;
+}
+
+.bank_name{
+	line-height: 17px;
+	text-transform: capitalize;
+	color: #5F5F5F;
+}
+
+.result__head-button{
+	margin-left: auto;
+	width: 200px;
+}
+
+.button__result{
+	max-width: 168px;
+	padding: 13px 0;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+/*---------
+RESULT BODY
+-------------*/
+.result__item__main-info{
+	padding-top: 8px;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding: 8px 50px 10px 17px;
+}
+
+.main-info__item:last-of-type{
+	width: 18%;
+}
+
+.main-info__img{
+	margin-right: 6px;
+}
+
+.main-info__img,
+.main-info__descr{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.main-info__key{
+	line-height: 17px;
+	color: #5F5F5F;
+	margin-bottom: 2px;
+}
+
+.main-info__value{
+	font-weight: 700;
+	line-height: 19px;
+	color: #5F5F5F;
+}
+
+/*------
+DOP RESULT
+--------*/
+.result__item__dop-info{
+	display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 7px;
+    overflow: hidden;
+}
+
+.dop-info__item__tittle{
+	font-weight: 700;
+	line-height: 17px;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #5F5F5F;
+	margin-bottom: 13px;
+}
+
+.dop-info__item{
+	width: 49%;
+	font-size: 0;
+	display: inline-block;
+    vertical-align: text-top;
+}
+
+.dop-info__get{
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 6px;
+}
+
+.dop-info__item:last-of-type{
+	padding-left: 4px;
+}
+
+.dop-info__get__item{
+	margin-top: 12px;
+	min-height: 26px;
+    display: flex;
+    display: -ms-flexbox;
+    flex-wrap: wrap;
+    align-items: center;
+    -ms-flex-align: center;
+}
+
+.dop-info__item:first-of-type .dop-info__get__item:last-of-type{
+	margin-top: 16px;
+}
+
+.yandex_money{
+	margin-top: 12px;
+}
+
+.dop-info__get__item:first-of-type{
+	margin-top: 0;
+}
+
+.dop-info__img{
+	display: inline-block;
+	width: 24px;
+	margin-right: 16px;
+}
+
+.dop-info__list__value{
+	font-size: 13px;
+	line-height: 16px;
+	color: #3A3A3A;
+	white-space: pre-line;
+    max-width: 75%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dop-info__list{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	line-height: 24px;
+	color: #3A3A3A;
+}
+
+.list__item{
+	position: relative;
+	margin-bottom: 9px;
+}
+
+.list__item:last-of-type{
+	margin-bottom: 0;
+}
+
+.list__item__key{
+	font-weight: 700;
+	text-align: right;
+	position: absolute;
+	right: 1px;
+}
+
+.show__dop-result{
+	margin-bottom: 0;
+	padding: 9px 72px 10px 0px;
+	margin-top: 0;
+}
+
+.show__more_res{
+	background: #EAEAEA;
+	margin-bottom: 12px;
+	padding: 9px 3px 9px 0px;
+}
+
+/*-------------------------------
+## CREDITS PAGE
+-------------------------------*/
+.search-credit__form_short{
+	height: 132px;
+}
+
+.select__vallet__wrap{
+	position: relative;
+	width: 60px;
+}
+
+.select__period_blue,
+.select__period_green{
+    pointer-events: none;
+}
+
+.select__period_green::before{
+    pointer-events: none;
+   	background-image: url("data:image/svg+xml,%3Csvg width='9' height='7' viewBox='0 0 9 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.87687 6.50946L0.258134 2.47476C-0.0860453 2.09005 -0.0860453 1.46752 0.258134 1.08399C0.602313 0.701169 1.16063 0.701169 1.5046 1.08399L4.50011 4.42379L7.49477 1.08493C7.83895 0.701169 8.39705 0.701169 8.74123 1.08493C9.08626 1.46846 9.08626 2.09099 8.74123 2.47476L5.12249 6.50946C4.95051 6.70146 4.72562 6.79687 4.50011 6.79687C4.27459 6.79687 4.04802 6.70146 3.87687 6.50946Z' fill='%2367717F'/%3E%3Cmask id='mask0' mask-type='alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='9' height='7'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.87687 6.50946L0.258134 2.47476C-0.0860453 2.09005 -0.0860453 1.46752 0.258134 1.08399C0.602313 0.701169 1.16063 0.701169 1.5046 1.08399L4.50011 4.42379L7.49477 1.08493C7.83895 0.701169 8.39705 0.701169 8.74123 1.08493C9.08626 1.46846 9.08626 2.09099 8.74123 2.47476L5.12249 6.50946C4.95051 6.70146 4.72562 6.79687 4.50011 6.79687C4.27459 6.79687 4.04802 6.70146 3.87687 6.50946Z' fill='white'/%3E%3C/mask%3E%3Cg mask='url(%23mask0)'%3E%3Crect x='-1' y='-0.203125' width='11' height='8' rx='4' fill='%2366BB6A'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+    z-index: 999;
+    background-color: #fff;
+    width: 9px;
+}
+
+.select__vallet__wrap .select__period_green::before{
+    bottom: -2px;
+}
+
+.select__period__wrap_check .select__period_green::before{
+	height: 50%;
+	top: 2px;
+}
+
+.credit__label__select-vallet{
+    display: inline-block;
+    min-width: 60px;
+    border: 0;
+    font-weight: 700;
+    line-height: 17px;
+    color: #66BB6A;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    margin-top: 6px;
+    background: #fff;
+}
+
+.dop-info__item_max-width{
+	width: 100%;
+}
+
+.list__item_inline{
+	display: inline-block;
+	width: 48%;
+}
+
+.list__item_inline:first-of-type{
+	margin-right: 2%;
+}
+/*------------------------------------
+## TABS
+--------------------------------------*/
+.nav-tabs__wrap{
+	background-color: #fff;
+	margin: 16px 0;
+	padding: 4px 0;
+	width: 100%;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs__link{
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 17px;
+	color: #000000;
+	padding: 3px 15px!important;
+	margin: 0!important;
+}
+
+.nav-tabs__item{
+	border-right: 1px solid #E2E2E2;
+}
+
+.nav-tabs__item:last-of-type{
+	border-right: none;
+}
+
+.nav-tabs__link:hover{
+	color: #000000;
+	border-radius: 0;
+	border-color: transparent!important;
+}
+
+.search-credit__wrap_tabs{
+	width: 100%;
+}
+
+.more__tabs{
+	position: absolute;
+    background-color: #fff;
+    z-index: 99;
+    list-style-type: none;
+    padding: 0;
+    width: 200px;
+    right: 0;
+    border: 0;
+    padding: 8px;
+}
+
+.more__tabs__item{
+	border-bottom: 1px solid #e2e2e2;
+	border-right: 0;
+	padding: 4px 0;
+}
+
+.more__tabs__item:hover{
+	background-color: #eee;
+}
+
+.more__tabs__item:last-of-type{
+	border-bottom: none;
+}
+
+.more__tabs__item .nav-tabs__link{
+	padding: 0!important;
+}
+/*-------------------------------
+## FILTER LIST
+------------------------------------*/
+.filters-info__wrap{
+	margin-top: 24px;
+	background-color: #fff;
+	color: #000000;
+	padding: 16px 8px
+}
+
+.filters-info__tittle{
+	font-weight: 700;
+	line-height: 17px;
+}
+
+.filters-info{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.filters-info__item{
+	margin: 16px 0;
+	font-size: 13px;
+	line-height: 14px;
+}
+
+.filters-info__link{
+	color: inherit;
+}
+
+.result__tittle_big{
+	width: 100%;
+	font-size: 20px;
+	line-height: 24px;
+	color: #5F5F5F;
+	margin: 30px 0 16px;
+}
+
+
+
+@media all and (-ms-high-contrast:none){
+    *::-ms-backdrop, .main-content__center{
+        justify-content: space-between;
+    }
+
+        select::-ms-expand {
+        display: none;
+    }
+ }
+
+@media (max-width: 1100px){
+	.about-credit__text {
+	    max-width: 63%;
+	}
+
+	.nav-tabs__link {
+	    padding: 3px 14px!important;
+	}
+
+	.type-get__item{
+		width: 172px;
+	}
+}
+
+
+
+@-moz-document url-prefix()
+{
+
+	.blue_select::after{
+		top: 1px;
+	}
+
+	.credit__label__select-sort {
+	    min-width: 123px;
+	}
+
+	.select__sort_blue::after{
+		bottom: -2px;
+	}
+
+	.select__vallet__wrap .select__period_green::before {
+	    bottom: -3px;
+	}
+}
+
+
+
+/* The container must be positioned relative: */
+.select__vallet__wrap,
+.result__sort__wrap {
+  position: relative;
+}
+
+.select-selected {
+  position: relative;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid #4A90E2;
+    font-weight: 700;
+    line-height: 17px;
+    color: #4A90E2;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    margin-top: 5px;
+    background-color: #f5f5f5;
+    border-radius: 0;
+    width: 156px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.microcredit_page .select-selected {
+	width: 123px;
+}
+
+
+.vklad_page .select-selected {
+    width: 143px;
+}
+
+.result__sort__wrap:last-of-type .select-selected{
+	width: 240px;
+}
+
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div{
+  padding: 8px;
+  cursor: pointer;
+    text-align: left;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #e2e2e2;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+/*------------------------------------------------------------------------
+## MEDIA
+--------------------------------------------------------------------------*/
+
+@media (max-width: 1024px){
+
+    .dop-info__img {
+        margin-right: 10px;
+    }
+    
+    .dop-info__get {
+        margin-right: 0px;
+    }
+
+	.nav-tabs__link {
+	    padding: 3px 10px !important;
+	}
+	
+	.result__sort__item{
+		margin: 0 0px 0 3px;
+	}
+	
+	.arr_down{
+		width: 10px;
+	}
+
+	.type-get__item {
+	    width: 167px;
+	}
+	
+	.about-credit__text{
+		max-width: 100%;
+	    height: 145px;
+	    overflow: hidden;
+	}
+	
+	.about-credit__img {
+		position: absolute;
+	    left: -43%;
+	    top: 0;
+	    bottom: 0;
+	    margin: auto;
+	    width: 320px;
+	    max-height: 200px;
+	}
+	.about-credit__img img{
+		width: 100%;
+		height: 100%;
+	}
+	
+	.about-credit__wrap{
+		position: relative;
+	    width: 70%;
+	    margin-left: auto;
+	    padding: 50px 0px 50px 108px;
+	}
+	
+	.breadcrumbs{
+		width: 100%;
+	}
+}
+
+@media (max-width: 991px){
+
+    .dop-info__get {
+        width: 50%;
+    }
+
+    .dop-info__img {
+        margin-right: 6px;
+    }
+
+    .main-info__item:last-of-type {
+        width: auto;
+    }
+    
+    .head-button_center_xs {
+        width: auto;
+        margin-left: auto;
+    }
+
+    .type-get__item {
+        width: 48%;
+    }
+
+    .type-get__item:nth-of-type(odd) {
+        margin-right: 0;
+    }
+    
+    .investments_page .main-content-wrap {
+        padding-left: 0!important; 
+        padding-right: 0;
+    }
+	.result__sort__wrap:first-of-type{
+		margin-right: 0;
+	}
+	.main-content__sidebar {
+	    padding: 0 12px!important;
+	}
+
+	.dop-info__item__tittle{
+		font-size: 13px;
+	}
+	.result__item__main-info {
+	    padding: 8px 16px 10px 17px;
+	}
+
+
+
+	.show__dop-result{
+		padding-right: 0;
+	}
+	.about-credit__img {
+	    width: 255px;
+	    max-height: 176px;
+	}
+	
+	.main-content__sidebar{
+		margin-left: 0!important;
+	}
+	
+	.bank_description{
+		margin: auto;
+    	text-align: center;
+	}
+	
+	.select__period__wrap_check .select__period_green::before{
+		height: 36%;
+		top: 2px;
+	}
+	
+	.result__tittle {
+	    font-size: 17px;
+	}
+	
+	.result__sort__item{
+		margin: 0;
+	}
+	
+	.arr_down {
+    	width: 10px;
+	}
+	
+	.bank_description{
+		margin-top: 15px;
+	}
+	
+	.bank-info .bank_description{
+		text-align: left;
+	}
+}
+
+@media (max-width: 768px){
+
+    /*.main-content__sidebar{
+        display: block!important;
+    }*/
+    
+    .search-credit__result{
+        margin-top: 16px;
+    }
+    
+    .block__item__comment-md__left{
+        position: absolute;
+        left: 70px;
+        bottom: 8px;
+    }
+
+    .head-button_center_xs {
+        margin-right: auto;
+    }
+    .main-info__item:last-of-type {
+        width: 21%;
+    }
+    
+    .investments_page .main-content__sidebar{
+        display: none;
+    }
+    
+    .investments_page .main-content-wrap,
+    .investments_page .usefull-articles,
+    .investments_page .articles__item{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    .investments_page .article__img{
+        width: 100%;
+        max-height: 100%;
+    }
+    
+    .investments_page .articles__item:nth-of-type(odd) {
+        margin-right: 0px;
+    }
+    
+    .show__details {
+        display: none;
+    }
+
+    .type-get__item {
+        width: 161px;
+    }
+
+    .result__sort__wrap:last-of-type{
+        margin-right: 0;
+    }
+
+    .type-get__item:nth-of-type(odd) {
+        margin-right: 12px;
+    }
+
+
+    .type-get__item:last-of-type {
+        margin-right: 0;
+    }
+	.about-credit__wrap{
+		width: 100%;
+	}
+	
+	.main-content__center{
+		width: 100%;
+	}
+	
+	.about-credit__wrap{
+		padding: 16px;
+	}
+	
+	.about-credit__tittle{
+		margin-bottom: 0;
+	}
+	
+	.search-credit__wrap{
+		margin-top: 0;
+	}
+	
+	.ipoteka_page .bank_description{
+		width: 33%;
+	    left: -36%;
+	    text-align: left;
+	    margin-top: 0;
+	}
+	
+	.ipoteka_page .result__head-button{
+		left: 47%;
+	}
+	
+	.debit-cards_page .search-credit__result__item{
+		padding-bottom: 16px;
+	}
+
+	.result__head-button {	    
+		text-align: right;
+	}
+
+	.main-content__center {
+	    padding-right: 12px!important;
+	}
+
+
+	.result__item__dop-info {
+	    display: block;
+	}
+}
+
+@media (max-width: 767px){
+
+    .main-content__sidebar{
+    	display: none!important;
+    }
+    .investments_page .article__img,
+    .article__img {
+        display: inline-block;
+        width: 115px;
+        height: 84px;
+    }
+    
+    .block__item__comment-md{
+        position: absolute;
+        right: 0;
+        bottom: 8px;
+    }
+    
+    .type-get__item {
+        width: 170px;
+    }
+    
+    .main-content__center > .row,
+    .articles_wrap{
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .main-content__center > .row{
+        display: flex;
+        display: -ms-flex;
+        flex-wrap: wrap;
+    }
+    
+    .main-content-wrap {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    
+    .articles_wrap .col-md-4{
+        padding-right: 0px;
+        padding-left: 0;
+    }
+    
+    .result__item__main-info{
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        justify-content: flex-start;
+        align-items: baseline;
+    }
+    
+    .bank_description{
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .show-hide__filters {
+        display: inline-block;
+        width: 100%;
+        padding: 12px 3px 10px 0;
+        text-align: center;
+        margin-bottom: 7px;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 14px;
+        text-transform: uppercase;
+        color: #67717F;
+        margin-top: 6px;
+    }
+    
+    .credit__arrow_down svg {
+        width: 8px;
+        height: 9px;
+        margin-left: 2px;
+    }
+    
+    .search-credit__wrap{
+        margin-top: 0;
+    }
+    
+    .credit__label__tittle{
+        font-size: 12px;
+        line-height: 14px;
+    }
+    
+    .credit__label__info__place {
+        width: 142px;
+    }
+    
+    .search-credit__result__header{
+        padding: 0 14px;
+        align-items: flex-start;
+        -ms-flex-align: center;
+    }
+    
+    .result__sort__item {
+        margin: 0 3px 2px 7px;
+        display: inline-block;
+    }
+    
+    .bank-logo{
+        max-width: 132px;
+    }
+    
+    .button__result{
+        font-size: 14px;
+        max-width: 180px;
+    }
+    
+    .result__head-button{
+        max-width: 180px;
+        padding: 0;
+    }
+    
+    .main-info__item{
+        margin-bottom: 10px;
+    }
+    
+    .main-info__item:last-of-type{
+        width: auto;
+        margin-bottom: 0;
+    }
+    
+    .main-info__value,
+    .main-info__key{
+        display: inline-block;
+        vertical-align: text-top;
+    }
+    
+    .main-info__key{
+        margin-right: 0px;
+        width: 165px;
+    }
+
+    .type-get__item {
+        margin-right: 5px;
+    }
+    
+    .dop-info__item {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    
+    .type-get__item:nth-of-type(odd) {
+        margin-right: 0px; 
+    }
+	
+	.result__item__main-info{
+		padding-right: 16px;
+		padding-left: 0;
+	}
+
+
+	.list__item_inline {
+	    display: block;
+	    width: 100%;
+	}
+
+	.result__sort {
+	    display: flex;
+	    display: -ms-flex;
+	    flex-wrap: wrap;
+	    flex-direction: column;
+	    -webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	    align-items: flex-end;
+	    -ms-flex-align: flex-end;
+	}
+
+
+	.selectric .label{
+		font-size: 12px;
+	}
+
+	.main-info__item,
+	.main-info__item:last-of-type{
+		width: 100%;
+	}
+	
+	.credit__label__info__place {
+    	font-size: 16px;
+	}
+	
+	.select__period__wrap_check .select__period_green::before{
+		height: 50%;
+		top: 2px;
+	}
+	
+	.ipoteka_page .bank_description {
+	     width: 100%;
+	     left: auto; 
+	     text-align: center; 
+	     margin-top: 15px; 
+	}
+		
+	.ipoteka_page .result__head-button {
+	     left: auto; 
+	}
+	
+	.result__sort__wrap{
+		margin-right: 0;
+	}
+
+	.about-credit__tittle .blue_select{
+		margin-left: 0;
+	}
+}
+
+@media (max-width: 735px){
+    .type-get__item {
+        width: 48%;
+    }
+}
+
+@media (max-width: 475px){
+	.about-credit__tittle {
+	    font-size: 17px;
+	}
+}
+
+@media (max-width: 425px){
+	.about-credit__tittle {
+	    font-size: 15px;
+	}
+}
+
+@media (max-width: 375px){
+	.result__sort__wrap:last-of-type .select-selected {
+	    width: 225px;
+	}
+
+	.vklad_page .select-selected {
+    width: 132px;
+}
+    
+    .search-credit__result__header {
+        padding: 0 18px;
+    }
+    
+    .main-info__key {
+        margin-right: 0px;
+        width: 160px;
+    }
+    
+    .microcredit_page .main-info__key {
+        width: 91px;
+    }
+    
+    .online-credit__title_xs {
+        max-width: 90%;
+    }
+
+
+    .main-content__center > .row,
+    .articles_wrap{
+        margin-left: 0;
+    }
+
+    .main-content-wrap {
+        padding-left: 0;
+    }
+
+    .main-content .row .main-content__sidebar {
+        padding-right: 12px!important;
+    }
+
+    .usefull-articles {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+
+    .credit__label__info__place {
+        width: 124px;
+    }
+
+	.result__tittle {
+	    font-size: 14px!important;
+	}
+
+	.result__sort{
+		font-size: 13px;
+	}
+
+	.list__item {
+	    margin-bottom: 3px;
+	}
+	
+	.dop-info__item:last-of-type{
+		margin-bottom: 0!important;
+	}
+
+	.credit__label__info__value {
+	    padding-right: 12px;
+	}
+
+	.result__sort__wrap:last-of-type .credit__label__select-sort {
+	    min-width: 227px;
+	}
+
+	.credit_page .credit__label__select-sort {
+	    min-width: 146px;
+	}
+
+}
+
+@media (max-width: 340px){
+	.result__tittle {
+	    font-size: 13px !important;
+	}
+
+	.result__number{
+		margin-right: 0;
+	}
+
+	.result__sort {
+	    font-size: 12px;
+	}
+}
+
+@media (max-width: 320px){
+	.microcredit_page .select-selected {
+	    width: 107px;
+	}
+
+	
+	.select-selected {
+	    width: 135px;
+	}
+	.result__sort__wrap:last-of-type .select-selected {
+	    width: 207px;
+	}
+
+	.vklad_page .select-selected {
+	    width: 121px;
+	}
+		    
+    .search-credit__result__header {
+        padding: 0 3px;
+    }
+    
+    .main-content__center > .row,
+    .articles_wrap{
+        margin-right: 0;
+    }
+    
+    .main-content-wrap {
+        padding-right: 0;
+    }
+    
+    .result__sort__item {
+        margin: 0 0px 2px 0px;
+    }
+    
+    .investments_page .article__item__tittle {
+        max-width: 58%;
+    }
+    
+    .button_center{
+        width: 280px;
+    }
+    
+    .result__tittle{
+        font-size: 13px;
+    }
+    
+    .result__sort{
+        font-size: 12px;
+    }
+
+    .button__result,
+    .result__head-button{
+        max-width: 140px;
+    }
+    
+    .main-info__key {
+        width: 142px;
+    }
+    
+    .result__item__main-info{
+        padding-right: 0;
+    }
+    
+    .credit__label__info__place {
+        width: 124px;
+    }
+    
+    .type-get__item {
+        width: 138px;
+        padding: 6px;
+    }
+
+    .result__tittle {
+        font-size: 13px!important;
+    }
+	.credit__label__info__place {
+	    font-size: 14px;
+	}
+	
+	.result__sort__wrap:last-of-type .credit__label__select-sort {
+	    min-width: 210px;
+	}
+	
+	.credit__label__select-sort {
+	    min-width: 107px;
+	}
+	
+	.credit_page .credit__label__select-sort {
+	    min-width: 140px;
+	}
+	
+	.vklad_page .credit__label__select-sort{
+		min-width: 123px;
+	}
+	
+	.result__number{
+		margin-left: 0;
+	}
+
+	.important__item{
+		font-size: 13px;
+	}
+	.result__item__main-info{
+	    padding-right: 0;
+	    padding-left: 0!important;
+	}
+
+}

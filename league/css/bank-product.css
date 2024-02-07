@@ -1,0 +1,406 @@
+.search-credit__result__item__credit{
+	background-color: #fff;
+	padding: 14px 18px 14px 16px;
+	margin-bottom: 17px;
+	display: block;
+}
+
+.breadcrumbs{
+	margin-bottom: 0;
+}
+
+.bank_description_credit{
+	margin-left: 34px;
+	max-height: 44px;
+}
+
+.result__head-button{
+	margin-top: 5px;
+}
+
+.result__head-button_credit{
+	margin-left: auto;
+	width: 200px;
+}
+
+.result__item__main-info_credit{
+	padding-top: 8px;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding: 8px 50px 10px 17px;
+}
+
+.search-credit__result__item__credit .result__item__head{
+	padding-top: 0;
+}
+
+/*------
+DOP RESULT
+--------*/
+.result__item__dop-info_credit{
+	display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 7px;
+    overflow: hidden;
+}
+
+.dop-info__item_credit{
+	width: 100%;
+	font-size: 0;
+	display: inline-block;
+    vertical-align: text-top;
+}
+
+.about-product__wrap{
+	background-color: #fff;
+	padding: 14px 16px 16px 16px;
+	width: 100%;
+	margin-bottom: 16px;
+	margin-top: 16px;
+}
+
+.about-product__tittle{
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 29px;
+	color: #5F5F5F;
+	margin-bottom: 15px;
+}
+
+.about-product__item{
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #E2E2E2;
+}
+
+
+.button__result {
+    padding: 11px 0;
+}
+
+.about-product__list__tittle{
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 24px;
+	color: #3A3A3A;
+	margin-top: 10px;
+	margin-bottom: 6px;
+	width: 100%;
+}
+
+.dop-info__list_prod .main-info__img{
+	margin-right: 12px;
+}
+
+/*.dop-info__list{
+	width: 50%;
+}*/
+
+.dop-info__list_prod .list__item__value{
+	width: 67%;
+    line-height: 20px;
+    display: inline-block;
+}
+
+.about-product__img{
+	width: 24px;
+	height: 24px;
+	margin-right: 3px;
+}
+
+.about-product__list{
+	width: 100%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.about__list__item{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 12px;
+}
+
+.about__list__item__value{
+	width: 40%;
+}
+
+.about__list__item__key{
+	width: 50%;
+}
+
+.calc__tittle{
+	margin-top: 16px;
+}
+
+.main-info__item:last-of-type {
+   width: auto;
+}
+
+.result__item__main-info{
+	border-bottom: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.result__item__main-info_credit .main-info__item{
+	margin-bottom: 0;
+}
+
+.result__item__main-info_credit_dop{
+	margin-bottom: 12px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #e2e2e2;
+}
+
+
+.result__tittle{
+	display: flex;
+}
+
+.raiting__mark{
+	display: none;
+}
+
+.result__number{
+	line-height: 25px;
+    margin-right: 16px;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.raiting{
+	max-height: 24px;
+}
+
+.dop-info__list_prod{
+	width: 48%;
+}
+
+.dop-info__list_prod .list__item__key{
+	text-align: left;
+	width: 32%;
+}
+
+.dop-info__list_prod:last-of-type .list__item__key{
+	text-align: right;
+	width: 32%;
+}
+
+.about-product__cond{
+	padding-bottom: 9px;
+}
+
+@media (max-width: 991px){
+	.result__head-button_credit{
+		text-align: right;
+	}
+
+	.dop-info__list_prod .list__item__value {
+	    width: 50%;
+	    line-height: 16px;
+	    display: inline-block;
+	    vertical-align: super;
+	}
+
+	.dop-info__list_prod .list__item__key {
+	    line-height: 16px;
+	}
+
+	.button_green_large{
+		font-size: 16px;
+	}
+
+	.main-info__item:last-of-type{
+		width: auto!important;
+	}
+
+	.result__item__main-info_credit{
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media (max-width: 768px){
+
+	.bank_description_credit{
+		margin-left: 0;
+	}
+	.main-content__center {
+	     padding-right: 12px!important; 
+	}
+
+	.about-product__wrap{
+		margin-top: 0;
+	}
+
+	.dop-info__list_prod .list__item__key,
+	.dop-info__list_prod:last-of-type .list__item__key {
+	    width: 36%;
+	}
+
+	.dop-info__list{
+		width: 50%;
+	}
+
+	.result__item__dop-info {
+	    display: block!important;
+	}
+
+	.dop-info__item_credit .dop-info__list {
+	    width: 100%;
+	}
+}
+
+@media (max-width: 767px){
+	.search-credit__result__wrap{
+		width: 100%;
+	}
+
+	.about-product__tittle {
+    	font-size: 19px;
+	}
+	
+	.about-product__item .dop-info__list_prod{
+		width: 100%;
+		margin-bottom: 8px;
+	}
+	
+	.dop-info__list_prod:last-of-type .list__item__key {
+    	text-align: left;
+	}
+	
+	.main-info__item,
+	.main-info__item:last-of-type{
+		width: 100%;
+	}
+	
+	
+	.main-info__key {
+	    width: 154px!important;
+	}
+	
+	.main-info__value {
+	    margin-bottom: 8px;
+	}
+
+	.main-info__item:last-of-type{
+		width: 100%!important;
+	}
+}
+
+
+@media (max-width: 425px){
+	.list__item_inline{
+		width: 100%;
+	}
+}
+
+@media (max-width: 375px){
+	.comment__answer::after {
+    	right: -7px;
+	}
+	
+	.about__list__item__value {
+	    width: 45%;
+	}
+	
+	.credit__label__tittle {
+	    width: 53%;
+	}
+	
+	.credit__label__info__place {
+    	width: 117px;
+	}
+	
+	.result__tittle {
+    	font-size: 14px;
+	}
+	
+	.button_green_large {
+	    width: 300px;
+	    padding: 8px 0;
+	}
+	
+	.result__number {
+    	font-size: 19px;
+	}
+	
+	.result__number {
+	    margin-right: 8px;
+	    font-size: 25px;
+	}
+	
+	.comment__news,
+	.otzivy__ask__y-n{
+   		margin-left: 0px;
+	}
+
+	.button_green_large {
+	    font-size: 14px;
+	}
+
+}
+
+@media (max-width: 320px){
+	.list__item {
+	    margin-bottom: 8px;
+	}
+
+	.bank_description_credit {
+	     margin-left: 0;
+	}
+	.about-product__tittle {
+	    font-size: 17px;
+	}
+
+	.button__result {
+    	max-width: 142px;
+	}
+	
+	.dop-info__list_prod .list__item__key {
+	    line-height: 14px;
+	}
+	
+	.dop-info__list {
+	     width: auto; 
+	}
+	
+	.main-info__key {
+	    width: 109px!important;
+	}
+	
+	.comment__news,
+	.otzivy__ask__y-n,
+	.comment__name,
+	.add__comment{
+		font-size: 12px;
+	}
+	.comment__date{
+		font-size: 11px;
+	}
+	
+	.rating__star,
+	.rating__button{
+		width: 12px;
+		height: 12px;
+	}
+	
+	.comment__body{
+		width: 75%;
+	}
+
+	.list__item_inline:first-of-type{
+		margin-right: 0;
+	}
+
+	.list__item_inline{
+		width: 100%;
+	}
+}

@@ -1,0 +1,93 @@
+.redaction__wrap,
+.contacts__wrap{
+	background-color: #fff;
+	padding: 16px;
+	width: 100%;
+}
+
+.result__tittle {
+	margin-bottom: 8px;
+}
+
+.redaction__wrap{
+	margin-bottom:16px;
+}
+
+.about__list__item__value{
+	font-weight: 700;
+    width: 37%;
+}
+
+.about__list__item__key {
+    width: 62%;
+}
+
+.bank__info{
+	display: flex;
+	display: -ms-flexbox;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.bank-nav__wrap{
+	margin-bottom: 16px;
+}
+
+.bank__info_text{
+	margin-top: 0;
+}
+
+.map__wrap{
+	margin-top: 16px;
+}
+
+.social-link__icon{
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	margin-right: 8px;
+}
+
+.social-link__wrap{
+	display: flex;
+	display: -ms-flexbox;
+	flex-direction: column;
+	width: 100%;
+	padding: 16px;
+	background-color: #fff;
+}
+
+.social-link__item{
+	margin-bottom: 8px;
+}
+
+.social-link__item:last-of-type{
+	margin-bottom: 0;
+}
+
+.form_textarea{
+	resize: none;
+	width: 100%;
+	height: 115px;
+}
+
+.main-content__bottom-text{
+	margin-top: 16px;
+}
+
+.contacn-form .dark-blue_button{
+	margin-top: 12px;
+}
+
+@media (max-width: 767px){
+	.result__tittle {
+	    padding-left: 12px;
+	}
+}
+
+
+@media (max-width: 425px){
+	.bank-nav__link {
+	    padding: 4px 7px !important;
+	}
+}
