@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5cult</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="font/fonts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <nav class="nav nav__header">
+        <div class="nav__logo">
+            <img src="img/logo.svg" alt="">
+        </div>
+        <ul class="nav__list">
+            <li>
+                <a href="#" class="nav__drop">Каталог</a>
+                <ul class="nav__drop_list">
+                    <li>
+                        <a href="#">
+                            <img src="img/nav_drop_1.png" alt="">
+                            <p>Музыканты</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/nav_drop_2.png" alt="">
+                            <p>Писатели</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/nav_drop_3.png" alt="">
+                            <p>Актеры</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/nav_drop_4.png" alt="">
+                            <p>Спортсмены</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/nav_drop_5.png" alt="">
+                            <p>Ученые</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/nav_drop_6.png" alt="">
+                            <p>Вселенные</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/nav_drop_7.png" alt="">
+                            <p>Исторические личности</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Галерея</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Доставка</a></li>
+        </ul>
+        <div class="nav__search">
+            <input type="text" placeholder="Поиск...">
+            <a href="#">
+                <img src="img/search.svg" alt="">
+            </a>
+        </div>
+        <a href="#" class="nav__profile">
+            <img src="img/profile.svg" alt="">
+            <p>Войти</p>
+        </a>
+        <a href="#" class="nav__cart">
+            <p>12980 р</p>
+            <img src="img/cart.svg" alt="">
+        </a>
+        <div class="nav__humburger">
+            <span></span>
+        </div>
+    </nav>
+    <main class="main">
+        <div class="container">
+            <div class="main__wrapper">
+                <div class="main__sidebar sidebar">
+                    <div class="sidebar__row">
+                        <a href="#" class="sidebar__arrow">
+                            <svg width="101" height="16" viewBox="0 0 101 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M100.707 8.70711C101.098 8.31658 101.098 7.68342 100.707 7.29289L94.3431 0.928932C93.9526 0.538408 93.3195 0.538408 92.9289 0.928932C92.5384 1.31946 92.5384 1.95262 92.9289 2.34315L98.5858 8L92.9289 13.6569C92.5384 14.0474 92.5384 14.6805 92.9289 15.0711C93.3195 15.4616 93.9526 15.4616 94.3431 15.0711L100.707 8.70711ZM0 9H100V7H0V9Z" fill="#2B0F08"/>
+                            </svg>
+                        </a>
+                        <div class="sidebar__search">
+                            <input type="text" placeholder="Поиск...">
+                            <a href="#">
+                                <img src="img/search.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="sidebar__list">
+                        <li>
+                            <a href="#">
+                                <img src="img/nav_drop_1.png" alt="">
+                                <p>Музыканты</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/nav_drop_2.png" alt="">
+                                <p>Писатели</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/nav_drop_3.png" alt="">
+                                <p>Актеры</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/nav_drop_4.png" alt="">
+                                <p>Спортсмены</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/nav_drop_5.png" alt="">
+                                <p>Ученые</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/nav_drop_6.png" alt="">
+                                <p>Вселенные</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/nav_drop_7.png" alt="">
+                                <p>Исторические личности</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <section class="main__block catalog">
+                    <div class="breadcrumbs">
+                        <a href="#">Главная</a>
+                        <img src="img/breadcrumbs.svg" alt="">
+                        <a href="#">Коллекции 5CULT</a>
+                        <img src="img/breadcrumbs.svg" alt="">
+                        <p>Каталог</p>
+                    </div>
+                    <h1>Каталог</h1>
+                    <div class="catalog__mob">
+                        <div class="catalog__search">
+                            <input type="text" placeholder="Поиск...">
+                            <a href="#">
+                                <img src="img/search.svg" alt="">
+                            </a>
+                        </div>
+                        <ul class="catalog__list">
+                            <li>
+                                <a href="#">
+                                    <img src="img/nav_drop_1.png" alt="">
+                                    <p>Музыканты</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/nav_drop_2.png" alt="">
+                                    <p>Писатели</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/nav_drop_3.png" alt="">
+                                    <p>Актеры</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/nav_drop_4.png" alt="">
+                                    <p>Спортсмены</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/nav_drop_5.png" alt="">
+                                    <p>Ученые</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/nav_drop_6.png" alt="">
+                                    <p>Вселенные</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/nav_drop_7.png" alt="">
+                                    <p>Исторические личности</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="catalog__wrapper">
+                        <div class="catalog__item">
+                            <div class="catalog__img swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination catalog__img_pag"></div>
+                            </div>
+                            <p class="catalog__name">Гагарин</p>
+                            <div class="catalog__row">
+                                <button class="catalog__cart">В корзину</button>
+                                <div class="catalog__func">
+                                    <div class="catalog__func_btn catalog__func_min"></div>
+                                    <p class="catalog__func_num">0</p>
+                                    <div class="catalog__func_btn catalog__func_plus"></div>
+                                </div>
+                            </div>
+                            <div class="catalog__row">
+                                <button class="catalog__buy">Купить в 1 клик</button>
+                                <p class="catalog__price">1599 р</p>
+                            </div>
+                        </div>
+                        <div class="catalog__item">
+                            <div class="catalog__img swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination catalog__img_pag"></div>
+                            </div>
+                            <p class="catalog__name">Гагарин</p>
+                            <div class="catalog__row">
+                                <button class="catalog__cart">В корзину</button>
+                                <div class="catalog__func">
+                                    <div class="catalog__func_btn catalog__func_min"></div>
+                                    <p class="catalog__func_num">0</p>
+                                    <div class="catalog__func_btn catalog__func_plus"></div>
+                                </div>
+                            </div>
+                            <div class="catalog__row">
+                                <button class="catalog__buy">Купить в 1 клик</button>
+                                <p class="catalog__price">1599 р</p>
+                            </div>
+                        </div>
+                        <div class="catalog__item">
+                            <div class="catalog__img swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_3.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination catalog__img_pag"></div>
+                            </div>
+                            <p class="catalog__name">Гагарин</p>
+                            <div class="catalog__row">
+                                <button class="catalog__cart">В корзину</button>
+                                <div class="catalog__func">
+                                    <div class="catalog__func_btn catalog__func_min"></div>
+                                    <p class="catalog__func_num">0</p>
+                                    <div class="catalog__func_btn catalog__func_plus"></div>
+                                </div>
+                            </div>
+                            <div class="catalog__row">
+                                <button class="catalog__buy">Купить в 1 клик</button>
+                                <p class="catalog__price">1599 р</p>
+                            </div>
+                        </div>
+                        <div class="catalog__item">
+                            <div class="catalog__img swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_4.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination catalog__img_pag"></div>
+                            </div>
+                            <p class="catalog__name">Гагарин</p>
+                            <div class="catalog__row">
+                                <button class="catalog__cart">В корзину</button>
+                                <div class="catalog__func">
+                                    <div class="catalog__func_btn catalog__func_min"></div>
+                                    <p class="catalog__func_num">0</p>
+                                    <div class="catalog__func_btn catalog__func_plus"></div>
+                                </div>
+                            </div>
+                            <div class="catalog__row">
+                                <button class="catalog__buy">Купить в 1 клик</button>
+                                <p class="catalog__price">1599 р</p>
+                            </div>
+                        </div>
+                        <div class="catalog__item">
+                            <div class="catalog__img swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination catalog__img_pag"></div>
+                            </div>
+                            <p class="catalog__name">Гагарин</p>
+                            <div class="catalog__row">
+                                <button class="catalog__cart">В корзину</button>
+                                <div class="catalog__func">
+                                    <div class="catalog__func_btn catalog__func_min"></div>
+                                    <p class="catalog__func_num">0</p>
+                                    <div class="catalog__func_btn catalog__func_plus"></div>
+                                </div>
+                            </div>
+                            <div class="catalog__row">
+                                <button class="catalog__buy">Купить в 1 клик</button>
+                                <p class="catalog__price">1599 р</p>
+                            </div>
+                        </div>
+                        <div class="catalog__item">
+                            <div class="catalog__img swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination catalog__img_pag"></div>
+                            </div>
+                            <p class="catalog__name">Гагарин</p>
+                            <div class="catalog__row">
+                                <button class="catalog__cart">В корзину</button>
+                                <div class="catalog__func">
+                                    <div class="catalog__func_btn catalog__func_min"></div>
+                                    <p class="catalog__func_num">0</p>
+                                    <div class="catalog__func_btn catalog__func_plus"></div>
+                                </div>
+                            </div>
+                            <div class="catalog__row">
+                                <button class="catalog__buy">Купить в 1 клик</button>
+                                <p class="catalog__price">1599 р</p>
+                            </div>
+                        </div>
+                        <div class="catalog__item">
+                            <div class="catalog__img swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_3.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination catalog__img_pag"></div>
+                            </div>
+                            <p class="catalog__name">Гагарин</p>
+                            <div class="catalog__row">
+                                <button class="catalog__cart">В корзину</button>
+                                <div class="catalog__func">
+                                    <div class="catalog__func_btn catalog__func_min"></div>
+                                    <p class="catalog__func_num">0</p>
+                                    <div class="catalog__func_btn catalog__func_plus"></div>
+                                </div>
+                            </div>
+                            <div class="catalog__row">
+                                <button class="catalog__buy">Купить в 1 клик</button>
+                                <p class="catalog__price">1599 р</p>
+                            </div>
+                        </div>
+                        <div class="catalog__item">
+                            <div class="catalog__img swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_4.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination catalog__img_pag"></div>
+                            </div>
+                            <p class="catalog__name">Гагарин</p>
+                            <div class="catalog__row">
+                                <button class="catalog__cart">В корзину</button>
+                                <div class="catalog__func">
+                                    <div class="catalog__func_btn catalog__func_min"></div>
+                                    <p class="catalog__func_num">0</p>
+                                    <div class="catalog__func_btn catalog__func_plus"></div>
+                                </div>
+                            </div>
+                            <div class="catalog__row">
+                                <button class="catalog__buy">Купить в 1 клик</button>
+                                <p class="catalog__price">1599 р</p>
+                            </div>
+                        </div>
+                        <div class="catalog__item">
+                            <div class="catalog__img swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination catalog__img_pag"></div>
+                            </div>
+                            <p class="catalog__name">Гагарин</p>
+                            <div class="catalog__row">
+                                <button class="catalog__cart">В корзину</button>
+                                <div class="catalog__func">
+                                    <div class="catalog__func_btn catalog__func_min"></div>
+                                    <p class="catalog__func_num">0</p>
+                                    <div class="catalog__func_btn catalog__func_plus"></div>
+                                </div>
+                            </div>
+                            <div class="catalog__row">
+                                <button class="catalog__buy">Купить в 1 клик</button>
+                                <p class="catalog__price">1599 р</p>
+                            </div>
+                        </div>
+                        <div class="catalog__item">
+                            <div class="catalog__img swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination catalog__img_pag"></div>
+                            </div>
+                            <p class="catalog__name">Гагарин</p>
+                            <div class="catalog__row">
+                                <button class="catalog__cart">В корзину</button>
+                                <div class="catalog__func">
+                                    <div class="catalog__func_btn catalog__func_min"></div>
+                                    <p class="catalog__func_num">0</p>
+                                    <div class="catalog__func_btn catalog__func_plus"></div>
+                                </div>
+                            </div>
+                            <div class="catalog__row">
+                                <button class="catalog__buy">Купить в 1 клик</button>
+                                <p class="catalog__price">1599 р</p>
+                            </div>
+                        </div>
+                        <div class="catalog__item">
+                            <div class="catalog__img swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_3.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination catalog__img_pag"></div>
+                            </div>
+                            <p class="catalog__name">Гагарин</p>
+                            <div class="catalog__row">
+                                <button class="catalog__cart">В корзину</button>
+                                <div class="catalog__func">
+                                    <div class="catalog__func_btn catalog__func_min"></div>
+                                    <p class="catalog__func_num">0</p>
+                                    <div class="catalog__func_btn catalog__func_plus"></div>
+                                </div>
+                            </div>
+                            <div class="catalog__row">
+                                <button class="catalog__buy">Купить в 1 клик</button>
+                                <p class="catalog__price">1599 р</p>
+                            </div>
+                        </div>
+                        <div class="catalog__item">
+                            <div class="catalog__img swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_4.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__slide">
+                                        <img src="img/catalog_2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination catalog__img_pag"></div>
+                            </div>
+                            <p class="catalog__name">Гагарин</p>
+                            <div class="catalog__row">
+                                <button class="catalog__cart">В корзину</button>
+                                <div class="catalog__func">
+                                    <div class="catalog__func_btn catalog__func_min"></div>
+                                    <p class="catalog__func_num">0</p>
+                                    <div class="catalog__func_btn catalog__func_plus"></div>
+                                </div>
+                            </div>
+                            <div class="catalog__row">
+                                <button class="catalog__buy">Купить в 1 клик</button>
+                                <p class="catalog__price">1599 р</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn__yellow catalog__more">Показать еще</button>
+                    <ul class="catalog__pag">
+                        <li><a href="#" class="active">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                    </ul>
+                    <div class="catalog__info">
+                        <h2>Lorem dolor </h2>
+                        <div class="catalog__info_text">
+                            <p>Lorem ipsum dolor sit amet consectetur. Aenean arcu velit ultrices nunc in tellus. Gravida iaculis quis morbi pellentesque turpis convallis suspendisse mauris. Justo venenatis scelerisque proin dolor lectus dolor sem. Fermentum vestibulum iaculis mattis egestas. Ullamcorper pulvinar mauris ac metus facilisis. Faucibus donec egestas urna feugiat leo sapien. Sit aliquet ipsum mi orci tempus. Non at tellus natoque ornare enim ut egestas pellentesque auctor. Pellentesque suspendisse feugiat ac aliquam vulputate pellentesque. Aliquet vitae tortor libero hac. Urna convallis adipiscing magna massa.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur. Aenean arcu velit ultrices nunc in tellus. Gravida iaculis quis morbi pellentesque turpis convallis suspendisse mauris. Justo venenatis scelerisque proin dolor lectus dolor sem. Fermentum vestibulum iaculis mattis egestas. Ullamcorper pulvinar mauris ac metus facilisis. Faucibus donec egestas urna feugiat leo sapien. Sit aliquet ipsum mi orci tempus. Non at tellus natoque ornare enim ut egestas pellentesque auctor. Pellentesque suspendisse feugiat ac aliquam vulputate pellentesque. Aliquet vitae tortor libero hac. Urna convallis adipiscing magna massa.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur. Aenean arcu velit ultrices nunc in tellus. Gravida iaculis quis morbi pellentesque turpis convallis suspendisse mauris. Justo venenatis scelerisque proin dolor lectus dolor sem. Fermentum vestibulum iaculis mattis egestas. Ullamcorper pulvinar mauris ac metus facilisis. Faucibus donec egestas urna feugiat leo sapien. Sit aliquet ipsum mi orci tempus. Non at tellus natoque ornare enim ut egestas pellentesque auctor. Pellentesque suspendisse feugiat ac aliquam vulputate pellentesque. Aliquet vitae tortor libero hac. Urna convallis adipiscing magna massa.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__main">
+                    <div class="footer__logo">
+                        <img src="img/footer_logo.svg" alt="">
+                    </div>
+                    <a href="#" class="footer__phone">+7 812 992-05-93</a>
+                    <div class="footer__soc">
+                        <a href="#">
+                            <img src="img/vk.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/yt.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/inst.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/fb.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="footer__email">
+                        <div class="">
+                            <a href="#">info@5cult.ru</a>
+                            <p>сотрудничество</p>
+                        </div>
+                        <div class="">
+                            <a href="#">zakaz@5cult.ru</a>
+                            <p>по вопросам заказа</p>
+                        </div>
+                    </div>
+                    <ul class="footer__mob">
+                        <li>
+                            <p class="footer__mob_btn">Каталог</p>
+                            <ol>
+                                <li><a href="#">Исторические персонажи</a></li>
+                                <li><a href="#">Наши современники</a></li>
+                                <li><a href="#">Русские классики</a></li>
+                                <li><a href="#">Киновселенные</a></li>
+                                <li><a href="#">Музыканты</a></li>
+                                <li><a href="#">Актеры</a></li>
+                                <li><a href="#">Спортсмены</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p class="footer__mob_btn">Доставка и оплата</p>
+                            <ol>
+                                <li><a href="#">Доставка</a></li>
+                                <li><a href="#">Оплата</a></li>
+                                <li><a href="#">Как заказать</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Карта сайта</a></li>
+                    </ul>
+                    <div class="footer__arrow">
+                        <img src="img/arrow_or.svg" alt="">
+                    </div>
+                </div>
+                <ul class="footer__list">
+                    <li><a href="#">Инструкции</a></li>
+                    <li><a href="#">Исторические персонажи</a></li>
+                    <li><a href="#">Пользовательское соглашение</a></li>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Наши современники</a></li>
+                    <li><a href="#">Оптовым клиентам</a></li>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Русские классики</a></li>
+                    <li><a href="#">Личный кабинет</a></li>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">3D-конструкторы</a></li>
+                    <li><a href="#">Поиск по сайту</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Киновселенные</a></li>
+                    <li><a href="#">Карта сайта</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+                
