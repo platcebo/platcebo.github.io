@@ -1,0 +1,4376 @@
+body
+    font-family: 'Coolvetica'
+    font-style: normal
+    font-weight: 400
+    background: var(--main-bg)
+
+.container
+    max-width: 1296px
+    padding: 0 15px
+    box-sizing: content-box    
+    margin: 0 auto
+
+.btn
+    &__grey
+        background: var(--main-bg)
+        border-radius: 11px
+        border: none
+        padding: 10px 18px
+        display: flex
+        align-items: center
+        justify-content: center
+        transition: all .3s
+        svg
+            margin: 0 8px 0 0
+            width: 20px
+            height: 20px
+        p
+            font-size: 18px
+            line-height: 150%
+            letter-spacing: 0.01em
+            color: var(--text-black)
+        &:hover
+            background: linear-gradient(180deg, #0080F5 -131.25%, #003494 242.5%)
+            p
+                color: var(--white)
+            svg
+                path
+                    fill: var(--white)
+                .btn__grey_circle
+                    fill: var(--white)
+    &__green
+        background: linear-gradient(180deg, #02E465 -131.25%, #019040 153.37%)
+        box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.08)
+        border-radius: 11px
+        border: none
+        padding: 10px 18px
+        display: flex
+        align-items: center
+        justify-content: center
+        transition: all .3s
+        svg
+            margin: 0 8px 0 0
+            width: 20px
+            height: 20px
+        p
+            font-size: 18px
+            line-height: 150%
+            letter-spacing: 0.01em
+            color: var(--white)
+        &:hover
+            background: linear-gradient(180deg, #02E465 -131.25%, #019040 153.37%), radial-gradient(97.79% 273.13% at 50% -40%, #016DD0 0%, #023EC4 72.24%, #102347 100%), linear-gradient(180deg, #0080F5 -131.25%, #003494 242.5%)
+            box-shadow: 0px 20px 80px rgba(1, 144, 64, 0.3), inset 0px 1px 0px rgba(255, 255, 255, 0.08)
+        &:active
+            background: linear-gradient(180deg, #01C658 -131.25%, #017A36 153.37%)
+            box-shadow: 0px 20px 80px rgba(1, 144, 64, 0.3), inset 0px 1px 0px rgba(255, 255, 255, 0.08)
+    &__blue
+        background: linear-gradient(180deg, var(--blue-white) -131.25%, var(--blue-dark) 242.5%)
+        border-radius: 11px
+        border: none
+        padding: 10px 18px
+        display: flex
+        align-items: center
+        justify-content: center
+        transition: all .3s
+        svg
+            margin: 0 8px 0 0
+            width: 20px
+            height: 20px
+        p
+            font-size: 18px
+            line-height: 150%
+            letter-spacing: 0.01em
+            color: var(--white)
+        &:hover
+            background: radial-gradient(97.79% 273.13% at 50% -40%, #016DD0 0%, #023EC4 72.24%, #102347 100%)
+            box-shadow: 0px 20px 80px rgba(0, 40, 251, 0.3), inset 0px 1px 0px rgba(255, 255, 255, 0.08)
+        &:active
+            background: radial-gradient(97.79% 273.13% at 50% -40%, #015AAD 0%, #0235A7 72.24%, #102347 100%)
+            box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.08)
+    &__wht
+        background: var(--main-bg)
+        border-radius: 11px
+        border: none
+        padding: 10px 18px
+        display: flex
+        align-items: center
+        justify-content: center
+        svg
+            margin: 0 8px 0 0
+            width: 20px
+            height: 20px
+        p
+            font-size: 16px
+            line-height: 120%
+            letter-spacing: 0.01em
+            color: var(--text-black)
+            transition: all .3s
+        &:hover
+            p
+                color: #0080F5 
+        &:active
+            p
+                color: #004380
+
+.nav
+    padding: 8px 0
+    background: var(--white)
+    &__humburger
+        display: none
+    .container
+        display: flex
+        justify-content: flex-start
+        align-items: center
+    &__logo
+        max-width: 140px
+        width: 100%
+        img
+            width: 100%
+    ul
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        margin: 0 auto 0 36px
+        li
+            margin: 0 24px 0 0
+            &:last-child
+                margin: 0
+        a
+            font-size: 18px
+            line-height: 150%
+            letter-spacing: 0.01em
+            color: var(--text-gray)
+            transition: all .3s
+            position: relative
+            &::before
+                content: ''
+                display: block
+                width: 100%
+                position: absolute
+                bottom: -22px
+                left: 0
+                height: 3px
+                border-radius: 2px
+                background: linear-gradient(112.43deg, var(--blue-white) 29.72%, var(--blue-dark) 118.24%)
+                transition: all .3s
+                opacity: 0
+            svg
+                path
+                    fill: var(--text-gray)
+                    transition: all .3s
+            &.active
+                color: var(--text-black)
+                svg
+                    path
+                        fill: var(--text-black)
+                &::before
+                    opacity: 1
+            &:hover
+                color: var(--text-black)
+                svg
+                    path
+                        fill: var(--text-black)
+                &::before
+                    opacity: 1
+    &__video
+        display: grid
+        grid-template-columns: 12px 1fr
+        gap: 6px
+        align-items: center
+        svg
+            width: 12px
+            height: 12px
+    &__search
+        margin: 0 8px 0 0
+        width: 48px
+        height: 48px
+        border-radius: 12px
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all .3s
+        svg
+            width: 24px
+            height: 24px
+            path
+                fill: var(--black)
+        &:hover
+            background: linear-gradient(180deg, #0080F5 -131.25%, #003494 242.5%)
+            svg
+                path
+                    fill: var(--white)
+    &__theme
+        margin: 0 0 0 8px
+        display: grid
+        grid-template-columns: 40px 40px
+        gap: 2px
+        border-radius: 100%
+        background: var(--gray-bg)
+        border-radius: 28px
+        padding: 4px
+        transition: all .3s
+        span
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 40px
+            height: 40px
+            border-radius: 100%
+            cursor: pointer
+            svg
+                width: 24px
+                height: 24px
+                path
+                    fill: var(--gray)
+            &.active
+                &.wht
+                    background: var(--white)
+                    svg
+                        path
+                            fill: var(--text-black)
+                &.blue
+                    background: linear-gradient(180deg, #0080F5 -131.25%, #003494 242.5%)
+                    svg
+                        path
+                            fill: var(--white)
+            &:hover
+                &.wht
+                    background: var(--white)
+                &.blue
+                    background: linear-gradient(180deg, #0080F5 -131.25%, #003494 242.5%)
+                    svg
+                        path
+                            fill: var(--white)
+
+.player
+    margin: 24px 0 0
+    .container
+        display: grid
+        grid-template-columns: 66% 1fr
+        gap: 16px
+    &__video
+        border-radius: 16px
+        overflow: hidden
+        video
+            width: 100%
+    &__chat
+        position: relative
+        background: var(--white)
+        border-radius: 16px
+        overflow-y: scroll
+        min-height: 100%
+        height: 1px
+        &::-webkit-scrollbar
+            width: 0
+        &_title
+            border-radius: 16px 16px 0 0
+            box-shadow: 0px 7px 24px rgba(0, 0, 0, 0.07)
+            padding: 15px
+            position: sticky
+            top: 0
+            left: 0
+            background: var(--white)
+            p
+                font-size: 20px
+                line-height: 130%
+                letter-spacing: 0.01em
+                color: var(--text-black)
+                text-align: center
+        &_wrapper
+            padding: 0 16px
+            p
+                padding: 8px 0
+                font-size: 16px
+                line-height: 130%
+                letter-spacing: 0.01em
+                color: var(--text-black)
+                span
+                    color: var(--text-gray)
+        &_input
+            border-radius: 0 0 16px 16px
+            padding: 8px
+            background: var(--white)
+            position: sticky
+            bottom: 0
+            left: 0
+            button
+                padding: 8px
+                position: absolute
+                right: 12px
+                top: 50%
+                transform: translateY(-50%)
+                opacity: 0
+                svg
+                    margin: 0
+                    transform: rotate(-90deg)
+                    width: 24px
+                    height: 24px
+            input
+                width: 100%
+                box-sizing: border-box
+                padding: 13px 16px
+                background: var(--gray-bg)
+                border-radius: 11px
+                border: none
+                width: 100%
+                font-size: 16px
+                line-height: 130%
+                letter-spacing: 0.01em
+                color: var(--text-black)
+                transition: all .3s
+                border: 1px solid var(--gray-bg)
+                &::placeholder
+                    color: var(--gray)
+                &:hover
+                    border: 1px solid #0066C3
+                &:focus,
+                &:not(:placeholder-shown) 
+                    border: 1px solid #0066C3
+                    &+button
+                        opacity: 1
+    &__sidebar
+        grid-column: 1/3
+        background: var(--white)
+        border-radius: 16px
+        position: relative
+        overflow: hidden
+        &::before,
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            background: linear-gradient(90deg, var(--white) 0%, rgba(255, 255, 255, 0) 100%)
+            width: 82px
+            height: 100%
+            z-index: 1
+        &::after
+            background: linear-gradient(-90deg, var(--white) 0%, rgba(255, 255, 255, 0) 100%)
+            right: 0
+            left: auto
+        &_scroll
+            border-radius: 16px
+            padding: 16px
+            position: relative
+            display: flex
+            justify-content: flex-start
+            width: 100%
+            overflow-x: scroll
+            position: relative
+            &::-webkit-scrollbar
+                height: 0
+        &_time
+            font-family: 'Inter'
+            font-weight: 700
+            font-size: 24px
+            line-height: 130%
+            letter-spacing: -0.06em
+            color: var(--text-black)
+        &_progres
+            height: 4px
+            margin: 4px 0 0
+            opacity: 0
+            background: var(--main-bg)
+            border-radius: 30px
+            position: relative
+            overflow: hidden
+            span
+                position: absolute
+                left: 0
+                top: 0
+                height: 100%
+                background: linear-gradient(112.43deg, var(--blue-white) 29.72%, var(--blue-dark) 118.24%)
+        &_name
+            display: grid
+            grid-template-columns: 1fr auto
+            gap: 8px
+            align-items: end
+            p
+                margin: 4px 0 0
+                font-size: 20px
+                line-height: 130%
+                letter-spacing: 0.01em
+                color: var(--text-black)
+                position: relative
+                overflow: hidden
+                white-space: nowrap
+                text-overflow: clip
+            span
+                padding: 1px 7px 2px
+                background: #EDF0F3
+                border-radius: 28px
+                font-family: 'Inter'
+                font-style: normal
+                font-weight: 600
+                font-size: 13px
+                line-height: 120%
+                color: #82919F
+                margin: 0 0 6px
+        &_category
+            margin: 2px 0 0
+            font-size: 16px
+            line-height: 130%
+            letter-spacing: 0.01em
+            color: var(--text-gray)
+            position: relative
+            overflow: hidden
+            white-space: nowrap
+            text-overflow: ellipsis
+        &_item
+            min-width: 250px
+            padding: 0 24px 5px
+            border-right: 1px solid var(--gray-bg)
+            &:last-child
+                border-right: none
+            &.active
+                .player__sidebar
+                    &_time
+                        display: grid
+                        grid-template-columns: auto 16px
+                        gap: 8px
+                        justify-content: start
+                        align-items: center
+                        &::after
+                            content: ''
+                            display: block
+                            width: 16px
+                            height: 16px
+                            background: url('../img/sidebar_active.svg') center no-repeat
+                            background-size: contain
+                    &_progres
+                        opacity: 1
+        &_next
+            opacity: 0.4
+
+.slider-film
+    margin: 56px 0 0
+    &__slide
+        padding: 0 8px
+        &_wrapper
+            position: relative
+            border-radius: 16px
+            overflow: hidden
+            background: var(--black)
+            z-index: 1
+            &::before
+                content: ''
+                display: block
+                position: absolute
+                background: linear-gradient(179.68deg, rgba(22, 39, 84, 0) 23.95%, #113288 99.73%)
+                width: 100%
+                left: 0
+                bottom: 0
+                z-index: 0
+                height: 261px
+        img
+            width: 858px
+            height: 400px
+            object-fit: cover
+    &__tag
+        position: absolute
+        left: 24px
+        top: 24px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        p
+            margin: 0 8px 0 0
+            padding: 7px 10px
+            border-radius: 8px
+            font-size: 10px
+            line-height: 120%
+            letter-spacing: 0.14em
+            text-transform: uppercase
+            color: var(--white)
+            &:last-child
+                margin: 0
+            &.blue
+                background: linear-gradient(112.43deg, var(--blue-white) 29.72%, var(--blue-dark) 118.24%)
+            &.grey
+                background: var(--gray-opacity)
+    &__info
+        position: absolute
+        bottom: 24px
+        left: 24px
+    &__time
+        font-family: 'Inter'
+        font-weight: 700
+        font-size: 24px
+        line-height: 120%
+        letter-spacing: -0.05em
+        color: var(--white)
+        opacity: 0.5
+    &__name
+        margin: 12px 0 0
+        font-size: 28px
+        line-height: 110%
+        color: var(--white)
+        max-width: 558px
+    .slick
+        &-arrow
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: 24px
+            font-size: 0
+            width: 56px
+            height: 56px
+            background: rgba(255, 255, 255, 0.08)
+            border: 1px solid rgba(255, 255, 255, 0.17)
+            backdrop-filter: blur(42px)
+            -webkit-backdrop-filter: blur(42px)
+            border-radius: 12px
+            z-index: 1
+            display: flex
+            justify-content: center
+            align-items: center
+            transition: all .3s
+            &::before
+                content: ''
+                display: block
+                width: 24px
+                height: 24px
+                background: url('../img/slider_next.svg') center no-repeat
+                background-size: contain
+            &:hover
+                background: rgba(255, 255, 255, 0.2)
+        &-prev
+            right: auto
+            left: 24px
+            &::before
+                transform: rotate(180deg)
+
+.language
+    padding: 56px 0 0
+    &__wrapper
+        background: linear-gradient(180deg, var(--blue-white) -131.25%, var(--blue-dark) 242.5%) 
+        border-radius: 16px
+        padding: 32px
+        display: grid
+        grid-template-columns: minmax(1px , 352px) 1fr auto
+        gap: 16px
+        align-items: center
+        position: relative
+        z-index: 1
+        overflow: hidden
+    &__title
+        font-size: 28px
+        line-height: 110%
+        color: var(--white)
+    &__btn
+        border: 1px solid var(--white)
+        border-radius: 11px
+        padding: 10px 18px
+        font-family: 'Coolvetica'
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 120%
+        letter-spacing: 0.01em
+        color: var(--white)
+        background: transparent
+        transition: all .3s
+        &:hover
+            background: var(--white)
+            color: var(--text-black)
+        &:active
+            background: rgba(255, 255, 255, 0.8)
+    &__block
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 8px
+        align-items: center
+    &__label
+        background: var(--white)
+        border-radius: 11px
+        padding: 10px 16px
+        display: grid
+        grid-template-columns: 19px 1fr
+        gap: 10px
+        align-items: center
+        position: relative
+        p
+            font-size: 16px
+            line-height: 130%
+            letter-spacing: 0.01em
+            color: var(--text-black)
+            transition: all .3s
+        input
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            opacity: 0
+            z-index: 1
+            &:hover
+                &+div
+                    &+p
+                        color: #0080F5 
+            &:checked
+                &+div
+                    span
+                        opacity: 1
+    &__check
+        width: 19px
+        height: 19px
+        border-radius: 100%
+        background: var(--check-bg)
+        overflow: hidden
+        span
+            width: 100%
+            height: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            background: linear-gradient(112.43deg, var(--blue-white) 29.72%, var(--blue-dark) 118.24%), var(--blue-white)
+            border-radius: 100%
+            opacity: 0
+            transition: all .3s
+    &__bg
+        position: absolute
+        left: -35px
+        width: 510px
+        z-index: -1
+        top: 50%
+        transform: translateY(-50%)
+        display: block
+        max-width: 100%
+
+h2
+    font-size: 32px
+    line-height: 110%
+    color: var(--text-black)
+
+.list-film
+    padding: 56px 0 0
+    position: relative
+    overflow: hidden
+    &__title
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        img
+            width: 119px
+        h2
+            margin: 0 16px
+    &__wrapper
+        &:hover
+            .slick-arrow
+                opacity: 1
+    &__slide
+        margin: 24px 8px 20px
+        transition: all .3s
+        height: 350px   
+        width: 235px
+        position: relative
+        &:hover
+            // box-shadow: 0px 7px 24px rgba(0, 0, 0, 0.07)
+            img
+                width: 103%
+                height: 103%
+                // box-shadow: 0px 7px 24px rgba(0, 0, 0, 0.07)
+        img
+            position: absolute
+            top: 0
+            left: 50%
+            transform: translateX(-50%)
+            height: 100%
+            width: 100%
+            transition: all .3s
+            border-radius: 20px
+            object-fit: cover
+    .slick
+        &-list
+            overflow: visible
+        &-arrow
+            opacity: 0
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: 16px
+            font-size: 0
+            width: 56px
+            height: 56px
+            background: rgba(255, 255, 255, 0.08)
+            border: 1px solid rgba(255, 255, 255, 0.17)
+            backdrop-filter: blur(42px)
+            -webkit-backdrop-filter: blur(42px)
+            border-radius: 12px
+            z-index: 1
+            display: flex
+            justify-content: center
+            align-items: center
+            transition: all .3s
+            &::before
+                content: ''
+                display: block
+                width: 24px
+                height: 24px
+                background: url('../img/slider_next.svg') center no-repeat
+                background-size: contain
+            &:hover
+                background: rgba(255, 255, 255, 0.2)
+        &-prev
+            right: auto
+            left: 16px
+            &::before
+                transform: rotate(180deg)
+
+h1
+    font-size: 48px
+    line-height: 110%
+    color: var(--text-black)
+
+.about-bars
+    padding: 56px 0 0
+    .container
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 64px   
+        align-items: center
+    &__prev
+        position: relative
+        border-radius: 16px
+        overflow: hidden
+        z-index: 1
+        img
+            width: 100%
+            border-radius: 16px
+        &::before
+            content: ''
+            display: block
+            width: 100%
+            position: absolute
+            z-index: 0
+            height: 376px
+            background: linear-gradient(179.68deg, rgba(22, 39, 84, 0) 23.95%, #162754 82.63%)
+            bottom: 0
+            left: 0
+    &__desc
+        position: absolute
+        bottom: 24px
+        right: 24px
+        left: 24px
+        z-index: 1
+    &__name
+        font-size: 28px
+        line-height: 110%
+        color: var(--white)
+    &__info
+        font-size: 20px
+        line-height: 130%
+        letter-spacing: 0.01em
+        color: var(--gray-bg)
+        margin: 12px 0 0
+        opacity: 0.8
+    &__wrapper
+        .btn__blue
+            margin: 40px 0 0
+            padding: 14px 18px
+    &__text
+        margin: 12px 0 0
+        font-size: 18px
+        line-height: 145%
+        letter-spacing: 0.01em
+        color: var(--text-black)
+
+.donate
+    padding: 56px 0 48px
+    &__wrapper
+        background: linear-gradient(180deg, var(--donate-white) -131.25%, var(--donate-blc) 242.5%)
+        border-radius: 16px
+        padding: 56px 10px 
+        position: relative
+        z-index: 1
+        overflow: hidden
+        &::before
+            content: ''
+            display: block
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+            width: 368px
+            height: 408px
+            background: url('../img/donate_bg.svg') center no-repeat
+            background-size: contain
+            position: absolute
+            z-index: -1
+        &::after
+            content: ''
+            display: block
+            left: 0
+            top: 50%
+            transform: translateY(-50%) rotate(180deg)
+            width: 368px
+            height: 408px
+            background: url('../img/donate_bg.svg') center no-repeat
+            background-size: contain
+            position: absolute
+            z-index: -1
+    h1
+        color: var(--white)
+        text-align: center
+    &__subtitle
+        margin: 12px auto 0
+        text-align: center
+        max-width: 524px
+        font-size: 18px
+        line-height: 145%
+        letter-spacing: 0.01em
+        color: var(--white)
+    &__check
+        display: inline-grid
+        grid-template-columns: auto auto
+        gap: 2px
+        padding: 4px
+        background: var(--gray-bg)
+        border-radius: 28px
+        &_wrapper
+            display: flex
+            justify-content: center
+            margin: 32px 0 0
+        span
+            padding: 12px
+            border-radius: 37px
+            font-size: 16px
+            line-height: 120%
+            letter-spacing: 0.01em
+            color: var(--text-black)
+            cursor: pointer
+            &.active
+                background: linear-gradient(112.43deg, var(--blue-white) 29.72%, var(--blue-dark) 118.24%), var(--blue-white)
+                color: var(--white)
+            &:hover
+                background: linear-gradient(180deg, #0080F5 -131.25%, #003494 242.5%)
+                color: var(--white)
+            &:active
+                background: radial-gradient(97.79% 273.13% at 50% -40%, #015AAD 0%, #0235A7 72.24%, #102347 100%)
+                color: var(--white)
+    &__form
+        margin: 32px auto 0
+        max-width: 422px
+        display: grid
+        grid-template-columns: 100%
+        gap: 10px
+    &__input
+        background: rgba(255, 255, 255, 0.07)
+        border: 1px solid rgba(255, 255, 255, 0.2)
+        border-radius: 11px
+        box-sizing: border-box
+        padding: 9px 15px
+        font-size: 16px
+        line-height: 130%
+        letter-spacing: 0.01em
+        color: var(--white)
+        transition: all .3s
+        &::placeholder 
+            color: var(--white)
+            opacity: 0.4   
+        &:hover
+            border: 1px solid rgba(255, 255, 255, 0.6) 
+        &:active
+            border: 1px solid rgba(255, 255, 255, 0.8)
+        &:focus,
+        &:not(:placeholder-shown) 
+            border: 1px solid rgba(255, 255, 255, 0.8)
+    &__row
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        a
+            display: block
+            margin: 0 4px 0 0
+            padding: 4px 9px
+            background: rgba(255, 255, 255, 0.12)
+            border: 1px solid rgba(255, 255, 255, 0.2)
+            border-radius: 40px
+            font-size: 14px
+            line-height: 120%
+            letter-spacing: 0.01em
+            text-transform: uppercase
+            color: var(--white)
+            &:last-child
+                margin: 0
+    &__label
+        display: grid
+        grid-template-columns: 12px 1fr
+        gap: 4px
+        align-items: center
+        position: relative
+        p,
+        a
+            font-size: 12px
+            line-height: 145%
+            letter-spacing: 0.01em
+            color: var(--white)
+            opacity: 0.6
+            transition: all .3s
+        a
+            border-bottom: 1px solid var(--white)
+            opacity: 1
+        div
+            border: 1px solid var(--white)
+            border-radius: 3px
+            width: 12px
+            height: 12px
+            position: relative
+            opacity: 0.6
+            display: flex
+            justify-content: center
+            align-items: center
+            transition: all .3s
+            &::before
+                content: ''
+                display: block
+                width: 8px
+                height: 8px
+                background: url('../img/donate-check.svg') center no-repeat
+                background-size: contain
+                opacity: 0
+                transition: all .3s
+        input
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            opacity: 0
+            cursor: pointer
+            z-index: 1
+            &:hover
+                &+div
+                    opacity: 1
+                    &+p
+                        opacity: 1
+            &:checked
+                &+div
+                    background: var(--white)
+                    opacity: 1
+                    &::before
+                        opacity: 1
+                    &+p
+                        opacity: 1
+    &__btn
+        border: none
+        background: var(--white)
+        border: 1px solid var(--white)
+        border-radius: 11px
+        width: 100%
+        padding: 14px
+        font-size: 16px
+        line-height: 120%
+        letter-spacing: 0.01em
+        color: var(--text-black)
+        font-weight: 600
+        transition: all .3s
+        &:hover
+            color: #0080F5 
+        &:active
+            color: #004380
+
+.footer
+    padding: 72px 0
+    background: var(--footer-bg)
+    &__row
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        ul
+            display: flex
+            justify-content: center
+            align-items: center
+            margin: 0 auto
+            a
+                font-family: 'Roboto Flex'
+                font-style: normal
+                font-weight: 400
+                font-size: 18px
+                line-height: 130%
+                letter-spacing: 0.01em
+                color: var(--white)
+                transition: all .3s
+                &:hover
+                    color: #1A90FC
+            li
+                margin: 0 28px 0 0
+                &:last-child
+                    margin: 0
+    &__logo
+        max-width: 148px
+        width: 100%
+    &__info
+        display: grid
+        grid-template-columns: auto auto auto auto
+        gap: 56px
+        margin: 56px 0 0
+        p,
+        a
+            text-align: center
+            font-family: 'Roboto Flex'
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 130%
+            letter-spacing: 0.01em
+        &_wht
+            color: var(--white)
+        &_gray
+            color: var(--white)
+            opacity: 0.3
+            margin: 12px 0 0
+            display: block
+            transition: all .3s
+            &:hover
+                color: #FFFFFF
+                opacity: 1
+    &__subfooter
+        margin: 56px 0 0
+        border-top: 1px solid var(--border-footer)
+        padding: 56px 0 0
+        display: flex
+        justify-content: center
+        align-items: center
+        p
+            margin: 0 14px
+            font-family: 'Roboto Flex'
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 130%
+            letter-spacing: 0.01em
+            color: var(--white)
+        a
+            display: block
+            margin: 0 14px
+            opacity: 0.3
+            font-family: 'Roboto Flex'
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 130%
+            letter-spacing: 0.01em
+            color: var(--white)
+            transition: all .3s
+            &:hover
+                opacity: 1
+
+@media ( max-width: 1300px )
+    .nav
+        ul
+            margin: 0 auto
+            a
+                font-size: 14px
+        .btn__grey
+            p
+                font-size: 14px
+        &__logo
+            max-width: 90px
+    .language
+        &__title
+            font-size: 20px
+        &__wrapper
+            grid-template-columns: minmax(1px, 352px) 1fr auto
+        &__label
+            p
+                white-space: nowrap
+        &__block
+            grid-template-columns: auto auto auto
+
+@media ( max-width: 1024px )
+    .nav
+        .btn__grey
+            p
+                font-size: 18px
+        .container
+            display: grid
+            grid-template-columns: 140px 1fr  auto auto auto
+            justify-items: start
+        ul
+            display: none
+        &__logo
+            order: -2
+            max-width: 140px
+        &__humburger
+            margin: 0 auto 0 24px
+            display: block
+            width: 48px
+            height: 48px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            cursor: pointer
+            order: -1
+            position: relative
+            background: var(--main-bg)
+            border-radius: 11px
+            padding: 18px 16px
+            &::before,
+            &::after,
+            span
+                content: ''
+                display: block
+                width: 100%
+                height: 2px
+                background: var(--text-black)
+        &__active
+            position: fixed
+            top: 0
+            left: 0
+            width: 100vw
+            height: 100vh
+            z-index: 100
+            overflow-y: scroll
+            ul
+                display: grid
+                grid-template-columns: 100%
+                gap: 20px
+                grid-column: 1/6
+                margin: 30px 0 0
+                justify-items: start
+                order: 1
+                li
+                    margin: 0
+                a
+                    padding: 0 0 5px
+                    font-size: 18px
+                    &::before
+                        bottom: 0
+                p
+            .nav
+                &__humburger
+                    span
+                        opacity: 0
+                    &::before,
+                    &::after
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50% , -50%) rotate(45deg)
+                        width: calc( 100% - 32px )
+                    &::after
+                        transform: translate(-50% , -50%) rotate(-45deg)
+    .language
+        &__wrapper
+            grid-template-columns: 100%
+            justify-items: start
+            padding: 32px 24px
+        &__block
+            grid-template-columns: 100%
+            width: 100%
+    .footer
+        &__row
+            display: grid
+            grid-template-columns: 100%
+            justify-items: center
+            gap: 32px
+            ul
+                margin: 0
+                max-width: 510px
+                align-items: center
+                gap: 28px
+                flex-wrap: wrap
+                li
+                    margin: 0
+                a
+                    display: block
+                    text-align: center
+        &__info
+            grid-template-columns: 100%
+            gap: 24px
+            margin: 56px 0 0
+        &__subfooter
+            margin: 56px 0 0
+            padding: 56px 0 0
+            flex-direction: column
+            align-items: center
+            a
+                display: block
+                margin: 16px 0 0
+    .slider-film__slide img
+        width: 700px
+        height: 324px
+
+@media ( max-width: 768px )
+    .player
+        .container
+            grid-template-columns: 100%
+        &__sidebar
+            grid-column: auto
+        &__chat
+            height: 460px
+    .slider-film
+        &__slide img
+            width: 500px
+            height: 230px
+        &__time
+            font-size: 12px
+        &__name
+            font-size: 16px
+            margin: 4px 0 0
+        &__info
+            left: 12px
+            bottom: 12px
+            right: 12px
+    h2
+        font-size: 24px
+    h1
+        font-size: 30px
+    .list-film
+        &__title
+            img
+                max-width: 70px
+        &__slide
+            max-width: 120px
+            height: 176px
+    .about-bars
+        .container
+            grid-template-columns: 100%
+
+@media ( max-width: 650px )
+    .nav
+        &__search
+            order: -1
+            margin: 0 20px 0 auto
+        &__humburger
+            margin: 0
+        .container
+            grid-template-columns: 140px 1fr 48px
+        .btn__grey,
+        &__theme
+            display: none
+        &__active
+            .nav
+                &__theme
+                    display: grid
+                    grid-column: 1/4
+                    margin: 20px 0 0
+                    order: 3
+            .btn__grey
+                display: flex
+                grid-column: 1/4
+                order: 2
+                margin: 20px 0 0
+
+@media ( max-width: 600px )
+    .language
+        &__btn
+            width: 100%
+            max-width: 100%
+    .slider-film
+        &__slide img
+            width: calc( 100vw - 32px )
+            height: 46vw
+    .footer
+        &__row
+            ul
+                flex-direction: column
+    .donate
+        &__wrapper
+            &::before,
+            &::after
+                top: 10px
+                transform: none
+                width: 186px
+                height: 272px
+            &::after
+                transform: rotate(180deg)
+
+.tv
+    padding: 72px 0 0
+    &__bar
+        margin: 40px auto 0
+        max-width: calc( 100% - 160px )
+        &_item
+            padding: 16px
+            border-radius: 12px
+            transition: all .3s
+            display: block
+            border: none
+            outline: none !important
+            &.active
+                background: var(--white)
+            &:hover
+                background: var(--white)
+        &_day
+            font-weight: 400
+            font-size: 16px
+            line-height: 130%
+            text-align: center
+            letter-spacing: 0.01em
+            color: var(--text-gray)
+        &_date
+            margin: 4px 0 0
+            font-family: 'Inter'
+            font-style: normal
+            font-weight: 700
+            font-size: 24px
+            line-height: 130%
+            text-align: center
+            letter-spacing: -0.06em
+            color: var(--text-black)
+        &_dis
+            background: transparent !important
+            opacity: 0.3
+        .slick
+            &-arrow
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                right: -80px
+                font-size: 0
+                width: 48px
+                height: 48px
+                background: linear-gradient(180deg, var(--donate-white) -131.25%, var(--donate-blc) 242.5%)
+                border-radius: 12px
+                z-index: 1
+                display: flex
+                justify-content: center
+                align-items: center
+                transition: all .3s
+                border: none
+                &::before
+                    content: ''
+                    display: block
+                    width: 24px
+                    height: 24px
+                    background: url('../img/slider_next.svg') center no-repeat
+                    background-size: contain
+                &:hover
+                    background: radial-gradient(97.79% 273.13% at 50% -40%, #016DD0 0%, #023EC4 72.24%, #102347 100%), linear-gradient(180deg, #0080F5 -131.25%, #003494 242.5%)
+                    box-shadow: 0px 20px 80px rgba(0, 40, 251, 0.3), inset 0px 1px 0px rgba(255, 255, 255, 0.08)
+                &:active
+                    background: radial-gradient(97.79% 273.13% at 50% -40%, #015AAD 0%, #0235A7 72.24%, #102347 100%)
+                    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.08)
+            &-prev
+                right: auto
+                left: -80px
+                &::before
+                    transform: rotate(180deg)
+    &__wrapper
+        margin: 64px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 32px
+    &__item
+        display: grid
+        grid-template-columns: minmax(175px , 267px) 480px minmax(270px , 485px)
+        gap: 32px
+        align-items: start
+        border-bottom: 1px solid var(--progres-grey)
+        padding: 0 0 32px
+        &:last-child
+            padding: 0
+            border-bottom: none
+        &:hover
+            .tv
+                &__info_text
+                    color: var(--text-black)
+        &_active
+            &:hover
+                .tv
+                    &__prev
+                        &_play
+                            opacity: 1
+                            cursor: pointer
+    &__time
+        max-width: 175px
+        display: grid
+        grid-template-columns: 1fr auto
+        gap: 8px
+        align-items: center
+        justify-content: start
+        &_text
+            font-family: 'Inter'
+            font-style: normal
+            font-weight: 700
+            font-size: 24px
+            line-height: 130%
+            letter-spacing: -0.06em
+            color: var(--text-black)
+        &_active
+            font-family: 'Coolvetica'
+            font-style: normal
+            font-weight: 400
+            font-size: 10px
+            line-height: 120%
+            letter-spacing: 0.14em
+            color: var(--white)
+            padding: 6px 10px
+            background: linear-gradient(112.43deg, var(--blue-white) 29.72%, var(--blue-dark) 118.24%), var(--blue-white)
+            border-radius: 8px
+            display: grid
+            grid-template-columns: 4px 1fr
+            gap: 4px
+            align-items: center
+            &::before
+                content: ''
+                display: block
+                width: 4px
+                height: 4px
+                border-radius: 100%
+                background: var(--white)
+        &_progres
+            grid-column: 1/3
+            margin: 8px 0 0
+            background: var(--progres-grey)
+            border-radius: 30px
+            position: relative
+            width: 100%
+            height: 4px
+            overflow: hidden
+            span
+                position: absolute
+                height: 100%
+                left: 0
+                display: block
+                top: 0
+                background: linear-gradient(180deg, var(--donate-white) -131.25%, var(--donate-blc) 242.5%)
+    &__prev
+        position: relative
+        img
+            width: 100%
+            height: 270px
+            border-radius: 24px
+            object-fit: cover
+        &_play
+            position: absolute
+            top: 50%
+            left: 50%
+            background: linear-gradient(180deg, var(--donate-white) -131.25%, var(--donate-blc) 242.5%)
+            border-radius: 12px
+            width: 48px
+            height: 48px
+            display: flex
+            justify-content: center
+            align-items: center
+            transform: translate(-50% , -50%)
+            opacity: 0
+            transition: all .3s
+            svg
+                width: 24px
+                height: 24px
+    &__info
+        height: 100%
+        display: flex
+        flex-direction: column
+        &_name
+            font-family: 'Coolvetica'
+            font-style: normal
+            font-weight: 600
+            font-size: 32px
+            line-height: 110%
+            color: var(--text-black)
+        &_har
+            margin: 8px 0 0
+            font-family: 'Coolvetica'
+            font-style: normal
+            font-weight: 600
+            font-size: 20px
+            line-height: 130%
+            letter-spacing: 0.01em
+            color: var(--text-gray)
+        &_text
+            position: relative
+            overflow: hidden
+            text-overflow: ellipsis
+            max-height: 134px
+            margin: 32px 0 auto
+            font-family: 'Coolvetica'
+            font-style: normal
+            font-weight: 400
+            font-size: 18px
+            line-height: 150%
+            letter-spacing: 0.01em
+            color: var(--text-gray)
+            transition: all .3s
+            &.active
+                max-height: 500px
+        &_btn
+            margin: 9px 0 0
+            display: grid
+            grid-template-columns: auto 16px
+            gap: 8px
+            align-items: end
+            font-family: 'Coolvetica'
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 120%
+            letter-spacing: 0.01em
+            color: var(--text-black)
+            justify-content: start
+            cursor: pointer
+            transition: all .3s
+            svg
+                transition: all .3s
+                height: 16px
+                path
+                    transition: all .3s
+            &:hover
+                color: var(--blue-white)
+                svg
+                    path
+                        stroke: var(--blue-white)
+            &.active
+                svg
+                    transform: rotate(180deg)
+
+@media ( max-width: 1024px )
+    h1
+        font-size: 32px
+    .tv
+        padding: 32px 0 0
+        &__bar
+            margin: 40px 0 0
+            max-width: 100%
+            &_item
+                width: 100%
+                max-width: 157px
+        &__wrapper
+            margin: 40px 0 0
+        &__item
+            grid-template-columns: minmax(75px , 105px) 296px 1fr
+        &__prev
+            img
+                height: 166px
+        &__time
+            grid-template-columns: 100%
+            gap: 9px
+            max-width: 75px
+            &_text
+                font-size: 20px
+            &_progres
+                grid-column: auto
+                margin: 0
+            &_active
+                font-size: 9px
+        &__info
+            &_name
+                font-size: 24px
+            &_har
+                font-size: 16px
+                margin: 8px 0 0
+            &_text
+                margin: 16px 0 0
+                font-size: 16px
+                max-height: 73px
+            &_btn
+                font-size: 16px
+                margin: 4px 0 0
+
+@media ( max-width: 700px )
+    .tv
+        &__item
+            grid-template-columns: 75px 1fr
+            gap: 16px
+        &__prev
+            img
+                height: auto
+        &__info
+            grid-column: 2/3
+
+@media ( max-width: 425px )
+    .tv
+        &__bar
+            &_item
+                max-width: 114px
+            &_date
+                margin: 2px 0 0
+                font-size: 20px
+            &_time
+                font-size: 16px
+        &__info
+            &_name
+                font-size: 20px
+            &_har
+                margin: 4px 0 0
+                font-size: 16px
+            &_text
+                margin: 0
+                max-height: 0
+                &.active
+                    margin: 10px 0 0
+            &_btn
+                margin: 10px 0 0
+                font-size: 16px
+        &__time
+            &_text
+                font-size: 16px
+
+.tv-radio
+    position: relative
+    overflow: hidden
+    padding: 32px 0 88px
+    &+.list-film
+        padding-top: 0
+    .swiper
+        &-slide
+            max-width: 66% 
+            border-radius: 16px
+            position: relative
+            overflow: hidden
+            opacity: 0
+            &-visible
+                opacity: 1
+    &__slider
+        margin: 32px auto 0
+        &_img
+            width: 100%
+        &_tag
+            position: absolute
+            top: 24px
+            left: 24px
+            display: flex
+            justify-content: flex-start
+            align-items: stretch
+            p
+                padding: 7px 10px
+                margin: 0 8px 0 0
+                border-radius: 8px
+                font-size: 10px
+                line-height: 120%
+                letter-spacing: 0.14em
+                text-transform: uppercase
+                color: var(--white)
+                &:last-child
+                    margin: 0
+        &_blue
+            background: linear-gradient(112.43deg, var(--blue-white) 29.72%, var(--blue-dark) 118.24%), var(--blue-white)
+        &_gray
+            background: rgba(255, 255, 255, 0.14)
+        &_info
+            position: absolute
+            left: 24px
+            bottom: 24px
+            right: 24px
+        &_name
+            font-size: 28px
+            line-height: 110%
+            color: var(--white)
+            max-width: 558px
+        .btn__wht
+            margin: 16px 0 0
+    &__radio
+        display: grid
+        grid-template-columns: auto auto
+        gap: 2px
+        padding: 4px
+        background: var(--white)
+        border-radius: 28px
+        align-items: center
+        &_wrapper
+            display: flex
+            justify-content: center
+            align-items: center
+        &_radius
+            border-radius: 100%
+            width: 40px
+            height: 40px
+            background: linear-gradient(112.43deg, var(--blue-white) 29.72%, var(--blue-dark) 118.24%), var(--blue-white)
+            display: flex
+            justify-content: center
+            align-items: center
+            font-size: 16px
+            line-height: 120%
+            letter-spacing: 0.01em
+            color: var(--white)
+        &_link
+            text-align: center
+            font-size: 16px
+            line-height: 120%
+            letter-spacing: 0.01em
+            color: var(--text-black)
+            border-radius: 100px
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 10px 12px
+            // transition: all .3s
+            cursor: pointer
+            &.active
+                color: var(--white)
+                &.blue
+                    background: linear-gradient(112.43deg, var(--blue-white) 29.72%, var(--blue-dark) 118.24%), var(--blue-white)
+                &.green
+                    background: linear-gradient(180deg, #02E465 -131.25%, #019040 153.37%)
+            &:hover
+                color: var(--white)
+                &.blue
+                    background: linear-gradient(112.43deg, #0066C3 29.72%, #002BC3 118.24%), #0066C3
+                &.green
+                    background: linear-gradient(180deg, #02E465 -131.25%, #019040 153.37%)
+            &:active
+                color: var(--white)
+                &.blue
+                    background: radial-gradient(97.79% 273.13% at 50% -40%, #015AAD 0%, #0235A7 72.24%, #102347 100%)
+                &.green
+                    background: linear-gradient(180deg, #01C658 -131.25%, #017A36 153.37%)
+    &__category
+        margin: 72px 0 0
+        display: none
+        h2
+            text-align: center
+        &_wrapper
+            margin: 24px 0 0
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+            gap: 16px
+        &_item
+            padding: 32px
+            background: var(--white)
+            border: 1px solid var(--gray-bg)
+            border-radius: 16px
+            position: relative
+            min-height: 200px
+            z-index: 1
+            p
+                font-size: 20px
+                line-height: 130%
+                color: var(--text-black)
+            img
+                width: 100%
+                height: 100%
+                position: absolute
+                bottom: 0
+                left: 0
+                object-fit: contain
+                object-position: bottom right
+                z-index: -1
+        .btn__blue
+            margin: 24px auto 0
+            svg
+                margin: 0 0 0 4px
+
+@media ( max-width: 1024px )
+    .tv-radio__slider_name
+        font-size: 20px
+
+@media ( max-width: 768px )
+    .tv-radio
+        &__slider
+            &_info
+                display: none
+        &__category
+            display: grid
+            &_item
+                min-height: 140px
+                transition: all .3s
+                &:hover
+                    box-shadow: 0px 7px 44px rgba(16, 69, 24, 0.1)
+                p
+                    font-size: 16px
+        .category__row
+            display: none
+        
+
+@media ( max-width: 600px )
+    .tv-radio
+        &__category
+            &_wrapper
+                grid-template-columns: 1fr 1fr
+                gap: 8px
+            &_item
+                pfont-size: 16px
+                padding: 24px
+        &__slider
+            &_tag
+                display: none
+
+.list-film
+    &__padding
+        padding: 56px 0 
+
+.catalog-header
+    padding: 24px 0 72px
+    background-position: left bottom
+    background-size: cover
+    background-repeat: no-repeat
+    min-height: 550px
+    position: relative
+    z-index: 1
+    &__bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        min-height: 100%
+        object-fit: cover
+        z-index: -1
+        height: 1px
+    .container
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        height: 454px
+    &__back
+        top: 14px
+        left: 15px
+        display: grid
+        grid-template-columns: 16px 1fr
+        gap: 8px
+        align-items: end
+        position: absolute
+        svg
+            transform: rotate(90deg)
+        p
+            font-size: 16px
+            line-height: 120%
+            letter-spacing: 0.01em
+            color: var(--progres-grey)
+    h1
+        color: var(--white)
+    &__har
+        margin: 8px 0 0
+        font-size: 18px
+        line-height: 150%
+        letter-spacing: 0.01em
+        color: var(--white)
+        svg
+            margin: 0 4px 0 16px
+            height: 16px
+    &__info
+        .btn__blue
+            margin: 24px 0 0
+            display: flex
+    &__tab
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        display: flex
+        background: rgba(5, 9, 46, 0.2)
+        border: 1px solid rgba(5, 9, 46, 0.09)
+        border-radius: 28px
+        padding: 4px
+        display: flex
+        justify-content: center
+        align-items: stretch
+        &_link
+            margin: 0 2px 0 0
+            padding: 10px 12px
+            border-radius: 37px
+            font-size: 16px
+            line-height: 120%
+            letter-spacing: 0.01em
+            color: var(--white)
+            cursor: pointer
+            transition: all .3s
+            &:last-child
+                margin: 0
+            &.active
+                background: var(--white)
+                color: var(--text-black)
+            &:hover
+                background: var(--white)
+                color: var(--text-black)
+            &:active
+                background: rgba(255, 255, 255, 0.8)
+
+.series-slider
+    padding: 56px 0 0
+    position: relative
+    overflow: hidden
+    .slick-list
+        overflow: visible
+    &__title
+        display: flex
+        justify-content: flex-start
+        align-items: center
+    &__season
+        margin: 0 0 0 24px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        a
+            width: 48px
+            height: 48px
+            border-radius: 12px
+            display: flex
+            justify-content: center
+            align-items: center
+            margin: 0 8px 0 0
+            font-size: 28px
+            line-height: 110%
+            color: var(--text-black)
+            transition: all .3s
+            &:last-child
+                margin: 0
+            &.active
+                background: var(--white)
+            &:hover
+                background: var(--white)
+    &__wrapper
+        margin: 24px 0 0
+        // display: flex
+        // justify-content: flex-start
+        // position: relative
+        // &::-webkit-scrollbar
+        //     width: 0
+        //     height: 0
+    &__item
+        min-width: 272px
+        margin: 0 16px 0 0
+        position: relative
+        &:last-child
+            margin: 0
+        &_img
+            position: relative
+            border-radius: 16px
+            overflow: hidden
+        img
+            width: 100%
+            height: 153px
+            object-fit: cover
+            transition: all .3s
+        &:hover
+            img
+                transform: scale(1.03)
+    &__name
+        margin: 12px 0 0
+        font-size: 20px
+        line-height: 130%
+        color: var(--text-black)
+    &__time
+        font-size: 16px
+        line-height: 130%
+        color: var(--text-gray)
+
+.details
+    padding: 56px 0 0
+    &__wrapper
+        margin: 24px 0 0
+        max-width: 750px
+    &__bold
+        font-size: 20px
+        line-height: 130%
+        color: var(--text-black)
+    &__text
+        margin: 8px 0 0
+        font-size: 18px
+        line-height: 150%
+        color: var(--text-gray)
+    &__tab
+        margin: 20px 0 0
+        max-height: 0
+        overflow: hidden
+        &.active
+            max-height: none
+            margin: 20px 0
+            &+.details__btn
+                svg
+                    transform: rotate(180deg)
+    &__btn
+        font-size: 16px
+        line-height: 120%
+        color: var(--blue-white)
+        display: grid
+        grid-template-columns: auto 16px
+        justify-content: start
+        align-items: end
+        gap: 8px
+        cursor: pointer
+        span
+            transition: all .3s
+        svg
+            path
+        &:hover
+            span
+                color: #1A90FC
+            svg
+                path
+                    stroke: #1A90FC
+
+@media ( max-width: 768px )
+    .catalog-header
+        min-height: 320px
+        padding: 24px 0
+        .container
+            height: 272px
+        &__tab
+            position: fixed
+            bottom: 12px
+            top: auto
+            background: rgba(226, 227, 235, 0.86)
+            border: 1px solid rgba(191, 193, 206, 0.09)
+            &_link
+                color: var(--text-black)
+                font-size: 14px
+                white-space: nowrap
+                &.active
+                    background: linear-gradient(180deg, var(--donate-white) -131.25%, var(--donate-blc) 242.5%)
+                    color: var(--white)
+    .series-slider
+        &__item
+            min-width: 204px
+            img
+                height: 114px
+        &__name
+            margin: 8px 0 0
+    .details
+        &__text
+            font-size: 16px
+
+@media ( max-width: 425px )
+    .catalog-header
+        min-height: auto
+        padding: 0
+        .container
+            height: auto
+            position: static
+        &__bg
+            height: 180px
+            position: relative
+        &__back
+            top: 25px
+        &__info
+            margin: 32px 0 0
+            h1
+                color:  var(--text-black)
+        &__har
+            margin: 4px 0 0
+            color: var(--text-gray)
+            svg
+                path
+                    fill: var(--text-gray)
+    .series-slider
+        padding: 32px 0 0
+
+.nav
+    &__green
+        &::before
+            background: var(--nav-green) !important
+
+.donate
+    &__wrapper
+        &_green
+            background: linear-gradient(180deg, var(--light-green) -131.25%, var(--nav-green) 153.37%)
+            .donate__btn
+                &:hover
+                    color: #02E465
+                &:active
+                    color: #009542
+    &__check
+        span
+            &.green
+                &.active
+                    background: linear-gradient(180deg, var(--light-green) -131.25%, var(--nav-green) 153.37%)
+                &:hover
+                    background: linear-gradient(180deg, var(--light-green) -131.25%, var(--nav-green) 153.37%)
+                &:active
+                    background: linear-gradient(180deg, #01C658 -131.25%, #017A36 153.37%)
+
+.radio
+    padding: 24px 0 0
+    .container
+        display: grid
+        grid-template-columns: 66% 1fr
+        gap: 16px
+    &__track
+        background: var(--white)
+        border: 1px solid var(--gray-bg)
+        border-radius: 16px
+        padding: 24px
+        display: grid
+        grid-template-columns: 250px calc( 100% - 282px )
+        gap: 32px
+        grid-column: 1/2
+        &_row
+            display: flex
+            justify-content: flex-start
+            align-items: center
+        &_yers
+            padding: 1px 7px 2px
+            background: #EDF0F3
+            border-radius: 28px
+            font-family: 'Inter'
+            font-style: normal
+            font-weight: 600
+            font-size: 13px
+            line-height: 120%
+            color: #82919F
+        &_prev
+            border-radius: 16px
+            position: relative
+            overflow: hidden
+            img
+                width: 100%
+                height: 250px
+                object-fit: cover
+        &_active
+            font-family: 'Coolvetica'
+            font-style: normal
+            font-weight: 400
+            font-size: 10px
+            line-height: 120%
+            letter-spacing: 0.14em
+            color: var(--white)
+            padding: 6px 10px
+            background: linear-gradient(180deg, var(--light-green) -131.25%, var(--nav-green) 153.37%)
+            border-radius: 8px
+            display: inline-grid
+            grid-template-columns: 4px 1fr
+            gap: 4px
+            align-items: center
+            &::before
+                content: ''
+                display: block
+                width: 4px
+                height: 4px
+                border-radius: 100%
+                background: var(--white)
+        &_block
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            max-width: 100%
+            width: 100%
+            overflow: hidden
+        h1
+            margin: 16px 0 0
+        &_name
+            font-size: 20px
+            line-height: 130%
+            color: var(--text-gray)
+            margin: 0 0 auto
+        &_wrapper
+            background: var(--green-bg)
+            border-radius: 100px
+            padding: 12px 32px 12px 12px
+            width: 100%
+            display: flex
+            justify-content: flex-start
+            align-items: center
+        &_play
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50% , -50%)
+            width: 60px
+            height: 60px
+            border-radius: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            cursor: pointer
+            background: linear-gradient(180deg, var(--light-green) -131.25%, var(--nav-green) 153.37%)
+            svg
+                width: 18px
+                height: 18px
+        &_sound
+            margin: 0 16px
+            max-width: 90px
+            img
+                width: 100%
+        &_volume
+            margin: 0 0 0 auto
+            display: grid
+            grid-template-columns: 24px 85px
+            gap: 8px
+            align-items: center
+            img
+                width: 100%
+            div
+                width: 100%
+                background: rgba(1, 144, 63, 0.2)
+                border-radius: 3px
+                position: relative
+                height: 4px
+                cursor: pointer
+                span
+                    position: absolute
+                    top: 0
+                    left: 0
+                    height: 100%
+                    width: 100%
+                    background: var(--nav-green)
+                    &::before
+                        content: ''
+                        display: block
+                        position: absolute
+                        width: 10px
+                        height: 10px
+                        right: 0
+                        top: 50%
+                        transform: translateY(-50%)
+                        background: var(--nav-green)
+                        border-radius: 100%
+    &__chat
+        position: relative
+        background: var(--white)
+        border-radius: 16px
+        overflow-y: scroll
+        min-height: 100%
+        height: 1px
+        grid-column: 2/3
+        &::-webkit-scrollbar
+            width: 0
+        &_title
+            border-radius: 16px 16px 0 0
+            box-shadow: 0px 7px 24px rgba(0, 0, 0, 0.07)
+            padding: 15px
+            position: sticky
+            top: 0
+            left: 0
+            background: var(--white)
+            p
+                font-size: 20px
+                line-height: 130%
+                letter-spacing: 0.01em
+                color: var(--text-black)
+                text-align: center
+        &_wrapper
+            padding: 0 16px
+            p
+                padding: 8px 0
+                font-size: 16px
+                line-height: 130%
+                letter-spacing: 0.01em
+                color: var(--text-black)
+                span
+                    color: var(--text-gray)
+        &_input
+            border-radius: 0 0 16px 16px
+            padding: 8px
+            background: var(--white)
+            position: sticky
+            bottom: 0
+            left: 0
+            button
+                padding: 8px
+                position: absolute
+                right: 12px
+                top: 50%
+                transform: translateY(-50%)
+                opacity: 0
+                svg
+                    margin: 0
+                    transform: rotate(-90deg)
+                    width: 24px
+                    height: 24px
+            input
+                width: 100%
+                box-sizing: border-box
+                padding: 13px 16px
+                background: var(--gray-bg)
+                border-radius: 11px
+                border: none
+                width: 100%
+                font-size: 16px
+                line-height: 130%
+                letter-spacing: 0.01em
+                color: var(--text-black)
+                border: 1px solid var(--gray-bg)
+                transition: all .3s
+                &::placeholder
+                    color: var(--gray)
+                &:hover
+                    border: 1px solid #019040
+                &:focus,
+                &:not(:placeholder-shown) 
+                    border: 1px solid #017A36
+                    &+button
+                        opacity: 1
+    &__air
+        margin: auto 0 0
+        max-width: 100%
+        width: 100%
+        overflow: hidden
+        position: relative
+        &_mob
+            display: none
+        &_title
+            display: flex
+            justify-content: space-between
+            align-items: center
+            p
+                font-size: 18px
+                line-height: 120%
+                color: var(--text-gray)
+            a
+                display: flex
+                justify-content: center
+                align-items: center
+                span
+                    font-size: 16px
+                    line-height: 120%
+                    letter-spacing: 0.01em
+                    color: #019040
+                    margin: 0 8px 0 0
+                svg
+                    transform: rotate(-90deg)
+        &_scroll
+            margin: 15px 0 0
+            display: flex
+            justify-content: flex-start
+            align-items: stretch
+            overflow-y: hidden
+            overflow-x: scroll
+            width: 100%
+            &::-webkit-scrollbar
+                width: 0
+                height: 0
+        &_item
+            min-width: 310px
+            display: grid
+            grid-template-columns: 60px 1fr
+            gap: 24px
+            align-items: center
+            margin: 0 24px 0 0
+            padding: 0 24px 0 0
+            border-right: 1px solid var(--gray-bg)
+            &:last-child
+                margin: 0
+                padding: 0
+                border-right: none
+                border-radius: 16px
+            img
+                width: 100%
+                height: 60px
+                border-radius: 16px
+        &_track
+            font-size: 24px
+            line-height: 130%
+            color: var(--text-black)
+        &_name
+            font-size: 18px
+            line-height: 150%
+            color: var(--text-gray)
+
+.radio-slider
+    padding: 56px 0 0
+    position: relative
+    &__slide
+        width: 60vw
+        max-width: 858px
+        margin: 0 8px
+        background: linear-gradient(180deg, var(--light-green) -131.25%, var(--nav-green) 153.37%)
+        padding: 92px
+        gap: 37px
+        display: grid !important
+        grid-template-columns: 1fr 216px
+        align-items: center
+        border-radius: 16px
+        z-index: 1
+        position: relative
+        &::before
+            content: ''
+            display: block
+            width: 50%
+            height: 100%
+            top: 0
+            position: absolute
+            left: 0
+            background: url('../img/radio_patern.svg') top left no-repeat
+            background-size: contain
+            z-index: -1
+    &__prev
+        box-shadow: 0px 14px 44px rgba(0, 0, 0, 0.25)
+        border-radius: 16px
+        overflow: hidden
+        img
+            width: 100%
+            height: 216px
+            object-fit: cover
+    &__new
+        display: inline-block
+        background: rgba(255, 255, 255, 0.24)
+        padding: 7px 10px
+        font-size: 10px
+        line-height: 120%
+        color: var(--white)
+        border-radius: 8px
+        letter-spacing: 0.14em
+    &__name
+        margin: 18px 0 0
+        font-size: 28px
+        line-height: 110%
+        color: var(--white)
+    .btn__wht
+        margin: 18px 0 0
+        &:hover
+            p
+                color: #02E465
+        &:active
+            p
+                color: #009542
+    &__flex
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    
+.popular
+    padding: 56px 0 0
+    position: relative
+    overflow: hidden
+    .container
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 72px
+    &__title
+        display: grid
+        grid-template-columns: 1fr auto
+        gap: 15px
+        align-items: center
+    &__more
+        display: grid
+        grid-template-columns: 1fr 16px
+        gap: 8px
+        align-items: end
+        font-size: 16px
+        line-height: 120%
+        color: rgba(1, 185, 66, 1)
+        transition: all .3s
+        svg
+            transform: rotate(-90deg)
+            path
+                transition: all .3s
+                stroke: rgba(1, 185, 66, 1)
+        &:hover
+            color: rgb(0, 149, 66)
+            svg
+                path
+                    stroke: rgb(0, 149, 66)
+    &__wrapper
+        margin: 16px 0 0
+    &__item
+        padding: 12px 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        z-index: 1
+        position: relative
+        &:hover
+            .popular
+                &__overflow
+                    opacity: 1
+                &__time
+                    opacity: 0
+                    display: none
+                &__prev
+                    svg
+                        opacity: 1
+    &__prev
+        width: 60px
+        position: relative
+        img
+            width: 100%
+            height: 60px
+            object-fit: cover
+            border-radius: 16px
+        svg
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 32px
+            height: 32px
+            opacity: 0
+            transition: all .3s
+    &__info
+        margin: 0 auto 0 24px
+    &__track
+        font-size: 24px
+        line-height: 130%
+        letter-spacing: 0.01em
+        color: var(--text-black)
+    &__name
+        font-size: 18px
+        line-height: 150%
+        letter-spacing: 0.01em
+        color: var(--text-gray)
+    &__time
+        font-family: 'Inter'
+        font-style: normal
+        font-weight: 700
+        font-size: 18px
+        line-height: 130%
+        letter-spacing: -0.06em
+        color: var(--text-gray)
+        transition: all .3s
+    &__overflow
+        background: var(--white)
+        box-shadow: 0px 7px 44px rgba(16, 69, 24, 0.08)
+        border-radius: 20px
+        z-index: -1
+        position: absolute
+        top: 0
+        bottom: 0
+        left: -12px
+        right: -40px
+        opacity: 0
+        transition: all .3s
+    &__func
+        position: absolute
+        top: 50%
+        right: 40px
+        transform: translateY(-50%)
+        display: flex
+        justify-content: center
+        align-items: center
+        z-index: 2
+        a
+            margin: 0 16px 0 0
+            &:last-child
+                margin: 0
+        svg
+            width: 24px
+            height: 24px
+
+.music-slider
+    padding: 56px 0 0
+    position: relative
+    overflow: hidden
+    .slick-list
+        overflow: visible
+    .slick
+        &-arrow
+            opacity: 0
+            position: absolute
+            bottom: 50%
+            right: 16px
+            font-size: 0
+            width: 56px
+            height: 56px
+            background: rgba(255, 255, 255, 0.08)
+            border: 1px solid rgba(255, 255, 255, 0.17)
+            backdrop-filter: blur(42px)
+            -webkit-backdrop-filter: blur(42px)
+            border-radius: 12px
+            z-index: 1
+            display: flex
+            justify-content: center
+            align-items: center
+            transition: all .3s
+            &::before
+                content: ''
+                display: block
+                width: 24px
+                height: 24px
+                background: url('../img/slider_next.svg') center no-repeat
+                background-size: contain
+            &:hover
+                background: rgba(255, 255, 255, 0.2)
+        &-prev
+            right: auto
+            left: 16px
+            &::before
+                transform: rotate(180deg)
+    &__wrapper
+        margin: 24px 0 0
+        &:hover
+            .slick-arrow
+                opacity: 1
+    &__item
+        margin: 0 16px 0 0
+        max-width: 250px
+        &:hover
+            .music-slider__overflow
+                opacity: 1
+    &__prev
+        width: 100%
+        height: 250px
+        border-radius: 16px
+        overflow: hidden
+        position: relative
+        img
+            width: 100%
+            height: 100%
+            transition: all .3s
+    &__overflow
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6))
+        position: absolute
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all .3s
+        opacity: 0
+        svg
+            width: 56px
+            height: 56px
+    &__track
+        margin: 12px 0 0
+        font-size: 24px
+        line-height: 130%
+        letter-spacing: 0.01em
+        color: var(--text-black)
+    &__name
+        font-size: 18px
+        line-height: 150%
+        letter-spacing: 0.01em
+        color: var(--text-gray)
+
+.music-modal
+    position: fixed
+    bottom: 32px
+    left: 50%
+    transform: translateX(-50%)
+    width: calc( 100% - 40px )
+    max-width: 1400px
+    background: var(--white)
+    box-shadow: 0px 4px 74px rgba(27, 27, 39, 0.11)
+    border-radius: 48px
+    padding: 16px
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    z-index: 10
+    &__play
+        min-width: 48px
+        height: 48px
+        border-radius: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        background: linear-gradient(180deg, var(--light-green) -131.25%, var(--nav-green) 153.37%)
+        svg
+            width: 18px
+            height: 18px
+    &__sound
+        margin: 0 32px 
+        max-width: 120px
+        img
+            width: 100%
+    &__prev
+        margin: 0 24px 0 0
+        img
+            width: 60px
+            height: 60px
+            border-radius: 16px
+            object-fit: cover
+    &__volume
+        display: grid
+        grid-template-columns: 24px 85px
+        gap: 8px
+        align-items: center
+        margin: 0 45px 0 auto
+        img
+            width: 100%
+        div
+            width: 100%
+            background: rgba(1, 144, 63, 0.2)
+            border-radius: 3px
+            position: relative
+            height: 4px
+            cursor: pointer
+            span
+                position: absolute
+                top: 0
+                left: 0
+                height: 100%
+                width: 100%
+                background: var(--nav-green)
+                &::before
+                    content: ''
+                    display: block
+                    position: absolute
+                    width: 10px
+                    height: 10px
+                    right: 0
+                    top: 50%
+                    transform: translateY(-50%)
+                    background: var(--nav-green)
+                    border-radius: 100%
+    &__track
+        font-size: 24px
+        line-height: 130%
+        letter-spacing: 0.01em
+        color: var(--text-black)
+        position: relative
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+    &__name
+        font-size: 18px
+        line-height: 150%
+        letter-spacing: 0.01em
+        color: var(--text-gray)
+        position: relative
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+    &__arrow
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 60px
+        height: 60px
+        border-radius: 100%
+        background: var(--green-bg)
+        svg
+            width: 16px
+            height: 16px
+            transform: rotate(180deg)
+
+@media ( max-width: 1024px )
+    .music-modal
+        width: calc( 100% - 20px )
+    .radio
+        .container
+            grid-template-columns: 100%
+        &__chat,
+        &__track
+            grid-column: auto
+            grid-row: auto
+        &__chat
+            min-height: 450px
+    .radio-slider
+        &__slide
+            width: 62vw
+            margin: 0 8px 0 0
+            padding: 24px
+            min-height: 260px
+            grid-template-columns: 1fr 100px
+            gap: 29px
+        &__prev
+            img
+                height: 100px
+        &__name
+            font-size: 20px
+    .popular
+        .container
+            grid-template-columns: 100%
+            gap: 32px
+    .music-modal
+        &__name
+            font-size: 16px
+        &__track
+            font-size: 20px
+    .music-slider
+        &__item
+            max-width: 170px
+        &__prev
+            height: 170px
+        &__track
+            margin: 12px 0 0
+            font-size: 20px
+        &__name
+            font-size: 16px
+    .popular
+        &__overflow
+            left: -10px
+            right: -10px
+        &__func
+            right: 10px
+
+@media ( max-width: 700px )
+    .music-modal
+        &__sound
+            display: none
+        &__volume
+            display: none
+        &__prev
+            margin: 0 12px 0 16px
+        &__info
+            margin: 0 auto 0 0
+    .radio
+        &__track
+            padding: 24px
+            grid-template-columns: 90px 1fr
+            gap: 16px
+            align-items: center
+            &_prev
+                img
+                    height: 90px
+            &_wrapper
+                display: none
+            h1
+                margin: 16px 0 0
+            &_name
+                font-size: 16px
+            &_sound
+                display: none
+            &_yers
+                margin: 0 0 0 8px
+            &_play
+                width: 48px
+                height: 48px
+                svg
+                    width: 16px
+                    height: 16px
+        &__air
+            display: none
+            &_mob
+                display: block
+                background: var(--white)
+                border-radius: 16px
+                padding: 24px
+            &_item
+                gap: 16px
+                min-width: 286px
+            &_track
+                font-size: 20px
+            &_name
+                font-size: 16px
+            
+    h1
+        font-size: 24px
+    .radio-slider
+        &__slide
+            width: 92vw
+    .popular
+        &__more
+            display: block
+            span
+                display: none
+        &__overflow
+            top: auto
+            height: auto
+            left: auto
+            right: auto
+            position: relative
+            opacity: 1
+            background: transparent !important
+            box-shadow: none
+        &__func
+            position: relative
+            top: auto
+            right: auto
+            transform: none
+        &__time
+            order: 2
+            margin: 0 0 0 16px
+            display: block !important
+            opacity: 1 !important
+        &__info
+            margin: 0 auto 0 16px
+        &__track
+            font-size: 20px
+        &__name
+            font-size: 16px
+
+
+@media  ( max-width: 425px )
+    .radio-slider
+        &__slide
+            grid-template-columns: 1fr 60px
+            padding: 30px 16px
+            min-height: auto
+        &__prev
+            img
+                height: 60px
+        &__name
+            font-size: 16px
+    .music-modal
+        &__prev
+            img
+                width: 48px
+                height: 48px
+        &__arrow
+            min-width: 48px
+            width: 48px
+            height: 48px
+        &__track
+            font-size: 16px
+        &__name
+            font-size: 14px
+    
+@media ( max-width: 375px )
+    .popular
+        &__prev
+            width: 48px
+            img
+                height: 48px
+
+.radio-program
+    padding: 72px 0 0
+    position: relative
+    overflow: hidden
+    &__slider
+        margin: 40px auto 0
+        max-width: calc( 100% - 160px )
+        &_item
+            padding: 16px
+            border-radius: 12px
+            transition: all .3s
+            display: block
+            border: none
+            outline: none !important
+            &.active
+                background: var(--white)
+            &:hover
+                background: var(--white)
+        &_day
+            font-weight: 400
+            font-size: 16px
+            line-height: 130%
+            text-align: center
+            letter-spacing: 0.01em
+            color: var(--text-gray)
+        &_date
+            margin: 4px 0 0
+            font-family: 'Inter'
+            font-style: normal
+            font-weight: 700
+            font-size: 24px
+            line-height: 130%
+            text-align: center
+            letter-spacing: -0.06em
+            color: var(--text-black)
+        &_dis
+            background: transparent !important
+            opacity: 0.3
+        .slick
+            &-arrow
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                right: -80px
+                font-size: 0
+                width: 48px
+                height: 48px
+                background: linear-gradient(180deg, var(--light-green) -131.25%, var(--nav-green) 153.37%)
+                border-radius: 12px
+                z-index: 1
+                display: flex
+                justify-content: center
+                align-items: center
+                transition: all .3s
+                border: none
+                transition: all .3s
+                &::before
+                    content: ''
+                    display: block
+                    width: 24px
+                    height: 24px
+                    background: url('../img/slider_next.svg') center no-repeat
+                    background-size: contain
+                &:hover
+                    background: linear-gradient(180deg, #02E465 -131.25%, #019040 153.37%), radial-gradient(97.79% 273.13% at 50% -40%, #016DD0 0%, #023EC4 72.24%, #102347 100%), linear-gradient(180deg, #0080F5 -131.25%, #003494 242.5%)
+                    box-shadow: 0px 20px 80px rgba(1, 144, 64, 0.3), inset 0px 1px 0px rgba(255, 255, 255, 0.08)
+                &:active
+                    background: linear-gradient(180deg, #01C658 -131.25%, #017A36 153.37%)
+                    box-shadow: 0px 20px 80px rgba(1, 144, 64, 0.3), inset 0px 1px 0px rgba(255, 255, 255, 0.08)
+            &-prev
+                right: auto
+                left: -80px
+                &::before
+                    transform: rotate(180deg)
+    &__wrapper
+        margin: 64px 0 0
+    &__block
+        display: grid
+        grid-template-columns: 150px 1fr
+        gap: 70px
+        align-items: center
+        position: relative
+        padding: 28px 0
+        z-index: 1
+        border-bottom: 1px solid #DAE0E7
+        transition: all .3s
+        &:hover
+            border-bottom: 1px solid transparent
+            .radio-program
+                &__overflow
+                    opacity: 1
+                &__time
+                    opacity: 0
+                    display: none
+                &__prev
+                    svg
+                        opacity: 1
+    &__trans
+        max-width: 150px
+        display: grid
+        grid-template-columns: 1fr auto
+        gap: 8px
+        align-items: center
+        justify-content: start
+        &_text
+            font-family: 'Inter'
+            font-style: normal
+            font-weight: 700
+            font-size: 24px
+            line-height: 130%
+            letter-spacing: -0.06em
+            color: var(--text-black)
+        &_active
+            font-family: 'Coolvetica'
+            font-style: normal
+            font-weight: 400
+            font-size: 10px
+            line-height: 120%
+            letter-spacing: 0.14em
+            color: var(--white)
+            padding: 6px 10px
+            background: linear-gradient(180deg, var(--light-green) -131.25%, var(--nav-green) 153.37%)
+            border-radius: 8px
+            display: grid
+            grid-template-columns: 4px 1fr
+            gap: 4px
+            align-items: center
+            &::before
+                content: ''
+                display: block
+                width: 4px
+                height: 4px
+                border-radius: 100%
+                background: var(--white)
+        &_progres
+            grid-column: 1/3
+            margin: 8px 0 0
+            background: var(--progres-grey)
+            border-radius: 30px
+            position: relative
+            width: 100%
+            height: 4px
+            overflow: hidden
+            span
+                position: absolute
+                height: 100%
+                left: 0
+                display: block
+                top: 0
+                background: linear-gradient(180deg, var(--light-green) -131.25%, var(--nav-green) 153.37%)
+    &__item
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        pointer-events: none
+    &__prev
+        width: 60px
+        position: relative
+        img
+            width: 100%
+            height: 60px
+            object-fit: cover
+            border-radius: 16px
+        svg
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 32px
+            height: 32px
+            opacity: 0
+            transition: all .3s
+    &__info
+        margin: 0 auto 0 24px
+    &__track
+        font-size: 24px
+        line-height: 130%
+        letter-spacing: 0.01em
+        color: var(--text-black)
+    &__name
+        font-size: 18px
+        line-height: 150%
+        letter-spacing: 0.01em
+        color: var(--text-gray)
+    &__time
+        font-family: 'Inter'
+        font-style: normal
+        font-weight: 700
+        font-size: 18px
+        line-height: 130%
+        letter-spacing: -0.06em
+        color: var(--text-gray)
+        transition: all .3s
+    &__overflow
+        background: var(--white)
+        box-shadow: 0px 7px 44px rgba(16, 69, 24, 0.08)
+        border-radius: 20px
+        z-index: -1
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+        width: calc( 100% + 84px )
+        opacity: 0
+        transition: all .3s
+        max-width: calc( 100vw - 20px )
+    &__func
+        position: absolute
+        top: 50%
+        right: 40px
+        transform: translateY(-50%)
+        display: flex
+        justify-content: center
+        align-items: center
+        z-index: 2
+        a
+            margin: 0 16px 0 0
+            &:last-child
+                margin: 0
+        svg
+            width: 24px
+            height: 24px
+
+@media ( max-width: 1024px )
+    .radio-program
+        &__slider
+            margin: 40px 0 0
+            max-width: 100%
+            &_item
+                width: 100%
+                max-width: 157px
+        &__wrapper
+            margin: 40px 0 0
+        &__block
+            padding: 14px 0 
+            grid-template-columns: minmax(75px , auto) 1fr
+            gap: 32px
+            justify-items: start
+        &__overflow
+            left: -10px
+            right: -10px
+            max-width: calc( 100% + 20px )
+            width: calc( 100% + 20px )
+            transform: none
+        &__trans
+            grid-template-columns: 100%
+            gap: 9px
+            &_progres
+                grid-column: auto
+        &__item
+            width: 100%
+        &__func
+            right: 10px
+
+@media ( max-width: 700px )
+    .radio-program
+        &__more
+            display: block
+            span
+                display: none
+        &__overflow
+            top: auto
+            height: auto
+            left: auto
+            right: auto
+            position: relative
+            opacity: 1
+            background: transparent !important
+            box-shadow: none
+            width: auto
+        &__func
+            position: relative
+            top: auto
+            right: auto
+            transform: none
+        &__time
+            order: 2
+            margin: 0 0 0 16px
+            display: block !important
+            opacity: 1 !important
+        &__info
+            margin: 0 auto 0 16px
+        &__track
+            font-size: 20px
+        &__name
+            font-size: 16px
+
+@media ( max-width: 500px )
+    .radio-program
+        &__block
+            grid-template-columns: 100%
+            gap: 10px
+        &__trans
+            grid-template-columns: auto auto auto
+            &_active
+                white-space: nowrap
+            &_progres
+                width: 75px
+                margin: 0
+
+@media ( max-width: 425px )
+    .radio-program
+        &__slider
+            &_item
+                max-width: 114px
+            &_date
+                margin: 2px 0 0
+                font-size: 20px
+            &_time
+                font-size: 16px
+
+@media ( max-width: 375px )
+    .radio-program
+        &__prev
+            width: 48px
+            img
+                height: 48px
+
+.music-slider__padding
+    padding-bottom: 56px
+
+.catalog-radio
+    padding: 24px 0 0
+    &__row
+        margin: 24px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: stretch
+        overflow-x: scroll
+        position: relative
+        &::-webkit-scrollbar
+            width: 0
+            height: 0
+        &_check
+            display: block
+            padding: 16px 24px
+            border-radius: 12px
+            transition: all .3s
+            font-size: 20px
+            line-height: 130%
+            color: var(--text-black)
+            white-space: nowrap
+            margin: 0 10px 0 0
+            &:last-child
+                margin: 0
+            &.active
+                background: var(--white)
+            &:hover
+                background: var(--white)
+
+@media ( max-width: 1024px )
+    .catalog-radio
+        &__row
+            &_check
+                padding: 12px 16px
+                font-size: 16px
+
+.about
+    padding: 120px 0 0
+    h1
+        font-size: 96px
+        text-align: center
+    &__subtitle
+        margin: 16px auto 0
+        font-size: 18px
+        line-height: 150%
+        text-align: center
+        color: var(--text-black)
+        opacity: 0.8
+        max-width: 547px
+    &__wrapper
+        margin: 120px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 40px
+    h2
+        font-size: 48px
+    &__block
+        display: grid
+        grid-template-columns: 100%
+        gap: 48px
+    &__text
+        margin: 16px 0 0
+        font-size: 18px
+        line-height: 150%
+        letter-spacing: 0.01em
+        color: var(--text-black)
+        opacity: 0.7
+    &__contact
+        margin: 24px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 32px
+    &__bold
+        font-size: 20px
+        line-height: 130%
+        letter-spacing: 0.01em
+        color: var(--text-black)
+    &__grey
+        margin: 12px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 8px
+        p
+            font-size: 16px
+            line-height: 130%
+            letter-spacing: 0.01em
+            color: var(--text-black)
+            opacity: 0.8
+    &__sidebar
+        ul
+            display: grid
+            grid-template-columns: 100%
+            gap: 16px
+            justify-items: start
+        a
+            font-size: 18px
+            line-height: 120%
+            letter-spacing: 0.01em
+            color: var(--text-gray)
+            transition: all .3s
+        li
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            &::before
+                content: ''
+                display: block
+                height: 100%
+                width: 29px
+                max-width: 0
+                background: url('../img/about-patern.svg') center no-repeat
+                background-size: contain
+                transition: all 1s
+                margin: 0px 8px 0 0
+            &:hover
+                a
+                    color: var(--text-black)
+            &.active
+                a
+                    color: var(--text-black)
+                &::before
+                    max-width: 100%
+
+@media ( max-width: 1024px )
+    .about
+        h1
+            font-size: 56px
+        h2
+            font-size: 32px
+        &__subtitle
+            margin: 16px auto 0
+            font-size: 16px
+            max-width: 505px
+        &__wrapper
+            margin: 80px 0 0
+            grid-template-columns: 1fr 2fr
+            gap: 20px
+        &__sidebar
+            a
+                font-size: 16px
+        &__text
+            font-size: 16px
+        &__bold
+            font-size: 16px
+
+@media ( max-width: 425px )
+    .about
+        padding: 80px 0 0
+        h1
+            font-size: 40px
+            text-align: left
+        &__subtitle
+            text-align: left
+        h2
+            font-size: 24px
+        &__wrapper
+            grid-template-columns: 100%
+            gap: 32px
+            margin: 32px 0 0
+        &__sidebar
+            ul
+                display: flex
+                justify-content: flex-start
+                align-items: center
+                overflow-x: scroll
+                position: relative
+                gap: 16px
+                &::-webkit-scrollbar
+                    width: 0
+                    height: 0
+                    display: none
+                    opacity: 0
+                    background: transparent
+            li
+                &::before
+                    content: none
+            a
+                white-space: nowrap
+        &__block
+            gap: 32px
+
+.category
+    padding: 32px 0 56px
+    &__row
+        display: flex
+        justify-content: flex-start
+        align-items: stretch
+        position: relative
+        // max-width: 1296px
+        margin: 0
+        padding-left: calc( (100% - 1296px) / 2)
+        padding-right: calc( (100% - 1296px) / 2)
+        width: fit-content
+        &::-webkit-scrollbar
+            width: 0
+            height: 0
+            display: none
+            opacity: 0
+            background: #00000000
+        a
+            display: block
+            padding: 16px 24px
+            border-radius: 12px
+            transition: all .3s
+            font-size: 20px
+            line-height: 120%
+            text-align: center
+            letter-spacing: 0.01em
+            color: var(--text-black)
+            white-space: nowrap
+            margin: 0 10px 0 0
+            &:last-child
+                margin: 0
+            &.active
+                background: var(--white)
+            &:hover
+                background: var(--white)
+        &_wrapper
+            position: relative
+            width: 100vw
+            left: 50%
+            transform: translateX(-50%)
+            overflow-x: scroll
+            margin: 32px 0 0
+            padding: 0 15px
+            &::-webkit-scrollbar
+                width: 0
+                height: 0
+                display: none
+                opacity: 0
+                background: #00000000
+    &__tv
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+        gap: 15px
+        &_item
+            display: block
+            border-radius: 16px
+            position: relative
+            img
+                border-radius: 16px
+                width: 100%
+                transition: all .3s
+                height: 100%
+                position: absolute
+                left: 50%
+                transform: translateX(-50%)
+                top: 0
+            &:hover
+                img
+                    width: 103%
+                    height: 103%
+    &__radio
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+        gap: 15px
+        &_item
+            display: block
+            &:hover
+                .category__radio
+                    &_overflow
+                        opacity: 1
+                    &_download
+                        opacity: 1
+        &_img
+            border-radius: 16px
+            position: relative
+            overflow: hidden
+            img
+                width: 100%
+                transition: all .3s
+        &_name
+            margin: 11px 0 0
+            font-size: 24px
+            line-height: 130%
+            letter-spacing: 0.01em
+            color: var(--text-black)
+        &_artist
+            font-size: 18px
+            line-height: 150%
+            letter-spacing: 0.01em
+            color: var(--text-gray)
+        &_overflow
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6))
+            position: absolute
+            display: flex
+            justify-content: center
+            align-items: center
+            transition: all .3s
+            opacity: 0
+            svg
+                width: 56px
+                height: 56px
+        &_info
+            position: relative
+        &_download
+            position: absolute
+            top: 50%
+            right: 0
+            transform: translateY(-50%)
+            opacity: 0
+            transition: all .3s
+
+.pagination
+    margin: 47px 0 0
+    display: flex
+    justify-content: center
+    align-items: center
+    li
+        margin: 0 2px
+    p
+        width: 48px
+        height: 48px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: var(--white)
+        border: 1px solid var(--progres-grey)
+        border-radius: 8px
+        font-size: 20px
+        line-height: 130%
+        letter-spacing: 0.01em
+        color: var(--text-gray)
+    a
+        &:hover
+            p
+                background: linear-gradient(180deg, #0080F5 -131.25%, #003494 242.5%)
+                border: 1px solid rgba(255, 255, 255, 0.2)
+                color: var(--white)
+        &.active
+            p
+                background: linear-gradient(180deg, #0080F5 -131.25%, #003494 242.5%)
+                border: 1px solid rgba(255, 255, 255, 0.2)
+                color: var(--white)
+    &__green
+        a
+            &:hover
+                p
+                    background: linear-gradient(180deg, #02E465 -131.25%, #019040 153.37%)
+                    border: 1px solid rgba(255, 255, 255, 0.2)
+                    color: var(--white)
+            &.active
+                p
+                    background: linear-gradient(180deg, #02E465 -131.25%, #019040 153.37%)
+                    border: 1px solid rgba(255, 255, 255, 0.2)
+                    color: var(--white)
+
+@media ( max-width: 1024px )
+    .category
+        &__row
+            a
+                padding: 12px 16px
+                font-size: 16px
+        &__tv
+            gap: 8px
+        &__radio
+            grid-template-columns: 1fr 1fr 1fr 1fr
+            &_name
+                font-size: 20px
+            &_artist
+                font-size: 16px
+
+@media ( max-width: 700px )
+    .category
+        &__tv
+            margin: 24px 0 0
+            gap: 8px
+            grid-template-columns: 1fr 1fr 1fr
+        &__radio
+            grid-template-columns: 1fr 1fr
+    .pagination
+        li
+            &:nth-child(5),
+            &:nth-child(6),
+            &:nth-child(7)
+                display: none
+
+.nav
+    &__search
+        min-width: 48px
+    &__input
+        display: none
+    .btn__grey
+        white-space: nowrap
+        p
+            white-space: nowrap
+    &__result
+        display: none
+
+.nav__active_search
+    position: sticky
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 100
+    max-width: 100vw
+    ul
+        display: none
+    .nav
+        &__search
+            margin: 0 4px 0 24px
+        &__input
+            position: relative
+            margin: 0 8px 0 0
+            display: grid
+            grid-template-columns: 1fr 48px
+            gap: 8px
+            width: 100%
+            input
+                width: 100%
+                box-sizing: border-box
+                border: none
+                padding: 0
+                height: auto
+                font-size: 20px
+                line-height: 145%
+                letter-spacing: 0.01em
+                color: var((--text-black))
+                &::placeholder
+                    color: var(--text-gray)
+            &_close
+                width: 48px
+                height: 48px
+                border-radius: 12px
+                display: flex
+                justify-content: center
+                align-items: center
+                transition: all .3s
+                cursor: pointer
+                svg
+                    width: 24px
+                    height: 24px
+                    path
+                        stroke: var(--black)
+                &:hover
+                    background: linear-gradient(180deg, #0080F5 -131.25%, #003494 242.5%)
+                    svg
+                        path
+                            stroke: var(--white) 
+        &__result
+            display: block
+            position: absolute
+            left: 0
+            width: 100%
+            background: #FFFFFF
+            top: calc( 100% - 1px )
+            padding: 26px 0 20px
+            .container
+                display: block
+            &_row
+                display: flex
+                justify-content: flex-start
+                align-items: center
+                margin: 24px 0 0
+                overflow-x: scroll
+                &::-webkit-scrollbar
+                    width: 0
+                    height: 0
+            &_item
+                margin: 0 12px 12px 0
+                min-width: 176px
+                max-width: 176px
+                border-radius: 12px
+                position: relative
+                display: block
+                img
+                    width: 100%
+                    height: 100%
+                    transition: all .3s
+                    border-radius: 12px
+                    left: 50%
+                    transform: translateX(-50%)
+                    position: absolute
+                &:hover
+                    img
+                        width: 103%
+                        height: 103%
+            &_overflow
+                position: absolute
+                top: 1px
+                left: 0
+                width: 100vw
+                height: 100vh
+                z-index: -1
+                background: rgba(0, 0, 0, 0.8)
+            &_title
+                display: flex
+                justify-content: space-between
+                align-items: center
+            &_more
+                display: flex
+                align-items: flex-end
+                justify-content: center
+                p
+                    font-size: 16px
+                    line-height: 120%
+                    letter-spacing: 0.01em
+                    color: var(--text-black)
+                    margin: 0 8px 0 0
+                    transition: all .3s
+                svg
+                    width: 16px
+                    height: 16px
+                    transform: rotate(-90deg)
+
+@media ( max-width: 1024px )
+    .nav__active_search
+        .container
+            grid-template-columns: 140px auto 1fr
+            gap: 4px
+        .btn__grey
+            display: none
+        .nav
+            &__humburger,
+            &__theme
+                display: none
+            &__search
+                margin: 0 0 0 12px
+            &__input
+                input
+                    font-size: 16px
+            &__result
+                padding: 16px 0
+                &_row
+                    margin: 15px 0 0
+                &_item
+                    min-width: 104px
+                    max-width: 104px
+
+@media ( max-width: 600px )
+    .nav__active_search
+        .container
+            grid-template-columns: 48px 1fr
+            gap: 4px
+        .nav
+            &__logo
+                display: none
+            &__search
+                margin: 0
+            &__result
+                padding: 0 0 16px
+                &_title
+                    align-items: end
+                    p
+                        font-size: 14px
+                h2
+                    font-size: 20px
+
+@media ( max-width: 375px )
+    .nav__active_search
+        .nav
+            &__result
+                &_title
+                    flex-direction: column
+                    align-items: flex-start
+                    p
+                        margin: 8px 0 0
+                        font-size: 16px
+
+.search
+    padding: 72px 0 56px
+    position: relative
+    overflow: hidden
+    &__filter
+        margin: 32px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: stretch
+        overflow-x: scroll
+        position: relative
+        &::-webkit-scrollbar
+            width: 0
+            height: 0
+        a
+            display: block
+            padding: 16px 24px
+            border-radius: 12px
+            transition: all .3s
+            font-size: 20px
+            line-height: 130%
+            letter-spacing: 0.01em
+            color: var(--text-black)
+            margin: 0 10px 0 0
+            &:last-child
+                margin: 0
+            &.active
+                background: var(--white)
+            &:hover
+                background: var(--white)
+    &__block
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 24px
+    &__title
+        display: flex
+        justify-content: flex-start
+        align-items: center
+    &__more
+        display: flex
+        justify-content: center
+        align-items: end
+        margin: 0 0 0 24px
+        svg
+            height: 16px
+            transform: rotate(-90deg)
+            margin: 0 0 0 8px
+            path
+                stroke: var((--donate-blc))
+        p
+            background: linear-gradient(180deg, #0080F5 -131.25%, #003494 242.5%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            background-clip: text
+            text-fill-color: transparent
+            font-size: 16px
+            line-height: 120%
+            letter-spacing: 0.01em
+    &__row
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        position: relative
+        overflow-x: scroll
+        margin: 24px 0 0
+        .slick-list
+            overflow: visible
+        &::-webkit-scrollbar
+            width: 0
+            height: 0
+        &_film
+            .slick
+                &-list
+                    overflow: visible
+                &-arrow
+                    opacity: 0
+                    position: absolute
+                    top: 50%
+                    transform: translateY(-50%)
+                    right: 16px
+                    font-size: 0
+                    width: 56px
+                    height: 56px
+                    background: rgba(255, 255, 255, 0.08)
+                    border: 1px solid rgba(255, 255, 255, 0.17)
+                    backdrop-filter: blur(42px)
+                    -webkit-backdrop-filter: blur(42px)
+                    border-radius: 12px
+                    z-index: 1
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    transition: all .3s
+                    &::before
+                        content: ''
+                        display: block
+                        width: 24px
+                        height: 24px
+                        background: url('../img/slider_next.svg') center no-repeat
+                        background-size: contain
+                    &:hover
+                        background: rgba(255, 255, 255, 0.2)
+                &-prev
+                    right: auto
+                    left: 16px
+                    &::before
+                        transform: rotate(180deg)
+        &_music
+            .slick-list
+                overflow: visible
+            .slick
+                &-arrow
+                    opacity: 0
+                    position: absolute
+                    bottom: 50%
+                    right: 16px
+                    font-size: 0
+                    width: 56px
+                    height: 56px
+                    background: rgba(255, 255, 255, 0.08)
+                    border: 1px solid rgba(255, 255, 255, 0.17)
+                    backdrop-filter: blur(42px)
+                    -webkit-backdrop-filter: blur(42px)
+                    border-radius: 12px
+                    z-index: 1
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    transition: all .3s
+                    &::before
+                        content: ''
+                        display: block
+                        width: 24px
+                        height: 24px
+                        background: url('../img/slider_next.svg') center no-repeat
+                        background-size: contain
+                    &:hover
+                        background: rgba(255, 255, 255, 0.2)
+                &-prev
+                    right: auto
+                    left: 16px
+                    &::before
+                        transform: rotate(180deg)                                       
+        &_name
+            font-size: 24px
+            line-height: 130%
+            letter-spacing: 0.01em
+            color: var(--text-black)
+            margin: 12px 0 0
+        &_artist
+            font-size: 18px
+            line-height: 150%
+            color: var(--text-gray)
+    &__wrapper
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+        gap: 16px
+        &_item
+            display: block
+            position: relative
+            img
+                width: 100%
+                transition: all .3s
+                position: absolute
+                top: 0
+                left: 0
+                object-fit: cover
+                height: 100%
+                border-radius: 16px
+                left: 50%
+                transform: translateX(-50%)
+            &:hover
+                box-shadow: 0px 7px 24px rgba(0, 0, 0, 0.07)
+                img
+                    width: 103%
+                    height: 103%
+
+@media ( max-width: 768px )
+    .search
+        padding: 32px 0 56px
+        &__filter
+            a
+                padding: 12px 16px
+                font-size: 16px
+        &__row
+            &_film
+                min-width: 120px
+            &_music
+                min-width: 170px
+            &_name
+                font-size: 20px
+            &_artist
+                font-size: 16px
+        &__wrapper
+            gap: 8px
+
+@media ( max-width: 700px )
+    .search
+        &__wrapper
+            grid-template-columns: 1fr 1fr 1fr
+
+@media ( max-width: 375px )
+    .search
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+        
+.player,
+.radio
+    &__chat
+        display: flex
+        flex-direction: column
+        &_wrapper
+            margin: auto 0 0
+
+@media ( min-width: 1700px )
+    .category__row
+        padding-left: calc((100% - 1776px) / 2)
+        padding-right: calc((100% - 1776px) / 2)
+    .container
+        max-width: 1776px
+    .nav
+        &__video
+            svg
+                width: 16px
+                height: 16px
+    .about
+        h1
+            font-size: 108px
+        &__subtitle
+            margin: 16px auto 0
+            font-size: 20px
+            max-width: 550px
+        &__sidebar
+            a
+                font-size: 20px
+        &__text
+            font-size: 20px
+        &__bold
+            font-size: 24px
+        &__grey
+            p
+                font-size: 18px
+    h1
+        font-size: 56px
+    .donate
+        &__subtitle
+            font-size: 20px
+            margin: 12px auto 0
+            max-width: 530px
+        &__check
+            &_wrapper
+                margin: 32px 0 0
+            span
+                padding: 10px 12px
+        &__form
+            max-width: 582px
+        &__input
+            padding: 13px 15px
+    .catalog-header
+        min-height: 670px
+        .container
+            min-height: 574px
+        &__tab
+            &_link
+                padding: 13px 24px
+                font-size: 18px
+        &__har
+            font-size: 20px
+    h2
+        font-size: 48px
+    .details
+        &__bold
+            font-size: 24px
+        &__wrapper
+            max-width: 1030px
+        &__text
+            font-size: 20px
+    .list-film
+        &__slide
+            width: 303px
+            height: 450px
+    .footer
+        .container
+            max-width: 1296px
+    .category
+        &__row
+            a
+                font-size: 24px
+        &__radio
+            &_name
+                font-size: 32px
+            &_artist
+                font-size: 20px
+    .catalog-radio
+        &__row
+            &_check
+                font-size: 24px
+    .popular
+        &__prev
+            width: 80px
+            img
+                height: 80px
+        &__track
+            font-size: 32px
+        &__name
+            font-size: 20px
+        &__time
+            font-size: 20px
+    .music-slider
+        &__item
+            max-width: 320px
+        &__prev
+            height: 320px
+        &__track
+            font-size: 32px
+        &__name
+            font-size: 20px
+    .series-slider
+        &__season
+            a
+                width: 56px
+                height: 56px
+                font-size: 36px
+        &__item
+            min-width: 382px
+            &_img
+                img
+                    height: 215px
+        &__name
+            font-size: 24px
+        &__time
+            font-size: 18px
+    .tv-radio
+        &__category
+            &_item
+                min-height: 230px
+                p
+                    font-size: 24px
+    .player
+        &__chat
+            &_wrapper
+                p
+                    font-size: 18px
+        &__sidebar
+            &_time
+                font-size: 28px
+            &_name
+                p
+                    font-size: 24px
+            &_category
+                font-size: 18px
+    .slider-film
+        &__slide
+            img
+                width: 1178px
+                height: 550px
+        &__name
+            font-size: 36px
+            max-width: 780px
+    .language
+        &__wrapper
+            grid-template-columns: minmax(1px , 550px) 1fr auto
+        &__title
+            font-size: 36px
+        &__btn
+            font-size: 18px
+        &__label
+            p
+                font-size: 18px
+    .about-bars
+        &__text
+            font-size: 20px
+    .radio-program
+        &__slider
+            &_day
+                font-size: 18px
+            &_date
+                font-size: 32px
+    .radio-program
+        &__prev
+            width: 80px
+            img
+                height: 80px
+        &__track
+            font-size: 32px
+        &__name
+            font-size: 20px
+        &__time
+            font-size: 20px
+    .radio
+        &__track
+            grid-template-columns: 300px 1fr
+            gap: 32px
+            &_prev
+                img
+                    height: 300px
+    .radio-slider
+        &__slide
+            max-width: 1178px   
+            padding: 125px
+            grid-template-columns: 1fr 300px
+            gap: 32px
+        &__name
+            font-size: 36px
+        &__prev
+            img
+                height: 300px
+    .search
+        &__filter
+            a
+                padding: 16px 30px
+                font-size: 24px
+        &__row
+            &_film
+                min-width: 303px
+            &_music
+                min-width: 320px
+            &_name
+                font-size: 32px
+            &_artist
+                font-size: 20px
+    .nav__active_search 
+        .nav__result_item
+            min-width: 230px
+            max-width: 230px
+    .tv
+        &__bar
+            &_day
+                font-size: 18px
+            &_date
+                font-size: 32px
+        &__item
+            grid-template-columns: minmax(175px, 267px) 640px 1fr
+        &__prev
+            img
+                height: 360px
+        &__info
+            &_name
+                font-size: 48px
+            &_har
+                font-size: 24px
+            &_text
+                font-size: 20px
+                max-height: 150px
+
+.player
+    &__video
+        position: relative
+        video
+            border-radius: 24px
+        &_yers
+            position: absolute
+            top: 24px
+            left: 24px
+            font-size: 14px
+            line-height: 120%
+            letter-spacing: 0.14em
+            text-transform: uppercase
+            color: var(--white)
+            padding: 7px 10px
+            background: rgba(255, 255, 255, 0.14)
+            border-radius: 8px
+
+@media ( max-width: 700px )
+    .catalog-header__info .btn__blue
+        padding: 11px 18px 15px
+    .catalog-header__tab_mob
+        display: none
+
+.music-slider
+    &__item
+        &_info
+            position: relative
+        &_download
+            position: absolute
+            top: 50%
+            right: 0
+            transform: translateY(-50%)
+            opacity: 0
+            transition: all .3s
+        &:hover
+            .music-slider__item_download
+                opacity: 1
+        
+.catalog-header
+    h1
+        font-weight: 600
+
+.footer
+    &__row
+        .mob
+            display: none
+
+@media ( max-width: 1024px )
+    .footer
+        &__row
+            .mob
+                display: block
+
+.body-wht
+    background: var(--white)
+
+.tv__bar
+    &_scroll
+        opacity: 0
+        position: fixed
+        top: 0
+        background: rgba(244, 245, 246, 0.93)
+        box-shadow: 0px 4px 74px rgba(27, 27, 39, 0.11)
+        z-index: -1
+        left: 0
+        width: 100%
+        padding: 8px 0
+        transition: all .3s
+    &_wrapper
+        .container
+            padding: 0
+        &.active
+            z-index: 10
+            opacity: 1
+            .tv__bar
+                margin: 0 auto
+            .container
+                padding: 0 15px
+
+.filter
+    margin: 72px 0 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__wrapper
+        max-width: 420px
+        width: 100%
+        background: #FFFFFF
+        border-radius: 34px
+        position: relative
+        z-index: 1
+        border: 1px solid rgba(0, 52, 148, 1)
+    &__input
+        position: relative
+        cursor: pointer
+        p
+            width: 100%
+            background: transparent
+            box-sizing: border-box
+            border: none
+            padding: 14px 23px
+            cursor: pointer !important
+            font-family: 'Coolvetica'
+            font-style: normal
+            font-weight: 400
+            font-size: 18px
+            line-height: 150%
+            letter-spacing: 0.01em
+            color: #262F44
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            right: 16px
+            top: 50%
+            transform: translateY(-50%)
+            width: 24px
+            height: 24px
+            background: url('../img/arrow_blc.svg') center no-repeat
+            background-size: contain
+            transition: all .3s
+        &.active
+            &::before
+                transform: translateY(-50%) rotate(180deg)
+    ul
+        display: grid
+        grid-template-columns: 100%
+        gap: 10px
+        padding: 12px 24px
+        background: #FFFFFF
+        box-shadow: 0px 7px 44px rgba(16, 69, 24, 0.08)
+        border-radius: 20px
+        position: absolute
+        top: calc( 100% + 8px )
+        left: 0
+        width: 100%
+        opacity: 0
+        transition: all .3s
+        z-index: 5
+        li
+            font-family: 'Coolvetica'
+            font-style: normal
+            font-weight: 400
+            font-size: 18px
+            line-height: 150%
+            letter-spacing: 0.01em
+            color: #262F44
+            opacity: 0.4
+            transition: all .3s
+            cursor: pointer
+            &:hover,
+            &.active
+                opacity: 1
+        &.active
+            opacity: 1
+
+@media ( max-width: 768px )
+    .filter
+        display: grid
+        grid-template-columns: 100%
+        gap: 20px

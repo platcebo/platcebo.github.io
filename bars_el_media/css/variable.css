@@ -1,0 +1,21 @@
+.light-theme {
+    --main-bg: #F4F5F6;
+    --white: #fff;
+    --black: #000;
+    --gray: #ABB8C4;
+    --gray-bg: #EDF0F3;
+    --blue-white: #0066C3;
+    --blue-dark: #002BC3;
+    --text-gray: #82919F;
+    --text-black: #262F44;
+    --gray-opacity: #ffffff24;
+    --check-bg: #E6E6E6;
+    --footer-bg:#1A1B1E;
+    --border-footer: #373737;
+    --donate-white: #0080F5;
+    --donate-blc: #003494;
+    --progres-grey: #DAE0E7;
+    --nav-green: #019040;
+    --light-green: #02E465;
+    --green-bg: #F4F6F4;
+}
