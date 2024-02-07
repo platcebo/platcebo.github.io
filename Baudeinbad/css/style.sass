@@ -1,0 +1,1448 @@
+body
+    background-color: #FAFAFA
+.container
+    max-width: 1200px
+    margin: 0 auto
+    padding: 0 40px
+    box-sizing: content-box
+h2
+    color: #272932
+    font-family: Inter
+    font-size: 36px
+    font-style: normal
+    font-weight: 700
+    line-height: normal
+    text-transform: uppercase
+
+.header
+    padding: 53px 0 80px
+    background: url('../img/header_bg.jpg') center no-repeat
+    background-size: cover
+    position: relative
+    .container
+        position: relative
+    &__nav
+        display: flex
+        justify-content: space-between
+        align-items: end
+    &__logo
+        max-width: 173px
+        img
+            width: 100%
+    &__func
+        display: grid
+        grid-template-columns: 180px 180px
+        gap: 20px
+        a
+            display: flex
+            width: 100%
+            align-items: center
+    &__phone
+        padding: 10px 19px 10px 13px
+        border-radius: 57px
+        background: rgba(255, 255, 255, 0.10)
+        box-shadow: 3px 7px 34px -19px rgba(0, 0, 0, 0.15)
+        backdrop-filter: blur(4px)
+        justify-content: space-between
+        border: 1px solid #ffffff47
+        transition: all .3s
+        span
+            color: #FFF
+            font-family: Inter
+            font-size: 14px
+            font-style: normal
+            font-weight: 600
+            line-height: 140%
+        &:hover
+            background: rgba(255, 255, 255, 0.20)
+    &__prompt
+        justify-content: center
+        border-radius: 38px
+        background: #FFDE31
+        justify-content: center
+        padding: 13px
+        transition: all .3s
+        span
+            color: #272932
+            font-family: Inter
+            font-size: 14px
+            font-style: normal
+            font-weight: 500
+            line-height: 140%
+        &:hover
+            background: #fff
+    h1
+        margin: 145px 0 0
+        max-width: 600px
+        color: #FFF
+        font-family: Inter
+        font-size: 68px
+        font-style: normal
+        font-weight: 700
+        line-height: 110%
+        letter-spacing: -0.68px
+        text-transform: uppercase
+    &__text
+        margin: 16px 0 0
+        max-width: 480px
+        color: #FFF
+        font-family: Inter
+        font-size: 26px
+        font-style: normal
+        font-weight: 600
+        line-height: 140%
+        &+.header__prompt
+            display: none
+    &__dop
+        max-width: 708px
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 24px
+        &_item
+            position: relative
+            padding: 48px 24px 22px
+            border-radius: 12px
+            background: rgba(255, 255, 255, 0.10)
+            box-shadow: 3px 7px 34px -19px rgba(0, 0, 0, 0.15)
+            backdrop-filter: blur(4px)
+            border: 1px solid #ffffff47
+        p
+            color: #FFF
+            font-family: Inter
+            font-size: 20px
+            font-style: normal
+            font-weight: 500
+            line-height: normal
+        &_plus
+            width: 32px
+            height: 32px
+            position: absolute
+            top: 0
+            left: 24px
+            transform: translateY(-50%)
+            display: flex
+            justify-content: center
+            align-items: center
+            background: #FFDE31
+            border-radius: 100%
+    &__soc
+        display: grid
+        grid-template-columns: 18px 18px 18px 18px
+        gap: 40px
+        align-items: center
+        img
+            width: 100%
+        a
+            transition: all .3s
+            &:hover
+                opacity: 0.5
+    &__row
+        margin: 120px 0 0
+        display: flex
+        justify-content: space-between
+        align-items: end
+
+.comfort
+    padding: 140px 0 0
+    &__title
+        display: flex
+        flex-direction: column
+        align-items: center
+        h2
+            text-align: center
+            max-width: 600px
+            margin: 0 auto
+        p
+            padding: 2px 16px
+            border-radius: 13px
+            background: #FFDE31
+            width: auto
+            margin: 16px auto 0
+            text-align: center
+            display: inline-block
+            font-family: Inter
+    &__wrapper
+        margin: 60px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+        gap: 40px
+    &__img
+        width: 100%
+        height: 360px
+        object-fit: cover
+    &__text
+        margin: 17px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        p
+            color: #272932
+            font-family: Inter
+            font-size: 18px
+            font-style: normal
+            font-weight: 500
+            line-height: 100%
+    &__check
+        margin: 0 12px 0 0
+        padding: 4px
+        width: 24px
+        border-radius: 49px
+        background: #FFDE31        
+        img
+            width: 100%
+            display: block
+
+.assurance
+    padding: 160px 0 0
+    &__container
+        display: grid
+        grid-template-columns: minmax(400px, 477px) 48%
+        gap: 60px
+        justify-content: space-between
+        align-items: start
+    &__title
+        p
+            margin: 16px 0 0
+            color: #272932
+            font-family: Inter
+            font-size: 26px
+            font-style: normal
+            font-weight: 500
+            line-height: 140%
+            max-width: 284px
+    &__arrow
+        width: 100px
+        padding: 24px
+        border-radius: 100%
+        background: #FFDE31
+        margin: 80px 0 0
+        img
+            width: 100%
+            display: block
+    &__wrapper
+        display: grid
+        grid-template-columns: 100%
+        gap: 40px
+    &__row
+        display: grid
+        grid-template-columns: 34px 1fr
+        gap: 12px
+        align-items: center
+    &__num
+        text-align: center
+        padding: 2px
+        color: #272932
+        font-family: Inter
+        font-size: 10px
+        font-style: normal
+        font-weight: 600
+        line-height: 140%
+        letter-spacing: 2px
+        text-transform: uppercase
+        border-radius: 13px
+        background: #FFDE31
+    &__name
+        p
+            color: #272932
+            font-family: Inter
+            font-size: 22px
+            font-style: normal
+            font-weight: 600
+            line-height: 120%
+    &__text
+        margin: 16px 0 0
+        p
+            color: #272932
+            font-family: Inter
+            font-size: 16px
+            font-style: normal
+            font-weight: 400
+            line-height: 160%
+
+.gallery
+    padding: 140px 0 0
+    &__slide
+        display: grid
+        grid-template-columns: 100%
+        gap: 40px
+        max-width: 580px
+        img
+            width: 100%
+            height: 270px
+            object-fit: cover
+            display: block
+    &__row
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 40px
+
+.proof
+    padding: 140px 0 0
+    h2
+        text-align: center
+        margin: 0 auto 
+        max-width: 580px
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-template-rows: 1fr 1fr
+        gap: 40px
+        margin: 60px 0 0
+    &__item
+        background: #FFF
+        padding: 40px 29px 22px 24px
+        display: grid
+        grid-template-rows: auto 1fr
+        gap: 10px
+    &__row
+        display: grid
+        grid-template-columns: 54px 1fr
+        gap: 20px
+        align-items: center
+    &__icon
+        display: block
+        padding: 3px
+        background: #FFDE31
+        border-radius: 100%
+        img
+            display: block
+            width: 100%
+    &__name
+        color: #292645
+        font-family: Inter
+        font-size: 20px
+        font-style: normal
+        font-weight: 600
+        line-height: 120%
+    &__text
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        p
+            color: #292645
+            font-family: Inter
+            font-size: 14px
+            font-style: normal
+            font-weight: 400
+            line-height: 160%
+
+.tradition
+    padding: 140px 0 0
+    &__block
+        border-radius: 30px
+        background: #272932
+        position: relative
+        overflow: hidden
+        display: grid
+        grid-template-columns: 1fr 517px
+        gap: 60px
+    &__info
+        max-width: 570px
+        padding: 100px 0 90px 100px
+    &__yellow
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        p
+            padding: 2px 16px
+            border-radius: 13px
+            background: #FFDE31
+            color: #272932
+            font-family: Inter
+            font-size: 10px
+            font-style: normal
+            font-weight: 600
+            line-height: 140%
+            letter-spacing: 2px
+            text-transform: uppercase
+    h2
+        margin: 24px 0 0
+        color: #FFF
+    &__text
+        margin: 24px 0 0
+        color: #ffffffcc
+        font-family: Inter
+        font-size: 18px
+        font-style: normal
+        font-weight: 400
+        line-height: 160%
+        a
+            opacity: 0.8
+            color: #FFDE31
+            font-size: 18px
+            font-weight: 600
+    &__img
+        img
+            height: 1px
+            min-height: 100%
+            width: 100%
+            object-fit: cover
+
+.step
+    padding: 140px 0 
+    &__yellow
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        p
+            padding: 2px 16px
+            border-radius: 13px
+            background: #FFDE31
+            color: #272932
+            font-family: Inter
+            font-size: 10px
+            font-style: normal
+            font-weight: 600
+            line-height: 140%
+            letter-spacing: 2px
+            text-transform: uppercase
+    h2
+        max-width: 580px
+        margin: 26px 0 0
+    &__wrapper
+        margin: 80px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 40px
+        row-gap: 80px
+    &__item
+        border-bottom: 1px solid #D9D9D9
+        padding: 0 0 32px
+    &__row
+        display: grid
+        grid-template-columns: 34px 1fr
+        gap: 18px
+        align-items: center
+    &__num
+        border-radius: 13px
+        background: #FFDE31
+        text-align: center
+        padding: 2px
+        color: #272932
+        font-family: Inter
+        font-size: 10px
+        font-style: normal
+        font-weight: 600
+        line-height: 140%
+        letter-spacing: 2px
+        text-transform: uppercase
+    &__name
+        color: #272932
+        font-family: Inter
+        font-size: 22px
+        font-style: normal
+        font-weight: 600
+        line-height: 120%
+    &__text
+        color: #272932
+        font-family: Inter
+        font-size: 16px
+        font-style: normal
+        font-weight: 400
+        line-height: 160%
+        margin: 16px 0 0
+
+.comment
+    padding: 80px 0
+    background: #dbdce0ca
+    &__slide
+        border-radius: 12px
+        background: #FFF
+        box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.07)
+        padding: 20px 23px
+    &__header
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+    &__info
+        margin: 0 auto 0 14px
+    &__avatar
+        img
+            width: 40px
+            height: 40px
+            border-radius: 100%
+    &__name
+        color: rgba(39, 41, 50, 0.87)
+        font-family: Roboto
+        font-size: 15px
+        font-style: normal
+        font-weight: 400
+        line-height: 17px
+        letter-spacing: 0.2px
+    &__date
+        margin: 6px 0 0
+        color: rgba(39, 41, 50, 0.54)
+        font-family: Roboto
+        font-size: 14px
+        font-style: normal
+        font-weight: 400
+        line-height: 19px
+        letter-spacing: 0.2px
+    &__google
+        max-width: 24px
+        img
+            width: 100%
+    &__rate
+        margin: 10px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+        gap: 2px
+        max-width: 78px
+        img
+            width: 100%
+    &__text
+        margin: 10px 0 0
+        padding: 0 20px 0 0
+        color: #272932
+        font-family: Roboto
+        font-size: 16px
+        font-style: normal
+        font-weight: 400
+        line-height: 24px
+
+.form
+    &__yellow
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        p
+            padding: 2px 16px
+            border-radius: 13px
+            background: #FFDE31
+            color: #272932
+            font-family: Inter
+            font-size: 10px
+            font-style: normal
+            font-weight: 600
+            line-height: 140%
+            letter-spacing: 2px
+            text-transform: uppercase
+
+.form
+    background: url('../img/form_bg.jpg') center no-repeat
+    background-size: cover
+    padding: 74px 0 75px
+    &__container
+        display: grid
+        grid-template-columns: 1fr 477px
+        gap: 60px
+    &__info
+        max-width: 580px
+        padding: 105px 0 0
+        h2
+            margin: 40px 0 0
+            color: #FFF
+            font-size: 58px
+    &__wrapper
+        padding: 40px 40px 30px
+        border-radius: 30px
+        background: rgba(255, 255, 255, 0.15)
+        box-shadow: 3px 7px 34px -19px rgba(0, 0, 0, 0.15)
+        backdrop-filter: blur(6px)
+    &__label
+        margin: 16px 0 0
+        &:nth-child(1)
+            margin: 0
+        p
+            color: #FFF
+            font-family: Inter
+            font-size: 14px
+            font-style: normal
+            font-weight: 600
+            line-height: 140%
+        input
+            margin: 4px 0 0
+            border-radius: 12px
+            background: #FFF
+            color: #272932
+            font-family: Inter
+            font-size: 16px
+            font-style: normal
+            font-weight: 400
+            line-height: 26px
+            border: none
+            width: 100%
+            box-sizing: border-box
+            padding: 10px 20px
+        textarea
+            margin: 4px 0 0
+            border-radius: 12px
+            background: #FFF
+            color: #272932
+            font-family: Inter
+            font-size: 16px
+            font-style: normal
+            font-weight: 400
+            line-height: 26px
+            border: none
+            width: 100%
+            box-sizing: border-box
+            padding: 10px 20px
+            resize: none
+            height: 117px
+    &__row
+        margin: 29px 0 0
+        display: grid
+        grid-template-columns: auto 1fr
+        align-items: center
+        gap: 20px
+        p
+            color: #FFF
+            font-family: Inter
+            font-size: 12px
+            font-style: normal
+            font-weight: 600
+            line-height: 140%
+    &__btn
+        padding: 13px 40px
+        border: none
+        border-radius: 38px
+        background: #FFDE31
+        color: #272932
+        font-family: Inter
+        font-size: 14px
+        font-style: normal
+        font-weight: 500
+        line-height: 140%
+        transition: all .3s
+        &:hover
+            background: #fff
+
+.faq
+    padding: 140px 0 240px
+    h2
+        text-align: center
+    &__wrapper
+        margin: 60px auto 0
+        max-width: 995px
+    &__item
+        border-top: solid 1px #D9D9D9
+        padding: 0 0 6px
+        &:last-child
+            border-bottom: solid 1px #D9D9D9
+    &__btn
+        display: grid
+        grid-template-columns: 34px 1fr 40px
+        gap: 24px
+        align-items: center
+        padding: 30px 0 24px
+    &__text
+        color: #272932
+        font-family: Inter
+        font-size: 16px
+        font-style: normal
+        font-weight: 400
+        line-height: 160%
+        max-height: 0
+        transition: all .3s
+        overflow: hidden
+        padding: 0 64px 0 58px
+        &_active
+            padding: 24px 64px 34px 58px
+            max-height: none
+    &__num
+        border-radius: 13px
+        background: #FFDE31
+        padding: 2px
+        text-align: center
+        color: #272932
+        font-family: Inter
+        font-size: 10px
+        font-style: normal
+        font-weight: 600
+        line-height: 140%
+        letter-spacing: 2px
+        text-transform: uppercase
+    &__name
+        color: #272932
+        font-family: Inter
+        font-size: 22px
+        font-style: normal
+        font-weight: 500
+        line-height: 120%
+    &__plus
+        opacity: 0.4
+        transition: all .3s
+        width: 40px
+        height: 40px
+        img
+            width: 100%
+    .active
+        .faq__plus
+            transform: rotate(45deg)
+
+.footer
+    background: #1B1C20
+    &__container
+        display: grid
+        grid-template-columns: 477px 1fr
+        gap: 140px
+    &__block
+        padding: 10px 60px 70px
+        position: relative
+        background: #272932
+        &::before
+            content: ''
+            display: block
+            bottom: 100%
+            left: 0
+            width: 100%
+            height: 60px
+            background: #272932
+            position: absolute
+        &_text
+            margin: 34px 0 0
+            color: #FFF
+            font-family: Inter
+            font-size: 16px
+            font-style: normal
+            font-weight: 400
+            line-height: 160%
+        &_footer
+            margin: 38px 0 0
+            color: #FFF
+            font-family: Inter
+            font-size: 14px
+            font-style: normal
+            font-weight: 400
+            line-height: 160%
+            opacity: 0.6
+    &__logo
+        p
+            color: #FFDE31
+            font-family: Syncopate
+            font-size: 13px
+            font-style: normal
+            font-weight: 700
+            line-height: normal
+            letter-spacing: 1.56px
+            text-transform: uppercase
+        span
+            color: #FFF
+            font-family: Inter
+            font-size: 10px
+            font-style: normal
+            font-weight: 400
+            line-height: normal
+            letter-spacing: 1px
+    &__soc
+        display: grid
+        grid-template-columns: 18px 18px 18px 18px
+        gap: 40px
+        align-items: center
+        margin: 43px 0 0
+        img
+            width: 100%
+        a
+            transition: all .3s
+            &:hover
+                opacity: 0.5
+    &__list
+        display: grid
+        grid-template-columns: auto auto
+        gap: 60px
+        padding: 80px 0
+        p
+            color: #FFF
+            font-family: Inter
+            font-size: 14px
+            font-style: normal
+            font-weight: 600
+            line-height: 160%
+            text-transform: uppercase
+        ul
+            margin: 22px 0 0
+            display: grid
+            grid-template-columns: 100%
+            gap: 6px
+        li a
+            color: #FFF
+            font-family: Inter
+            font-size: 13px
+            font-style: normal
+            font-weight: 400
+            line-height: 160%
+            display: grid
+            grid-template-columns: 4px 1fr
+            gap: 8px
+            align-items: center
+            &::before
+                content: ''
+                display: block
+                width: 4px
+                height: 4px
+                border-radius: 100%
+                background: #FFDE31
+
+.comfort__item_plus
+    display: none
+
+@media ( max-width: 1024px )
+    h2
+        font-size: 28px
+    .header
+        padding: 40px 0 
+        &__row
+            display: grid
+            grid-template-columns: 100%
+            gap: 40px
+        &__soc
+            margin: 0 0 0 auto
+        &__dop
+            max-width: 100%
+    .comfort
+        padding: 120px 0 0
+        h2
+            max-width: 570px
+        &__wrapper
+            grid-template-columns: 1fr 1fr 1fr
+            gap: 32px
+            row-gap: 60px
+        &__item
+            &_plus
+                display: block
+    .assurance
+        padding: 120px 0 0
+        &__container
+            gap: 30px
+            grid-template-columns: 1fr 1fr
+    .gallery
+        padding: 120px 0 0
+    .proof
+        padding: 100px 0 0
+        h2
+            max-width: 400px
+        &__item
+            padding: 40px 30px 22px 24px
+        &__wrapper
+            margin: 40px 0 0
+            gap: 30px
+            grid-template-columns: 1fr 1fr
+        &__name
+            font-size: 19px
+    .tradition
+        padding: 120px 0 0
+        .container
+            padding: 0
+        &__info
+            max-width: 100%
+            padding: 60px 0 60px 40px
+        &__block
+            gap: 30px
+            grid-template-columns: 1fr 1fr 
+    .step
+        padding: 120px 0 
+        h2
+            max-width: 450px
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+            gap: 30px
+            row-gap: 60px
+    .comment
+        position: relative
+        overflow: hidden
+        &__slider
+            overflow: visible
+    .form
+        padding: 60px 0 42px
+        &__container
+            grid-template-columns: 100%
+            gap: 40px
+        &__info
+            padding: 0
+            max-width: 580px
+            h2
+                font-size: 42px
+                margin: 24px 0 0
+        &__wrapper
+            padding: 40px
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 30px
+            row-gap: 16px
+        &__row,
+        &__area
+            grid-column: 1/3
+            margin: 0
+        &__label
+            margin: 0
+    .faq
+        padding: 120px 0 180px
+        &__name
+            font-size: 20px
+    .footer
+        &__container
+            grid-template-columns: 1fr 1fr
+            gap: 40px
+        &__block
+            padding: 0 20px 50px
+            &_text
+                font-size: 14px
+                text-align: center
+            &_footer
+                font-size: 12px
+                text-align: center
+        &__logo
+            text-align: center
+        &__soc
+            margin: 60px 0 0
+            justify-content: center
+        &__list
+            padding: 60px 0 65px
+            gap: 40px
+
+@media ( max-width: 650px )
+    .container
+        padding: 0 20px
+    .proof
+        &__wrapper
+            grid-template-columns: 100%
+    .comment
+        padding: 80px 0
+        &__slide
+            max-width: calc( 100vw - 80px )
+
+@media ( max-width: 600px )
+    h2
+        font-size: 18px
+    .header
+        padding: 30px 0 38px
+        &__nav
+            align-items: center
+        &__func
+            display: block
+            width: 100%
+            max-width: 180px
+            .header__prompt
+                display: none
+        &__phone
+            width: 100%
+            max-width: 180px
+        h1
+            margin: 113px 0 0
+            font-size: 32px
+        &__text
+            font-size: 18px
+            margin: 16px 0 0
+            max-width: 290px
+            &+.header__prompt
+                display: flex
+                max-width: 150px
+                margin: 32px 0 0
+        &__row
+            margin: 97px 0 0
+        &__dop
+            grid-template-columns: 100%
+            gap: 16px
+            br
+                display: none
+            p
+                font-size: 18px
+            &_item
+                padding: 18px 20px
+                display: grid
+                grid-template-columns: 24px 1fr
+                gap: 20px
+                align-items: center
+            &_plus
+                position: relative
+                top: auto
+                left: auto
+                transform: none
+                padding: 4px
+                width: 24px
+                height: 24px
+                img
+                    width: 100%
+                    display: block
+    .comfort
+        padding: 80px 0 0
+        h2
+            max-width: 320px
+        &__wrapper
+            margin: 40px 0 0
+            gap: 20px
+            row-gap: 30px
+            grid-template-columns: 1fr 1fr
+        &__img
+            height: 260px
+        &__text
+            p
+                font-size: 14px
+        &__check
+            width: 18px
+            padding: 3px
+    .assurance
+        padding: 80px 0 0
+        &__container
+            grid-template-columns: 100%
+            gap: 40px
+        &__arrow
+            display: none
+        &__title
+            p
+                margin: 16px 0 0
+                font-size: 18px
+                max-width: 222px
+        &__name
+            font-size: 16px
+    .gallery
+        padding: 80px 0 0
+    .proof
+        padding: 80px 0 0
+        h2
+            max-width: 268px
+            margin: 0 20px
+        .container
+            padding: 0
+    .tradition
+        padding: 60px 0 0
+        &__block
+            grid-template-columns: 100%
+            gap: 40px
+        &__img
+            height: 400px
+            order: -1
+        &__info
+            padding: 0 20px 40px
+        h2
+            font-size: 24px
+    .step
+        padding: 80px 0
+        h2
+            margin: 24px 0 0
+            max-width: 320px
+        &__wrapper
+            grid-template-columns: 100%
+            gap: 40px
+        &__name
+            font-size: 16px
+    .form
+        padding: 50px 0 20px
+        h2
+            margin: 24px 0 0
+            font-size: 24px
+            max-width: 320px
+        &__wrapper
+            padding: 23px 20px
+            grid-template-columns: 100%
+            gap: 16px
+        &__area,
+        &__row
+            grid-column: auto
+        &__row
+            margin: 8px 0 0
+            grid-template-columns: 100%
+            gap: 20px
+            p
+                text-align: center
+        &__container
+            gap: 30px
+    .faq
+        padding: 80px 0 
+        &__wrapper
+            margin: 30px 0 0
+        &__btn
+            grid-template-columns: 24px 1fr 24px
+            gap: 16px
+        &__plus
+            width: 24px
+            height: 24px
+        &__text
+            padding: 0 40px
+            &_active
+                padding: 10px 40px 24px
+        &__name
+            font-size: 16px
+    .footer
+        .container
+            padding: 0
+        &__container
+            grid-template-columns: 100%
+            gap: 60px
+        &__block
+            padding: 60px 20px 60px
+            &::before
+                content: none
+            &_text
+                max-width: 305px 
+                margin: 23px auto 0
+        &__soc
+            margin: 45px 0 0
+        &__list
+            padding: 0 20px 60px
+
+@media ( max-width: 450px )
+    .header
+        &__logo
+            max-width: 130px
+        &__func
+            max-width: 150px
+        &__phone
+            padding: 9px 12px 8px
+            span
+                font-size: 12px
+            img
+                width: 18px
+
+.nav
+    padding: 7px 0
+    background: rgba(0, 0, 0, 0.80)
+    backdrop-filter: blur(8px)
+    position: fixed
+    left: 0
+    transition: top .3s
+    width: 100%
+    z-index: 100
+    &__container
+        padding: 0 24px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+    &__logo
+        width: 100%
+        max-width: 173px
+        p
+            display: none
+        img
+            width: 100%
+    &__close
+        display: none
+    &__list
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0 auto
+        li
+            margin: 0 50px 0 0
+            &:last-child
+                margin: 0
+        a
+            color: #FFF
+            font-family: Inter
+            font-size: 12px
+            font-style: normal
+            font-weight: 600
+            line-height: normal
+            text-transform: uppercase
+    &__soc
+        display: none
+    &__func
+        display: grid
+        grid-template-columns: 180px 180px
+        gap: 14px
+        a
+            display: flex
+            width: 100%
+            align-items: center
+    &__phone
+        padding: 10px 19px 10px 13px
+        border-radius: 57px
+        background: rgba(255, 255, 255, 0.20)
+        box-shadow: 3px 7px 34px -19px rgba(0, 0, 0, 0.15)
+        backdrop-filter: blur(4px)
+        justify-content: space-between
+        border: 1px solid #ffffff47
+        transition: all .3s
+        span
+            color: #FFF
+            font-family: Inter
+            font-size: 14px
+            font-style: normal
+            font-weight: 600
+            line-height: 140%
+        &:hover
+            background: rgba(255, 255, 255, 0.30)
+    &__prompt
+        justify-content: center
+        border-radius: 38px
+        background: #FFDE31
+        justify-content: center
+        padding: 13px
+        transition: all .3s
+        span
+            color: #272932
+            font-family: Inter
+            font-size: 14px
+            font-style: normal
+            font-weight: 500
+            line-height: 140%
+        &:hover
+            background: #fff
+    &__humburger
+        display: none
+
+@media ( max-width: 1350px )
+    .nav
+        &__container
+            padding: 0 10px
+        &__list
+            li
+                margin: 0 20px 0 0
+
+@media ( max-width: 1200px )
+    .nav
+        &__logo
+            max-width: 140px
+
+@media ( max-width: 1100px )
+    .nav
+        background: #FFF
+        box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.10)
+        backdrop-filter: none
+        &__humburger
+            display: block
+            width: 24px
+            cursor: pointer
+            img
+                width: 100%
+        &__logo
+            max-width: auto
+            width: auto
+            margin: 0 auto 0 9px
+            img
+                display: none
+            p
+                display: block
+                color: #272932
+                font-family: Syncopate
+                font-size: 9.778px
+                font-style: normal
+                font-weight: 700
+                line-height: normal
+                letter-spacing: 1.173px
+                text-transform: uppercase
+            span
+                display: block
+                color: #272932
+                font-family: Inter
+                font-size: 7.521px
+                font-style: normal
+                font-weight: 400
+                line-height: normal
+                letter-spacing: 0.752px
+                text-transform: none
+        &__list
+            display: none
+        &__func
+            grid-template-columns: 180px
+        .nav__phone
+            display: none
+        &.active
+            top: 0 !important
+            height: 100vh
+            width: 100vw
+            background: #272932
+            padding: 40px 0
+            overflow-y: scroll
+            .nav
+                &__container
+                    display: grid
+                    grid-template-columns: 1fr 24px 
+                    align-items: center
+                    padding: 0 40px
+                &__humburger
+                    display: none
+                &__logo
+                    max-width: 173px
+                    margin: 0
+                    p
+                        display: none
+                    img
+                        width: 100%
+                        display: block
+                &__close
+                    display: block
+                    width: 24px
+                    cursor: pointer
+                    img
+                        width: 100%
+                &__list
+                    display: grid
+                    grid-template-columns: 100%
+                    gap: 36px
+                    margin: 97px 0 0
+                    grid-column: 1/3
+                    justify-items: end
+                    li
+                        margin: 0
+                    a
+                        font-size: 24px
+                &__block
+                    grid-column: 1/3
+                    margin: 82px 0 0
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                &__func
+                    grid-template-columns: 180px 180px
+                    .nav__phone
+                        display: flex
+                        order: 2
+                &__soc
+                    display: grid
+                    grid-template-columns: 18px 18px 18px 18px
+                    gap: 40px
+                    align-items: center
+                    img
+                        width: 100%
+                    a
+                        transition: all .3s
+                        &:hover
+                            opacity: 0.5
+                &__prompt
+                    &:hover
+                        background: #fff
+        &__prompt
+            &:hover
+                background: #FFDE31
+
+@media ( max-width: 700px )
+    .nav
+        &.active
+            .nav
+                &__block
+                    flex-direction: column
+                    align-items: center
+                &__soc
+                    margin: 43px 0 0
+
+@media ( max-width: 450px )
+    .nav
+        &__prompt
+            padding: 9px 
+            span
+                font-size: 10px
+        &__func
+            grid-template-columns: 110px
+        &.active
+            padding: 20px 0 
+            .nav
+                &__container
+                    padding: 0 20px
+                &__list
+                    margin: 70px 0 0
+                    justify-items: center
+                    gap: 32px
+                    a
+                        font-size: 20px
+                        font-weight: 500
+                &__block
+                    margin: 70px 0 0
+                &__func
+                    grid-template-columns: 180px
+                    gap: 20px
+                    justify-items: center
+                &__prompt
+                    padding: 13px 
+                    order: 3
+                    span
+                        font-size: 14px
+
+.error
+    position: relative
+    overflow: hidden
+    min-height: 100vh
+    display: flex
+    align-items: center
+    z-index: 1
+    padding: 120px 0
+    .container
+        width: 100%
+    h1
+        color: #272932
+        font-family: Inter
+        font-size: 36px
+        font-style: normal
+        font-weight: 700
+        line-height: 160%
+        text-transform: uppercase
+        span
+            font-size: 140px
+            letter-spacing: -1.4px
+            line-height: 110%
+            display: block
+    &__info
+        max-width: 410px
+        p
+            margin: 16px 0 0
+            color: #272932
+            font-family: Inter
+            font-size: 18px
+            font-style: normal
+            font-weight: 500
+            line-height: 160%
+    &__btn
+        padding: 13px 40px
+        border: none
+        border-radius: 38px
+        background: #FFDE31
+        color: #272932
+        font-family: Inter
+        font-size: 14px
+        font-style: normal
+        font-weight: 500
+        line-height: 140%
+        transition: all .3s
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        max-width: 180px
+        margin: 32px 0 0
+    &__img
+        right: 0
+        width: calc( 50vw + 123px )
+        position: absolute
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+        z-index: -1
+        img
+            width: 100%
+
+@media ( max-width: 768px )
+    .error
+        &__img
+            width: 98%
+            right: -30%
+
+@media ( max-width: 600px )
+    .error
+        padding: 362px 0 77px
+        display: block
+        .container
+            width: auto
+        &__info
+            max-width: 100%
+            p
+                margin: 16px auto 0
+                font-size: 14px
+                text-align: center
+                max-width: 320px
+        h1
+            text-align: center
+            font-size: 22px
+            span
+                font-size: 100px
+                margin: 0 0 12px
+        &__btn
+            margin: 40px auto 0
+        &__img
+            top: 16px
+            left: 50%
+            width: 1000px
+            right: auto
+            transform: translateX(-52%)
+            img
+                height: 360px
+                object-fit: contain
+
+.header__dop_item
+    transition: all .9s
+    // transform: translate(0, 0)
+    // opacity: 1
+
+._down
+    transform: translate(0, 120%)
+    opacity: 0

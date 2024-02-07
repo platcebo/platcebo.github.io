@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>booking</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="nav pa pt20 pb20">
+        <div class="container justify-content-between df align-items-center">
+            <a href="#" class="logo db">
+                <p class="xs-fs24">Booking.com</p>
+            </a>
+            <div class="nav__link align-items-center">
+                <a href="#" class="pr">
+                    <img src="img/search.svg" alt="">
+                </a>
+                <a href="#" class="pr">
+                    <img src="img/mail.svg" alt="">
+                    <span></span>
+                </a>
+                <div class="nav__profile align-items-center">
+                    <img class="nav__avatar" src="img/avatar.jpg" alt="">
+                    <img src="img/avatar_arrow.svg" alt="">
+                </div>
+            </div>
+            <div class="nav__more">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <header class="header pt167 pb290">
+        <div class="container">
+            <h1 class="fs70">Большой тур по Италии</h1>
+            <a href="#" class="mt10 df justify-content-start align-items-center fs20">Подробнее</a>
+        </div>
+    </header>
+    <div class="filter pr">
+        <div class="container pr">
+            <div class="filter__check df justify-content-start align-items-center pa">
+                <div class="filter__check_input pr">
+                    <input class="pa" type="radio" name="filter__check" checked>
+                    <p class="pr fs16 tr-2">Обратный</p>
+                </div>
+                <div class="filter__check_input pr">
+                    <input class="pa" type="radio" name="filter__check">
+                    <p class="pr fs16 tr-2">В одну сторону</p>
+                </div>
+                <div class="filter__check_input pr">
+                    <input class="pa" type="radio" name="filter__check">
+                    <p class="pr fs16 tr-2">Тур</p>
+                </div>
+            </div>
+            <div class="filter__row br-5 pr align-items-center">
+                <div class="filter__route align-items-center">
+                    <input class="fs16 b-0" type="text" placeholder="Москва, Россия">
+                    <img src="img/filter_route.svg" alt="">
+                    <input class="fs16 b-0" type="text" placeholder="Рим, Италия">
+                </div>
+                <div class="filter__date align-items-center">
+                    <div class="pr">
+                        <img class="pa" src="img/date.svg" alt="">
+                        <input class="fs16 br-5" type="text" placeholder="Заезд">
+                    </div>
+                    <hr>
+                    <div class="pr">
+                        <img class="pa" src="img/date.svg" alt="">
+                        <input class="fs16 br-5" type="text" placeholder="Выезд">
+                    </div>
+                </div>
+                <div class="filter__pers pr">
+                    <img class="pa" src="img/pers.svg" alt="">
+                    <select class="br-5" name="" id="">
+                        <option value="">1 взрослый, Эконом</option>
+                        <option value="">1 взрослый, Эконом</option>
+                        <option value="">1 взрослый, Эконом</option>
+                        <option value="">1 взрослый, Эконом</option>
+                    </select>
+                </div>
+                <button class="filter__btn br-5 pa align-items-center df justify-content-center b-0 pr20 pl20 pt20 pb20">
+                    <img src="img/search.svg" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+    <section class="popular pt80 pb80">
+        <div class="container">
+            <h2 class="fs28">Популярные направления</h2>
+            <div class="popular__slider">
+                <a href="#" class="popular__item">
+                    <div class="popular__prev pr br-5 db">
+                        <img class="popular__prev_img" src="img/popular_1.jpg" alt="">
+                        <div class="popular__prev_link pt20 pb20 pr20 pl20 pa df justify-content-start align-items-center">
+                            <img src="img/place.svg" alt="" class="popular__prev_place">
+                            <p class="fs24">Франция</p>
+                            <img src="img/arrow_link.svg" alt="" class="popular__prev_arrow">
+                        </div>
+                    </div>
+                    <div class="popular__text df justify-content-between align-items: center">
+                        <div class="popular__info">
+                            <p class="fs16">1 200 отелей</p>
+                            <p class="fs16">800 туров</p>
+                        </div>
+                        <div class="popular__price">
+                            <p class="fs18">от 40 000₽</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="popular__item">
+                    <div class="popular__prev pr br-5 db">
+                        <img class="popular__prev_img" src="img/popular_2.jpg" alt="">
+                        <div class="popular__prev_link pt20 pb20 pr20 pl20 pa df justify-content-start align-items-center">
+                            <img src="img/place.svg" alt="" class="popular__prev_place">
+                            <p class="fs24">Италия</p>
+                            <img src="img/arrow_link.svg" alt="" class="popular__prev_arrow">
+                        </div>
+                    </div>
+                    <div class="popular__text df justify-content-between align-items: center">
+                        <div class="popular__info">
+                            <p class="fs16">1 200 отелей</p>
+                            <p class="fs16">800 туров</p>
+                        </div>
+                        <div class="popular__price">
+                            <p class="fs18">от 40 000₽</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="popular__item">
+                    <div class="popular__prev pr br-5 db">
+                        <img class="popular__prev_img" src="img/popular_3.jpg" alt="">
+                        <div class="popular__prev_link pt20 pb20 pr20 pl20 pa df justify-content-start align-items-center">
+                            <img src="img/place.svg" alt="" class="popular__prev_place">
+                            <p class="fs24">Грузия</p>
+                            <img src="img/arrow_link.svg" alt="" class="popular__prev_arrow">
+                        </div>
+                    </div>
+                    <div class="popular__text df justify-content-between align-items: center">
+                        <div class="popular__info">
+                            <p class="fs16">1 200 отелей</p>
+                            <p class="fs16">800 туров</p>
+                        </div>
+                        <div class="popular__price">
+                            <p class="fs18">от 40 000₽</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="popular__item">
+                    <div class="popular__prev pr br-5 db">
+                        <img class="popular__prev_img" src="img/popular_1.jpg" alt="">
+                        <div class="popular__prev_link pt20 pb20 pr20 pl20 pa df justify-content-start align-items-center">
+                            <img src="img/place.svg" alt="" class="popular__prev_place">
+                            <p class="fs24">Франция</p>
+                            <img src="img/arrow_link.svg" alt="" class="popular__prev_arrow">
+                        </div>
+                    </div>
+                    <div class="popular__text df justify-content-between align-items: center">
+                        <div class="popular__info">
+                            <p class="fs16">1 200 отелей</p>
+                            <p class="fs16">800 туров</p>
+                        </div>
+                        <div class="popular__price">
+                            <p class="fs18">от 40 000₽</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="popular__item">
+                    <div class="popular__prev pr br-5 db">
+                        <img class="popular__prev_img" src="img/popular_2.jpg" alt="">
+                        <div class="popular__prev_link pt20 pb20 pr20 pl20 pa df justify-content-start align-items-center">
+                            <img src="img/place.svg" alt="" class="popular__prev_place">
+                            <p class="fs24">Италия</p>
+                            <img src="img/arrow_link.svg" alt="" class="popular__prev_arrow">
+                        </div>
+                    </div>
+                    <div class="popular__text df justify-content-between align-items: center">
+                        <div class="popular__info">
+                            <p class="fs16">1 200 отелей</p>
+                            <p class="fs16">800 туров</p>
+                        </div>
+                        <div class="popular__price">
+                            <p class="fs18">от 40 000₽</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="popular__item">
+                    <div class="popular__prev pr br-5 db">
+                        <img class="popular__prev_img" src="img/popular_3.jpg" alt="">
+                        <div class="popular__prev_link pt20 pb20 pr20 pl20 pa df justify-content-start align-items-center">
+                            <img src="img/place.svg" alt="" class="popular__prev_place">
+                            <p class="fs24">Грузия</p>
+                            <img src="img/arrow_link.svg" alt="" class="popular__prev_arrow">
+                        </div>
+                    </div>
+                    <div class="popular__text df justify-content-between align-items: center">
+                        <div class="popular__info">
+                            <p class="fs16">1 200 отелей</p>
+                            <p class="fs16">800 туров</p>
+                        </div>
+                        <div class="popular__price">
+                            <p class="fs18">от 40 000₽</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="favourite pt40 pb70">
+        <div class="container">
+            <h2 class="fs28">Ваши любимые маршруты</h2>
+            <div class="favourite__wrapper">
+                <div class="favourite__item br-5 df justify-content-between">
+                    <div class="favourite__text">
+                        <div class="favourite__place pr">
+                            <p class="fs18">Мадрид</p>
+                        </div>
+                        <p class="fs14">5 798 предложений</p>
+                    </div>
+                    <div class="favourite__price">
+                        <p class="fs14">Цена</p>
+                        <p class="fs18">20 000₽</p>
+                    </div>
+                </div>
+                <div class="favourite__item br-5 df justify-content-between">
+                    <div class="favourite__text">
+                        <div class="favourite__place pr">
+                            <p class="fs18">Мадрид</p>
+                        </div>
+                        <p class="fs14">5 798 предложений</p>
+                    </div>
+                    <div class="favourite__price">
+                        <p class="fs14">Цена</p>
+                        <p class="fs18">20 000₽</p>
+                    </div>
+                </div>
+                <div class="favourite__item br-5 df justify-content-between">
+                    <div class="favourite__text">
+                        <div class="favourite__place pr">
+                            <p class="fs18">Мадрид</p>
+                        </div>
+                        <p class="fs14">5 798 предложений</p>
+                    </div>
+                    <div class="favourite__price">
+                        <p class="fs14">Цена</p>
+                        <p class="fs18">20 000₽</p>
+                    </div>
+                </div>
+                <div class="favourite__item br-5 df justify-content-between">
+                    <div class="favourite__text">
+                        <div class="favourite__place pr">
+                            <p class="fs18">Мадрид</p>
+                        </div>
+                        <p class="fs14">5 798 предложений</p>
+                    </div>
+                    <div class="favourite__price">
+                        <p class="fs14">Цена</p>
+                        <p class="fs18">20 000₽</p>
+                    </div>
+                </div>
+                <div class="favourite__item br-5 df justify-content-between">
+                    <div class="favourite__text">
+                        <div class="favourite__place pr">
+                            <p class="fs18">Мадрид</p>
+                        </div>
+                        <p class="fs14">5 798 предложений</p>
+                    </div>
+                    <div class="favourite__price">
+                        <p class="fs14">Цена</p>
+                        <p class="fs18">20 000₽</p>
+                    </div>
+                </div>
+                <div class="favourite__item br-5 df justify-content-between">
+                    <div class="favourite__text">
+                        <div class="favourite__place pr">
+                            <p class="fs18">Мадрид</p>
+                        </div>
+                        <p class="fs14">5 798 предложений</p>
+                    </div>
+                    <div class="favourite__price">
+                        <p class="fs14">Цена</p>
+                        <p class="fs18">20 000₽</p>
+                    </div>
+                </div>
+                <div class="favourite__item br-5 df justify-content-between">
+                    <div class="favourite__text">
+                        <div class="favourite__place pr">
+                            <p class="fs18">Мадрид</p>
+                        </div>
+                        <p class="fs14">5 798 предложений</p>
+                    </div>
+                    <div class="favourite__price">
+                        <p class="fs14">Цена</p>
+                        <p class="fs18">20 000₽</p>
+                    </div>
+                </div>
+                <div class="favourite__item br-5 df justify-content-between">
+                    <div class="favourite__text">
+                        <div class="favourite__place pr">
+                            <p class="fs18">Мадрид</p>
+                        </div>
+                        <p class="fs14">5 798 предложений</p>
+                    </div>
+                    <div class="favourite__price">
+                        <p class="fs14">Цена</p>
+                        <p class="fs18">20 000₽</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hot pt80">
+        <div class="container">
+            <h2 class="fs28">Горящие туры</h2>
+            <div class="hot__slider">
+                <div class="hot__slide pr db pr100 pl100" style="background-image: url(img/hot_bg.jpeg);">
+                    <h3>Тбилиси</h3>
+                    <div class="hot__place df justify-content-start align-items-center">
+                        <img src="img/place.svg" alt="">
+                        <p class="fs24">Грузия</p>
+                    </div>
+                    <div class="hot__text">
+                        <p class="fs16">Каждый твой знакомый или близкий говорили  тебе, что Грузия прекрасная страна для путешествия! <br>Они правы. Проверь же это и ты! <br>Тебя ждут горы, море и настоящее грузинское гостеприимство!</p>
+                    </div>
+                    <div class="hot__row pa">
+                        <div class="hot__two hot__row_item df ">
+                            <a class="fs16 df justify-content-start align-items-center" href="#">Тур для двоих</a>
+                            <p class="fs14">Отель 3 звезды, 2 человека, 3 ночи</p>
+                            <p class="fs16">10 000₽</p>
+                        </div>
+                        <div class="hot__travel hot__row_item df ">
+                            <a class="fs16 df justify-content-start align-items-center" href="#">Тур для путешественника</a>
+                            <p class="fs14">1 человек, 6 ночей и экскурссии</p>
+                            <p class="fs16">20 000₽</p>
+                        </div>
+                        <div class="hot__dream hot__row_item df ">
+                            <a class="fs16 df justify-content-start align-items-center" href="#">Отдых мечты</a>
+                            <p class="fs14">2 человека, 10 ночей и экскурссии</p>
+                            <p class="fs16">50 000₽</p>
+                        </div>
+                        <div class="hot__more df justify-content-center align-items-center">
+                            <a class="df justify-content-center align-items-center fs20" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="hot__icons pa df justify-content-center align-items-center">
+                        <img src="img/place.svg" alt="">
+                    </div>
+                </div>
+                <div class="hot__slide pr db pr100 pl100" style="background-image: url(img/hot_bg.jpeg);">
+                    <h3>Тбилиси</h3>
+                    <div class="hot__place df justify-content-start align-items-center">
+                        <img src="img/place.svg" alt="">
+                        <p class="fs24">Грузия</p>
+                    </div>
+                    <div class="hot__text">
+                        <p class="fs16">Каждый твой знакомый или близкий говорили  тебе, что Грузия прекрасная страна для путешествия! <br>Они правы. Проверь же это и ты! <br>Тебя ждут горы, море и настоящее грузинское гостеприимство!</p>
+                    </div>
+                    <div class="hot__row pa">
+                        <div class="hot__two hot__row_item df ">
+                            <a class="fs16 df justify-content-start align-items-center" href="#">Тур для двоих</a>
+                            <p class="fs14">Отель 3 звезды, 2 человека, 3 ночи</p>
+                            <p class="fs16">10 000₽</p>
+                        </div>
+                        <div class="hot__travel hot__row_item df ">
+                            <a class="fs16 df justify-content-start align-items-center" href="#">Тур для путешественника</a>
+                            <p class="fs14">1 человек, 6 ночей и экскурссии</p>
+                            <p class="fs16">20 000₽</p>
+                        </div>
+                        <div class="hot__dream hot__row_item df ">
+                            <a class="fs16 df justify-content-start align-items-center" href="#">Отдых мечты</a>
+                            <p class="fs14">2 человека, 10 ночей и экскурссии</p>
+                            <p class="fs16">50 000₽</p>
+                        </div>
+                        <div class="hot__more df justify-content-center align-items-center">
+                            <a class="df justify-content-center align-items-center fs20" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="hot__icons pa df justify-content-center align-items-center">
+                        <img src="img/place.svg" alt="">
+                    </div>
+                </div>
+                <div class="hot__slide pr db pr100 pl100" style="background-image: url(img/hot_bg.jpeg);">
+                    <h3>Тбилиси</h3>
+                    <div class="hot__place df justify-content-start align-items-center">
+                        <img src="img/place.svg" alt="">
+                        <p class="fs24">Грузия</p>
+                    </div>
+                    <div class="hot__text">
+                        <p class="fs16">Каждый твой знакомый или близкий говорили  тебе, что Грузия прекрасная страна для путешествия! <br>Они правы. Проверь же это и ты! <br>Тебя ждут горы, море и настоящее грузинское гостеприимство!</p>
+                    </div>
+                    <div class="hot__row pa">
+                        <div class="hot__two hot__row_item df ">
+                            <a class="fs16 df justify-content-start align-items-center" href="#">Тур для двоих</a>
+                            <p class="fs14">Отель 3 звезды, 2 человека, 3 ночи</p>
+                            <p class="fs16">10 000₽</p>
+                        </div>
+                        <div class="hot__travel hot__row_item df ">
+                            <a class="fs16 df justify-content-start align-items-center" href="#">Тур для путешественника</a>
+                            <p class="fs14">1 человек, 6 ночей и экскурссии</p>
+                            <p class="fs16">20 000₽</p>
+                        </div>
+                        <div class="hot__dream hot__row_item df ">
+                            <a class="fs16 df justify-content-start align-items-center" href="#">Отдых мечты</a>
+                            <p class="fs14">2 человека, 10 ночей и экскурссии</p>
+                            <p class="fs16">50 000₽</p>
+                        </div>
+                        <div class="hot__more df justify-content-center align-items-center">
+                            <a class="df justify-content-center align-items-center fs20" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="hot__icons pa df justify-content-center align-items-center">
+                        <img src="img/place.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="best pt80">
+        <div class="container">
+            <h2 class="fs28">Лучшие предложения</h2>
+            <div class="best__wrapper">
+                <div class="best__item">
+                    <div class="best__prev">
+                        <img src="img/best_prev.jpg" alt="">
+                    </div>
+                    <div class="best__body">
+                        <div class="best__title align-items-center">
+                            <p class="fs16">Roma Holiday And Jubilee House</p>
+                            <div class="best__star">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                            </div>
+                        </div>
+                        <a href="#" class="best__place">
+                            <img src="img/place_blue.svg" alt="">
+                            <p class="fs12"><span>Рим, Италия </span>(500 метров от центра)</p>
+                        </a>
+                        <div class="best__info pt10 align-items-center">
+                            <ul>
+                                <li class="fs12">осталось два номера по этой цене</li>
+                                <li class="fs12">зарезервировать можно с помощью кредитной карты. Бесплатная отмена бронирования</li>
+                            </ul>
+                            <div class="best__price">
+                                <p class="fs16">5 000₽</p>
+                                <p class="fs12">за ночь</p>
+                            </div>
+                        </div>
+                        <div class="best__row df justify-content-between align-items-end">
+                            <div class="best__coffee align-items-center">
+                                <img src="img/coffee.svg" alt="">
+                                <p class="fs12">Завтрак включен</p>
+                            </div>
+                            <button class="btn__blue fs12 b-0 br-5 ">Посмотреть номера</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best__item">
+                    <div class="best__prev">
+                        <img src="img/best_prev.jpg" alt="">
+                    </div>
+                    <div class="best__body">
+                        <div class="best__title align-items-center">
+                            <p class="fs16">Roma Holiday And Jubilee House</p>
+                            <div class="best__star">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                            </div>
+                        </div>
+                        <a href="#" class="best__place">
+                            <img src="img/place_blue.svg" alt="">
+                            <p class="fs12"><span>Рим, Италия </span>(500 метров от центра)</p>
+                        </a>
+                        <div class="best__info pt10 align-items-center">
+                            <ul>
+                                <li class="fs12">осталось два номера по этой цене</li>
+                                <li class="fs12">зарезервировать можно с помощью кредитной карты. Бесплатная отмена бронирования</li>
+                            </ul>
+                            <div class="best__price">
+                                <p class="fs16">5 000₽</p>
+                                <p class="fs12">за ночь</p>
+                            </div>
+                        </div>
+                        <div class="best__row df justify-content-between align-items-end">
+                            <div class="best__coffee align-items-center">
+                                <img src="img/coffee.svg" alt="">
+                                <p class="fs12">Завтрак включен</p>
+                            </div>
+                            <button class="btn__blue fs12 b-0 br-5 ">Посмотреть номера</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best__item">
+                    <div class="best__prev">
+                        <img src="img/best_prev.jpg" alt="">
+                    </div>
+                    <div class="best__body">
+                        <div class="best__title align-items-center">
+                            <p class="fs16">Roma Holiday And Jubilee House</p>
+                            <div class="best__star">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                            </div>
+                        </div>
+                        <a href="#" class="best__place">
+                            <img src="img/place_blue.svg" alt="">
+                            <p class="fs12"><span>Рим, Италия </span>(500 метров от центра)</p>
+                        </a>
+                        <div class="best__info pt10 align-items-center">
+                            <ul>
+                                <li class="fs12">осталось два номера по этой цене</li>
+                                <li class="fs12">зарезервировать можно с помощью кредитной карты. Бесплатная отмена бронирования</li>
+                            </ul>
+                            <div class="best__price">
+                                <p class="fs16">5 000₽</p>
+                                <p class="fs12">за ночь</p>
+                            </div>
+                        </div>
+                        <div class="best__row df justify-content-between align-items-end">
+                            <div class="best__coffee align-items-center">
+                                <img src="img/coffee.svg" alt="">
+                                <p class="fs12">Завтрак включен</p>
+                            </div>
+                            <button class="btn__blue fs12 b-0 br-5 ">Посмотреть номера</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best__item">
+                    <div class="best__prev">
+                        <img src="img/best_prev.jpg" alt="">
+                    </div>
+                    <div class="best__body">
+                        <div class="best__title align-items-center">
+                            <p class="fs16">Roma Holiday And Jubilee House</p>
+                            <div class="best__star">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                            </div>
+                        </div>
+                        <a href="#" class="best__place">
+                            <img src="img/place_blue.svg" alt="">
+                            <p class="fs12"><span>Рим, Италия </span>(500 метров от центра)</p>
+                        </a>
+                        <div class="best__info pt10 align-items-center">
+                            <ul>
+                                <li class="fs12">осталось два номера по этой цене</li>
+                                <li class="fs12">зарезервировать можно с помощью кредитной карты. Бесплатная отмена бронирования</li>
+                            </ul>
+                            <div class="best__price">
+                                <p class="fs16">5 000₽</p>
+                                <p class="fs12">за ночь</p>
+                            </div>
+                        </div>
+                        <div class="best__row df justify-content-between align-items-end">
+                            <div class="best__coffee align-items-center">
+                                <img src="img/coffee.svg" alt="">
+                                <p class="fs12">Завтрак включен</p>
+                            </div>
+                            <button class="btn__blue fs12 b-0 br-5 ">Посмотреть номера</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best__item">
+                    <div class="best__prev">
+                        <img src="img/best_prev.jpg" alt="">
+                    </div>
+                    <div class="best__body">
+                        <div class="best__title align-items-center">
+                            <p class="fs16">Roma Holiday And Jubilee House</p>
+                            <div class="best__star">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                            </div>
+                        </div>
+                        <a href="#" class="best__place">
+                            <img src="img/place_blue.svg" alt="">
+                            <p class="fs12"><span>Рим, Италия </span>(500 метров от центра)</p>
+                        </a>
+                        <div class="best__info pt10 align-items-center">
+                            <ul>
+                                <li class="fs12">осталось два номера по этой цене</li>
+                                <li class="fs12">зарезервировать можно с помощью кредитной карты. Бесплатная отмена бронирования</li>
+                            </ul>
+                            <div class="best__price">
+                                <p class="fs16">5 000₽</p>
+                                <p class="fs12">за ночь</p>
+                            </div>
+                        </div>
+                        <div class="best__row df justify-content-between align-items-end">
+                            <div class="best__coffee align-items-center">
+                                <img src="img/coffee.svg" alt="">
+                                <p class="fs12">Завтрак включен</p>
+                            </div>
+                            <button class="btn__blue fs12 b-0 br-5 ">Посмотреть номера</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best__item">
+                    <div class="best__prev">
+                        <img src="img/best_prev.jpg" alt="">
+                    </div>
+                    <div class="best__body">
+                        <div class="best__title align-items-center">
+                            <p class="fs16">Roma Holiday And Jubilee House</p>
+                            <div class="best__star">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                                <img src="img/star.svg" alt="">
+                            </div>
+                        </div>
+                        <a href="#" class="best__place">
+                            <img src="img/place_blue.svg" alt="">
+                            <p class="fs12"><span>Рим, Италия </span>(500 метров от центра)</p>
+                        </a>
+                        <div class="best__info pt10 align-items-center">
+                            <ul>
+                                <li class="fs12">осталось два номера по этой цене</li>
+                                <li class="fs12">зарезервировать можно с помощью кредитной карты. Бесплатная отмена бронирования</li>
+                            </ul>
+                            <div class="best__price">
+                                <p class="fs16">5 000₽</p>
+                                <p class="fs12">за ночь</p>
+                            </div>
+                        </div>
+                        <div class="best__row df justify-content-between align-items-end">
+                            <div class="best__coffee align-items-center">
+                                <img src="img/coffee.svg" alt="">
+                                <p class="fs12">Завтрак включен</p>
+                            </div>
+                            <button class="btn__blue fs12 b-0 br-5 ">Посмотреть номера</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="popular popular__idea pt80 pb100">
+        <div class="container">
+            <h2 class="fs28">Идеи для поездок</h2>
+            <div class="popular__slider">
+                <a href="#" class="popular__item">
+                    <div class="popular__prev pr br-5 db">
+                        <img class="popular__prev_img" src="img/idea_1.jpg" alt="">
+                        <div class="popular__prev_link pt20 pb20 pr20 pl20 pa df justify-content-start align-items-center">
+                            <img src="img/place.svg" alt="" class="popular__prev_place">
+                            <div class="">
+                                <p class="fs24">Эрмитаж</p>
+                                <p class="fs16">Санкт-Петербург</p>
+                            </div>
+                            <img src="img/arrow_link.svg" alt="" class="popular__prev_arrow">
+                        </div>
+                    </div>
+                    <div class="popular__text df justify-content-between align-items: center">
+                        <div class="popular__info">
+                            <p class="fs16">1 200 отелей</p>
+                        </div>
+                        <div class="popular__price">
+                            <p class="fs18">от 40 000₽</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="popular__item">
+                    <div class="popular__prev pr br-5 db">
+                        <img class="popular__prev_img" src="img/idea_2.jpg" alt="">
+                        <div class="popular__prev_link pt20 pb20 pr20 pl20 pa df justify-content-start align-items-center">
+                            <img src="img/place.svg" alt="" class="popular__prev_place">
+                            <div class="">
+                                <p class="fs24">Казанский Кремль</p>
+                                <p class="fs16">Казань</p>
+                            </div>
+                            <img src="img/arrow_link.svg" alt="" class="popular__prev_arrow">
+                        </div>
+                    </div>
+                    <div class="popular__text df justify-content-between align-items: center">
+                        <div class="popular__info">
+                            <p class="fs16">1 200 отелей</p>
+                        </div>
+                        <div class="popular__price">
+                            <p class="fs18">от 40 000₽</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="popular__item">
+                    <div class="popular__prev pr br-5 db">
+                        <img class="popular__prev_img" src="img/idea_3.jpg" alt="">
+                        <div class="popular__prev_link pt20 pb20 pr20 pl20 pa df justify-content-start align-items-center">
+                            <img src="img/place.svg" alt="" class="popular__prev_place">
+                            <div class="">
+                                <p class="fs24">Гора Ахун</p>
+                                <p class="fs16">Сочи</p>
+                            </div>
+                            <img src="img/arrow_link.svg" alt="" class="popular__prev_arrow">
+                        </div>
+                    </div>
+                    <div class="popular__text df justify-content-between align-items: center">
+                        <div class="popular__info">
+                            <p class="fs16">1 200 отелей</p>
+                        </div>
+                        <div class="popular__price">
+                            <p class="fs18">от 40 000₽</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="popular__item">
+                    <div class="popular__prev pr br-5 db">
+                        <img class="popular__prev_img" src="img/idea_1.jpg" alt="">
+                        <div class="popular__prev_link pt20 pb20 pr20 pl20 pa df justify-content-start align-items-center">
+                            <img src="img/place.svg" alt="" class="popular__prev_place">
+                            <div class="">
+                                <p class="fs24">Эрмитаж</p>
+                                <p class="fs16">Санкт-Петербург</p>
+                            </div>
+                            <img src="img/arrow_link.svg" alt="" class="popular__prev_arrow">
+                        </div>
+                    </div>
+                    <div class="popular__text df justify-content-between align-items: center">
+                        <div class="popular__info">
+                            <p class="fs16">1 200 отелей</p>
+                        </div>
+                        <div class="popular__price">
+                            <p class="fs18">от 40 000₽</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="popular__item">
+                    <div class="popular__prev pr br-5 db">
+                        <img class="popular__prev_img" src="img/idea_2.jpg" alt="">
+                        <div class="popular__prev_link pt20 pb20 pr20 pl20 pa df justify-content-start align-items-center">
+                            <img src="img/place.svg" alt="" class="popular__prev_place">
+                            <div class="">
+                                <p class="fs24">Казанский Кремль</p>
+                                <p class="fs16">Казань</p>
+                            </div>
+                            <img src="img/arrow_link.svg" alt="" class="popular__prev_arrow">
+                        </div>
+                    </div>
+                    <div class="popular__text df justify-content-between align-items: center">
+                        <div class="popular__info">
+                            <p class="fs16">1 200 отелей</p>
+                        </div>
+                        <div class="popular__price">
+                            <p class="fs18">от 40 000₽</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="popular__item">
+                    <div class="popular__prev pr br-5 db">
+                        <img class="popular__prev_img" src="img/idea_3.jpg" alt="">
+                        <div class="popular__prev_link pt20 pb20 pr20 pl20 pa df justify-content-start align-items-center">
+                            <img src="img/place.svg" alt="" class="popular__prev_place">
+                            <div class="">
+                                <p class="fs24">Гора Ахун</p>
+                                <p>Сочи</p>
+                            </div>
+                            <img src="img/arrow_link.svg" alt="" class="popular__prev_arrow">
+                        </div>
+                    </div>
+                    <div class="popular__text df justify-content-between align-items: center">
+                        <div class="popular__info">
+                            <p class="fs16">1 200 отелей</p>
+                        </div>
+                        <div class="popular__price">
+                            <p class="fs18">от 40 000₽</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <div class="footer-row pt30 pb30">
+        <div class="container">
+            <div class="footer-row__wrapper df justify-content-between align-items-center">
+                <a class="fs16" href="#">Ваш аккаунт</a>
+                <a class="fs16" href="#">Возможность изменять бронирование онлайн</a>
+                <a class="fs16" href="#">Служба поддержки</a>
+            </div>
+        </div>
+    </div>
+    <footer class="footer pt40 pb60">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__list">
+                    <p class="fs16">Популярное</p>
+                    <ul>
+                        <li><a class="fs14" href="#">Страны</a></li>
+                        <li><a class="fs14" href="#">Регионы</a></li>
+                        <li><a class="fs14" href="#">Города</a></li>
+                        <li><a class="fs14" href="#">Аэропорты</a></li>
+                        <li><a class="fs14" href="#">Интеренсные места</a></li>
+                        <li><a class="fs14" href="#">Отели</a></li>
+                    </ul>
+                </div>
+                <div class="footer__list">
+                    <p class="fs16">Поиск по категориям</p>
+                    <ul>
+                        <li><a class="fs14" href="#">Апартаменты</a></li>
+                        <li><a class="fs14" href="#">Отели</a></li>
+                        <li><a class="fs14" href="#">Хостелы</a></li>
+                        <li><a class="fs14" href="#">Виллы</a></li>
+                        <li><a class="fs14" href="#">Гостевые домики</a></li>
+                    </ul>
+                </div>
+                <div class="footer__list">
+                    <p class="fs16">Другая информация</p>
+                    <ul>
+                        <li><a class="fs14" href="#">О нас</a></li>
+                        <li><a class="fs14" href="#">Помощь</a></li>
+                        <li><a class="fs14" href="#">Карьера</a></li>
+                        <li><a class="fs14" href="#">Инвестирование</a></li>
+                    </ul>
+                </div>
+                <div class="footer__info">
+                    <p class="footer__info_text fs16">Экономь время, экономь деньги!</p>
+                    <div class="footer__form pr">
+                        <input class="br-5 fs14 b-0" type="text" placeholder="E-mail">
+                        <button class="btn__blue fs12 b-0 br-5 pa fs14">Подписаться</button>
+                    </div>
+                    <a href="#" class="logo db">
+                        <p class="xs-fs24">Booking.com</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

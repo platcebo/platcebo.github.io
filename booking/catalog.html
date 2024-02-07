@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>booking</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="nav pa pt20 pb20">
+        <div class="container justify-content-between df align-items-center">
+            <a href="#" class="logo db">
+                <p class="xs-fs24">Booking.com</p>
+            </a>
+            <div class="nav__link align-items-center">
+                <a href="#" class="pr">
+                    <img src="img/search.svg" alt="">
+                </a>
+                <a href="#" class="pr">
+                    <img src="img/mail.svg" alt="">
+                    <span></span>
+                </a>
+                <div class="nav__profile align-items-center">
+                    <img class="nav__avatar" src="img/avatar.jpg" alt="">
+                    <img src="img/avatar_arrow.svg" alt="">
+                </div>
+            </div>
+            <div class="nav__more">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <header class="header pt167 pb290">
+        <div class="container">
+            <h1 class="fs70">Большой тур по Италии</h1>
+            <a href="#" class="mt10 df justify-content-start align-items-center fs20">Подробнее</a>
+        </div>
+    </header>
+    <div class="filter pr">
+        <div class="container pr">
+            <div class="filter__check df justify-content-start align-items-center pa">
+                <div class="filter__check_input pr">
+                    <input class="pa" type="radio" name="filter__check" checked>
+                    <p class="pr fs16 tr-2">Обратный</p>
+                </div>
+                <div class="filter__check_input pr">
+                    <input class="pa" type="radio" name="filter__check">
+                    <p class="pr fs16 tr-2">В одну сторону</p>
+                </div>
+                <div class="filter__check_input pr">
+                    <input class="pa" type="radio" name="filter__check">
+                    <p class="pr fs16 tr-2">Тур</p>
+                </div>
+            </div>
+            <div class="filter__row br-5 pr align-items-center">
+                <div class="filter__route align-items-center">
+                    <input class="fs16 b-0" type="text" placeholder="Москва, Россия">
+                    <img src="img/filter_route.svg" alt="">
+                    <input class="fs16 b-0" type="text" placeholder="Рим, Италия">
+                </div>
+                <div class="filter__date align-items-center">
+                    <div class="pr">
+                        <img class="pa" src="img/date.svg" alt="">
+                        <input class="fs16 br-5" type="text" placeholder="Заезд">
+                    </div>
+                    <hr>
+                    <div class="pr">
+                        <img class="pa" src="img/date.svg" alt="">
+                        <input class="fs16 br-5" type="text" placeholder="Выезд">
+                    </div>
+                </div>
+                <div class="filter__pers pr">
+                    <img class="pa" src="img/pers.svg" alt="">
+                    <select class="br-5" name="" id="">
+                        <option value="">1 взрослый, Эконом</option>
+                        <option value="">1 взрослый, Эконом</option>
+                        <option value="">1 взрослый, Эконом</option>
+                        <option value="">1 взрослый, Эконом</option>
+                    </select>
+                </div>
+                <button class="filter__btn br-5 pa align-items-center df justify-content-center b-0 pr20 pl20 pt20 pb20">
+                    <img src="img/search.svg" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="catalog pt50 pb100">
+        <div class="container">
+            <div class="catalog__body">
+                <div class="catalog__filter">
+                    <h3 class="fs18">Фильтр</h3>
+                    <div class="catalog__filter_wrapper br-5 pt20 pr20 pl20 pb40">
+                        <div class="catalog__budget">
+                            <p class="fs16">Бюджет на ночь:</p>
+                            <div class="catalog__budget_range"></div>
+                            <div class="catalog__budget_num df justify-content-between align-items-center">
+                                <p class="fs16">2 500₽</p>
+                                <p class="fs16">7 500₽</p>
+                            </div>
+                        </div>
+                        <div class="catalog__check">
+                            <p class="fs16">Часто выбирают:</p>
+                            <div class="catalog__check_wrapper df justify-content-start align-items-center">
+                                <div class="catalog__check_input pr">
+                                    <input class="pa" type="checkbox" checked>
+                                    <p class="fs12 br-5 tr-2">Отели</p>
+                                </div>
+                                <div class="catalog__check_input pr">
+                                    <input class="pa" type="checkbox">
+                                    <p class="fs12 br-5 tr-2">Аппартаменты</p>
+                                </div>
+                                <div class="catalog__check_input pr">
+                                    <input class="pa" type="checkbox">
+                                    <p class="fs12 br-5 tr-2">Хостелы</p>
+                                </div>
+                                <div class="catalog__check_input pr">
+                                    <input class="pa" type="checkbox">
+                                    <p class="fs12 br-5 tr-2">2-х спальная кровать</p>
+                                </div>
+                                <div class="catalog__check_input pr">
+                                    <input class="pa" type="checkbox">
+                                    <p class="fs12 br-5 tr-2">Круглосуточно</p>
+                                </div>
+                                <div class="catalog__check_input pr">
+                                    <input class="pa" type="checkbox" checked>
+                                    <p class="fs12 br-5 tr-2">Завтрак включен</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__num">
+                            <div class="catalog__num_title df justify-content-between align-items-center">
+                                <p class="catalog__num_name fs16">Оценка:</p>
+                                <p class="catalog__num_result fs16">+8</p>
+                            </div>
+                            <div class="catalog__num_range"></div>
+                            <div class="catalog__num_num df justify-content-between align-items-center">
+                                <p class="fs16">5.0</p>
+                                <p class="fs16">10</p>
+                            </div>
+                        </div>
+                        <div class="catalog__stars pt20">
+                            <p class="catalog__stars_name fs16">Звёзд:</p>
+                            <div class="catalog__stars_range"></div>
+                            <div class="catalog__stars_step df justify-content-between align-items-center">
+                                <p class="fs16">+1</p>
+                                <p class="fs16">+2</p>
+                                <p class="fs16">+3</p>
+                                <p class="fs16">+4</p>
+                                <p class="fs16">+5</p>
+                            </div>
+                        </div>
+                        <button class="catalog__filter_btn br-5 fs16 bg-tra db">Посмотреть все опции</button>
+                    </div>
+                </div>
+                <div class="catalog__wrapper">
+                    <div class="catalog__title df justify-content-between align-items-center">
+                        <h3 class="fs18">Москва: <span>3 098 предложений</span></h3>
+                        <div class="catalog__hide df justify-content-center align-items-center">
+                            <p class="fs18">Искать по:</p>
+                            <select class="fs18 bg-tra b-0" name="" id="">
+                                <option value="">рекомендациям</option>
+                                <option value="">рекомендациям</option>
+                                <option value="">рекомендациям</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="catalog__list">
+                        <div class="catalog__item pr br-5">
+                            <div class="catalog__prev">
+                                <img src="img/best_prev.jpg" alt="">
+                            </div>
+                            <div class="catalog__item_body">
+                                <div class="catalog__name df justify-content-start align-items-center pr70">
+                                    <p class="fs16">Марриотт Москва Гранд Отель</p>
+                                    <div class="catalog__star">
+                                        <img src="img/star.svg" alt="">
+                                        <img src="img/star.svg" alt="">
+                                        <img src="img/star.svg" alt="">
+                                        <img src="img/star.svg" alt="">
+                                        <img src="img/star.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="catalog__rate pa">
+                                    <p class="fs16">9.5</p>
+                                    <img src="img/crown.svg" alt="">
+                                </div>
+                                <a href="#" class="catalog__place df justify-content-start align-items-center">
+                                    <img src="img/place_blue.svg" alt="">
+                                    <p class="fs12"><span>Москва, Россия</span> (1,8 км от центра)</p>
+                                </a>
+                                <div class="catalog__info align-items-center">
+                                    <ul>
+                                        <li class="fs12">осталось два номера по этой цене</li>
+                                        <li class="fs12">зарезервировать можно с помощью кредитной карты. Бесплатная отмена бронирования</li>
+                                    </ul>
+                                    <div class="catalog__price">
+                                        <p class="fs16">5 000₽</p>
+                                        <p class="fs12">за ночь</p>
+                                    </div>
+                                </div>
+                                <div class="catalog__row df justify-content-between align-items-end">
+                                    <div class="catalog__coffee align-items-center">
+                                        <img src="img/coffee.svg" alt="">
+                                        <p class="fs12">Завтрак включен</p>
+                                    </div>
+                                    <button class="btn__blue fs12 b-0 br-5 ">Посмотреть номера</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__item pr br-5">
+                            <div class="catalog__prev">
+                                <img src="img/best_prev.jpg" alt="">
+                            </div>
+                            <div class="catalog__item_body">
+                                <div class="catalog__name df justify-content-start align-items-center pr70">
+                                    <p class="fs16">Марриотт Москва Гранд Отель</p>
+                                    <div class="catalog__star">
+                                        <img src="img/star.svg" alt="">
+                                        <img src="img/star.svg" alt="">
+                                        <img src="img/star.svg" alt="">
+                                        <img src="img/star.svg" alt="">
+                                        <img src="img/star.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="catalog__rate pa">
+                                    <p class="fs16">9.5</p>
+                                    <img src="img/crown.svg" alt="">
+                                </div>
+                                <a href="#" class="catalog__place df justify-content-start align-items-center">
+                                    <img src="img/place_blue.svg" alt="">
+                                    <p class="fs12"><span>Москва, Россия</span> (1,8 км от центра)</p>
+                                </a>
+                                <div class="catalog__info align-items-center">
+                                    <ul>
+                                        <li class="fs12">осталось два номера по этой цене</li>
+                                        <li class="fs12">зарезервировать можно с помощью кредитной карты. Бесплатная отмена бронирования</li>
+                                    </ul>
+                                    <div class="catalog__price">
+                                        <p class="fs16">5 000₽</p>
+                                        <p class="fs12">за ночь</p>
+                                    </div>
+                                </div>
+                                <div class="catalog__row df justify-content-between align-items-end">
+                                    <div class="catalog__coffee align-items-center">
+                                        <img src="img/coffee.svg" alt="">
+                                        <p class="fs12">Завтрак включен</p>
+                                    </div>
+                                    <button class="btn__blue fs12 b-0 br-5 ">Посмотреть номера</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__item pr br-5">
+                            <div class="catalog__prev">
+                                <img src="img/best_prev.jpg" alt="">
+                            </div>
+                            <div class="catalog__item_body">
+                                <div class="catalog__name df justify-content-start align-items-center pr70">
+                                    <p class="fs16">Марриотт Москва Гранд Отель</p>
+                                    <div class="catalog__star">
+                                        <img src="img/star.svg" alt="">
+                                        <img src="img/star.svg" alt="">
+                                        <img src="img/star.svg" alt="">
+                                        <img src="img/star.svg" alt="">
+                                        <img src="img/star.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="catalog__rate pa">
+                                    <p class="fs16">9.5</p>
+                                    <img src="img/crown.svg" alt="">
+                                </div>
+                                <a href="#" class="catalog__place df justify-content-start align-items-center">
+                                    <img src="img/place_blue.svg" alt="">
+                                    <p class="fs12"><span>Москва, Россия</span> (1,8 км от центра)</p>
+                                </a>
+                                <div class="catalog__info align-items-center">
+                                    <ul>
+                                        <li class="fs12">осталось два номера по этой цене</li>
+                                        <li class="fs12">зарезервировать можно с помощью кредитной карты. Бесплатная отмена бронирования</li>
+                                    </ul>
+                                    <div class="catalog__price">
+                                        <p class="fs16">5 000₽</p>
+                                        <p class="fs12">за ночь</p>
+                                    </div>
+                                </div>
+                                <div class="catalog__row df justify-content-between align-items-end">
+                                    <div class="catalog__coffee align-items-center">
+                                        <img src="img/coffee.svg" alt="">
+                                        <p class="fs12">Завтрак включен</p>
+                                    </div>
+                                    <button class="btn__blue fs12 b-0 br-5 ">Посмотреть номера</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__item pr br-5">
+                            <div class="catalog__prev">
+                                <img src="img/best_prev.jpg" alt="">
+                            </div>
+                            <div class="catalog__item_body">
+                                <div class="catalog__name df justify-content-start align-items-center pr70">
+                                    <p class="fs16">Марриотт Москва Гранд Отель</p>
+                                    <div class="catalog__star">
+                                        <img src="img/star.svg" alt="">
+                                        <img src="img/star.svg" alt="">
+                                        <img src="img/star.svg" alt="">
+                                        <img src="img/star.svg" alt="">
+                                        <img src="img/star.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="catalog__rate pa">
+                                    <p class="fs16">9.5</p>
+                                    <img src="img/crown.svg" alt="">
+                                </div>
+                                <a href="#" class="catalog__place df justify-content-start align-items-center">
+                                    <img src="img/place_blue.svg" alt="">
+                                    <p class="fs12"><span>Москва, Россия</span> (1,8 км от центра)</p>
+                                </a>
+                                <div class="catalog__info align-items-center">
+                                    <ul>
+                                        <li class="fs12">осталось два номера по этой цене</li>
+                                        <li class="fs12">зарезервировать можно с помощью кредитной карты. Бесплатная отмена бронирования</li>
+                                    </ul>
+                                    <div class="catalog__price">
+                                        <p class="fs16">5 000₽</p>
+                                        <p class="fs12">за ночь</p>
+                                    </div>
+                                </div>
+                                <div class="catalog__row df justify-content-between align-items-end">
+                                    <div class="catalog__coffee align-items-center">
+                                        <img src="img/coffee.svg" alt="">
+                                        <p class="fs12">Завтрак включен</p>
+                                    </div>
+                                    <button class="btn__blue fs12 b-0 br-5 ">Посмотреть номера</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination df justify-content-between align-items-center">
+                        <a href="#" class="pagination__arrow pagination__prev df justify-content-center br-5 align-items-center">
+                            <img src="img/pag_arrow.svg" alt="">
+                        </a>
+                        <ul class="df justify-content-center align-items-center">
+                            <li><a href="#" class="active df justify-content-center align-items-center br-5 fs16 tr-2">1</a></li>
+                            <li><a href="#" class="df justify-content-center align-items-center br-5 fs16 tr-2">2</a></li>
+                            <li><a href="#" class="df justify-content-center align-items-center br-5 fs16 tr-2">3</a></li>
+                            <li><a href="#" class="df justify-content-center align-items-center br-5 fs16 tr-2">4</a></li>
+                            <li><a href="#" class="df justify-content-center align-items-center br-5 fs16 tr-2">5</a></li>
+                            <li><p class="df justify-content-center align-items-center br-5 fs16">...</p></li>
+                            <li><a href="#" class="df justify-content-center align-items-center br-5 fs16 tr-2">22</a></li>
+                            <li><a href="#" class="df justify-content-center align-items-center br-5 fs16 tr-2">23</a></li>
+                        </ul>
+                        <a href="#" class="pagination__arrow pagination_next df justify-content-center br-5 align-items-center">
+                            <img src="img/pag_arrow.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-row pt30 pb30">
+        <div class="container">
+            <div class="footer-row__wrapper df justify-content-between align-items-center">
+                <a class="fs16" href="#">Ваш аккаунт</a>
+                <a class="fs16" href="#">Возможность изменять бронирование онлайн</a>
+                <a class="fs16" href="#">Служба поддержки</a>
+            </div>
+        </div>
+    </div>
+    <footer class="footer pt40 pb60">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__list">
+                    <p class="fs16">Популярное</p>
+                    <ul>
+                        <li><a class="fs14" href="#">Страны</a></li>
+                        <li><a class="fs14" href="#">Регионы</a></li>
+                        <li><a class="fs14" href="#">Города</a></li>
+                        <li><a class="fs14" href="#">Аэропорты</a></li>
+                        <li><a class="fs14" href="#">Интеренсные места</a></li>
+                        <li><a class="fs14" href="#">Отели</a></li>
+                    </ul>
+                </div>
+                <div class="footer__list">
+                    <p class="fs16">Поиск по категориям</p>
+                    <ul>
+                        <li><a class="fs14" href="#">Апартаменты</a></li>
+                        <li><a class="fs14" href="#">Отели</a></li>
+                        <li><a class="fs14" href="#">Хостелы</a></li>
+                        <li><a class="fs14" href="#">Виллы</a></li>
+                        <li><a class="fs14" href="#">Гостевые домики</a></li>
+                    </ul>
+                </div>
+                <div class="footer__list">
+                    <p class="fs16">Другая информация</p>
+                    <ul>
+                        <li><a class="fs14" href="#">О нас</a></li>
+                        <li><a class="fs14" href="#">Помощь</a></li>
+                        <li><a class="fs14" href="#">Карьера</a></li>
+                        <li><a class="fs14" href="#">Инвестирование</a></li>
+                    </ul>
+                </div>
+                <div class="footer__info">
+                    <p class="footer__info_text fs16">Экономь время, экономь деньги!</p>
+                    <div class="footer__form pr">
+                        <input class="br-5 fs14 b-0" type="text" placeholder="E-mail">
+                        <button class="btn__blue fs12 b-0 br-5 pa fs14">Подписаться</button>
+                    </div>
+                    <a href="#" class="logo db">
+                        <p class="xs-fs24">Booking.com</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
