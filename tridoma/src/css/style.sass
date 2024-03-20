@@ -1,3 +1,15 @@
+$primary-dark-blue: #232c5e
+$primary-white: #fff
+$primary-light-gray: #f2f2f2
+$primary-dark-gray: #4f505a
+$primary-night-blue: #181e43
+$additional-error: #fc6b62
+$gray: #d9d9d9
+$primary--gray: #d9d9d9
+
+$font-family: "Manrope", sans-serif
+$second-family: "Inter", sans-serif
+    
 body
     background: rgb(242, 242, 242)
     position: relative
@@ -47,11 +59,25 @@ body
                     letter-spacing: 0%
                     text-align: left
     &__logo
-        padding: 0 0 0 40px
-        margin: 0 0 auto
+        padding: 12px 12px 16px
+        width: 100%
+        max-width: 209px
+        margin: 0 0 auto 40px
+        background: #fff
         img
-            width: 209px
+            width: 100%
             display: block
+            margin: 0 auto
+            height: 97px
+            object-fit: cover
+        p
+            margin: 10px 0 0
+            font-family: $font-family
+            font-weight: 600
+            font-size: 14px
+            line-height: 1.2
+            text-align: center
+            color: $primary-dark-blue
     &__info
         margin: 32px 0 auto
         padding: 0 40px
@@ -105,6 +131,11 @@ body
         width: 100%
         max-width: 326px
         border: none
+        transition: all .3s
+        &:hover
+            background: #2f3b7e
+        &:active
+            background: #3658b2
     &__footer
         background: rgb(35, 44, 94)
         padding: 32px 40px
@@ -124,7 +155,8 @@ body
             font-weight: 500
             line-height: 140%
             opacity: 0.4
-            &+p
+            &+p,
+            &+a
                 opacity: 1
                 margin: 5px 0 0
                 color: rgb(242, 242, 242)
@@ -132,6 +164,10 @@ body
                 font-size: 20px
                 font-weight: 500
                 line-height: 140%
+        a
+            transition: all .3s
+            &:hover
+                color: #3658b2
     &__soc
         display: grid
         grid-template-columns: 100%
@@ -139,13 +175,21 @@ body
         img
             width: 32px
             height: 32px
+        a
+            transition: all .3s
+            &:hover
+                opacity: 0.5
 
 @media ( max-width: 1600px )
     .prev-page
         grid-template-columns: 73fr 71fr
         &__logo
+            max-width: 95px
+            padding: 8px 5px
             img
-                width: 95px
+                height: 50px
+            p
+                font-size: 9px
         &__info
             h1
                 font-size: 60px
@@ -193,8 +237,15 @@ body
             top: 0
             left: 20px
             z-index: 1
+            padding: 12px 12px 8px
+            max-width: 167px
             img
-                width: 167px
+                height: 58px
+                max-width: 120px
+            p
+                font-size: 10px
+                max-width: 130px 
+                margin: 4px auto 0
         &__bg
             order: -1
             img
@@ -222,9 +273,11 @@ body
         &__logo
             position: relative
             left: auto
-            padding: 0 20px
+            padding: 6px 8px 8px
+            max-width: 130px
+            margin: 0 0 0 20px
             img
-                width: 130px
+                height: 60px
         &__info
             padding: 24px 20px 48px
             h1
@@ -329,8 +382,17 @@ body
         align-items: center
         border-radius: 100%
         background: rgb(242, 242, 242)
-        img
+        overflow: hidden
+        transition: all .3s 
+        svg
             width: 30px
+            path
+                transition: all .3s 
+        &:hover
+            background: #232C5E
+            svg
+                path
+                    fill: #fff
     h2
         color: rgb(35, 44, 94)
         font-family: Manrope
@@ -349,6 +411,7 @@ body
         line-height: 140%
     &__input
         margin: 16px 0 0
+        position: relative
         p
             color: rgb(79, 80, 90)
             font-family: Manrope
@@ -357,7 +420,7 @@ body
             line-height: 140%
         input
             margin: 8px 0 0
-            padding: 16px
+            padding: 15px
             border-radius: 8px
             background: rgb(242, 242, 242)
             color: rgb(79, 80, 90)
@@ -368,8 +431,30 @@ body
             border: none
             width: 100%
             box-sizing: border-box
+            border: 1px solid rgb(242, 242, 242)
+            transition: all .3s
             &::placeholder
                 color: rgba(79, 80, 90, 0.6)
+        span
+            opacity: 0
+            pointer-events: none
+            font-family: Manrope
+            transition: all .3s
+            font-weight: 500
+            font-size: 12px
+            line-height: 1.4
+            text-align: right
+            color: $additional-error
+            bottom: 17px
+            right: 16px
+            position: absolute
+        &.error
+            input
+                border: 1px solid $additional-error
+                &::placeholder
+                    color: $additional-error
+            span
+                opacity: 1
     &__form
         margin: 24px 0 0
     &__pers
@@ -387,6 +472,9 @@ body
             a
                 color: rgb(35, 44, 94)
                 text-decoration: underline
+                transition: all .3s
+                &:hover
+                    color: #3658b2
         &_check
             width: 16px
             position: relative
@@ -432,15 +520,22 @@ body
         letter-spacing: 1px
         text-transform: uppercase
         margin: 32px 0 0
+        transition: all .3s
+        &:hover
+            background: #2f3b7e
+        &:active
+            background: #3658b2
     &__phone
         display: grid
         grid-template-columns: 44px 1fr
         gap: 8px
-        padding-left: 16px
+        padding-left: 15px
         align-items: center
         background: rgb(242, 242, 242)
         border-radius: 8px
         margin: 8px 0 0
+        border: 1px solid rgb(242, 242, 242)
+        transition: all .3s
         input
             padding-left: 0
             margin: 0
@@ -458,6 +553,13 @@ body
                 height: 100%
                 background: url('../img/arrow.svg') center no-repeat
                 background-size: contain
+        &.error
+            border: 1px solid $additional-error
+            input
+                &::placeholder
+                    color: $additional-error
+            span
+                opacity: 1
 
 @media ( max-width: 1440px )
     .prev-modal
@@ -491,7 +593,7 @@ body
         &__close
             width: 30px
             height: 30px
-            img
+            svg
                 width: 22px
 
 @media ( max-width: 425px )
@@ -519,6 +621,9 @@ body
         &__close
             top: 8px
             right: 8px
+        &__input
+            span
+                display: none
 
 .container
     max-width: 1240px
@@ -528,9 +633,24 @@ body
 
 .nav
     &__logo
-        max-width: 183px
+        padding: 12px 12px 16px
+        width: 100%
+        max-width: 209px
+        background: #fff
         img
             width: 100%
+            display: block
+            margin: 0 auto
+            height: 97px
+            object-fit: cover
+        p
+            margin: 10px 0 0
+            font-family: $font-family
+            font-weight: 600
+            font-size: 14px
+            line-height: 1.2
+            text-align: center
+            color: $primary-dark-blue
 
 .breadcrumbs
     padding: 48px 20px 24px
@@ -653,8 +773,11 @@ body
         display: flex
         justify-content: center
         align-items: center
+        transition: all .3s
         img
             width: 17px
+        &:hover
+            background: #2f3b7e
     &__soc
         display: grid
         grid-template-columns: 32px 32px
@@ -666,7 +789,17 @@ body
 @media ( max-width: 1024px )
     .nav
         &__logo
+            &__logo
+            z-index: 1
+            padding: 12px 12px 8px
             max-width: 167px
+            img
+                height: 58px
+                max-width: 120px
+            p
+                font-size: 10px
+                max-width: 130px 
+                margin: 4px auto 0
     .breadcrumbs
         padding: 48px 20px 16px
         p,
@@ -699,7 +832,10 @@ body
 @media ( max-width: 600px )
     .nav
         &__logo
+            padding: 6px 8px 8px
             max-width: 130px
+            img
+                height: 60px
     .breadcrumbs
         padding: 32px 20px 16px
     .privacy
