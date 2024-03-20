@@ -64,6 +64,7 @@ body
         max-width: 209px
         margin: 0 0 auto 40px
         background: #fff
+        display: block
         img
             width: 100%
             display: block
@@ -87,7 +88,7 @@ body
             font-size: 88px
             font-weight: 500
             line-height: 95%
-            letter-spacing: -5px
+            letter-spacing: -3px
     &__list
         margin: 32px 0 0
         display: grid
@@ -165,6 +166,7 @@ body
                 font-weight: 500
                 line-height: 140%
         a
+            display: block
             transition: all .3s
             &:hover
                 color: #3658b2
@@ -223,7 +225,8 @@ body
             gap: 37px
             p
                 font-size: 16px
-                &+p
+                &+p,
+                &+a
                     font-size: 16px
 
 @media ( max-width: 1440px )
@@ -273,6 +276,28 @@ body
         &__footer
             padding: 24px 20px
             margin: 0
+            grid-template-columns: 1fr 36px
+        &__soc
+            img
+                width: 36px
+                height: 36px
+
+@media ( max-width: 700px )
+    .prev-page
+        &__contact
+            grid-template-columns: 100%
+            gap: 16px
+        &__footer
+            grid-template-columns: 100%
+            gap: 16px
+            padding: 32px 20px
+        &__soc
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            gap: 8px
+            img
+                width: 36px
 
 @media ( max-width: 600px )
     .prev-page
@@ -645,6 +670,7 @@ body
         width: 100%
         max-width: 209px
         background: #fff
+        display: block
         img
             width: 100%
             display: block
@@ -774,6 +800,7 @@ body
                 color: rgb(242, 242, 242)
                 margin: 5px 0 0
         a
+            display: block
             transition: all .3s
             &:hover
                 color: #3658b2
@@ -789,7 +816,7 @@ body
         align-items: center
         transition: all .3s
         img
-            width: 17px
+            width: 30px
         &:hover
             background: #2f3b7e
     &__soc
@@ -797,8 +824,22 @@ body
         grid-template-columns: 32px 32px
         gap: 8px
         margin: 24px 0 0
+        a
+            transition: all .3s
+            &:hover
+                opacity: .5
         img
             width: 100%
+
+@media ( max-width: 1600px )
+    .nav
+        &__logo
+            max-width: 95px
+            padding: 8px 5px
+            img
+                height: 50px
+            p
+                font-size: 9px
 
 @media ( max-width: 1024px )
     .nav
@@ -842,6 +883,10 @@ body
                 font-size: 16px
         &__row
             gap: 30px
+        &__list p
+            &+p,
+            &+a
+                font-size: 16px
 
 @media ( max-width: 700px )
     .footer
@@ -855,6 +900,8 @@ body
             gap: 16px
         &__soc
             margin: 16px 0 0
+            grid-template-columns: 36px 36px
+            gap: 8px
 
 @media ( max-width: 600px )
     .nav
