@@ -226,6 +226,14 @@ body
                 &+p
                     font-size: 16px
 
+@media ( max-width: 1440px )
+    .prev-page__contact p
+        &+p,
+        &+a
+            font-size: 16px
+    .prev-page__contact
+        gap: 20px
+
 @media ( max-width: 1024px )
     .prev-page
         grid-template-columns: 100%
@@ -754,15 +762,21 @@ body
         grid-template-columns: minmax(1px, 285px) minmax(1px, 285px) minmax(1px, 285px)
         gap: 20px
         justify-content: space-between
-        p
+        p,
+        a
             color: rgba(242, 242, 242, 0.4)
             font-family: Manrope
             font-size: 20px
             font-weight: 500
             line-height: 140%
-            &+p
+            &+p,
+            &+a
                 color: rgb(242, 242, 242)
                 margin: 5px 0 0
+        a
+            transition: all .3s
+            &:hover
+                color: #3658b2
     &__up
         width: 48px
         height: 48px
@@ -829,6 +843,19 @@ body
         &__row
             gap: 30px
 
+@media ( max-width: 700px )
+    .footer
+        &__row
+            grid-template-columns: 100%
+            gap: 24px
+        &__up
+            order: -1
+        &__list
+            grid-template-columns: 100%
+            gap: 16px
+        &__soc
+            margin: 16px 0 0
+
 @media ( max-width: 600px )
     .nav
         &__logo
@@ -850,14 +877,3 @@ body
             border: none
         &__item
             padding: 0
-    .footer
-        &__row
-            grid-template-columns: 100%
-            gap: 24px
-        &__up
-            order: -1
-        &__list
-            grid-template-columns: 100%
-            gap: 16px
-        &__soc
-            margin: 16px 0 0
