@@ -123,7 +123,7 @@ window.addEventListener("DOMContentLoaded", function() {
             var form_data = $(this).serialize(); // Собираем все данные из формы
             $.ajax({
                 type: "POST", // Метод отправки
-                url: "public/script/send.php", // Путь до php файла отправителя
+                url: "../php/send.php", // Путь до php файла отправителя
                 data: form_data,
                 success: function () {
                     // Код в этом блоке выполняется при успешной отправке сообщения
@@ -131,7 +131,8 @@ window.addEventListener("DOMContentLoaded", function() {
                 },
                 error: function () {
                     // Код в этом блоке выполняется при ошибке
-                    thanksModalShow() 
+                    // thanksModalShow() 
+                    alert('ошибка')
                     // пока стоит заглушка, при создании файла отправителя это можно удалить
                 },
             });
