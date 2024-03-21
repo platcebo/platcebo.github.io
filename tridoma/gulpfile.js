@@ -72,6 +72,10 @@ function file(done) {
     gulp.src('./src/js/**/*')
     .pipe(gulp.dest('./dist/js'))
     .pipe(browserSync.stream());
+
+    gulp.src('./src/php/**/*')
+    .pipe(gulp.dest('./dist/php'))
+    .pipe(browserSync.stream());
     
     gulp.src('./src/**/*.html')
     .pipe(gulp.dest('./dist'))
@@ -99,6 +103,7 @@ function watch() {
     gulp.watch("./src/img/**/*" , file);
     gulp.watch("./src/font/**/*" , file);
     gulp.watch("./src/js/**/*" , file);
+    gulp.watch("./src/php/**/*" , file);
     gulp.watch("./src/**/*.html" , file);
     gulp.watch("./src/css/**/*.sass" , styleSass);
     gulp.watch("./src/css/**/*.css" , styleCss);
