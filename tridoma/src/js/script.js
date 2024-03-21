@@ -96,10 +96,9 @@ window.addEventListener("DOMContentLoaded", function() {
         let formData = new FormData(formPrev);
             
             // if(error === 0) {
-            //     let response = await fetch('../php/send.php', {
+            //     let response = await fetch('php/send.php', {
             //         method: 'post',
             //         body: formData,
-
             //     });
             //     if(response.ok) {
             //         let result = await response.json();
@@ -116,17 +115,16 @@ window.addEventListener("DOMContentLoaded", function() {
             var form_data = $(this).serialize(); // Собираем все данные из формы
             $.ajax({
                 method: "post", // Метод отправки
-                url: "../php/send.php", // Путь до php файла отправителя
+                url: "php/send.php", // Путь до php файла отправителя
                 data: form_data,
                 success: function () {
                     // Код в этом блоке выполняется при успешной отправке сообщения
                     thanksModalShow()
+                    formPrev.reset()
                 },
                 error: function () {
                     // Код в этом блоке выполняется при ошибке
-                    // thanksModalShow() 
                     alert('ошибка')
-                    // пока стоит заглушка, при создании файла отправителя это можно удалить
                 },
             });
         } else {

@@ -1,5 +1,5 @@
 <?
-    $to = "3221vbif@gmail.com";
+    $to = "tridoma@litwin.house";
     $subject = 'Обратный звонок'; //Заголовок сообщения
     $message = '
             <html>
@@ -14,6 +14,6 @@
                 </body>
             </html>'; //Текст сообщения
     $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
-    $headers .= "From: 3221vbif@gmail.com\r\n"; //Наименование и почта отправителя
+    $headers .= "From: <tridoma@litwin.house>\r\n"; //Наименование и почта отправителя
     mail($to, $subject, $message, $headers); //Отправка письма с помощью функции mail
 ?>
