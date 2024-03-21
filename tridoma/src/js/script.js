@@ -89,9 +89,49 @@ window.addEventListener("DOMContentLoaded", function() {
         formPrev.addEventListener('submit', formPrevSend);
     }
 
-    function formPrevSend(event) {
+    async function formPrevSend(event) {
         event.preventDefault()
         let error = formVal(formPrev);
+
+        let formData = new FormData(formPrev);
+            
+            // if(error === 0) {
+            //     let response = await fetch('../php/send.php', {
+            //         method: 'post',
+            //         body: formData,
+
+            //     });
+            //     if(response.ok) {
+            //         let result = await response.json();
+            //         alert(result.message);
+            //         formPrev.reset()
+            //     } else {
+
+            //     }
+            // } else {
+                
+            // }
+
+        if (error == 0) {
+            var form_data = $(this).serialize(); // Собираем все данные из формы
+            $.ajax({
+                method: "post", // Метод отправки
+                url: "../php/send.php", // Путь до php файла отправителя
+                data: form_data,
+                success: function () {
+                    // Код в этом блоке выполняется при успешной отправке сообщения
+                    thanksModalShow()
+                },
+                error: function () {
+                    // Код в этом блоке выполняется при ошибке
+                    // thanksModalShow() 
+                    alert('ошибка')
+                    // пока стоит заглушка, при создании файла отправителя это можно удалить
+                },
+            });
+        } else {
+            return
+        }
     }
 
     function formVal(form) {
@@ -119,26 +159,7 @@ window.addEventListener("DOMContentLoaded", function() {
             }
         }
 
-        if (error == 0) {
-            var form_data = $(this).serialize(); // Собираем все данные из формы
-            $.ajax({
-                type: "POST", // Метод отправки
-                url: "../php/send.php", // Путь до php файла отправителя
-                data: form_data,
-                success: function () {
-                    // Код в этом блоке выполняется при успешной отправке сообщения
-                    thanksModalShow()
-                },
-                error: function () {
-                    // Код в этом блоке выполняется при ошибке
-                    // thanksModalShow() 
-                    alert('ошибка')
-                    // пока стоит заглушка, при создании файла отправителя это можно удалить
-                },
-            });
-        } else {
-            return
-        }
+        return error
     }
 
     function formAddError(input){
