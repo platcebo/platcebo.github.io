@@ -74,7 +74,6 @@ window.addEventListener("DOMContentLoaded", function() {
 
     function formPrevSend(event) {
         event.preventDefault()
-
         let error = formVal(formPrev);
     }
 
@@ -86,7 +85,12 @@ window.addEventListener("DOMContentLoaded", function() {
             const input = formReq[index];
             formRemError(input);
 
-            if(input.getAttribute('type') === 'checkbox' && input.checked === false) {
+            if(input.classList.contains('_email')) {
+                if(formEmail(input)) {
+                    formAddError(input);
+                    error++;
+                }
+            } else if(input.getAttribute('type') === 'checkbox' && input.checked === false) {
                 formAddError(input);
                 error++;
             } else if (input.value === '') {
@@ -109,5 +113,8 @@ window.addEventListener("DOMContentLoaded", function() {
     function formRemError(input){
         input.classList.remove('error')
         input.parentElement.classList.remove('error')
+    }
+    function formEmail(input) {
+        return !/^\w+([\.-]?\w+)*@\w+([\--]?\w+)*(\.\w{2,8})+$/.test(input.value);
     }
 });
