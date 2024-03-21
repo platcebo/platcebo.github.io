@@ -19,6 +19,20 @@ window.addEventListener("DOMContentLoaded", function() {
         })
     }
 
+    let thanksModal = document.querySelector('.thanks-modal'),
+        thanksModalClose = document.querySelector('.thanks-modal__close');
+
+    function thanksModalShow(){
+        thanksModal.classList.add('active');
+        prevModal.classList.remove('prev-modal__active')
+    }
+    if(thanksModalClose !== null) {
+        thanksModalClose.addEventListener('click', ()=>{
+            thanksModal.classList.remove('active');
+            document.body.classList.remove('fix')
+        })
+    }
+
     let pageArrow = document.querySelector('.footer__up');
         
     if(pageArrow !== null) {
@@ -70,7 +84,10 @@ window.addEventListener("DOMContentLoaded", function() {
     });
   
     let formPrev = document.querySelector('.prev-modal__form');
-    formPrev.addEventListener('submit', formPrevSend);
+
+    if(formPrev !== null) {
+        formPrev.addEventListener('submit', formPrevSend);
+    }
 
     function formPrevSend(event) {
         event.preventDefault()
@@ -86,8 +103,11 @@ window.addEventListener("DOMContentLoaded", function() {
             formRemError(input);
 
             if(input.classList.contains('_email')) {
-                if(formEmail(input)) {
+                if (input.value === '') {
                     formAddError(input);
+                    error++;
+                } else if(formEmail(input)) {
+                    formAddErrorEmail(input);
                     error++;
                 }
             } else if(input.getAttribute('type') === 'checkbox' && input.checked === false) {
@@ -100,7 +120,21 @@ window.addEventListener("DOMContentLoaded", function() {
         }
 
         if (error == 0) {
-            formPrev.submit()
+            var form_data = $(this).serialize(); // Собираем все данные из формы
+            $.ajax({
+                type: "POST", // Метод отправки
+                url: "public/script/send.php", // Путь до php файла отправителя
+                data: form_data,
+                success: function () {
+                    // Код в этом блоке выполняется при успешной отправке сообщения
+                    thanksModalShow()
+                },
+                error: function () {
+                    // Код в этом блоке выполняется при ошибке
+                    thanksModalShow() 
+                    // пока стоит заглушка, при создании файла отправителя это можно удалить
+                },
+            });
         } else {
             return
         }
@@ -109,6 +143,10 @@ window.addEventListener("DOMContentLoaded", function() {
     function formAddError(input){
         input.classList.add('error')
         input.parentElement.classList.add('error')
+    }
+    function formAddErrorEmail(input) {
+        input.classList.add('error')
+        input.parentElement.classList.add('error__email')
     }
     function formRemError(input){
         input.classList.remove('error')
