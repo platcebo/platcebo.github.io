@@ -1,6 +1,6 @@
 <?
     $to = "tridoma@litwin.house";
-    $subject = 'Обратный звонок'; //Заголовок сообщения
+    $subject = 'заявка с сайта Tridoma'; //Заголовок сообщения
     $message = '
             <html>
                 <head>

@@ -93,24 +93,6 @@ window.addEventListener("DOMContentLoaded", function() {
         event.preventDefault()
         let error = formVal(formPrev);
 
-        let formData = new FormData(formPrev);
-            
-            // if(error === 0) {
-            //     let response = await fetch('php/send.php', {
-            //         method: 'post',
-            //         body: formData,
-            //     });
-            //     if(response.ok) {
-            //         let result = await response.json();
-            //         alert(result.message);
-            //         formPrev.reset()
-            //     } else {
-
-            //     }
-            // } else {
-                
-            // }
-
         if (error == 0) {
             var form_data = $(this).serialize(); // Собираем все данные из формы
             $.ajax({
