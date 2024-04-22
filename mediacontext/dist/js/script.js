@@ -109,8 +109,8 @@ let service = document.querySelector('.service'),
     serviceBlock = document.querySelector('.service__block'),
     serviceSlider = document.querySelector('.service__scroll');
 
-if(service !== null && window.innerWidth > 1200) {
-    service.style.height = serviceSlider.getBoundingClientRect().width + 'px'
+if(service !== null && window.innerWidth > 1400) {
+    service.style.height = serviceSlider.getBoundingClientRect().width - serviceWrapper.getBoundingClientRect().width/3 + 'px'
 
     window.addEventListener('scroll', ()=>{
         if (service.getBoundingClientRect().top < 0 && serviceBlock.getBoundingClientRect().top > 20) {
@@ -140,6 +140,23 @@ let withRow = document.querySelectorAll('.with__scroll');
 
 if(withRow !== null) {
     withRow.forEach((element, i) => {
+        let text = element.innerHTML,
+            a = 1;
+        element.innerHTML = text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text
+        setInterval(() => {
+            element.style.transform = 'translateX(-' + a +'px)'
+            a += 0.3
+            if (a >= 5000) {
+                a = 1
+            }
+        }, 10);
+    });
+}
+
+let aboutRow = document.querySelectorAll('.about__run_scroll');
+
+if(aboutRow !== null) {
+    aboutRow.forEach((element, i) => {
         let text = element.innerHTML,
             a = 1;
         element.innerHTML = text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text
@@ -248,7 +265,8 @@ let modalCall = document.querySelectorAll('.modal__call'),
 
 if(modal !== null) {
     modalCall.forEach((item)=>{
-        item.addEventListener('click', ()=>{
+        item.addEventListener('click', (e)=>{
+            e.preventDefault()
             modal.classList.add('active');
         })
     })
@@ -271,4 +289,138 @@ if(menu !== null) {
             menuCall[i].classList.toggle('active')
         })
     })
+}
+
+let caseItem = document.querySelectorAll('.case__item'),
+    caseWrapper = document.querySelector('.case__sticy_wrapper'),
+    caseHeader = document.querySelector('.case__sticy');
+
+if(caseHeader !== null && window.innerWidth > 1200) {
+    caseWrapper.style.height = caseHeader.getBoundingClientRect().height + 'px'
+    window.addEventListener('scroll',()=>{
+        let i = caseItem.length - 1;
+        if(caseItem[i].getBoundingClientRect().top <= caseWrapper.getBoundingClientRect().height) {
+            caseHeader.classList.add('sticy')
+            caseHeader.classList.remove('fix')
+            caseHeader.style.bottom = caseItem[i].getBoundingClientRect().height + 60 + "px"
+        } else if(caseItem[i].getBoundingClientRect().top > caseHeader.getBoundingClientRect().height && caseWrapper.getBoundingClientRect().top <= 0) {
+            caseHeader.classList.add('fix')
+            caseHeader.classList.remove('sticy')
+            caseHeader.style.bottom = 'auto'
+        } else {
+            caseHeader.classList.remove('active')
+            caseHeader.classList.remove('fix')
+            caseHeader.style.bottom = 'auto'
+        }
+    })
+}
+
+let formPrev = document.querySelector('.form__wrapper');
+
+if(formPrev !== null) {
+    formPrev.addEventListener('submit', formPrevSend);
+}
+
+async function formPrevSend(event) {
+    event.preventDefault()
+    let error = formVal(formPrev);
+}
+
+function formVal(form) {
+    let error = 0,
+        formReq = document.querySelectorAll('.form__wrapper ._req');
+
+    for (let index = 0; index < formReq.length; index++) {
+        const input = formReq[index];
+        formRemError(input);
+
+        if(input.classList.contains('_email')) {
+            if (input.value === '') {
+                formAddError(input);
+                error++;
+            } else if(formEmail(input)) {
+                formAddErrorEmail(input);
+                error++;
+            }
+        } else if(input.getAttribute('type') === 'checkbox' && input.checked === false) {
+            formAddError(input);
+            error++;
+        } else if (input.value === '') {
+            formAddError(input);
+            error++;
+        }
+    }
+
+    return error
+}
+
+function formAddError(input){
+    input.classList.add('error')
+    input.parentElement.classList.add('error')
+}
+function formAddErrorEmail(input) {
+    input.classList.add('error')
+    input.parentElement.classList.add('error__email')
+}
+function formRemError(input){
+    input.classList.remove('error')
+    input.parentElement.classList.remove('error')
+}
+function formEmail(input) {
+    return !/^\w+([\.-]?\w+)*@\w+([\--]?\w+)*(\.\w{2,8})+$/.test(input.value);
+}
+
+let formModal = document.querySelector('.modal__container');
+
+if(formModal !== null) {
+    formModal.addEventListener('submit', formModalSend);
+}
+
+async function formModalSend(event) {
+    event.preventDefault()
+    let error = formModalVal(formModal);
+}
+
+function formModalVal(form) {
+    let error = 0,
+        formModalReq = document.querySelectorAll('.modal__container ._req');
+
+    for (let index = 0; index < formModalReq.length; index++) {
+        const Modalinput = formModalReq[index];
+        formModalRemError(Modalinput);
+
+        if(Modalinput.classList.contains('_email')) {
+            if (Modalinput.value === '') {
+                formModalAddError(Modalinput);
+                error++;
+            } else if(formModalEmail(Modalinput)) {
+                formModalAddErrorEmail(Modalinput);
+                error++;
+            }
+        } else if(Modalinput.getAttribute('type') === 'checkbox' && Modalinput.checked === false) {
+            formModalAddError(Modalinput);
+            error++;
+        } else if (Modalinput.value === '') {
+            formModalAddError(Modalinput);
+            error++;
+        }
+    }
+
+    return error
+}
+
+function formModalAddError(Modalinput){
+    Modalinput.classList.add('error')
+    Modalinput.parentElement.classList.add('error')
+}
+function formModalAddErrorEmail(Modalinput) {
+    Modalinput.classList.add('error')
+    Modalinput.parentElement.classList.add('error__email')
+}
+function formModalRemError(Modalinput){
+    Modalinput.classList.remove('error')
+    Modalinput.parentElement.classList.remove('error')
+}
+function formModalEmail(Modalinput) {
+    return !/^\w+([\.-]?\w+)*@\w+([\--]?\w+)*(\.\w{2,8})+$/.test(Modalinput.value);
 }
