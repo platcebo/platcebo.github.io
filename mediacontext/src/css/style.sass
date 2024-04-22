@@ -41,6 +41,7 @@ h2
         background: $black
         gap: 40px
         transition: all .3s ease-in-out
+        font-family: $font-family
         span
             font-weight: 700
             font-size: 16px
@@ -71,6 +72,7 @@ h2
         background: $purple
         gap: 40px
         transition: all .3s ease-in-out
+        font-family: $font-family
         span
             font-weight: 700
             font-size: 16px
@@ -110,6 +112,9 @@ h2
 .nav
     padding: 20px 0
     position: relative
+    .modal
+        &__call
+            padding: 10px 10px 10px 20px
     &__row
         display: flex
         justify-content: flex-start
@@ -171,7 +176,7 @@ h2
             content: ''
             display: block
             width: 30px
-            height: 1.5px
+            height: 2px
             border-radius: 1px
             background: $white
             transition: all .3s ease-in-out
@@ -248,11 +253,12 @@ h2
             .nav__info
                 display: none
         &_list
+            position: relative
             ul
                 margin: 40px 0 0
                 display: grid
                 grid-template-columns: 100%
-                gap: 20px
+                gap: 10px
             a
                 font-weight: 500
                 font-size: 20px
@@ -260,8 +266,54 @@ h2
                 letter-spacing: -0.03em
                 color: $black
                 transition: all .3s
+                opacity: .7
                 &:hover
                     color: $purple
+                    opacity: 1
+            svg
+                display: none
+            .menu
+                position: absolute
+                top: 0
+                background: $light-gray
+                padding: 40px
+                display: grid
+                grid-template-columns: 100%
+                gap: 10px
+                border-radius: 20px
+                width: 100%
+                z-index: 2
+                opacity: 0
+                pointer-events: none
+                transition: all .3s
+                &.active
+                    opacity: 1
+                    pointer-events: auto
+                &__call
+                    &:hover
+                        .menu
+                            opacity: 1
+                            pointer-events: auto
+            &:nth-child(1)
+                .menu
+                    left: calc( 100% + 40px )
+                    &::before
+                        content: ''
+                        display: block
+                        width: 50px
+                        height: 100%
+                        right: 100%
+                        position: absolute
+            &:nth-child(2)
+                .menu
+                    right: calc( 100% + 40px )
+                    &::before
+                        content: ''
+                        display: block
+                        width: 50px
+                        height: 100%
+                        left: 100%
+                        position: absolute
     &__info
         margin: auto 0 0
     &__contact
@@ -307,8 +359,10 @@ h2
                 opacity: 1
                 pointer-events: auto
                 transform: translateY(0)
-        
+                    
 .header
+    &__mob
+        display: none
     &__block
         background: url('../img/header_bg.jpg') center no-repeat
         background-color: $black
@@ -443,7 +497,7 @@ h2
     &__row
         margin: 20px 0 0
         display: grid
-        grid-template-columns: 1fr 200px
+        grid-template-columns: 1fr 248px
         gap: 40px
         align-items: end
         h2
@@ -457,8 +511,7 @@ h2
                 color: $purple
         .btn__blc 
             gap: 0
-            span
-                font-size: 14px
+            padding: 20px 20px 20px 30px
     &__wrapper
         margin: 40px 0 0
         position: relative
@@ -509,8 +562,8 @@ h2
             &::before
                 content: ''
                 display: block
-                left: 20px
-                right: 20px
+                left: 40px
+                right: 40px
                 bottom: 0
                 height: 1px
                 background: $gray
@@ -547,6 +600,9 @@ h2
                 line-height: 1.4
                 letter-spacing: -0.03em
                 color: $black
+                opacity: .7
+            a
+                display: none
         &_row
             width: 100%
             bottom: 0
@@ -610,19 +666,26 @@ h2
         margin: 20px 0 0
         display: flex
         justify-content: space-between
+        padding: 0 0 10px
+        .btn__violet
+            gap: 60px
+            padding: 20px 20px 20px 30px
     &__wrapper
         margin: 40px 0 0
         display: grid
         grid-template-columns: 100%
         gap: 40px
         position: relative
+        .btn__violet
+            display: none
     &__item
         display: grid
         grid-template-columns: 625fr 1095fr
         gap: 40px
         position: sticky
-        top: 260px
+        top: 240px
         overflow: hidden
+        max-height: calc( 100vh - 300px )
     &__video
         position: relative
         border-radius: 40px
@@ -720,7 +783,7 @@ h2
         top: 0
         z-index: 20
         background: $black
-        padding: 40px 0 
+        padding: 40px 0 0
         bottom: 852px
     &__text
         border-radius: 40px
@@ -729,6 +792,9 @@ h2
         display: flex
         flex-direction: column
         justify-content: flex-start
+        position: relative
+        max-height: 100%
+        overflow: hidden
         h3
             font-family: $font-family
             font-weight: 600
@@ -887,12 +953,17 @@ h2
                     width: 21px
                     height: 21px
                     background: url('../img/arrow_wht.svg') center no-repeat
+                    transition: all .3s
                 &:hover
                     background: $lighter-purple
             &-button-prev
                 left: 0
                 &::before
                     transform: rotate(180deg)
+            &-button-disabled
+                background: $light-gray
+                &::before
+                    filter: invert(75%)
     &__num
         font-family: $font-family
         font-weight: 600
@@ -982,10 +1053,10 @@ h2
             &::before
                 content: ''
                 display: block
-                width: 400px
-                height: 400px
-                top: 41px
-                left: 66px
+                width: 344px
+                height: 208px
+                bottom: 0
+                right: 0
                 position: absolute
                 background: url('../img/about_link.png') center no-repeat
                 background-size: contain
@@ -994,6 +1065,8 @@ h2
         img
             width: 100%
             border-radius: 40px
+            height: 656px
+            object-fit: cover
 
 .achiev
     padding: 40px 0
@@ -1029,7 +1102,7 @@ h2
         align-items: center
         gap: 20px
         &_item
-            padding: 10px 20px
+            padding: 10px 30px
             font-family: $font-family
             font-weight: 500
             font-size: 20px
@@ -1270,6 +1343,8 @@ h2
         display: grid
         grid-template-columns: 100%
         gap: 20px
+        .btn__blc
+            padding: 20px 20px 20px 30px
     &__row
         margin: 20px 0 0
         display: grid
@@ -1291,9 +1366,9 @@ h2
     padding: 40px 0
     color: #fff
     &__block
-        border-radius: 60px 40px
+        border-radius: 40px
         background: $black
-        padding: 40px
+        padding: 60px 40px
         display: grid
         grid-template-columns: 1fr 1fr 60px
         gap: 40px
@@ -1450,6 +1525,7 @@ h2
         display: grid
         grid-template-columns: 100%
         gap: 10px
+        max-width: 210px
         a
             font-family: $font-family
             font-weight: 500
@@ -1497,6 +1573,13 @@ h2
             &_list
                 a
                     font-size: 16px
+                &:nth-child(1)
+                    .menu
+                        left: calc( 100% + 20px )
+                &:nth-child(2)
+                    .menu
+                        right: calc( 100% + 20px )
+                    
             &_block
                 gap: 20px
         &__contact
@@ -1529,6 +1612,10 @@ h2
                 width: 175px
                 height: 229px
     .service
+        &__row
+            grid-template-columns: 1fr 190px
+            .btn__blc
+                padding: 10px 10px 10px 20px
         &__tag
             font-size: 16px
         h2
@@ -1551,15 +1638,17 @@ h2
     h2
         font-size: 70px
     .case
+        &__title
+            .btn__violet
+                padding: 10px 10px 10px 20px
+                gap: 40px
         &__tag
             font-size: 16px
         h2
             font-size: 70px
-        &__wrapper
-            margin: 0
         &__item
+            top: 230px
             height: 642px
-            top: 206px
             grid-template-columns: 496fr 744fr
         &__video
             &_bar
@@ -1589,6 +1678,9 @@ h2
         &__item
             min-width: 288px
     .about
+        &__img
+            img
+                height: 542px
         &__tag
             font-size: 16px
         &__num
@@ -1616,17 +1708,15 @@ h2
                     img
                         width: 15px
                 &::before
-                    width: 266px
-                    height: 266px
-                    right: -15px
-                    left: auto
-                    top: 56px
+                    width: 250px
+                    height: 144px
     .achiev
         &__tag
             font-size: 16px
         &__tab
             &_item
                 font-size: 16px
+                padding: 10px 20px
         &__item
             grid-template-columns: 400px 1fr auto
             p
@@ -1664,6 +1754,8 @@ h2
     .form
         &__row
             grid-template-columns: 195px 1fr
+            .btn__blc
+                padding: 10px 10px 10px 20px
     .footer
         h2
             font-size: 45px
@@ -1755,6 +1847,7 @@ h2
             bottom: 58px
             top: auto
             pointer-events: none
+            right: calc( 50% - 440px )
     .service
         padding: 20px 0
         &__block
@@ -1785,6 +1878,9 @@ h2
             min-height: auto
             &_header
                 padding: 30px
+                &::before
+                    left: 30px
+                    right: 30px
             &_body
                 div
                     padding: 0 0 30px 30px
@@ -1813,6 +1909,7 @@ h2
         &__item
             grid-template-columns: 1fr 1fr
             gap: 20px
+            max-height: none
         &__video
             &_bar
                 padding: 30px
@@ -1869,6 +1966,9 @@ h2
             min-width: 230px
     .about
         padding: 20px 0 0
+        &__img
+            img
+                height: 379px
         &__block
             padding: 40px
         &__tag
@@ -2026,10 +2126,45 @@ h2
             h4
                 font-size: 18px
             &_list
+                svg
+                    display: block
+                    width: 100%
+                    transform: rotate(90deg)
+                    transition: all .3s
+                    path
+                        transition: all .3s
                 ul
                     gap: 10px
                 a
                     font-size: 16px
+                    &:hover
+                        &+svg
+                            path
+                                fill: #9373ea
+                .menu
+                    opacity: 1
+                    pointer-events: auto
+                    top: auto
+                    left: auto !important
+                    right: auto !important
+                    position: relative
+                    grid-column: 1/3
+                    order: 2
+                    padding: 20px
+                    gap: 10px
+                    display: none
+                    &::before
+                        content: none !important
+                    &__call
+                        display: grid
+                        grid-template-columns: 1fr 12px
+                        gap: 10px
+                        align-items: center
+                        &.active
+                            svg
+                                transform: rotate(-90deg)
+                            .menu
+                                display: grid
             &_btn
                 grid-column: auto
                 grid-row: auto
@@ -2051,8 +2186,43 @@ h2
             width: auto
             right: -70px
             left: -70px
+            z-index: -1
+            bottom: 100px
         &__video
             display: none
+        &__text
+            position: relative
+            top: auto
+            left: auto
+            bottom: auto
+            margin: 20px 0 0
+        &__mob
+            display: flex
+            right: 20px
+            bottom: 20px
+            left: 20px
+            position: absolute
+            border: 1px solid $gray
+            border-radius: 40px
+            padding: 15px 15px 15px 20px
+            align-items: center
+            justify-content: space-between
+            z-index: 10
+            p
+                font-family: $font-family
+                font-weight: 700
+                font-size: 12px
+                line-height: 1.25
+                text-transform: uppercase
+                color: $white
+            &_play
+                width: 40px
+                height: 40px
+                border-radius: 100%
+                background: $white
+                display: flex
+                justify-content: center
+                align-items: center
     h2
         font-size: 34px
     .service
@@ -2068,12 +2238,43 @@ h2
                 padding: 20px
                 justify-items: start
                 a
-                    display: max-content
+                    display: none
+                &::before
+                    left: 20px
+                    right: 20px
             &_body
                 grid-template-columns: 100%
                 gap: 0
                 div
                     padding: 30px 20px 0
+                a
+                    text-align: center
+                    margin: 20px 0 0
+                    display: block
+                    border-radius: 40px
+                    background: $white
+                    padding: 14px 30px
+                    font-family: $font-family
+                    font-weight: 700
+                    font-size: 12px
+                    line-height: 1.25
+                    text-transform: uppercase
+                    color: $black
+                    transition: all .3s
+                    width: 100%
+                    &:hover
+                        background: $lighter-purple
+                        color: $white
+                img
+                    max-width: 300px
+                    transform: scaleX(-1)
+                p
+                    margin: 10px 0 0
+        &__scroll
+            .btn__blc
+                padding: 15px 15px 15px 20px
+                width: 100%
+                max-width: 100%
     .case
         &__block
             padding: 30px 20px
@@ -2082,8 +2283,28 @@ h2
         &__item
             grid-template-columns: 100%
             gap: 20px
+            display: none
+            &:nth-child(1)
+                display: grid
         &__info
-            order: 2
+            border-radius: 30px
+            order: -1
+            h3
+                font-size: 26px
+                padding: 20px
+        &__wrapper
+            gap: 20px
+            .btn__violet
+                display: flex
+                padding: 15px 15px 15px 20px
+                width: 100%
+                max-width: 100%
+        &__video
+            border-radius: 30px
+            &_bar
+                padding: 20px
+                p
+                    font-size: 18px
     .with
         &__block
             padding: 30px 20px
@@ -2092,10 +2313,16 @@ h2
         &__scroll
             gap: 10px
     .about
+        &__img
+            img
+                height: 263px
+        h2
+            margin: 10px 0 0
         &__block
             padding: 30px 20px
         h3
             font-size: 26px
+            margin: 8px 0 0
         &__row
             grid-template-columns: 100%
             gap: 10px
@@ -2118,7 +2345,11 @@ h2
                     max-width: 110px
                 &::before
                     width: 250px
-                    height: 250px
+                    height: 158px
+        &__slider
+            margin: 20px 0 0
+        .swiper-slide
+            gap: 20px
     .achiev
         padding: 20px 0 0
         &__block
@@ -2127,6 +2358,9 @@ h2
             grid-template-columns: 1fr 1fr 1fr
             gap: 10px
             display: grid
+            &_item
+                padding: 5px
+                text-align: center
         &__item
             grid-template-columns: 100%
             gap: 10px
@@ -2160,6 +2394,9 @@ h2
             display: grid
             grid-template-columns: 100%
             gap: 10px
+            margin: 10px 0 0
+            .btn__blc
+                padding: 15px 15px 15px 20px
         &__wrapper
             gap: 10px
     .footer
@@ -2167,6 +2404,8 @@ h2
             top: 30px
             left: 20px
             right: auto
+            width: 50px
+            height: 50px
         &__block
             padding: 100px 20px 30px
             gap: 20px
@@ -2182,3 +2421,109 @@ h2
         &__info
             gap: 20px
             grid-template-columns: 100%
+
+.modal
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    z-index: 100
+    opacity: 0
+    pointer-events: none
+    overflow-y: scroll
+    padding: 30px 20px
+    &.active
+        opacity: 1
+        pointer-events: auto
+    &__overflow
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: #1B1B1B
+        opacity: .5
+        z-index: -1
+    &__container
+        margin: auto
+        max-width: 695px
+        border-radius: 40px
+        background: $white
+        padding: 60px 40px
+        position: relative
+    h3
+        font-family: $font-family
+        font-weight: 600
+        font-size: 60px
+        line-height: 0.9
+        letter-spacing: -0.06em
+        text-align: center
+        color: $black
+        span
+            color: $purple
+    &__wrapper
+        margin: 40px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 20px
+        input
+            padding: 20px
+            border: 1px solid $gray
+            border-radius: 40px
+            font-family: $font-family
+            font-weight: 500
+            font-size: 20px
+            line-height: 1.4
+            letter-spacing: -0.03em
+            color: $black
+            &::placeholder
+                color: #1b1b1baf
+    .btn__blc
+        margin: 40px 0 0
+        width: 100%
+    &__text
+        margin: 20px auto 0
+        max-width: 380px
+        font-family: $font-family
+        font-weight: 500
+        font-size: 16px
+        line-height: 1.25
+        text-align: center
+        color: $gray
+        a
+            color: $purple
+            text-decoration: underline
+    &__close
+        position: absolute
+        top: 30px
+        right: 20px
+        width: 24px
+        cursor: pointer
+        img
+            width: 100%
+
+@media ( max-width: 768px )
+    .modal
+        &__container
+            max-width: 630px
+        h3
+            font-size: 54px
+        &__wrapper
+            input
+                font-size: 16px
+            
+@media ( max-width: 600px )
+    .modal
+        h3
+            font-size: 36px
+        &__wrapper
+            margin: 20px 0 0
+            gap: 10px
+        .btn__blc
+            margin: 20px 0 0
+        &__container
+            padding: 40px 20px
