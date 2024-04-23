@@ -268,6 +268,8 @@ if(modal !== null) {
         item.addEventListener('click', (e)=>{
             e.preventDefault()
             modal.classList.add('active');
+            nav.classList.remove('active');
+            navBurger.classList.remove('active');
         })
     })
     modalClose.addEventListener('click', ()=>{
