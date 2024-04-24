@@ -15,6 +15,9 @@ body
     color: $black
     background: $light-gray
     scroll-behavior: smooth
+    position: relative
+    &.fix
+        overflow: hidden
 h1
     font-weight: 600
     font-size: 120px
@@ -140,6 +143,13 @@ h2
             opacity: 0
             pointer-events: none
             transition: all .3s
+.element-animation
+    opacity: 0
+    transition: all 1s
+    transform: translateY(100%)
+.element-show
+    opacity: 1
+    transform: translateY(0)
 
 .nav
     padding: 20px 0
@@ -258,6 +268,7 @@ h2
         gap: 40px
         align-items: start
         z-index: 10
+        overflow-y: scroll
         &_btn
             display: none
         h3
@@ -285,9 +296,10 @@ h2
             .nav__info
                 display: none
             .btn__blc
-                gap: 20px
+                gap: 0px
                 grid-column: 2/3
                 order: 5
+                padding: 20px 20px 20px 30px
         &_list
             position: relative
             ul
@@ -352,6 +364,8 @@ h2
                         position: absolute
     &__info
         margin: auto 0 0
+        .nav__soc
+            display: none
     &__contact
         display: grid
         grid-template-columns: 100%
@@ -371,7 +385,7 @@ h2
         display: grid
         grid-template-columns: 60px 60px 60px
         gap: 10px
-        margin: 40px 0 0
+        align-items: end
         a
             display: flex
             justify-content: center
@@ -826,6 +840,7 @@ h2
         background: $black
         padding: 40px 0 0
         bottom: 852px
+        max-width: 1760px
         &.fix
             position: fixed
             width: calc( 100% - 160px )
@@ -1445,6 +1460,8 @@ h2
 .footer
     padding: 40px 0
     color: #fff
+    position: relative
+    overflow: hidden
     &__block
         border-radius: 40px
         background: $black
@@ -1659,9 +1676,10 @@ h2
                 &:nth-child(2)
                     .menu
                         right: calc( 100% + 20px )
-                    
             &_block
                 gap: 20px
+                .btn__blc
+                    padding: 10px 10px 10px 20px
         &__contact
             a,
             p
@@ -1876,30 +1894,6 @@ h2
     .about
         &__row
             grid-template-columns: 1fr 1fr
-    .service
-        &__wrapper
-            margin: 30px 0 0
-        &__scroll
-            display: grid
-            grid-template-columns: 100%
-            gap: 20px
-            width: auto
-            .btn__blc
-                display: flex
-                max-width: 270px
-                margin: 0 auto
-        &__item
-            width: 100%
-            height: auto
-            min-height: auto
-            &_header
-                padding: 30px
-                &::before
-                    left: 30px
-                    right: 30px
-            &_body
-                div
-                    padding: 0 0 30px 30px
 
 @media ( max-width: 1200px )
     .container
@@ -1925,6 +1919,8 @@ h2
                 grid-row: 2/3
                 grid-template-rows: auto
                 button
+                    display: none
+                .nav__soc
                     display: none
             &_btn
                 display: grid
@@ -2502,8 +2498,27 @@ h2
         &__wrapper
             grid-template-columns: 100%
             gap: 20px
+            &_item
+                border-radius: 30px
+            &_info
+                padding: 20px
+            &_name
+                font-size: 26px
+            &_text
+                margin: 15px 0 0
         &__link
             grid-column: auto
+            padding: 20px 
+            border-radius: 30px
+            height: 180px
+            p
+                font-size: 18px
+            &::before
+                width: 195px
+                height: 100px
+                bottom: 0
+                right: 0
+                top: auto
         &__row
             grid-template-columns: 100%
             &_link
@@ -2623,6 +2638,7 @@ h2
     .btn__blc
         margin: 40px 0 0
         width: 100%
+        padding: 20px 20px 20px 30px
     &__text
         margin: 20px auto 0
         max-width: 380px
@@ -2666,5 +2682,6 @@ h2
             gap: 10px
         .btn__blc
             margin: 20px 0 0
+            padding: 15px 15px 15px 20px
         &__container
             padding: 40px 20px

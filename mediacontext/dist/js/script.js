@@ -1,5 +1,6 @@
 const lenis = new Lenis({
 	duration: 3,
+    wrapper: document.body,
 })
 
 function raf(time) {
@@ -16,8 +17,14 @@ let nav = document.querySelector('.nav'),
     
 if(nav !== null) {
     navBurger.addEventListener('click', ()=>{
-        nav.classList.toggle('active');
-        navBurger.classList.toggle('active');
+        if(nav.classList.contains('active')) {
+            nav.classList.remove('active');
+            navBurger.classList.remove('active');
+        } else {
+            nav.classList.add('active');
+            navBurger.classList.add('active');
+        }
+
     })
 }
 
@@ -109,8 +116,8 @@ let service = document.querySelector('.service'),
     serviceBlock = document.querySelector('.service__block'),
     serviceSlider = document.querySelector('.service__scroll');
 
-if(service !== null && window.innerWidth > 1400) {
-    service.style.height = serviceSlider.getBoundingClientRect().width - serviceWrapper.getBoundingClientRect().width/3 + 'px'
+if(service !== null && window.innerWidth > 1200) {
+    service.style.height = serviceSlider.getBoundingClientRect().width - (serviceWrapper.getBoundingClientRect().width - serviceBlock.getBoundingClientRect().height - 70) + 'px'
 
     window.addEventListener('scroll', ()=>{
         if (service.getBoundingClientRect().top < 0 && serviceBlock.getBoundingClientRect().top > 20) {
@@ -173,6 +180,7 @@ if(aboutRow !== null) {
 var swiper = new Swiper(".about__slider", {
     spaceBetween: 40,
     speed: 700,
+    loop: true,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -425,4 +433,18 @@ function formModalRemError(Modalinput){
 }
 function formModalEmail(Modalinput) {
     return !/^\w+([\.-]?\w+)*@\w+([\--]?\w+)*(\.\w{2,8})+$/.test(Modalinput.value);
+}
+
+function onEntry(entry) {
+    entry.forEach(change => {
+        if (change.isIntersecting) {
+            change.target.classList.add('element-show');
+        }
+    });
+  }
+let options = { threshold: [0.2] };
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.element-animation');
+for (let elm of elements) {
+    observer.observe(elm);
 }
