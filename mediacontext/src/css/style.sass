@@ -425,8 +425,8 @@ h2
     &__info
         padding: 60px 40px
         max-width: 55%
-        // backdrop-filter: blur(45px)
-        // background: rgba(255, 255, 255, 0.01)
+        backdrop-filter: blur(10px)
+        background: rgba(255, 255, 255, 0.01)
     &__logo
         position: absolute
         top: 15px
@@ -1928,6 +1928,8 @@ h2
                 gap: 10px
                 grid-column: 2/3
                 grid-row: 1/3
+                .btn__violet
+                    display: none
         &__info
             grid-column: 1/3
             display: grid
@@ -2223,6 +2225,13 @@ h2
             padding: 30px 20px
             grid-template-columns: 100%
             gap: 30px
+            &_btn
+                .btn__violet
+                    display: flex
+                button
+                    gap: 0
+                    span
+                        font-size: 12px
             h3
                 font-size: 26px
                 grid-column: auto
