@@ -1,16 +1,21 @@
-const lenis = new Lenis({
-	duration: 3,
-    wrapper: document.body,
-})
+// const lenis = new Lenis({
+// 	duration: 3,
+//     wrapper: document.body,
+// })
 
-function raf(time) {
-	lenis.raf(time)
-	requestAnimationFrame(raf)
-}
+// function raf(time) {
+// 	lenis.raf(time)
+// 	requestAnimationFrame(raf)
+// }
 
-requestAnimationFrame(raf)
+// requestAnimationFrame(raf)
 
-
+// (function () {
+//     const scroll = new LocomotiveScroll({
+//         el: document.querySelector('[data-scroll-container]'),
+//         smooth: true
+//     });    
+// })();
 
 let nav = document.querySelector('.nav'),
     navBurger = document.querySelector('.nav__burger');
@@ -20,11 +25,12 @@ if(nav !== null) {
         if(nav.classList.contains('active')) {
             nav.classList.remove('active');
             navBurger.classList.remove('active');
+            document.body.classList.remove('fix')
         } else {
             nav.classList.add('active');
             navBurger.classList.add('active');
+            document.body.classList.add('fix')
         }
-
     })
 }
 
@@ -278,13 +284,16 @@ if(modal !== null) {
             modal.classList.add('active');
             nav.classList.remove('active');
             navBurger.classList.remove('active');
+            document.body.classList.add('fix')
         })
     })
     modalClose.addEventListener('click', ()=>{
         modal.classList.remove('active');
+        document.body.classList.remove('fix')
     })
     modalOverflow.addEventListener('click', ()=>{
         modal.classList.remove('active');
+        document.body.classList.remove('fix')
     })
 }
 
@@ -305,14 +314,18 @@ let caseItem = document.querySelectorAll('.case__item'),
     caseWrapper = document.querySelector('.case__sticy_wrapper'),
     caseHeader = document.querySelector('.case__sticy');
 
-if(caseHeader !== null && window.innerWidth > 1200) {
+if(caseHeader !== null && window.innerWidth > 750) {
     caseWrapper.style.height = caseHeader.getBoundingClientRect().height + 'px'
     window.addEventListener('scroll',()=>{
         let i = caseItem.length - 1;
         if(caseItem[i].getBoundingClientRect().top <= caseWrapper.getBoundingClientRect().height) {
             caseHeader.classList.add('sticy')
             caseHeader.classList.remove('fix')
-            caseHeader.style.bottom = caseItem[i].getBoundingClientRect().height + 60 + "px"
+            if (window.innerWidth > 1200) {
+                caseHeader.style.bottom = caseItem[i].getBoundingClientRect().height + 60 + "px"
+            } else if (window.innerWidth <= 1200) {
+                caseHeader.style.bottom = caseItem[i].getBoundingClientRect().height + 130 + "px"
+            }
         } else if(caseItem[i].getBoundingClientRect().top > caseHeader.getBoundingClientRect().height && caseWrapper.getBoundingClientRect().top <= 0) {
             caseHeader.classList.add('fix')
             caseHeader.classList.remove('sticy')

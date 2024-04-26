@@ -18,6 +18,14 @@ body
     position: relative
     &.fix
         overflow: hidden
+    &::-webkit-scrollbar
+        background: #00000000
+        width: 6px
+        &-thumb
+            width: 6px
+            background: #9373EA
+            border-radius: 8px 8px 8px 8px
+            box-sizing: border-box
 h1
     font-weight: 600
     font-size: 120px
@@ -39,7 +47,7 @@ h2
         align-items: center
         width: auto
         border: none
-        padding: 10px 20px
+        padding: 10px 10px 10px 20px
         border-radius: 40px
         background: $black
         gap: 40px
@@ -74,7 +82,7 @@ h2
         align-items: center
         width: auto
         border: none
-        padding: 10px 20px
+        padding: 10px 10px 10px 20px
         border-radius: 40px
         background: $purple
         gap: 40px
@@ -252,7 +260,7 @@ h2
                 top: auto
                 bottom: 50%
     &__menu
-        min-height: calc( 100vh - 100px )
+        height: calc( 100vh - 100px )
         opacity: 0
         pointer-events: none
         position: absolute
@@ -1952,8 +1960,8 @@ h2
             left: 40px
         &__logo
             width: 880px
-            bottom: 58px
-            top: auto
+            bottom: auto
+            top: 150px
             pointer-events: none
             right: calc( 50% - 440px )
     .service
@@ -1992,13 +2000,15 @@ h2
             &_body
                 div
                     padding: 0 0 30px 30px
+                h3
+                    font-size: 36px
     h2
         font-size: 54px
     .case
         &__block
-            padding: 40px 
+            padding: 20px 40px 130px 
         &__title
-            padding: 0
+            padding: 0 0 30px
             .btn__violet
                 display: none
         &__tag
@@ -2007,18 +2017,26 @@ h2
         h2
             font-size: 54px
         &__sticy
-            padding: 0
+            padding: 20px 0 0
             position: relative
+            &.fix
+                width: calc( 100% - 120px )
         &__wrapper
-            margin: 30px 0 0
-        &__item
-            position: relative
-            top: auto
-            height: auto
+            margin: 0 0 0
+            grid-template-rows: 1fr 1fr 1fr
+            .btn__violet
+                display: flex
+                position: absolute
+                bottom: -90px
+                left: 50%
+                transform: translateX(-50%)
+                max-width: 270px
+                width: 100%
         &__item
             grid-template-columns: 1fr 1fr
             gap: 20px
-            max-height: none
+            height: auto
+            top: 158px
         &__video
             &_bar
                 padding: 30px
@@ -2075,6 +2093,8 @@ h2
             min-width: 230px
     .about
         padding: 20px 0 0
+        &__run
+            right: -25%
         &__img
             img
                 height: 379px
@@ -2166,6 +2186,8 @@ h2
             &::before
                 bottom: auto
                 top: 0
+                height: 330px
+                background: url('../img/blog_link_mob.png') center bottom no-repeat 
         &__row
             margin: 20px 0 0
             gap: 20px
@@ -2179,8 +2201,22 @@ h2
         &__block
             grid-template-columns: 100%
             gap: 30px
+            &::before
+                background: url('../img/form_bg_mob.png') top right no-repeat  
+                background-size: contain
+                width: 400px
+                height: 446px
+                top: 0
+                right: 0
+                left: auto
+                bottom: auto
+                background-position: right
+        h2
+            max-width: 100%
     .footer
         padding: 20px 0
+        &__menu
+            column-gap: 5px
         &__block
             grid-template-columns: 100%
             position: relative
@@ -2201,9 +2237,10 @@ h2
                 font-size: 24px
         &__col
             display: grid
-            grid-template-columns: auto 1fr
+            grid-template-columns: 1fr 1fr
             gap: 30px
             align-items: start
+            column-gap: 5px
         &__soc
             margin: 0
             p
@@ -2213,8 +2250,10 @@ h2
             gap: 20px
             a
                 font-size: 24px
+                letter-spacing: -0.06em
         &__info
             margin: 30px 0 0
+            column-gap: 5px
 
 @media ( max-width: 750px )
     .nav
@@ -2305,6 +2344,8 @@ h2
             left: -70px
             z-index: -1
             bottom: 100px
+            top: auto
+            bottom: 80px
         &__video
             display: none
         &__text
@@ -2404,6 +2445,10 @@ h2
             grid-template-columns: 100%
             gap: 20px
             display: none
+            position: relative
+            top: auto
+            height: auto
+            max-height: none
             &:nth-child(1)
                 display: grid
         &__info
@@ -2419,11 +2464,16 @@ h2
                 right: 20px
         &__wrapper
             gap: 20px
+            grid-template-rows: auto
             .btn__violet
                 display: flex
                 padding: 15px 15px 15px 20px
                 width: 100%
                 max-width: 100%
+                position: relative
+                bottom: auto
+                left: auto
+                transform: none
         &__video
             border-radius: 30px
             &_bar
@@ -2439,8 +2489,10 @@ h2
             gap: 10px
     .about
         &__run
-            right: -33%
             padding: 10px 0
+            width: 200%
+            right: -90%
+            top: 10%
             &_scroll
                 p
                     font-size: 14px
@@ -2523,11 +2575,12 @@ h2
             p
                 font-size: 18px
             &::before
-                width: 195px
-                height: 100px
-                bottom: 0
-                right: 0
+                width: 201px
+                height: 178px
+                bottom: -80px
+                right: -7px
                 top: auto
+                background-size: contain
         &__row
             grid-template-columns: 100%
             &_link
@@ -2558,6 +2611,7 @@ h2
                 right: 0
                 left: auto
                 bottom: auto
+                background-position: right
         &__row
             display: grid
             grid-template-columns: 100%
