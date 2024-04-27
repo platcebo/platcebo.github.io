@@ -13,7 +13,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
     <link rel="stylesheet" href="css/reset.min.css">
-    <!-- <link rel="stylesheet" href="css/locomotive-scroll.min.css"> -->
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="body" data-scroll-container>
@@ -32,7 +31,7 @@
                     <li><a href="#">Вакансии</a></li>
                     <li><a href="#">Контакты</a></li>
                 </ul>
-                <button class="btn__blc modal__call">
+                <button class="btn__blc modal-form__call">
                     <span>обсудить проект</span>
                     <i><img src="img/arrow_wht.svg" alt=""></i>
                 </button>
@@ -58,11 +57,11 @@
                         </a>
                     </div>
                     <div class="nav__menu_btn">
-                        <button class="btn__blc modal__call">
+                        <button class="btn__blc modal-mail__call">
                             <span>подписаться на рассылку</span>
                             <i><img src="img/arrow_wht.svg" alt=""></i>
                         </button>
-                        <button class="btn__violet modal__call">
+                        <button class="btn__violet modal-form__call">
                             <span>обсудить проект</span>
                             <i><img src="img/arrow_wht.svg" alt=""></i>
                         </button>
@@ -134,7 +133,7 @@
                             <img src="img/inst.svg" alt="">
                         </a>
                     </div>
-                    <button class="btn__blc modal__call">
+                    <button class="btn__blc modal-mail__call">
                         <span>подписаться на рассылку</span>
                         <i><img src="img/arrow_wht.svg" alt=""></i>
                     </button>
@@ -671,26 +670,26 @@
                     </div>
                     <div class="footer__soc">
                         <a href="#">
-                            <span>
+                            <i>
                                 <img src="img/tg.svg" alt="">
-                            </span>
-                            <p>@planerochnaya</p>
+                            </i>
+                            <span>@planerochnaya</span>
                         </a>
                         <a href="#">
-                            <span>
+                            <i>
                                 <img src="img/vk.svg" alt="">
-                            </span>
-                            <p>vk.com/mediacontext</p>
+                            </i>
+                            <span>vk.com/mediacontext</span>
                         </a>
-                        <a href="#">
-                            <span>
+                        <p href="#">
+                            <i>
                                 <img src="img/map.svg" alt="">
-                            </span>
-                            <p>Санкт-Петербург, Софийская <br> ул. 6к8 «БЦ Полис центр»</p>
-                        </a>
+                            </i>
+                            <span>Санкт-Петербург, Софийская <br> ул. 6к8 «БЦ Полис центр»</span>
+                        </p>
                     </div>
                     <div class="footer__link">
-                        <a href="#" class="modal__call">
+                        <a href="#" class="modal-form__call">
                             <span>Обсудить проект</span>
                             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11.2781 20.6898L20.3363 11.2439C20.7073 10.857 20.7073 10.2465 20.3363 9.8596L11.2781 0.413666C11.1903 0.294052 11.0788 0.195405 10.951 0.124403C10.8233 0.0534014 10.6823 0.0117028 10.5377 0.00212971C10.393 -0.00744337 10.2481 0.0153332 10.1127 0.0689169C9.9773 0.1225 9.85457 0.20564 9.75283 0.312708C9.65109 0.419776 9.57271 0.548272 9.52299 0.689497C9.47328 0.830722 9.4534 0.981379 9.46469 1.13127C9.47599 1.28116 9.51819 1.42678 9.58845 1.55828C9.65871 1.68978 9.75538 1.80408 9.87193 1.89345L17.1456 9.50225L1.01164 9.028C0.74334 9.028 0.486025 9.13857 0.296307 9.33539C0.106586 9.53221 0 9.79915 0 10.0775C0 10.3558 0.106586 10.6228 0.296307 10.8196C0.486025 11.0164 0.74334 11.127 1.01164 11.127L17.1456 11.6012L9.87193 19.21C9.68277 19.4077 9.57704 19.6751 9.57799 19.9536C9.57894 20.2321 9.68649 20.4988 9.87698 20.6951C10.0675 20.8913 10.3253 21.001 10.5938 21C10.8622 20.999 11.1193 20.8874 11.3085 20.6898H11.2781Z" fill="white"/>
@@ -769,10 +768,10 @@
         </div>
     </footer>
 
-    <div class="modal">
-        <div class="modal__overflow"></div>
+    <div class="modal modal-form">
+        <div class="modal__overflow modal-form__overflow"></div>
         <form action="" class="modal__container">
-            <div class="modal__close">
+            <div class="modal__close modal-form__close">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 6L6 18" stroke="#BFBFC1" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M6 6L18 18" stroke="#BFBFC1" stroke-linecap="round" stroke-linejoin="round"/>
@@ -800,9 +799,35 @@
             <p class="modal__text">Нажимая кнопку «Отправить», вы соглашаетесь с <a href="#">политикой обработки персональных данных</a></p>
         </form>
     </div>
+    <div class="modal modal-mail">
+        <div class="modal__overflow modal-mail__overflow"></div>
+        <form action="" class="modal__container">
+            <div class="modal__close modal-mail__close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="#BFBFC1" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="#BFBFC1" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h3><span>Подписаться</span> <br> на рассылку</h3>
+            <div class="modal__wrapper">
+                <div class="input__wrapper">
+                    <input type="text" placeholder="Ваше имя*" class="input _req">
+                    <p>Заполните поле</p>
+                </div>
+                <div class="input__wrapper">
+                    <input type="text" placeholder="E-mail" class="input _req _email">
+                    <p>Заполните поле</p>
+                </div>
+            </div>
+            <button class="btn__blc">
+                <span>Отправить заявку</span>
+                <i><img src="img/arrow_wht.svg" alt=""></i>
+            </button>
+            <p class="modal__text">Нажимая кнопку «Отправить», вы соглашаетесь с <a href="#">политикой обработки персональных данных</a></p>
+        </form>
+    </div>
 
     <!-- <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script> -->
-    <!-- <script src="js/locomotive-scroll.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>

@@ -539,6 +539,7 @@ h2
 .service
     padding: 40px 0
     position: relative
+    // box-sizing: content-box
     .container
         position: sticky
         top: 40px
@@ -546,6 +547,7 @@ h2
         border-radius: 40px
         background: $white
         padding: 60px 40px
+        // box-sizing: content-box
     &__tag
         background: $light-gray
         border-radius: 40px
@@ -587,8 +589,8 @@ h2
             display: none
     &__item
         width: 1095px
-        height: 100%
-        min-height: 479px
+        // height: 100%
+        // min-height: 479px
         background: $light-gray
         border-radius: 40px
         position: relative
@@ -1507,17 +1509,19 @@ h2
         display: grid
         grid-template-columns: 100%
         gap: 10px
-        a
+        a,
+        p
             display: grid
             grid-template-columns: 34px 1fr
             gap: 10px
             align-items: start
+        a
             &:hover
                 img
                     opacity: 1
-                p
+                span
                     opacity: 1
-        span
+        i
             width: 34px
             height: 34px
             border-radius: 100%
@@ -1529,7 +1533,7 @@ h2
             width: 20px
             opacity: .7
             transition: all .3s
-        p
+        span
             font-family: $font-family
             font-weight: 500
             font-size: 20px
@@ -1742,8 +1746,8 @@ h2
             font-size: 70px
             max-width: 844px
         &__item
-            min-height: 390px
-            width: 940px
+            // min-height: 390px
+            // width: 940px
             &_header
                 p
                     font-size: 16px
@@ -2253,7 +2257,7 @@ h2
             column-gap: 5px
         &__soc
             margin: 0
-            p
+            span
                 font-size: 16px
         &__link
             margin: 0 
@@ -2687,6 +2691,7 @@ h2
     &__container
         margin: auto
         max-width: 695px
+        width: 100%
         border-radius: 40px
         background: $white
         padding: 60px 40px
@@ -2758,3 +2763,336 @@ h2
             padding: 15px 15px 15px 20px
         &__container
             padding: 40px 20px
+
+.breadcrumbs
+    display: block 
+    margin: 0 0 20px
+    p,
+    a
+        font-family: $font-family
+        font-weight: 500
+        font-size: 20px
+        line-height: 1.4
+        letter-spacing: -0.03em
+        color: $black
+        opacity: .5
+        display: inline
+    a
+        transition: all .3s
+        margin: 0 3px 0 0
+        &:hover
+            opacity: 1
+.container__thin
+    max-width: 1135px
+
+.policy
+    padding: 40px 0 20px
+    &__content
+        margin: 40px 0 0
+    h1
+        font-size: 90px
+        span
+            color: $purple
+    p
+        margin: 20px 0 0
+        font-family: $font-family
+        font-weight: 500
+        font-size: 20px
+        line-height: 1.4
+        letter-spacing: -0.03em
+        color: #1b1b1bb3
+        b
+            font-weight: 700
+        a
+            color: $purple
+            transition: all .3s
+            opacity: .7
+            text-decoration: underline
+            &:hover
+                opacity: 1
+    h2
+        font-size: 36px
+        line-height: 1
+        margin: 40px 0 0
+    ol
+        margin: 20px 0 0
+        li
+            font-family: $font-family
+            font-weight: 500
+            font-size: 20px
+            line-height: 1.4
+            letter-spacing: -0.03em
+            color: $black
+            opacity: .7
+            display: grid
+            grid-template-columns: 25px 1fr
+            &::before
+                content: ''
+                display: block
+                width: 4px
+                height: 4px
+                border-radius: 100%
+                background: $black
+                opacity: .7
+                margin: 10px auto 0
+    h3
+        margin: 20px 0 0
+        font-family: $font-family
+        font-weight: 700
+        font-size: 20px
+        line-height: 1.4
+        letter-spacing: -0.03em
+        color: $black
+        opacity: .7
+
+@media ( max-width: 1440px )
+    .breadcrumbs
+        a,
+        p
+            font-size: 16px
+    .policy
+        h1
+            font-size: 70px
+        h2
+            font-size: 28px
+        ol
+            li
+                font-size: 16px
+        &__text
+            font-size: 16px
+        h3
+            font-size: 16px
+
+@media ( max-width: 1024px )
+    .policy
+        padding: 20px 0 
+        h1
+            font-size: 54px
+        h2
+            font-size: 24px
+        
+@media ( max-width: 600px )
+    .policy
+        padding: 0
+        h1
+            font-size: 34px
+
+.thanks
+    h1
+        transform: translateY(-50%)
+        &.element-show
+            transform: translate(0)
+    &__block
+        border-radius: 40px
+        background: $black
+        padding: 60px 40px
+        color: $white
+        position: relative
+        overflow: hidden
+        z-index: 1
+    &__info
+        max-width: 705px
+    p
+        margin: 40px 0 0
+        max-width: 360px
+        font-family: $font-family
+        font-weight: 600
+        font-size: 36px
+        line-height: 1
+        letter-spacing: -0.03em
+        color: $white
+    .btn__violet
+        margin: 204px 0 0
+        padding: 20px 20px 20px 30px
+        gap: 0
+    &__logo
+        position: absolute
+        right: 175px
+        bottom: 60px
+        top: 60px
+        max-width: calc( 100% - 995px )
+        z-index: -1
+        img
+            width: 100%
+            object-fit: contain
+            object-position: center
+            height: 1px
+            min-height: 100%
+        &::before
+            content: ''
+            display: block
+            inset: -90px
+            position: absolute
+            border-radius: 100%
+            background: $purple
+            filter: blur(307px)
+            z-index: -1
+            opacity: .5
+
+@media ( max-width: 1600px )
+    .thanks
+        h1
+            font-size: 90px
+        p
+            max-width: 230px
+            font-size: 24px
+        .btn__violet
+            margin: 230px 0 0
+            padding: 10px 10px 10px 20px
+        &__info
+            max-width: 535px
+        &__logo
+            right: 60px
+            max-width: calc( 100% - 665px )
+
+@media ( max-width: 1200px )
+    .thanks
+        h1
+            font-size: 74px
+            max-width: 450px
+        &__info
+            max-width: 100%
+        p
+            margin: 20px 0 0
+            max-width: 100%
+        .btn__violet
+            margin: 40px 0 0
+        &__block
+            padding: 40px 40px 530px
+        &__logo
+            right: auto
+            left: 50px
+            width: 618px
+            top: auto
+            bottom: -112px
+            max-width: 100%
+            img
+                height: auto
+
+@media ( max-width: 600px )
+    .thanks
+        h1
+            font-size: 46px
+        p
+            max-width: 170px
+            font-size: 18px
+            letter-spacing: -0.06em
+        .btn__violet
+            margin: 20px 0 0
+            max-width: 100%
+            width: 100%
+        &__block
+            padding: 20px 20px 200px
+        &__logo
+            left: 20px
+            right: 20px
+            bottom: -73px
+            width: auto
+            max-height: 250px
+            img
+                height: 250px
+
+.error-block
+    &__block
+        position: relative
+        background: $purple
+        border-radius: 40px
+        padding: 80px 20px 
+        z-index: 1
+        overflow: hidden
+    &__logo
+        display: grid
+        width: 100%
+        max-width: 1043px
+        margin: 0 auto
+    p
+        margin: 40px 0 0
+        font-family: $font-family
+        font-weight: 600
+        font-size: 36px
+        line-height: 1
+        letter-spacing: -0.03em
+        text-align: center
+        color: $white
+    .btn__blc
+        padding: 20px 20px 20px 30px
+        margin: 40px auto 0
+        display: flex
+        width: 100%
+        gap: 0
+        max-width: 350px
+    &__left
+        position: absolute
+        top: 0
+        width: 1010px
+        left: -566px
+        z-index: -1
+        img
+            width: 100%
+            display: block        
+    &__right
+        position: absolute
+        top: 60px
+        width: 367px
+        right: -87px
+        z-index: -1
+        img
+            width: 100%
+            display: block        
+
+@media ( max-width: 1440px )
+    .error-block
+        &__left
+            width: 674px
+            left: -400px
+            top: 123px
+        &__right
+            width: 367px
+            top: 40px
+            right: -170px
+        &__logo
+            max-width: 880px
+        p
+            font-size: 24px
+        .btn__blc
+            padding: 10px 10px 10px 20px
+            max-width: 286px
+
+@media ( max-width: 1024px )
+    .error-block
+        &__block
+            padding: 277px 20px
+        &__logo
+            max-width: 467px
+        &__left
+            width: 582px
+            top: -200px
+            left: -196px
+        &__right
+            width: 472px
+            bottom: -174px
+            top: auto
+            right: -33px
+
+@media ( max-width: 600px )
+    .error-block
+        &__block
+            padding: 40px 20px 150px
+        &__logo
+            p
+                font-size: 18px
+                margin: 20px 0 0
+        .btn__blc
+            margin: 40px 0 0
+            max-width: 100%
+        &__left
+            width: 403px
+            top: auto
+            bottom: -153px
+            left: -100px
+        &__right
+            width: 200px
+            bottom: auto
+            top: -114px
+            right: -70px
+            
