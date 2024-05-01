@@ -16,16 +16,23 @@ body
     background: $light-gray
     scroll-behavior: smooth
     position: relative
+    scrollbar-width: thin
+    scrollbar-color: #9373EA #00000000
+    // width: 100vw
     &.fix
         overflow: hidden
-    &::-webkit-scrollbar
+    &::-webkit-scrollbar 
         background: #00000000
         width: 6px
-        &-thumb
-            width: 6px
-            background: #9373EA
-            border-radius: 8px 8px 8px 8px
-            box-sizing: border-box
+        -webkit-appearance: none
+    &::-webkit-scrollbar-track 
+        background: #00000000
+    &::-webkit-scrollbar-thumb 
+        width: 6px
+        background: #9373EA
+        border-radius: 8px 8px 8px 8px
+        box-sizing: border-box
+
 h1
     font-weight: 600
     font-size: 120px
@@ -260,23 +267,29 @@ h2
                 top: auto
                 bottom: 50%
     &__menu
-        height: calc( 100vh - 100px )
-        opacity: 0
-        pointer-events: none
-        position: absolute
-        transform: translateY(-100%)
-        transition: all .3s
-        top: calc( 100% + 20px )
         border-radius: 40px
         background: $white
-        width: 100%
         padding: 60px 40px
         display: grid
         grid-template-columns: 1fr 1fr 
         gap: 40px
         align-items: start
-        z-index: 10
-        overflow-y: scroll
+        height: max-content
+        min-height: 100%
+        &_wrapper
+            z-index: 10
+            width: 100%
+            height: calc( 100vh - 100px )
+            opacity: 0
+            pointer-events: none
+            position: absolute
+            transform: translateY(-100%)
+            transition: all .3s
+            top: calc( 100% + 20px )
+            transform: translateY(-100%) 
+            position: absolute
+            top: calc( 100% + 20px )
+            overflow: scroll
         &_btn
             display: none
         h3
@@ -415,7 +428,7 @@ h2
         position: relative
     &.active
         .nav
-            &__menu
+            &__menu_wrapper
                 opacity: 1
                 pointer-events: auto
                 transform: translateY(0)
@@ -2858,7 +2871,7 @@ h2
         ol
             li
                 font-size: 16px
-        &__text
+        p
             font-size: 16px
         h3
             font-size: 16px
@@ -2890,8 +2903,13 @@ h2
         position: relative
         overflow: hidden
         z-index: 1
+        height: 840px
     &__info
         max-width: 705px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        height: 100%
     p
         margin: 40px 0 0
         max-width: 360px
@@ -2902,9 +2920,11 @@ h2
         letter-spacing: -0.03em
         color: $white
     .btn__violet
-        margin: 204px 0 0
+        margin: auto 0 0
         padding: 20px 20px 20px 30px
         gap: 0
+        width: 100%
+        max-width: 350px
     &__logo
         position: absolute
         right: 175px
@@ -2931,6 +2951,8 @@ h2
 
 @media ( max-width: 1600px )
     .thanks
+        &__block
+            height: 740px
         h1
             font-size: 90px
         p
@@ -2939,6 +2961,7 @@ h2
         .btn__violet
             margin: 230px 0 0
             padding: 10px 10px 10px 20px
+            max-width: 286px
         &__info
             max-width: 535px
         &__logo
@@ -2959,6 +2982,7 @@ h2
             margin: 40px 0 0
         &__block
             padding: 40px 40px 530px
+            height: auto
         &__logo
             right: auto
             left: 50px
@@ -2997,9 +3021,14 @@ h2
         position: relative
         background: $purple
         border-radius: 40px
-        padding: 80px 20px 
+        padding: 40px 20px 
         z-index: 1
         overflow: hidden
+        height: 840px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
     &__logo
         display: grid
         width: 100%
@@ -3042,6 +3071,8 @@ h2
 
 @media ( max-width: 1440px )
     .error-block
+        &__block
+            height: 740px
         &__left
             width: 674px
             left: -400px
@@ -3062,6 +3093,7 @@ h2
     .error-block
         &__block
             padding: 277px 20px
+            height: auto
         &__logo
             max-width: 467px
         &__left
@@ -3095,4 +3127,3 @@ h2
             bottom: auto
             top: -114px
             right: -70px
-            
