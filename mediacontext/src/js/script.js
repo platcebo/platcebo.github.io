@@ -327,7 +327,7 @@ document.addEventListener('DOMContentLoaded', function() {
         menu = document.querySelectorAll('.menu');
 
     if(menu !== null) {
-        menuLink.forEach((item, i)=>{
+        menuCall.forEach((item, i)=>{
             item.addEventListener('click', (e)=>{
                 e.preventDefault()
                 menuCall[i].classList.toggle('active')
