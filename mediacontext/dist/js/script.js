@@ -454,6 +454,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
+        if (document.querySelector('.modal-form .modal__container ._email').value === '') {
+            document.querySelector('.modal-form .modal__container ._email').classList.remove('error')
+            document.querySelector('.modal-form .modal__container ._email').parentElement.classList.remove('error__email')
+        } else if(formModalEmail(document.querySelector('.modal-form .modal__container ._email'))) {
+            formModalAddErrorEmail(document.querySelector('.modal-form .modal__container ._email'));
+            error++;
+        } else {
+            document.querySelector('.modal-form .modal__container ._email').classList.remove('error')
+            document.querySelector('.modal-form .modal__container ._email').parentElement.classList.remove('error__email')
+        }
+
         return error
     }
 
