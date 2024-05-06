@@ -10,7 +10,8 @@ $lighter-purple: #b197f9
 $error: #de5d5d
 $font-family: "Manrope", sans-serif
 
-body
+body,
+html
     font-family: $font-family
     color: $black
     background: $light-gray
@@ -18,13 +19,12 @@ body
     position: relative
     scrollbar-width: thin
     scrollbar-color: #9373EA #00000000
-    // width: 100vw
     &.fix
         overflow: hidden
     &::-webkit-scrollbar 
         background: #00000000
         width: 6px
-        -webkit-appearance: none
+        // -webkit-appearance: none
     &::-webkit-scrollbar-track 
         background: #00000000
     &::-webkit-scrollbar-thumb 
@@ -158,6 +158,13 @@ h2
             opacity: 0
             pointer-events: none
             transition: all .3s
+            &.text__email
+                opacity: 0
+        &.error__email
+            p
+                opacity: 0
+                &.text__email
+                    opacity: 1
 .element-animation
     opacity: 0
     transition: all 1s

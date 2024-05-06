@@ -412,7 +412,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     function formRemError(input){
         input.classList.remove('error')
-        input.parentElement.classList.remove('error')
+        input.parentElement.classList.remove('error__email')
     }
     function formEmail(input) {
         return !/^\w+([\.-]?\w+)*@\w+([\--]?\w+)*(\.\w{2,8})+$/.test(input.value);
@@ -467,7 +467,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     function formModalRemError(Modalinput){
         Modalinput.classList.remove('error')
-        Modalinput.parentElement.classList.remove('error')
+        Modalinput.parentElement.classList.remove('error__email')
     }
     function formModalEmail(Modalinput) {
         return !/^\w+([\.-]?\w+)*@\w+([\--]?\w+)*(\.\w{2,8})+$/.test(Modalinput.value);
@@ -522,7 +522,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     function formMailRemError(Modalinput){
         Modalinput.classList.remove('error')
-        Modalinput.parentElement.classList.remove('error')
+        Modalinput.parentElement.classList.remove('error__email')
     }
     function formMailEmail(Modalinput) {
         return !/^\w+([\.-]?\w+)*@\w+([\--]?\w+)*(\.\w{2,8})+$/.test(Modalinput.value);
