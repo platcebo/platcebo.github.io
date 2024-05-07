@@ -61,8 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let headerVideoPlay = document.querySelector('.header__video_play'),
         headerVideoClose = document.querySelector('.header__video_close'),
-        headerVideo = document.querySelector('.header__video_wrapper video')
-        headerVideoWrapper = document.querySelector('.header__video_wrapper')
+        headerVideo = document.querySelector('.header__video_wrapper video'),
+        headerVideoWrapper = document.querySelector('.header__video_wrapper'),
+        headerVideoMob = document.querySelector('.header__mob');
 
     if(headerVideo !== null) {
         function videoPlay() {
@@ -93,6 +94,11 @@ document.addEventListener('DOMContentLoaded', function() {
             headerVideoWrapper.classList.remove('active')
             headerVideo.pause()
             setTimeout(videostop, 300)
+        })
+
+        headerVideoMob.addEventListener('click',()=>{
+            headerVideoWrapper.classList.add('active')
+            headerVideo.play()
         })
     }
 

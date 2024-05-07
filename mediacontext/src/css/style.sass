@@ -136,6 +136,7 @@ h2
     width: 100% 
     border: 1px solid $white
     transition: all .3s
+    resize: none
     &::placeholder
         color: #1b1b1bb3
         transition: all .3s
@@ -174,6 +175,8 @@ h2
                 opacity: 0
                 &.text__email
                     opacity: 1
+textarea.input
+    height: 164px
 .element-animation
     opacity: 0
     transition: all 1s
@@ -463,6 +466,7 @@ h2
 .header
     &__mob
         display: none
+        cursor: pointer
     &__block
         background: url('../img/header_bg.jpg') center no-repeat
         background-color: $black
@@ -1475,17 +1479,23 @@ h2
         &::before
             content: ''
             display: block
-            width: 665px
-            height: 380px
-            left: 40px
-            bottom: 0
+            width: 1008px
+            height: 1050px
+            left: -170px
+            bottom: -434px
             background: url('../img/form_bg.png') bottom no-repeat
             background-size: contain
             position: absolute
             z-index: -1
     h2
         color: $white
-        max-width: 535px
+        max-width: 675px
+        br
+            display: none
+    &__input
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 20px
     &__wrapper
         display: grid
         grid-template-columns: 100%
@@ -1920,6 +1930,12 @@ h2
             grid-template-columns: 195px 1fr
             .btn__blc
                 padding: 10px 10px 10px 20px
+        &__block
+            &::before
+                width: 761px
+                height: 794px
+                left: -87px
+                bottom: -237px
     .footer
         h2
             font-size: 45px
@@ -2256,17 +2272,19 @@ h2
             grid-template-columns: 100%
             gap: 30px
             &::before
-                background: url('../img/form_bg_mob.png') top right no-repeat  
+                background: url('../img/form_bg.png') top right no-repeat  
                 background-size: contain
-                width: 400px
-                height: 446px
-                top: 0
-                right: 0
+                width: 527px
+                height: 550px
+                top: -228px
+                right: -114px
                 left: auto
                 bottom: auto
                 background-position: right
         h2
             max-width: 100%
+            br
+                display: block
     .footer
         padding: 20px 0
         &__menu
@@ -2415,7 +2433,23 @@ h2
             top: auto
             bottom: 80px
         &__video
-            display: none
+            &_look
+                display: none
+            &_wrapper
+                position: fixed !important
+                width: 100vw !important
+                height: 100vh !important
+                left: 0 !important
+                top: 0 !important
+                opacity: 0
+                transition: all .3s
+                pointer-events: none
+                z-index: 5
+                &.active
+                    opacity: 1
+                    pointer-events: auto
+            &_play
+                display: none
         &__text
             position: relative
             top: auto
@@ -2433,7 +2467,7 @@ h2
             padding: 15px 15px 15px 20px
             align-items: center
             justify-content: space-between
-            z-index: 10
+            z-index: 2
             p
                 font-family: $font-family
                 font-weight: 700
@@ -2665,18 +2699,15 @@ h2
             &_text
                 margin: 0
     .form
-        h2
-            max-width: 200px
         &__block
             padding: 40px 20px
             gap: 20px
             &::before
-                background: url('../img/form_bg_mob.png') center no-repeat
                 background-size: contain
-                width: 227px
-                height: 246px
-                top: 0
-                right: 0
+                width: 296px
+                height: 310px
+                top: -121px
+                right: -116px
                 left: auto
                 bottom: auto
                 background-position: right
@@ -2688,6 +2719,9 @@ h2
             .btn__blc
                 padding: 15px 15px 15px 20px
         &__wrapper
+            gap: 10px
+        &__input
+            grid-template-columns: 100%
             gap: 10px
     .footer
         &__up

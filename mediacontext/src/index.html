@@ -640,16 +640,31 @@
     <section  class="form">
         <div class="container">
             <div class="form__block">
-                <h2>Подпишись <br> на полезные рассылки</h2>
+                <h2>Оставьте заявку, <br> чтобы обсудить проект</h2>
                 <form class="form__wrapper">
-                    <div class="input__wrapper">
-                        <input type="text" class="input _req" placeholder="Ваше имя*">
-                        <p>Заполните поле</p>
+                    <div class="form__input">
+                        <div class="input__wrapper">
+                            <input type="text" class="input _req" placeholder="Ваше имя*">
+                            <p>Заполните поле</p>
+                        </div>
+                        <div class="input__wrapper">
+                            <input type="text" class="input" placeholder="Название компании">
+                            <p>Заполните поле</p>
+                        </div>
+                    </div>
+                    <div class="form__input">
+                        <div class="input__wrapper">
+                            <input type="text" placeholder="Телефон*" data-phone-pattern class="input _req">
+                            <p>Заполните поле</p>
+                        </div>
+                        <div class="input__wrapper">
+                            <input type="text" class="input _req _email" placeholder="Ваш email*">
+                            <p>Заполните поле</p>
+                            <p class="text__email">Некорректный email</p>
+                        </div>
                     </div>
                     <div class="input__wrapper">
-                        <input type="text" class="input _req _email" placeholder="Ваш email*">
-                        <p>Заполните поле</p>
-                        <p class="text__email">Некорректный email</p>
+                        <textarea class="input" name="" id="" placeholder="Описание задачи"></textarea>
                     </div>
                     <div class="form__row">
                         <button class="btn__blc">
