@@ -132,12 +132,19 @@ h2
     font-size: 20px
     line-height: 1.4
     letter-spacing: -0.03em
-    color: $black
+    color: #1b1b1bb3
     width: 100% 
     border: 1px solid $white
     transition: all .3s
     &::placeholder
-        color: #1b1b1b85
+        color: #1b1b1bb3
+        transition: all .3s
+    &:hover
+        color: $black
+        &::placeholder
+            color: $black
+    &:focus
+        color: #1b1b1bb3
     &.error
         border: 1px solid #eb5757
         &::placeholder
@@ -287,7 +294,7 @@ h2
         min-height: 100%
         &_wrapper
             z-index: 10
-            width: 100%
+            width: calc( 100% + 6px )
             height: calc( 100vh - 100px )
             opacity: 0
             pointer-events: none
@@ -295,9 +302,9 @@ h2
             transform: translateY(-100%)
             transition: all .3s
             top: calc( 100% + 20px )
+            left: 0
             transform: translateY(-100%) 
             position: absolute
-            top: calc( 100% + 20px )
             overflow-y: scroll
             &::-webkit-scrollbar 
                 background: #00000000
