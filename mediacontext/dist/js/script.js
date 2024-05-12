@@ -125,12 +125,12 @@ document.addEventListener('DOMContentLoaded', function() {
         serviceSlider = document.querySelector('.service__scroll');
 
     if(service !== null && window.innerWidth > 1200) {
-        // service.style.height = serviceSlider.getBoundingClientRect().width - (serviceWrapper.getBoundingClientRect().width - serviceBlock.getBoundingClientRect().height - 70) + 'px'
-        if(window.innerWidth > 1700 || window.innerWidth < 1235) {
-            service.style.height = (serviceSlider.getBoundingClientRect().width - serviceWrapper.getBoundingClientRect().width) + serviceBlock.getBoundingClientRect().height + 60 + 'px'
-        } else {
-            service.style.height = (serviceSlider.getBoundingClientRect().width - serviceWrapper.getBoundingClientRect().width) + serviceBlock.getBoundingClientRect().height + 'px'
-        }
+        service.style.height = serviceSlider.getBoundingClientRect().width - serviceWrapper.getBoundingClientRect().width + serviceBlock.getBoundingClientRect().height + 60 + 'px'
+        // if(window.innerWidth > 1700 || window.innerWidth < 1235) {
+        //     service.style.height = (serviceSlider.getBoundingClientRect().width - serviceWrapper.getBoundingClientRect().width) + serviceBlock.getBoundingClientRect().height + 60 + 'px'
+        // } else {
+        //     service.style.height = (serviceSlider.getBoundingClientRect().width - serviceWrapper.getBoundingClientRect().width) + serviceBlock.getBoundingClientRect().height + 'px'
+        // }
 
         window.addEventListener('scroll', ()=>{
             if (service.getBoundingClientRect().top < 0 && serviceBlock.getBoundingClientRect().top > 20) {
@@ -369,6 +369,8 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    // блок с формой
+
     let formPrev = document.querySelector('.form__wrapper');
 
     if(formPrev !== null) {
@@ -396,6 +398,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     formAddErrorEmail(input);
                     error++;
                 }
+            } else if(input.classList.contains('_phone')) {
+                if (input.value === '') {
+                    formAddError(input);
+                    error++;
+                } else if(input.value.length !== 18 ) {
+                    formAddErrorEmail(input);
+                    error++;
+                }
             } else if(input.getAttribute('type') === 'checkbox' && input.checked === false) {
                 formAddError(input);
                 error++;
@@ -405,12 +415,22 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
+        if (document.querySelector('.form ._email').value === '') {
+            document.querySelector('.form ._email').classList.remove('error')
+            document.querySelector('.form ._email').parentElement.classList.remove('error__email')
+        } else if(formModalEmail(document.querySelector('.form ._email'))) {
+            formModalAddErrorEmail(document.querySelector('.form ._email'));
+            error++;
+        } else {
+            document.querySelector('.form ._email').classList.remove('error')
+            document.querySelector('.form ._email').parentElement.classList.remove('error__email')
+        }
+
         return error
     }
 
     function formAddError(input){
         input.classList.add('error')
-        input.parentElement.classList.add('error')
     }
     function formAddErrorEmail(input) {
         input.classList.add('error')
@@ -423,6 +443,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function formEmail(input) {
         return !/^\w+([\.-]?\w+)*@\w+([\--]?\w+)*(\.\w{2,8})+$/.test(input.value);
     }
+
+    // форма обсудить проект 
 
     let formModal = document.querySelector('.modal-form .modal__container');
 
@@ -448,6 +470,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     formModalAddError(Modalinput);
                     error++;
                 } else if(formModalEmail(Modalinput)) {
+                    formModalAddErrorEmail(Modalinput);
+                    error++;
+                }
+            } else if(Modalinput.classList.contains('_phone')) {
+                if (Modalinput.value === '') {
+                    formModalAddError(Modalinput);
+                    error++;
+                } else if(Modalinput.value.length !== 18 ) {
                     formModalAddErrorEmail(Modalinput);
                     error++;
                 }
@@ -490,6 +520,8 @@ document.addEventListener('DOMContentLoaded', function() {
         return !/^\w+([\.-]?\w+)*@\w+([\--]?\w+)*(\.\w{2,8})+$/.test(Modalinput.value);
     }
 
+    // форма рассылки
+
     let formMail = document.querySelector('.modal-mail .modal__container');
 
     if(formMail !== null) {
@@ -514,6 +546,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     formMailAddError(Modalinput);
                     error++;
                 } else if(formMailEmail(Modalinput)) {
+                    formMailAddErrorEmail(Modalinput);
+                    error++;
+                }
+            } else if(Modalinput.classList.contains('_phone')) {
+                if (Modalinput.value === '') {
+                    formMailAddError(Modalinput);
+                    error++;
+                } else if(Modalinput.value.length !== 18 ) {
                     formMailAddErrorEmail(Modalinput);
                     error++;
                 }
@@ -558,4 +598,52 @@ document.addEventListener('DOMContentLoaded', function() {
     for (let elm of elements) {
         observer.observe(elm);
     }
+
+    let inputFile = document.querySelector('.input__file'),
+        inputFileList = document.querySelector('.input__file_list');
+
+    if(inputFile !== null) {
+        let ArrName = [],
+        countFiles = '';
+        inputFile.addEventListener('change', (e)=>{
+            countFiles = '';
+            countFiles = inputFile.files.length;
+            inputFileList.innerHTML = ""
+            ArrName = [];
+            if (countFiles > 0) {
+                for(let i = 0; i < countFiles; i++) {
+                    ArrName.push(inputFile.files[i].name)    
+                    let ArrElem = `<div><p>${ArrName[i]}</p><img class="input__file_rem" src="img/close.svg" alt=""><span>Удалить прикрепленный файл</span></div>`
+                    inputFileList.insertAdjacentHTML('beforeend', ArrElem)       
+                }
+            } else {
+                inputFileList.innerHTML = ""
+            }
+        });
+
+        inputFileList.addEventListener('click', (event)=>{
+            let fileBuffer = Array.from(inputFile.files);
+            let target = event.target,
+                inputFileRem = document.querySelectorAll('.input__file_rem'),
+                dt = new ClipboardEvent('').clipboardData || new DataTransfer();
+            
+            for(let i = 0; i < inputFileRem.length; i++) {
+                if(target == inputFileRem[i]) {
+                    countFiles = countFiles - 1;
+                    inputFileList.innerHTML = ""
+                    ArrName.splice(i, 1);
+                    fileBuffer.splice(i, 1);
+                    for (let file of fileBuffer) { dt.items.add(file); }
+                    inputFile.files = dt.files;
+                    for(let a = 0; a < countFiles; a++) {
+                        let ArrElem = `<div><p>${ArrName[a]}</p><img class="input__file_rem" src="img/close.svg" alt=""><span>Удалить прикрепленный файл</span></div>`
+                        inputFileList.insertAdjacentHTML('beforeend', ArrElem)       
+                    }
+                }
+            }
+
+            console.log(ArrName)
+        })
+    }
+
 }, false);

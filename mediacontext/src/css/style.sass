@@ -175,6 +175,87 @@ h2
                 opacity: 0
                 &.text__email
                     opacity: 1
+    &__file
+        position: absolute
+        inset: 0
+        opacity: 0
+        cursor: pointer
+        &_wrapper
+            position: relative
+        &_btn
+            padding: 20px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            background: $white
+            border-radius: 40px
+            pointer-events: auto
+            cursor: pointer
+            p
+                font-family: $font-family
+                font-weight: 500
+                font-size: 20px
+                line-height: 1.4
+                letter-spacing: -0.03em
+                color: $black
+                opacity: .7
+                text-align: left
+                position: relative
+                inset: auto
+                transform: none
+                pointer-events: auto
+        &_list
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            margin: 20px 0 0
+            gap: 10px
+            div
+                padding: 10px 
+                display: grid
+                position: relative
+                grid-template-columns: 1fr 24px
+                gap: 20px
+                align-items: center
+                border: 1px solid $white
+                border-radius: 40px
+            p
+                font-family: $font-family
+                font-weight: 500
+                font-size: 16px
+                line-height: 1.25
+                color: $white
+                white-space: nowrap
+                position: relative
+                text-overflow: ellipsis
+                overflow: hidden
+            span
+                padding: 10px
+                border-radius: 40px
+                background: $black
+                font-family: $font-family
+                font-weight: 500
+                font-size: 16px
+                line-height: 1.25
+                color: $white
+                position: absolute
+                top: 34px
+                left: -10px
+                white-space: nowrap
+                display: block
+                transition: all .3s
+                opacity: 0
+                pointer-events: none
+                z-index: 2
+        &_rem
+            cursor: pointer
+            opacity: .5
+            transition: all .3s
+            width: 100%
+            &:hover
+                opacity: 1
+                &+span
+                    opacity: 1
 textarea.input
     height: 164px
 .element-animation
@@ -634,11 +715,13 @@ textarea.input
     &__item
         width: 1095px
         // height: 100%
-        // min-height: 479px
+        height: 479px
         background: $light-gray
         border-radius: 40px
         position: relative
         overflow: hidden
+        display: grid
+        grid-template-rows: auto 1fr
         &_header
             padding: 40px 40px 20px
             position: relative
@@ -652,7 +735,6 @@ textarea.input
                 line-height: 1.4
                 letter-spacing: -0.03em
                 color: $black
-                max-width: 190px
                 opacity: 0.7
             a
                 border-radius: 40px
@@ -684,11 +766,13 @@ textarea.input
             justify-content: start
             gap: 80px
             transition: all .3s
+            height: 100%
             img
                 width: 100%
-                height: 100%
+                height: 1px
+                min-height: 100%
                 object-fit: cover
-                object-position: right bottom
+                object-position: right top
             div
                 padding: 0 0 40px 40px
                 transition: all .3s
@@ -1796,8 +1880,8 @@ textarea.input
             font-size: 70px
             max-width: 844px
         &__item
-            // min-height: 390px
-            // width: 940px
+            height: 390px
+            width: 940px
             &_header
                 p
                     font-size: 16px
@@ -1897,6 +1981,10 @@ textarea.input
                 font-size: 16px
     .input
         font-size: 16px
+        &__file
+            &_btn
+                p
+                    font-size: 16px
     .blog
         &__tag
             font-size: 16px
@@ -2060,7 +2148,7 @@ textarea.input
                 margin: 0 auto
         &__item
             width: 100%
-            height: auto
+            height: 355px
             min-height: auto
             &_header
                 padding: 30px
@@ -2450,6 +2538,9 @@ textarea.input
                     pointer-events: auto
             &_play
                 display: none
+            &_close
+                top: 20px
+                right: 20px
         &__text
             position: relative
             top: auto
@@ -2493,6 +2584,7 @@ textarea.input
         &__row
             margin: 10px 0 0
         &__item
+            height: auto
             &_header
                 grid-template-columns: 100%
                 padding: 20px
@@ -2526,6 +2618,7 @@ textarea.input
                         background: $lighter-purple
                         color: $white
                 img
+                    height: 100%
                     max-width: 300px
                     transform: scaleX(-1)
                 p
@@ -2838,6 +2931,11 @@ textarea.input
                     stroke: #1B1B1B
 
 @media ( max-width: 768px )
+    .input
+        &__file
+            &_list
+                p
+                    font-size: 14px
     .modal
         &__container
             max-width: 630px
@@ -2845,6 +2943,11 @@ textarea.input
             font-size: 54px
             
 @media ( max-width: 600px )
+    .input
+        &__file
+            &_list
+                p
+                    font-size: 12px
     .modal
         &__close
             top: 20px
@@ -3132,6 +3235,8 @@ textarea.input
         letter-spacing: -0.03em
         text-align: center
         color: $white
+        br
+            display: none
     .btn__blc
         padding: 20px 20px 20px 30px
         margin: 40px auto 0
@@ -3197,6 +3302,9 @@ textarea.input
 
 @media ( max-width: 600px )
     .error-block
+        p
+            br
+                display: block
         &__block
             padding: 40px 20px 150px
         &__logo
@@ -3214,5 +3322,5 @@ textarea.input
         &__right
             width: 200px
             bottom: auto
-            top: -114px
-            right: -70px
+            top: -125px
+            right: -43px
