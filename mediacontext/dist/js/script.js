@@ -126,11 +126,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if(service !== null && window.innerWidth > 1200) {
         service.style.height = serviceSlider.getBoundingClientRect().width - serviceWrapper.getBoundingClientRect().width + serviceBlock.getBoundingClientRect().height + 60 + 'px'
-        // if(window.innerWidth > 1700 || window.innerWidth < 1235) {
-        //     service.style.height = (serviceSlider.getBoundingClientRect().width - serviceWrapper.getBoundingClientRect().width) + serviceBlock.getBoundingClientRect().height + 60 + 'px'
-        // } else {
-        //     service.style.height = (serviceSlider.getBoundingClientRect().width - serviceWrapper.getBoundingClientRect().width) + serviceBlock.getBoundingClientRect().height + 'px'
-        // }
 
         window.addEventListener('scroll', ()=>{
             if (service.getBoundingClientRect().top < 0 && serviceBlock.getBoundingClientRect().top > 20) {
