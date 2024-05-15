@@ -129,9 +129,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
         window.addEventListener('scroll', ()=>{
             if (service.getBoundingClientRect().top < 0 && serviceBlock.getBoundingClientRect().top > 20) {
-                serviceSlider.style.transform = 'translateX(' + service.getBoundingClientRect().top + 'px)'
+                serviceSlider.style.transform = 'translateX(' + service.getBoundingClientRect().top + 'px)';
+            } else if (service.getBoundingClientRect().top < 0) {
+                serviceSlider.style.transform = 'translateX(-' + (serviceSlider.getBoundingClientRect().width - serviceWrapper.getBoundingClientRect().width) + 'px)';
+            } else if (serviceBlock.getBoundingClientRect().top > 20) {
+                serviceSlider.style.transform = 'translateX(' + 0 + 'px)';
             }
         })
+        if (service.getBoundingClientRect().top < 0 && serviceBlock.getBoundingClientRect().top > 20) {
+            serviceSlider.style.transform = 'translateX(' + service.getBoundingClientRect().top + 'px)';
+        } else if (service.getBoundingClientRect().top < 0) {
+            serviceSlider.style.transform = 'translateX(-' + (serviceSlider.getBoundingClientRect().width - serviceWrapper.getBoundingClientRect().width) + 'px)';
+        } else if (serviceBlock.getBoundingClientRect().top > 20) {
+            serviceSlider.style.transform = 'translateX(' + 0 + 'px)';
+        }
     }
 
     let caseRow = document.querySelectorAll('.case__info_scroll');

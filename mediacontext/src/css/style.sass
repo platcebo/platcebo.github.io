@@ -792,6 +792,7 @@ textarea.input
                 color: $black
                 span
                     color: $purple
+                    display: block
             p
                 margin: 20px 0 0
                 font-family: $font-family
@@ -2608,6 +2609,8 @@ textarea.input
             &_body
                 grid-template-columns: 100%
                 gap: 0
+                padding: 0 0 223px
+                position: relative
                 div
                     padding: 30px 20px 0
                 a
@@ -2629,9 +2632,14 @@ textarea.input
                         background: $lighter-purple
                         color: $white
                 img
-                    height: 100%
-                    max-width: 300px
-                    transform: scaleX(-1)
+                    position: absolute
+                    width: 100%
+                    top: calc( 100% - 210px )
+                    min-height: 210px
+                    height: auto
+                    object-fit: cover
+                    object-position: top left
+                    right: -50px
                 p
                     margin: 10px 0 0
                 h3
@@ -3274,7 +3282,7 @@ textarea.input
             width: 100%
             display: block        
 
-@media ( max-width: 1440px )
+@media ( max-width: 1600px )
     .error-block
         &__block
             height: 740px
