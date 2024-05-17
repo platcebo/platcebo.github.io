@@ -392,7 +392,7 @@ textarea.input
             position: absolute
             transform: translateY(-100%)
             transition: all .3s
-            top: calc( 100% + 20px )
+            top: calc( 100% + 19px )
             left: 0
             transform: translateY(-100%) 
             position: absolute
@@ -924,8 +924,11 @@ textarea.input
             display: flex
             justify-content: center
             align-items: center
+            transition: all .3s
             img
                 width: 21px
+            &:hover
+                background: $purple
     &__info
         display: grid
         grid-template-columns: 100%
@@ -2218,6 +2221,8 @@ textarea.input
             h3
                 font-size: 36px
                 padding: 30px
+                br
+                    display: none
             &_scroll
                 p
                     font-size: 14px
@@ -2260,7 +2265,7 @@ textarea.input
     .about
         padding: 20px 0 0
         &__run
-            right: -25%
+            right: -35%
         &__img
             img
                 height: 379px
@@ -2537,8 +2542,8 @@ textarea.input
                 display: none
             &_wrapper
                 position: fixed !important
-                width: 100vw !important
-                height: 100vh !important
+                // width: 100vw !important
+                // height: 100vh !important
                 left: 0 !important
                 top: 0 !important
                 opacity: 0
@@ -2548,6 +2553,8 @@ textarea.input
                 &.active
                     opacity: 1
                     pointer-events: auto
+                    width: 100vw !important
+                    height: 100vh !important
             &_play
                 display: none
             &_close
@@ -2633,7 +2640,7 @@ textarea.input
                         color: $white
                 img
                     position: absolute
-                    width: 100%
+                    width: calc( 100% + 50px )
                     top: calc( 100% - 210px )
                     min-height: 210px
                     height: auto
@@ -2671,6 +2678,8 @@ textarea.input
             h3
                 font-size: 26px
                 padding: 20px
+                br
+                    display: none
             &_bg
                 height: auto
             &_logo
