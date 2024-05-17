@@ -5,6 +5,9 @@ body
     font-family: $font-family
     &.wht
         background: #fff
+    &.blc
+        background: #000
+        color: #fff
     &.fix
         overflow: hidden
 .container
@@ -95,6 +98,7 @@ body
     &__logo
         display: block
         width: 184px
+        transition: all .3s
         img
             width: 100%
             display: block
@@ -214,7 +218,7 @@ body
             a
                 color: #e75e43
     &.active
-        position: fixed
+        position: sticky
         top: 0
         left: 0
         width: 100vw
@@ -235,6 +239,22 @@ body
             &-menu
                 opacity: 1
                 transform: none
+    &__dark
+        .nav
+            &__humburger
+                &::before,
+                &::after
+                    background: #fff
+            &__logo
+                filter: invert(100%)
+        &.active
+            .nav
+                &__humburger
+                    &::before,
+                    &::after
+                        background: #181818
+                &__logo
+                    filter: invert(0%)
 
 .slider
     padding: 60px 0 100px
@@ -329,8 +349,9 @@ body
             opacity: .8
 
 .footer
-    padding: 80px 0 100px
+    padding: 140px 0 100px
     position: relative
+    background-color: #fff
     .container
         max-width: 1570px
     &::before
@@ -339,7 +360,7 @@ body
         max-width: 1570px
         width: calc( 100% - 30px )
         position: absolute
-        top: 0
+        top: 60px
         left: 50%
         transform: translateX(-50%)
         height: 1px
@@ -514,7 +535,7 @@ body
             margin: 30px 0 0
             gap: 20px
     .footer
-        padding: 50px 0
+        padding: 100px 0 50px
         h2
             font-size: 50px
         &__search
@@ -605,3 +626,273 @@ body
                 flex-direction: column
         &__list
             grid-template-columns: 1fr
+
+.about-header
+    position: relative
+    z-index: 1
+    padding: 0 0 66px
+    .nav
+        background: transparent
+    &::before
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        width: 100vw
+        height: 1080px
+        background: url('../img/about-header.jpg') center no-repeat
+        background-size: cover
+        z-index: -1
+        opacity: .5
+    &__text
+        max-width: 635px
+        font-family: $font-family
+        font-weight: 400
+        font-size: 30px
+        line-height: 1.3
+        text-align: right
+        color: #fff
+        margin: 580px 0 0 auto
+    h1
+        font-family: $font-family
+        font-weight: 700
+        font-size: 120px
+        line-height: 0.95
+        text-transform: uppercase
+        color: #fff
+        max-width: 1591px
+        b
+            color: #e75e43
+        span
+            color: #8d8da1
+    &__subtitle
+        margin: 7px auto 0
+        font-family: $font-family
+        font-weight: 700
+        font-size: 60px
+        line-height: 0.95
+        text-transform: uppercase
+        text-align: right
+        color: rgba(141, 141, 161, 0.5)
+        max-width: max-content
+        b
+            color: #fff
+        span
+            color: #8d8da1
+    &__har
+        margin: 97px auto 0
+        display: grid
+        grid-template-columns: minmax(100px,650px) minmax(100px,420px) minmax(100px,350px)
+        max-width: max-content
+        gap: 50px
+        &_name
+            font-family: $font-family
+            font-weight: 700
+            font-size: 220px
+            line-height: 0.95
+            text-transform: uppercase
+            color: #fff
+            text-align: center
+            span
+                color: #e75e43
+        &_text
+            font-family: $font-family
+            font-weight: 400
+            font-size: 30px
+            line-height: 1.3
+            text-align: center
+            color: #fff
+        div
+            &:nth-child(2)
+                .about-header
+                    &__har           
+                        &_name
+                            span
+                                display: block
+                                font-size: 100px
+            &:nth-child(3)
+                .about-header
+                    &__har               
+                        &_name
+                            span
+                                display: block
+                                font-size: 55px
+    &__news
+        margin: 16px 0 0
+        display: block
+        max-width: 1080px
+        width: 100%
+        position: relative
+        transition: all .3s
+        img
+            width: 100%
+            opacity: .6
+        span
+            position: absolute
+            bottom: 0
+            left: 0
+            padding: 33px 45px
+            background: #000
+            font-family: $font-family
+            font-weight: 300
+            font-size: 26px
+            line-height: 1.3
+            text-transform: uppercase
+            color: #fff
+            transition: all .3s
+        &:hover
+            span
+                color: #e75e43
+    &__equip
+        margin: 110px 0 0
+        display: grid
+        grid-template-columns: 1fr 616px
+        gap: 24px
+        align-items: center
+        &_name
+            font-family: $font-family
+            font-weight: 700
+            font-size: 300px
+            line-height: 0.95
+            text-transform: uppercase
+            color: rgba(255, 255, 255, 0.87)
+            text-align: center
+            span
+                color: #e75e43
+        &_text
+            margin: 14px auto 0
+            font-family: $font-family
+            font-weight: 700
+            font-size: 55px
+            line-height: 0.95
+            text-align: center
+            color: #e75e43
+            max-width: 605px
+        &_link
+            position: relative
+            transition: all .3s
+            img
+                width: 100%
+                opacity: .6
+            span
+                position: absolute
+                bottom: 0
+                left: 0
+                padding: 33px 45px
+                background: #000
+                font-family: $font-family
+                font-weight: 300
+                font-size: 26px
+                line-height: 1.3
+                text-transform: uppercase
+                color: #fff
+                transition: all .3s
+            &:hover
+                span
+                    color: #e75e43
+    &__ex
+        margin: 100px 0 0
+        display: grid
+        grid-template-columns: 1fr 1080px
+        gap: 24px
+        align-items: center
+        &_name
+            font-family: $font-family
+            font-weight: 700
+            font-size: 220px
+            line-height: .4
+            text-transform: uppercase
+            color: rgba(255, 255, 255, 0.87)
+            text-align: center
+            span
+                color: #e75e43
+                font-size: 80px
+                line-height: 1
+        &_text
+            margin: 14px auto 0
+            font-family: $font-family
+            font-weight: 400
+            font-size: 30px
+            line-height: 0.95
+            text-align: center
+            color: #fff
+            max-width: 434px
+        &_link
+            position: relative
+            transition: all .3s
+            img
+                width: 100%
+                opacity: .6
+            span
+                position: absolute
+                bottom: 0
+                left: 0
+                padding: 33px 45px
+                background: #000
+                font-family: $font-family
+                font-weight: 300
+                font-size: 26px
+                line-height: 1.3
+                text-transform: uppercase
+                color: #fff
+                transition: all .3s
+            &:hover
+                span
+                    color: #e75e43
+    
+.about-har
+    padding: 70px 0 87px
+    position: relative
+    &::before,
+    &::after
+        content: ''
+        display: block
+        max-width: 1670px
+        width: calc( 100% - 30px )
+        position: absolute
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+        height: 1px
+        background: #fff
+        transition: all .3s
+    &::after
+        bottom: auto
+        top: 0
+    &__item
+        display: grid
+        grid-template-columns: 846fr 647fr 75px
+        gap: 50px
+        align-items: center
+        img
+            width: 75px
+            transition: all .3s
+        &:hover
+            img
+                transform: rotate(45deg)
+            p
+                color: #fff
+                span
+                    color: #fff
+    &__name
+        font-family: $font-family
+        font-weight: 700
+        font-size: 260px
+        line-height: 0.95
+        text-transform: uppercase
+        color: rgba(255, 255, 255, 0.87)
+        text-align: right
+        transition: all .3s
+        span
+            color: rgba(255, 255, 255, 0.44)
+            transition: all .3s
+    &__text
+        font-family: $font-family
+        font-weight: 400
+        font-size: 32px
+        line-height: 1.3
+        color: #fff
+    
+.center
+    padding: 444px 0 190px
