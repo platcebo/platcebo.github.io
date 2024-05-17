@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
             slidesPerView: 1,
             spaceBetween: 0,
             speed: 900,
-            autoplay: {
-                delay: 3000,
-            },
+            // autoplay: {
+            //     delay: 3000,
+            // },
             navigation: {
                 nextEl: ".header__next",
                 prevEl: ".header__back",
