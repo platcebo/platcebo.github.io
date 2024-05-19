@@ -13,7 +13,7 @@ body
     &.fix
         overflow: hidden
 .container
-    max-width: 1670rem
+    max-width: 1300rem
     padding: 0 15rem
     box-sizing: content-box 
     margin: 0 auto
@@ -86,7 +86,7 @@ body
 .element-animation
     opacity: 0
     transition: all 1s
-    transform: translateY(100%)
+    transform: translateY(50%)
 .element-show
     opacity: 1 !important
     transform: translateY(0) !important
@@ -98,7 +98,7 @@ body
     &::before
         content: ''
         display: block
-        max-width: 1670rem
+        max-width: 1300rem
         width: calc( 100% - 30rem )
         position: absolute
         bottom: 0
@@ -244,6 +244,7 @@ body
         .nav
             &__lang
                 opacity: 0
+                pointer-events: none
             &__humburger
                 &::after,
                 &::before
@@ -381,7 +382,7 @@ body
     position: relative
     background-color: #fff
     .container
-        max-width: 1570rem
+        max-width: 1300rem
     &::before
         content: ''
         display: block
@@ -398,7 +399,7 @@ body
     h2
         font-family: $font-family
         font-weight: 700
-        font-size: 96rem
+        font-size: 70rem
         line-height: 1.1
         text-transform: uppercase
         text-align: center
@@ -615,15 +616,15 @@ body
         max-width: 635rem
         font-family: $font-family
         font-weight: 400
-        font-size: 30rem
+        font-size: 25rem
         line-height: 1.3
         text-align: right
         color: #fff
-        margin: 580rem 0 0 auto
+        margin: 650rem 0 0 auto
     h1
         font-family: $font-family
         font-weight: 700
-        font-size: 120rem
+        font-size: 80rem
         line-height: 0.95
         text-transform: uppercase
         color: #fff
@@ -636,7 +637,7 @@ body
         margin: 7rem auto 0
         font-family: $font-family
         font-weight: 700
-        font-size: 60rem
+        font-size: 50rem
         line-height: 0.95
         text-transform: uppercase
         text-align: right
@@ -649,13 +650,13 @@ body
     &__har
         margin: 97rem auto 0
         display: grid
-        grid-template-columns: 650rem 420rem 350rem
+        grid-template-columns: 1fr 1fr 1fr
         max-width: max-content
         gap: 50rem
         &_name
             font-family: $font-family
             font-weight: 700
-            font-size: 220rem
+            font-size: 90rem
             line-height: 0.95
             text-transform: uppercase
             color: #fff
@@ -665,25 +666,19 @@ body
         &_text
             font-family: $font-family
             font-weight: 400
-            font-size: 30rem
+            font-size: 24rem
             line-height: 1.3
             text-align: center
             color: #fff
         div
-            &:nth-child(2)
-                .about-header
-                    &__har           
-                        &_name
-                            span
-                                display: block
-                                font-size: 100rem
+            &:nth-child(2),
             &:nth-child(3)
                 .about-header
                     &__har               
                         &_name
                             span
                                 display: block
-                                font-size: 55rem
+                                font-size: 40rem
     &__news
         margin: 16rem 0 0
         display: block
@@ -719,7 +714,7 @@ body
         &_name
             font-family: $font-family
             font-weight: 700
-            font-size: 300rem
+            font-size: 120rem
             line-height: 0.95
             text-transform: uppercase
             color: rgba(255, 255, 255, 0.87)
@@ -760,20 +755,20 @@ body
     &__ex
         margin: 100rem 0 0
         display: grid
-        grid-template-columns: 1fr 1080rem
+        grid-template-columns: 1fr 800rem
         gap: 24rem
         align-items: center
         &_name
             font-family: $font-family
             font-weight: 700
-            font-size: 220rem
+            font-size: 120rem
             line-height: .4
             text-transform: uppercase
             color: rgba(255, 255, 255, 0.87)
             text-align: center
             span
                 color: #e75e43
-                font-size: 80rem
+                font-size: 50rem
                 line-height: 1
         &_text
             margin: 14rem auto 0
@@ -867,13 +862,13 @@ body
         color: #fff
     
 .center
-    padding: 444rem 0 190rem
+    padding: 300rem 0 100rem
     background: url('../img/center_bg.svg') center no-repeat
     background-size: cover
     h2
         font-family: $font-family
         font-weight: 700
-        font-size: 100rem
+        font-size: 80rem
         line-height: 0.95
         text-transform: uppercase
         color: #fff
@@ -897,18 +892,18 @@ body
         &:hover
             opacity: .8
     &__arrow
-        margin: 150rem auto 0
+        margin: 100rem auto 0
         display: flex
         justify-content: center
         align-items: center
         background: #e75e43
-        width: 124rem
-        height: 124rem
+        width: 90rem
+        height: 90rem
         border-radius: 100%
         transition: all .3s
         img
             display: block
-            width: 32rem
+            width: 27rem
         &:hover
             opacity: .8
 
@@ -997,7 +992,7 @@ body
         line-height: 0.95
         text-transform: uppercase
         color: #fff
-        max-width: 1300px
+        max-width: 1300rem
         span
             color: #8d8da1
     &__text
@@ -1061,3 +1056,224 @@ body
             padding: 200rem 0 130rem
         &__tag
             font-size: 35rem
+
+.news
+    &__date
+        font-family: $font-family
+        font-weight: 700
+        font-size: 70rem
+        line-height: 0.95
+        text-transform: uppercase
+        color: #8d8da1
+        margin: 0 0 auto
+        text-align: right
+        transition: all .3s
+    &__text
+        font-family: $font-family
+        font-weight: 400
+        font-size: 30rem
+        line-height: 1.3
+        color: rgba(255, 255, 255, 0.5)
+        margin: 40rem 0 0
+        max-width: 740rem
+        transition: all .3s
+    h1,
+    h2
+        font-family: $font-family
+        font-weight: 700
+        font-size: 120rem
+        line-height: 0.95
+        text-transform: uppercase
+        color: rgba(255, 255, 255, 0.5)
+        transition: all .3s
+        margin: 46rem 0 0
+        span
+            transition: all .3s
+    &__block
+        display: block
+        position: relative
+        z-index: 1
+        padding: 180rem 0 120rem
+        &::before
+            content: ''
+            display: block
+            inset: 0
+            background: var(--bg) center no-repeat
+            background-size: cover
+            position: absolute
+            z-index: -1
+            opacity: .4
+        .container
+            min-height: 1000rem
+            display: flex
+            flex-direction: column
+        &:hover
+            .news
+                &__date
+                    color: #e75e43
+                &__text
+                    color: #fff
+            h1,
+            h2
+                color: #fff
+                span
+                    color: #e75e43
+
+@media ( max-width: 1024px )
+    .news
+        &__block
+            .container
+                min-height: 600rem
+        &__date
+            font-size: 50rem
+        h1,
+        h2
+            font-size: 80rem
+
+@media ( max-width: 500px )
+    .news
+        &__text
+            font-size: 40rem
+            max-width: 100%
+
+.article
+    padding: 60rem 0 100rem
+    background: url('../img/eng_bg.svg') center repeat
+    background-size: contain
+    position: relative
+    .container
+        position: relative
+    &__text
+        font-family: $font-family
+        font-weight: 400
+        font-size: 24rem
+        line-height: 1.3
+        color: #fff
+        margin: 30rem 0 0
+    h1
+        font-family: $font-family
+        font-weight: 700
+        font-size: 90rem
+        line-height: 0.95
+        text-transform: uppercase
+        color: #fff
+        span
+            color: #e75e43
+    &__date
+        top: -10rem
+        right: 0
+        position: absolute
+        font-family: $font-family
+        font-weight: 700
+        font-size: 40rem
+        line-height: 0.95
+        text-transform: uppercase
+        color: #e75e43
+    &__full
+        width: 100%
+    &__left
+        float: left
+        margin: 30rem 30rem 0 0
+    &__right
+        float: right
+        margin: 30rem 0 0 30rem
+    &__img
+        img
+            width: 100%
+
+@media ( max-width: 800px )
+    .article
+        &__text
+            font-size: 34rem
+        &__img
+            width: 100% !important
+            float: none
+            margin: 30rem 0 0
+    
+@media ( max-width: 500px )
+    .article
+        h1
+            font-size: 55rem
+
+.contact
+    background-color: #fff
+    z-index: -1
+    padding: 120rem 0 
+    height: 100%
+    .container
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        position: relative
+        height: max-content
+        &::before
+            content: ''
+            display: block
+            width: 345rem
+            height: 700rem
+            position: absolute
+            right: 15rem
+            top: 50%
+            transform: translateY(-50%)
+            background: url('../img/contact_bg.svg') center no-repeat   
+            background-size: contain
+    &__list
+        margin: auto 0
+        padding: 0 0 0 120rem
+        position: relative
+        span
+            display: block
+            padding: 16rem 32rem
+            transition: all .3s
+            height: 56rem
+            border: 1rem solid #010205
+            border-radius: 70rem
+            position: absolute
+            top: 0
+            left: 0
+            width: 90rem
+            img
+                width: 100%
+                height: 100%
+                display: block
+        a
+            font-family: $font-family
+            font-weight: 400
+            font-size: 40rem
+            line-height: 1.2
+            letter-spacing: -0.03em
+            color: #e75e43
+            transition: all .3s
+            display: block
+            width: max-content
+            &:hover
+                color: #be5843
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 40rem
+            line-height: 1.2
+            letter-spacing: -0.03em
+            color: #000
+    &__contact
+        margin: 30rem 0 0
+        max-width: 740rem
+        font-family: $font-family
+        font-weight: 400
+        font-size: 24rem
+        line-height: 1.2
+        color: #000
+        a
+            color: #e75e43
+    .btn__wht
+        margin: 156rem 0 0
+
+@media ( max-width: 500px )
+    .contact
+        .container
+            &::before
+                width: 200rem
+                height: 400rem
+
+.menu
+    
