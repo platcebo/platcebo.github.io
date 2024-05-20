@@ -309,9 +309,9 @@ body
         left: auto
         right: auto
     &_prev
-        right: 100%
+        right: calc( 50% + 428rem )
     &_next
-        left: 100%
+        left: calc( 50% + 428rem )
     &__title
         display: flex
         justify-content: space-between
@@ -584,6 +584,8 @@ body
         &__logo
             width: 300rem
     .slider
+        &__arrow
+            display: none
         &__text
             p
                 font-size: 35rem
