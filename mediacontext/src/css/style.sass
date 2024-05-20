@@ -12,7 +12,6 @@ $font-family: "Manrope", sans-serif
 
 html
     max-width: calc( 100vw - 6px )
-
 body
     font-family: $font-family
     color: $black
@@ -34,7 +33,8 @@ body
         background: #9373EA
         border-radius: 8px 8px 8px 8px
         box-sizing: border-box
-
+img
+    pointer-events: none
 h1
     font-weight: 600
     font-size: 120px
@@ -568,6 +568,9 @@ textarea.input
         max-width: 55%
         backdrop-filter: blur(10px)
         background: rgba(255, 255, 255, 0.01)
+        border-radius: 40px
+        position: relative
+        overflow: hidden
     &__logo
         position: absolute
         top: 15px
