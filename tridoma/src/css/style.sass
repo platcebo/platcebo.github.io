@@ -33,6 +33,13 @@ body
         &:hover
             box-shadow: 0 25px 55px 0 rgba(93, 92, 96, 0.1), 0 100px 100px 0 rgba(93, 92, 96, 0.09), 0 225px 135px 0 rgba(93, 92, 96, 0.05), 0 400px 160px 0 rgba(93, 92, 96, 0.01)
             background: $hover
+.element-animation
+    opacity: 0
+    transition: all 1s
+    transform: translateY(100%)
+.element-show
+    opacity: 1
+    transform: translateY(0)
                 
 .nav
     padding: 16px 0
@@ -91,8 +98,487 @@ body
             width: 100%
             padding: 14px
             background: $white
+            transition: all .3s
             svg
                 width: 100%
+                path
+                    transition: all .3s
             &:hover
                 box-shadow: 0 25px 55px 0 rgba(93, 92, 96, 0.1), 0 100px 100px 0 rgba(93, 92, 96, 0.09), 0 225px 135px 0 rgba(93, 92, 96, 0.05), 0 400px 160px 0 rgba(93, 92, 96, 0.01)
                 background: $hover
+                svg
+                    path
+                        fill: white
+                        stroke: none
+                    g
+                        path
+                            stroke: white
+                            fill: none
+
+.header
+    padding: 0 0 60px
+    &__slide
+        position: relative
+        padding: 32px 
+        z-index: 1
+        min-height: 808px
+        display: flex
+        align-items: center
+    &__bg
+        position: absolute
+        inset: 0
+        object-fit: cover
+        width: 100%
+        height: 100%
+        z-index: -1
+    h1
+        font-family: $font-family
+        font-weight: 500
+        font-size: 70px
+        line-height: 1.15
+        text-transform: uppercase
+        color: $white
+    &__subtitle
+        margin: 12px 0 0
+        font-family: $font-family
+        font-weight: 400
+        font-size: 24px
+        line-height: 1.35
+        color: $white
+    &__info
+        max-width: 840px
+        .btn__blue
+            margin: 32px 0 0
+    &__plan
+        position: absolute
+        background: $white
+        bottom: 32px
+        right: 32px
+        width: 100%
+        max-width: 464px
+        padding: 32px
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.35
+            color: $blue
+            text-align: center
+        &_logo
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 8px
+            margin: 8px 0 0
+        img
+            width: 100%
+    &__func
+        position: absolute
+        bottom: 32px
+        left: 32px
+        display: grid
+        grid-template-columns: 48px auto 44px auto 48px
+        gap: 12px
+        z-index: 2
+        align-items: center
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 24px
+            line-height: 1.35
+            color: $white
+    &__arrow
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 48px
+        height: 48px
+        border-radius: 100%
+        border: 1px solid $white
+        position: relative
+        inset: auto
+        margin: 0
+        transition: all .3s
+        &::after
+            content: none
+        &:hover
+            background: $hover
+            border: 1px solid $hover
+    &__prev
+        transform: rotate(180deg)
+    .header__pag
+        position: relative
+        inset: auto
+        margin: 0
+        width: 100%
+        height: 1px
+        background: #ffffff80
+        span
+            background: #fff
+    &__row
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 24px
+    &__item
+        background: $white
+        padding: 32px
+        display: grid
+        grid-template-columns: 96px 1fr
+        align-items: center
+        gap: 16px
+        div
+            padding: 24px
+            background: $bg
+        svg
+            width: 100%
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 20px
+            line-height: 1.35
+            color: $dark-gray
+    
+.project
+    padding: 60px 0
+    &__title
+        display: grid
+        grid-template-columns: 1fr auto
+        gap: 32px
+        align-items: center
+    h2
+        font-family: $font-family
+        font-weight: 500
+        font-size: 56px
+        line-height: 1.1
+        text-transform: uppercase
+        color: $dark-gray
+        span
+            color: $blue
+    &__tab
+        display: grid
+        grid-template-columns: 284px 284px 284px
+        gap: 24px
+        &_item
+            background: $white
+            padding: 20px 40px
+            font-family: $font-family
+            font-weight: 500
+            font-size: 16px
+            line-height: 1.25
+            letter-spacing: 0.02em
+            text-transform: uppercase
+            color: $dark-gray
+            cursor: pointer
+            text-align: center
+            transition: all .3s
+            &.active,
+            &:hover
+                background: $blue
+                color: $white
+    &__wrapper
+        margin: 32px 0 0
+        display: none
+        grid-template-columns: 1fr 1fr
+        gap: 24px
+        &.active
+            display: grid
+    &__item
+        position: relative
+        padding: 0 0 110px
+        overflow: hidden
+        &:hover
+            .project
+                &__info
+                    transform: translateY(0)
+    &__pic
+        display: block
+        width: 100%
+        height: 700px
+        object-fit: cover
+    &__info
+        position: absolute
+        bottom: 0
+        background: $white
+        transform: translateY(calc( 100% - 110px ))
+        width: 100%
+        transition: all .3s
+        &_header
+            padding: 32px
+            border-bottom: 1px solid $stroke
+            display: grid
+            grid-template-columns: auto 1fr
+            gap: 24px
+            align-items: center
+        &_body
+            padding: 32px 
+            .btn__blue
+                max-width: 100%
+                margin: 32px 0 0
+    &__name
+        display: grid
+        grid-template-columns: 1fr auto
+        align-items: end
+        p
+            margin: 0 0 0 12px
+            font-family: $font-family
+            font-weight: 400
+            font-size: 24px
+            line-height: 1.35
+            color: $gray
+    h3
+        font-family: $font-family
+        font-weight: 500
+        font-size: 42px
+        line-height: 1.1
+        text-align: right
+        color: $blue
+    &__price
+        font-family: $font-family
+        font-weight: 500
+        font-size: 42px
+        line-height: 1.1
+        text-align: right
+        color: $blue        
+    &__var
+        font-family: $font-family
+        font-weight: 400
+        font-size: 24px
+        line-height: 1.35
+        color: $dark-gray
+    &__block
+        margin: 16px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+        gap: 16px
+        a
+            display: block
+            cursor: pointer
+        img
+            width: 100%
+            height: 120px
+            object-fit: cover
+        p
+            margin: 8px 0 0
+            font-family: $font-family
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.35
+            color: $gray
+    &__more
+        margin: 32px auto 0
+        display: block
+
+.pref
+    padding: 60px 0
+    &__block
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 24px
+    &__prev
+        img
+            width: 100%
+            height: 662px
+            min-height: 100%
+            object-fit: cover
+    &__info
+        background: $white
+        padding: 48px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: center
+        .btn__blue
+            margin: 32px 0 0
+        h2
+            font-family: $font-family
+            font-weight: 500
+            font-size: 56px
+            line-height: 1.1
+            text-transform: uppercase
+            color: $dark-gray
+            span
+                color: $blue
+        p
+            margin: 10px 0 0
+            font-family: $font-family
+            font-weight: 400
+            font-size: 20px
+            line-height: 1.35
+            color: $dark-gray
+    &__row
+        margin: 24px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 
+    
+.program
+    padding: 60px 0
+    h2
+        font-family: $font-family
+        font-weight: 500
+        font-size: 56px
+        line-height: 1.1
+        text-transform: uppercase
+        color: $dark-gray
+        max-width: 400px
+        span
+            color: $blue
+    &__row
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 24px
+        margin: 346px 0 0
+        position: relative
+    &__item
+        position: relative
+        height: 445px
+        z-index: 1
+        &.element-animation
+            transform: none
+        &.element-show
+            transform: translateY(calc( -100% - 24px ))
+    h4
+        font-family: $font-family
+        font-weight: 500
+        font-size: 32px
+        line-height: 1.1
+        color: $white
+        position: absolute
+        top: 32px
+        left: 32px
+    &__bg
+        position: absolute
+        inset: 0
+        object-fit: cover
+        z-index: -1
+    &__info
+        position: absolute
+        bottom: 0
+        right: 0
+        width: 174px
+        background: $blue
+        padding: 24px
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 20px
+            line-height: 1.35
+            text-align: center
+            color: $white
+            opacity: .7
+        h2
+            margin: 8px 0 0
+            font-family: $font-family
+            font-weight: 500
+            font-size: 56px
+            line-height: 1.1
+            text-transform: uppercase
+            text-align: center
+            color: $white
+    &__text
+        font-family: $font-family
+        font-weight: 400
+        font-size: 18px
+        line-height: 1.35
+        color: $gray
+        position: absolute
+        bottom: 0
+
+.service
+    padding: 60px 0
+    h2
+        font-family: $font-family
+        font-weight: 500
+        font-size: 56px
+        line-height: 1.1
+        text-transform: uppercase
+        color: $dark-gray
+        span
+            color: $blue
+    &__block
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 24px
+        align-items: start
+    &__tab
+        display: grid
+        grid-template-columns: 100%
+        gap: 24px
+    &__text
+        padding: 0 
+        font-family: $font-family
+        font-weight: 400
+        font-size: 20px
+        line-height: 1.35
+        color: $dark-gray
+        max-height: 0
+        overflow: hidden
+        transition: all .3s
+    &__btn
+        padding: 32px
+        display: grid
+        grid-template-columns: 1fr 24px
+        gap: 24px
+        align-items: center
+        cursor: pointer
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 24px
+            line-height: 1.35
+            color: $dark-gray
+            transition: all .3s
+        svg
+            transition: all .3s
+            transform: rotate(90deg)
+            path
+                stroke: $dark-gray
+                transition: all .3s
+        &:hover
+            p
+                color: $blue
+            svg
+                path
+                    stroke: $blue
+    &__item
+        background: $white
+        &.active
+            .service
+                &__btn
+                    p
+                        color: $blue
+                    svg
+                        transform: rotate(45deg)
+                        path
+                            stroke: $blue
+                &__text
+                    padding: 0 32px 32px
+                    max-height: 500px
+    &__prev
+        position: relative
+        z-index: 1
+        &::before
+            content: ''
+            display: block
+            width: 500px
+            height: 340px
+            position: absolute
+            top: 53px
+            left: 50%
+            transform: translateX(-50%)
+            background: url('../img/logo_bg.svg') center no-repeat
+            background-size: contain
+            z-index: -1
+        img
+            position: absolute
+            top: 0
+            left: 0
+            width: 438px
+            height: 445px
+            opacity: 0
+            transition: all .3s
+            object-fit: cover
+            &.active
+                opacity: 1
+    .btn__blue
+        margin: 32px 0 0 calc( 50% + 12px )
