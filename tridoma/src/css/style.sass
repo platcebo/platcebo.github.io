@@ -163,9 +163,12 @@ body
             color: $white
 
 .nav
-    padding: 24px 0
+    padding: 0
     position: relative
+    &__hum
+        display: none
     .container
+        padding: 24px 48px
         display: flex
         justify-content: flex-start
         align-items: center
@@ -370,6 +373,8 @@ body
     
 .project
     padding: 60px 0
+    &__mob
+        display: none
     &__title
         display: grid
         grid-template-columns: 1fr 1fr
@@ -628,6 +633,15 @@ body
             text-align: center
             color: $white
             opacity: .7
+        h2
+            font-family: $font-family
+            font-weight: 500
+            font-size: 52px
+            line-height: 1.15
+            text-transform: uppercase
+            text-align: center
+            color: $white
+            margin: 8px 0 0
     &__text
         font-family: $font-family
         font-weight: 400
@@ -659,6 +673,8 @@ body
         max-height: 0
         overflow: hidden
         transition: all .3s
+        img
+            display: none
     &__btn
         padding: 32px
         display: grid
@@ -693,12 +709,12 @@ body
                     p
                         color: $blue
                     svg
-                        transform: rotate(45deg)
+                        transform: rotate(-90deg)
                         path
                             stroke: $blue
                 &__text
                     padding: 0 32px 32px
-                    max-height: 500px
+                    max-height: 1000px
     &__prev
         position: relative
         z-index: 1
@@ -833,6 +849,10 @@ body
         font-size: 24px
         line-height: 1.35
         color: $dark-gray
+        span
+            display: none
+    &__item
+        position: relative
     &__text
         margin: 24px 0 0
         display: grid
@@ -845,14 +865,16 @@ body
             line-height: 1.35
             color: $dark-gray
     &__btn
-        margin: -32px -32px 0 0
-        padding: 32px 32px 24px 0
-        width: calc( 100% + 32px )
+        position: absolute
         cursor: pointer
-        display: grid
-        grid-template-columns: 1fr 24px
+        display: flex
+        justify-content: flex-end
+        padding: 36px 32px
         align-items: center
         gap: 16px
+        top: 0
+        left: 0
+        width: 100%
         p
             font-family: $font-family
             font-weight: 400
@@ -979,7 +1001,7 @@ body
     &__tab
         margin: 32px 0 0
         display: grid
-        grid-template-columns: 284px 284px
+        grid-template-columns: 1fr 1fr
         gap: 24px
         &_item
             background: $white
@@ -1147,7 +1169,7 @@ body
                     p
                         color: $blue
                     svg
-                        transform: rotate(45deg)
+                        transform: rotate(-90deg)
                         path
                             stroke: $blue
                 &__text
@@ -1411,11 +1433,34 @@ body
             svg
                 path
                     stroke: $hover
+    &__row
+        margin: 24px 0 0
+        padding: 24px 0 0
+        border-top: 1px solid #ffffff33
+        display: flex
+        justify-content: space-between
+        align-items: center
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.35
+            color: $gray
+        a
+            font-family: $font-family
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.35
+            text-align: right
+            color: $white
 
 .nav-part
     background: $white
     padding: 12px 0
     position: relative
+    display: flex
+    justify-content: center
+    align-items: center
     &__close
         position: absolute
         top: 50%
@@ -1429,10 +1474,6 @@ body
             svg
                 path
                     fill: $hover
-    .container
-        display: flex
-        justify-content: center
-        align-items: center
     img
         width: 24px
     p
@@ -1464,7 +1505,8 @@ section
         h2
             font-size: 52px
     .btn
-        &__blue
+        &__blue,
+        &__wht
             font-size: 14px
     .nav-part
         p
@@ -1514,6 +1556,542 @@ section
         &__row
             margin: 24px 0 0
 
-@media ( max-width: 1440px )
+@media ( max-width: 1600px )
     .project
-        
+        &__item
+            padding: 0 0 110px
+        &__pic
+            height: 450px
+        &__info
+            transform: translateY(calc(100% - 110px))
+            &_header
+                padding: 24px 24px 16px
+                h3
+                    font-size: 36px
+            &_body
+                padding: 16px 24px 24px
+                .btn__blue
+                    margin: 16px 0 0
+        &__price
+            font-size: 30px
+        &__sale
+            font-size: 14px
+        &__dop
+            p
+                font-size: 16px
+        &__block
+            margin: 12px 0 0
+            gap: 12px
+            img
+                height: 84px
+            p
+                font-size: 14px
+        &__wind
+            h3
+                font-size: 36px
+            p
+                font-size: 16px
+    .pref
+        &__info
+            padding: 24px
+            p
+                font-size: 18px
+        &__prev
+            img
+                height: 630px
+    .program
+        &__item
+            height: 325px
+        &__row
+            margin: 230px 0 0
+        h4
+            font-size: 26px
+            top: 24px
+            left: 24px
+        &__info
+            p
+                font-size: 18px
+        &__text
+            font-size: 16px
+    .service
+        &__text
+            font-size: 18px
+            padding: 0 24px
+        &__btn
+            padding: 24px
+        &__item
+            &.active
+                .service__text
+                    padding: 0 24px 24px
+    .advantage
+        &__slide
+            height: 450px
+            padding: 24px
+            h4
+                font-size: 24px
+            p
+                font-size: 18px
+                margin: 12px 0 0
+            img
+                top: 24px
+                right: 24px
+    .tech
+        &__title
+            p
+                font-size: 18px
+        &__item
+            padding: 24px
+            max-height: 115px
+        &__btn
+            padding: 28px 24px
+        &__text
+            margin: 16px 0 0
+            p
+                font-size: 18px
+        &__list
+            p
+                font-size: 18px
+            li
+                &::before
+                    font-size: 18px
+    .gallery
+        &__text
+            font-size: 16px
+    .faq
+        &__text
+            font-size: 18px
+            padding: 0 24px
+        &__btn
+            padding: 24px
+        &__item
+            &.active
+                .faq__text
+                    padding: 0 24px 24px
+    .contact
+        &__block
+            padding: 24px
+            gap: 16px
+        &__name
+            font-size: 18px
+        &__req
+            padding: 24px
+            h4
+                font-size: 26px
+        &__form
+            margin: 24px 0 0
+    .input
+        input,
+        textarea
+            padding: 0 0 12px
+            font-size: 16px
+        p
+            font-size: 16px
+    .itc-select
+        &__toggle
+            font-size: 16px
+        &__option
+            font-size: 16px
+    .footer
+        padding: 48px 0
+        &__text
+            p
+                font-size: 16px
+        &__list
+            a
+                font-size: 14px
+        &__func
+            max-width: 230px
+            a
+                font-size: 16px
+        &__contact
+            ul
+                a
+                    grid-template-columns: 24px 1fr
+                    gap: 8px
+                p
+                    font-size: 18px
+                li
+                    &:last-child
+                        grid-template-columns: 24px 1fr
+                        gap: 8px
+        &__soc
+            a
+                width: 48px
+                height: 48px
+                svg
+                    width: 24px
+        &__row
+            a,
+            p
+                font-size: 16px
+
+@media ( max-width: 1300px )
+    .container
+        padding: 0 32px
+    .nav
+        .container
+            padding: 24px 32px
+            display: grid
+            grid-template-columns: 112px 1fr 60px
+        ul
+            display: none
+        &__soc
+            display: none
+        &__phone
+            margin: 0 auto
+            order: 0
+            p
+                display: none
+        &__hum
+            display: block
+            width: 60px
+            height: 60px
+            background: $blue
+            position: relative
+            cursor: pointer
+            &::before,
+            &::after,
+            span
+                content: ''
+                display: block
+                position: absolute
+                width: 20px
+                height: 1px
+                background: $white
+                left: 20px
+                transition: all .3s
+            &::before
+                top: 24px
+            &::after  
+                top: 36px
+            span
+                top: 30px
+        &.active
+            position: fixed
+            top: 0
+            left: 0
+            width: 100%
+            z-index: 10
+            background: $bg
+            overflow-y: scroll
+            max-height: 100%
+            ul
+                order: 2
+                grid-column: 1/4
+                display: grid
+                grid-template-columns: 100%
+                gap: 16px
+                padding: 24px 0 0
+                margin: 16px 0 0
+                position: relative
+                &::before
+                    content: ''
+                    display: block
+                    width: 100vw
+                    height: 1px
+                    background: $stroke
+                    position: absolute
+                    top: 0
+                    left: 50%
+                    transform: translateX(-50%)
+                a
+                    font-size: 16px
+                    padding: 0 0 16px
+                    border-bottom: 1px solid $stroke
+                    display: block
+            .btn__blue
+                max-width: 100%
+                display: grid
+                grid-column: 1/4
+                order: 4
+                margin: 16px 0 0
+            .nav
+                &__hum
+                    span
+                        opacity: 0
+                    &::before,
+                    &::after
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%) rotate(45deg)
+                    &::after
+                        transform: translate(-50%, -50%) rotate(-45deg)
+                &__soc
+                    display: grid
+                    margin: 24px 0 0
+                    order: 3
+                    grid-column: 1/4
+    .header
+        .container
+            padding: 0
+        &__slide
+            padding: 32px
+            min-height: 844px
+            align-items: flex-start
+        h1,
+        h2
+            font-size: 58px
+        &__plan
+            bottom: 32px
+            right: 32px
+        &__func
+            bottom: 32px
+            left: 32px
+        &__row
+            padding: 0 32px
+            grid-template-columns: 1fr 1fr
+    .project
+        &__wrapper
+            grid-template-columns: 100%
+    .pref
+        &__block
+            grid-template-columns: 100%
+            gap: 0
+        &__prev
+            order: -1
+    .program
+        &__row
+            margin: 32px 0 0
+            grid-template-columns: 100%
+        &__item
+            transform: none !important
+        &__text
+            inset: auto !important
+            position: relative
+            width: 100% !important
+    .service
+        &__prev
+            display: none
+        &__block
+            display: block
+        &__text
+            img
+                display: block
+                width: 100%
+                height: 350px
+                object-fit: cover
+                margin: 0 0 16px
+        .btn__blue
+            margin: 32px auto 0
+            display: block
+            max-width: 100%
+    .advantage
+        &__arrow
+            display: none
+    .tech
+        &__title
+            grid-template-columns: 100%
+            gap: 16px
+        &__item
+            grid-template-columns: 100%
+            gap: 24px
+        &__num
+            span
+                display: inline
+        &__block
+            .tech__num
+                display: none
+    .gallery
+        &__arrow
+            display: none
+    .faq
+        &__block
+            grid-template-columns: 100%
+        .btn
+            &__wht
+                max-width: 100%
+    .contact
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+        &__req
+            grid-column: 1/3
+            order: 5
+            grid-row: auto
+        &__block
+            height: 255px
+    .footer
+        &__wrapper
+            grid-template-columns: 1fr 1fr 1fr 48px
+        &__contact
+            grid-column: 1/5
+            order: 2
+            border-top: 1px solid rgba(255,255,255,.2)
+            max-width: 100%
+            margin: 24px 0 0
+            padding: 24px 0 0
+            ul
+                justify-items: center
+        &__soc
+            justify-content: center
+
+@media ( max-width: 700px )
+    .container
+        padding: 0 24px
+    section
+        h2
+            font-size: 24px
+    .nav
+        .container
+            padding: 16px 24px 
+        &__phone
+            a
+                font-size: 12px
+        &__logo
+            max-width: 90px
+        .container
+            grid-template-columns: 90px 1fr 60px
+    .header
+        padding: 0 0 30px
+        h1,
+        h2
+            font-size: 26px
+        &__subtitle
+            font-size: 18px
+            margin: 12px 0 0
+        &__slide
+            min-height: 490px
+            padding: 32px 24px
+        &__plan
+            position: relative
+            inset: auto
+            max-width: 100%
+        &__row
+            grid-template-columns: 100%
+            padding: 0 24px
+        &__func
+            bottom: auto
+            top: 440px
+            right: 24px
+            left: 24px
+            grid-template-columns: auto 1fr auto
+            p
+                font-size: 18px
+        &__arrow
+            display: none
+        &__info
+            .btn__blue
+                max-width: 100%
+    .project
+        padding: 30px 0
+        &__title
+            grid-template-columns: 100%
+        &__tab
+            grid-template-columns: 100%
+            gap: 12px
+        &__name
+            h3
+                font-size: 22px
+            p
+                font-size: 14px
+        &__price
+            font-size: 22px
+        &__sale
+            font-size: 12px
+        &__desktop
+            display: none
+        &__mob
+            display: block
+        &__price
+            text-align: left
+        &__dop
+            p
+                font-size: 12px
+        &__block
+            grid-template-columns: 100%
+            gap: 4px
+            img
+                display: none
+            p
+                font-size: 14px
+                margin: 0
+        &__var
+            font-size: 18px
+        &__info
+            transform: translateY(calc(100% - 100px))
+        &__item
+            padding: 0 0 90px
+        &__pic
+            height: 350px
+        &__wind
+            h3
+                font-size: 24px
+            p
+                font-size: 14px
+    .pref
+        padding: 30px 0
+        &__prev
+            width: calc( 100% + 48px )
+            margin: 0 -24px
+            img
+                height: 330px
+        .container
+            background: $white
+        &__info
+            padding: 24px 0
+            p
+                font-size: 16px
+            .btn__blue
+                max-width: 100%
+    .program
+        padding: 30px 0
+        &__item
+            height: 244px
+        h4
+            font-size: 20px
+        &__info
+            width: max-content
+            h2
+                font-size: 24px
+            p
+                font-size: 16px
+    .service
+        padding: 30px 0
+        &__text
+            img
+                height: 250px
+    .tech
+        padding: 30px 0 
+        &__arrow
+            display: none
+        &__list
+            grid-template-columns: 100%
+    .gallery
+        padding: 30px 0
+    .faq
+        padding: 30px 0
+    .contact
+        padding: 30px 0 60px
+        &__wrapper
+            grid-template-columns: 100%
+        &__req
+            grid-column: auto
+        &__row
+            grid-template-columns: 100%
+    .footer
+        padding: 32px 0
+        position: relative
+        &__wrapper
+            grid-template-columns: 100%
+        &__up
+            position: absolute
+            top: 32px
+            right: 24px
+        &__contact
+            grid-column: auto
+            ul
+                justify-items: start
+        &__list
+            margin: 16px 0 0
+        &__func
+            margin: 16px 0 0
+        &__soc
+            justify-content: start
+        &__row
+            a,
+            p
+                font-size: 12px
+        &__text
+            margin: 24px 0 0
+    .nav-part
+        p
+            font-size: 12px

@@ -17,16 +17,14 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <div class="nav-part">
-        <div class="container">
+    <nav class="nav">
+        <div class="nav-part">
             <img src="img/part.svg" alt="">
             <p>Официальный партнер «Дом Технониколь»</p>
+            <div class="nav-part__close">
+                <img src="img/close.svg" alt="" class="svg">
+            </div>
         </div>
-        <div class="nav-part__close">
-            <img src="img/close.svg" alt="" class="svg">
-        </div>
-    </div>
-    <nav class="nav">
         <div class="container">
             <a href="#" class="nav__logo"><img src="img/logo.svg" alt=""></a>
             <ul>
@@ -34,12 +32,15 @@
                 <li><a href="#">Кредитование</a></li>
                 <li><a href="#">Технологии</a></li>
                 <li><a href="#">Услуги</a></li>
-                <li><a href="#">Галерея объектов</a></li>
+                <li><a href="#">Галерея</a></li>
                 <li><a href="#">Контакты</a></li>
             </ul>
             <div class="nav__phone">
                 <a href="#">+7 (812) 209-13-33</a>
                 <p>заказать звонок</p>
+            </div>
+            <div class="nav__hum">
+                <span></span>
             </div>
             <div class="nav__soc">
                 <a href="#">
@@ -66,14 +67,13 @@
                             <p class="header__subtitle">Свой дом — это больше не роскошь!</p>
                             <button class="btn__blue">Получить консультацию</button>
                         </div>
-                        <div class="header__plan">
-                            <p>Ипотечные программы</p>
-                            <div class="header__plan_logo">
-                                <img src="img/header_1.svg" alt="">
-                                <img src="img/header_2.svg" alt="">
-                                <img src="img/header_3.svg" alt="">
-                                <img src="img/header_4.svg" alt="">
-                            </div>
+                    </div>
+                    <div class="swiper-slide header__slide">
+                        <img src="img/header_slide.jpg" alt="" class="header__bg">
+                        <div class="header__info">
+                            <h2>энергоэффективные дома заводского производства</h2>
+                            <p class="header__subtitle">Свой дом — это больше не роскошь!</p>
+                            <button class="btn__blue">Получить консультацию</button>
                         </div>
                     </div>
                     <div class="swiper-slide header__slide">
@@ -83,15 +83,6 @@
                             <p class="header__subtitle">Свой дом — это больше не роскошь!</p>
                             <button class="btn__blue">Получить консультацию</button>
                         </div>
-                        <div class="header__plan">
-                            <p>Ипотечные программы</p>
-                            <div class="header__plan_logo">
-                                <img src="img/header_1.svg" alt="">
-                                <img src="img/header_2.svg" alt="">
-                                <img src="img/header_3.svg" alt="">
-                                <img src="img/header_4.svg" alt="">
-                            </div>
-                        </div>
                     </div>
                     <div class="swiper-slide header__slide">
                         <img src="img/header_slide.jpg" alt="" class="header__bg">
@@ -100,15 +91,6 @@
                             <p class="header__subtitle">Свой дом — это больше не роскошь!</p>
                             <button class="btn__blue">Получить консультацию</button>
                         </div>
-                        <div class="header__plan">
-                            <p>Ипотечные программы</p>
-                            <div class="header__plan_logo">
-                                <img src="img/header_1.svg" alt="">
-                                <img src="img/header_2.svg" alt="">
-                                <img src="img/header_3.svg" alt="">
-                                <img src="img/header_4.svg" alt="">
-                            </div>
-                        </div>
                     </div>
                     <div class="swiper-slide header__slide">
                         <img src="img/header_slide.jpg" alt="" class="header__bg">
@@ -116,32 +98,6 @@
                             <h2>энергоэффективные дома заводского производства</h2>
                             <p class="header__subtitle">Свой дом — это больше не роскошь!</p>
                             <button class="btn__blue">Получить консультацию</button>
-                        </div>
-                        <div class="header__plan">
-                            <p>Ипотечные программы</p>
-                            <div class="header__plan_logo">
-                                <img src="img/header_1.svg" alt="">
-                                <img src="img/header_2.svg" alt="">
-                                <img src="img/header_3.svg" alt="">
-                                <img src="img/header_4.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide header__slide">
-                        <img src="img/header_slide.jpg" alt="" class="header__bg">
-                        <div class="header__info">
-                            <h2>энергоэффективные дома заводского производства</h2>
-                            <p class="header__subtitle">Свой дом — это больше не роскошь!</p>
-                            <button class="btn__blue">Получить консультацию</button>
-                        </div>
-                        <div class="header__plan">
-                            <p>Ипотечные программы</p>
-                            <div class="header__plan_logo">
-                                <img src="img/header_1.svg" alt="">
-                                <img src="img/header_2.svg" alt="">
-                                <img src="img/header_3.svg" alt="">
-                                <img src="img/header_4.svg" alt="">
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -151,6 +107,15 @@
                     <div class="swiper-pagination header__pag"></div>
                     <p class="header__end">04</p>
                     <div class="swiper-button-next header__next header__arrow"><img class="svg" src="img/arrow.svg" alt=""></div>
+                </div>
+                <div class="header__plan">
+                    <p>Ипотечные программы</p>
+                    <div class="header__plan_logo">
+                        <img src="img/header_1.svg" alt="">
+                        <img src="img/header_2.svg" alt="">
+                        <img src="img/header_3.svg" alt="">
+                        <img src="img/header_4.svg" alt="">
+                    </div>
                 </div>
             </div>
             <div class="header__row">
@@ -196,6 +161,10 @@
                                     <h3>МОНЕ</h3>
                                     <p>72.19 м²</p>
                                 </div>
+                                <div class="project__mob">
+                                    <p class="project__price">от 1 267 804 ₽</p>
+                                    <p class="project__sale">от 1 850 975 руб.</p>
+                                </div>
                                 <div class="project__dop">
                                     <div>
                                         <img src="img/project_dop_1.svg" alt="">
@@ -211,7 +180,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div>
+                            <div class="project__desktop">
                                 <p class="project__price">от 1 267 804 ₽</p>
                                 <p class="project__sale">от 1 850 975 руб.</p>
                             </div>
@@ -253,6 +222,10 @@
                                     <h3>МОНЕ</h3>
                                     <p>72.19 м²</p>
                                 </div>
+                                <div class="project__mob">
+                                    <p class="project__price">от 1 267 804 ₽</p>
+                                    <p class="project__sale">от 1 850 975 руб.</p>
+                                </div>
                                 <div class="project__dop">
                                     <div>
                                         <img src="img/project_dop_1.svg" alt="">
@@ -268,7 +241,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div>
+                            <div class="project__desktop">
                                 <p class="project__price">от 1 267 804 ₽</p>
                                 <p class="project__sale">от 1 850 975 руб.</p>
                             </div>
@@ -310,6 +283,10 @@
                                     <h3>МОНЕ</h3>
                                     <p>72.19 м²</p>
                                 </div>
+                                <div class="project__mob">
+                                    <p class="project__price">от 1 267 804 ₽</p>
+                                    <p class="project__sale">от 1 850 975 руб.</p>
+                                </div>
                                 <div class="project__dop">
                                     <div>
                                         <img src="img/project_dop_1.svg" alt="">
@@ -325,7 +302,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div>
+                            <div class="project__desktop">
                                 <p class="project__price">от 1 267 804 ₽</p>
                                 <p class="project__sale">от 1 850 975 руб.</p>
                             </div>
@@ -367,6 +344,10 @@
                                     <h3>МОНЕ</h3>
                                     <p>72.19 м²</p>
                                 </div>
+                                <div class="project__mob">
+                                    <p class="project__price">от 1 267 804 ₽</p>
+                                    <p class="project__sale">от 1 850 975 руб.</p>
+                                </div>
                                 <div class="project__dop">
                                     <div>
                                         <img src="img/project_dop_1.svg" alt="">
@@ -382,7 +363,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div>
+                            <div class="project__desktop">
                                 <p class="project__price">от 1 267 804 ₽</p>
                                 <p class="project__sale">от 1 850 975 руб.</p>
                             </div>
@@ -426,6 +407,10 @@
                                     <h3>МОНЕ</h3>
                                     <p>72.19 м²</p>
                                 </div>
+                                <div class="project__mob">
+                                    <p class="project__price">от 1 267 804 ₽</p>
+                                    <p class="project__sale">от 1 850 975 руб.</p>
+                                </div>
                                 <div class="project__dop">
                                     <div>
                                         <img src="img/project_dop_1.svg" alt="">
@@ -441,7 +426,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div>
+                            <div class="project__desktop">
                                 <p class="project__price">от 1 267 804 ₽</p>
                                 <p class="project__sale">от 1 850 975 руб.</p>
                             </div>
@@ -483,6 +468,10 @@
                                     <h3>МОНЕ</h3>
                                     <p>72.19 м²</p>
                                 </div>
+                                <div class="project__mob">
+                                    <p class="project__price">от 1 267 804 ₽</p>
+                                    <p class="project__sale">от 1 850 975 руб.</p>
+                                </div>
                                 <div class="project__dop">
                                     <div>
                                         <img src="img/project_dop_1.svg" alt="">
@@ -498,7 +487,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div>
+                            <div class="project__desktop">
                                 <p class="project__price">от 1 267 804 ₽</p>
                                 <p class="project__sale">от 1 850 975 руб.</p>
                             </div>
@@ -540,6 +529,10 @@
                                     <h3>МОНЕ</h3>
                                     <p>72.19 м²</p>
                                 </div>
+                                <div class="project__mob">
+                                    <p class="project__price">от 1 267 804 ₽</p>
+                                    <p class="project__sale">от 1 850 975 руб.</p>
+                                </div>
                                 <div class="project__dop">
                                     <div>
                                         <img src="img/project_dop_1.svg" alt="">
@@ -555,7 +548,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div>
+                            <div class="project__desktop">
                                 <p class="project__price">от 1 267 804 ₽</p>
                                 <p class="project__sale">от 1 850 975 руб.</p>
                             </div>
@@ -597,6 +590,10 @@
                                     <h3>МОНЕ</h3>
                                     <p>72.19 м²</p>
                                 </div>
+                                <div class="project__mob">
+                                    <p class="project__price">от 1 267 804 ₽</p>
+                                    <p class="project__sale">от 1 850 975 руб.</p>
+                                </div>
                                 <div class="project__dop">
                                     <div>
                                         <img src="img/project_dop_1.svg" alt="">
@@ -612,7 +609,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div>
+                            <div class="project__desktop">
                                 <p class="project__price">от 1 267 804 ₽</p>
                                 <p class="project__sale">от 1 850 975 руб.</p>
                             </div>
@@ -726,6 +723,7 @@
                             <img src="img/arrow.svg" alt="" class="svg">
                         </div>
                         <div class="service__text">
+                            <img src="img/service_1.jpg" alt="">
                             <p>С учётом сложившейся международной обстановки, выбранный нами инновационный путь однозначно фиксирует необходимость первоочередных требований. Но высокое качество позиционных исследований требует определения и уточнения как самодостаточных, так и внешне зависимых концептуальных решений.</p>
                         </div>
                     </div>
@@ -735,6 +733,7 @@
                             <img src="img/arrow.svg" alt="" class="svg">
                         </div>
                         <div class="service__text">
+                            <img src="img/program_1.jpg" alt="">
                             <p>С учётом сложившейся международной обстановки, выбранный нами инновационный путь однозначно фиксирует необходимость первоочередных требований. Но высокое качество позиционных исследований требует определения и уточнения как самодостаточных, так и внешне зависимых концептуальных решений.</p>
                         </div>
                     </div>
@@ -744,6 +743,7 @@
                             <img src="img/arrow.svg" alt="" class="svg">
                         </div>
                         <div class="service__text">
+                            <img src="img/program_2.jpg" alt="">
                             <p>С учётом сложившейся международной обстановки, выбранный нами инновационный путь однозначно фиксирует необходимость первоочередных требований. Но высокое качество позиционных исследований требует определения и уточнения как самодостаточных, так и внешне зависимых концептуальных решений.</p>
                         </div>
                     </div>
@@ -753,6 +753,7 @@
                             <img src="img/arrow.svg" alt="" class="svg">
                         </div>
                         <div class="service__text">
+                            <img src="img/program_4.jpg" alt="">
                             <p>С учётом сложившейся международной обстановки, выбранный нами инновационный путь однозначно фиксирует необходимость первоочередных требований. Но высокое качество позиционных исследований требует определения и уточнения как самодостаточных, так и внешне зависимых концептуальных решений.</p>
                         </div>
                     </div>
@@ -820,15 +821,18 @@
             </div>
             <div class="tech__wrapper">
                 <div class="tech__item">
+                    <div class="tech__btn">
+                        <img src="img/arrow.svg" alt="" class="svg">
+                    </div>
                     <div class="tech__info">
-                        <p class="tech__num">01</p>
+                        <p class="tech__num">01 <span>Фундамент</span></p>
                         <div class="tech__text">
                             <p>Система изоляции подземных конструкций с однослойной гидроизоляционной мембраной из битумно-полимерных рулонных материалов, возводимых без технического этажа или подвального помещения.</p>
                             <p>Для устройства гидроизоляционной мембраны применяется битумно-полимерный рулонный материал Техноэласт ФУНДАМЕНТ ГИДРО в один слой, который наплавляется по предварительно огрунтованному основанию. В качестве материала подготовки основания применяется битумный праймер ТЕХНОНИКОЛЬ №01, который наносится кистями или валиками в один слой.</p>
                         </div>
                     </div>
                     <div class="tech__block">
-                        <div class="tech__btn">
+                        <div class="tech__num">
                             <p>Фундамент</p>
                             <img src="img/arrow.svg" alt="" class="svg">
                         </div>
@@ -893,15 +897,18 @@
                     </div>
                 </div>
                 <div class="tech__item">
+                    <div class="tech__btn">
+                        <img src="img/arrow.svg" alt="" class="svg">
+                    </div>
                     <div class="tech__info">
-                        <p class="tech__num">01</p>
+                        <p class="tech__num">01 <span>Фундамент</span></p>
                         <div class="tech__text">
                             <p>Система изоляции подземных конструкций с однослойной гидроизоляционной мембраной из битумно-полимерных рулонных материалов, возводимых без технического этажа или подвального помещения.</p>
                             <p>Для устройства гидроизоляционной мембраны применяется битумно-полимерный рулонный материал Техноэласт ФУНДАМЕНТ ГИДРО в один слой, который наплавляется по предварительно огрунтованному основанию. В качестве материала подготовки основания применяется битумный праймер ТЕХНОНИКОЛЬ №01, который наносится кистями или валиками в один слой.</p>
                         </div>
                     </div>
                     <div class="tech__block">
-                        <div class="tech__btn">
+                        <div class="tech__num">
                             <p>Фундамент</p>
                             <img src="img/arrow.svg" alt="" class="svg">
                         </div>
@@ -966,15 +973,18 @@
                     </div>
                 </div>
                 <div class="tech__item">
+                    <div class="tech__btn">
+                        <img src="img/arrow.svg" alt="" class="svg">
+                    </div>
                     <div class="tech__info">
-                        <p class="tech__num">01</p>
+                        <p class="tech__num">01 <span>Фундамент</span></p>
                         <div class="tech__text">
                             <p>Система изоляции подземных конструкций с однослойной гидроизоляционной мембраной из битумно-полимерных рулонных материалов, возводимых без технического этажа или подвального помещения.</p>
                             <p>Для устройства гидроизоляционной мембраны применяется битумно-полимерный рулонный материал Техноэласт ФУНДАМЕНТ ГИДРО в один слой, который наплавляется по предварительно огрунтованному основанию. В качестве материала подготовки основания применяется битумный праймер ТЕХНОНИКОЛЬ №01, который наносится кистями или валиками в один слой.</p>
                         </div>
                     </div>
                     <div class="tech__block">
-                        <div class="tech__btn">
+                        <div class="tech__num">
                             <p>Фундамент</p>
                             <img src="img/arrow.svg" alt="" class="svg">
                         </div>
@@ -1039,15 +1049,18 @@
                     </div>
                 </div>
                 <div class="tech__item">
+                    <div class="tech__btn">
+                        <img src="img/arrow.svg" alt="" class="svg">
+                    </div>
                     <div class="tech__info">
-                        <p class="tech__num">01</p>
+                        <p class="tech__num">01 <span>Фундамент</span></p>
                         <div class="tech__text">
                             <p>Система изоляции подземных конструкций с однослойной гидроизоляционной мембраной из битумно-полимерных рулонных материалов, возводимых без технического этажа или подвального помещения.</p>
                             <p>Для устройства гидроизоляционной мембраны применяется битумно-полимерный рулонный материал Техноэласт ФУНДАМЕНТ ГИДРО в один слой, который наплавляется по предварительно огрунтованному основанию. В качестве материала подготовки основания применяется битумный праймер ТЕХНОНИКОЛЬ №01, который наносится кистями или валиками в один слой.</p>
                         </div>
                     </div>
                     <div class="tech__block">
-                        <div class="tech__btn">
+                        <div class="tech__num">
                             <p>Фундамент</p>
                             <img src="img/arrow.svg" alt="" class="svg">
                         </div>
@@ -1112,15 +1125,18 @@
                     </div>
                 </div>
                 <div class="tech__item">
+                    <div class="tech__btn">
+                        <img src="img/arrow.svg" alt="" class="svg">
+                    </div>
                     <div class="tech__info">
-                        <p class="tech__num">01</p>
+                        <p class="tech__num">01 <span>Фундамент</span></p>
                         <div class="tech__text">
                             <p>Система изоляции подземных конструкций с однослойной гидроизоляционной мембраной из битумно-полимерных рулонных материалов, возводимых без технического этажа или подвального помещения.</p>
                             <p>Для устройства гидроизоляционной мембраны применяется битумно-полимерный рулонный материал Техноэласт ФУНДАМЕНТ ГИДРО в один слой, который наплавляется по предварительно огрунтованному основанию. В качестве материала подготовки основания применяется битумный праймер ТЕХНОНИКОЛЬ №01, который наносится кистями или валиками в один слой.</p>
                         </div>
                     </div>
                     <div class="tech__block">
-                        <div class="tech__btn">
+                        <div class="tech__num">
                             <p>Фундамент</p>
                             <img src="img/arrow.svg" alt="" class="svg">
                         </div>

@@ -20,17 +20,26 @@ var swiper = new Swiper(".header__slider", {
     on: {
         slideChange: (event) => {
             headerStart.innerHTML = "0" + (swiper.realIndex + 1)
+            console.log(swiper.realIndex)
         }
     }
 }); 
 
 var swiper = new Swiper(".advantage__slider", {
-    slidesPerView: 4,
+    slidesPerView: 1,
     spaceBetween: 24,
     navigation: {
         nextEl: ".advantage__next",
         prevEl: ".advantage__prev",
     },
+    breakpoints: {
+        1301: {
+            slidesPerView: 4
+        },
+        701: {
+            slidesPerView: 2
+        },
+    }
 }); 
 
 var swiper = new Swiper(".tech__slider", {
@@ -46,12 +55,17 @@ var swiper = new Swiper(".tech__slider", {
 }); 
 
 var swiper = new Swiper(".gallery__slider", {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 24,
     navigation: {
         nextEl: ".gallery__next",
         prevEl: ".gallery__prev",
     },
+    breakpoints: {
+        1301: {
+            slidesPerView: 3
+        },
+    }
 }); 
 
 ".svg".toSVG({
@@ -242,5 +256,19 @@ let navPart = document.querySelector('.nav-part'),
 if(navPart !== null) {
     navPartClose.addEventListener('click', ()=>{
         navPart.classList.add('remove')
+    })
+}
+
+let nav = document.querySelector('.nav'),
+    navHum = document.querySelector('.nav__hum');
+
+if(nav !== null) {
+    navHum.addEventListener('click',()=>{
+        nav.classList.toggle('active')
+        if(nav.classList.contains('active')) {
+            nav.style.height = window.innerHeight +'px'
+        } else {
+            nav.style.height = 'auto'
+        }
     })
 }
