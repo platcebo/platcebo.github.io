@@ -6,7 +6,7 @@ if(headerEnd !== null) {
     headerEnd.innerHTML = "0" + headerSlide.length
 }
 
-var swiper = new Swiper(".header__slider", {
+var swiperHeader = new Swiper(".header__slider", {
     slidesPerView: 1,
     spaceBetween: 20,
     pagination: {
@@ -18,9 +18,8 @@ var swiper = new Swiper(".header__slider", {
         prevEl: ".header__prev",
     },
     on: {
-        slideChange: (event) => {
-            headerStart.innerHTML = "0" + (swiper.realIndex + 1)
-            console.log(swiper.realIndex)
+        slideChange: () => {
+            headerStart.innerHTML = "0" + (swiperHeader.activeIndex + 1)
         }
     }
 }); 
@@ -270,5 +269,52 @@ if(nav !== null) {
         } else {
             nav.style.height = 'auto'
         }
+    })
+}
+
+function modalToggle(modal) {
+    modal.classList.toggle('active')
+    if(modal.classList.contains('active')) {
+        modal.style.height = window.innerHeight + 'px'
+    } else {
+        modal.style.height = auto
+    }
+}
+
+let modalCall = document.querySelector('.modal-call'),
+    modalCallBtn = document.querySelectorAll('.modal-call__btn'),
+    modalCallOf = document.querySelector('.modal-call__overflow'),
+    modalCallClose = document.querySelector('.modal-call__close');
+
+if(modalCall !== null) {
+    modalCallBtn.forEach((item)=>{
+        item.addEventListener('click', ()=>{
+            modalToggle(modalCall)
+        })
+    })
+    modalCallClose.addEventListener('click', ()=>{
+        modalToggle(modalCall)
+    })
+    modalCallOf.addEventListener('click', ()=>{
+        modalToggle(modalCall)
+    })
+}
+
+let modalFaq = document.querySelector('.modal-faq'),
+    modalFaqBtn = document.querySelectorAll('.modal-faq__btn'),
+    modalFaqOf = document.querySelector('.modal-faq__overflow'),
+    modalFaqClose = document.querySelector('.modal-faq__close');
+
+if(modalFaq !== null) {
+    modalFaqBtn.forEach((item)=>{
+        item.addEventListener('click', ()=>{
+            modalToggle(modalFaq)
+        })
+    })
+    modalFaqClose.addEventListener('click', ()=>{
+        modalToggle(modalFaq)
+    })
+    modalFaqOf.addEventListener('click', ()=>{
+        modalToggle(modalFaq)
     })
 }
