@@ -72,8 +72,6 @@ var swiper = new Swiper(".gallery__slider", {
     onComplete: function() {}
 });
 
-const select1 = new ItcCustomSelect('#select-1');
-
 function onEntry(entry) {
     entry.forEach(change => {
         if (change.isIntersecting) {
@@ -153,7 +151,7 @@ let acc = document.querySelectorAll('.acc__item'),
     accBtn = document.querySelectorAll('.acc__btn'),
     accImg = document.querySelectorAll('.service__prev img');
 
-if(acc !== null) {
+if(acc.length !== 0 && acc !== null) {
     acc[0].classList.add('active')
     accImg[0].classList.add('active')
     for (let a = 0; a < accBtn.length; a++) {
@@ -171,7 +169,7 @@ if(acc !== null) {
 let tech = document.querySelectorAll('.tech__item'),
     techBtn = document.querySelectorAll('.tech__btn');
 
-if(tech !== null) {
+if(tech !== null && tech.length !== 0) {
     tech[0].classList.add('active')
     for (let a = 0; a < techBtn.length; a++) {
         techBtn[a].addEventListener('click', ()=>{
@@ -186,7 +184,7 @@ if(tech !== null) {
 let faq = document.querySelectorAll('.faq__item'),
     faqBtn = document.querySelectorAll('.faq__btn');
 
-if(faq !== null) {
+if(faq !== null && faq.length !== 0) {
     faq[0].classList.add('active')
     for (let a = 0; a < faqBtn.length; a++) {
         faqBtn[a].addEventListener('click', ()=>{
@@ -194,7 +192,6 @@ if(faq !== null) {
                 item.classList.remove('active')
             })
             faq[a].classList.add('active')
-            console.log('dfdf')
         })
     }
 }
@@ -277,7 +274,7 @@ function modalToggle(modal) {
     if(modal.classList.contains('active')) {
         modal.style.height = window.innerHeight + 'px'
     } else {
-        modal.style.height = auto
+        modal.style.height = 'auto'
     }
 }
 
@@ -317,4 +314,8 @@ if(modalFaq !== null) {
     modalFaqOf.addEventListener('click', ()=>{
         modalToggle(modalFaq)
     })
+}
+
+if(document.querySelectorAll('.itc-select')!==null) {
+    const select1 = new ItcCustomSelect('#select-1');
 }

@@ -2468,3 +2468,151 @@ section
             margin: 12px auto 0
         &__form
             margin: 40px 0 0
+
+.nav
+    &__border
+        border-bottom: 1px solid $stroke
+
+.thanks
+    padding: 132px 0 345px
+    position: relative
+    overflow: hidden
+    h1
+        font-family: $font-family
+        font-weight: 500
+        font-size: 70px
+        line-height: 1.15
+        text-transform: uppercase
+        text-align: center
+        color: $dark-gray
+        max-width: 812px
+        margin: 0 auto
+        span
+            color: $blue
+    &__subtitle
+        margin: 12px 0 0
+        font-family: $font-family
+        font-weight: 400
+        font-size: 20px
+        line-height: 1.35
+        text-align: center
+        color: $gray
+    .btn__blue
+        margin: 32px auto 0
+    &::before
+        content: ''
+        display: block
+        width: 910px
+        height: 624px
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        bottom: -350px
+        background: url('../img/thanks_bg.svg') center no-repeat
+        background-size: contain
+
+.error
+    padding: 12px 0 56px
+    position: relative
+    &__bg
+        display: block
+        width: 100%
+        max-width: 1075px
+        margin: 0 auto
+    h1
+        font-family: $font-family
+        font-weight: 500
+        font-size: 70px
+        line-height: 1.15
+        text-transform: uppercase
+        text-align: center
+        color: $dark-gray
+        margin: 0 auto
+        span
+            color: $blue
+    &__subtitle
+        margin: 12px auto 0
+        font-family: $font-family
+        font-weight: 400
+        font-size: 20px
+        line-height: 1.35
+        text-align: center
+        color: $gray
+        max-width: 860px
+    .btn__blue
+        margin: 32px auto 0
+
+@media ( max-width: 1500px )
+    .thanks
+        padding: 113px 0 290px
+        &::before
+            width: 738px
+            height: 507px
+            bottom: -280px
+        h1
+            font-size: 64px
+        &__subtitle
+            font-size: 18px
+    .error
+        padding: 23px 0 93px
+        h1
+            font-size: 64px
+        &__subtitle
+            font-size: 18px
+        &__bg
+            max-width: 711px
+
+@media ( max-width: 900px )
+    .thanks
+        padding: 194px 0 385px
+        &::before
+            width: calc( 100% - 80px )
+            height: 500px
+            bottom: 0
+            left: 40px
+            right: 40px
+            transform: translateY(50%)
+        h1
+            font-size: 58px
+        &__subtitle
+            font-size: 18px
+    .error
+        padding: 46px 0 137px
+        h1
+            font-size: 58px
+            span
+                display: block
+        &__subtitle
+            font-size: 18px
+        &__bg
+            max-width: 100%
+
+@media ( max-width: 600px )
+    .thanks
+        padding: 60px 0 230px
+        &::before
+            width: calc( 100% - 48px )
+            height: 500px
+            bottom: 0
+            left: 24px
+            right: 24px
+            transform: translateY(50%)
+        h1
+            font-size: 26px
+            max-width: 310px
+        &__subtitle
+            font-size: 16px
+            max-width: 170px
+            margin: 12px auto 0
+        .btn__blue
+            margin: 24px 0 0
+            max-width: 100%
+    .error
+        padding: 6px 0 70px
+        h1
+            font-size: 26px
+        &__subtitle
+            font-size: 16px
+        .btn__blue
+            margin: 24px 0 0
+            max-width: 100%
