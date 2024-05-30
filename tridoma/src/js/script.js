@@ -56,6 +56,11 @@ var swiper = new Swiper(".tech__slider", {
 var swiper = new Swiper(".gallery__slider", {
     slidesPerView: 1,
     spaceBetween: 24,
+    loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
     navigation: {
         nextEl: ".gallery__next",
         prevEl: ".gallery__prev",
@@ -156,12 +161,16 @@ if(acc.length !== 0 && acc !== null) {
     accImg[0].classList.add('active')
     for (let a = 0; a < accBtn.length; a++) {
         accBtn[a].addEventListener('click', ()=>{
-            acc.forEach((item, i) =>{
-                item.classList.remove('active')
-                accImg[i].classList.remove('active')
-            })
-            acc[a].classList.add('active')
-            accImg[a].classList.add('active')
+            if(acc[a].classList.contains('active')) {
+                acc[a].classList.remove('active')
+            } else {
+                acc.forEach((item, i) =>{
+                    item.classList.remove('active')
+                    accImg[i].classList.remove('active')
+                })
+                acc[a].classList.add('active')
+                accImg[a].classList.add('active')
+            }
         })
     }
 }
@@ -173,10 +182,14 @@ if(tech !== null && tech.length !== 0) {
     tech[0].classList.add('active')
     for (let a = 0; a < techBtn.length; a++) {
         techBtn[a].addEventListener('click', ()=>{
-            tech.forEach((item, i) =>{
-                item.classList.remove('active')
-            })
-            tech[a].classList.add('active')
+            if(tech[a].classList.contains('active')) {
+                tech[a].classList.remove('active')
+            } else {
+                tech.forEach((item, i) =>{
+                    item.classList.remove('active')
+                })
+                tech[a].classList.add('active')
+            }
         })
     }
 }
@@ -188,10 +201,14 @@ if(faq !== null && faq.length !== 0) {
     faq[0].classList.add('active')
     for (let a = 0; a < faqBtn.length; a++) {
         faqBtn[a].addEventListener('click', ()=>{
-            faq.forEach((item, i) =>{
-                item.classList.remove('active')
-            })
-            faq[a].classList.add('active')
+            if(faq[a].classList.contains('active')) {
+                faq[a].classList.remove('active')
+            } else {
+                faq.forEach((item, i) =>{
+                    item.classList.remove('active')
+                })
+                faq[a].classList.add('active')
+            }
         })
     }
 }
