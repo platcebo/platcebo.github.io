@@ -2653,3 +2653,179 @@ section
         .btn__blue
             margin: 24px 0 0
             max-width: 100%
+
+.breadcrumbs
+    display: flex
+    flex-wrap: wrap
+    margin: 0 0 48px
+    a
+        margin: 0 12px 0 0
+        font-family: $font-family
+        font-weight: 400
+        font-size: 14px
+        line-height: 1.35
+        color: $gray
+    a,
+    p
+        display: block
+    p
+        font-family: $font-family
+        font-weight: 400
+        font-size: 14px
+        line-height: 1.35
+        color: $blue
+        &::before 
+            display: inline
+            content: '/'
+            margin: 0 12px 0 0
+            font-family: $font-family
+            font-weight: 400
+            font-size: 14px
+            line-height: 1.35
+            color: $gray
+
+.privacy
+    padding: 24px 0 120px
+    h1
+        font-family: $font-family
+        font-weight: 500
+        font-size: 70px
+        line-height: 1.15
+        text-transform: uppercase
+        max-width: 950px
+        color: $dark-gray
+        span
+            color: $blue
+    &__wrapper
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 32px
+    &__name
+        font-family: $font-family
+        font-weight: 600
+        font-size: 18px
+        line-height: 1.35
+        text-transform: uppercase
+        color: $dark-gray
+        max-width: 560px
+    &__block
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 32px
+    &__text
+        display: grid
+        grid-template-columns: 100%
+        gap: 24px
+        p,
+        li,
+        a
+            font-family: $font-family
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.35
+            color: $gray
+        a
+            color: $blue
+    table
+        border: 1px solid $stroke
+        tr
+            border-bottom: 1px solid $stroke
+            &:last-child
+                border: none
+        th,
+        td
+            border-right: 1px solid $stroke
+            padding: 24px 32px
+            color: $gray
+            text-align: start
+            vertical-align: middle
+            &:last-child
+                border: none
+            p,
+            li,
+            a
+                font-family: $font-family
+                font-weight: 400
+                font-size: 18px
+                line-height: 1.35
+            a
+                color: $blue
+        th
+            color: $black
+        li
+            display: grid
+            grid-template-columns: 26px 1fr
+            &::before
+                content: ''
+                display: block
+                width: 4px
+                height: 4px
+                border-radius: 100%
+                margin: 9px auto 0
+                background: $gray
+
+@media ( max-width: 1500px )
+    .privacy
+        table
+            th,
+            td
+                padding: 24px
+                p,
+                li,
+                a
+                    font-size: 16px
+        h1
+            font-size: 64px
+        &__text
+            li,
+            p,
+            a
+                font-size: 16px
+
+@media ( max-width: 1024px )
+    .privacy
+        h1
+            font-size: 58px
+        &__block
+            grid-template-columns: 100%
+            gap: 24px
+        &__text
+            gap: 16px
+            p,
+            a,
+            li
+                font-size: 18px
+        &__name
+            font-size: 24px
+
+@media ( max-width: 600px )
+    .breadcrumbs
+        margin: 0 0 24px
+    .privacy
+        table
+            tr
+                padding: 24px
+                display: block
+            td
+                margin: 16px 0 0
+            th,
+            td
+                padding: 0
+                border: none
+                display: block
+        h1
+            font-size: 26px
+            max-width: 400px
+        &__name
+            font-size: 16px
+        &__wrapper
+            margin: 24px 0 0
+            gap: 24px
+        &__block
+            gap: 16px
+        &__text
+            p,
+            li,
+            a
+                font-size: 16px
