@@ -9,6 +9,9 @@ if(headerEnd !== null) {
 var swiperHeader = new Swiper(".header__slider", {
     slidesPerView: 1,
     spaceBetween: 20,
+    autoplay: {
+        delay: 5000,
+    },    
     pagination: {
         el: ".header__pag",
         type: "progressbar",
@@ -21,6 +24,7 @@ var swiperHeader = new Swiper(".header__slider", {
         slideChange: () => {
             headerStart.innerHTML = "0" + (swiperHeader.activeIndex + 1)
         }
+        
     }
 }); 
 
