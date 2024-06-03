@@ -37,7 +37,7 @@
             </ul>
             <div class="nav__phone">
                 <a href="#">+7 (812) 209-13-33</a>
-                <p class="modal-call__btn">заказать звонок</p>
+                <p class="modal-call__btn link" data-content="заказать звонок"><span>заказать звонок</span></p>
             </div>
             <div class="nav__hum">
                 <span></span>
@@ -122,7 +122,7 @@
                 <div class="header__func element-animation">
                     <div class="swiper-button-prev header__prev header__arrow"><img class="svg" src="img/arrow.svg" alt=""></div>
                     <p class="header__start">01</p>
-                    <div class="swiper-pagination header__pag"></div>
+                    <div class="header__pag"><span></span></div>
                     <p class="header__end">04</p>
                     <div class="swiper-button-next header__next header__arrow"><img class="svg" src="img/arrow.svg" alt=""></div>
                 </div>
@@ -139,19 +139,19 @@
             <div class="header__row">
                 <div class="header__item element-animation">
                     <div><img src="img/house.svg" alt="" class="svg"></div>
-                    <p>Домокомплект высокой степени готовности</p>
+                    <p>Домокомплект высокой <br> степени готовности</p>
                 </div>
                 <div class="header__item element-animation">
                     <div><img src="img/material.svg" alt="" class="svg"></div>
-                    <p>Материалы профессиональной линейки ТЕХНОНИКОЛЬ</p>
+                    <p>Материалы <br> профессиональной <br> линейки ТЕХНОНИКОЛЬ</p>
                 </div>
                 <div class="header__item element-animation">
                     <div><img src="img/cycle.svg" alt="" class="svg"></div>
-                    <p>Полный цикл заводского производства</p>
+                    <p>Полный цикл заводского <br> производства</p>
                 </div>
                 <div class="header__item element-animation">
                     <div><img src="img/coins.svg" alt="" class="svg"></div>
-                    <p>Готовое решение с фиксированной ценой</p>
+                    <p>Готовое решение <br> с фиксированной ценой</p>
                 </div>
             </div>
         </div>
@@ -161,8 +161,8 @@
             <div class="project__title">
                 <h2>наши <span>проекты</span></h2>
                 <ul class="project__tab tab">
-                    <li class="project__tab_item active tab__item">Стандарт</li>
-                    <li class="project__tab_item tab__item">Уютный</li>
+                    <li class="project__tab_item active tab__item">серия «Стандарт»</li>
+                    <li class="project__tab_item tab__item">серия «Уютный»</li>
                 </ul>
             </div>
             <div class="project__wrapper active tab__wrapper">
@@ -245,7 +245,6 @@
                                 </div>
                                 <div class="project__mob">
                                     <p class="project__price">от 1 267 804 ₽</p>
-                                    <p class="project__sale">от 1 850 975 руб.</p>
                                 </div>
                                 <div class="project__dop">
                                     <div>
@@ -264,7 +263,6 @@
                             </div>
                             <div class="project__desktop">
                                 <p class="project__price">от 1 267 804 ₽</p>
-                                <p class="project__sale">от 1 850 975 руб.</p>
                             </div>
                         </div>
                         <div class="project__info_body">
@@ -309,7 +307,6 @@
                                 </div>
                                 <div class="project__mob">
                                     <p class="project__price">от 1 267 804 ₽</p>
-                                    <p class="project__sale">от 1 850 975 руб.</p>
                                 </div>
                                 <div class="project__dop">
                                     <div>
@@ -328,7 +325,6 @@
                             </div>
                             <div class="project__desktop">
                                 <p class="project__price">от 1 267 804 ₽</p>
-                                <p class="project__sale">от 1 850 975 руб.</p>
                             </div>
                         </div>
                         <div class="project__info_body">
@@ -697,13 +693,14 @@
                 <div class="pref__info element-animation">
                     <h2><span>льготные <br>программы ипотеки</span> <br>на строительство дома</h2>
                     <p>Уникальные ипотечные программы и специальные условия от ведущих банков. Просто заполните анкету и получите одобрение. Всего один шаг, и дом — ваш.</p>
+                    <img src="img/pref.jpg" alt="" class="pref__mob">
                     <div class="pref__row">
                         <img src="img/header_1.svg" alt="">
                         <img src="img/header_2.svg" alt="">
                         <img src="img/header_3.svg" alt="">
                         <img src="img/header_4.svg" alt="">
                     </div>
-                    <button class="btn__blue">
+                    <button class="btn__blue modal-faq__btn">
                         <span class="norm">получить консультацию</span>
                         <span class="hover">получить консультацию</span>
                     </button>
@@ -807,7 +804,7 @@
                     </div>
                 </div>
             </div>
-            <button class="btn__blue">
+            <button class="btn__blue modal-faq__btn">
                 <span class="norm">получить консультацию</span>
                 <span class="hover">получить консультацию</span>
             </button>
@@ -861,6 +858,7 @@
                 </div>
                 <div class="swiper-button-prev advantage__prev advantage__arrow"><img class="svg" src="img/arrow.svg" alt=""></div>
                 <div class="swiper-button-next advantage__next advantage__arrow"><img class="svg" src="img/arrow.svg" alt=""></div>
+                <div class="swiper-pagination advantage__pag"></div>   
             </div>
         </div>
     </section>
@@ -1299,7 +1297,8 @@
                         </div>
                     </div>
                     <div class="swiper-button-prev gallery__prev gallery__arrow"><img class="svg" src="img/arrow.svg" alt=""></div>
-                    <div class="swiper-button-next gallery__next gallery__arrow"><img class="svg" src="img/arrow.svg" alt=""></div>    
+                    <div class="swiper-button-next gallery__next gallery__arrow"><img class="svg" src="img/arrow.svg" alt=""></div>  
+                    <div class="swiper-pagination gallery__pag"></div>     
                 </div>
                 <p class="gallery__text">Внимание! Иллюстрации предназначены для примера, <br> возможны отклонения от проекта. </p>
             </div>
@@ -1308,40 +1307,74 @@
                     <div class="swiper-wrapper">
                         <div class="gallery__slide swiper-slide">
                             <img src="img/gallery_2.jpg" alt="">
+                            <div class="gallery__play">
+                                <img src="img/play.svg" alt="" class="svg">
+                            </div>
                         </div>
                         <div class="gallery__slide swiper-slide">
                             <img src="img/gallery_1.jpg" alt="">
+                            <div class="gallery__play">
+                                <img src="img/play.svg" alt="" class="svg">
+                            </div>
                         </div>
                         <div class="gallery__slide swiper-slide">
                             <img src="img/gallery_1.jpg" alt="">
+                            <div class="gallery__play">
+                                <img src="img/play.svg" alt="" class="svg">
+                            </div>
                         </div>
                         <div class="gallery__slide swiper-slide">
                             <img src="img/gallery_1.jpg" alt="">
+                            <div class="gallery__play">
+                                <img src="img/play.svg" alt="" class="svg">
+                            </div>
                         </div>
                         <div class="gallery__slide swiper-slide">
                             <img src="img/gallery_1.jpg" alt="">
+                            <div class="gallery__play">
+                                <img src="img/play.svg" alt="" class="svg">
+                            </div>
                         </div>
                         <div class="gallery__slide swiper-slide">
                             <img src="img/gallery_1.jpg" alt="">
+                            <div class="gallery__play">
+                                <img src="img/play.svg" alt="" class="svg">
+                            </div>
                         </div>
                         <div class="gallery__slide swiper-slide">
                             <img src="img/gallery_1.jpg" alt="">
+                            <div class="gallery__play">
+                                <img src="img/play.svg" alt="" class="svg">
+                            </div>
                         </div>
                         <div class="gallery__slide swiper-slide">
                             <img src="img/gallery_1.jpg" alt="">
+                            <div class="gallery__play">
+                                <img src="img/play.svg" alt="" class="svg">
+                            </div>
                         </div>
                         <div class="gallery__slide swiper-slide">
                             <img src="img/gallery_1.jpg" alt="">
+                            <div class="gallery__play">
+                                <img src="img/play.svg" alt="" class="svg">
+                            </div>
                         </div>
                         <div class="gallery__slide swiper-slide">
                             <img src="img/gallery_1.jpg" alt="">
+                            <div class="gallery__play">
+                                <img src="img/play.svg" alt="" class="svg">
+                            </div>
                         </div>
                         <div class="gallery__slide swiper-slide">
                             <img src="img/gallery_1.jpg" alt="">
+                            <div class="gallery__play">
+                                <img src="img/play.svg" alt="" class="svg">
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-button-prev gallery__prev gallery__arrow"><img class="svg" src="img/arrow.svg" alt=""></div>
-                    <div class="swiper-button-next gallery__next gallery__arrow"><img class="svg" src="img/arrow.svg" alt=""></div>    
+                    <div class="swiper-button-next gallery__next gallery__arrow"><img class="svg" src="img/arrow.svg" alt=""></div>  
+                    <div class="swiper-pagination gallery__pag"></div>     
                 </div>
                 <p class="gallery__text">Внимание! Иллюстрации предназначены для примера, <br> возможны отклонения от проекта. </p>
             </div>
@@ -1350,13 +1383,69 @@
     <section class="faq">
         <div class="container">
             <div class="faq__block">
-                <div class="faq__title element-animation">
-                    <h2><span>частые вопросы,</span> которые задают нашим специалистам</h2>
-                    <button class="faq__wa"><img src="img/wa.svg" class="svg" alt="">Спросить в Whatsapp</button>
-                    <button class="faq__tg"><img src="img/tg.svg" class="svg" alt="">Спросить в Telegram</button>
+                <div class="faq__title">
+                    <div class="faq__fix">
+                        <h2><span>частые вопросы,</span> которые задают нашим специалистам</h2>
+                        <button class="faq__wa"><img src="img/wa.svg" class="svg" alt="">Спросить в Whatsapp</button>
+                        <button class="faq__tg"><img src="img/tg.svg" class="svg" alt="">Спросить в Telegram</button>
+                    </div>
                 </div>
                 <div class="faq__wrapper">
                     <div class="faq__acc">
+                        <div class="faq__item">
+                            <div class="faq__btn">
+                                <p>Какие сертификаты и гарантии вы предоставляете?</p>
+                                <img src="img/arrow.svg" alt="" class="svg">
+                            </div>
+                            <div class="faq__text">
+                                <p>С учётом сложившейся международной обстановки, выбранный нами инновационный путь однозначно фиксирует необходимость первоочередных требований. Но высокое качество позиционных исследований требует определения и уточнения как самодостаточных, так и внешне зависимых концептуальных решений.</p>
+                            </div>
+                        </div>
+                        <div class="faq__item">
+                            <div class="faq__btn">
+                                <p>Какие преимущества имеют ваши дома?</p>
+                                <img src="img/arrow.svg" alt="" class="svg">
+                            </div>
+                            <div class="faq__text">
+                                <p>С учётом сложившейся международной обстановки, выбранный нами инновационный путь однозначно фиксирует необходимость первоочередных требований. Но высокое качество позиционных исследований требует определения и уточнения как самодостаточных, так и внешне зависимых концептуальных решений.</p>
+                            </div>
+                        </div>
+                        <div class="faq__item">
+                            <div class="faq__btn">
+                                <p>Какие сертификаты и гарантии вы предоставляете?</p>
+                                <img src="img/arrow.svg" alt="" class="svg">
+                            </div>
+                            <div class="faq__text">
+                                <p>С учётом сложившейся международной обстановки, выбранный нами инновационный путь однозначно фиксирует необходимость первоочередных требований. Но высокое качество позиционных исследований требует определения и уточнения как самодостаточных, так и внешне зависимых концептуальных решений.</p>
+                            </div>
+                        </div>
+                        <div class="faq__item">
+                            <div class="faq__btn">
+                                <p>Какие сертификаты и гарантии вы предоставляете?</p>
+                                <img src="img/arrow.svg" alt="" class="svg">
+                            </div>
+                            <div class="faq__text">
+                                <p>С учётом сложившейся международной обстановки, выбранный нами инновационный путь однозначно фиксирует необходимость первоочередных требований. Но высокое качество позиционных исследований требует определения и уточнения как самодостаточных, так и внешне зависимых концептуальных решений.</p>
+                            </div>
+                        </div>
+                        <div class="faq__item">
+                            <div class="faq__btn">
+                                <p>Какие преимущества имеют ваши дома?</p>
+                                <img src="img/arrow.svg" alt="" class="svg">
+                            </div>
+                            <div class="faq__text">
+                                <p>С учётом сложившейся международной обстановки, выбранный нами инновационный путь однозначно фиксирует необходимость первоочередных требований. Но высокое качество позиционных исследований требует определения и уточнения как самодостаточных, так и внешне зависимых концептуальных решений.</p>
+                            </div>
+                        </div>
+                        <div class="faq__item">
+                            <div class="faq__btn">
+                                <p>Какие сертификаты и гарантии вы предоставляете?</p>
+                                <img src="img/arrow.svg" alt="" class="svg">
+                            </div>
+                            <div class="faq__text">
+                                <p>С учётом сложившейся международной обстановки, выбранный нами инновационный путь однозначно фиксирует необходимость первоочередных требований. Но высокое качество позиционных исследований требует определения и уточнения как самодостаточных, так и внешне зависимых концептуальных решений.</p>
+                            </div>
+                        </div>
                         <div class="faq__item">
                             <div class="faq__btn">
                                 <p>Какие сертификаты и гарантии вы предоставляете?</p>
@@ -1389,6 +1478,10 @@
                         <span class="norm">открыть все вопросы</span>
                         <span class="hover">открыть все вопросы</span>
                     </button>
+                    <div class="faq__mob">
+                        <button class="faq__wa"><img src="img/wa.svg" class="svg" alt="">Спросить в Whatsapp</button>
+                        <button class="faq__tg"><img src="img/tg.svg" class="svg" alt="">Спросить в Telegram</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1423,21 +1516,24 @@
                 </div>
                 <div class="contact__req">
                     <h4>ОСТАВЬТЕ ЗАЯВКУ, И МЫ ОТВЕТИМ НА ЛЮБОЙ ВАШ ВОПРОС</h4>
-                    <form action="" class="contact__form">
+                    <form action="" class="contact__form form__val">
                         <div class="contact__row">
                             <div class="contact__input input">
-                                <input type="text" placeholder=" ">
+                                <input type="text" placeholder=" " class="_req">
                                 <p>Ваше имя<span>*</span></p>
+                                <span class="input__error">Заполните поле</span>
                             </div>
                             <div class="contact__input input">
-                                <input type="text" data-phone-pattern placeholder=" ">
+                                <input type="text" data-phone-pattern placeholder=" " class="_req _phone">
                                 <p>Телефон<span>*</span></p>
+                                <span class="input__error">Заполните поле</span>
                             </div>
                         </div>
                         <div class="contact__row">
                             <div class="contact__input input">
-                                <input type="text" placeholder=" ">
+                                <input type="text" placeholder=" " class="_req _email">
                                 <p>Email<span>*</span></p>
+                                <span class="input__error">Заполните поле</span>
                             </div>
                             <div class="contact__input input">
                                 <input type="text" placeholder=" ">
@@ -1445,14 +1541,14 @@
                             </div>
                         </div>
                         <div class="itc-select" id="select-1">
-                            <button type="button" class="itc-select__toggle" name="car" value="" data-select="toggle" data-index="-1">Вариант комплектации</button>
+                            <input type="text" class="itc-select__toggle" value="" data-select="toggle" data-index="-1" placeholder="Вариант комплектации" disabled></input>
                             <img src="img/arrow.svg" alt="" class="svg">
                             <div class="itc-select__dropdown">
                                 <ul class="itc-select__options">
-                                    <li class="itc-select__option" data-select="option" data-value="volkswagen" data-index="0">Стандарт</li>
-                                    <li class="itc-select__option" data-select="option" data-value="ford" data-index="1">Стандарт</li>
-                                    <li class="itc-select__option" data-select="option" data-value="toyota" data-index="2">Стандарт</li>
-                                    <li class="itc-select__option" data-select="option" data-value="nissan" data-index="3">Стандарт</li>
+                                    <li class="itc-select__option" data-select="option" data-value="Стандарт" data-index="0">Стандарт</li>
+                                    <li class="itc-select__option" data-select="option" data-value="Стандарт" data-index="1">Стандарт</li>
+                                    <li class="itc-select__option" data-select="option" data-value="Стандарт" data-index="2">Стандарт</li>
+                                    <li class="itc-select__option" data-select="option" data-value="Стандарт" data-index="3">Стандарт</li>
                                 </ul>
                             </div>
                           </div>
@@ -1461,11 +1557,11 @@
                             <p>Комментарий</p>
                         </div>
                         <div class="contact__check">
-                            <input type="checkbox" checked>
+                            <input type="checkbox" checked class="_req">
                             <span></span>
                             <p>Согласен <a href="#">с условиями обработки персональных данных</a></p>
                         </div>
-                        <button class="btn__blue">
+                        <button class="btn__blue modal-faq__btn">
                             <span class="norm">получить консультацию</span>
                             <span class="hover">получить консультацию</span>
                         </button>
@@ -1512,7 +1608,7 @@
                         </li>
                         <li>
                             <img src="img/map.svg" alt="" class="svg">
-                            <p>Санкт-Петербург, г. Красное Село, ул. Свободы, 46</p>
+                            <p>Санкт-Петербург, г. Красное Село, <br>ул. Свободы, 46</p>
                         </li>
                     </ul>
                     <div class="footer__soc">
@@ -1521,6 +1617,10 @@
                         <a href=""><img class="svg" src="img/yt.svg" alt=""></a>
                         <a href=""><img class="svg" src="img/vk.svg" alt=""></a>
                         <a href=""><img class="svg" src="img/dzen.svg" alt=""></a>
+                    </div>
+                    <div class="footer__func footer__mob">
+                        <a href="#" data-content="Публичная оферта"><span>Публичная оферта</span></a>
+                        <a href="#" data-content="Политика обработки персональных данных"><span>Политика обработки персональных данных</span></a>
                     </div>
                 </div>
                 <div class="footer__up">
@@ -1536,30 +1636,32 @@
 
     <div class="modal modal-call">
         <div class="modal-call__overflow modal__overflow"></div>
-        <form action="" class="modal-call__container modal__container">
+        <form action="" class="modal-call__container modal__container form__val">
             <div class="modal-call__close modal__close"><img src="img/close.svg" alt="" class="svg"></div>
             <h2>Обратный <span>звонок</span></h2>
             <p class="modal__subtitle">Заполните форму, и мы свяжемся с вами</p>
             <div class="modal__form">
                 <div class="input">
-                    <input type="text" placeholder=" ">
+                    <input type="text" placeholder=" " class="_req">
                     <p>Ваше имя<span>*</span></p>
+                    <span class="input__error">Заполните поле</span>
                 </div>
                 <div class="input">
-                    <input type="text" data-phone-pattern placeholder=" ">
+                    <input type="text" data-phone-pattern placeholder=" " class="_req _phone">
                     <p>Телефон<span>*</span></p>
+                    <span class="input__error">Заполните поле</span>
                 </div>
                 <div class="input">
                     <textarea type="text" placeholder=""></textarea>
                     <p>Комментарий</p>
                 </div>
                 <div class="modal__check">
-                    <input type="checkbox" checked>
+                    <input type="checkbox" checked class="_req">
                     <span></span>
                     <p>Согласен <a href="#">с условиями обработки персональных данных</a></p>
                 </div>
             </div>
-            <button class="btn__blue">
+            <button class="btn__blue modal-call__btn">
                 <span class="norm">Заказать звонок</span>
                 <span class="hover">Заказать звонок</span>
             </button>
@@ -1567,34 +1669,37 @@
     </div>
     <div class="modal modal-faq">
         <div class="modal-faq__overflow modal__overflow"></div>
-        <form action="" class="modal-faq__container modal__container">
+        <form action="" class="modal-faq__container modal__container form__val">
             <div class="modal-faq__close modal__close"><img src="img/close.svg" alt="" class="svg"></div>
             <h2>Есть <span>вопросы?</span></h2>
             <p class="modal__subtitle">Заполните форму, и мы свяжемся с вами</p>
             <div class="modal__form">
                 <div class="input">
-                    <input type="text" placeholder=" ">
+                    <input type="text" placeholder=" " class="_req">
                     <p>Ваше имя<span>*</span></p>
+                    <span class="input__error">Заполните поле</span>
                 </div>
                 <div class="input">
-                    <input type="text" data-phone-pattern placeholder=" ">
+                    <input type="text" data-phone-pattern placeholder=" " class="_req _phone">
                     <p>Телефон<span>*</span></p>
+                    <span class="input__error">Заполните поле</span>
                 </div>
                 <div class="input">
-                    <input type="text" placeholder=" ">
+                    <input type="text" placeholder=" " class="_req _email">
                     <p>Email<span>*</span></p>
+                    <span class="input__error">Заполните поле</span>
                 </div>
                 <div class="input">
                     <textarea type="text" placeholder=""></textarea>
                     <p>Комментарий</p>
                 </div>
                 <div class="modal__check">
-                    <input type="checkbox" checked>
+                    <input type="checkbox" checked class="_req">
                     <span></span>
                     <p>Согласен <a href="#">с условиями обработки персональных данных</a></p>
                 </div>
             </div>
-            <button class="btn__blue">
+            <button class="btn__blue modal-call__btn">
                 <span class="norm">Заказать звонок</span>
                 <span class="hover">Заказать звонок</span>
             </button>

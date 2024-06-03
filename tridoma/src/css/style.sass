@@ -125,13 +125,28 @@ body
 .element-animation
     opacity: 0
     transition: all 1s
-    transform: translateY(100%)
+    transform: translateY(50%)
 .element-show
     opacity: 1
     transform: translateY(0)
 .input
     position: relative
     z-index: 1
+    &__error
+        position: absolute
+        top: calc( 100% + 2px )
+        left: 0
+        display: block
+        font-family: $font-family
+        font-weight: 400
+        font-size: 12px
+        line-height: 1.35
+        color: $red
+        transition: all .3s
+        opacity: 0
+    &.wrapper_error
+        .input__error
+            opacity: 1
     p
         font-family: $font-family
         font-weight: 400
@@ -170,6 +185,8 @@ body
                 color: $gray
                 transform: translateY(-100%)
                 font-size: 12px
+        &.error
+            border-bottom: 1px solid $red
     textarea
         position: relative
         resize: vertical
@@ -179,7 +196,7 @@ body
             width: 24px
             height: 24px
             position: absolute
-            bottom: 16px
+            bottom: 0 
             right: 0
 .itc-select
     position: relative
@@ -303,12 +320,16 @@ body
                 color: $hover
         p
             display: none
-            margin: 4px 0 0
+            margin: 4px 0 0 auto
             font-family: $font-family
             font-weight: 400
             font-size: 18px
             line-height: 1.35
             color: $gray
+            text-align: right
+            width: max-content
+            &::before
+                text-align: right
     &__soc
         margin: 0 12px 0 34px
         display: grid
@@ -347,9 +368,10 @@ body
         position: relative
         padding: 32px 
         z-index: 1
-        min-height: 808px
+        height: 808px
         display: flex
         align-items: center
+        max-height: calc( 100vh - 200px )
     &__bg
         position: absolute
         inset: 0
@@ -426,6 +448,11 @@ body
         inset: auto
         margin: 0
         transition: all .3s
+        &.swiper-button-disabled
+            opacity: 1
+        svg
+            width: 24px
+            height: 24px
         &::after
             content: none
         &:hover
@@ -433,7 +460,7 @@ body
             border: 1px solid $hover
     &__prev
         transform: rotate(180deg)
-    .header__pag
+    &__pag
         position: relative
         inset: auto
         margin: 0
@@ -441,7 +468,17 @@ body
         height: 1px
         background: #ffffff80
         span
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            height: 100%
             background: #fff
+            width: 0%
+        &.active
+            span
+                width: 100%
+                transition: all 5s linear
     &__row
         margin: 32px 0 0
         display: grid
@@ -469,6 +506,8 @@ body
             font-size: 20px
             line-height: 1.35
             color: $dark-gray
+            br
+                display: none
     
 .project
     padding: 60px 0
@@ -655,6 +694,8 @@ body
 
 .pref
     padding: 60px 0
+    &__mob
+        display: none
     &__block
         display: grid
         grid-template-columns: 1fr 1fr
@@ -855,6 +896,8 @@ body
     padding: 60px 0
     position: relative
     overflow: hidden
+    &__pag
+        display: none
     &__slider
         overflow: visible
         margin: 32px 0 0
@@ -1101,7 +1144,7 @@ body
         max-height: 136px
         transition: all .3s
         &.active
-            max-height: 2000px
+            max-height: none
             .tech
                 &__text
                     p
@@ -1123,6 +1166,11 @@ body
     padding: 60px 0
     position: relative
     overflow: hidden
+    &__pag
+        display: none
+    &__overflow,
+    &__close
+        display: none
     &__tab
         max-width: 600px
         margin: 32px 0 0
@@ -1165,6 +1213,29 @@ body
         &:hover
             img
                 transform: scale(1.2)
+    &__play
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        cursor: pointer
+        border-radius: 100%
+        border: 1px solid $white    
+        width: 64px
+        height: 64px
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all .3s
+        svg
+            path
+                transition: all .3s
+        &:hover
+            background: $white
+            svg
+                path
+                    fill: $hover
+                    stroke: $hover
     &__text
         margin: 24px 0 0
         font-family: $font-family
@@ -1206,6 +1277,8 @@ body
 
 .faq
     padding: 60px 0
+    &__mob
+        display: none
     h2
         max-width: 746px
     &__block
@@ -1213,6 +1286,7 @@ body
         grid-template-columns: 1fr 1fr
         gap: 24px
         align-items: start
+        position: relative
     &__wa
         display: flex
         justify-content: center
@@ -1312,6 +1386,19 @@ body
     &__wrapper
         .btn__wht
             margin: 32px 0 0
+    &__fix
+        position: relative
+        &.fix
+            display: block
+            position: fixed
+            top: 20px
+            left: 48px
+            z-index: 5
+        &.bottom
+            position: absolute
+            top: auto
+            bottom: 0
+            left: 0
 
 .contact
     padding: 60px 0 120px
@@ -1386,7 +1473,7 @@ body
         margin: 48px 0 0
         display: grid
         grid-template-columns: 100% 
-        gap: 24px
+        gap: 32px
         .btn__blue
             max-width: 100%
     &__row
@@ -1654,6 +1741,8 @@ body
             line-height: 1.35
             color: $white
             transition: all .3s
+    &__mob
+        display: none
 
 .nav-part
     background: $white
@@ -1730,9 +1819,10 @@ section
             p
                 display: block
                 text-align: right
-                margin: 6px 0 0
+                margin: 6px 0 0 auto
                 font-size: 14px
                 letter-spacing: 0.02em
+                cursor: pointer
         .btn__blue
             display: none
         &__soc
@@ -1741,6 +1831,7 @@ section
         &__slide
             min-height: 680px
             padding: 24px
+            max-height: calc( 100vh - 150px )
         h1,
         h2
             font-size: 64px
@@ -1800,6 +1891,7 @@ section
             padding: 24px
             p
                 font-size: 18px
+                max-width: 612px
         &__prev
             img
                 height: 630px
@@ -1813,8 +1905,12 @@ section
             top: 24px
             left: 24px
         &__info
+            width: 130px
+            h2
+                font-size: 36px
+                margin: 4px 0 0
             p
-                font-size: 18px
+                font-size: 16px
         &__text
             font-size: 16px
     .service
@@ -2039,6 +2135,7 @@ section
             padding: 32px
             min-height: 844px
             align-items: flex-start
+            max-height: calc( 100vh - 150px )
         h1,
         h2
             font-size: 58px
@@ -2051,28 +2148,65 @@ section
         &__row
             padding: 0 32px
             grid-template-columns: 1fr 1fr
+            gap: 24px
+            grid-template-rows: 1fr 1fr
+        &__item
+            grid-template-columns: 100%
+            gap: 16px
+            align-content: start
+            div
+                width: 96px
+                height: 96px
+                margin: 0 auto
+            p
+                text-align: center
+                margin: 0 auto
+                max-width: 292px
+                br
+                    display: block
     .project
         &__wrapper
             grid-template-columns: 100%
             &+.btn__blue
                 max-width: 100%
-
+        &__title
+            grid-template-columns: 100%
     .pref
+        &__mob
+            display: block
+            width: 100%
+            height: 330px
+            object-fit: cover
+            margin: 16px 0 0
+        &__prev
+            display: none
         &__block
             grid-template-columns: 100%
             gap: 0
         &__prev
             order: -1
+        .btn__blue
+            max-width: 100%
     .program
+        h2
+            font-size: 48px
+            max-width: 100%
         &__row
             margin: 32px 0 0
             grid-template-columns: 100%
         &__item
             transform: none !important
+            height: 445px
         &__text
             inset: auto !important
             position: relative
             width: 100% !important
+        &__info
+            width: 156px
+            p
+                font-size: 20px
+            h2
+                font-size: 48px
     .service
         &__prev
             display: none
@@ -2102,6 +2236,27 @@ section
                 height: 100%
                 width: 100%
                 opacity: .6
+        .advantage__pag
+            display: block
+            position: relative
+            bottom: auto
+            left: auto
+            margin: 32px 0 0
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 8px
+            span
+                margin: 0 !important
+                width: 8px
+                height: 8px
+                border: 1px solid $stroke
+                background: transparent
+                transition: all .3s
+                opacity: 1
+                &.swiper-pagination-bullet-active
+                    background: $blue
+                    border: 1px solid $blue
     .tech
         &__title
             grid-template-columns: 100%
@@ -2116,13 +2271,49 @@ section
             .tech__num
                 display: none
     .gallery
+        &__text
+            text-align: center  
         &__arrow
             display: none
+        .gallery__pag
+            display: block
+            position: relative
+            bottom: auto
+            left: auto
+            margin: 32px 0 0
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 8px
+            span
+                margin: 0 !important
+                width: 8px
+                height: 8px
+                border: 1px solid $stroke
+                background: transparent
+                transition: all .3s
+                opacity: 1
+                &.swiper-pagination-bullet-active
+                    background: $blue
+                    border: 1px solid $blue
     .faq
         &__block
             grid-template-columns: 100%
         .btn
             &__wht
+                max-width: 100%
+        &__title
+            .faq
+                &__wa,
+                &__tg
+                    display: none
+        &__mob
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 12px
+            margin: 32px 0 0
+            button
+                margin: 0
                 max-width: 100%
     .contact
         &__wrapper
@@ -2131,11 +2322,13 @@ section
             order: 5
         &__block
             height: 255px
+        &__soc
+            max-width: 270px
     .footer
         &__wrapper
-            grid-template-columns: 1fr 1fr 1fr 48px
+            grid-template-columns: 1fr 2fr 48px
         &__contact
-            grid-column: 1/5
+            grid-column: 1/4
             order: 2
             border-top: 1px solid rgba(255,255,255,.2)
             max-width: 100%
@@ -2143,11 +2336,35 @@ section
             padding: 24px 0 0
             ul
                 justify-items: center
+            p
+                text-align: center
+                br
+                    display: none
+        &__list
+            grid-template-columns: 1fr 1fr
         &__soc
             justify-content: center
+        &__func
+            display: none
+        &__mob
+            display: grid
+            grid-template-columns: auto auto
+            gap: 12px
+            justify-content: center
+            max-width: 100%
+            margin: 24px 0 0
 
 @media ( max-width: 900px )
-    
+    .header
+        &__plan
+            padding: 32px
+            max-width: 320px
+        &__arrow
+            display: none
+        &__func
+            grid-template-columns: auto 1fr auto
+            max-width: calc(100% - 48px)
+            width: 260px
 
 @media ( max-width: 700px )
     .container
@@ -2181,8 +2398,8 @@ section
             inset: auto
             max-width: 100%
         &__row
-            grid-template-columns: 100%
             padding: 0 24px
+            gap: 16px
         &__func
             bottom: auto
             top: 440px
@@ -2196,6 +2413,21 @@ section
         &__info
             .btn__blue
                 max-width: 100%
+        &__item
+            background: transparent
+            padding: 0
+            div
+                background: $white
+                margin: 0
+                width: 64px
+                height: 64px
+                svg
+                    width: 32px
+                    height: 32px
+            p
+                text-align: left
+                margin: 0
+                font-size: 14px
     .project
         padding: 30px 0
         &__title
@@ -2219,6 +2451,9 @@ section
         &__price
             text-align: left
         &__dop
+            gap: 5px
+            div
+                gap: 4px
             p
                 font-size: 12px
         &__block
@@ -2229,10 +2464,25 @@ section
             p
                 font-size: 14px
                 margin: 0
+                color: $gray
+            a
+                display: grid
+                grid-template-columns: 14px 1fr
+                gap: 0
+                &::before
+                    content: ''
+                    display: block
+                    width: 3px
+                    height: 3px
+                    margin: 7px auto 0
+                    border-radius: 100%
+                    background: $gray
         &__var
             font-size: 18px
         &__info
             transform: translateY(calc(100% - 100px))
+            &_header
+                grid-template-columns: 100%
         &__item
             padding: 0 0 90px
         &__pic
@@ -2244,11 +2494,14 @@ section
                 font-size: 14px
     .pref
         padding: 30px 0
+        &__mob
+            display: block
+            width: 100%
+            height: 330px
+            object-fit: cover
+            margin: 16px 0 0
         &__prev
-            width: calc( 100% + 48px )
-            margin: 0 -24px
-            img
-                height: 330px
+            display: none
         .container
             background: $white
         &__info
@@ -2266,11 +2519,13 @@ section
         h4
             font-size: 20px
         &__info
-            width: max-content
+            width: 104px
+            padding: 16px 
             h2
                 font-size: 24px
             p
-                font-size: 16px
+                font-size: 14px
+                margin: 4px 0 0
     .service
         padding: 30px 0
         &__text
@@ -2282,10 +2537,25 @@ section
             display: none
         &__list
             grid-template-columns: 100%
+        &__num
+            font-size: 18px
+        &__btn
+            padding: 24px
+        &__text
+            p
+                font-size: 16px
+                max-height: 80px
+        &__item
+            max-height: 132px
     .gallery
         padding: 30px 0
     .faq
         padding: 30px 0
+        &__mob
+            margin: 24px 0 0
+            grid-template-columns: 100%
+            button
+                max-width: 100%
     .contact
         padding: 30px 0 60px
         &__mob
@@ -2309,9 +2579,25 @@ section
         &__link,
         &__adress
             font-size: 18px
+        &__soc
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+            gap: 6px
+            width: 264px
+            max-width: 100%
+            a
+                width: 100%
+                height: 48px
+                svg
+                    width: 24px
+                    height: 24px
     .footer
         padding: 32px 0
         position: relative
+        &__text
+            gap: 4px
+            p
+                font-size: 12px
         &__wrapper
             grid-template-columns: 100%
         &__up
@@ -2322,10 +2608,24 @@ section
             grid-column: auto
             ul
                 justify-items: start
+                svg
+                    width: 19px
+                    height: 19px
+                p
+                    text-align: left
+                    font-size: 12px
+                    br
+                        display: block
         &__list
             margin: 16px 0 0
+            grid-template-columns: 100%
+            gap: 12px
+            a
+                font-size: 12px
         &__func
             margin: 16px 0 0
+            a
+                font-size: 12px
         &__soc
             justify-content: start
         &__row
@@ -2334,9 +2634,15 @@ section
                 font-size: 12px
         &__text
             margin: 24px 0 0
+        &__mob
+            justify-content: start
+            grid-template-columns: 100%
     .nav-part
         p
             font-size: 12px
+            text-transform: none
+        &__close
+            right: 12px
 
 .modal-call
     &__container
@@ -2397,7 +2703,7 @@ section
         margin: 56px 0 0
         display: grid
         grid-template-columns: 100%
-        gap: 24px
+        gap: 32px
     &__check
         position: relative
         display: grid

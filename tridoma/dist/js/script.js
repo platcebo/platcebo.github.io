@@ -4,6 +4,10 @@ let headerSlide = document.querySelectorAll('.header__slide'),
 
 if(headerEnd !== null) {
     headerEnd.innerHTML = "0" + headerSlide.length
+    document.querySelector('.header__pag').classList.remove('active');
+    setTimeout(() => {
+        document.querySelector('.header__pag').classList.add('active');
+    }, 50);
 }
 
 var swiperHeader = new Swiper(".header__slider", {
@@ -11,11 +15,7 @@ var swiperHeader = new Swiper(".header__slider", {
     spaceBetween: 20,
     autoplay: {
         delay: 5000,
-    },    
-    pagination: {
-        el: ".header__pag",
-        type: "progressbar",
-    },
+    },  
     navigation: {
         nextEl: ".header__next",
         prevEl: ".header__prev",
@@ -23,8 +23,11 @@ var swiperHeader = new Swiper(".header__slider", {
     on: {
         slideChange: () => {
             headerStart.innerHTML = "0" + (swiperHeader.activeIndex + 1)
+            document.querySelector('.header__pag').classList.remove('active');
+            setTimeout(() => {
+                document.querySelector('.header__pag').classList.add('active');
+            }, 50);
         }
-        
     }
 }); 
 
@@ -34,6 +37,9 @@ var swiper = new Swiper(".advantage__slider", {
     navigation: {
         nextEl: ".advantage__next",
         prevEl: ".advantage__prev",
+    },
+    pagination: {
+        el: ".advantage__pag",
     },
     breakpoints: {
         1301: {
@@ -60,7 +66,10 @@ var swiper = new Swiper(".tech__slider", {
 var swiper = new Swiper(".gallery__slider", {
     slidesPerView: 1,
     spaceBetween: 24,
-    loop: true,
+    // loop: true,
+    pagination: {
+        el: ".gallery__pag",
+    },
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
@@ -336,6 +345,144 @@ if(modalFaq !== null) {
         modalToggle(modalFaq)
     })
 }
+
+let faqFix = document.querySelector('.faq__fix'),
+    faqWrapper = document.querySelector('.faq__title')
+    faqTop = document.querySelector('.faq__block'),
+    faqBottom = document.querySelector('.faq');
+
+if(faqFix !== null && window.innerWidth > 1300) {
+    faqFix.style.width = faqWrapper.getBoundingClientRect().width + 'px'
+    window.addEventListener('scroll', ()=>{
+        if(faqTop.getBoundingClientRect().top <= 20 && faqTop.getBoundingClientRect().bottom - faqFix.getBoundingClientRect().height >= 20) {
+            faqFix.classList.add('fix')
+            faqFix.classList.remove('bottom')
+        } else if (faqTop.getBoundingClientRect().top > 20) {
+            faqFix.classList.remove('fix')
+            faqFix.classList.remove('bottom')
+        } else if (faqTop.getBoundingClientRect().bottom - faqFix.getBoundingClientRect().height < 20) {
+            faqFix.classList.remove('fix')
+            faqFix.classList.add('bottom')
+        }
+    })
+}
+
+let formPrev = document.querySelector('.contact__form'),
+    formReq = document.querySelectorAll('.contact__form ._req');
+    
+if(formPrev !== null) {
+    formPrev.addEventListener('submit', () => formVal(formReq , event));
+}
+
+let formCall = document.querySelector('.modal-call'),
+    formCallItem = document.querySelectorAll('.modal-call ._req');
+    
+if(formCall !== null) {
+    formCall.addEventListener('submit', () => formVal(formCallItem , event));
+}
+
+let formFaq = document.querySelector('.modal-faq'),
+    formFaqItem = document.querySelectorAll('.modal-faq ._req');
+    
+if(formCall !== null) {
+    formCall.addEventListener('submit', () => formVal(formCallItem , event));
+}
+
+function formVal(input, event) {
+
+    input.forEach(function(item) {
+        item.classList.remove('error');
+        item.parentElement.classList.remove('error__email')
+        item.parentElement.classList.remove('wrapper_error')
+    })
+
+    let error = 0;
+
+    input.forEach(function(item) {
+        if(item.classList.contains('_email')) {
+            if(item.value === '') {
+                item.classList.add('error')
+                item.parentElement.classList.add('wrapper_error')
+                error++;
+            } else if(formEmail(item)) {
+                item.classList.add('error')
+                item.parentElement.classList.add('wrapper_error')
+                item.parentElement.classList.add('error__email')
+                error++;
+            } 
+        } else if (item.classList.contains('_phone')) {
+            if (item.value === '') {
+                item.classList.add('error')
+                item.parentElement.classList.add('wrapper_error')
+                error++;
+            } else if(item.value.length !== 18 ) {
+                item.classList.add('error')
+                item.parentElement.classList.add('wrapper_error')
+                error++;
+            }
+        } else if (item.getAttribute('type') === 'checkbox' && item.checked === false) {
+            item.classList.add('error')
+            item.parentElement.classList.add('wrapper_error')
+            error++;
+        } else if (item.value === '') {
+            item.classList.add('error')
+            item.parentElement.classList.add('wrapper_error')
+            error++;
+        }
+    });
+
+    if(error !== 0) {
+        event.preventDefault()
+    }
+}
+
+function formEmail(input) {
+    return !/^\w+([\.-]?\w+)*@\w+([\--]?\w+)*(\.\w{2,8})+$/.test(input.value);
+}
+
+
+
+
+
+
+
+// let popup = document.querySelectorAll('.gallery__slide'),
+//     popupImg = document.querySelectorAll('.gallery__slide img');
+
+// if(popup !== null) {
+//     popup.forEach((item, i)=>{
+//         document.body.addEventListener('click', (event)=>{
+//             let target = event.target
+
+//             let div =  document.createElement('div')
+//                 div.className = "popup";
+//                 div.innerHTML = `<div class="popup__overflow"></div>
+//                                 <div class="popup__close"><img src="img/close.svg" alt="" class="svg"></div>
+//                                 <img src="` + popupImg[i].src +`" alt="" class="popup__img">`;
+
+//             if(target.classList.contains('popup')) {
+//                 if(target == item) {
+//                     document.body.append(div)
+//                 }
+//             }
+//             // item.addEventListener('click', ()=>{
+//             //     document.body.append(div)
+//             // })
+    
+//             let popupOverflow = document.querySelector('.gallery__overflow'),
+//                 popupClose = document.querySelector('.gallery__close');
+    
+//             if(popupOverflow !== null) {
+//                 popupOverflow.addEventListener('click', ()=>{
+//                     document.body.remove(div)
+//                 })
+//                 popupClose.addEventListener('click', ()=>{
+//                     document.body.remove(div)
+//                 })
+//             }
+//         })
+//     })
+// }
 
 if(document.querySelectorAll('.itc-select')!==null) {
     const select1 = new ItcCustomSelect('#select-1');
