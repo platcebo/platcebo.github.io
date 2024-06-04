@@ -31,6 +31,39 @@ var swiperHeader = new Swiper(".header__slider", {
     }
 }); 
 
+let headerCartSlide = document.querySelectorAll('.header-cart__slide'),
+    headerCartStart = document.querySelector('.header-cart__start'),
+    headerCartEnd = document.querySelector('.header-cart__end');
+
+if(headerCartEnd !== null) {
+    headerCartEnd.innerHTML = "0" + headerCartSlide.length
+    document.querySelector('.header-cart__pag').classList.remove('active');
+    setTimeout(() => {
+        document.querySelector('.header-cart__pag').classList.add('active');
+    }, 50);
+}
+
+var swiperCart = new Swiper(".header-cart__slider", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    autoplay: {
+        delay: 5000,
+    },  
+    navigation: {
+        nextEl: ".header-cart__next",
+        prevEl: ".header-cart__prev",
+    },
+    on: {
+        slideChange: () => {
+            headerCartStart.innerHTML = "0" + (swiperCart.activeIndex + 1)
+            document.querySelector('.header-cart__pag').classList.remove('active');
+            setTimeout(() => {
+                document.querySelector('.header-cart__pag').classList.add('active');
+            }, 50);
+        }
+    }
+}); 
+
 var swiper = new Swiper(".advantage__slider", {
     slidesPerView: 1,
     spaceBetween: 24,
@@ -77,6 +110,28 @@ var swiper = new Swiper(".gallery__slider", {
     navigation: {
         nextEl: ".gallery__next",
         prevEl: ".gallery__prev",
+    },
+    breakpoints: {
+        1301: {
+            slidesPerView: 3
+        },
+    }
+}); 
+
+var swiper = new Swiper(".check-more__slider", {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    // loop: true,
+    pagination: {
+        el: ".check-more__pag",
+    },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: ".check-more__next",
+        prevEl: ".check-more__prev",
     },
     breakpoints: {
         1301: {
@@ -165,13 +220,42 @@ if(gallery !== null) {
     })
 }
 
+let plan = document.querySelector('.plan__tab'),
+    planPoint = document.querySelectorAll('.plan__tab_point'),
+    planWrapper = document.querySelectorAll('.plan__wrapper');
+
+if(plan !== null) {
+    function planHide() {
+        for(let i = 0; i < planPoint.length; i++) {
+            planPoint[i].classList.remove('active')
+            planWrapper[i].classList.remove('active')
+        }
+    }
+    function planShow(a) {
+        planPoint[a].classList.add('active')
+        planWrapper[a].classList.add('active')
+    }
+
+    plan.addEventListener('click', (event)=>{
+        let target = event.target;
+        for(let i = 0; i < planPoint.length; i++) {
+            if(target && target == planPoint[i]) {
+                planHide()
+                planShow(i)
+            }
+        }
+    })
+}
+
 let acc = document.querySelectorAll('.acc__item'),
     accBtn = document.querySelectorAll('.acc__btn'),
     accImg = document.querySelectorAll('.service__prev img');
 
 if(acc.length !== 0 && acc !== null) {
-    acc[0].classList.add('active')
-    accImg[0].classList.add('active')
+    // acc[0].classList.add('active')
+    // if(accImg.length !== 0 && accImg !== null) {
+    //     accImg[0].classList.add('active')
+    // }
     for (let a = 0; a < accBtn.length; a++) {
         accBtn[a].addEventListener('click', ()=>{
             if(acc[a].classList.contains('active')) {
@@ -179,10 +263,14 @@ if(acc.length !== 0 && acc !== null) {
             } else {
                 acc.forEach((item, i) =>{
                     item.classList.remove('active')
-                    accImg[i].classList.remove('active')
+                    if(accImg.length !== 0 && accImg !== null) {
+                        accImg[i].classList.remove('active')
+                    }
                 })
                 acc[a].classList.add('active')
-                accImg[a].classList.add('active')
+                if(accImg.length !== 0 && accImg !== null) {
+                    accImg[a].classList.add('active')
+                }
             }
         })
     }
