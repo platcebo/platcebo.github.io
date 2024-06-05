@@ -528,8 +528,54 @@ function formEmail(input) {
     return !/^\w+([\.-]?\w+)*@\w+([\--]?\w+)*(\.\w{2,8})+$/.test(input.value);
 }
 
+let equipBtn1 = document.querySelector('.equip__1_btn'),
+    equipText1 = document.querySelectorAll('.equip_1'),
+    equipBtn2 = document.querySelector('.equip__2_btn'),
+    equipText2 = document.querySelectorAll('.equip_2');
 
+if(equipBtn1 !== null) {
+    equip1()
 
+    equipBtn1.addEventListener('click', ()=>{
+        equip1()
+    })
+    equipBtn2.addEventListener('click', ()=>{
+        equip2()
+    })
+
+    function equip1(){
+        equipBtn2.classList.remove('active')
+        equipText2.forEach((item)=>{
+            item.classList.remove('active')
+        })
+        equipBtn1.classList.add('active')
+        equipText1.forEach((item)=>{
+            item.classList.add('active')
+        })
+    }
+    function equip2(){
+        equipBtn1.classList.remove('active')
+        equipText1.forEach((item)=>{
+            item.classList.remove('active')
+        })
+        equipBtn2.classList.add('active')
+        equipText2.forEach((item)=>{
+            item.classList.add('active')
+        })
+    }
+}
+
+let equipName = document.querySelectorAll('.equip__name'),
+    equipTab = document.querySelectorAll('.equip__tab');
+
+if(equipTab !== null) {
+    for(let i = 0; i < equipName.length; i++){
+        equipName[i].addEventListener('click',()=>{
+            equipTab[i].classList.toggle('active')
+            equipName[i].classList.toggle('active')
+        })
+    }
+}
 
 
 

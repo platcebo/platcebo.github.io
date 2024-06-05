@@ -3528,6 +3528,8 @@ section
 
 .equip
     padding: 60px 0
+    &__total
+        display: none
     &__table
         border-top: 1px solid $stroke
         margin: 32px 0 0
@@ -3567,6 +3569,8 @@ section
             color: $dark-gray
             &+p
                 color: $gray
+        svg
+            display: none
     &__row
         padding: 24px
         display: grid
@@ -4032,3 +4036,90 @@ section
         &__desc
             h4
                 font-size: 20px
+
+@media ( max-width: 600px )
+    .plan
+        &__wrapper
+            p
+                font-size: 20px
+    .about
+        &__name
+            font-size: 20px
+        &__har
+            li
+                p
+                    font-size: 18px
+    .pref
+        &__row
+            max-width: 100%
+            width: 100%
+    .equip
+        h2
+            padding: 0 24px
+        .container
+            padding: 0
+        &__title
+            padding: 24px 24px 16px
+        &__tab
+            display: none
+            &.active
+                display: block
+        &__name
+            grid-template-columns: 1fr 24px
+            p
+                display: none
+                &:nth-child(1)
+                    display: block
+            svg
+                display: block
+                transform: rotate(90deg)
+                transition: all .3s
+                path
+                    stroke: $dark-gray
+                    transition: all .3s
+            &.active
+                svg
+                    transform: rotate(-90deg)
+                    path
+                        stroke: $blue
+        &__row
+            grid-template-columns: 1fr auto
+            p
+                font-size: 16px
+                display: none
+                &:nth-child(1),
+                &.active
+                    display: block
+        &__title
+            grid-template-columns: 1fr 1fr
+            gap: 16px
+            p
+                grid-column: 1/3
+            h4
+                color: $dark-gray
+                padding: 20px
+                background: $white  
+                text-align: center
+                transition: all .3s
+                &.active,
+                &:hover
+                    color: $white
+                    background: $blue
+        &__footer
+            grid-template-columns: 1fr auto
+            h4
+                display: none
+                &.active,
+                &:nth-child(1)
+                    display: block
+        &__total
+            display: block
+            border-top: 1px solid $stroke   
+            padding: 16px 24px 24px
+            p
+                font-family: $font-family
+                font-weight: 400
+                font-size: 18px
+                line-height: 1.35
+                text-align: right
+                color: $dark-gray
