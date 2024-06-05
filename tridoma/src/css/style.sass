@@ -1288,14 +1288,10 @@ body
         align-items: start
         position: relative
     &__wa
-        display: flex
-        justify-content: center
-        align-items: center
         width: 100%
         max-width: 360px
         margin: 32px 0 0
-        padding: 20px 32px
-        background: $green
+        background: transparent
         font-family: $font-family
         font-weight: 500
         font-size: 16px
@@ -1304,19 +1300,43 @@ body
         text-transform: uppercase
         color: $white
         border: none
-        gap: 10px
+        transition: all .3s
+        display: block
+        padding: 0
+        position: relative
+        overflow: hidden
+        span
+            gap: 10px
+            padding: 20px 32px
+            display: flex
+            justify-content: center
+            align-items: center
+            background: $green
+            transition: all .5s
         svg
             path
                 stroke: $white
+        .norm
+            position: relative
+            transform: translateY(0) rotateX(0)
+            opacity: 1
+        .hover
+            position: absolute
+            inset: 0
+            transform: translateY(-50%) rotateX(90deg)
+            opacity: 0
+        &:hover
+            .norm
+                transform: translateY(50%) rotateX(90deg)
+                opacity: 0
+            .hover
+                transform: translateY(0) rotateX(0)
+                opacity: 1
     &__tg
-        display: flex
-        justify-content: center
-        align-items: center
         width: 100%
         max-width: 360px
-        margin: 12px 0 0
-        padding: 20px 32px
-        background: $blue
+        margin: 32px 0 0
+        background: transparent
         font-family: $font-family
         font-weight: 500
         font-size: 16px
@@ -1325,10 +1345,38 @@ body
         text-transform: uppercase
         color: $white
         border: none
-        gap: 10px
+        transition: all .3s
+        display: block
+        padding: 0
+        position: relative
+        overflow: hidden
+        span
+            gap: 10px
+            padding: 20px 32px
+            display: flex
+            justify-content: center
+            align-items: center
+            background: $blue
+            transition: all .5s
         svg
             path
                 fill: $white
+        .norm
+            position: relative
+            transform: translateY(0) rotateX(0)
+            opacity: 1
+        .hover
+            position: absolute
+            inset: 0
+            transform: translateY(-50%) rotateX(90deg)
+            opacity: 0
+        &:hover
+            .norm
+                transform: translateY(50%) rotateX(90deg)
+                opacity: 0
+            .hover
+                transform: translateY(0) rotateX(0)
+                opacity: 1
     &__text
         padding: 0 32px
         font-family: $font-family
@@ -2014,6 +2062,7 @@ section
                     gap: 8px
                 p
                     font-size: 18px
+                    max-width: 320px
                 li
                     &:last-child
                         grid-template-columns: 24px 1fr
@@ -2336,10 +2385,11 @@ section
             padding: 24px 0 0
             ul
                 justify-items: center
-            p
-                text-align: center
-                br
-                    display: none
+                p
+                    text-align: center
+                    max-width: 100%
+                    br
+                        display: none
         &__list
             grid-template-columns: 1fr 1fr
         &__soc
@@ -4123,3 +4173,48 @@ section
                 line-height: 1.35
                 text-align: right
                 color: $dark-gray
+
+.popup
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    z-index: 10
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 120px
+    &__overflow
+        width: 100%
+        height: 100%
+        backdrop-filter: blur(12px)
+        background: rgba(41, 41, 41, 0.45)
+        z-index: -1
+        position: fixed
+        top: 0
+        left: 0
+    &__img  
+        width: 100%
+        max-width: 1180px
+        height: 100%
+        object-fit: contain
+    &__close
+        position: absolute
+        top: 48px
+        right: 48px
+        cursor: pointer
+        svg
+            path
+                transition: all .3s
+        &:hover
+            svg
+                path
+                    fill: $blue
+
+@media ( max-width: 600px )
+    .popup
+        padding: 40px
+        &__close
+            top: 20px
+            right: 20px

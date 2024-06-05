@@ -280,7 +280,6 @@ let tech = document.querySelectorAll('.tech__item'),
     techBtn = document.querySelectorAll('.tech__btn');
 
 if(tech !== null && tech.length !== 0) {
-    tech[0].classList.add('active')
     for (let a = 0; a < techBtn.length; a++) {
         techBtn[a].addEventListener('click', ()=>{
             if(tech[a].classList.contains('active')) {
@@ -580,43 +579,50 @@ if(equipTab !== null) {
 
 
 
-// let popup = document.querySelectorAll('.gallery__slide'),
-//     popupImg = document.querySelectorAll('.gallery__slide img');
+let popup = document.querySelectorAll('.gallery__slide'),
+    popupImg = document.querySelectorAll('.gallery__slide img');
 
-// if(popup !== null) {
-//     popup.forEach((item, i)=>{
-//         document.body.addEventListener('click', (event)=>{
-//             let target = event.target
+if(popup !== null) {
+    let div =  document.createElement('div');
 
-//             let div =  document.createElement('div')
-//                 div.className = "popup";
-//                 div.innerHTML = `<div class="popup__overflow"></div>
-//                                 <div class="popup__close"><img src="img/close.svg" alt="" class="svg"></div>
-//                                 <img src="` + popupImg[i].src +`" alt="" class="popup__img">`;
+    popup.forEach((item, i)=>{
+        item.addEventListener('click', (event)=>{
 
-//             if(target.classList.contains('popup')) {
-//                 if(target == item) {
-//                     document.body.append(div)
-//                 }
-//             }
-//             // item.addEventListener('click', ()=>{
-//             //     document.body.append(div)
-//             // })
+            div.className = "popup"
+            div.innerHTML = `<div class="popup__overflow"></div>
+                            <div class="popup__close">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.21805 7.89766L3.23743 3.918C3.19281 3.87338 3.15741 3.8204 3.13326 3.7621C3.10911 3.7038 3.09668 3.64131 3.09668 3.5782C3.09668 3.5151 3.10911 3.45261 3.13326 3.39431C3.15741 3.336 3.19281 3.28303 3.23743 3.2384C3.28205 3.19378 3.33503 3.15839 3.39333 3.13424C3.45163 3.11009 3.51412 3.09766 3.57723 3.09766C3.64033 3.09766 3.70282 3.11009 3.76112 3.13424C3.81942 3.15839 3.8724 3.19378 3.91702 3.2384L7.89668 7.21902L11.8763 3.2384C11.9665 3.14828 12.0887 3.09766 12.2161 3.09766C12.3436 3.09766 12.4658 3.14828 12.5559 3.2384C12.6461 3.32852 12.6967 3.45075 12.6967 3.5782C12.6967 3.70565 12.6461 3.82788 12.5559 3.918L8.57531 7.89766L12.5559 11.8773C12.6461 11.9674 12.6967 12.0897 12.6967 12.2171C12.6967 12.3446 12.6461 12.4668 12.5559 12.5569C12.4658 12.647 12.3436 12.6977 12.2161 12.6977C12.0887 12.6977 11.9665 12.647 11.8763 12.5569L7.89668 8.57629L3.91702 12.5569C3.8269 12.647 3.70467 12.6977 3.57723 12.6977C3.44978 12.6977 3.32755 12.647 3.23743 12.5569C3.14731 12.4668 3.09668 12.3446 3.09668 12.2171C3.09668 12.0897 3.14731 11.9674 3.23743 11.8773L7.21805 7.89766Z" fill="#fff"/>
+                                </svg>                            
+                            </div>
+                            <img src="` + popupImg[i].src +`" alt="" class="popup__img">`;
+
+            document.body.append(div)
+
+            div.style.height = window.innerHeight + 'px'
     
-//             let popupOverflow = document.querySelector('.gallery__overflow'),
-//                 popupClose = document.querySelector('.gallery__close');
+            // let popupOverflow = document.querySelector('.gallery__overflow'),
+            //     popupClose = document.querySelector('.gallery__close');
     
-//             if(popupOverflow !== null) {
-//                 popupOverflow.addEventListener('click', ()=>{
-//                     document.body.remove(div)
-//                 })
-//                 popupClose.addEventListener('click', ()=>{
-//                     document.body.remove(div)
-//                 })
-//             }
-//         })
-//     })
-// }
+            // if(popupOverflow !== null) {
+            //     popupOverflow.addEventListener('click', ()=>{
+            //         document.body.remove(div)
+            //     })
+            //     popupClose.addEventListener('click', ()=>{
+            //         document.body.remove(div)
+            //     })
+            // }
+        })
+    })
+
+    document.body.addEventListener('click',(event)=>{
+        let target = event.target;
+
+        if(target.closest('.popup__close') || target.closest('.popup__overflow')) {
+            div.remove()
+        }
+    })
+}
 
 if(document.querySelectorAll('.itc-select')!==null) {
     const select1 = new ItcCustomSelect('#select-1');
