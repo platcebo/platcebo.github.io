@@ -99,7 +99,7 @@ var swiper = new Swiper(".tech__slider", {
 var swiper = new Swiper(".gallery__slider", {
     slidesPerView: 1,
     spaceBetween: 24,
-    // loop: true,
+    loop: true,
     pagination: {
         el: ".gallery__pag",
     },
@@ -623,6 +623,23 @@ if(popup !== null) {
         }
     })
 }
+
+const navElements = document.querySelectorAll('a[href^="#"]');
+
+navElements.forEach((link) => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const id = link.getAttribute('href');
+    const target = document.querySelector(id);
+    const offsetTop = target.getBoundingClientRect().top + window.pageYOffset;
+
+    window.scrollTo({
+      top: offsetTop,
+      behavior: "smooth"
+    });
+  });
+});
+
 
 if(document.querySelectorAll('.itc-select')!==null) {
     const select1 = new ItcCustomSelect('#select-1');
