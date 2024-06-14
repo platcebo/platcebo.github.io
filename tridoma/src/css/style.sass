@@ -1207,7 +1207,8 @@ body
     &__slide
         position: relative
         overflow: hidden
-        img
+        img,
+        video
             width: 100%
             object-fit: cover
             height: 100%
@@ -1535,7 +1536,7 @@ body
         display: grid
         grid-template-columns: 16px 1fr
         gap: 8px
-        align-items: center
+        align-items: start
         p
             font-family: $font-family
             font-weight: 400
@@ -1585,7 +1586,7 @@ body
     background: $black
     &__wrapper
         display: grid
-        grid-template-columns: 1fr 1fr 1fr auto 48px
+        grid-template-columns: 1fr 1fr 1fr 390px 48px
         align-items: start
     &__logo
         img
@@ -1678,6 +1679,7 @@ body
             display: grid
             grid-template-columns: 100%
             gap: 8px
+            justify-items: start
             svg
                 width: 100%
                 g
@@ -1770,8 +1772,8 @@ body
         padding: 24px 0 0
         border-top: 1px solid #ffffff33
         display: grid
-        grid-template-columns: auto 1fr auto
-        gap: 345px
+        grid-template-columns: 2fr 1fr 438px
+        gap: 0
         align-items: center
         p
             font-family: $font-family
@@ -1783,10 +1785,12 @@ body
             justify-content: center
             align-items: center
             gap: 5px
+            max-width: max-content
             &:nth-child(2)
                 max-width: 295px
-                margin: 0 0 0 auto
                 font-size: 14px
+            &:nth-child(3)
+                margin: 0 0 0 auto
         a
             font-family: $font-family
             font-weight: 400
@@ -2077,7 +2081,6 @@ section
                 svg
                     width: 24px
         &__row
-            gap: 134px
             a,
             p
                 font-size: 16px
@@ -2242,7 +2245,7 @@ section
             max-width: 100%
     .program
         h2
-            font-size: 48px
+            // font-size: 48px
             max-width: 100%
         &__row
             margin: 32px 0 0
@@ -2532,7 +2535,7 @@ section
         &__price
             text-align: left
         &__dop
-            gap: 5px
+            gap: 12px
             div
                 gap: 4px
             p
@@ -2695,6 +2698,7 @@ section
                 margin: 0
                 justify-items: start
                 grid-template-columns: 100%
+                max-width: 100%
                 li
                     grid-column: auto !important
                 svg
@@ -2812,7 +2816,7 @@ section
         display: grid
         grid-template-columns: 16px auto
         gap: 8px
-        align-items: center
+        align-items: start
         justify-content: center
         p
             font-family: $font-family
@@ -4302,7 +4306,10 @@ section
         top: 48px
         right: 48px
         cursor: pointer
+        width: 24px
         svg
+            width: 24px
+            height: 24px
             path
                 transition: all .3s
         &:hover

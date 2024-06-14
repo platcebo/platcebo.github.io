@@ -67,6 +67,7 @@ var swiperCart = new Swiper(".header-cart__slider", {
 var swiper = new Swiper(".advantage__slider", {
     slidesPerView: 1,
     spaceBetween: 24,
+    loop: true,
     navigation: {
         nextEl: ".advantage__next",
         prevEl: ".advantage__prev",
@@ -580,6 +581,7 @@ if(equipTab !== null) {
 
 
 let popup = document.querySelectorAll('.gallery__slide'),
+    popupVideo = document.querySelectorAll('.gallery__slide video')
     popupImg = document.querySelectorAll('.gallery__slide img');
 
 if(popup !== null) {
@@ -600,6 +602,7 @@ if(popup !== null) {
             document.body.append(div)
 
             div.style.height = window.innerHeight + 'px'
+
     
             // let popupOverflow = document.querySelector('.gallery__overflow'),
             //     popupClose = document.querySelector('.gallery__close');

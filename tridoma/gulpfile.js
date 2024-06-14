@@ -68,6 +68,10 @@ function file(done) {
     gulp.src('./src/img/**/*')
     .pipe(gulp.dest('./dist/img'))
     .pipe(browserSync.stream());
+    
+    gulp.src('./src/video/**/*')
+    .pipe(gulp.dest('./dist/video'))
+    .pipe(browserSync.stream());
 
     gulp.src('./src/js/**/*')
     .pipe(gulp.dest('./dist/js'))
@@ -101,6 +105,7 @@ function sync(done){
 function watch() {
     gulp.watch("./src/favicon/**/*" , file);
     gulp.watch("./src/img/**/*" , file);
+    gulp.watch("./src/video/**/*" , file);
     gulp.watch("./src/font/**/*" , file);
     gulp.watch("./src/js/**/*" , file);
     gulp.watch("./src/php/**/*" , file);
