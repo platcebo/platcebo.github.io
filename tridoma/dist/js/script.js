@@ -122,7 +122,7 @@ var swiperGallery = new Swiper(".gallery__slider_img", {
 var swiperPopup = new Swiper(".gallery-popup__img .gallery-popup__slider", {
     slidesPerView: 1,
     spaceBetween: 120,
-    // loop: true,
+    loop: true,
     pagination: {
         el: ".gallery-popup__pag",
     },
@@ -141,21 +141,24 @@ if(galleryImg !== null) {
     galleryImgSlide.forEach((item, i)=>{
         item.addEventListener('click', ()=>{
             galleryImg.classList.add('active')
+            document.body.style.overflow = "hidden"
             swiperPopup.slideTo(i)
         })
     })
     galleryImgClose.addEventListener('click', ()=>{
         galleryImg.classList.remove('active')
+        document.body.style.overflow = "visible"
     })
     galleryImgOverflow.addEventListener('click', ()=>{
         galleryImg.classList.remove('active')
+        document.body.style.overflow = "visible"
     })
 }
 
 var swiperGalleryVideo = new Swiper(".gallery__slider_video", {
     slidesPerView: 1,
     spaceBetween: 24,
-    // loop: true,
+    loop: true,
     pagination: {
         el: ".gallery__pag",
     },
@@ -387,7 +390,6 @@ let faq = document.querySelectorAll('.faq__item'),
     faqBtn = document.querySelectorAll('.faq__btn');
 
 if(faq !== null && faq.length !== 0) {
-    faq[0].classList.add('active')
     for (let a = 0; a < faqBtn.length; a++) {
         faqBtn[a].addEventListener('click', ()=>{
             if(faq[a].classList.contains('active')) {

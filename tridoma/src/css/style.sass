@@ -235,6 +235,8 @@ body
                     stroke: $hover
         &::after
             content: none
+        &::placeholder
+            color: $gray
     &__dropdown
         border-radius: 0
         border: 1px solid $stroke
@@ -1494,16 +1496,22 @@ body
                 width: 32px
                 path
                     transition: all .3s
+                    fill: $blue
+                    stroke: none
+                g
+                    path
+                        stroke: $blue
+                        fill: none
             &:hover
                 box-shadow: 0 25px 55px 0 rgba(93, 92, 96, 0.1), 0 100px 100px 0 rgba(93, 92, 96, 0.09), 0 225px 135px 0 rgba(93, 92, 96, 0.05), 0 400px 160px 0 rgba(93, 92, 96, 0.01)
                 background: $hover
                 svg
                     path
-                        fill: white
+                        fill: $white
                         stroke: none
                     g
                         path
-                            stroke: white
+                            stroke: $white
                             fill: none
     &__req
         background: $white
@@ -1693,7 +1701,7 @@ body
                     display: grid
                     grid-template-columns: 32px 1fr
                     gap: 16px
-                    align-items: start
+                    align-items: center
             p
                 font-family: $font-family
                 font-weight: 400
@@ -1705,7 +1713,7 @@ body
                 display: grid
                 grid-template-columns: 32px 1fr
                 gap: 16px
-                align-items: start
+                align-items: center
                 &:hover
                     p
                         color: $hover
@@ -2485,6 +2493,7 @@ section
             padding: 0 24px
             gap: 16px
         &__func
+            width: auto
             bottom: auto
             top: 440px
             right: 24px
@@ -2600,7 +2609,7 @@ section
     .program
         padding: 30px 0
         &__item
-            height: 244px
+            height: 86vw
         h4
             font-size: 20px
         &__info
@@ -2613,6 +2622,9 @@ section
                 margin: 4px 0 0
     .service
         padding: 30px 0
+        &__btn
+            p
+                font-size: 18px
         &__text
             img
                 height: 250px
@@ -2634,8 +2646,15 @@ section
             max-height: 132px
     .gallery
         padding: 30px 0
+        &__tab
+            margin: 24px 0 0
+            grid-template-columns: 100%
+            gap: 12px
     .faq
         padding: 30px 0
+        &__btn
+            p
+                font-size: 18px
         &__mob
             margin: 24px 0 0
             grid-template-columns: 100%
@@ -2668,14 +2687,12 @@ section
         &__adress
             font-size: 18px
         &__soc
-            display: grid
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr
             gap: 6px
             width: 264px
             max-width: 100%
             a
-                width: 100%
                 height: 48px
+                width: 48px
                 svg
                     width: 24px
                     height: 24px
@@ -2924,7 +2941,7 @@ section
         border-bottom: 1px solid $stroke
 
 .thanks
-    padding: 132px 0 345px
+    padding: 132px 0 300px
     position: relative
     overflow: hidden
     h1
@@ -2949,6 +2966,7 @@ section
         color: $gray
     .btn__blue
         margin: 32px auto 0
+        max-width: 284px
     &::before
         content: ''
         display: block
@@ -2967,7 +2985,7 @@ section
     &__bg
         display: block
         width: 100%
-        max-width: 1075px
+        max-width: 900px
         margin: 0 auto
     h1
         font-family: $font-family
@@ -2991,6 +3009,7 @@ section
         max-width: 860px
     .btn__blue
         margin: 32px auto 0
+        max-width: 284px
 
 @media ( max-width: 1500px )
     .thanks
@@ -3312,6 +3331,7 @@ section
             line-height: 1.35
             color: $dark-gray
         &_scroll
+            padding: 0 10px 0 0
             display: grid
             grid-template-columns: 1fr 1fr
             overflow-y: scroll
@@ -3608,6 +3628,7 @@ section
             justify-content: space-between
             align-items: center
             border-bottom: 1px solid $stroke
+            gap: 5px
             p
                 font-family: $font-family
                 font-weight: 400
@@ -3616,6 +3637,7 @@ section
                 color: $dark-gray
                 &+p
                     opacity: .7
+                    white-space: nowrap
             &:last-child
                 border: none
                 padding-bottom: 0
@@ -4038,6 +4060,15 @@ section
                 display: flex
                 gap: 16px
                 overflow-x: scroll
+                padding: 0 0 10px
+                &::-webkit-scrollbar 
+                    width: 0
+                    height: 4px
+                &::-webkit-scrollbar-track 
+                    background: $bg
+                &::-webkit-scrollbar-thumb 
+                    background: $stroke
+                    border-radius: 100px
             &_check
                 min-width: 128px
             &_footer
@@ -4131,11 +4162,16 @@ section
                     border: 1px solid $blue
 
 @media ( max-width: 700px )
+    .consul
+        padding: 30px 0
     .header-cart
+        &__slider
+            height: 328px
         .breadcrumbs
             padding: 0 0 0 24px
         &__back
-            margin: 0 24px 0 auto
+            margin: 0 auto 0 24px
+            font-size: 12px
         &__slider
             &_sale
                 left: 0
@@ -4165,13 +4201,15 @@ section
                 min-width: 106px
                 p
                     font-size: 12px
+                img
+                    height: 76px
             &__footer
                 padding: 16px 24px 24px
             &_price
                 font-size: 22px
     .plan
         &__tab
-            grid-template-columns: 50% 50% 50% 50%
+            grid-template-columns: calc(50% - 8px) calc(50% - 8px) calc(50% - 8px) calc(50% - 8px)
             overflow-x: scroll
     .about
         &__har
@@ -4196,6 +4234,7 @@ section
             li
                 p
                     font-size: 18px
+                    max-width: 180px
     .pref
         &__row
             max-width: 100%
@@ -4215,6 +4254,7 @@ section
                     display: block
         &__row
             grid-template-columns: 1fr auto
+            align-items: start
             p
                 font-size: 16px
                 display: none
@@ -4256,6 +4296,7 @@ section
                 text-align: right
                 color: $dark-gray
     .check-more
+        padding: 30px 0 60px
         &__img
             height: 350px
         &__slider
@@ -4375,3 +4416,5 @@ section
             display: none
         &__slide
             height: calc( 100vh - 200px )
+        &__close
+            right: 20px
