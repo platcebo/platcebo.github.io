@@ -124,7 +124,7 @@ body.fix {
 }
 
 .prev-page__list p {
-    color: #333333;
+    color: #4f505a;
     font-family: Manrope;
     font-size: 20px;
     font-weight: 500;
@@ -188,6 +188,10 @@ body.fix {
     font-size: 20px;
     font-weight: 500;
     line-height: 140%
+}
+
+.prev-page__contact a+a {
+    margin: 0;
 }
 
 .prev-page__contact a {
@@ -304,7 +308,11 @@ body.fix {
     }
 }
 
-@media(max-width:1024px) {
+@media(max-width: 1200px) {
+    .prev-page__contact {
+        grid-template-columns: 145px auto auto;
+        justify-items: center;
+    }
     .prev-page {
         grid-template-columns: 100%;
         position: relative
@@ -367,7 +375,8 @@ body.fix {
 @media(max-width:700px) {
     .prev-page__contact {
         grid-template-columns: 100%;
-        gap: 16px
+        gap: 16px;
+        justify-items: start;
     }
 
     .prev-page__footer {
@@ -389,6 +398,10 @@ body.fix {
 }
 
 @media(max-width:600px) {
+    .prev-page__btn {
+        width: 100%;
+        max-width: 100%;
+    }
     .prev-page__bg {
         display: none
     }
@@ -408,7 +421,8 @@ body.fix {
 
     .prev-page__info h1 {
         font-size: 29px;
-        letter-spacing: -1px
+        letter-spacing: -1px;
+        max-width: 280px
     }
 
     .prev-page__list {
@@ -427,7 +441,9 @@ body.fix {
     }
 
     .prev-page__image img {
-        width: 100%
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
     }
 
     .prev-page__row {
@@ -462,12 +478,13 @@ body.fix {
         font-size: 16px;
         font-weight: 500;
         line-height: 120%;
-        color: #4f505a
+        color: #6f6f6f
     }
 
     .prev-page__contact {
         grid-template-columns: 100%;
-        gap: 16px
+        gap: 16px;
+        max-width: 290px
     }
 
     .prev-page__footer {
