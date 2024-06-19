@@ -2895,8 +2895,8 @@ section
             left: 0
             opacity: 0
             z-index: 5
-            width: 16px
-            height: 16px
+            width: 100%
+            height: 100%
             &:checked
                 &+span
                     border: 1px solid $blue
@@ -3132,6 +3132,9 @@ section
         line-height: 1.35
         color: $gray
         position: relative
+        transition: all .3s
+        &:hover
+            color: $hover
         &::after 
             display: block
             content: '/'
@@ -3751,6 +3754,7 @@ section
             display: block
             transform: rotate(90deg)
             transition: all .3s
+            align-self: center
             path
                 stroke: $dark-gray
                 transition: all .3s
