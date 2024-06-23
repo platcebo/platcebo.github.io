@@ -1,9 +1,10 @@
 $green: #00cc4e
-$red: #e94545
-$hover: #649cfb
+$red: #cb2727
+$hover: #ff7468
+$coral: #f0564a
 $blue: #3f7de5
 $black: #2c2c2c
-$dark-gray: #424242
+$dark-gray: #333
 $gray: #6f6f6f
 $stroke: #d9d9d9
 $bg: #f5f5f7
@@ -56,7 +57,7 @@ body
         background: transparent
         text-align: center
         .norm
-            background: $blue
+            background: $coral
             padding: 20px 32px
             color: $white
             transition: all .5s
@@ -82,6 +83,7 @@ body
                 transform: translateY(0) rotateX(0)
                 opacity: 1
     &__wht
+        display: block
         max-width: max-content
         width: 100%
         font-family: $font-family
@@ -97,7 +99,7 @@ body
         position: relative
         text-align: center
         .norm
-            border: 1px solid $blue
+            border: 1px solid $coral
             padding: 20px 32px
             background: transparent
             color: $dark-gray
@@ -182,7 +184,7 @@ body
                 color: $black
         &:not(:placeholder-shown),
         &:focus
-            border-bottom: 1px solid $blue
+            border-bottom: 1px solid $coral
             &+p
                 color: $gray
                 transform: translateY(-100%)
@@ -280,7 +282,7 @@ body
         align-items: center
     &__logo
         display: block
-        max-width: 157px
+        max-width: 146px
         img
             width: 100%
     ul
@@ -332,8 +334,9 @@ body
             font-size: 24px
             line-height: 1.35
             text-transform: uppercase
-            color: $blue
+            color: $dark-gray
             transition: all .3s
+            display: block
             &:hover
                 color: $hover
         p
@@ -366,6 +369,12 @@ body
                 width: 100%
                 path
                     transition: all .3s
+                    fill: $dark-gray
+                    stroke: none
+                g
+                    path
+                        stroke: $dark-gray
+                        fill: none
             &:hover
                 box-shadow: 0 25px 55px 0 rgba(93, 92, 96, 0.1), 0 100px 100px 0 rgba(93, 92, 96, 0.09), 0 225px 135px 0 rgba(93, 92, 96, 0.05), 0 400px 160px 0 rgba(93, 92, 96, 0.01)
                 background: $hover
@@ -386,7 +395,7 @@ body
         position: relative
         padding: 32px 
         z-index: 1
-        height: calc( 100vh - 200px )
+        height: calc( 100vh - 220px )
         display: flex
         align-items: center
         min-height: 600px
@@ -422,7 +431,7 @@ body
         bottom: 32px
         right: 32px
         width: 100%
-        max-width: 464px
+        max-width: 296px
         padding: 32px
         z-index: 5
         p
@@ -430,13 +439,13 @@ body
             font-weight: 400
             font-size: 18px
             line-height: 1.35
-            color: $blue
+            color: $dark-gray
             text-align: center
         &_logo
             display: grid
-            grid-template-columns: 1fr 1fr
-            gap: 8px
-            margin: 8px 0 0
+            grid-template-columns: 1fr 1fr 1fr 1fr
+            gap: 24px
+            margin: 16px 0 0
         img
             width: 100%
     &__func
@@ -538,11 +547,11 @@ body
         align-items: center
     &__tab
         display: grid
-        grid-template-columns: 1fr 1fr
+        grid-template-columns: 1fr 1fr 1fr
         gap: 24px
         &_item
             background: $white
-            padding: 20px 40px
+            padding: 20px 0
             font-family: $font-family
             font-weight: 500
             font-size: 16px
@@ -555,7 +564,7 @@ body
             transition: all .3s
             &.active,
             &:hover
-                background: $blue
+                background: $coral
                 color: $white
     &__wrapper
         margin: 32px 0 0
@@ -620,14 +629,14 @@ body
         font-size: 42px
         line-height: 1.1
         text-align: right
-        color: $blue
+        color: $dark-gray
     &__price
         font-family: $font-family
         font-weight: 500
         font-size: 42px
         line-height: 1.1
         text-align: right
-        color: $blue        
+        color: $dark-gray        
     &__sale
         font-family: $font-family
         font-weight: 400
@@ -690,7 +699,7 @@ body
         position: absolute
         top: 0
         left: 0
-        background: $blue
+        background: $coral
         padding: 24px
         max-width: 146px
         h3
@@ -709,6 +718,8 @@ body
             line-height: 1.35
             text-align: center
             color: $white
+    .btn__wht
+        margin: 32px auto 0
 
 .pref
     padding: 60px 0
@@ -789,7 +800,7 @@ body
         bottom: 0
         right: 0
         width: 174px
-        background: $blue
+        background: $coral
         padding: 24px
         p
             font-family: $font-family
@@ -863,21 +874,21 @@ body
                 transition: all .3s
         &:hover
             p
-                color: $blue
+                color: $hover
             svg
                 path
-                    stroke: $blue
+                    stroke: $hover
     &__item
         background: $white
         &.active
             .service
                 &__btn
                     p
-                        color: $blue
+                        color: $coral
                     svg
                         transform: rotate(-90deg)
                         path
-                            stroke: $blue
+                            stroke: $coral
                 &__text
                     padding: 0 32px 32px
                     max-height: 1000px
@@ -973,7 +984,7 @@ body
         width: 48px
         height: 48px
         border-radius: 100%
-        border: 1px solid $blue
+        border: 1px solid $coral
         inset: auto
         margin: 0
         transition: all .3s
@@ -984,7 +995,7 @@ body
             width: 24px
             height: 24px
             path
-                stroke: $blue
+                stroke: $coral
         &::after
             content: none
         &:hover
@@ -1020,6 +1031,7 @@ body
         font-size: 24px
         line-height: 1.35
         color: $dark-gray
+        transition: all .3s
         span
             display: none
     &__text
@@ -1080,7 +1092,7 @@ body
         width: 48px
         height: 48px
         border-radius: 100%
-        border: 1px solid $blue
+        border: 1px solid $coral
         inset: auto
         margin: 0
         transition: all .3s
@@ -1094,7 +1106,7 @@ body
             height: 24px
             path
                 transition: all .3s
-                stroke: $blue
+                stroke: $coral
         &::after
             content: none
         &:hover
@@ -1124,7 +1136,7 @@ body
             transition: all .3s
             opacity: 1
             &.swiper-pagination-bullet-active
-                background: $blue
+                background: $coral
                 border: 1px solid $blue
     &__list
         display: grid
@@ -1171,14 +1183,14 @@ body
                         -webkit-background-clip: text
                         -webkit-text-fill-color: transparent
                 &__num
-                    color: $blue
+                    color: $coral
                 &__btn
                     p
-                        color: $blue
+                        color: $coral
                     svg
                         transform: rotate(-90deg)
                         path
-                            stroke: $blue
+                            stroke: $coral
 
 .gallery
     padding: 60px 0
@@ -1211,7 +1223,7 @@ body
             text-align: center
             &.active,
             &:hover
-                background: $blue
+                background: $coral
                 color: $white
     &__wrapper
         margin: 32px 0 0
@@ -1270,7 +1282,7 @@ body
         width: 48px
         height: 48px
         border-radius: 100%
-        border: 1px solid $blue
+        border: 1px solid $coral
         inset: auto
         margin: 0
         transition: all .3s
@@ -1281,7 +1293,7 @@ body
             width: 24px
             height: 24px
             path
-                stroke: $blue
+                stroke: $coral
         &::after
             content: none
         &:hover
@@ -1330,7 +1342,6 @@ body
             display: flex
             justify-content: center
             align-items: center
-            background: $green
             transition: all .5s
         svg
             path
@@ -1339,11 +1350,17 @@ body
             position: relative
             transform: translateY(0) rotateX(0)
             opacity: 1
+            border: 1px solid $stroke
+            color: $dark-gray
+            svg
+                path
+                    stroke: $dark-gray
         .hover
             position: absolute
             inset: 0
             transform: translateY(-50%) rotateX(90deg)
             opacity: 0
+            background: linear-gradient(180deg, #42e35f 0%, #21c741 100%)
         &:hover
             .norm
                 transform: translateY(50%) rotateX(90deg)
@@ -1375,7 +1392,6 @@ body
             display: flex
             justify-content: center
             align-items: center
-            background: $blue
             transition: all .5s
         svg
             path
@@ -1384,11 +1400,17 @@ body
             position: relative
             transform: translateY(0) rotateX(0)
             opacity: 1
+            border: 1px solid $stroke
+            color: $dark-gray
+            svg
+                path
+                    fill: $dark-gray
         .hover
             position: absolute
             inset: 0
             transform: translateY(-50%) rotateX(90deg)
             opacity: 0
+            background: linear-gradient(180deg, #35b2e2 0%, #1b95d4 100%)
         &:hover
             .norm
                 transform: translateY(50%) rotateX(90deg)
@@ -1428,21 +1450,21 @@ body
                 transition: all .3s
         &:hover
             p
-                color: $blue
+                color: $hover
             svg
                 path
-                    stroke: $blue
+                    stroke: $hover
     &__item
         background: $white
         &.active
             .faq
                 &__btn
                     p
-                        color: $blue
+                        color: $coral
                     svg
                         transform: rotate(-90deg)
                         path
-                            stroke: $blue
+                            stroke: $coral
                 &__text
                     padding: 0 32px 32px
                     max-height: 500px
@@ -1514,11 +1536,11 @@ body
                 width: 32px
                 path
                     transition: all .3s
-                    fill: $blue
+                    fill: $dark-gray
                     stroke: none
                 g
                     path
-                        stroke: $blue
+                        stroke: $dark-gray
                         fill: none
             &:hover
                 box-shadow: 0 25px 55px 0 rgba(93, 92, 96, 0.1), 0 100px 100px 0 rgba(93, 92, 96, 0.09), 0 225px 135px 0 rgba(93, 92, 96, 0.05), 0 400px 160px 0 rgba(93, 92, 96, 0.01)
@@ -1553,6 +1575,8 @@ body
         gap: 32px
         .btn__blue
             max-width: 100%
+            span
+                padding: 20px 0
     &__row
         display: grid
         grid-template-columns: 1fr 1fr
@@ -1563,6 +1587,7 @@ body
         grid-template-columns: 16px 1fr
         gap: 8px
         align-items: start
+        z-index: 1
         p
             font-family: $font-family
             font-weight: 400
@@ -1571,7 +1596,7 @@ body
             color: $gray
             a
                 color: $blue
-                text-decoration: underline
+                text-decoration: none
                 z-index: 5
         span
             border: 1px solid $stroke
@@ -1595,17 +1620,17 @@ body
             top: 0
             left: 0
             opacity: 0
-            z-index: 5
-            width: 16px
-            height: 16px
+            z-index: 1
+            width: 100%
+            height: 100%
             &:checked
                 &+span
-                    border: 1px solid $blue
+                    border: 1px solid $coral
                     &::before
                         opacity: 1
             &:hover
                 &+span
-                    border: 1px solid $blue
+                    border: 1px solid $coral
 
 .footer
     padding: 48px 0 32px
@@ -1616,7 +1641,7 @@ body
         align-items: start
     &__logo
         img
-            width: 155px
+            width: 146px
     &__text
         margin: 60px 0 0
         display: grid
@@ -1800,11 +1825,21 @@ body
     &__row
         margin: 24px 0 0
         padding: 24px 0 0
-        border-top: 1px solid #ffffff33
         display: grid
         grid-template-columns: 2fr 1fr 438px
         gap: 0
         align-items: center
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            display: block
+            width: 100vw
+            height: 1px
+            left: 50%
+            transform: translateX(-50%)
+            background: rgba(255,255,255,.2)
         p
             font-family: $font-family
             font-weight: 400
@@ -1878,7 +1913,7 @@ section
         text-transform: uppercase
         color: $dark-gray
         span
-            color: $blue
+            color: $coral
 
 @media ( max-width: 1820px )
     section
@@ -1894,7 +1929,7 @@ section
             font-size: 14px
     .nav
         &__logo
-            max-width: 112px
+            max-width: 106px
         ul
             margin: 0 auto 0 32px
             gap: 16px
@@ -1907,7 +1942,6 @@ section
             a
                 font-weight: 400
             p
-                display: block
                 text-align: right
                 margin: 6px 0 0 auto
                 font-size: 14px
@@ -1930,6 +1964,7 @@ section
             bottom: 24px
             right: 24px
             padding: 24px
+            max-width: 280px
             p
                 font-size: 16px
         &__item
@@ -1974,6 +2009,9 @@ section
                 font-size: 36px
             p
                 font-size: 16px
+        &__tab
+            &_item
+                font-size: 14px
     .pref
         &__info
             padding: 24px
@@ -2081,9 +2119,12 @@ section
             font-size: 16px
     .footer
         padding: 48px 0
+        &__logo
+            img
+                width: 106px
         &__text
             p
-                font-size: 16px
+                font-size: 14px
         &__list
             a
                 font-size: 14px
@@ -2139,7 +2180,7 @@ section
             display: block
             width: 60px
             height: 60px
-            background: $blue
+            background: $coral
             position: relative
             cursor: pointer
             &::before,
@@ -2344,8 +2385,8 @@ section
                 transition: all .3s
                 opacity: 1
                 &.swiper-pagination-bullet-active
-                    background: $blue
-                    border: 1px solid $blue
+                    background: $coral
+                    border: 1px solid $coral
     .tech
         &__title
             grid-template-columns: 100%
@@ -2360,6 +2401,8 @@ section
             .tech__num
                 display: none
     .gallery
+        &__tab
+            max-width: 466px
         &__text
             text-align: center  
         &__arrow
@@ -2383,8 +2426,8 @@ section
                 transition: all .3s
                 opacity: 1
                 &.swiper-pagination-bullet-active
-                    background: $blue
-                    border: 1px solid $blue
+                    background: $coral
+                    border: 1px solid $coral
     .faq
         &__block
             grid-template-columns: 100%
@@ -2414,21 +2457,39 @@ section
         &__soc
             max-width: 270px
     .footer
+        &__logo
+            p
+                display: none
+            img
+                width: 106px
         &__wrapper
-            grid-template-columns: 1fr 2fr 48px
+            grid-template-columns: 106px 1fr 106px
         &__contact
             grid-column: 1/4
             order: 2
-            border-top: 1px solid rgba(255,255,255,.2)
             max-width: 100%
             margin: 24px 0 0
             padding: 24px 0 0
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                top: 0
+                display: block
+                width: 100vw
+                height: 1px
+                left: 50%
+                transform: translateX(-50%)
+                background: rgba(255,255,255,.2)
             ul
                 margin: 0 auto
                 justify-items: center
-                grid-template-columns: 1fr 1fr
+                grid-template-columns: auto auto
+                gap: 18px
                 width: max-content
                 li
+                    display: flex
+                    gap: 5px
                     &:last-child
                         grid-column: 1/3
                 p
@@ -2436,8 +2497,13 @@ section
                     max-width: 100%
                     br
                         display: none
+                a
+                    display: flex
+                    svg
+                        width: 24px
         &__list
-            grid-template-columns: 1fr 1fr
+            grid-template-columns: 100%
+            justify-items: center
         &__soc
             justify-content: center
         &__func
@@ -2452,6 +2518,18 @@ section
         &__row
             grid-template-columns: 1fr auto 1fr
             gap: 5px
+            position: relative
+            border: none
+            &::before
+                content: ''
+                position: absolute
+                top: 0
+                display: block
+                width: 100vw
+                height: 1px
+                left: 50%
+                transform: translateX(-50%)
+                background: rgba(255,255,255,.2)
             p,
             a
                 font-size: 14px
@@ -2466,6 +2544,12 @@ section
                 &:nth-child(3)
                     justify-content: flex-end
                     margin: 0 0 0 auto
+        &__up
+            margin: 0 0 0 auto
+        &__text
+            margin: 16px 0 0
+        &__soc
+            margin: 16px 0 0
 
 @media ( max-width: 900px )
     .header
@@ -2757,6 +2841,7 @@ section
             margin: 16px 0 0
             grid-template-columns: 100%
             gap: 12px
+            justify-items: start
             a
                 font-size: 12px
         &__func
@@ -2768,26 +2853,41 @@ section
         &__row
             margin: 8px 0 0
             padding: 0
-            border: none
-            grid-template-columns: auto auto
+            grid-template-columns: 100%
             gap: 16px
             p
+                justify-content: center !important
+                margin: 0 auto !important
                 &:nth-child(2)
+                    position: relative
                     order: -1
-                    grid-column: 1/3
-                    text-align: left
+                    text-align: left !important
+                    justify-content: start !important
                     margin: 0
                     padding: 0 0 16px
-                    border-bottom: 1px solid rgba(255,255,255,.2)
                     max-width: 100%
+                    &::before
+                        content: ''
+                        position: absolute
+                        bottom: 0
+                        display: block
+                        width: 100vw
+                        height: 1px
+                        left: 50%
+                        transform: translateX(-50%)
+                        background: rgba(255,255,255,.2)
             a,
             p
                 font-size: 12px
-        &__text
-            margin: 24px 0 0
+            &::before
+                content: none
         &__mob
             justify-content: start
             grid-template-columns: 100%
+        &__text
+            margin: 24px 0 0
+            grid-template-columns: auto auto
+            gap: 12px
     .nav-part
         p
             font-size: 12px
@@ -2841,7 +2941,7 @@ section
         text-align: center
         color: $dark-gray
         span
-            color: $blue
+            color: $coral
     &__subtitle
         margin: 12px 0 0
         font-family: $font-family
@@ -2869,7 +2969,7 @@ section
             line-height: 1.35
             color: $gray
             a
-                color: $blue
+                color: $coral
                 text-decoration: underline
                 z-index: 5
         span
@@ -2899,12 +2999,12 @@ section
             height: 100%
             &:checked
                 &+span
-                    border: 1px solid $blue
+                    border: 1px solid $coral
                     &::before
                         opacity: 1
             &:hover
                 &+span
-                    border: 1px solid $blue
+                    border: 1px solid $coral
     .btn__blue
         margin: 32px 0 0
         max-width: 100%
@@ -2969,12 +3069,8 @@ section
         &__form
             margin: 40px 0 0
 
-.nav
-    &__border
-        border-bottom: 1px solid $stroke
-
 .thanks
-    padding: 132px 0 300px
+    padding: 193px 0 200px
     position: relative
     overflow: hidden
     h1
@@ -2988,7 +3084,7 @@ section
         max-width: 812px
         margin: 0 auto
         span
-            color: $blue
+            color: $coral
     &__subtitle
         margin: 12px 0 0
         font-family: $font-family
@@ -3000,17 +3096,21 @@ section
     .btn__blue
         margin: 32px auto 0
         max-width: 284px
-    &::before
+    &::before,
+    &::after
         content: ''
         display: block
-        width: 910px
-        height: 624px
+        width: 666px
+        height: 388px
         position: absolute
-        left: 50%
-        transform: translateX(-50%)
-        bottom: -350px
-        background: url('../img/thanks_bg.svg') center no-repeat
+        transform: translateY(-50%)
+        top: 50%
+        left: -263px
+        background: url('../img/logo_bg.svg') center no-repeat
         background-size: contain
+    &::after
+        left: auto
+        right: -273px
 
 .error
     padding: 12px 0 56px
@@ -3030,7 +3130,7 @@ section
         color: $dark-gray
         margin: 0 auto
         span
-            color: $blue
+            color: $coral
     &__subtitle
         margin: 12px auto 0
         font-family: $font-family
@@ -3046,11 +3146,15 @@ section
 
 @media ( max-width: 1500px )
     .thanks
-        padding: 113px 0 290px
-        &::before
-            width: 738px
-            height: 507px
-            bottom: -280px
+        padding: 160px 0 180px
+        &::before,
+        &:after
+            width: 516px
+            height: 300px
+            left: -218px
+        &::after
+            right: -200px
+            left: auto
         h1
             font-size: 64px
         &__subtitle
@@ -3065,15 +3169,22 @@ section
             max-width: 711px
 
 @media ( max-width: 1024px )
+    .nav
+        &__border
+            border-bottom: 1px solid $stroke
     .thanks
-        padding: 194px 0 385px
+        padding: 194px 0 300px
         &::before
-            width: calc( 100% - 80px )
+            top: auto
+            width: 100%
             height: 500px
             bottom: 0
-            left: 40px
-            right: 40px
-            transform: translateY(50%)
+            left: 0
+            right: 0
+            transform: none
+            background-position: bottom
+        &::after
+            content: none
         h1
             font-size: 58px
         &__subtitle
@@ -3092,14 +3203,7 @@ section
 
 @media ( max-width: 600px )
     .thanks
-        padding: 60px 0 230px
-        &::before
-            width: calc( 100% - 48px )
-            height: 500px
-            bottom: 0
-            left: 24px
-            right: 24px
-            transform: translateY(50%)
+        padding: 140px 0 160px
         h1
             font-size: 26px
             max-width: 310px
@@ -3130,7 +3234,7 @@ section
         font-weight: 400
         font-size: 14px
         line-height: 1.35
-        color: $gray
+        color: $dark-gray
         position: relative
         transition: all .3s
         &:hover
@@ -3142,7 +3246,7 @@ section
             font-weight: 400
             font-size: 14px
             line-height: 1.35
-            color: $gray
+            color: $dark-gray
             position: absolute
             top: 0
             right: 12px
@@ -3154,7 +3258,7 @@ section
         font-weight: 400
         font-size: 14px
         line-height: 1.35
-        color: $blue
+        color: $gray
 
 .privacy
     padding: 24px 0 120px
@@ -3167,7 +3271,7 @@ section
         max-width: 950px
         color: $dark-gray
         span
-            color: $blue
+            color: $coral
     &__wrapper
         margin: 32px 0 0
         display: grid
@@ -3418,7 +3522,7 @@ section
                     width: 8px
                     height: 8px
                     border-radius: 100%
-                    background: $blue
+                    background: $coral
                     opacity: 0
                     transition: all .3s
             input
@@ -3431,10 +3535,10 @@ section
                 z-index: 2
                 &:hover
                     &+p
-                        color: $blue
+                        color: $coral
                 &:checked
                     &+p
-                        color: $blue
+                        color: $coral
                         &+span
                             &::before
                                 opacity: 1
@@ -3445,7 +3549,7 @@ section
             font-weight: 500
             font-size: 42px
             line-height: 1.1
-            color: $blue
+            color: $dark-gray
         &_sale
             font-family: $font-family
             font-weight: 400
@@ -3458,7 +3562,7 @@ section
             margin: 16px 0 0
             font-family: $font-family
             font-weight: 400
-            font-size: 18px
+            font-size: 14px
             line-height: 1.35
             color: $gray
         .btn__blue
@@ -3478,7 +3582,7 @@ section
             left: 0
             width: 146px
             padding: 24px
-            background: $blue
+            background: $coral
             p
                 font-family: $font-family
                 font-weight: 400
@@ -3615,7 +3719,7 @@ section
             font-weight: 500
             font-size: 32px
             line-height: 1.1
-            color: $blue    
+            color: $coral    
         img
             margin: 24px 0 0
             width: 100%
@@ -3639,7 +3743,7 @@ section
             transition: all .3s
             &.active,
             &:hover
-                background: $blue
+                background: $coral
                 color: $white
 
 .about
@@ -3654,7 +3758,7 @@ section
         font-weight: 500
         font-size: 32px
         line-height: 1.1
-        color: $blue
+        color: $coral
     &__har
         padding: 32px 
         background: $white
@@ -3703,12 +3807,6 @@ section
     .btn__blue
         margin: 32px auto 0
 
-// .pref
-//     &__low
-//         .pref__prev
-//             img
-//                 height: 538px
-
 .equip
     padding: 60px 0
     &__total
@@ -3734,9 +3832,11 @@ section
             font-weight: 500
             font-size: 32px
             line-height: 1.1
-            color: $blue
+            color: $dark-gray
     &__footer
         background: $white
+        h4
+            color: $coral
     &__name
         background: $white
         padding: 32px 24px
@@ -3750,6 +3850,7 @@ section
             font-size: 24px
             line-height: 1.35
             color: $dark-gray
+            transition: all .3s
         svg
             display: block
             transform: rotate(90deg)
@@ -3759,10 +3860,12 @@ section
                 stroke: $dark-gray
                 transition: all .3s
         &.active
+            p
+                color: $coral
             svg
                 transform: rotate(-90deg)
                 path
-                    stroke: $blue
+                    stroke: $coral
     &__row
         padding: 24px
         display: grid
@@ -3829,7 +3932,7 @@ section
         width: 48px
         height: 48px
         border-radius: 100%
-        border: 1px solid $blue
+        border: 1px solid $coral
         inset: auto
         margin: 0
         transition: all .3s
@@ -3840,7 +3943,7 @@ section
             width: 24px
             height: 24px
             path
-                stroke: $blue
+                stroke: $coral
         &::after
             content: none
         &:hover
@@ -3893,7 +3996,7 @@ section
     &__price
         margin: 12px 0 0
         h3
-            color: $blue
+            color: $dark-gray
         p
             text-decoration: line-through
             color: $gray
@@ -3905,7 +4008,7 @@ section
         left: 0
         width: 146px
         padding: 24px
-        background: $blue
+        background: $coral
         p
             font-family: $font-family
             font-weight: 400
@@ -4020,6 +4123,10 @@ section
         h2
             grid-column: 1/3
     .check-more
+        &__sale
+            max-width: 132px
+            h3
+                font-size: 36px
         &__img
             height: 400px
         &__name
@@ -4171,9 +4278,6 @@ section
             display: flex
             justify-content: space-between
             align-items: flex-start
-        &__name
-            h3
-                color: $blue
         &__price
             display: grid
             grid-template-columns: 100%
@@ -4198,8 +4302,8 @@ section
                 transition: all .3s
                 opacity: 1
                 &.swiper-pagination-bullet-active
-                    background: $blue
-                    border: 1px solid $blue
+                    background: $coral
+                    border: 1px solid $coral
 
 @media ( max-width: 700px )
     .consul
@@ -4351,6 +4455,13 @@ section
                 color: $dark-gray
     .check-more
         padding: 30px 0 60px
+        &__sale
+            max-width: 88px
+            padding: 16px
+            p
+                font-size: 12px
+            h3
+                font-size: 24px
         &__img
             height: 97vw
         &__slider
