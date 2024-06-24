@@ -720,9 +720,9 @@ let navFix = document.querySelector('.nav');
 
 if(navFix !== null) {
     window.addEventListener('scroll', ()=>{
-        if(window.scrollY > 600) {
+        if(window.scrollY > 700) {
             navFix.classList.add('fix')
-        } else {
+        } else if(window.scrollY < 600) {
             if(navFix.classList.contains('fix')) {
                 navFix.classList.add('rem')
                 setTimeout(() => {
