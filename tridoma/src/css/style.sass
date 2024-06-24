@@ -3265,13 +3265,25 @@ section
         color: $dark-gray
         position: relative
         transition: all .3s
+        padding: 0 30px 0 0
         &:hover
             color: $hover
+        &::before 
+            display: block
+            content: '/'
+            font-family: $font-family
+            font-weight: 400
+            font-size: 14px
+            line-height: 1.35
+            color: $gray
+            position: absolute
+            top: 0
+            right: 12px
     a,
     p
         display: block
     p
-        padding: 0 0 0 30px
+        padding: 0 30px 0 0 
         position: relative
         font-family: $font-family
         font-weight: 400
@@ -3288,7 +3300,10 @@ section
             color: $gray
             position: absolute
             top: 0
-            left: 12px
+            right: 12px
+        &:last-child
+            &::before
+                content: none
 
 .privacy
     padding: 24px 0 120px
@@ -4367,6 +4382,7 @@ section
                     font-size: 26px
                 p
                     font-size: 16px
+                    margin: 0
             &_mob
                 p
                     font-size: 12px
