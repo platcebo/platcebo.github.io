@@ -352,7 +352,7 @@ body
             &::before
                 text-align: right
     &__soc
-        margin: 0 12px 0 34px
+        margin: 0 12px 0 
         display: grid
         grid-template-columns: 60px 60px 60px
         gap: 12px
@@ -577,7 +577,7 @@ body
             margin: 32px auto 0
     &__item
         position: relative
-        padding: 0 0 140px
+        padding: 0 0 135px
         overflow: hidden
         transform: translateY(30%)
         &.element-show
@@ -597,7 +597,7 @@ body
         position: absolute
         bottom: 0
         background: $white
-        transform: translateY(calc( 100% - 140px ))
+        transform: translateY(calc( 100% - 135px ))
         width: 100%
         transition: all .3s
         &_header
@@ -902,8 +902,7 @@ body
             height: 340px
             position: absolute
             top: 53px
-            left: 50%
-            transform: translateX(-50%)
+            right: 160px
             background: url('../img/logo_bg.svg') center no-repeat
             background-size: contain
             z-index: -1
@@ -1137,7 +1136,7 @@ body
             opacity: 1
             &.swiper-pagination-bullet-active
                 background: $coral
-                border: 1px solid $blue
+                border: 1px solid $coral
     &__list
         display: grid
         grid-template-columns: 1fr 1fr
@@ -1371,7 +1370,7 @@ body
     &__tg
         width: 100%
         max-width: 360px
-        margin: 32px 0 0
+        margin: 12px 0 0
         background: transparent
         font-family: $font-family
         font-weight: 500
@@ -1501,7 +1500,7 @@ body
         padding: 32px
         display: flex
         flex-direction: column
-        justify-content: space-between
+        justify-content: flex-start
         align-items: flex-start
     &__name
         font-family: $font-family
@@ -1509,6 +1508,7 @@ body
         font-size: 20px
         line-height: 1.35
         color: $gray
+        margin: 0 0 auto
     &__link,
     &__adress
         font-family: $font-family
@@ -1640,10 +1640,13 @@ body
         grid-template-columns: 1fr 1fr 1fr 390px 48px
         align-items: start
     &__logo
+        display: flex
+        flex-direction: column
+        height: 100%
         img
             width: 146px
     &__text
-        margin: 60px 0 0
+        margin: auto 0 0
         display: grid
         grid-template-columns: 100%
         gap: 12px
@@ -1905,6 +1908,8 @@ body
         display: none
 
 section
+    position: relative
+    overflow: hidden
     h2
         font-family: $font-family
         font-weight: 500
@@ -2014,7 +2019,7 @@ section
                 font-size: 14px
     .pref
         &__info
-            padding: 24px
+            padding: 70px 24px
             p
                 font-size: 18px
                 max-width: 612px
@@ -2040,6 +2045,9 @@ section
         &__text
             font-size: 16px
     .service
+        &__prev
+            &::before
+                right: 0
         &__text
             font-size: 18px
             padding: 0 24px
@@ -2302,10 +2310,12 @@ section
         &__title
             grid-template-columns: 100%
     .pref
+        &__info
+            padding: 0
+            background: transparent
         &__mob
             display: block
             width: 100%
-            // height: 330px
             object-fit: cover
             margin: 16px 0 0
         &__prev
@@ -2317,6 +2327,13 @@ section
             order: -1
         .btn__blue
             max-width: 100%
+            margin: 24px 0 0
+        &__footer
+            padding: 24px
+            background: $white
+        &__row
+            max-width: 608px
+            margin: 0 auto
     .program
         h2
             // font-size: 48px
@@ -2688,7 +2705,7 @@ section
         &__item
             padding: 0 0 90px
         &__pic
-            height: 350px
+            height: 97vw
         &__wind
             h3
                 font-size: 24px
@@ -2699,7 +2716,7 @@ section
         &__mob
             display: block
             width: 100%
-            // height: 330px
+            height: 330px
             object-fit: cover
             margin: 16px 0 0
         &__prev
@@ -2712,9 +2729,14 @@ section
                 font-size: 16px
             .btn__blue
                 max-width: 100%
+                span
+                    padding: 20px 0
         &__row
             grid-template-columns: 1fr 1fr
             max-width: 100%
+            gap: 8px
+        &__footer
+            padding: 16px 24px 24px
     .program
         padding: 30px 0
         &__item
@@ -3105,12 +3127,12 @@ section
         position: absolute
         transform: translateY(-50%)
         top: 50%
-        left: -263px
+        right: calc( 50% + 567px )
         background: url('../img/logo_bg.svg') center no-repeat
         background-size: contain
     &::after
-        left: auto
-        right: -273px
+        left: calc( 50% + 557px )
+        right: auto
 
 .error
     padding: 12px 0 56px
@@ -3151,10 +3173,10 @@ section
         &:after
             width: 516px
             height: 300px
-            left: -218px
+            right: calc( 50% + 406px )
         &::after
-            right: -200px
-            left: auto
+            right: auto
+            left: calc( 50% + 420px )
         h1
             font-size: 64px
         &__subtitle
@@ -3215,7 +3237,7 @@ section
             margin: 24px 0 0
             max-width: 100%
     .error
-        padding: 6px 0 70px
+        padding: 31px 0 52px
         h1
             font-size: 26px
         &__subtitle
@@ -3234,7 +3256,7 @@ section
         font-weight: 400
         font-size: 14px
         line-height: 1.35
-        color: $dark-gray
+        color: $gray
         position: relative
         transition: all .3s
         &:hover
@@ -3246,10 +3268,16 @@ section
             font-weight: 400
             font-size: 14px
             line-height: 1.35
-            color: $dark-gray
+            color: $gray
             position: absolute
             top: 0
             right: 12px
+        &:nth-child(1)
+            color: $dark-gray
+            &:hover
+                color: $hover
+            &::after
+                color: $dark-gray
     a,
     p
         display: block
@@ -3417,7 +3445,7 @@ section
         width: max-content  
         display: grid
         grid-template-columns: 24px 1fr
-        gap: 8px
+        gap: 0
         align-items: center
         font-family: $font-family
         font-weight: 500
@@ -3866,6 +3894,10 @@ section
                 transform: rotate(-90deg)
                 path
                     stroke: $coral
+        &:hover
+            svg
+                path
+                    stroke: $hover
     &__row
         padding: 24px
         display: grid
@@ -4099,10 +4131,6 @@ section
             margin: 24px 0 0
             p
                 font-size: 18px
-    // .pref__low
-    //     .pref__prev
-    //         img
-    //             height: 458px
     .equip
         &__title
             padding: 24px
@@ -4522,11 +4550,15 @@ section
                     fill: $hover
     &__slide
         height: calc( 100vh - 240px )
+        display: flex
         img,
         video
             width: 100%
-            height: 100%
             object-fit: contain
+            max-width: max-content
+            max-height: 100%
+            margin: auto
+            display: block
     &__slider
         overflow: visible
     .swiper-pagination
@@ -4629,3 +4661,26 @@ section
         padding: 100px 20px
         &__close
             right: 20px
+
+.nav.fix
+    position: sticky
+    top: 0
+    left: 0
+    box-shadow: 0 53px 116px 0 rgba(27, 27, 29, 0.1)
+    background: $white
+    z-index: 10
+    animation: navAnim .5s ease-in
+    transition: all .3s
+    &.rem
+        opacity: 0
+        transform: translateY(-100%)
+    .nav-part
+        display: none
+
+@keyframes navAnim 
+    0%
+        opacity: 0
+        transform: translateY(-100%)
+    100%
+        opacity: 1
+        transform: translateY(0)

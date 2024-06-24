@@ -22,7 +22,7 @@ var swiperHeader = new Swiper(".header__slider", {
     },
     on: {
         slideChange: () => {
-            headerStart.innerHTML = "0" + (swiperHeader.activeIndex + 1)
+            headerStart.innerHTML = "0" + (swiperHeader.realIndex + 1)
             document.querySelector('.header__pag').classList.remove('active');
             setTimeout(() => {
                 document.querySelector('.header__pag').classList.add('active');
@@ -110,7 +110,7 @@ var swiper = new Swiper(".tech__slider", {
 var swiperGallery = new Swiper(".gallery__slider_img", {
     slidesPerView: 1,
     spaceBetween: 24,
-    // loop: true,
+    loop: true,
     pagination: {
         el: ".gallery__pag",
     },
@@ -190,7 +190,7 @@ var swiperGalleryVideo = new Swiper(".gallery__slider_video", {
 var swiperPopupVideo = new Swiper(".gallery-popup__video .gallery-popup__slider", {
     slidesPerView: 1,
     spaceBetween: 120,
-    // loop: true,
+    loop: true,
     pagination: {
         el: ".gallery-popup__pag",
     },
@@ -713,6 +713,24 @@ if(planImg !== null) {
         if(target.classList.contains('plan-popup__overflow') || target.closest('.plan-popup__close')) {
             planPopup.remove()
         } 
+    })
+}
+
+let navFix = document.querySelector('.nav');
+
+if(navFix !== null) {
+    window.addEventListener('scroll', ()=>{
+        if(window.scrollY > 600) {
+            navFix.classList.add('fix')
+        } else {
+            if(navFix.classList.contains('fix')) {
+                navFix.classList.add('rem')
+                setTimeout(() => {
+                    navFix.classList.remove('rem')
+                    navFix.classList.remove('fix')
+                }, 500);
+            }
+        }
     })
 }
 
