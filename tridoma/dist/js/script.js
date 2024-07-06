@@ -1,5 +1,6 @@
 let headerSlide = document.querySelectorAll('.header__slide'),
     headerStart = document.querySelector('.header__start'),
+    headerFunc = document.querySelector('.header__func'),
     headerEnd = document.querySelector('.header__end');
 
 if(headerEnd !== null) {
@@ -8,6 +9,10 @@ if(headerEnd !== null) {
     setTimeout(() => {
         document.querySelector('.header__pag').classList.add('active');
     }, 50);
+
+    if(headerSlide.length <= 1) {
+        headerFunc.classList.add('dis')
+    }
 }
 
 var swiperHeader = new Swiper(".header__slider", {
@@ -33,6 +38,7 @@ var swiperHeader = new Swiper(".header__slider", {
 
 let headerCartSlide = document.querySelectorAll('.header-cart__slide'),
     headerCartStart = document.querySelector('.header-cart__start'),
+    headerCartFunc = document.querySelector('.header-cart__func'),
     headerCartEnd = document.querySelector('.header-cart__end');
 
 if(headerCartEnd !== null) {
@@ -41,6 +47,10 @@ if(headerCartEnd !== null) {
     setTimeout(() => {
         document.querySelector('.header-cart__pag').classList.add('active');
     }, 50);
+
+    if(headerCartSlide.length <= 1) {
+        headerCartFunc.classList.add('dis')
+    }
 }
 
 var swiperCart = new Swiper(".header-cart__slider", {
@@ -485,6 +495,10 @@ if(nav !== null) {
             nav.style.height = 'auto'
         }
     })
+    document.querySelectorAll('.nav ul a').forEach(item => item.addEventListener('click',()=>{
+        nav.classList.remove('active')
+        nav.style.height = 'auto'
+    }))
 }
 
 function modalToggle(modal) {
@@ -541,15 +555,60 @@ let faqFix = document.querySelector('.faq__fix'),
 
 if(faqFix !== null && window.innerWidth > 1300) {
     faqFix.style.width = faqWrapper.getBoundingClientRect().width + 'px'
+    if(faqTop.getBoundingClientRect().top <= document.querySelector('.nav').getBoundingClientRect().height + 20 && faqTop.getBoundingClientRect().bottom - faqFix.getBoundingClientRect().height >= document.querySelector('.nav').getBoundingClientRect().height + 20) {
+        faqFix.classList.add('fix')
+        faqFix.style.top = document.querySelector('.nav').getBoundingClientRect().height + 20 + "px"
+        faqFix.classList.remove('bottom')
+    } else if (faqTop.getBoundingClientRect().top > document.querySelector('.nav').getBoundingClientRect().height + 20) {
+        faqFix.classList.remove('fix')
+        faqFix.style.top = "auto"
+        faqFix.classList.remove('bottom')
+    } else if (faqTop.getBoundingClientRect().bottom - faqFix.getBoundingClientRect().height < document.querySelector('.nav').getBoundingClientRect().height + 20) {
+        faqFix.classList.remove('fix')
+        faqFix.style.top = "auto"
+        faqFix.classList.add('bottom')
+    }
     window.addEventListener('scroll', ()=>{
-        if(faqTop.getBoundingClientRect().top <= 20 && faqTop.getBoundingClientRect().bottom - faqFix.getBoundingClientRect().height >= 20) {
+        if(faqTop.getBoundingClientRect().top <= document.querySelector('.nav').getBoundingClientRect().height + 20 && faqTop.getBoundingClientRect().bottom - faqFix.getBoundingClientRect().height >= document.querySelector('.nav').getBoundingClientRect().height + 20) {
             faqFix.classList.add('fix')
+            faqFix.style.top = document.querySelector('.nav').getBoundingClientRect().height + 20 + "px"
             faqFix.classList.remove('bottom')
-        } else if (faqTop.getBoundingClientRect().top > 20) {
+        } else if (faqTop.getBoundingClientRect().top > document.querySelector('.nav').getBoundingClientRect().height + 20) {
             faqFix.classList.remove('fix')
+            faqFix.style.top = "auto"
             faqFix.classList.remove('bottom')
-        } else if (faqTop.getBoundingClientRect().bottom - faqFix.getBoundingClientRect().height < 20) {
+        } else if (faqTop.getBoundingClientRect().bottom - faqFix.getBoundingClientRect().height < document.querySelector('.nav').getBoundingClientRect().height + 20) {
             faqFix.classList.remove('fix')
+            faqFix.style.top = "auto"
+            faqFix.classList.add('bottom')
+        }
+    })
+}
+
+let faqOpen = document.querySelector('.faq__wrapper .btn__wht'),
+    faqOpenSpan = document.querySelectorAll('.faq__wrapper .btn__wht span')
+    faqItem = document.querySelectorAll('.faq__item');
+
+if(faqOpen !== null) {
+    faqOpen.addEventListener('click', ()=>{
+        if(faqItem[0].classList.contains('show')) {
+            faqItem.forEach(item => item.classList.remove('show'))
+            faqOpen.style.display = "block"
+        } else {
+            faqItem.forEach(item => item.classList.add('show'))
+            faqOpen.style.display = "none"
+        }
+        if(faqTop.getBoundingClientRect().top <= document.querySelector('.nav').getBoundingClientRect().height + 20 && faqTop.getBoundingClientRect().bottom - faqFix.getBoundingClientRect().height >= document.querySelector('.nav').getBoundingClientRect().height + 20) {
+            faqFix.classList.add('fix')
+            faqFix.style.top = document.querySelector('.nav').getBoundingClientRect().height + 20 + "px"
+            faqFix.classList.remove('bottom')
+        } else if (faqTop.getBoundingClientRect().top > document.querySelector('.nav').getBoundingClientRect().height + 20) {
+            faqFix.classList.remove('fix')
+            faqFix.style.top = "auto"
+            faqFix.classList.remove('bottom')
+        } else if (faqTop.getBoundingClientRect().bottom - faqFix.getBoundingClientRect().height < document.querySelector('.nav').getBoundingClientRect().height + 20) {
+            faqFix.classList.remove('fix')
+            faqFix.style.top = "auto"
             faqFix.classList.add('bottom')
         }
     })
@@ -684,7 +743,7 @@ navElements.forEach((link) => {
     e.preventDefault();
     const id = link.getAttribute('href');
     const target = document.querySelector(id);
-    const offsetTop = target.getBoundingClientRect().top + window.pageYOffset;
+    const offsetTop = target.getBoundingClientRect().top + window.pageYOffset -150;
 
     window.scrollTo({
       top: offsetTop,
@@ -716,13 +775,14 @@ if(planImg !== null) {
     })
 }
 
-let videoBtn = document.querySelectorAll('.modal-video__btn');
+let videoBtn = document.querySelectorAll('.modal-video__btn'),
+    videoPlay = document.querySelectorAll('.modal-video__play');
 
 if(videoBtn !== null) {
     let modalVideo = document.createElement('div')
 
-    videoBtn.forEach((item)=>{
-        item.addEventListener('click',()=>{
+    videoBtn.forEach((item, i)=>{
+        videoPlay[i].addEventListener('click',()=>{
             modalVideo.className = "modal-video"
             modalVideo.innerHTML = '<div class="modal-video__overflow"></div><div class="modal-video__close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.21805 7.89766L3.23743 3.918C3.19281 3.87338 3.15741 3.8204 3.13326 3.7621C3.10911 3.7038 3.09668 3.64131 3.09668 3.5782C3.09668 3.5151 3.10911 3.45261 3.13326 3.39431C3.15741 3.336 3.19281 3.28303 3.23743 3.2384C3.28205 3.19378 3.33503 3.15839 3.39333 3.13424C3.45163 3.11009 3.51412 3.09766 3.57723 3.09766C3.64033 3.09766 3.70282 3.11009 3.76112 3.13424C3.81942 3.15839 3.8724 3.19378 3.91702 3.2384L7.89668 7.21902L11.8763 3.2384C11.9665 3.14828 12.0887 3.09766 12.2161 3.09766C12.3436 3.09766 12.4658 3.14828 12.5559 3.2384C12.6461 3.32852 12.6967 3.45075 12.6967 3.5782C12.6967 3.70565 12.6461 3.82788 12.5559 3.918L8.57531 7.89766L12.5559 11.8773C12.6461 11.9674 12.6967 12.0897 12.6967 12.2171C12.6967 12.3446 12.6461 12.4668 12.5559 12.5569C12.4658 12.647 12.3436 12.6977 12.2161 12.6977C12.0887 12.6977 11.9665 12.647 11.8763 12.5569L7.89668 8.57629L3.91702 12.5569C3.8269 12.647 3.70467 12.6977 3.57723 12.6977C3.44978 12.6977 3.32755 12.647 3.23743 12.5569C3.14731 12.4668 3.09668 12.3446 3.09668 12.2171C3.09668 12.0897 3.14731 11.9674 3.23743 11.8773L7.21805 7.89766Z" fill="#424242"/></svg></div>' + item.getAttribute('data-video')
 

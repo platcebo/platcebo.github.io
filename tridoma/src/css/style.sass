@@ -424,8 +424,6 @@ body
         color: $white
     &__info
         max-width: 840px
-        .btn__blue
-            margin: 32px 0 0
     &__plan
         position: absolute
         background: $white
@@ -464,6 +462,8 @@ body
             font-size: 24px
             line-height: 1.35
             color: $white
+        &.dis
+            display: none
     &__arrow
         display: flex
         justify-content: center
@@ -536,6 +536,20 @@ body
             color: $dark-gray
             br
                 display: none
+    .modal-video__play
+        position: relative
+        inset: auto
+        width: 100%
+        max-width: 216px
+        transform: none
+        border-radius: 0
+        height: 60px
+    &__btn
+        margin: 32px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 16px
     
 .project
     padding: 60px 0
@@ -574,11 +588,14 @@ body
         gap: 24px
         &.active
             display: grid
-        &+.btn__blue
+            &+.btn__wht
+                display: block
+        &+.btn__wht
             margin: 32px auto 0
+            display: none
     &__item
         position: relative
-        padding: 0 0 135px
+        padding: 0 0 125px
         overflow: hidden
         transform: translateY(30%)
         &.element-show
@@ -598,7 +615,7 @@ body
         position: absolute
         bottom: 0
         background: $white
-        transform: translateY(calc( 100% - 135px ))
+        transform: translateY(calc( 100% - 125px ))
         width: 100%
         transition: all .3s
         &_header
@@ -624,17 +641,21 @@ body
             font-size: 24px
             line-height: 1.35
             color: $gray
+            white-space: nowrap
     h3
         font-family: $font-family
         font-weight: 500
-        font-size: 42px
+        font-size: 32px
         line-height: 1.1
-        text-align: right
         color: $dark-gray
+        position: relative
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
     &__price
         font-family: $font-family
         font-weight: 500
-        font-size: 42px
+        font-size: 32px
         line-height: 1.1
         text-align: right
         color: $dark-gray        
@@ -719,8 +740,6 @@ body
             line-height: 1.35
             text-align: center
             color: $white
-    .btn__wht
-        margin: 32px auto 0
 
 .pref
     padding: 60px 0
@@ -1241,6 +1260,7 @@ body
             object-fit: cover
             height: 100%
             transition: all .3s
+            min-height: 100%
         &:hover
             img
                 transform: scale(1.2)
@@ -1308,6 +1328,7 @@ body
 
 .faq
     padding: 60px 0
+    z-index: 2
     &__mob
         display: none
     h2
@@ -1456,6 +1477,15 @@ body
                     stroke: $hover
     &__item
         background: $white
+        display: none
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5)
+            display: block
+        &.show
+            display: block
         &.active
             .faq
                 &__btn
@@ -1622,8 +1652,8 @@ body
             left: 0
             opacity: 0
             z-index: 1
-            width: 100%
-            height: 100%
+            width: 16px
+            height: 16px
             &:checked
                 &+span
                     border: 1px solid $coral
@@ -1985,21 +2015,21 @@ section
 @media ( max-width: 1600px )
     .project
         &__item
-            padding: 0 0 110px
+            padding: 0 0 100px
         &__pic
             height: 450px
         &__info
-            transform: translateY(calc(100% - 110px))
+            transform: translateY(calc(100% - 100px))
             &_header
                 padding: 24px 24px 16px
-                h3
-                    font-size: 36px
             &_body
                 padding: 16px 24px 24px
                 .btn__blue
                     margin: 16px 0 0
+        h3
+            font-size: 26px
         &__price
-            font-size: 30px
+            font-size: 26px
         &__sale
             font-size: 14px
         &__dop
@@ -2588,6 +2618,14 @@ section
             grid-template-columns: auto 1fr auto
             max-width: calc(100% - 48px)
             width: 260px
+        &__btn
+            display: grid
+            grid-template-columns: 100%
+            gap: 16px
+            .btn__blue,
+            .modal-video__play
+                width: 100%
+                max-width: 100%
     
 @media ( max-width: 1300px )
     section h2
@@ -2994,6 +3032,8 @@ section
         gap: 8px
         align-items: start
         justify-content: center
+        max-width: max-content
+        margin: 0 auto
         p
             font-family: $font-family
             font-weight: 400
@@ -3001,8 +3041,8 @@ section
             line-height: 1.35
             color: $gray
             a
-                color: $coral
-                text-decoration: underline
+                color: $blue
+                text-decoration: none
                 z-index: 5
         span
             border: 1px solid $stroke
@@ -3026,9 +3066,9 @@ section
             top: 0
             left: 0
             opacity: 0
-            z-index: 5
-            width: 100%
-            height: 100%
+            z-index: 1
+            width: 16px
+            height: 16px
             &:checked
                 &+span
                     border: 1px solid $coral
@@ -3525,8 +3565,9 @@ section
             padding: 0 10px 0 0
             display: grid
             grid-template-columns: 1fr 1fr
-            overflow-y: scroll
+            overflow-y: auto
             max-height: 288px
+            height: 288px
             gap: 16px
             margin: 16px 0 0
             &::-webkit-scrollbar 
@@ -3676,6 +3717,8 @@ section
             font-size: 24px
             line-height: 1.35
             color: $white
+        &.dis
+            display: none
     &__arrow
         display: flex
         justify-content: center
@@ -4014,26 +4057,41 @@ section
         height: 100%
         display: grid
         grid-template-rows: 1fr auto
+        overflow: hidden
+        &:hover
+            .check-more__img img
+                transform: scale(1.2)
     &__img
         width: 100%
-        height: 469px
-        object-fit: cover
+        position: relative
+        overflow: hidden
+        img
+            width: 100%
+            height: 469px
+            object-fit: cover
+            transition: all .3s
     &__info
         padding: 32px
         background: $white
         height: 100%
+        z-index: 2
     &__price,
     &__name
-        display: flex
-        justify-content: flex-start
-        align-items: flex-end
+        display: grid
+        grid-template-columns: auto auto
+        justify-content: start
+        align-items: center
         gap: 12px
         h3
             font-family: $font-family
             font-weight: 500
-            font-size: 42px
+            font-size: 32px
             line-height: 1.1
             color: $dark-gray
+            white-space: nowrap
+            position: relative
+            overflow: hidden
+            text-overflow: ellipsis
             white-space: nowrap
         p
             font-family: $font-family
@@ -4099,6 +4157,7 @@ section
                 margin: 12px 0 0
                 gap: 8px
                 max-height: 260px
+                height: 260px
                 row-gap: 12px
             &_check
                 img
@@ -4176,10 +4235,11 @@ section
             h3
                 font-size: 36px
         &__img
-            height: 400px
+            img
+                height: 400px
         &__name
             h3
-                font-size: 36px
+                font-size: 32px
         &__price
             h3
                 font-size: 30px
@@ -4318,7 +4378,8 @@ section
                 content: none
     .check-more
         &__img
-            height: 478px
+            img
+                height: 478px
         &__sale
             max-width: 132px
             h3
@@ -4513,23 +4574,24 @@ section
             h3
                 font-size: 24px
         &__img
-            height: 97vw
+            img
+                height: 97vw
         &__slider
             margin: 24px 0 0
         &__info
             flex-direction: column
         &__name
             h3
-                font-size: 22px
+                font-size: 20px
                 color: $dark_gray
             p
                 font-size: 14px
         &__price
-            display: flex
+            grid-template-columns: auto auto
             gap: 8px
             margin: 4px 0 0
             h3
-                font-size: 22px
+                font-size: 20px
             p
                 font-size: 12px
 
