@@ -95,6 +95,9 @@ var swiper = new Swiper(".advantage__slider", {
     pagination: {
         el: ".advantage__pag",
     },
+    autoplay: {
+        delay: 5000,
+    },  
     breakpoints: {
         1301: {
             slidesPerView: 4
@@ -548,6 +551,25 @@ if(modalFaq !== null) {
     })
 }
 
+let modalFaq2 = document.querySelector('.modal-faq2'),
+    modalFaqBtn2 = document.querySelectorAll('.modal-faq__btn2'),
+    modalFaqOf2 = document.querySelector('.modal-faq__overflow2'),
+    modalFaqClose2 = document.querySelector('.modal-faq__close2');
+
+if(modalFaq2 !== null) {
+    modalFaqBtn2.forEach((item)=>{
+        item.addEventListener('click', ()=>{
+            modalToggle(modalFaq2)
+        })
+    })
+    modalFaqClose2.addEventListener('click', ()=>{
+        modalToggle(modalFaq2)
+    })
+    modalFaqOf2.addEventListener('click', ()=>{
+        modalToggle(modalFaq2)
+    })
+}
+
 let faqFix = document.querySelector('.faq__fix'),
     faqWrapper = document.querySelector('.faq__title')
     faqTop = document.querySelector('.faq__block'),
@@ -689,6 +711,8 @@ function formEmail(input) {
 
 let equipBtn1 = document.querySelector('.equip__1_btn'),
     equipText1 = document.querySelectorAll('.equip_1'),
+    equipTotal1 = document.querySelectorAll('.equip__total_1'),
+    equipTotal2 = document.querySelectorAll('.equip__total_2'),
     equipBtn2 = document.querySelector('.equip__2_btn'),
     equipText2 = document.querySelectorAll('.equip_2');
 
@@ -707,8 +731,14 @@ if(equipBtn1 !== null) {
         equipText2.forEach((item)=>{
             item.classList.remove('active')
         })
+        equipTotal2.forEach((item)=>{
+            item.classList.remove('active')
+        })
         equipBtn1.classList.add('active')
         equipText1.forEach((item)=>{
+            item.classList.add('active')
+        })
+        equipTotal1.forEach((item)=>{
             item.classList.add('active')
         })
     }
@@ -717,8 +747,14 @@ if(equipBtn1 !== null) {
         equipText1.forEach((item)=>{
             item.classList.remove('active')
         })
+        equipTotal1.forEach((item)=>{
+            item.classList.remove('active')
+        })
         equipBtn2.classList.add('active')
         equipText2.forEach((item)=>{
+            item.classList.add('active')
+        })
+        equipTotal2.forEach((item)=>{
             item.classList.add('active')
         })
     }
@@ -814,6 +850,25 @@ if(navFix !== null) {
                 }, 500);
             }
         }
+    })
+}
+
+let programBtn = document.querySelectorAll('.program__item_wrapper .btn__wht'),
+    programModal = document.querySelectorAll('.program-modal'),
+    programClose = document.querySelectorAll('.program-modal__close'),
+    programOf = document.querySelectorAll('.program-modal__overflow');
+
+if(programModal !== null) {
+    programModal.forEach((item, i)=>{
+        programBtn[i].addEventListener('click', ()=>{
+            item.classList.add('active')
+        })
+        programClose[i].addEventListener('click', ()=>{
+            item.classList.remove('active')
+        })
+        programOf[i].addEventListener('click', ()=>{
+            item.classList.remove('active')
+        })
     })
 }
 
