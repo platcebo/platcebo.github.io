@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mediacontext</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="body" data-scroll-container>
+    <nav class="nav"  >
+        <div class="container">
+            <div class="nav__row">
+                <div class="nav__logo">
+                    <a href="#">
+                        <img src="img/logo.svg" alt="">
+                    </a>
+                </div>
+                <ul class="nav__list">
+                    <li><a href="#">Агентство </a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Кейсы</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+                <button class="btn__blc modal-form__call">
+                    <span>обсудить проект</span>
+                    <i><img src="img/arrow_wht.svg" alt=""></i>
+                </button>
+                <div class="nav__burger"><span></span></div>
+            </div>
+            <div class="nav__menu_wrapper">
+                <div class="nav__menu">
+                    <h3>Убираем все стереотипы <br> вокруг интернет-маркетинга <br> и делаем его <span>доступным <br> и прозрачным</span> для заказчика</h3>
+                    <div class="nav__info"> 
+                        <div class="nav__contact">
+                            <a href="#">+7 (812) 561-46-99</a>
+                            <a href="#">sales@mediacontext.pro</a>
+                            <p>Санкт-Петербург, Софийская <br> ул. 6к8, БЦ «Полис центр»</p>
+                        </div>
+                        <div class="nav__soc">
+                            <a href="#">
+                                <img src="img/vk.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="img/tg.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="img/inst.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="nav__menu_btn">
+                            <button class="btn__blc modal-mail__call">
+                                <span>подписаться на рассылку</span>
+                                <i><img src="img/arrow_wht.svg" alt=""></i>
+                            </button>
+                            <button class="btn__violet modal-form__call">
+                                <span>обсудить проект</span>
+                                <i><img src="img/arrow_wht.svg" alt=""></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="nav__menu_block">
+                        <div class="nav__menu_list">
+                            <h4>Услуги</h4>
+                            <ul>
+                                <li class="menu__call">
+                                    <a href="#" class="menu__link">Performance-marketing</a>
+                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.2781 20.6898L20.3363 11.2439C20.7073 10.857 20.7073 10.2465 20.3363 9.8596L11.2781 0.413666C11.1903 0.294052 11.0788 0.195405 10.951 0.124403C10.8233 0.0534014 10.6823 0.0117028 10.5377 0.00212971C10.393 -0.00744337 10.2481 0.0153332 10.1127 0.0689169C9.9773 0.1225 9.85457 0.20564 9.75283 0.312708C9.65109 0.419776 9.57271 0.548272 9.52299 0.689497C9.47328 0.830722 9.4534 0.981379 9.46469 1.13127C9.47599 1.28116 9.51819 1.42678 9.58845 1.55828C9.65871 1.68978 9.75538 1.80408 9.87193 1.89345L17.1456 9.50225L1.01164 9.028C0.74334 9.028 0.486025 9.13857 0.296307 9.33539C0.106586 9.53221 0 9.79915 0 10.0775C0 10.3558 0.106586 10.6228 0.296307 10.8196C0.486025 11.0164 0.74334 11.127 1.01164 11.127L17.1456 11.6012L9.87193 19.21C9.68277 19.4077 9.57704 19.6751 9.57799 19.9536C9.57894 20.2321 9.68649 20.4988 9.87698 20.6951C10.0675 20.8913 10.3253 21.001 10.5938 21C10.8622 20.999 11.1193 20.8874 11.3085 20.6898H11.2781Z" fill="#BFBFC1"/>
+                                    </svg>
+                                    <ol class="menu">
+                                        <li><a href="#">Маркетинговая стратегия</a></li>
+                                        <li><a href="#">Коммуникационная стретегия</a></li>
+                                        <li><a href="#">Рекламная стратегия</a></li>
+                                        <li><a href="#">SMM-стратегия</a></li>
+                                        <li><a href="#">PR-стратегия</a></li>
+                                        <li><a href="#">CustDev</a></li>
+                                        <li><a href="#">CJM</a></li>
+                                    </ol>
+                                </li>
+                                <li><a href="#">Brandformance-marketing</a></li>
+                                <li><a href="#">Стратегический маркетинг</a></li>
+                                <li><a href="#">Комплексный маркетинг</a></li>
+                                <li><a href="#">Мобильный маркетинг</a></li>
+                                <li><a href="#">Контент-маркетинг</a></li>
+                                <li><a href="#">SEO</a></li>
+                                <li><a href="#">PR & SERM</a></li>
+                                <li><a href="#">Аналитика </a></li>
+                                <li><a href="#">Разработка сайта </a></li>
+                            </ul>
+                        </div>
+                        <div class="nav__menu_list">
+                            <h4>О нас</h4>
+                            <ul>
+                                <li class="menu__call">
+                                    <a href="#" class="menu__link">Кейсы</a>
+                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.2781 20.6898L20.3363 11.2439C20.7073 10.857 20.7073 10.2465 20.3363 9.8596L11.2781 0.413666C11.1903 0.294052 11.0788 0.195405 10.951 0.124403C10.8233 0.0534014 10.6823 0.0117028 10.5377 0.00212971C10.393 -0.00744337 10.2481 0.0153332 10.1127 0.0689169C9.9773 0.1225 9.85457 0.20564 9.75283 0.312708C9.65109 0.419776 9.57271 0.548272 9.52299 0.689497C9.47328 0.830722 9.4534 0.981379 9.46469 1.13127C9.47599 1.28116 9.51819 1.42678 9.58845 1.55828C9.65871 1.68978 9.75538 1.80408 9.87193 1.89345L17.1456 9.50225L1.01164 9.028C0.74334 9.028 0.486025 9.13857 0.296307 9.33539C0.106586 9.53221 0 9.79915 0 10.0775C0 10.3558 0.106586 10.6228 0.296307 10.8196C0.486025 11.0164 0.74334 11.127 1.01164 11.127L17.1456 11.6012L9.87193 19.21C9.68277 19.4077 9.57704 19.6751 9.57799 19.9536C9.57894 20.2321 9.68649 20.4988 9.87698 20.6951C10.0675 20.8913 10.3253 21.001 10.5938 21C10.8622 20.999 11.1193 20.8874 11.3085 20.6898H11.2781Z" fill="#BFBFC1"/>
+                                    </svg>
+                                    <ol class="menu">
+                                        <li><a href="#">Маркетинговая стратегия</a></li>
+                                        <li><a href="#">Коммуникационная стретегия</a></li>
+                                        <li><a href="#">Рекламная стратегия</a></li>
+                                        <li><a href="#">SMM-стратегия</a></li>
+                                        <li><a href="#">PR-стратегия</a></li>
+                                        <li><a href="#">CustDev</a></li>
+                                        <li><a href="#">CJM</a></li>
+                                    </ol>
+                                </li>
+                                <li><a href="#">Команда</a></li>
+                                <li><a href="#">Вакансии</a></li>
+                                <li><a href="#">Отзывы</a></li>
+                                <li><a href="#">Сертификаты</a></li>
+                                <li><a href="#">Блог</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav__soc">
+                            <a href="#">
+                                <img src="img/vk.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="img/tg.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="img/inst.svg" alt="">
+                            </a>
+                        </div>
+                        <button class="btn__blc modal-mail__call">
+                            <span>подписаться на рассылку</span>
+                            <i><img src="img/arrow_wht.svg" alt=""></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="header">
+        <div class="container">
+            <div class="header__block parallax">
+                <div class="header__info">
+                    <h1 class="element-animation">Агентство <span>бесшовного</span> маркетинга</h1>
+                    <p class="header__text">Приводим клиентов через performance, бренд-маркетинг, SEO-продвижение и комплексный подход</p>
+                </div>
+                <div class="header__logo parallax__layer" data-speed="0.03">
+                    <img src="img/header_logo.svg" alt="">
+                </div>
+                <div class="header__video">
+                    <div class="header__video_look">
+                        <img src="img/header_video.svg" alt="">
+                    </div>
+                    <div class="header__video_block">
+                        <div class="header__video_wrapper">
+                            <video poster="img/about_img.jpg" loop playsinline>
+                                <!-- <source src="video/ocean.webm" type="video/webm"> -->
+                                <source src="video/ocean.mp4" type="video/mp4">
+                            </video>
+                            <div class="header__video_play">
+                                <img src="img/play.svg" alt="">
+                            </div>
+                            <div class="header__video_close">
+                                <img src="img/close.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__mob">
+                    <p>посмотреть на нас</p>
+                    <div class="header__mob_play">
+                        <img src="img/play_blc.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section  class="service">
+        <div class="container">
+            <div class="service__block">
+                <div class="service__fix">
+                    <p class="service__tag">Услуги</p>
+                    <div class="service__row">
+                        <h2>Комплексный подход для <span>максимального</span> результата</h2>
+                        <button class="btn__blc">
+                            <span>все услуги</span>
+                            <i><img src="img/arrow_wht.svg" alt=""></i>
+                        </button>
+                    </div>
+                    <div class="service__wrapper">
+                        <div class="service__scroll">
+                            <div class="service__item">
+                                <div class="service__item_header">
+                                    <p>Для тех, кому нужно <br> быстро и понятно</p>
+                                    <a href="#">посмотреть кейсы</a>
+                                </div>
+                                <div class="service__item_body">
+                                    <div>
+                                        <h3><span>Performance-</span>маркетинг</h3>
+                                        <p>Приведём клиентов по KPI с замером результата</p>
+                                        <a href="#">посмотреть кейсы</a>
+                                    </div>
+                                    <img src="img/service_logo.png" alt="">
+                                </div>
+                                <div class="service__item_row">
+                                    <div class="service__item_scroll">
+                                        <p>Контекстная реклама</p>
+                                        <span></span>
+                                        <p>Таргетированная реклама</p>
+                                        <span></span>
+                                        <p>Реклама на картах</p>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service__item">
+                                <div class="service__item_header">
+                                    <p>Для тех, кто развивает <br> бренд и узнаваемость</p>
+                                    <a href="#">посмотреть кейсы</a>
+                                </div>
+                                <div class="service__item_body">
+                                    <div>
+                                        <h3><span>Brandformance-</span>маркетинг</h3>
+                                        <p>Медиа+перфоманс</p>
+                                        <a href="#">посмотреть кейсы</a>
+                                    </div>
+                                    <img src="img/service_2.png" alt="">
+                                </div>
+                                <div class="service__item_row">
+                                    <div class="service__item_scroll">
+                                        <p>Медийная реклама</p>
+                                        <span></span>
+                                        <p>OVL реклама</p>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service__item">
+                                <div class="service__item_header">
+                                    <p>Для серьезной <br>работы вдолгую</p>
+                                    <a href="#">посмотреть кейсы</a>
+                                </div>
+                                <div class="service__item_body">
+                                    <div>
+                                        <h3><span>Стратегический </span>маркетинг</h3>
+                                        <p>Для планирования маркетинговых активностей от 6 месяцев</p>
+                                        <a href="#">посмотреть кейсы</a>
+                                    </div>
+                                    <img src="img/service_3.png" alt="">
+                                </div>
+                                <div class="service__item_row">
+                                    <div class="service__item_scroll">
+                                        <p>Маркетинговая стратегия</p>
+                                        <span></span>
+                                        <p>Коммуникационная стратегия</p>
+                                        <span></span>
+                                        <p>Рекламная стратегия</p>
+                                        <span></span>
+                                        <p>PR стратегия</p>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn__blc">
+                                <span>все услуги</span>
+                                <i><img src="img/arrow_wht.svg" alt=""></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section  class="case">
+        <div class="container">
+            <div class="case__block">
+                <div class="case__sticy_wrapper">
+                    <div class="case__sticy">
+                        <p class="case__tag">Кейсы</p>
+                        <div class="case__title">
+                            <h2>Результаты <span>в цифрах</span></h2>
+                            <button class="btn__violet">
+                                <span>все кейсы</span>
+                                <i><img src="img/arrow_wht.svg" alt=""></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="case__wrapper">
+                    <div class="case__item">
+                        <div class="case__video">
+                            <img src="img/case_video.jpg" alt="" class="case__video_prev">
+                            <div class="case__video_bar">
+                                <p>Что про нас думает клиент</p>
+                                <div class="case__video_play">
+                                    <img src="img/play.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case__info">
+                            <h3>Помогаем премиум химчистке <br> в Москве <span>расти на 250% в год</span></h3>
+                            <div class="case__info_row">
+                                <div class="case__info_scroll">
+                                    <p>Стратегический маркетинг</p>
+                                    <span></span>
+                                    <p>PPC</p>
+                                    <span></span>
+                                    <p>SERM</p>
+                                    <span></span>
+                                    <p>ASO</p>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="case__info_img">
+                                <img src="img/case_bg.jpg" alt="" class="case__info_bg">
+                                <img src="img/case_logo.png" alt="" class="case__info_logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case__item">
+                        <div class="case__text">
+                            <h3>Что про нас <br> думает <span>клиент</span></h3>
+                            <div class="case__text_par">
+                                <p>Большое спасибо ребятам из Медиаконтекста за их активное участие и поддержку нашего бизнеса! Работаем вместе с мая 2019 года и продолжаем стабильно развиваться. <br> <br> Когда только начинали сотрудничество, у нас был стартап без единого клиента, поэтому продвижение требовалось комплексное. Ребята нас поняли, и подключили сразу всё – контекстную рекламу, таргет, SMM, рассылку по e-mail, а позднее – SEO и SERM. Помогли внедрить сквозную аналитику, что позволило нам исправить свои собственные недочеты и оптимизировать работу </p>
+                            </div>
+                            <a href="#" class="case__text_more">Показать больше</a>
+                            <div class="case__text_info">
+                                <div class="case__text_avatar">
+                                    <img src="img/case_avatar.jpg" alt="">
+                                </div>
+                                <div>
+                                    <p class="case__text_name">Виталий Савин</p>
+                                    <p class="case__text_text">Генеральный директор АО «ГЛОРИ», сеть химчисток Laundi</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case__info">
+                            <h3>Помогаем премиум химчистке <br> в Москве <span>расти на 250% в год</span></h3>
+                            <div class="case__info_row">
+                                <div class="case__info_scroll">
+                                    <p>Стратегический маркетинг</p>
+                                    <span></span>
+                                    <p>PPC</p>
+                                    <span></span>
+                                    <p>SERM</p>
+                                    <span></span>
+                                    <p>ASO</p>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="case__info_img">
+                                <img src="img/case_bg.jpg" alt="" class="case__info_bg">
+                                <img src="img/case_logo.png" alt="" class="case__info_logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case__item">
+                        <div class="case__video">
+                            <img src="img/case_video.jpg" alt="" class="case__video_prev">
+                            <div class="case__video_bar">
+                                <p>Что про нас думает клиент</p>
+                                <div class="case__video_play">
+                                    <img src="img/play.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case__info">
+                            <h3>Помогаем премиум химчистке в Москве <span>расти на 250% в год</span></h3>
+                            <div class="case__info_row">
+                                <div class="case__info_scroll">
+                                    <p>Стратегический маркетинг</p>
+                                    <span></span>
+                                    <p>PPC</p>
+                                    <span></span>
+                                    <p>SERM</p>
+                                    <span></span>
+                                    <p>ASO</p>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="case__info_img">
+                                <img src="img/case_bg.jpg" alt="" class="case__info_bg">
+                                <img src="img/case_logo.png" alt="" class="case__info_logo">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn__violet">
+                        <span>все кейсы</span>
+                        <i><img src="img/arrow_wht.svg" alt=""></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section  class="with">
+        <div class="container">
+            <div class="with__block">
+                <p class="with__tag">Наши клиенты</p>
+                <h2><span>С кем</span> работаем </h2>
+                <div class="with__row">
+                    <div class="with__scroll">
+                        <div class="with__item">
+                            <img src="img/with_1.jpg" alt="">
+                        </div>
+                        <div class="with__item">
+                            <img src="img/with_2.jpg" alt="">
+                        </div>
+                        <div class="with__item">
+                            <img src="img/with_3.jpg" alt="">
+                        </div>
+                        <div class="with__item">
+                            <img src="img/with_4.jpg" alt="">
+                        </div>
+                        <div class="with__item">
+                            <img src="img/with_5.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section  class="about">
+        <div class="container">
+            <div class="about__block">
+                <div class="about__run">
+                    <div class="about__run_scroll">
+                        <p>Работаем с 2016 года</p>
+                        <span></span>
+                    </div>
+                </div>
+                <p class="about__tag">О нас</p>
+                <h2>Агентство, <br> которому <span>доверяют</span></h2>
+                <div class="about__slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div>
+                                <p class="about__num">01</p>
+                                <h3>Достигаем понятного, измеримого результата для наших клиентов</h3>
+                            </div>
+                            <div class="about__img">
+                                <img src="img/about_img.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <p class="about__num">02</p>
+                                <h3>Делаем мир интернет рекламы чуточку лучше и прозрачнее</h3>
+                            </div>
+                            <div class="about__img">
+                                <img src="img/about_img.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <p class="about__num">03</p>
+                                <h3>Мы не скрываемся <br> за кулисами агентства</h3>
+                            </div>
+                            <div class="about__img">
+                                <img src="img/about_img.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <p class="about__num">04</p>
+                                <h3>Мы готовы открыто говорить о нашем мире перемен</h3>
+                            </div>
+                            <div class="about__img">
+                                <img src="img/about_img.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__arrow">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <div class="about__row">
+                    <div class="about__row_item">
+                        <p class="about__row_num">25</p>
+                        <p class="about__row_text">Человек в команде</p>
+                    </div>
+                    <div class="about__row_item">
+                        <p class="about__row_num">2,8 <span>лет</span></p>
+                        <p class="about__row_text">Средний LTV</p>
+                    </div>
+                    <div class="about__row_item">
+                        <p class="about__row_num">4 <span>года</span></p>
+                        <p class="about__row_text">Средний опыт сотрудника</p>
+                    </div>
+                    <a href="#" class="about__row_link">
+                        <p>Подробнее <br> об агентстве</p>
+                        <span><img src="img/arrow_wht.svg" alt=""></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section  class="achiev">
+        <div class="container">
+            <div class="achiev__block">
+                <p class="achiev__tag">Награды</p>
+                <div class="achiev__title">
+                    <h2>Наши <span>достижения</span></h2>
+                    <ul class="achiev__tab">
+                        <li class="achiev__tab_item">2021</li>
+                        <li class="achiev__tab_item">2022</li>
+                        <li class="achiev__tab_item active">2023</li>
+                    </ul>
+                </div>
+                <div class="achiev__wrapper">
+                    <div class="achiev__item">
+                        <p>7 место </p>
+                        <p>PR агентства Санкт-Петербурга</p>
+                        <img src="img/achiev_prev.jpg" alt="">
+                        <p>Рейтинг рунета</p>
+                    </div>
+                    <div class="achiev__item">
+                        <p>7 место </p>
+                        <p>PR агентства Санкт-Петербурга</p>
+                        <img src="img/achiev_prev.jpg" alt="">
+                        <p>Рейтинг рунета</p>
+                    </div>
+                    <div class="achiev__item">
+                        <p>7 место </p>
+                        <p>PR агентства Санкт-Петербурга</p>
+                        <img src="img/achiev_prev.jpg" alt="">
+                        <p>Рейтинг рунета</p>
+                    </div>
+                    <div class="achiev__item">
+                        <p>7 место </p>
+                        <p>PR агентства Санкт-Петербурга</p>
+                        <img src="img/achiev_prev.jpg" alt="">
+                        <p>Рейтинг рунета</p>
+                    </div>
+                    <div class="achiev__item">
+                        <p>7 место </p>
+                        <p>PR агентства Санкт-Петербурга</p>
+                        <img src="img/achiev_prev.jpg" alt="">
+                        <p>Рейтинг рунета</p>
+                    </div>
+                </div>
+                <div class="achiev__wrapper">
+                    <div class="achiev__item">
+                        <p>7 место </p>
+                        <p>PR агентства Санкт-Петербурга</p>
+                        <img src="img/achiev_prev.jpg" alt="">
+                        <p>Рейтинг рунета</p>
+                    </div>
+                    <div class="achiev__item">
+                        <p>7 место </p>
+                        <p>PR агентства Санкт-Петербурга</p>
+                        <img src="img/achiev_prev.jpg" alt="">
+                        <p>Рейтинг рунета</p>
+                    </div>
+                    <div class="achiev__item">
+                        <p>7 место </p>
+                        <p>PR агентства Санкт-Петербурга</p>
+                        <img src="img/achiev_prev.jpg" alt="">
+                        <p>Рейтинг рунета</p>
+                    </div>
+                    <div class="achiev__item">
+                        <p>7 место </p>
+                        <p>PR агентства Санкт-Петербурга</p>
+                        <img src="img/achiev_prev.jpg" alt="">
+                        <p>Рейтинг рунета</p>
+                    </div>
+                </div>
+                <div class="achiev__wrapper active">
+                    <div class="achiev__item">
+                        <p>7 место </p>
+                        <p>PR агентства Санкт-Петербурга</p>
+                        <img src="img/achiev_prev.jpg" alt="">
+                        <p>Рейтинг рунета</p>
+                    </div>
+                    <div class="achiev__item">
+                        <p>7 место </p>
+                        <p>PR агентства Санкт-Петербурга</p>
+                        <img src="img/achiev_prev.jpg" alt="">
+                        <p>Рейтинг рунета</p>
+                    </div>
+                    <div class="achiev__item">
+                        <p>7 место </p>
+                        <p>PR агентства Санкт-Петербурга</p>
+                        <img src="img/achiev_prev.jpg" alt="">
+                        <p>Рейтинг рунета</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section  class="blog">
+        <div class="container">
+            <div class="blog__block">
+                <p class="blog__tag">Блог</p>
+                <h2><span>Пишем</span> об опыте и чувствах</h2>
+                <div class="blog__wrapper">
+                    <a href="#" class="blog__wrapper_item">
+                        <div class="blog__wrapper_img">
+                            <img src="img/blog_1.jpg" alt="">
+                        </div>
+                        <div class="blog__wrapper_info">
+                            <p class="blog__wrapper_date">26.02.2024</p>
+                            <p class="blog__wrapper_name">Медийная реклама <br> Яндекс</p>
+                            <p class="blog__wrapper_text">Поговорим о том, какой она бывает, чем помогает бизнесу и как ею пользоваться в 2024 году.</p>    
+                        </div>
+                    </a>
+                    <a href="#" class="blog__wrapper_item">
+                        <div class="blog__wrapper_img">
+                            <img src="img/blog_2.jpg" alt="">
+                        </div>
+                        <div class="blog__wrapper_info">
+                            <p class="blog__wrapper_date">25.01.2024</p>
+                            <p class="blog__wrapper_name">ТОП-10 ошибок SEO-продвижения </p>
+                            <p class="blog__wrapper_text">Рассказываем о самых распространенных ошибках начинающих SEO-специалистов. Проверьте себя!</p>    
+                        </div>
+                    </a>
+                    <a href="#" class="blog__link">
+                        <p>Больше статей <br> в блоге</p>
+                        <span><img src="img/arrow_wht.svg" alt=""></span>
+                    </a>
+                </div>
+                <div class="blog__row">
+                    <a href="#" class="blog__soc">
+                        <p class="blog__soc_name">TG</p>
+                        <p class="blog__soc_text">Планерочная</p>
+                    </a>
+                    <a href="#" class="blog__soc">
+                        <p class="blog__soc_name">VC</p>
+                        <p class="blog__soc_text">Mediacontext</p>
+                    </a>
+                    <a href="#" class="blog__soc">
+                        <p class="blog__soc_name">VK</p>
+                        <p class="blog__soc_text">vk.com/mediacontext</p>
+                    </a>
+                    <a href="#" class="blog__soc">
+                        <p class="blog__soc_name">INST*</p>
+                        <p class="blog__soc_text">mediacontext.pro</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section  class="form">
+        <div class="container">
+            <div class="form__block">
+                <h2>Оставьте заявку, <br> чтобы обсудить проект</h2>
+                <form class="form__wrapper">
+                    <div class="form__input">
+                        <div class="input__wrapper">
+                            <input type="text" class="input _req" placeholder="Ваше имя*">
+                            <p>Заполните поле</p>
+                        </div>
+                        <div class="input__wrapper">
+                            <input type="text" class="input" placeholder="Название компании">
+                            <p>Заполните поле</p>
+                        </div>
+                    </div>
+                    <div class="form__input">
+                        <div class="input__wrapper">
+                            <input type="text" placeholder="Телефон*" data-phone-pattern class="input _phone _req">
+                            <p>Заполните поле</p>
+                            <p class="text__email">Некорректный номер</p>
+                        </div>
+                        <div class="input__wrapper">
+                            <input type="text" class="input _email" placeholder="Ваш email">
+                            <p>Заполните поле</p>
+                            <p class="text__email">Некорректный email</p>
+                        </div>
+                    </div>
+                    <div class="input__wrapper">
+                        <textarea class="input" name="" id="" placeholder="Описание задачи"></textarea>
+                    </div>
+                    <div class="">
+                        <div class="input__file_wrapper">
+                            <input type="file" name="file[]" class="input input__file" multiple>
+                            <div class="input__file_btn">
+                                <p>Прикрепить файлы</p>
+                                <img src="img/file.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="input__file_list"></div>
+                    </div>
+                    <div class="form__row">
+                        <button class="btn__blc">
+                            <span>отправить</span>
+                            <i><img src="img/arrow_wht.svg" alt=""></i>
+                        </button>
+                        <p>Нажимая кнопку «Отправить», вы соглашаетесь с <a href="#">политикой обработки персональных данных</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer  class="footer">
+        <div class="container">
+            <div class="footer__block">
+                <div class="footer__col">
+                    <h2>Остались вопросы? Свяжитесь с нами</h2>
+                    <div class="footer__contact">
+                        <a href="#">+7 (812) 561-46-99</a>
+                        <a href="#">sales@mediacontext.pro</a>
+                    </div>
+                    <div class="footer__soc">
+                        <a href="#">
+                            <i>
+                                <img src="img/tg.svg" alt="">
+                            </i>
+                            <span>@planerochnaya</span>
+                        </a>
+                        <a href="#">
+                            <i>
+                                <img src="img/vk.svg" alt="">
+                            </i>
+                            <span>vk.com/mediacontext</span>
+                        </a>
+                        <p href="#">
+                            <i>
+                                <img src="img/map.svg" alt="">
+                            </i>
+                            <span>Санкт-Петербург, Софийская <br> ул. 6к8 «БЦ Полис центр»</span>
+                        </p>
+                    </div>
+                    <div class="footer__link">
+                        <a href="#" class="modal-form__call">
+                            <span>Обсудить проект</span>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.2781 20.6898L20.3363 11.2439C20.7073 10.857 20.7073 10.2465 20.3363 9.8596L11.2781 0.413666C11.1903 0.294052 11.0788 0.195405 10.951 0.124403C10.8233 0.0534014 10.6823 0.0117028 10.5377 0.00212971C10.393 -0.00744337 10.2481 0.0153332 10.1127 0.0689169C9.9773 0.1225 9.85457 0.20564 9.75283 0.312708C9.65109 0.419776 9.57271 0.548272 9.52299 0.689497C9.47328 0.830722 9.4534 0.981379 9.46469 1.13127C9.47599 1.28116 9.51819 1.42678 9.58845 1.55828C9.65871 1.68978 9.75538 1.80408 9.87193 1.89345L17.1456 9.50225L1.01164 9.028C0.74334 9.028 0.486025 9.13857 0.296307 9.33539C0.106586 9.53221 0 9.79915 0 10.0775C0 10.3558 0.106586 10.6228 0.296307 10.8196C0.486025 11.0164 0.74334 11.127 1.01164 11.127L17.1456 11.6012L9.87193 19.21C9.68277 19.4077 9.57704 19.6751 9.57799 19.9536C9.57894 20.2321 9.68649 20.4988 9.87698 20.6951C10.0675 20.8913 10.3253 21.001 10.5938 21C10.8622 20.999 11.1193 20.8874 11.3085 20.6898H11.2781Z" fill="white"/>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <span>Стать партнером</span>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.2781 20.6898L20.3363 11.2439C20.7073 10.857 20.7073 10.2465 20.3363 9.8596L11.2781 0.413666C11.1903 0.294052 11.0788 0.195405 10.951 0.124403C10.8233 0.0534014 10.6823 0.0117028 10.5377 0.00212971C10.393 -0.00744337 10.2481 0.0153332 10.1127 0.0689169C9.9773 0.1225 9.85457 0.20564 9.75283 0.312708C9.65109 0.419776 9.57271 0.548272 9.52299 0.689497C9.47328 0.830722 9.4534 0.981379 9.46469 1.13127C9.47599 1.28116 9.51819 1.42678 9.58845 1.55828C9.65871 1.68978 9.75538 1.80408 9.87193 1.89345L17.1456 9.50225L1.01164 9.028C0.74334 9.028 0.486025 9.13857 0.296307 9.33539C0.106586 9.53221 0 9.79915 0 10.0775C0 10.3558 0.106586 10.6228 0.296307 10.8196C0.486025 11.0164 0.74334 11.127 1.01164 11.127L17.1456 11.6012L9.87193 19.21C9.68277 19.4077 9.57704 19.6751 9.57799 19.9536C9.57894 20.2321 9.68649 20.4988 9.87698 20.6951C10.0675 20.8913 10.3253 21.001 10.5938 21C10.8622 20.999 11.1193 20.8874 11.3085 20.6898H11.2781Z" fill="white"/>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <span>Присоединиться к команде</span>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.2781 20.6898L20.3363 11.2439C20.7073 10.857 20.7073 10.2465 20.3363 9.8596L11.2781 0.413666C11.1903 0.294052 11.0788 0.195405 10.951 0.124403C10.8233 0.0534014 10.6823 0.0117028 10.5377 0.00212971C10.393 -0.00744337 10.2481 0.0153332 10.1127 0.0689169C9.9773 0.1225 9.85457 0.20564 9.75283 0.312708C9.65109 0.419776 9.57271 0.548272 9.52299 0.689497C9.47328 0.830722 9.4534 0.981379 9.46469 1.13127C9.47599 1.28116 9.51819 1.42678 9.58845 1.55828C9.65871 1.68978 9.75538 1.80408 9.87193 1.89345L17.1456 9.50225L1.01164 9.028C0.74334 9.028 0.486025 9.13857 0.296307 9.33539C0.106586 9.53221 0 9.79915 0 10.0775C0 10.3558 0.106586 10.6228 0.296307 10.8196C0.486025 11.0164 0.74334 11.127 1.01164 11.127L17.1456 11.6012L9.87193 19.21C9.68277 19.4077 9.57704 19.6751 9.57799 19.9536C9.57894 20.2321 9.68649 20.4988 9.87698 20.6951C10.0675 20.8913 10.3253 21.001 10.5938 21C10.8622 20.999 11.1193 20.8874 11.3085 20.6898H11.2781Z" fill="white"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="footer__menu">
+                        <div>
+                            <p>Услуги</p>
+                            <ul>
+                                <li><a href="#">Performance-marketing</a></li>
+                                <li><a href="#">Brandformance-marketing</a></li>
+                                <li><a href="#">Стратегический маркетинг</a></li>
+                                <li><a href="#">SEO</a></li>
+                                <li><a href="#">PR & SERM</a></li>
+                                <li><a href="#">Аналитика </a></li>
+                                <li><a href="#">Разработка сайтов</a></li>
+                                <li><a href="#">Все услуги</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p>О нас</p>
+                            <ul>
+                                <li><a href="#">Кейсы</a></li>
+                                <li><a href="#">Команда</a></li>
+                                <li><a href="#">Вакансии</a></li>
+                                <li><a href="#">Отзывы</a></li>
+                                <li><a href="#">Сертификаты</a></li>
+                                <li><a href="#">Блог  </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__info">
+                        <div class="footer__media">
+                            <img src="img/logo_footer.svg" alt="">
+                            <p>© 2019–2024 Медиаконтекст <br>ИНН 781713009343 <br>ОГРНИП 319784700168929</p>
+                            <div class="footer__media_link">
+                                <a href="#">
+                                    <img src="img/footer_media_1.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="img/footer_media_2.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="img/footer_media_3.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footer__politic">
+                            <a href="#">Политика обработки персональных данных</a>
+                            <a href="#">Публичная оферта</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__up">
+                    <img src="img/arrow_wht.svg" alt="">
+                </div>
+                <div class="footer__logo element-animation">
+                    <img src="img/mediacontext.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal modal-form">
+        <div class="modal__overflow modal-form__overflow"></div>
+        <form action="" class="modal__container">
+            <div class="modal__close modal-form__close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="#BFBFC1" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="#BFBFC1" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h3><span>Заполните</span> форму, чтобы обсудить проект</h3>
+            <div class="modal__wrapper">
+                <div class="input__wrapper">
+                    <input type="text" placeholder="Ваше имя*" class="input _req">
+                    <p>Заполните поле</p>
+                </div>
+                <div class="input__wrapper">
+                    <input type="text" placeholder="Телефон*" data-phone-pattern class="input _phone _req">
+                    <p>Заполните поле</p>
+                    <p class="text__email">Некорректный номер</p>
+                </div>
+                <div class="input__wrapper">
+                    <input type="text" placeholder="E-mail" class="input _email">
+                    <p>Заполните поле</p>
+                    <p class="text__email">Некорректный email</p>
+                </div>
+            </div>
+            <button class="btn__blc">
+                <span>Отправить заявку</span>
+                <i><img src="img/arrow_wht.svg" alt=""></i>
+            </button>
+            <p class="modal__text">Нажимая кнопку «Отправить», вы соглашаетесь с <a href="#">политикой обработки персональных данных</a></p>
+        </form>
+    </div>
+    <div class="modal modal-mail">
+        <div class="modal__overflow modal-mail__overflow"></div>
+        <form action="" class="modal__container">
+            <div class="modal__close modal-mail__close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="#BFBFC1" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="#BFBFC1" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h3><span>Подписаться</span> <br> на рассылку</h3>
+            <div class="modal__wrapper">
+                <div class="input__wrapper">
+                    <input type="text" placeholder="Ваше имя*" class="input _req">
+                    <p>Заполните поле</p>
+                </div>
+                <div class="input__wrapper">
+                    <input type="text" placeholder="E-mail*" class="input _req _email">
+                    <p>Заполните поле</p>
+                    <p class="text__email">Некорректный email</p>
+                </div>
+            </div>
+            <button class="btn__blc">
+                <span>Отправить заявку</span>
+                <i><img src="img/arrow_wht.svg" alt=""></i>
+            </button>
+            <p class="modal__text">Нажимая кнопку «Отправить», вы соглашаетесь с <a href="#">политикой обработки персональных данных</a></p>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
