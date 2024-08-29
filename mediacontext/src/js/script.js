@@ -714,8 +714,15 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('scroll',()=>{
             x = price.getBoundingClientRect().top
             for (let i = 0; i < priceItem.length; i++){
-                if(x < 0 && priceItem[i].getBoundingClientRect().top > 168 + (i * 115)) {
+                if(x < 0 && priceItem[i].getBoundingClientRect().top > 168 + (i * 100)) {
                     priceItem[i].style.marginTop = x + 'px'
+                } else if (x < -1 && priceItem[i].getBoundingClientRect().top < 168 + (i * 100)) {
+                    if(i == 0) {
+                        priceItem[i].style.marginTop = 0 + 'px'
+                    } else {
+                        console.log(priceItem[i - 1].getBoundingClientRect().height)
+                        priceItem[i].style.marginTop = '-' + (Math.ceil(priceItem[i - 1].getBoundingClientRect().height) - ( i * 70)) + 'px'
+                    }
                 }
             }
         })
@@ -776,7 +783,7 @@ document.addEventListener('DOMContentLoaded', function() {
             element.innerHTML = text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text
             setInterval(() => {
                 element.style.transform = 'translateX(-' + a +'px)'
-                a += 0.3
+                a += 0.6
                 if (a >= 5000) {
                     a = 1
                 }
