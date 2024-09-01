@@ -16,8 +16,7 @@ body
     font-family: $font-family
     color: $black
     background: $light-gray
-    position: relative
-    overflow-y: scroll
+    position: relative    
     &.fix
         overflow: hidden
         &::-webkit-scrollbar 
@@ -3549,6 +3548,7 @@ textarea.input
         position: relative
         border-radius: 40px
         padding: 60px 40px
+        overflow: hidden
     h2
         max-width: 990px
         margin: 20px 0 0
@@ -3605,7 +3605,6 @@ textarea.input
     &__bg
         position: absolute
         z-index: -1
-        transition: all .3s
         img
             width: 100%
         &_top
@@ -3673,7 +3672,6 @@ textarea.input
         top: -40px
         left: calc( 50% - (886px / 2) )
         z-index: -1
-        transition: all .3s
         img
             width: 100%
 

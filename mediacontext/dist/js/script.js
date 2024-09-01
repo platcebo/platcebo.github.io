@@ -79,35 +79,29 @@ document.addEventListener('DOMContentLoaded', function() {
         wrapperCheck.addEventListener('mouseout', resetCheck);
     }
 
-    const wrapperWork = document.querySelector('.work .parallax');
-    const layersWork = document.querySelectorAll('.work .parallax__layer');
+    let workPar = document.querySelectorAll('.par__layer'),
+        workWrapper = document.querySelector('.work__wrapper');
 
-    const handleParallaxWork = (evt) => {
-    //размер области просмотра
-    const parallaxLeftOffset = wrapperWork.getBoundingClientRect().left;
-    const parallaxTopOffset = wrapperWork.getBoundingClientRect().top;
-
-    // координаты центра экрана
-    const coordX = evt.clientX - parallaxLeftOffset - 0.2 * wrapperWork.offsetWidth;
-    const coordY = evt.clientY - parallaxTopOffset - 0.2 *  wrapperWork.offsetHeight;
-        
-    layersWork.forEach((layersWork)=>{
-        const layerSpeed = layersWork.dataset.speed;
-        const x = - (coordX * layerSpeed).toFixed(2);
-        const y = - (coordY * layerSpeed).toFixed(2);
-        layersWork.setAttribute('style', `transform: translate(${x}px, ${y}px);`)
-    });
-    };
-
-    const resetWork = () => {
-    layersWork.forEach((layersWork)=>{
-        layersWork.removeAttribute('style');
-    });
+    if(workPar.length > 0) {
+        window.addEventListener('scroll', ()=>{
+            workPar.forEach((item)=>{
+                if(item.getBoundingClientRect().top <= window.innerHeight && workWrapper.getBoundingClientRect().bottom > 0) {
+                    console.log('df')
+                    item.style.transform = 'translateY(' + (item.getBoundingClientRect().top/workWrapper.getBoundingClientRect().height) * 100 + '%)'
+                }
+            })
+        })
     }
-    
-    if(wrapperWork !== null) {
-        wrapperWork.addEventListener('mousemove', handleParallaxWork);
-        wrapperWork.addEventListener('mouseout', resetWork);
+
+    let checkPar = document.querySelector('.check__layer'),
+        checkWrapper = document.querySelector('.check__block');
+
+    if(checkPar !== null) {
+        window.addEventListener('scroll', ()=>{
+            if(checkPar.getBoundingClientRect().top <= window.innerHeight && checkWrapper.getBoundingClientRect().bottom > 0) {
+                checkPar.style.transform = 'translateY(' + (checkPar.getBoundingClientRect().top/window.innerHeight)*30 + '%)'
+            }
+        })
     }
 
     let headerVideoPlay = document.querySelector('.header__video_play'),
