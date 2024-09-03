@@ -48,37 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
         wrapper.addEventListener('mouseout', reset);
     }
 
-    const wrapperCheck = document.querySelector('.check.parallax');
-    const layersCheck = document.querySelectorAll('.check .parallax__layer');
-
-    const handleParallaxCheck = (evt) => {
-    //размер области просмотра
-    const parallaxLeftOffset = wrapperCheck.getBoundingClientRect().left;
-    const parallaxTopOffset = wrapperCheck.getBoundingClientRect().top;
-
-    // координаты центра экрана
-    const coordX = evt.clientX - parallaxLeftOffset - 0.2 * wrapperCheck.offsetWidth;
-    const coordY = evt.clientY - parallaxTopOffset - 0.2 *  wrapperCheck.offsetHeight;
-        
-    layersCheck.forEach((layer)=>{
-        const layerSpeed = layer.dataset.speed;
-        const x = - (coordX * layerSpeed).toFixed(2);
-        const y = - (coordY * layerSpeed).toFixed(2);
-        layer.setAttribute('style', `transform: translate(${x}px, ${y}px);`)
-    });
-    };
-
-    const resetCheck = () => {
-    layersCheck.forEach((layer)=>{
-        layer.removeAttribute('style');
-    });
-    }
-    
-    if(wrapperCheck !== null) {
-        wrapperCheck.addEventListener('mousemove', handleParallaxCheck);
-        wrapperCheck.addEventListener('mouseout', resetCheck);
-    }
-
     let workPar = document.querySelectorAll('.par__layer'),
         workWrapper = document.querySelector('.work__wrapper');
 
@@ -87,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
             workPar.forEach((item)=>{
                 if(item.getBoundingClientRect().top <= window.innerHeight && workWrapper.getBoundingClientRect().bottom > 0) {
                     console.log('df')
-                    item.style.transform = 'translateY(' + (item.getBoundingClientRect().top/workWrapper.getBoundingClientRect().height) * 100 + '%)'
+                    item.style.transform = 'translateY(' + (item.getBoundingClientRect().top/workWrapper.getBoundingClientRect().height) * 50 + '%)'
                 }
             })
         })
@@ -99,7 +68,21 @@ document.addEventListener('DOMContentLoaded', function() {
     if(checkPar !== null) {
         window.addEventListener('scroll', ()=>{
             if(checkPar.getBoundingClientRect().top <= window.innerHeight && checkWrapper.getBoundingClientRect().bottom > 0) {
-                checkPar.style.transform = 'translateY(' + (checkPar.getBoundingClientRect().top/window.innerHeight)*30 + '%)'
+                checkPar.style.transform = 'translateY(' + (checkPar.getBoundingClientRect().top/window.innerHeight)*10 + '%)'
+            }
+        })
+    }
+
+    let addPar = document.querySelector('.add-header__bg'),
+        addWrapper = document.querySelector('.add-header__block');
+
+    if(addPar !== null) {
+        if(addPar.getBoundingClientRect().top <= window.innerHeight && addWrapper.getBoundingClientRect().bottom > 0) {
+            addPar.style.transform = 'translateY(' + (addPar.getBoundingClientRect().top/window.innerHeight)*10 + '%)'
+        }
+        window.addEventListener('scroll', ()=>{
+            if(addPar.getBoundingClientRect().top <= window.innerHeight && addWrapper.getBoundingClientRect().bottom > 0) {
+                addPar.style.transform = 'translateY(' + (addPar.getBoundingClientRect().top/window.innerHeight)*10 + '%)'
             }
         })
     }
@@ -704,20 +687,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (price !== null && window.innerWidth > 1200) {
         let x = price.getBoundingClientRect().top
-        price.style.height = price.getBoundingClientRect().height + 'px'
+        price.style.height = priceBlock.getBoundingClientRect().height + 40 + 'px'
         window.addEventListener('scroll',()=>{
             x = price.getBoundingClientRect().top
-            for (let i = 0; i < priceItem.length; i++){
-                if(x < 0 && priceItem[i].getBoundingClientRect().top > 168 + (i * 100)) {
-                    priceItem[i].style.marginTop = x + 'px'
-                } else if (x < -1 && priceItem[i].getBoundingClientRect().top < 168 + (i * 100)) {
-                    if(i == 0) {
-                        priceItem[i].style.marginTop = 0 + 'px'
-                    } else {
-                        console.log(priceItem[i - 1].getBoundingClientRect().height)
-                        priceItem[i].style.marginTop = '-' + (Math.ceil(priceItem[i - 1].getBoundingClientRect().height) - ( i * 70)) + 'px'
-                    }
-                }
+            if(x < 0 && priceItem[1].getBoundingClientRect().top > 268) {
+                priceItem[1].style.marginTop = x + 'px'
+                priceBlock.style.top = x * -1 + 'px'
+            } else if (x < -1 && priceItem[1].getBoundingClientRect().top < 168 + (i * 100)) {
+                priceItem[1].style.marginTop = '-' + priceItem[0].getBoundingClientRect().height - 70 + 'px'
+            } else if (x > 0) {
+                priceBlock.style.top = 0 + 'px'
             }
         })
     }

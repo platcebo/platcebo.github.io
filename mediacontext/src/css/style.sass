@@ -3739,16 +3739,20 @@ textarea.input
     position: relative
     .container
         height: 100%
+        position: relative
     &__block
         background: $purple
         border-radius: 40px
         position: relative
         padding: 60px 40px
-        // transition: all .3s
-        position: sticky
+        position: absolute
         top: 40px
         z-index: 1
         overflow: hidden
+        width: 100%
+        left: 0
+        bottom: 0
+        height: min-content
     &__tag
         font-family: $font-family
         font-weight: 500
