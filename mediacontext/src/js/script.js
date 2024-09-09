@@ -749,7 +749,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let certRow = document.querySelectorAll('.cert__row');
 
-    if(certRow !== null) {
+    if(certRow !== null && window.innerWidth > 600) {
         certRow.forEach((element, i) => {
             let text = element.innerHTML,
                 a = 1;
@@ -761,6 +761,19 @@ document.addEventListener('DOMContentLoaded', function() {
                     a = 1
                 }
             }, 10);
+        });
+    }
+
+    if(window.innerWidth <= 600) {
+        var swiper = new Swiper(".cert__wrapper", {
+            spaceBetween: 40,
+            slidesPerView: 1,
+            speed: 700,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
         });
     }
 
