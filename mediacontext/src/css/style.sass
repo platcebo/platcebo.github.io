@@ -3809,6 +3809,7 @@ textarea.input
             line-height: 1.4
             letter-spacing: -0.03em
             color: $black
+            opacity: 0.7
     &__date
         background: $light-gray
         border-radius: 40px
@@ -4266,6 +4267,10 @@ textarea.input
             max-width: 700px
         .btn__blc
             padding: 10px 10px 10px 20px
+        &__bg
+            top: -25px
+            width: 665px
+            left: calc(50% - 380px)
     .process
         &__name
             font-size: 16px
@@ -4285,15 +4290,15 @@ textarea.input
             &_num
                 font-size: 28px
             &_arrow
-                grid-template-columns: 40px 40px
+                grid-template-columns: 50px 50px
                 gap: 10px
         .swiper-button-next,
         .swiper-button-prev
-            width: 40px
-            height: 40px
+            width: 50px
+            height: 50px
             &::before
-                width: 14px
-                height: 14px
+                width: 15px
+                height: 15px
                 background-size: contain
     .cert
         &__item
@@ -4421,6 +4426,11 @@ textarea.input
                 height: 476px
                 width: auto
                 object-fit: cover
+        &__text
+            font-weight: 600
+            font-size: 24px
+            opacity: 1
+            color: $black
     .price
         padding: 20px 0 0
         &__block
@@ -4432,6 +4442,7 @@ textarea.input
             gap: 30px
         &__item
             min-height: 336px
+            border: none
             .btn__blc
                 padding: 10px 10px 10px 20px
         &__row
@@ -4441,6 +4452,12 @@ textarea.input
                 font-size: 16px
         &__price
             font-size: 45px
+        &__bg
+            transform: rotate(-180deg)
+            top: -412px
+            width: 1150px
+            left: auto
+            right: -720px
     .team
         padding: 20px 0 0
         &__block
@@ -4517,7 +4534,7 @@ textarea.input
         &__bg
             width: 350px
             left: 0
-            bottom: -130px
+            bottom: -180px
             height: 309px
             top: auto
     .proud
@@ -4557,6 +4574,10 @@ textarea.input
             gap: 0
             .btn__blc
                 gap: 0
+        &__bg
+            top: -230px
+            right: -400px
+            width: 650px
     .prize
         &__block
             gap: 64px
@@ -4564,7 +4585,7 @@ textarea.input
             img
                 width: 96px
     .work
-        padding: 20px 0 
+        padding: 0 0 20px
         &__block
             padding: 20px
         &__wrapper
@@ -4633,7 +4654,7 @@ textarea.input
             &+.input__wrapper
                 margin: 10px 0 0
             .btn__blc
-                padding: 10px 10px 10px 20px
+                gap: 0
         &__btn
             padding: 20px 0
             &:nth-child(1)
@@ -4646,6 +4667,12 @@ textarea.input
         &__info
             p
                 font-size: 16px
+        &__btn
+            &:hover
+                span
+                    background: #efeff1
+                    img
+                        filter: invert(100%)
 
 @media ( max-width: 600px )
     .add-header
@@ -4687,10 +4714,15 @@ textarea.input
             .btn__blc
                 margin: 20px 0 0
                 gap: 0
+                padding: 15px 15px 15px 20px
             .input__wrapper:nth-child(2) 
                 margin: 10px 0 0
             p
                 font-size: 14px
+        &__bg
+            width: 780px
+            bottom: 200px
+            right: -470px
     .process
         &__block
             padding: 30px 20px
@@ -4712,6 +4744,8 @@ textarea.input
                 left: 10px
         &__wrapper
             overflow-x: auto
+        &__text
+            font-size: 18px
     .price
         &__item
             padding: 20px

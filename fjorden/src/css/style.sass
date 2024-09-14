@@ -3119,6 +3119,14 @@ section
             justify-items: start
             a
                 font-size: 12px
+                &::before
+                    content: none
+                span
+                    transform: translateY(0)
+                &:hover
+                    color: #ff7468
+                    span
+                        transform: translateY(0)
         &__func
             margin: 16px 0 0
             a
@@ -5399,6 +5407,7 @@ section
             gap: 24px
             p
                 margin: 0
+                display: none
         .project__info_header
             border: none
             padding: 32px 32px 0
@@ -5408,7 +5417,8 @@ section
             .btn__blue
                 margin: 0
         .project__info
-            transform: translateY(calc(100% - 90px))
+            transform: translateY(0)
+            // transform: translateY(calc(100% - 90px))
 
 @media ( max-width: 1440px )
     .catalog
@@ -5428,7 +5438,8 @@ section
                 font-size: 22px
             .project
                 &__info
-                    transform: translateY(calc(100% - 70px))
+                    transform: translateY(0)
+                    // transform: translateY(calc(100% - 70px))
                     &_header
                         padding: 24px 24px 0
                     &_body
@@ -5461,15 +5472,15 @@ section
         max-width: 1054px
     &__btn
         margin: 24px 0 0
+    .btn__wht
+        margin: 32px auto 0
     &__wrapper
         display: grid
         grid-template-columns: 1fr 1fr
         gap: 24px
         row-gap: 32px
         margin: 48px 0 0
-    .btn__wht
-        margin: 32px auto 0
-
+    
 @media ( max-width: 1450px )
     .series
         padding: 24px 0 100px
