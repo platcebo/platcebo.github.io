@@ -274,7 +274,10 @@ textarea.input
 
 .nav
     padding: 20px 0
-    position: relative
+    position: sticky
+    top: 0
+    z-index: 100
+    background: $light-gray
     .modal
         &__call
             padding: 10px 10px 10px 20px
@@ -4357,7 +4360,7 @@ textarea.input
             p
                 font-size: 24px
         &__bg
-            top: calc( 100% - 370px )
+            top: calc( 100% - 425px )
     .proud
         padding: 0 0 20px
         &__block
@@ -4408,6 +4411,8 @@ textarea.input
         &__text
             p
                 max-width: 100%
+                br
+                    display: none
         &__form
             p
                 max-width: 100%
@@ -4466,8 +4471,17 @@ textarea.input
             overflow: auto
         &__move
             max-width: max-content
+            gap: 20px
         &__item
-            min-width: calc( 50% - 20px )
+            min-width: calc( 50% - 10px )
+            img
+                height: 270px
+            h3
+                margin: 30px 30px 0
+                font-size: 24px
+            p
+                font-size: 16px
+                margin: 20px 30px 30px
         .swiper
             &-slide
                 grid-template-columns: 100%
@@ -4493,6 +4507,11 @@ textarea.input
             align-items: flex-start
         &__tab
             justify-content: flex-start
+            gap: 10px
+            li
+                font-size: 14px
+        &__row
+            gap: 20px
     .faq
         h2
             display: block
@@ -4511,6 +4530,23 @@ textarea.input
             padding: 30px 0
             p
                 font-size: 24px
+            &:hover
+                span
+                    background: #efeff1
+                    img
+                        filter: invert(100%)
+    .proud,
+    .work,
+    .process,
+    .team,
+    .price,
+    .cert,
+    .faq
+        &__tag
+            font-size: 14px
+            padding: 10px 20px
+
+@media ( max-width: 750px )
     .proud,
     .work,
     .process,
@@ -4521,8 +4557,6 @@ textarea.input
         &__tag
             font-size: 14px
             padding: 5px 15px
-
-@media ( max-width: 750px )
     .add-header
         &__block
             padding: 20px 20px 106px
@@ -4710,6 +4744,8 @@ textarea.input
         &__text
             p
                 margin: 20px 0 0
+                br
+                    display: block
         &__form
             .btn__blc
                 margin: 20px 0 0
