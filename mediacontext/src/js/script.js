@@ -15,6 +15,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.body.classList.add('fix')
             }
         })
+
+        if(window.scrollY > window.innerHeight * 2) {
+            nav.classList.add('fix')
+        } else {
+            nav.classList.remove('fix')
+        }
+        window.addEventListener('scroll', ()=>{
+            if(window.scrollY > window.innerHeight * 2) {
+                nav.classList.add('fix')
+            } else if (window.scrollY < window.innerHeight * 2 && nav.classList.contains('fix')) {
+                nav.style.opacity = 0
+                setTimeout(() => {
+                    nav.style.opacity = 1
+                    nav.classList.remove('fix')
+                }, 500);
+            }
+        })
     }
 
     const wrapper = document.querySelector('.parallax');

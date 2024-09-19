@@ -274,10 +274,27 @@ textarea.input
 
 .nav
     padding: 20px 0
-    position: sticky
-    top: 0
     z-index: 100
     background: $light-gray
+    transform: translateY(0)
+    transition: all .3s
+    transition-property: transform, opacity
+    position: relative
+    &.fix
+        position: sticky
+        top: -100px
+        left: 0
+        margin: 0
+        z-index: 100
+        transform: translateY(100px)
+        width: 100%
+        background: transparent
+        .nav__logo,
+        .nav__list,
+        .btn__blc
+            opacity: 0
+            pointer-events: none
+            transition: all 0s
     .modal
         &__call
             padding: 10px 10px 10px 20px
@@ -330,7 +347,7 @@ textarea.input
         position: relative
         padding: 22px 15px
         background: $purple
-        transition: all .3s ease-in-out
+        transition: background .3s ease-in-out
         display: flex
         flex-direction: column
         justify-content: center
@@ -4360,7 +4377,9 @@ textarea.input
             p
                 font-size: 24px
         &__bg
-            top: calc( 100% - 425px )
+            top: calc( 100% - 380px )
+            width: 940px
+            left: calc( 50% - 470px )
     .proud
         padding: 0 0 20px
         &__block
