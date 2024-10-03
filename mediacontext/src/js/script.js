@@ -379,6 +379,56 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    let modalTeamCall = document.querySelectorAll('.modal-team__btn'),
+        modalTeam = document.querySelector('.modal-team'),
+        modalTeamClose = document.querySelector('.modal-team__close'),
+        modalTeamOverflow = document.querySelector('.modal-team__overflow');
+
+    if(modalTeam !== null) {
+        modalTeamCall.forEach((item)=>{
+            item.addEventListener('click', (e)=>{
+                e.preventDefault()
+                modalTeam.classList.add('active');
+                nav.classList.remove('active');
+                navBurger.classList.remove('active');
+                document.body.classList.add('fix')
+            })
+        })
+        modalTeamClose.addEventListener('click', ()=>{
+            modalTeam.classList.remove('active');
+            document.body.classList.remove('fix')
+        })
+        modalTeamOverflow.addEventListener('click', ()=>{
+            modalTeam.classList.remove('active');
+            document.body.classList.remove('fix')
+        })
+    }
+
+    let modalRefCall = document.querySelectorAll('.modal-ref__btn'),
+        modalRef = document.querySelector('.modal-ref'),
+        modalRefClose = document.querySelector('.modal-ref__close'),
+        modalRefOverflow = document.querySelector('.modal-ref__overflow');
+
+    if(modalRef !== null) {
+        modalRefCall.forEach((item)=>{
+            item.addEventListener('click', (e)=>{
+                e.preventDefault()
+                modalRef.classList.add('active');
+                nav.classList.remove('active');
+                navBurger.classList.remove('active');
+                document.body.classList.add('fix')
+            })
+        })
+        modalRefClose.addEventListener('click', ()=>{
+            modalRef.classList.remove('active');
+            document.body.classList.remove('fix')
+        })
+        modalRefOverflow.addEventListener('click', ()=>{
+            modalRef.classList.remove('active');
+            document.body.classList.remove('fix')
+        })
+    }
+
     let menuLink = document.querySelectorAll('.menu__link'),
         menuCall = document.querySelectorAll('.menu__call'),
         menu = document.querySelectorAll('.menu');
@@ -651,8 +701,8 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(elm);
     }
 
-    let inputFile = document.querySelector('.input__file'),
-        inputFileList = document.querySelector('.input__file_list');
+    let inputFile = document.querySelector('.form .input__file'),
+        inputFileList = document.querySelector('.form .input__file_list');
 
     if(inputFile !== null) {
         let ArrName = [],

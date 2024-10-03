@@ -589,6 +589,9 @@ textarea.input
         background: rgba(255, 255, 255, 0.01)
         position: relative
         overflow: hidden
+        mask-image: linear-gradient(to right, black 80%, transparent 95%)
+        border-top-left-radius: 100px
+        border-bottom-left-radius: 100px
     &__logo
         position: absolute
         top: 15px
@@ -1791,7 +1794,8 @@ textarea.input
     &__media
         img
             width: 100%
-            max-width: 290px
+            width: 150px
+            border-radius: 4px
         p
             margin: 20px 0 0
             opacity: .7
@@ -1803,7 +1807,7 @@ textarea.input
             color: $light-gray
         &_link
             margin: 20px 0 0
-            max-width: 250px
+            width: 310px
             display: grid
             grid-template-columns: 1fr 1fr
             gap: 10px
@@ -2140,10 +2144,32 @@ textarea.input
     .header
         &__info
             max-width: 100%
-            position: static
+            position: relative
+            mask-image: linear-gradient(to bottom, black 90%, transparent 100%)
+            border-radius: 0
+            border-top-left-radius: 70px
+            border-top-right-radius: 70px
+            backdrop-filter: blur(5px)
+            overflow: visible
+            .element-animation
+                transform: translateY(90%)
+                &.element-show
+                    transform: translateY(0%)
         &__block
             position: relative
             padding: 0 0 630px
+            &::before
+                content: 'Приводим клиентов через performance, бренд-маркетинг, SEO-продвижение и комплексный подход'
+                margin: 0
+                position: absolute
+                bottom: 40px
+                left: 40px
+                font-size: 16px
+                max-width: 305px
+                font-weight: 500
+                line-height: 1.4
+                letter-spacing: -0.03em
+                color: #fff
         &__text
             margin: 0
             position: absolute
@@ -2152,9 +2178,9 @@ textarea.input
         &__logo
             width: 880px
             bottom: auto
-            top: 150px
+            top: 180px
             pointer-events: none
-            right: calc( 50% - 440px )
+            right: calc( 50% - 400px )
     .service
         padding: 20px 0
         &__block
@@ -2450,6 +2476,12 @@ textarea.input
             margin: 30px 0 0
             column-gap: 5px
 
+@media ( max-width: 800px )
+    .footer
+        &__media
+            &_link
+                grid-template-columns: 150px 150px 150px 150px
+
 @media ( max-width: 750px )
     html
         max-width: 100%
@@ -2546,11 +2578,14 @@ textarea.input
                 font-size: 18px
     .header
         &__info
-            padding: 20px
+            padding: 20px 20px 170px
+            backdrop-filter: blur(3px)
         h1
             font-size: 46px
         &__block
-            padding: 0 0 370px
+            padding: 0 0 260px
+            &::before
+                content: none
         &__logo
             width: auto
             right: -70px
@@ -2558,7 +2593,7 @@ textarea.input
             z-index: -1
             bottom: 100px
             top: auto
-            bottom: 80px
+            bottom: 90px
         &__video
             &_look
                 display: none
@@ -2903,7 +2938,8 @@ textarea.input
             order: 2
             &_link
                 max-width: 100%
-                grid-template-columns: 1fr 1fr 1fr
+                grid-template-columns: 150px
+                width: 150px
 
 .modal
     position: fixed
@@ -4884,3 +4920,165 @@ textarea.input
                 background: $light-gray
                 &::before
                     filter: invert(75%)
+
+.modal-team
+    padding: 100px 40px 40px
+    &__close
+        position: absolute
+        top: 20px
+        right: 40px
+        width: 60px
+        height: 60px
+        background: $purple
+        border-radius: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        transition: all .3s
+        z-index: 5
+        &:hover
+            background: $lighter-purple
+    &__block
+        padding: 60px 40px
+        border-radius: 40px
+        position: relative
+        background: $purple
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 40px
+        width: 100%
+        overflow: hidden
+        z-index: 1
+    h2
+        color: $white
+        max-width: 800px
+    &__form
+        display: grid
+        grid-template-columns: 100%
+        gap: 20px
+    &__row
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 20px
+    &__btn
+        display: grid
+        grid-template-columns: 245px 1fr
+        gap: 40px
+        align-items: center
+        .btn__blc
+            margin: 0
+        p
+            font-family: $font-family
+            font-weight: 500
+            font-size: 16px
+            line-height: 1.25
+            color: $white
+            max-width: 375px
+            a
+                text-decoration: underline
+                color: $white
+    &__bg
+        position: absolute
+        top: 20px
+        left: -100px
+        width: 875px
+        z-index: -1
+
+.modal-ref
+    padding: 100px 40px 40px
+    &__block
+        background: $black
+    h2
+        color: $white
+    &__bg
+        width: 804px
+        position: absolute
+        bottom: -157px
+        left: -80px
+        z-index: -1
+    &__close
+        position: absolute
+        top: 20px
+        right: 40px
+        width: 60px
+        height: 60px
+        background: $purple
+        border-radius: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        transition: all .3s
+        z-index: 5
+        &:hover
+            background: $lighter-purple
+
+@media ( max-width: 1440px )
+    .modal-team
+        padding: 100px 40px 40px
+        &__bg
+            width: 767px
+            top: 37px
+            left: -120px
+    .modal-ref
+        padding: 100px 40px 40px
+        &__bg
+            width: 764px
+            left: -144px
+            bottom: -146px
+
+@media ( max-width: 1200px )
+    .modal-team
+        padding: 100px 20px 20px
+        &__close
+            top: 20px
+            right: 20px
+            width: 50px
+            height: 50px
+            img
+                width: 24px
+        &__block
+            padding: 40px
+            grid-template-columns: 100%
+            gap: 30px
+        &__btn
+            grid-template-columns: 100%
+            gap: 20px
+            p
+                max-width: 555px
+        &__bg
+            width: 636px
+            left: auto
+            right: -270px
+            top: -193px
+    .modal-ref
+        padding: 100px 20px 20px
+        &__close
+            top: 20px
+            right: 20px
+            width: 50px
+            height: 50px
+            img
+                width: 24px
+        &__bg
+            width: 573px
+            left: auto
+            bottom: auto
+            top: -248px
+            right: -261px
+
+@media ( max-width: 600px )
+    .modal-team
+        &__block
+            padding: 40px 20px
+            gap: 20px
+        &__bg
+            width: 356px
+            top: -82px
+            right: -200px
+        &__form
+            gap: 10px
+        &__row
+            grid-template-columns: 100%
+            gap: 10px
