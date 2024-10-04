@@ -937,6 +937,7 @@ textarea.input
         top: 230px
         overflow: hidden
         max-height: calc( 100vh - 300px )
+        height: 797px
     &__video
         position: relative
         border-radius: 40px
@@ -1033,6 +1034,13 @@ textarea.input
             bottom: 40px
             right: 40px
             width: 167px
+        &_title
+            background: $white
+            border-radius: 40px
+            padding: 10px 30px
+            position: absolute
+            bottom: 40px
+            right: 40px
     &__sticy
         position: relative
         top: 0
@@ -1122,6 +1130,154 @@ textarea.input
             color: $black
             opacity: .7
             margin: 20px 0 0
+    &__har
+        background: $white
+        border-radius: 40px
+        padding: 40px
+        display: flex
+        flex-direction: column
+        &_logo
+            display: grid
+            grid-template-columns: 100px 1fr
+            gap: 20px
+            align-items: center
+            p
+                font-family: $font-family
+                font-weight: 600
+                font-size: 36px
+                line-height: 1
+                letter-spacing: -0.03em
+                color: $black
+            img
+                width: 100%
+                height: 100px
+                object-fit: contain
+        &_task
+            font-family: $font-family
+            font-weight: 500
+            font-size: 20px
+            line-height: 1.4
+            letter-spacing: -0.03em
+            color: $black
+            margin: 20px 0 0
+            opacity: .7
+            span
+                font-weight: 700
+        &_list
+            margin: 40px 0 0
+            display: grid
+            grid-template-columns: 100%
+            gap: 30px
+            li
+                border-bottom: 1px solid $gray
+                padding: 0 0 30px
+                display: grid
+                grid-template-columns: 320fr 185fr
+                gap: 40px
+                &:last-child
+                    border-bottom: none
+                    padding: 0
+            p
+                font-family: $font-family
+                font-weight: 500
+                font-size: 20px
+                line-height: 1.4
+                letter-spacing: -0.03em
+                color: $black
+                &+p
+                    font-family: $font-family
+                    font-weight: 700
+                    font-size: 20px
+                    line-height: 1.4
+                    letter-spacing: -0.03em
+                    text-align: right
+                    color: $purple
+        &_link
+            margin: auto 0 0
+            display: grid
+            grid-template-columns: 1fr 60px
+            gap: 20px
+            align-items: center
+            p
+                font-family: $font-family
+                font-weight: 600
+                font-size: 36px
+                line-height: 1
+                letter-spacing: -0.03em
+                color: $black
+                max-width: 300px
+            span
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 60px
+                height: 60px
+                border-radius: 100%
+                background: $black
+                transition: all .3s
+                img
+                    transform: rotate(-45deg)
+                    transition: all .3s
+            &:hover
+                span
+                    background: $purple
+                    img
+                        transform: rotate(0)
+        &_text
+            font-family: $font-family
+            font-weight: 500 !important
+            font-size: 20px
+            line-height: 1.4
+            letter-spacing: -0.03em
+            color: $black
+            grid-column: 1/4
+        &_kpi
+            margin: 30px 0 0
+            display: grid
+            grid-template-columns: 100%
+            gap: 20px
+            li
+                display: grid
+                grid-template-columns: 120px 120px 120px
+                gap: 30px
+                justify-content: space-between
+                row-gap: 10px
+                border-bottom: 1px solid $gray
+                padding: 0 0 20px
+                &:last-child
+                    border: none
+                    padding: 0
+            p
+                font-family: $font-family
+                font-weight: 700
+                font-size: 20px
+                line-height: 1.4
+                letter-spacing: -0.03em
+                color: $black
+                &+p
+                    font-weight: 500
+                    font-size: 16px
+                    line-height: 1.25
+                    opacity: 0.7
+            .violet
+                position: relative
+                &::before
+                    content: ''
+                    display: block
+                    width: 28px
+                    height: 28px
+                    background: url('../img/arrow_violet.svg') center no-repeat
+                    background-size: contain
+                    position: absolute
+                    top: 0
+                    left: -33px
+                &.down
+                    &::before
+                        transform: rotate(180deg)
+                p
+                    color: $purple
+                    &+p
+                        color: $black
 
 .with
     padding: 40px 0 0
@@ -2008,6 +2164,46 @@ textarea.input
                 font-size: 28px
             &_text
                 font-size: 16px
+        &__har
+            &_logo
+                grid-template-columns: 80px 1fr
+                img
+                    height: 80px
+                p
+                    font-size: 28px
+            &_list
+                margin: 30px 0 0
+                gap: 20px
+                li
+                    padding: 0 0 20px
+                p
+                    font-size: 16px
+                    &+p
+                        font-size: 16px
+            &_link
+                grid-template-columns: 1fr 40px
+                p
+                    font-size: 28px
+                span
+                    width: 40px
+                    height: 40px
+                    img
+                        width: 15px
+            &_text
+                font-size: 16px !important
+            &_kpi
+                margin: 15px 0 0
+                gap: 15px
+                p
+                    font-size: 16px
+                li
+                    padding: 0 0 15px
+                    grid-template-columns: 90px 90px 90px
+                .violet
+                    &::before
+                        width: 24px
+                        height: 24px
+                        left: -24px
     .with
         &__tag
             font-size: 16px
@@ -2141,6 +2337,10 @@ textarea.input
     .about
         &__row
             grid-template-columns: 1fr 1fr
+    .case
+        &__item
+            grid-template-columns: 1fr 1fr
+            gap: 20px
 
 @media ( max-width: 1200px )
     .container
@@ -2300,8 +2500,8 @@ textarea.input
         &__item
             grid-template-columns: 1fr 1fr
             gap: 20px
-            height: auto
             top: 158px
+            max-height: calc( 100vh - 200px )
         &__video
             &_bar
                 padding: 30px
@@ -2314,6 +2514,11 @@ textarea.input
                 img
                     width: 16px
         &__info
+            &_title
+                bottom: 20px
+                right: 20px
+                font-size: 14px
+                padding: 10px 20px
             h3
                 font-size: 36px
                 padding: 30px
@@ -2345,6 +2550,38 @@ textarea.input
             &_text
                 font-size: 14px
                 margin: 10px 0 0
+        &__har
+            padding: 30px
+            &_logo
+                grid-template-columns: 50px 1fr
+                gap: 10px
+                p
+                    font-size: 24px
+                img
+                    height: 50px
+            &_task
+                font-size: 14px
+            &_list
+                margin: 15px 0 0
+                gap: 15px
+                li
+                    padding: 0 0 15px
+                    grid-template-columns: 100%
+                    gap: 5px
+                p
+                    &+p
+                        text-align: left
+            &_link
+                p
+                    font-size: 24px
+            &_kpi
+                p
+                    &+p
+                        font-size: 14px
+                li
+                    grid-template-columns: 1fr 1fr 1fr
+                    gap: 0
+                    row-gap: 10px
     .with
         padding: 20px 0 0
         &__block
@@ -2776,7 +3013,6 @@ textarea.input
         &__item
             grid-template-columns: 100%
             gap: 20px
-            display: none
             position: relative
             top: auto
             height: auto
@@ -2814,6 +3050,29 @@ textarea.input
                 padding: 20px
                 p
                     font-size: 18px
+        &__har
+            &_link
+                margin: 30px 0 0
+                p
+                    font-size: 18px
+            &_kpi
+                li
+                    grid-template-columns: 1fr 1fr 1fr
+                p
+                    font-size: 14px
+                .violet
+                    &::before
+                        width: 16px
+                        height: 16px
+                        top: 3px
+                        left: -19px
+            &_logo
+                p
+                    font-size: 18px
+            &__list
+                p
+                    &+p
+                        font-size: 14px
     .with
         &__block
             padding: 30px 20px
