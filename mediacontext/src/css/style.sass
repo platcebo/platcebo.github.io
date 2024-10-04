@@ -316,7 +316,7 @@ textarea.input
         align-items: center
         gap: 80px
         a
-            font-weight: 500
+            font-weight: 400
             font-size: 20px
             line-height: 1.4
             letter-spacing: -0.03em
@@ -402,6 +402,29 @@ textarea.input
         align-items: start
         height: max-content
         min-height: 100%
+        ul.nav__menu_case
+            margin: auto 0 0
+            a
+                font-family: $font-family
+                font-weight: 600
+                font-size: 36px
+                line-height: 1
+                letter-spacing: -0.03em
+                color: $black
+                opacity: 1
+                &:hover
+                    color: #9373EA
+            ol
+                a
+                    font-family: $font-family
+                    font-weight: 500
+                    font-size: 20px
+                    line-height: 1.4
+                    letter-spacing: -0.03em
+                    color: $black !important
+                    opacity: .7
+                    &:hover
+                        opacity: 1
         &_wrapper
             z-index: 10
             width: calc( 100% + 6px )
@@ -460,6 +483,8 @@ textarea.input
                 padding: 20px 20px 20px 30px
         &_list
             position: relative
+            display: flex
+            flex-direction: column
             ul
                 margin: 40px 0 0
                 display: grid
@@ -1769,11 +1794,23 @@ textarea.input
             line-height: 1.4
             letter-spacing: -0.03em
             color: $white
+            margin: 0 0 20px
+            a
+                font-family: $font-family
+                font-weight: 700
+                font-size: 20px
+                line-height: 1.4
+                letter-spacing: -0.03em
+                color: $white
+                opacity: 1
+                &:hover
+                    color: $purple
         ul
-            margin: 20px 0 0
             display: grid
             grid-template-columns: 100%
             gap: 10px
+            &+p
+                margin-top: 30px
         a
             opacity: .7
             font-family: $font-family
@@ -1786,7 +1823,7 @@ textarea.input
             &:hover
                 opacity: 1
     &__info
-        margin: 130px 0 0
+        margin: 90px 0 0
         display: grid
         grid-template-columns: 1fr 1fr
         gap: 40px
@@ -4922,7 +4959,23 @@ textarea.input
                     filter: invert(75%)
 
 .modal-team
-    padding: 100px 40px 40px
+    padding: 100px 0 40px
+    &::-webkit-scrollbar 
+        background: #00000000
+        width: 6px
+        -webkit-appearance: none
+    &::-webkit-scrollbar-track 
+        background: #00000000
+    &::-webkit-scrollbar-thumb 
+        width: 6px
+        background: #9373EA
+        border-radius: 8px 8px 8px 8px
+        box-sizing: border-box
+    .input__file_btn
+        pointer-events: none
+    &.active
+        .input__file_btn
+            pointer-events: all
     &__close
         position: absolute
         top: 20px
@@ -4940,6 +4993,9 @@ textarea.input
         &:hover
             background: $lighter-purple
     &__block
+        margin: 0 auto
+        width: calc(100% - 80px)
+        max-width: 1840px
         padding: 60px 40px
         border-radius: 40px
         position: relative
@@ -4947,7 +5003,6 @@ textarea.input
         display: grid
         grid-template-columns: 1fr 1fr
         gap: 40px
-        width: 100%
         overflow: hidden
         z-index: 1
     h2
@@ -5017,6 +5072,8 @@ textarea.input
 @media ( max-width: 1440px )
     .modal-team
         padding: 100px 40px 40px
+        &__block
+            width: 100%
         &__bg
             width: 767px
             top: 37px
