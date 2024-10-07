@@ -910,4 +910,41 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    let achievItem = document.querySelectorAll('.achiev__item');
+        // achievImg = document.querySelectorAll('.achiev__item img');
+
+    if(achievItem !== null) {
+        if(window.innerWidth > 1200) {
+            achievItem.forEach((item)=>{
+                item.addEventListener('click', ()=>{
+                    if(item.classList.contains('active')) {
+                        item.classList.remove('active')
+                    } else {
+                        for(let i = 0; i < achievItem.length; i++) {
+                            achievItem[i].classList.remove('active')
+                        }
+                        item.classList.add('active')
+                    }
+                })
+                item.addEventListener('mouseout', ()=>{
+                    item.classList.remove('active')
+                })
+            })
+        }
+        else {
+            achievItem.forEach((item)=>{
+                item.addEventListener('click', ()=>{
+                    if(item.classList.contains('active')) {
+                        item.classList.remove('active')
+                    } else {
+                        for(let i = 0; i < achievItem.length; i++) {
+                            achievItem[i].classList.remove('active')
+                        }
+                        item.classList.add('active')
+                    }
+                })
+            })
+        }
+    }
+
 }, false);

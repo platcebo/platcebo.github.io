@@ -278,6 +278,7 @@ textarea.input
     transition: all .3s
     transition-property: transform, opacity
     position: relative
+    z-index: 10
     &.fix
         position: sticky
         top: -100px
@@ -400,6 +401,15 @@ textarea.input
         align-items: start
         height: max-content
         min-height: 100%
+        &_overflow
+            position: fixed
+            top: 0
+            left: 0
+            width: 100%
+            height: 100vh
+            background: #1b1b1b
+            opacity: .8
+            z-index: 3
         ul.nav__menu_case
             margin: 92px 0 0
             a
@@ -487,7 +497,7 @@ textarea.input
                 margin: 40px 0 0
                 display: grid
                 grid-template-columns: 100%
-                gap: 10px
+                gap: 20px
             a
                 font-weight: 500
                 font-size: 20px
@@ -1548,6 +1558,7 @@ textarea.input
         justify-content: center
         align-items: center
         gap: 20px
+        flex-wrap: wrap
         &_item
             padding: 10px 30px
             font-family: $font-family
@@ -1597,7 +1608,6 @@ textarea.input
             border-radius: 20px
             z-index: 5
             width: 180px
-            height: 220px
             object-fit: cover
         &:last-child
             border-bottom: none
@@ -1608,6 +1618,9 @@ textarea.input
                 opacity: 1
             img
                 opacity: 1
+        &.active
+            img
+                width: 410px
 
 .blog
     padding: 40px 0 0
@@ -2361,6 +2374,7 @@ textarea.input
                 font-size: 24px
             &_list
                 ul
+                    gap: 10px
                     margin: 20px 0 0
             &_block
                 grid-column: 1/3
@@ -2380,6 +2394,7 @@ textarea.input
                     display: none
             ul.nav__menu_case
                 margin: 48px 0 0
+                gap: 20px
                 a
                     font-size: 24px
         &__info
@@ -2602,7 +2617,7 @@ textarea.input
             right: -35%
         &__img
             img
-                height: 379px
+                height: 76vw
         &__block
             padding: 40px
         &__tag
@@ -2672,6 +2687,28 @@ textarea.input
             grid-template-columns: 160px 1fr auto
             img
                 display: none
+            &.active
+                position: fixed
+                top: 0
+                left: 0
+                width: 100vw
+                height: 100vh
+                background: rgba(27, 27, 27, 0.8)
+                display: flex
+                justify-content: center
+                align-items: center
+                z-index: 150
+                p
+                    display: none
+                img
+                    width: calc( 100% - 40px )
+                    height: calc( 100vh - 120px )
+                    object-fit: contain
+                    display: block
+                    opacity: 1
+                    margin: auto
+                    position: relative
+                    inset: 0
     .blog
         padding: 20px 0 0
         &__block
@@ -3090,9 +3127,6 @@ textarea.input
             &_scroll
                 p
                     font-size: 14px
-        &__img
-            img
-                height: 263px
         h2
             margin: 10px 0 0
             max-width: 180px
@@ -5426,6 +5460,14 @@ textarea.input
             bottom: auto
             top: -248px
             right: -261px
+
+@media ( max-width: 750px )
+    .modal-team,
+    .modal-ref
+        &::-webkit-scrollbar 
+            width: 0
+        &::-webkit-scrollbar-thumb 
+            width: 0px
 
 @media ( max-width: 600px )
     .modal-team
