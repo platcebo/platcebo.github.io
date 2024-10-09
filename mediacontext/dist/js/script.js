@@ -429,6 +429,37 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    let formAll = document.querySelectorAll('form'),
+        modalAll = document.querySelectorAll('.modal'),
+        modalThanks = document.querySelector('.modal-thanks'),
+        modalThanksClose = document.querySelector('.modal-thanks__close'),
+        modalThanksOverflow = document.querySelector('.modal-thanks__overflow'),
+        modalThanksBtn = document.querySelector('.modal-thanks .btn__blc');
+
+    if(modalThanks !== null) {
+        formAll.forEach((item)=>{
+            item.addEventListener('submit',()=>{
+                modalAll.forEach(item =>{item.classList.remove('active')});
+                modalThanks.classList.add('active');
+                nav.classList.remove('active');
+                navBurger.classList.remove('active');
+                document.body.classList.add('fix')
+            })
+        })
+        modalThanksClose.addEventListener('click',()=>{
+            modalThanks.classList.remove('active');
+            document.body.classList.remove('fix')
+        })
+        modalThanksOverflow.addEventListener('click',()=>{
+            modalThanks.classList.remove('active');
+            document.body.classList.remove('fix')
+        })
+        modalThanksBtn.addEventListener('click',()=>{
+            modalThanks.classList.remove('active');
+            document.body.classList.remove('fix')
+        })
+    }
+
     let menuLink = document.querySelectorAll('.menu__link'),
         menuCall = document.querySelectorAll('.menu__call'),
         menu = document.querySelectorAll('.menu__call ul');

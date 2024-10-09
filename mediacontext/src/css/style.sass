@@ -3485,6 +3485,14 @@ textarea.input
             max-width: 630px
         h3
             font-size: 54px
+        &__close
+            top: 10px
+            right: 10px
+            width: 50px
+            height: 50px
+            svg
+                width: 24px
+                height: 24px
             
 @media ( max-width: 600px )
     .input
@@ -5582,3 +5590,48 @@ textarea.input
         &__row
             grid-template-columns: 100%
             gap: 10px
+
+.modal-thanks
+    .modal
+        &__container
+            max-width: 534px
+            padding: 60px 40px 40px
+    &__text
+        font-family: $font-family
+        font-weight: 600
+        font-size: 36px
+        line-height: 1
+        letter-spacing: -0.03em
+        text-align: center
+        color: $black
+        margin: 12px 0 0
+
+@media ( max-width: 1440px )
+    .modal-thanks
+        &__text
+            font-size: 28px
+            letter-spacing: -0.06em
+        .modal
+            &__container
+                max-width: 414px
+
+@media ( max-width: 768px )
+    .modal-thanks
+        &__text
+            font-size: 24px
+        .modal
+            &__container
+                max-width: 366px
+
+@media ( max-width: 600px )
+    .modal-thanks
+        .modal
+            &__container
+                padding: 40px 20px 40px
+                max-width: 320px
+        h3
+            font-size: 34px
+        &__text
+            font-size: 18px
+        .btn__blc
+            margin: 30px 0 0
