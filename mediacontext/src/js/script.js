@@ -379,7 +379,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
-    let modalTeamCall = document.querySelectorAll('.modal-team__btn'),
+    let modalTeamCall = document.querySelectorAll('a.modal-team__btn'),
         modalTeam = document.querySelector('.modal-team'),
         modalTeamClose = document.querySelector('.modal-team__close'),
         modalTeamOverflow = document.querySelector('.modal-team__overflow');
@@ -431,7 +431,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let menuLink = document.querySelectorAll('.menu__link'),
         menuCall = document.querySelectorAll('.menu__call'),
-        menu = document.querySelectorAll('.menu');
+        menu = document.querySelectorAll('.menu__call ul');
 
     if(menu !== null) {
         menuCall.forEach((item, i)=>{
@@ -946,5 +946,18 @@ document.addEventListener('DOMContentLoaded', function() {
             })
         }
     }
+
+    const smoothLinks = document.querySelectorAll('a[href^="#"]');
+    for (let smoothLink of smoothLinks) {
+        smoothLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            const id = smoothLink.getAttribute('href');
+
+            document.querySelector(id).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    };
 
 }, false);
