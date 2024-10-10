@@ -5611,9 +5611,6 @@ textarea.input
         &__text
             font-size: 28px
             letter-spacing: -0.06em
-        .modal
-            &__container
-                max-width: 414px
 
 @media ( max-width: 768px )
     .modal-thanks
@@ -5621,13 +5618,17 @@ textarea.input
             font-size: 24px
         .modal
             &__container
-                max-width: 366px
+                max-width: 470px
 
 @media ( max-width: 600px )
     .modal-thanks
         .modal
+            &__close
+                top: 10px
+                right: 10px
             &__container
-                padding: 40px 20px 40px
+                border-radius: 30px
+                padding: 40px 20px
                 max-width: 320px
         h3
             font-size: 34px
