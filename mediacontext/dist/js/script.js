@@ -110,10 +110,12 @@ document.addEventListener('DOMContentLoaded', function() {
         headerVideoWrapper = document.querySelector('.header__video_wrapper'),
         headerVideoMob = document.querySelector('.header__mob');
 
-    if(headerVideo !== null) {
+    if(headerVideoWrapper !== null) {
         function videoPlay() {
             headerVideoWrapper.classList.add('active')
-            headerVideo.play()
+            if(headerVideo !== null) {
+                headerVideo.play()
+            }
         }
         function videostop() {
             headerVideoWrapper.style.cssText = `
@@ -132,18 +134,24 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         headerVideoClose.addEventListener('click', ()=>{
             headerVideoWrapper.classList.remove('active')
-            headerVideo.pause()
+            if(headerVideo !== null) {
+                headerVideo.pause()
+            }
             setTimeout(videostop, 300)
         })
         window.addEventListener('scroll', ()=>{
             headerVideoWrapper.classList.remove('active')
-            headerVideo.pause()
+            if(headerVideo !== null) {
+                headerVideo.pause()
+            }
             setTimeout(videostop, 300)
         })
 
         headerVideoMob.addEventListener('click',()=>{
             headerVideoWrapper.classList.add('active')
-            headerVideo.play()
+            if(headerVideo !== null) {
+                headerVideo.play()
+            }
         })
     }
 
@@ -429,37 +437,6 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
-    let formAll = document.querySelectorAll('form'),
-        modalAll = document.querySelectorAll('.modal'),
-        modalThanks = document.querySelector('.modal-thanks'),
-        modalThanksClose = document.querySelector('.modal-thanks__close'),
-        modalThanksOverflow = document.querySelector('.modal-thanks__overflow'),
-        modalThanksBtn = document.querySelector('.modal-thanks .btn__blc');
-
-    if(modalThanks !== null) {
-        formAll.forEach((item)=>{
-            item.addEventListener('submit',()=>{
-                modalAll.forEach(item =>{item.classList.remove('active')});
-                modalThanks.classList.add('active');
-                nav.classList.remove('active');
-                navBurger.classList.remove('active');
-                document.body.classList.add('fix')
-            })
-        })
-        modalThanksClose.addEventListener('click',()=>{
-            modalThanks.classList.remove('active');
-            document.body.classList.remove('fix')
-        })
-        modalThanksOverflow.addEventListener('click',()=>{
-            modalThanks.classList.remove('active');
-            document.body.classList.remove('fix')
-        })
-        modalThanksBtn.addEventListener('click',()=>{
-            modalThanks.classList.remove('active');
-            document.body.classList.remove('fix')
-        })
-    }
-
     let menuLink = document.querySelectorAll('.menu__link'),
         menuCall = document.querySelectorAll('.menu__call'),
         menu = document.querySelectorAll('.menu__call ul');
@@ -513,6 +490,21 @@ document.addEventListener('DOMContentLoaded', function() {
     async function formPrevSend(event) {
         event.preventDefault()
         let error = formVal(formPrev);
+
+        // let formData = new FormData(formPrev)
+        // if(error == 0) {
+        //     let response = await fetch('phpmailer.php', {
+        //         method: 'POST',
+        //         body: formData
+        //     });
+        //     if(response.ok) {
+        //         let result = await response.json();
+        //         alert(result.message);
+        //         formPrev.reset();
+        //     } else {
+        //         alert('error')
+        //     }
+        // }
     }
 
     function formVal(form) {
@@ -718,6 +710,136 @@ document.addEventListener('DOMContentLoaded', function() {
         return !/^\w+([\.-]?\w+)*@\w+([\--]?\w+)*(\.\w{2,8})+$/.test(Modalinput.value);
     }
 
+    // форма партнерки
+
+    let formRef = document.querySelector('.modal-ref .modal-team__form');
+
+    if(formRef !== null) {
+        formRef.addEventListener('submit', formRefSend);
+    }
+
+    async function formRefSend(event) {
+        event.preventDefault()
+        let error = formRefVal(formRef);
+    }
+
+    function formRefVal(form) {
+        let error = 0,
+            formRefReq = document.querySelectorAll('.modal-ref .modal-team__form ._req');
+
+        for (let index = 0; index < formRefReq.length; index++) {
+            const Modalinput = formRefReq[index];
+            formRefRemError(Modalinput);
+
+            if(Modalinput.classList.contains('_email')) {
+                if (Modalinput.value === '') {
+                    formRefAddError(Modalinput);
+                    error++;
+                } else if(formRefEmail(Modalinput)) {
+                    formRefAddError(Modalinput);
+                    error++;
+                }
+            } else if(Modalinput.classList.contains('_phone')) {
+                if (Modalinput.value === '') {
+                    formRefAddError(Modalinput);
+                    error++;
+                } else if(Modalinput.value.length !== 18 ) {
+                    formRefAddError(Modalinput);
+                    error++;
+                }
+            } else if(Modalinput.getAttribute('type') === 'checkbox' && Modalinput.checked === false) {
+                formRefAddError(Modalinput);
+                error++;
+            } else if (Modalinput.value === '') {
+                formRefAddError(Modalinput);
+                error++;
+            }
+        }
+
+        return error
+    }
+
+    function formRefAddError(Modalinput){
+        Modalinput.classList.add('error')
+        Modalinput.parentElement.classList.add('error')
+    }
+    function formRefAddErrorEmail(Modalinput) {
+        Modalinput.classList.add('error')
+        Modalinput.parentElement.classList.add('error__email')
+    }
+    function formRefRemError(Modalinput){
+        Modalinput.classList.remove('error')
+        Modalinput.parentElement.classList.remove('error__email')
+    }
+    function formRefEmail(Modalinput) {
+        return !/^\w+([\.-]?\w+)*@\w+([\--]?\w+)*(\.\w{2,8})+$/.test(Modalinput.value);
+    }
+
+    // форма команды
+
+    let formTeam = document.querySelector('.modal-team .modal-team__form');
+
+    if(formTeam !== null) {
+        formTeam.addEventListener('submit', formTeamSend);
+    }
+
+    async function formTeamSend(event) {
+        event.preventDefault()
+        let error = formTeamVal(formTeam);
+    }
+
+    function formTeamVal(form) {
+        let error = 0,
+            formTeamReq = document.querySelectorAll('.modal-team .modal-team__form ._req');
+
+        for (let index = 0; index < formTeamReq.length; index++) {
+            const Modalinput = formTeamReq[index];
+            formTeamRemError(Modalinput);
+
+            if(Modalinput.classList.contains('_email')) {
+                if (Modalinput.value === '') {
+                    formTeamAddError(Modalinput);
+                    error++;
+                } else if(formTeamEmail(Modalinput)) {
+                    formTeamAddErrorEmail(Modalinput);
+                    error++;
+                }
+            } else if(Modalinput.classList.contains('_phone')) {
+                if (Modalinput.value === '') {
+                    formTeamAddError(Modalinput);
+                    error++;
+                } else if(Modalinput.value.length !== 18 ) {
+                    formTeamAddErrorEmail(Modalinput);
+                    error++;
+                }
+            } else if(Modalinput.getAttribute('type') === 'checkbox' && Modalinput.checked === false) {
+                formTeamAddError(Modalinput);
+                error++;
+            } else if (Modalinput.value === '') {
+                formTeamAddError(Modalinput);
+                error++;
+            }
+        }
+
+        return error
+    }
+
+    function formTeamAddError(Modalinput){
+        Modalinput.classList.add('error')
+        Modalinput.parentElement.classList.add('error')
+    }
+    function formTeamAddErrorEmail(Modalinput) {
+        Modalinput.classList.add('error')
+        Modalinput.parentElement.classList.add('error__email')
+    }
+    function formTeamRemError(Modalinput){
+        Modalinput.classList.remove('error')
+        Modalinput.parentElement.classList.remove('error__email')
+    }
+    function formTeamEmail(Modalinput) {
+        return !/^\w+([\.-]?\w+)*@\w+([\--]?\w+)*(\.\w{2,8})+$/.test(Modalinput.value);
+    }
+
     function onEntry(entry) {
         entry.forEach(change => {
             if (change.isIntersecting) {
@@ -906,7 +1028,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     let faqFix = document.querySelector('.faq__fix'),
-        faqWrapper = document.querySelector('.faq__title')
+        faqWrapper = document.querySelector('.faq__title'),
         faqTop = document.querySelector('.faq__wrapper'),
         faqBottom = document.querySelector('.faq');
 
@@ -990,5 +1112,36 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     };
+
+    // let formAll = document.querySelectorAll('form'),
+    //     modalAll = document.querySelectorAll('.modal'),
+    //     modalThanks = document.querySelector('.modal-thanks'),
+    //     modalThanksClose = document.querySelector('.modal-thanks__close'),
+    //     modalThanksOverflow = document.querySelector('.modal-thanks__overflow'),
+    //     modalThanksBtn = document.querySelector('.modal-thanks .btn__blc');
+
+    // if(modalThanks !== null) {
+    //     formAll.forEach((item)=>{
+    //         item.addEventListener('submit',()=>{
+    //             modalAll.forEach(item =>{item.classList.remove('active')});
+    //             modalThanks.classList.add('active');
+    //             nav.classList.remove('active');
+    //             navBurger.classList.remove('active');
+    //             document.body.classList.add('fix')
+    //         })
+    //     })
+    //     modalThanksClose.addEventListener('click',()=>{
+    //         modalThanks.classList.remove('active');
+    //         document.body.classList.remove('fix')
+    //     })
+    //     modalThanksOverflow.addEventListener('click',()=>{
+    //         modalThanks.classList.remove('active');
+    //         document.body.classList.remove('fix')
+    //     })
+    //     modalThanksBtn.addEventListener('click',()=>{
+    //         modalThanks.classList.remove('active');
+    //         document.body.classList.remove('fix')
+    //     })
+    // }
 
 }, false);
