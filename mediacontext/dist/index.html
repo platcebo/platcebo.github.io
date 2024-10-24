@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
+    <meta name="robots" content="noindex, nofollow">
     <title>mediacontext</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +22,7 @@
         <div class="container">
             <div class="nav__row">
                 <div class="nav__logo">
-                    <a href="#">
+                    <a href="/">
                         <img src="img/logo.svg" alt="">
                     </a>
                 </div>
@@ -130,8 +131,8 @@
                     <h1 class="element-animation">Агентство <span>бесшовного</span> маркетинга</h1>
                     <p class="header__text">Приводим клиентов через performance, бренд-маркетинг, SEO-продвижение и комплексный подход</p>
                 </div>
-                <div class="header__logo parallax__layer" data-speed="0.03">
-                    <img src="img/header_logo.svg" alt="">
+                <div class="header__logo header__logo_video parallax__layer" data-speed="0.03">
+                    <video src="video/header_logo.webm" loop muted autoplay poster="img/header_logo.svg"></video>
                 </div>
                 <div class="header__video">
                     <div class="header__video_look">
@@ -812,9 +813,10 @@
                             <p class="blog__wrapper_text">Рассказываем о самых распространенных ошибках начинающих SEO-специалистов. Проверьте себя!</p>    
                         </div>
                     </a>
-                    <a target="_blank" href="https://mediacontext.pro/blog" class="blog__link">
+                    <a target="_blank" href="https://mediacontext.pro/blog" class="blog__link blog__link_video">
                         <p>Больше статей <br> в блоге</p>
                         <span><img src="img/arrow_wht.svg" alt=""></span>
+                        <video src="video/blog_link.webm" loop muted autoplay poster="img/blog_link.png"></video>
                     </a>
                 </div>
                 <div class="blog__row">
@@ -846,6 +848,7 @@
             <div class="form__block">
                 <h2>Оставьте заявку, <br> чтобы обсудить проект</h2>
                 <form action="#" class="form__wrapper">
+                    <input type="hidden" name="formId" value="obsujdenie">
                     <div class="form__input">
                         <div class="input__wrapper">
                             <input type="text" class="input _req" name="name" placeholder="Ваше имя*">
@@ -886,7 +889,7 @@
                             <span>отправить</span>
                             <i><img src="img/arrow_wht.svg" alt=""></i>
                         </button>
-                        <p>Нажимая кнопку «Отправить», вы соглашаетесь с <a target="_blank" href="https://mediacontext.pro/politika_obrabotki_pnd">политикой обработки персональных данных</a></p>
+                        <p>Нажимая кнопку «Отправить», вы соглашаетесь с <a target="_blank" href="https://media-context.ru/policy.html">политикой обработки персональных данных</a></p>
                     </div>
                 </form>
             </div>
@@ -980,21 +983,21 @@
                             <img src="img/logo_footer.svg" alt="">
                             <p>© 2019–2024 Медиаконтекст <br>ИНН 781713009343 <br>ОГРНИП 319784700168929</p>
                             <div class="footer__media_link">
-                                <a href="#">
+                                <a rel="nofollow" target="_blank" href="https://workspace.ru/contractors/mediacontext/">
                                     <img src="img/footer_media_1.svg" alt="">
                                 </a>
-                                <a href="#">
+                                <a rel="nofollow" target="_blank" href="https://cmsmagazine.ru/agencies/ims-com/">
                                     <img src="img/footer_media_2.png" alt="">
                                 </a>
-                                <a href="#">
+                                <a rel="nofollow" target="_blank" href="https://arda.digital/participants/">
                                     <img src="img/footer_media_3.svg" alt="">
                                 </a>
                                 <iframe src="https://yandex.ru/sprav/widget/rating-badge/95075147761?type=rating" height="50" frameborder="0"></iframe>
                             </div>
                         </div>
                         <div class="footer__politic">
-                            <a target="_blank" href="https://mediacontext.pro/politika_obrabotki_pnd">Политика обработки персональных данных</a>
-                            <a target="_blank" href=https://mediacontext.pro/oferta">Публичная оферта</a>
+                            <a target="_blank" href="policy.html">Политика обработки персональных данных</a>
+                            <a target="_blank" href="oferta.html">Публичная оферта</a>
                         </div>
                     </div>
                 </div>
@@ -1010,7 +1013,8 @@
 
     <div class="modal modal-form">
         <div class="modal__overflow modal-form__overflow"></div>
-        <form action="" class="modal__container">
+        <form action="#" class="modal__container">
+            <input type="hidden" name="formId" value="modal_1">
             <div class="modal__close modal-form__close">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 6L6 18" stroke="#BFBFC1" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1020,16 +1024,16 @@
             <h3><span>Заполните</span> форму, чтобы обсудить проект</h3>
             <div class="modal__wrapper">
                 <div class="input__wrapper">
-                    <input type="text" placeholder="Ваше имя*" class="input _req">
+                    <input type="text" name="name" placeholder="Ваше имя*" class="input _req">
                     <p>Заполните поле</p>
                 </div>
                 <div class="input__wrapper">
-                    <input type="text" placeholder="Телефон*" data-phone-pattern class="input _phone _req">
+                    <input type="text" name="tel" placeholder="Телефон*" data-phone-pattern class="input _phone _req">
                     <p>Заполните поле</p>
                     <p class="text__email">Некорректный номер</p>
                 </div>
                 <div class="input__wrapper">
-                    <input type="text" placeholder="E-mail" class="input _email">
+                    <input type="text" name="email" placeholder="E-mail" class="input _email">
                     <p>Заполните поле</p>
                     <p class="text__email">Некорректный email</p>
                 </div>
@@ -1038,12 +1042,13 @@
                 <span>Отправить заявку</span>
                 <i><img src="img/arrow_wht.svg" alt=""></i>
             </button>
-            <p class="modal__text">Нажимая кнопку «Отправить», вы соглашаетесь с <a target="_blank" href="https://mediacontext.pro/politika_obrabotki_pnd">политикой обработки персональных данных</a></p>
+            <p class="modal__text">Нажимая кнопку «Отправить», вы соглашаетесь с <a target="_blank" href="https://media-context.ru/policy.html">политикой обработки персональных данных</a></p>
         </form>
     </div>
     <div class="modal modal-mail">
         <div class="modal__overflow modal-mail__overflow"></div>
-        <form action="" class="modal__container">
+        <form action="#" class="modal__container">
+            <input type="hidden" name="formId" value="modal_2">
             <div class="modal__close modal-mail__close">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 6L6 18" stroke="#BFBFC1" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1053,11 +1058,11 @@
             <h3><span>Подписаться</span> <br> на рассылку</h3>
             <div class="modal__wrapper">
                 <div class="input__wrapper">
-                    <input type="text" placeholder="Ваше имя*" class="input _req">
+                    <input type="text" name="name" placeholder="Ваше имя*" class="input _req">
                     <p>Заполните поле</p>
                 </div>
                 <div class="input__wrapper">
-                    <input type="text" placeholder="E-mail*" class="input _req _email">
+                    <input type="text" name="email" placeholder="E-mail*" class="input _req _email">
                     <p>Заполните поле</p>
                     <p class="text__email">Некорректный email</p>
                 </div>
@@ -1066,7 +1071,7 @@
                 <span>Отправить заявку</span>
                 <i><img src="img/arrow_wht.svg" alt=""></i>
             </button>
-            <p class="modal__text">Нажимая кнопку «Отправить», вы соглашаетесь с <a target="_blank" href="https://mediacontext.pro/politika_obrabotki_pnd">политикой обработки персональных данных</a></p>
+            <p class="modal__text">Нажимая кнопку «Отправить», вы соглашаетесь с <a target="_blank" href="https://media-context.ru/policy.html">политикой обработки персональных данных</a></p>
         </form>
     </div>
 
@@ -1098,7 +1103,8 @@
         <div class="modal-team__block">
             <img src="img/modal_team.png" alt="" class="modal-team__bg">
             <h2>Присоединяйся к нашей команде, отправь своё резюме</h2>
-            <form class="modal-team__form">
+            <form action="#" class="modal-team__form">
+                <input type="hidden" name="formId" value="modal_team">
                 <div class="modal-team__row">
                     <div class="input__wrapper">
                         <input name="name" type="text" placeholder="Ваше имя*" class="input _req">
@@ -1111,7 +1117,7 @@
                 </div>
                 <div class="modal-team__row">
                     <div class="input__wrapper">
-                        <input name="phone" type="text" placeholder="Ваш телефон*" data-phone-pattern class="input _phone _req">
+                        <input name="tel" type="text" placeholder="Ваш телефон*" data-phone-pattern class="input _phone _req">
                         <p>Заполните поле</p>
                     </div>
                     <div class="input__wrapper">
@@ -1138,7 +1144,7 @@
                         <span>отправить</span>
                         <i><img src="img/arrow_wht.svg" alt=""></i>
                     </button>
-                    <p>Нажимая кнопку «Отправить», вы соглашаетесь с <a target="_blank" href="https://mediacontext.pro/politika_obrabotki_pnd">политикой обработки персональных данных</a></p>
+                    <p>Нажимая кнопку «Отправить», вы соглашаетесь с <a target="_blank" href="https://media-context.ru/policy.html">политикой обработки персональных данных</a></p>
                 </div>
             </form>
         </div>
@@ -1151,33 +1157,34 @@
         <div class="modal-team__block modal-ref__block">
             <img src="img/modal_ref.png" alt="" class="modal-ref__bg">
             <h2>Присоединяйся к партнёрской программе </h2>
-            <form class="modal-team__form">
+            <form action="#" class="modal-team__form">
+                <input type="hidden" name="formId" value="modal_partner">
                 <div class="modal-team__row">
                     <div class="input__wrapper">
-                        <input type="text" placeholder="Ваше имя*" class="input _req">
+                        <input type="text" name="name" placeholder="Ваше имя*" class="input _req">
                         <p>Заполните поле</p>
                     </div>
                     <div class="input__wrapper">
-                        <input type="text" placeholder="Ваш телефон*" data-phone-pattern class="input _phone _req">
+                        <input type="text" name="tel" placeholder="Ваш телефон*" data-phone-pattern class="input _phone _req">
                         <p>Заполните поле</p>
                     </div>
                 </div>
                 <div class="modal-team__row">
                     <div class="input__wrapper">
-                        <input type="text" placeholder="Ваш email*" class="input _req">
+                        <input type="text" name="email" placeholder="Ваш email*" class="input _req">
                         <p>Заполните поле</p>
                     </div>
                     <div class="input__wrapper">
-                        <input type="text" placeholder="Сайт*" class="input _req">
+                        <input type="text" name="site" placeholder="Сайт*" class="input _req">
                         <p>Заполните поле</p>
                     </div>
                 </div>
                 <div class="input__wrapper">
-                    <input type="text" placeholder="ИНН*" class="input _req">
+                    <input type="text" name="inn" placeholder="ИНН*" class="input _req">
                     <p>Заполните поле</p>
                 </div>
                 <div class="input__wrapper">
-                    <textarea class="input" name="" id="" placeholder="Сообщение"></textarea>
+                    <textarea class="input" name="textarea" id="" placeholder="Сообщение"></textarea>
                 </div>
                 <div>
                     <div class="input__file_wrapper">
@@ -1194,7 +1201,7 @@
                         <span>отправить</span>
                         <i><img src="img/arrow_wht.svg" alt=""></i>
                     </button>
-                    <p>Нажимая кнопку «Отправить», вы соглашаетесь с <a target="_blank" href="https://mediacontext.pro/politika_obrabotki_pnd">политикой обработки персональных данных</a></p>
+                    <p>Нажимая кнопку «Отправить», вы соглашаетесь с <a target="_blank" href="https://media-context.ru/policy.html">политикой обработки персональных данных</a></p>
                 </div>
             </form>
         </div>
