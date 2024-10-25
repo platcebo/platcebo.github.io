@@ -59,6 +59,9 @@ if(window.innerWidth < 701) {
         pagination: {
             el: ".article-more__pag",
         },
+        autoplay: {
+            delay: 5000,
+        },  
     }); 
 }
 
