@@ -5571,50 +5571,54 @@ section
 
 @media ( max-width: 1600px )
     .article-list
+        padding: 24px 0 100px
+        .breadcrumbs
+            margin: 0 0 32px
         h1
             font-size: 64px
         &__item
             img
-                height: 300px
+                height: 250px
         &__info
             padding: 24px
         &__name
-            font-size: 24px
+            font-size: 20px
 
 @media ( max-width: 1300px )
     .article-list
+        padding: 24px 0 96px
         h1
             font-size: 58px
         &__wrapper
             grid-template-columns: 1fr 1fr
+            margin: 24px 0 0
+            gap: 24px
+
+@media ( max-width: 900px )
+    .article-list
+        .btn__wht
+            width: 100%
+            max-width: 100%
 
 @media ( max-width: 700px )
     .article-list
-        padding: 24px 0 96px
+        padding: 16px 0 64px
         h1
             font-size: 26px
         &__wrapper
             grid-template-columns: 100%
             gap: 24px
-        &__name
-            font-size: 18px
-        &__item
-            img
-                height: 250px
-        .btn__wht
-            max-width: 100%
 
 .article
-    padding: 24px 0 120px
+    padding: 24px 0 0
     &__date
         margin: 12px 0 0
         font: 400 14px / 1.35 $font-family
         color: $gray
     &__wrapper
         display: grid
-        grid-template-columns: 1fr 1fr
-        gap: 48px
-        row-gap: 32px
+        grid-template-columns: 100%
+        gap: 32px
         align-items: start
         margin: 32px 0 0
         img
@@ -5622,10 +5626,20 @@ section
             width: 100%
             object-fit: cover
     &__full
-        grid-column: 1/3
+        width: 100%
+    &__block
+        display: grid
+        grid-template-columns: 1fr 1fr
+        align-items: start
+        gap: 24px
+        grid-template-rows: auto 1fr
+        img
+            grid-column: 2/3
+            grid-row: 1/3
     &__text
         display: grid
         grid-template-columns: 100%
+        grid-template-rows: auto
         gap: 24px
         font: 400 20px / 1.35 $font-family
         color: $gray
@@ -5633,35 +5647,88 @@ section
         font: 500 42px / 1.1 $font-family
         color: $dark-gray
     &-more
-        padding: 0 0 120px
+        padding: 120px 0
+        &__slider
+            margin: 24px 0 0
+        .swiper-wrapper
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr 1fr
+            gap: 24px
+        &__pag
+            display: none
 
 @media ( max-width: 1600px )
     .article
+        h1
+            span
+                display: block
         &__wrapper
             img
-                height: 400px
+                height: 650px
         &__bold
-            font-size: 24px
+            font-size: 36px
+        &__block
+            img
+                height: 100%
+                object-fit: cover
+        &-more
+            padding: 100px 0
 
 @media ( max-width: 1300px )
     .article
         &__wrapper
             grid-template-columns: 100%
             gap: 24px
-        &__full
-            grid-column: auto
-        &__text
-            order: 2
+            margin: 24px 0 0
+            img
+                height: 450px
+        &__block
+            grid-template-columns: 100%
+            img
+                grid-column: auto
+                grid-row: auto
+        &-more
+            padding: 96px 0
 
 @media ( max-width: 700px )
     .article
-        padding: 24px 0 96px
+        padding: 16px 0 0
         &__text
             font-size: 16px
         &__wrapper
             img
-                height: 200px
+                height: 250px
         &__bold
-            font-size: 20px
+            font-size: 22px
         &-more
-            padding: 0 0 100px
+            padding: 64px 0
+            .swiper
+                &-wrapper
+                    display: flex
+                    gap: 0
+            &__pag
+                display: flex
+                justify-content: center
+                align-items: center
+                gap: 8px
+                position: relative
+                inset: auto !important
+                margin: 24px 0 0
+                transform: none !important
+                width: 100% !important
+                max-width: 100%
+                span
+                    left: auto !important
+                    display: block
+                    background: transparent
+                    margin: 0 !important
+                    width: 8px
+                    height: 8px
+                    border-radius: 100%
+                    border: 1px solid $stroke
+                    transition: all .3s !important
+                    transform: none !important
+                    opacity: 1 !important
+                    &.swiper-pagination-bullet-active
+                        background: $coral
+                        border-color: $coral

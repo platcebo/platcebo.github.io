@@ -52,6 +52,16 @@ var swiperCart = new Swiper(".header-cart__slider", {
     },
 }); 
 
+if(window.innerWidth < 701) {
+    var swiperArticle = new Swiper(".article-more__slider", {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        pagination: {
+            el: ".article-more__pag",
+        },
+    }); 
+}
+
 let headerCartSlide = document.querySelectorAll('.header-cart__slide'),
     headerCartFunc = document.querySelector('.header-cart__func'),
     headerCartCheck = document.querySelectorAll('.header-cart__info_check'),
