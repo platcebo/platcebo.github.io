@@ -5632,6 +5632,8 @@ section
     &__bold
         font: 500 42px / 1.1 $font-family
         color: $dark-gray
+    &-more
+        padding: 0 0 120px
 
 @media ( max-width: 1600px )
     .article
@@ -5648,6 +5650,8 @@ section
             gap: 24px
         &__full
             grid-column: auto
+        &__text
+            order: 2
 
 @media ( max-width: 700px )
     .article
@@ -5659,3 +5663,5 @@ section
                 height: 200px
         &__bold
             font-size: 20px
+        &-more
+            padding: 0 0 100px
