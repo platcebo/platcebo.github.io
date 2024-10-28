@@ -663,7 +663,7 @@ textarea.input
         z-index: 20
     &__info
         padding: 60px 40px
-        max-width: 55%
+        max-width: 70%
         backdrop-filter: blur(10px)
         background: rgba(255, 255, 255, 0.01)
         position: relative
@@ -737,7 +737,7 @@ textarea.input
                 width: 100%
                 height: 100%
                 object-fit: cover
-                z-index: -1
+                z-index: 1
             &.active
                 top: 0 !important
                 left: 0 !important
@@ -767,6 +767,7 @@ textarea.input
             justify-content: center
             cursor: pointer
             transition: all .3s
+            z-index: 1
             img
                 width: 21px
             &:hover
@@ -4410,7 +4411,7 @@ textarea.input
         color: $black
     &__price
         display: flex
-        justify-content: space-between
+        justify-content: flex-start
         align-items: center
         p
             font-family: $font-family
@@ -4421,6 +4422,13 @@ textarea.input
             color: $black
         .btn__blc
             padding: 20px 20px 20px 30px
+        a
+            display: block
+            font: 700 16px / 1.25 $font-family
+            text-transform: uppercase
+            color: $black
+            margin: 0 30px 0 auto
+            text-decoration: underline
     &__bg
         position: absolute
         width: 1744px
@@ -4920,6 +4928,17 @@ textarea.input
                 font-size: 45px
         &__date
             font-size: 16px
+        &__price
+            p
+                font: 600 28px / 1 $font-family
+            a
+                font: 700 14px / 1.25 $font-family
+                margin: 0 20px 0 auto
+            .btn__blc
+                gap: 0
+                padding: 10px 10px 10px 20px
+        &__item
+            min-height: 340px
 
 
 @media ( max-width: 1320px )
@@ -5186,15 +5205,16 @@ textarea.input
         &__price
             display: grid
             grid-template-columns: 100%
-            gap: 20px
+            gap: 0
             margin: 30px 0 0
             p
                 font-size: 26px
+            a
+                font-size: 12px
+                margin: 30px 0 12px
         &__item
             min-height: auto
             gap: 0
-            .btn__blc
-                gap: 0
         &__bg
             top: -230px
             right: -400px
@@ -5669,11 +5689,27 @@ textarea.input
         color: $black
         margin: 12px 0 0
 
+.modal-set
+    &__subtitle
+        max-width: 445px
+        margin: 20px auto 0
+        font: 500 20px / 1.4 $font-family
+        letter-spacing: -0.03em
+        text-align: center
+        color: $black
+        opacity: 0.7
+        a
+            color: $purple
+
 @media ( max-width: 1440px )
     .modal-thanks
         &__text
             font-size: 28px
             letter-spacing: -0.06em
+    .modal-set
+        &__subtitle
+            font-size: 16px
+            max-width: 350px
 
 @media ( max-width: 768px )
     .modal-thanks
@@ -5702,3 +5738,6 @@ textarea.input
             font-size: 18px
         .btn__blc
             margin: 30px 0 0
+    .modal-set
+        &__subtitle
+            font-size: 14px

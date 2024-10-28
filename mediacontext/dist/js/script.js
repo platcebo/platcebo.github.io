@@ -437,6 +437,31 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    let modalSetCall = document.querySelectorAll('.modal-set__btn'),
+        modalSet = document.querySelector('.modal-set'),
+        modalSetClose = document.querySelector('.modal-set__close'),
+        modalSetOverflow = document.querySelector('.modal-set__overflow');
+
+    if(modalSet !== null) {
+        modalSetCall.forEach((item)=>{
+            item.addEventListener('click', (e)=>{
+                e.preventDefault()
+                modalSet.classList.add('active');
+                nav.classList.remove('active');
+                navBurger.classList.remove('active');
+                document.body.classList.add('fix')
+            })
+        })
+        modalSetClose.addEventListener('click', ()=>{
+            modalSet.classList.remove('active');
+            document.body.classList.remove('fix')
+        })
+        modalSetOverflow.addEventListener('click', ()=>{
+            modalSet.classList.remove('active');
+            document.body.classList.remove('fix')
+        })
+    }
+
     let menuLink = document.querySelectorAll('.menu__link'),
         menuCall = document.querySelectorAll('.menu__call'),
         menu = document.querySelectorAll('.menu__call ul');
