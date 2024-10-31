@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atlas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/itc-custom-select.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="nav__row">
+                <a href="#" class="nav__logo">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <div class="nav__place modal-place__btn">
+                    <p class="">Ташкент</p>
+                    <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                </div>
+                <div class="nav__lang">
+                    <img src="img/globe.svg" alt="" class="svg">
+                    <p class="">РУ</p>
+                    <ul>
+                        <li><a href="#">English 🇬🇧</a></li>
+                        <li><a href="#" class="active">Русский 🇷🇺</a></li>
+                        <li><a href="#">O'zbek 🇺🇿</a></li>
+                    </ul>
+                    <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                </div>
+                <button class="btn__blue">Разместить объявление</button>
+                <a href="#" class="nav__fav">
+                    <img src="img/heart.svg" alt="" class="svg">
+                </a>
+                <a href="#" class="nav__enter">Войти</a>
+                <div class="nav__humburger"><span></span></div>
+            </div>
+            <ul class="nav__list">
+                <li><a href="#" class="active">Купить</a></li>
+                <li><a href="#">Снять</a></li>
+                <li><a href="#">Каталог новостроек</a></li>
+                <li><a href="#">Покупка дома или земли</a></li>
+                <li><a href="#">Помещения для бизнеса</a></li>
+            </ul>
+            <div class="nav__mob">
+                <div class="nav__mob_wrapper">
+                    <a href="#" class="nav__mob_enter">
+                        <img src="img/pers.svg" alt="" class="svg">
+                        <p>Войти</p>
+                    </a>
+                    <ul class="nav__mob_lang">
+                        <li><a href="#" class="active">Русский 🇷🇺</a></li>
+                        <li><a href="#">English 🇬🇧</a></li>
+                        <li><a href="#">O'zbek 🇺🇿</a></li>
+                    </ul>
+                    <ul class="nav__mob_list">
+                        <li><a href="#" class="active">Купить</a></li>
+                        <li><a href="#">Снять</a></li>
+                        <li><a href="#">Каталог новостроек</a></li>
+                        <li><a href="#">Покупка дома или земли</a></li>
+                        <li><a href="#">Помещения для бизнеса</a></li>
+                    </ul>
+                    <button class="btn__blue">Разместить объявление</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="sign-in">
+        <div class="container">
+            <div class="sign-in__container">
+                <div class="sign-in__info">
+                    <a href="#" class="sign-in__item">
+                        <div class="sign-in__row">
+                            <div class="sign-in__logo">
+                                <img src="img/user.svg" alt="" class="svg">
+                            </div>
+                            <p>Личный аккаунт</p>
+                            <div class="sign-in__arrow">
+                                <img src="img/link.svg" alt="" class="svg">
+                            </div>
+                        </div>
+                        <p class="sign-in__text">Профиль риелтора</p>
+                        <img src="img/sign-in_1.svg" alt="" class="sign-in__item_bg">
+                    </a>
+                    <a href="#" class="sign-in__item">
+                        <div class="sign-in__row">
+                            <div class="sign-in__logo">
+                                <img src="img/key.svg" alt="" class="svg">
+                            </div>
+                            <p>Профиль риелтора</p>
+                            <div class="sign-in__arrow">
+                                <img src="img/link.svg" alt="" class="svg">
+                            </div>
+                        </div>
+                        <p class="sign-in__text">Для самозанятых и индивидуально работающих агентов</p>
+                        <img src="img/sign-in_2.svg" alt="" class="sign-in__item_bg">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <img src="img/sign-in_bg.jpg" alt="" class="sign-in__bg">
+    </section>
+    <div class="modal modal-place">
+        <div class="modal__overflow modal-place__overflow"></div>
+        <div class="modal-place__wrapper modal__wrapper">
+            <div class="modal__close modal-place__close">
+                <img src="img/close.svg" class="svg" alt="">
+            </div>
+            <div class="modal__logo">
+                <img src="img/place.svg" alt="" class="svg">
+            </div>
+            <p class="modal-place__name">Выберите регион</p>
+            <div class="modal-place__form">
+                <div class="modal-place__row">
+                    <div class="modal-place__input">
+                        <input type="text" placeholder="Город">
+                        <ul class="modal-place__input_list">
+                            <li>
+                                <a href="#">
+                                    <p>Геленджик</p>
+                                    <p>Краснодарский край</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Геленджик</p>
+                                    <p>Краснодарский край</p>
+                                </a>
+                            </li>   
+                        </ul>
+                        <div class="modal-place__input_clear">
+                            <img src="img/close.svg" alt="" class="svg">
+                        </div>
+                    </div>
+                    <buttom class="btn__blue">Выбрать</buttom>
+                </div>
+                <ul class="modal-place__list">
+                    <li><a href="#">Москва</a></li>
+                    <li><a href="#">Санкт-Петербург</a></li>
+                    <li><a href="#">Нижний Новгород</a></li>
+                    <li><a href="#">Казань</a></li>
+                    <li><a href="#">Москва</a></li>
+                    <li><a href="#">Санкт-Петербург</a></li>
+                    <li><a href="#">Нижний Новгород</a></li>
+                    <li><a href="#">Казань</a></li>
+                    <li><a href="#">Казань</a></li>
+                    <li><a href="#">Казань</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/itc-custom-select.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
