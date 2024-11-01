@@ -2,11 +2,12 @@ $font-family: "Actay", sans-serif
 $second-family: "Actay Wide", sans-serif
 
 body
-    font-size: calc( 100vw / 1280 )
+    font-size: 1px
     background: #000
     color: #fff 
     background: url('../img/header_bg.jpg') center no-repeat 
     background-size: cover
+    min-height: 100vh
 
 .container
     max-width: 1140em
@@ -104,6 +105,18 @@ body
                 position: absolute
                 left: 100%
                 top: -10em
+        &_num
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 51em
+            height: 51em
+            border-radius: 100%
+            border: 1px solid  #fff
+            background: #5e7600
+        span
+            font: 400 25em / 1 $font-family
+            color: #f6ffd2
         img
             width: 100%
         p
@@ -175,6 +188,10 @@ body
                 transform: rotate(75deg)
                 background: url('../img/way_1.svg') center no-repeat    
                 background-size: contain
+
+@media ( max-width: 1280px )
+    body
+        font-size: calc( 100vw / 1280 )
 
 @media ( max-width: 600px )
     body
@@ -322,3 +339,38 @@ body
             p
                 font-size: 14px
                 text-align: center
+        &__arrow
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin: 15px 0 0
+            .swiper
+                &-button
+                    &-next,
+                    &-prev
+                        width: auto
+                        height: auto
+                        position: relative
+                        display: grid
+                        grid-template-columns: 1fr 24px
+                        gap: 5px
+                        align-items: center
+                        margin: 0
+                        inset: 0
+                        transform: none
+                        opacity: 1
+                        &::after
+                            content: none
+                        span
+                            font: 400 14px / 1.3 $font-family
+                            color: #f6ffd2
+                            white-space: nowrap
+                            display: block
+                        svg
+                            width: 16px
+                            height: 16px
+                            transform: rotate(45deg)
+                    &-prev
+                        grid-template-columns: 24px 1fr
+                        svg
+                            transform: rotate(-135deg)
