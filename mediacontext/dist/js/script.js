@@ -235,6 +235,26 @@ document.addEventListener('DOMContentLoaded', function() {
         },
     });
 
+    var swiper = new Swiper(".team__structure", {
+        spaceBetween: 20,
+        slidesPerView: 1,
+        speed: 700,
+        loop: false,
+        navigation: {
+            nextEl: ".team__structure .swiper-button-next",
+            prevEl: ".team__structure .swiper-button-prev",
+        },
+        breakpoints: {
+            1201: {
+                spaceBetween: 40,
+                slidesPerView: 4
+            },
+            701: {
+                slidesPerView: 2
+            },
+        }
+    });
+
     let tab = document.querySelector('.achiev__tab'),
         tabPoint = document.querySelectorAll('.achiev__tab_item'),
         tabWrapper = document.querySelectorAll('.achiev__wrapper');
@@ -1039,7 +1059,7 @@ document.addEventListener('DOMContentLoaded', function() {
         teamItem = document.querySelectorAll('.team__item'),
         teamMove = document.querySelector('.team__move');
 
-    if(team !== null && window.innerWidth > 1200) {
+    if(teamRow !== null && window.innerWidth > 1200) {
         let x = teamItem[0].getBoundingClientRect().width * teamItem.length + 40 * (teamItem.length)
         team.style.height = (x - teamRow.getBoundingClientRect().width) + teamBlock.getBoundingClientRect().height + 'px'
 
