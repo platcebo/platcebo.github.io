@@ -6166,8 +6166,11 @@ textarea.input
         .check
             &__bg
                 width: 980px
-                top: -50px
-                left: calc( 50% - 490px )
+                top: -90px
+                left: calc( 50% - 570px )
+            &__form
+                .btn__violet
+                    padding: 10px 10px 10px 20px
     .work-serm
         .work
             &__subtext
@@ -6234,6 +6237,22 @@ textarea.input
     .cost
         &__wrapper
             grid-template-columns: 1fr 1fr
+    .type
+        &__block
+            padding: 40px
+        h2
+            font-size: 54px
+        &__item
+            min-height: 280px
+            padding: 30px
+            width: 314px
+            &_bg
+                width: 125px
+                height: 125px
+                top: 0px
+                right: 20px
+        &__text
+            font-size: 24px
 
 @media ( max-width: 1200px )
     .serm
@@ -6421,6 +6440,9 @@ textarea.input
         .add-header
             &__text
                 margin: 40px 0 0
+                p
+                    &+p
+                        margin: 10px 0 0
             &__block
                 padding: 20px 20px 146px
             &__bg
@@ -6454,6 +6476,10 @@ textarea.input
                 padding: 10px 20px
                 font-size: 14px
     .type
+        &__wrapper
+            margin: 20px -20px 0
+            width: calc( 100% + 40px )
+            padding: 0 20px
         &__block
             padding: 30px 20px
         &__item
@@ -6522,6 +6548,20 @@ textarea.input
                 display: none
             &__block
                 padding: 30px 20px
+                position: relative
+                z-index: 1
+                &::before
+                    content: ''
+                    display: block
+                    width: 144px
+                    height: 146px
+                    transform: rotate(31deg)
+                    position: absolute
+                    left: -10px
+                    bottom: -50px
+                    background: url('../img/work_1.png') center no-repeat
+                    background-size: contain
+                    z-index: -1
             &__item
                 padding: 20px
                 img
@@ -6547,3 +6587,20 @@ textarea.input
             padding: 30px 20px
         &__wrapper
             grid-template-columns: 100%
+        &__title
+            gap: 20px
+            margin: 10px 0 0
+    .team
+        &__structure
+            &_arrow
+                grid-template-columns: 50px 50px
+                margin: 10px 0 0
+                gap: 10px
+                .swiper
+                    &-button-next,
+                    &-button-prev
+                        width: 50px
+                        height: 50px
+                        &::before
+                            width: 15px
+                            height: 15px

@@ -121,11 +121,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if(advantagePar !== null) {
         if(advantagePar.getBoundingClientRect().top <= window.innerHeight && advantageWrapper.getBoundingClientRect().bottom > 0) {
-            advantagePar.style.transform = 'translateY(' + (advantagePar.getBoundingClientRect().top/window.innerHeight)*10 + '%)'
+            advantagePar.style.transform = 'translateY(' + (advantagePar.getBoundingClientRect().top/workWrapper.getBoundingClientRect().height) * 50 + '%)'
         }
         window.addEventListener('scroll', ()=>{
             if(advantagePar.getBoundingClientRect().top <= window.innerHeight && advantageWrapper.getBoundingClientRect().bottom > 0) {
-                advantagePar.style.transform = 'translateY(' + (advantagePar.getBoundingClientRect().top/window.innerHeight)*10 + '%)'
+                advantagePar.style.transform = 'translateY(' + (advantagePar.getBoundingClientRect().top/workWrapper.getBoundingClientRect().height) * 50 + '%)'
             }
         })
     }
@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', function() {
         spaceBetween: 20,
         slidesPerView: 1,
         speed: 700,
-        loop: false,
+        loop: true,
         navigation: {
             nextEl: ".team__structure .swiper-button-next",
             prevEl: ".team__structure .swiper-button-prev",
