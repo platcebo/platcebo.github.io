@@ -50,44 +50,48 @@ document.addEventListener('DOMContentLoaded', function() {
           },
     });
 
-    document.querySelectorAll('img.svg').forEach(function(img){
-        var imgID = img.id;
-        var imgClass = img.className;
-        var imgURL = img.src;
-    
-        fetch(imgURL).then(function(response) {
-            return response.text();
-        }).then(function(text){
-    
-            var parser = new DOMParser();
-            var xmlDoc = parser.parseFromString(text, "text/xml");
-    
-            // Get the SVG tag, ignore the rest
-            var svg = xmlDoc.getElementsByTagName('svg')[0];
-    
-            // Add replaced image's ID to the new SVG
-            if(typeof imgID !== 'undefined') {
-                svg.setAttribute('id', imgID);
-            }
-            // Add replaced image's classes to the new SVG
-            if(typeof imgClass !== 'undefined') {
-                svg.setAttribute('class', imgClass+' replaced-svg');
-            }
-    
-            // Remove any invalid XML tags as per http://validator.w3.org
-            svg.removeAttribute('xmlns:a');
-    
-            // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-            if(!svg.getAttribute('viewBox') && svg.getAttribute('height') && svg.getAttribute('width')) {
-                svg.setAttribute('viewBox', '0 0 ' + svg.getAttribute('height') + ' ' + svg.getAttribute('width'))
-            }
-    
-            // Replace image with new SVG
-            img.parentNode.replaceChild(svg, img);
-    
+    let svg = document.querySelectorAll('img.svg');
+
+    if( svg !== null) {
+        svg.forEach(function(img){
+            var imgID = img.id;
+            var imgClass = img.className;
+            var imgURL = img.src;
+        
+            fetch(imgURL).then(function(response) {
+                return response.text();
+            }).then(function(text){
+        
+                var parser = new DOMParser();
+                var xmlDoc = parser.parseFromString(text, "text/xml");
+        
+                // Get the SVG tag, ignore the rest
+                var svg = xmlDoc.getElementsByTagName('svg')[0];
+        
+                // Add replaced image's ID to the new SVG
+                if(typeof imgID !== 'undefined') {
+                    svg.setAttribute('id', imgID);
+                }
+                // Add replaced image's classes to the new SVG
+                if(typeof imgClass !== 'undefined') {
+                    svg.setAttribute('class', imgClass+' replaced-svg');
+                }
+        
+                // Remove any invalid XML tags as per http://validator.w3.org
+                svg.removeAttribute('xmlns:a');
+        
+                // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
+                if(!svg.getAttribute('viewBox') && svg.getAttribute('height') && svg.getAttribute('width')) {
+                    svg.setAttribute('viewBox', '0 0 ' + svg.getAttribute('height') + ' ' + svg.getAttribute('width'))
+                }
+        
+                // Replace image with new SVG
+                img.parentNode.replaceChild(svg, img);
+        
+            });
+        
         });
-    
-    });
+    }
 
     let selectInput = document.querySelectorAll('.select__input'),
         selectVal = document.querySelectorAll('.select__val');
@@ -292,6 +296,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if(signIn !== null) {
         signIn.style.minHeight = window.innerHeight - nav.getBoundingClientRect().height + 'px'
+    }
+
+    let fieldset = document.querySelectorAll('fieldset'),
+        fieldsetBtn = document.querySelectorAll('fieldset h4');
+
+    if(fieldset !== null) {
+        fieldsetBtn.forEach((item, i)=>{
+            item.addEventListener('click', ()=>{
+                fieldset[i].classList.toggle('open')
+            })
+        })
+        document.body.addEventListener('click', (event)=>{
+            if(!event.target.closest('fieldset')) {
+                fieldset.forEach(item=> item.classList.remove('open'))
+            }
+        })
     }
 
 }, false);

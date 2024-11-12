@@ -95,7 +95,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="itc-select header__select" id="nav__select-2">
+                    <!-- <div class="itc-select header__select" id="nav__select-2">
                         <button type="button" class="itc-select__toggle" name="" value="Комнат" data-select="toggle" data-index="1">Комнат</button>
                         <div class="itc-select__dropdown">
                             <ul class="itc-select__options">
@@ -103,8 +103,19 @@
                                 <li class="itc-select__option" data-select="option" data-value="1" data-index="2">2</li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="itc-select header__select" id="nav__select-3">
+                    </div> -->
+                    <fieldset id="mse2_tv|property_rooms">
+                        <h4 class="filter_title">Комнат</h4>
+                        <div class="filter__fieldset">
+                            <label for="mse2_tv|property_rooms_0" class="">
+                        <input type="checkbox" name="tv|property_rooms" id="mse2_tv|property_rooms_0" value="3" class="">
+                        <span>3</span>
+                        </label><br><label for="mse2_tv|property_rooms_1" class="">
+                            <input type="checkbox" name="tv|property_rooms" id="mse2_tv|property_rooms_1" value="6" class="">
+                            <span>6</span>
+                        </label><br>    </div>
+                    </fieldset>
+                    <!-- <div class="itc-select header__select" id="nav__select-3">
                         <button type="button" class="itc-select__toggle" name="" value="Цена" data-select="toggle" data-index="1">Цена</button>
                         <div class="itc-select__dropdown">
                             <ul class="itc-select__options">
@@ -112,7 +123,23 @@
                                 <li class="itc-select__option" data-select="option" data-value="Цена" data-index="2">Цена</li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
+                    <fieldset id="mse2_ms|price">
+                        <h4 class="filter_title">Цена</h4>
+                        <div class="filter__fieldset">
+                            <div class="mse2_number_slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><div class="ui-slider-range ui-corner-all ui-widget-header"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span></div>
+                            <div class="mse2_number_inputs row">
+                                <div class="col-md-6">
+                        <label for="mse2_ms|price_0" class="d-flex align-items-center">
+                            От        <input type="text" name="ms|price" id="mse2_ms|price_0" value="546000" data-current-value="0" class="form-control ml-1" data-original-value="546000" data-decimal="0">
+                        </label>
+                        </div><div class="col-md-6">
+                            <label for="mse2_ms|price_1" class="d-flex align-items-center">
+                                До        <input type="text" name="ms|price" id="mse2_ms|price_1" value="546000" data-current-value="0" class="form-control ml-1" data-original-value="546000" data-decimal="0">
+                            </label>
+                        </div>        </div>
+                            </div>
+                    </fieldset>
                     <div class="header__input">
                         <img src="img/place.svg" alt="">
                         <input type="text" placeholder="Город, адрес, ориентир, метро, район, улица">
@@ -174,13 +201,17 @@
     <section class="recom">
         <div class="container">
             <div class="recom__wrapper">
+                <!-- правки 08.11.2024 (пример карточки)-->
                 <div class="recom__item">
-                    <div class="recom__prev">
-                        <img src="img/recom_prev.jpg" alt="">
-                        <a href="#" class="recom__fav active">
-                            <img src="img/heart.svg" alt="" class="svg">
-                        </a>
+                    <div class="recom__fav active">
+                        <!-- правки 12.11.2024 -->
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.9956 4.27985C8.32947 2.332 5.55109 1.80804 3.46355 3.59168C1.37601 5.37532 1.08211 8.35748 2.72147 10.467C4.08448 12.2209 8.20945 15.9201 9.56139 17.1174C9.71264 17.2513 9.78827 17.3183 9.87648 17.3446C9.95347 17.3676 10.0377 17.3676 10.1147 17.3446C10.2029 17.3183 10.2786 17.2513 10.4298 17.1174C11.7817 15.9201 15.9067 12.2209 17.2697 10.467C18.9091 8.35748 18.6511 5.35656 16.5276 3.59168C14.4042 1.8268 11.6617 2.332 9.9956 4.27985Z" stroke="#2963F5" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
+                    <a href="#" class="recom__prev">
+                        <img src="img/recom_prev.jpg" alt="">
+                    </a>
                     <div class="recom__info">
                         <div class="recom__price">
                             <div class="recom__price_wrapper active">
@@ -221,6 +252,7 @@
                         </div>
                     </div>
                 </div>
+                <!--  -->
                 <div class="recom__item">
                     <div class="recom__prev">
                         <img src="img/recom_prev.jpg" alt="">
@@ -457,8 +489,14 @@
                     </div>
                 </div>
             </div>
+            <!-- правки 08.11.2024 (немного поправил pag__prev pag__next)-->
             <ul class="pag">
-                <li><a href="#" class="pag__prev"><img src="img/link.svg" alt="" class="svg"> <span>Предыдущий</span></a></a></li>
+                <li><a href="#" class="pag__prev">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.83203 14.1663L14.1654 5.83301M14.1654 5.83301H5.83203M14.1654 5.83301V14.1663" stroke="#2963F5" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Предыдущий</span>
+                </a></li>
                 <li><a href="#" class="active">1</a></li>
                 <li><a href="#">2</a></li>
                 <li><a href="#">3</a></li>
@@ -466,8 +504,14 @@
                 <li><a href="#">8</a></li>
                 <li><a href="#">9</a></li>
                 <li><a href="#">10</a></li>
-                <li><a href="#" class="pag__next"><span>Следующая</span> <img src="img/link.svg" alt="" class="svg"></a></li>
+                <li><a href="#" class="pag__next">
+                    <span>Следующая</span> 
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.83203 14.1663L14.1654 5.83301M14.1654 5.83301H5.83203M14.1654 5.83301V14.1663" stroke="#2963F5" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a></li>
             </ul>
+            <!-- -->
         </div>
     </section>
     <section class="about">

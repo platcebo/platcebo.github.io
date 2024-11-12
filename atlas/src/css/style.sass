@@ -15,6 +15,18 @@ body
         inset: 0
         opacity: 0
 
+.btn-light
+    padding: 12px 20px
+    border: none
+    width: max-content
+    border-radius: 4px
+    background: #376df6
+    font: 600 16px / 1.42857 $font-family
+    color: #fff
+    transition: all .3s
+    &:hover
+        background: #2b52b4
+
 .btn
     &__blue
         padding: 12px 20px
@@ -219,8 +231,36 @@ body
                 border: 1px solid #eaecf0
                 color: #1d2939
 
-.itc-select
-    &__toggle
+fieldset
+    &:last-child
+        h4
+            border: none
+    .mse2_number_inputs
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 8px
+        min-width: 300px
+        label
+            font: 500 14px / 1.42857 $font-family
+            color: #344054
+            input
+                position: relative
+                height: auto
+                box-sizing: border-box
+                margin: 6px 0 0
+                padding: 8px 12px
+                font-size: 16px
+                color: #344054
+                opacity: 1
+                border: 1px solid #d0d5dd
+                border-radius: 4px
+                box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+                background: #fff
+.itc-select,
+fieldset
+    position: relative
+    &__toggle,
+    h4
         height: 100%
         border: none
         border-right: 1px solid #d0d5dd
@@ -231,10 +271,14 @@ body
         font: 600 14px / 1.42857 $font-family
         color: #344054
         white-space: nowrap
+        display: flex
+        align-items: center
         &::after
             content: none
         &::before
             content: ''
+            display: block
+            position: relative
             order: 2
             width: 20px
             height: 20px
@@ -246,7 +290,12 @@ body
             &__toggle
                 &::before
                     transform: rotate(-180deg)
-    &__dropdown
+    .filter__fieldset
+        opacity: 0
+        pointer-events: none
+        transition: all .3s
+    &__dropdown,
+    .filter__fieldset
         top: calc( 100% + 8px )
         right: 0
         left: auto
@@ -257,33 +306,124 @@ body
         background: #fff
         min-width: calc( 100% - 20px )
         z-index: 4
-    &__options
+        position: absolute
+    &__options,
+    .filter__fieldset
         display: grid
         grid-template-columns: 100%
         gap: 4px
         padding: 6px
-    &__option
-        border-radius: 6px
-        padding: 10px 10px 10px 8px
-        font: 500 16px / 1.5 $font-family
-        color: #101828
-        padding: 10px 
-        gap: 8px
-        transition: all .3s
+        br
+            display: none
+    &__option,
+    .filter__fieldset span
+        padding: 0
+        border-radius: 0
+        background: transparent !important
+        &::before,
+        &::after
+            content: none
+        a
+            color: #101828
+            border-radius: 6px
+            padding: 10px 10px 10px 8px
+            font: 500 16px / 1.5 $font-family
+            color: #101828
+            padding: 10px 
+            gap: 8px
+            transition: all .3s
+            display: flex
+            align-items: center
+            justify-content: space-between
+            gap: 8px
+            width: 100%
+        &:hover
+            a
+                background: #f9fafb
         &_selected
-            background: #f9fafb
-            &::after
+            a
+                background: #f9fafb
+                &::after
+                    content: ''
+                    display: block
+                    width: 20px
+                    height: 20px
+                    background: url('../img/blue_check.svg') center no-repeat
+                    background-size: contain
+    .filter__fieldset 
+        label
+            position: relative
+        span
+            cursor: pointer
+            color: #101828
+            border-radius: 6px
+            padding: 10px 10px 10px 8px
+            font: 500 16px / 1.5 $font-family
+            color: #101828
+            padding: 10px 
+            gap: 8px
+            transition: all .3s
+            display: flex
+            align-items: center
+            justify-content: flex-start
+            gap: 8px
+            width: 100%
+            position: relative
+            &:hover
+                background: #f9fafb !important
+            &::before
+                border-radius: 4px
+                border: 1px solid #d0d5dd
+                opacity: 1
+                content: ''
+                display: block
                 width: 20px
                 height: 20px
-                background: url('../img/blue_check.svg') center no-repeat
+                background: transparent
                 background-size: contain
-        &:hover
-            background: #f9fafb
+                transition: all .3s
+        input
+            cursor: pointer
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            opacity: 0
+            &:checked
+                &+span
+                    &::before
+                        background: url('../img/blue_check.svg') center no-repeat
+            &:disabled
+                &+span
+                    opacity: .5
+    &.open
+        .filter__fieldset
+            opacity: 1
+            pointer-events: all
+    .mse2_number_slider
+        span.ui-slider-handle
+            width: 8px
+            height: 8px
+            border-radius: 100%
+            background: #376df6 !important
+            transition: all 0s 
+            padding: 0
+            border: none
+            top: calc( 50% - 4px )
+            margin: 0
+            transform: translateX(-50%)
+            &::before
+                content: none 
+        .ui-slider-range
+            background: #376df6
+            opacity: .5
 
 .header
     padding: 120px 0 64px
     position: relative
     z-index: 1
+    min-height: 400px
     &__post
         display: none
     &__bg
@@ -498,6 +638,8 @@ body
 
 .catalog
     padding: 96px 0
+    z-index: 2
+    position: relative
     &__wrapper
         display: grid
         grid-template-columns: 43fr 43fr 31fr
@@ -626,10 +768,13 @@ body
         background: #fff
         border: 1px solid #eaecf0
         border-radius: 8px
+        position: relative
+        z-index: 1
     &__prev
         position: relative
         border-radius: 8px 8px 0 0
         overflow: hidden
+        display: block
         img
             width: 100%
             height: 240px
@@ -648,6 +793,7 @@ body
         box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
         background: #fff
         transition: all .3s
+        z-index: 2
         img
             width: 20px
             height: 20px
@@ -1178,6 +1324,7 @@ body
                             margin: 0 8px 0 0
     .header
         padding: 64px 0 0
+        min-height: 240px
         &__block
             margin: 32px 0 0
         &__tab
@@ -1408,8 +1555,10 @@ body
         display: none
     &__row
         display: grid
-        grid-template-columns: 52px 1fr 252px
+        grid-template-columns: 1fr 252px
         gap: 12px
+        &+.d-flex
+            margin: 12px 0 0
     &__form
         border: 1px solid#eaecf0
         border-radius: 4px
@@ -1433,10 +1582,59 @@ body
         align-items: center
         cursor: pointer
         transition: all .3s
+        display: none
         svg
             width: 20px
         &:hover
             background: #eaecf0
+    #mse2_selected_wrapper
+        margin: 0
+        font: 500 14px / 1.42857 $font-family
+        color: #344054
+        white-space: nowrap
+        #mse2_selected
+            padding: 0
+            border-radius: 0
+            display: flex !important
+            justify-content: flex-start
+            align-items: center 
+            flex-wrap: nowrap
+            overflow-x: scroll
+            gap: 12px
+            margin: 16px 0 0
+            position: relative
+        a
+            display: block
+            width: max-content
+            padding-right: 30px
+            position: relative
+            sup
+                font-weight: 300
+                content: 'X'
+                display: block
+                font-size: 8px
+                width: 15px
+                height: 15px
+                border-radius: 100%
+                border: 0.5px solid #d0d5dd
+                color: #d0d5dd
+                display: flex
+                justify-content: center
+                align-items: center
+                position: absolute
+                top: 50%
+                right: 6px
+                transform: translateY(-50%)
+                box-sizing: border-box
+                transition: all .3s
+            &:hover
+                sup
+                    color: #376df6
+                    border-color: #376df6
+        strong
+            font: 500 14px / 1.42857 $font-family
+            color: #344054
+            white-space: nowrap
     &__check
         display: flex
         justify-content: flex-start
@@ -1446,6 +1644,8 @@ body
         gap: 12px
         margin: 16px 0 0
         position: relative
+        .search__check
+            width: 100%
         span
             background: #f2f4f7
             border-radius: 16px
@@ -1504,6 +1704,7 @@ body
     width: max-content
     border-radius: 8px
     box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+    overflow: hidden
     a
         font: 500 14px / 1.42857 $font-family
         color: #1d2939
@@ -2771,6 +2972,8 @@ body
 
 @media ( max-width: 600px )
     .modal-place
+        .modal__logo
+            display: none
         &__wrapper
             height: 100vh
             position: fixed

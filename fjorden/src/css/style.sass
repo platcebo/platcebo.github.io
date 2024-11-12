@@ -5645,10 +5645,10 @@ section
             display: block
             &.justifyright
                 float: right
-                margin: 24px 0 16px 12px
+                margin: 24px 0 24px 12px
             &.justifyleft
                 float: left
-                margin: 24px 12px 16px 0
+                margin: 24px 12px 24px 0
             &.justifyfull
                 display: block
                 width: 100%
@@ -5680,7 +5680,7 @@ section
                 align-items: start
                 &::before
                     counter-increment: article 1
-                    content: counter(article)
+                    content: counter(article) '.'
         ul
             li
                 &::before
