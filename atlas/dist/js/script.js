@@ -292,11 +292,11 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
-    let signIn = document.querySelector('.sign-in');
+    // let signIn = document.querySelector('.sign-in');
 
-    if(signIn !== null) {
-        signIn.style.minHeight = window.innerHeight - nav.getBoundingClientRect().height + 'px'
-    }
+    // if(signIn !== null) {
+    //     signIn.style.minHeight = window.innerHeight - nav.getBoundingClientRect().height + 'px'
+    // }
 
     let fieldset = document.querySelectorAll('fieldset'),
         fieldsetBtn = document.querySelectorAll('fieldset h4');
@@ -310,6 +310,79 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.addEventListener('click', (event)=>{
             if(!event.target.closest('fieldset')) {
                 fieldset.forEach(item=> item.classList.remove('open'))
+            }
+        })
+    }
+
+    let formEnterPoint = document.querySelectorAll('.form-enter__tab_point'),
+        signIn = document.querySelector('.sign-in'),
+        formEnterWrapper = document.querySelectorAll('.form-enter__wrapper');
+
+    if(formEnterPoint !== null) {
+        function formEnterShow(a) {
+            formEnterPoint[a].classList.add('active');
+            formEnterWrapper[a].classList.add('active');
+        }
+
+        function formEnterRemove() {
+            formEnterPoint.forEach(item => item.classList.remove('active'))
+            formEnterWrapper.forEach(item => item.classList.remove('active'))
+        }
+
+        formEnterRemove(0)
+        formEnterShow(0)
+        formEnterShow(2)
+
+        signIn.addEventListener('click', (event)=>{
+            let target = event.target;
+
+            if(target && target.closest('.form-enter__tab_point')) {
+                for(let i = 0; i < formEnterPoint.length; i++) {
+                    if(target == formEnterPoint[i]) {
+                        formEnterRemove(0)
+                        if(i == 0 || i == 2) {
+                            formEnterShow(0)
+                            formEnterShow(2)
+                        }
+                        if(i == 1 || i == 3) {
+                            formEnterShow(1)
+                            formEnterShow(3)
+                        }
+                    }
+                }
+            }
+        })
+    }
+
+    let signInItem = document.querySelectorAll('.sign-in__item'),
+        signInForm = document.querySelectorAll('.sign-in__form'),
+        signInBg = document.querySelector('.sign-in__bg');
+
+    if(signInItem !== null) {
+        function SignInShow(a) {
+            signInBg.classList.remove('active')
+            signInItem[a].classList.add('active');
+            signInForm[a].classList.add('active');
+        }
+
+        function SignInRemove() {
+            signInItem.forEach(item => item.classList.remove('active'))
+            signInForm.forEach(item => item.classList.remove('active'))
+        }
+
+        SignInRemove()
+
+        signIn.addEventListener('click', (event)=>{
+            let target = event.target;
+
+            if(target.closest('.sign-in__item')) {
+                console.log('aa')
+                for(let i = 0; i < signInItem.length; i++) {
+                    if(target && target.closest('.sign-in__item') == signInItem[i]) {
+                        SignInRemove()
+                        SignInShow(i)
+                    }
+                }
             }
         })
     }

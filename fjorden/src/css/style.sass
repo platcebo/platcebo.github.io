@@ -5645,10 +5645,10 @@ section
             display: block
             &.justifyright
                 float: right
-                margin: 24px 0 24px 12px
+                margin: 24px 0 16px 12px
             &.justifyleft
                 float: left
-                margin: 24px 12px 24px 0
+                margin: 24px 12px 16px 0
             &.justifyfull
                 display: block
                 width: 100%
@@ -5707,6 +5707,9 @@ section
                 height: 42px
         a
             color: $blue
+            transition: all .3s
+            &:hover
+                color: $hover
     &__bg
         height: 800px
         width: 100%

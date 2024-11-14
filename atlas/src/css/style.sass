@@ -1747,10 +1747,20 @@ fieldset
                 stroke: #1d2939
                 transition: all .3s
 
-.breadcrumbs
+.breadcrumb
     font: 400 14px / 1.42857 $font-family
     color: #475467
     margin: 24px 0 0
+    li
+        display: inline
+        &::after
+            content: ' / '
+            margin: 0 
+            font: 400 14px / 1.42857 $font-family
+            color: #475467
+        &:last-child
+            &::after
+                content: none
     a
         color: #475467
         transition: all .3s
@@ -1758,7 +1768,7 @@ fieldset
             color: #376df6
     &__block
         padding: 36px 0
-        .breadcrumbs
+        .breadcrumb
             margin: 0
 
 @media ( max-width: 1024px )
@@ -1821,7 +1831,7 @@ fieldset
             padding: 16px 0 36px 
         &__check
             margin: 12px 0 0
-    .breadcrumbs
+    .breadcrumb
         margin: 16px 0 0
     .pag
         width: 100%
@@ -3047,6 +3057,7 @@ fieldset
     display: flex
     align-items: center
     background: #fff
+    min-height: 960px
     &__bg
         position: absolute
         top: 0
@@ -3054,6 +3065,11 @@ fieldset
         height: 100%
         width: calc( 50vw - 40px )
         object-fit: cover
+        pointer-events: none
+        opacity: 0
+        transition: all .3s
+        &.active
+            opacity: 1
     &__container
         display: grid
         grid-template-columns: 1fr 1fr 
@@ -3096,6 +3112,12 @@ fieldset
         margin: 20px 0 0
         font: 400 16px / 1.5 $font-family
         color: #475467
+    &__form
+        opacity: 0
+        pointer-events: none
+        &.active
+            opacity: 1
+            pointer-events: all
     &__item
         border: 1px solid #eaecf0
         border-radius: 8px
@@ -3106,6 +3128,7 @@ fieldset
         z-index: 1
         overflow: hidden
         transition: all .3s
+        cursor: pointer
         &_bg
             position: absolute
             top: 20px
@@ -3114,15 +3137,40 @@ fieldset
             height: 200px
             object-fit: contain
             z-index: -1
+            svg
+                width: 100%
+                height: 100%
+                transition: all .3s
+                path
+                    transition: all .3s
         &:hover
+            border: 1px solid #5482f7
+            background: #fff
             .sign-in
                 &__arrow
                     svg
                         path
                             stroke: #376df6
-                &__row
-                    p
-                        color: #376df6
+                &__item
+                    &_bg
+                        svg
+                            transform: scale(1.1)
+                            path
+                                fill: #fdb022
+        &.active
+            border: 1px solid #5482f7
+            background: #fff
+            .sign-in
+                &__arrow
+                    svg
+                        path
+                            stroke: #376df6
+                &__item
+                    &_bg
+                        svg
+                            transform: scale(1.1)
+                            path
+                                fill: #fdb022
 
 @media ( max-width: 1200px )
     .sign-in
@@ -3153,3 +3201,113 @@ fieldset
         &__bg
             display: none
         
+.form-group-sort
+    margin: 0 0 20px
+    font: 400 14px / 1.42857 $font-family
+    color: #344054
+    a
+        margin: 0 0 0 10px
+        color: #98a2b3
+        &.active
+            color: #344054
+
+.form-enter
+    position: absolute
+    top: 0
+    right: 0
+    width: calc( 50vw - 40px )
+    height: 100%
+    background: #c6d6fd
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    flex-direction: column
+    &__block
+        margin: auto
+        width: 100%
+        max-width: 400px
+    &__tab
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 5px
+        &_point
+            border-radius: 20px 20px 0 0
+            padding: 16px 28px 10px
+            // border: 1px solid #eaecf0 
+            cursor: pointer
+            background: #f9fafb
+            font: 600 16px / 1.5 $font-family
+            color: #98a2b3
+            transition: all .3s
+            position: relative
+            &::before,
+            &::after 
+                content: ''
+                display: block
+                width: 20px
+                height: 20px
+                background-size: calc(20px * 1.5) calc(20px * 1.5)
+                position: absolute
+                bottom: 0
+                background-image: radial-gradient(circle at top left, transparent 45%, #f9fafb 47%)
+            &::before
+                left: calc(19px * -1)
+            &::after 
+                right: calc(19px * -1)
+                transform: rotate(90deg)
+            &:nth-child(1)
+                &::before
+                    content: none
+            &.active
+                font: 600 16px / 1.5 $font-family
+                color: #5482f7
+                background: #fff
+                z-index: 2
+                &::before,
+                &::after
+                    background-image: radial-gradient(circle at top left, transparent 45%, #fff 47%)
+            &:hover
+                color: #5482f7
+    &__wrapper
+        border-radius: 0 24px 24px 24px
+        padding: 24px
+        background: #fff
+        grid-template-columns: 100%
+        gap: 24px
+        display: none
+        &.active
+            display: grid
+    &__input
+        &_name
+            font: 500 14px / 1.42857 $font-family
+            color: #344054
+            span
+                color: #f04438
+        input
+            margin: 6px 0 0
+            width: 100%
+            box-sizing: border-box  
+            padding: 8px 12px
+            border: 1px solid #d0d5dd
+            border-radius: 4px
+            box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+            background: #fff
+            font: 400 16px / 1.5 $font-family
+        &_text
+            margin: 6px 0 0
+            font: 400 14px / 1.5 $font-family
+            color: #98a2b3
+    .btn__blue,
+    .btn__wht
+        width: 100%
+    &__soc
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 12px
+        margin: 6px 0 0
+        a
+            width: 32px
+        img
+            width: 100%
