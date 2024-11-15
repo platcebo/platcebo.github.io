@@ -1131,6 +1131,7 @@ body
         grid-template-columns: 1fr 1fr 
         gap: 24px
         p
+            grid-column: 2/3
             font-family: $font-family
             font-weight: 400
             font-size: 20px
@@ -1231,6 +1232,8 @@ body
             svg
                 path
                     stroke: $white
+        &.swiper-button-disabled
+            opacity: 0 !important
     &__prev
         transform: translateY(-50%) rotate(180deg)
         right: auto
@@ -1255,18 +1258,22 @@ body
                 background: $coral
                 border: 1px solid $coral
     &__list
-        display: grid
-        grid-template-columns: 1fr 1fr
+        display: flex
+        flex-direction: column
+        // max-height: 50%
         gap: 24px
         margin: 24px 0 0
         row-gap: 16px
         counter-reset: example 0
+        flex-wrap: wrap
+        min-height: max-content
         li
             display: grid
             grid-template-columns: 30px 1fr
             align-items: start
+            width: calc( 50% - 12px )
             &::before
-                content: counter(example)
+                content: counter(example) '.'
                 counter-increment: example 1
                 font-family: $font-family
                 font-weight: 400
@@ -2651,6 +2658,8 @@ section
         &__title
             grid-template-columns: 100%
             gap: 16px
+            p
+                grid-column: auto
         &__item
             grid-template-columns: 100%
             gap: 24px
@@ -3033,6 +3042,9 @@ section
             display: none
         &__list
             grid-template-columns: 100%
+            max-height: none !important
+            li
+                width: 100%
         &__num
             font-size: 18px
         &__btn

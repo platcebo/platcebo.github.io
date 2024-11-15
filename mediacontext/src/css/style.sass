@@ -6110,6 +6110,44 @@ textarea.input
             letter-spacing: -0.03em
             color: $black
             opacity: 0.7
+    &__rbk
+        margin: 41px 0 0
+        border-radius: 40px
+        background: $light-gray
+        padding: 40px 
+        position: relative
+        z-index: 1
+        overflow: hidden
+        &_logo
+            max-width: 180px
+            img
+                width: 100%
+        &_name
+            font: 600 36px / 1 $font-family
+            letter-spacing: -0.03em
+            color: $black
+            margin: 20px 0 0
+        &_text
+            margin: 15px 0 0
+            opacity: .7
+            font: 500 20px / 1.4 $font-family
+            letter-spacing: -0.03em
+            color: $black
+            max-width: 537px
+        a
+            margin: 20px 0 0
+            font: 500 20px / 1.4 $font-family
+            letter-spacing: -0.03em
+            color: $purple
+            display: block
+            width: max-content
+            text-decoration: underline  
+        &_bg
+            position: absolute
+            bottom: -20px
+            right: -60px
+            width: 674px
+            z-index: -1
 
 @media ( max-width: 1700px )
     .serm
@@ -6231,6 +6269,18 @@ textarea.input
             p
                 font-size: 16px
                 margin: 20px 0 0
+        &__rbk
+            &_name
+                font-size: 28px
+            &_text
+                font-size: 16px
+                max-width: 430px
+            a
+                font-size: 16px
+            &_bg
+                width: 567px
+                right: -73px
+                bottom: -5px
 
 @media ( max-width: 1400px )
     .cost
@@ -6252,6 +6302,12 @@ textarea.input
                 right: 20px
         &__text
             font-size: 24px
+    .team
+        &__rbk
+            &_bg
+                width: 377px
+                right: -145px
+                bottom: -58px
 
 @media ( max-width: 1200px )
     .serm
@@ -6264,6 +6320,7 @@ textarea.input
             &__bg
                 left: -130px
                 bottom: -750px
+                top: auto
         &__bg
             width: 625px
             top: -200px
@@ -6283,8 +6340,8 @@ textarea.input
             overflow: hidden
             z-index: 1
             min-height: 290px
-            .btn__violet
-                padding: 10px 10px 10px 20px
+            // .btn__violet
+            //     padding: 10px 10px 10px 20px
             h3
                 font-size: 24px
             &::before
@@ -6389,8 +6446,8 @@ textarea.input
                     grid-column: auto !important
                 img
                     width: 146px
-                    top: 14px
-                    right: 18px
+                    top: -10px
+                    right: 0
             &__bg
                 z-index: -1
                 &_top
@@ -6423,6 +6480,14 @@ textarea.input
                 inset: auto
                 position: relative
                 margin: 20px 0 0
+                grid-template-columns: 50px 50px
+                .swiper-button-prev,
+                .swiper-button-next
+                    width: 50px
+                    height: 50px
+                    &::before
+                        width: 15px
+                        height: 15px
         &__sert
             margin: 30px 0 0
             grid-template-columns: 100%
@@ -6465,6 +6530,8 @@ textarea.input
                 height: 210px
                 top: -32px
                 right: -102px
+            .btn__violet
+                padding: 15px 15px 15px 20px
         &__step
             min-height: auto
             padding: 20px
@@ -6603,3 +6670,11 @@ textarea.input
                         &::before
                             width: 15px
                             height: 15px
+        &__rbk
+            padding: 30px 20px
+            &_logo
+                max-width: 120px
+            &_name
+                font-size: 24px
+            &_bg
+                display: none

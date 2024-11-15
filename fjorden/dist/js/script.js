@@ -904,6 +904,14 @@ document.body.addEventListener('click', function(event){
     }
 })
 
+let techList = document.querySelectorAll('.tech__list');
+
+if(techList !== null) {
+    techList.forEach((item)=>{
+        item.style.maxHeight = item.clientHeight / 2 + 50 + 'px'
+    })
+}
+
 
 if(document.querySelectorAll('.itc-select')!==null) {
     const select1 = new ItcCustomSelect('#select-1');
