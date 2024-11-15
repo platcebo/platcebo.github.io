@@ -1149,7 +1149,10 @@ body
         line-height: 1.35
         color: $dark-gray
         transition: all .3s
+        max-width: calc( 100% - 30px )
         span
+            display: none
+        svg
             display: none
     &__text
         margin: 24px 0 0
@@ -1197,6 +1200,8 @@ body
             svg
                 path
                     stroke: $hover
+    &__slider
+        margin: 24px 0 0
     &__slide
         img
             width: 100%
@@ -2685,6 +2690,8 @@ section
         &__block
             .tech__num
                 display: none
+        &__slider
+            margin: 0
     .gallery
         &__tab
             max-width: 466px
@@ -3065,10 +3072,12 @@ section
             font-size: 18px
         &__btn
             padding: 24px
+            height: 132px
+            align-items: flex-start
         &__text
             p
                 font-size: 16px
-                max-height: 80px
+                // max-height: 80px
         &__item
             max-height: 132px
     .gallery
