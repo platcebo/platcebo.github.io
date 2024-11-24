@@ -3490,20 +3490,20 @@ section
         .btn__blue
             margin: 32px auto 0
             max-width: 284px
-        &__bg
-            display: block
-            width: 100%
-            max-width: 800px
-            margin: 0 auto
-        &__subtitle
-            margin: 12px auto 0
-            font-family: $font-family
-            font-weight: 400
-            font-size: 20px
-            line-height: 1.35
-            text-align: center
-            color: $gray
-            max-width: 860px
+    &__bg
+        display: block
+        width: 100%
+        max-width: 800px
+        margin: 0 auto
+    &__subtitle
+        margin: 12px auto 0
+        font-family: $font-family
+        font-weight: 400
+        font-size: 20px
+        line-height: 1.35
+        text-align: center
+        color: $gray
+        max-width: 860px
 
 @media ( max-width: 1500px )
     .thanks
@@ -3525,10 +3525,10 @@ section
             padding: 23px 0 93px
             h1
                 font-size: 64px
-            &__subtitle
-                font-size: 18px
-            &__bg
-                max-width: 711px
+        &__subtitle
+            font-size: 18px
+        &__bg
+            max-width: 711px
 
 @media ( max-width: 1024px )
     .nav
@@ -3558,11 +3558,11 @@ section
                 font-size: 58px
                 span
                     display: block
-            &__subtitle
-                font-size: 20px
-                max-width: 460px
-            &__bg
-                max-width: 100%
+        &__subtitle
+            font-size: 20px
+            max-width: 460px
+        &__bg
+            max-width: 100%
 
 @media ( max-width: 600px )
     .thanks
@@ -3582,11 +3582,11 @@ section
             padding: 31px 0 52px
             h1
                 font-size: 26px
-            &__subtitle
-                font-size: 16px
             .btn__blue
                 margin: 24px 0 0
                 max-width: 100%
+        &__subtitle
+            font-size: 16px
 
 .breadcrumbs
     display: flex
@@ -5673,7 +5673,7 @@ section
             gap: 24px
 
 .article
-    padding: 24px 0 0
+    padding: 24px 0 120px
     .series
         &__title
             grid-template-columns: 100%
@@ -5687,29 +5687,29 @@ section
         color: $gray
     &__wrapper
         max-width: 900px
-        margin: 0 auto
+        margin: 48px auto 0
         p
             font: 400 20px / 1.35 $font-family
             color: $gray
-            margin: 24px 0 0
+            margin: 24px 0 12px
             strong
                 font: 500 42px / 1.1 $font-family
                 color: $dark-gray
         img
-            width: calc( 50% - 12px )
-            height: 284px
+            width: calc( 50% - 24px )
+            height: 300px
             object-fit: cover
             display: block
             &.justifyright
                 float: right
-                margin: 24px 0 16px 12px
+                margin: 0 0 0 24px
             &.justifyleft
                 float: left
-                margin: 24px 12px 16px 0
+                margin: 0 24px 0 0
             &.justifyfull
                 display: block
                 width: 100%
-                margin: 48px 0 0
+                margin: 24px 0 0
                 height: 500px 
         h2
             margin: 48px 0 0
@@ -5768,12 +5768,12 @@ section
             &:hover
                 color: $hover
     &__bg
-        height: 800px
+        height: calc(100vh - 220px)
         width: 100%
         object-fit: cover
         margin: 32px 0 0
     &-more
-        padding: 120px 0
+        padding: 0 0 120px
         &__slider
             margin: 24px 0 0
         .swiper-wrapper
@@ -5785,6 +5785,7 @@ section
 
 @media ( max-width: 1600px )
     .article
+        padding-bottom: 100px
         h1
             span
                 display: block
@@ -5796,13 +5797,12 @@ section
             blockquote
                 p
                     font-size: 36px
-        &__bg
-            height: 650px
         &-more
-            padding: 100px 0
+            padding: 0 0 100px
 
 @media ( max-width: 1300px )
     .article
+        padding-bottom: 96px
         &__bg
             height: 450px
         &__wrapper
@@ -5811,13 +5811,13 @@ section
                 &.justifyfull
                     height: 370px
         &-more
-            padding: 96px 0
+            padding: 0 0 96px
             .swiper-wrapper
                 grid-template-columns: 1fr 1fr
 
 @media ( max-width: 700px )
     .article
-        padding: 16px 0 0
+        padding: 16px 0 64px
         &__bg
             height: 220px
         &__wrapper
@@ -5840,7 +5840,7 @@ section
                 p
                     font-size: 22px
         &-more
-            padding: 64px 0
+            padding: 0 0 64px
             .swiper
                 &-wrapper
                     display: flex
