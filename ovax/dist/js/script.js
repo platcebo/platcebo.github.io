@@ -20,4 +20,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    let nav = document.querySelector('.nav'),
+        navHum = document.querySelector('.nav__hum');
+
+    if(nav !== null) {
+        navHum.addEventListener('click', ()=>{
+            if(nav.classList.contains('active')) {
+                nav.classList.toggle('active');
+            } else {
+                nav.classList.toggle('active');
+            }
+        })
+    }
+
 }, false);
