@@ -5698,7 +5698,7 @@ section
                 color: $dark-gray
         img
             width: calc( 50% - 24px )
-            height: 300px
+            height: 350px
             object-fit: cover
             display: block
             &.justifyright
@@ -5713,6 +5713,8 @@ section
                 margin: 24px 0 0
                 height: 500px 
         h2
+            text-transform: none
+            font-size: 42px
             margin: 48px 0 0
         ol,
         ul
@@ -5723,7 +5725,7 @@ section
             width: 100%
             counter-reset: article
             li
-                font: 600 18px / 1.35 $font-family
+                font: 400 18px / 1.35 $font-family
                 text-transform: uppercase
                 color: $dark-gray
                 position: relative
@@ -5803,6 +5805,8 @@ section
         h1
             span
                 display: block
+        h2
+            font-size: 36px
         &__wrapper
             p
                 font-size: 18px
@@ -5815,11 +5819,13 @@ section
 @media ( max-width: 1300px )
     .article
         padding-bottom: 96px
+        h2
+            font-size: 36px
         &__bg
             height: 450px
         &__wrapper
             img
-                height: 220px
+                height: 300px
                 &.justifyfull
                     height: 370px
         &-more
@@ -5830,6 +5836,8 @@ section
 @media ( max-width: 700px )
     .article
         padding: 16px 0 64px
+        h2
+            font-size: 22px
         &__bg
             height: 220px
         &__wrapper
