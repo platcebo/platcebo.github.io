@@ -1730,28 +1730,58 @@ section
     to 
         transform: scale(1)
         opacity: 0
-        // transform: rotate(0)
-// @keyframes stepsArrow2 
-//     0% 
-//         width: 0
-//         height: 0
-//         transform: rotate(25deg)
-//     50% 
-//         opacity: 1
-//     to 
-//         width: 100%
-//         height: 100%
-//         opacity: 0
-//         transform: rotate(0)
-// @keyframes stepsArrow3 
-//     0% 
-//         width: 0
-//         height: 0
-//         transform: rotate(-20deg)
-//     50% 
-//         opacity: 1
-//     to 
-//         width: 100%
-//         height: 100%
-//         opacity: 0
-//         transform: rotate(0)
+        
+:root
+    --gradient-dark: linear-gradient(90deg, #161A26 0%, #040207 101.09%)
+    --color-accent-primary: #6F158D
+    --color-accent-secondary: #6B185D
+    --color-accent-third: #C31A98
+    --color-dark-primary: #151924
+    --color-white-primary: #ffffff
+    --color-white-secondary: #FDFDFD
+    --color-gray: #B8B8B8
+    --font-primary: "Jost", sans-serif
+    --font-secondary: "Space Grotesk", sans-serif
+.white-blink path 
+    fill: var(--color-dark-primary)
+.white-blink path.white-blink--active 
+    animation-name: white-blink
+    animation-timing-function: ease
+    animation-duration: .5s
+    animation-fill-mode: forwards
+.bg-gradient--dark
+    // background: linear-gradient(90deg, #161A26 0%, #040207 101.09%)
+.hero__img svg 
+    position: absolute
+.hero .container .row 
+    min-height: 605px
+.hero__content 
+    position: relative
+    z-index: 1
+    transition: opacity 1s ease-in, transform 1s ease-in
+    content: ''
+    display: block
+    width: 1200px
+    max-width: 100vw
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    z-index: -1
+    min-width: 880px
+.hero__content * 
+    box-sizing: border-box
+.hero__content svg
+    transition: all 1s
+.fade-in 
+    opacity: 1
+    transform: translateY(0)
+@keyframes white-blink 
+    0% 
+        filter: brightness(3)
+        transform: translate(2px,-2px)
+    50% 
+        transform: translate(-1px,1px)
+    to 
+        transform: translate(0)
+        fill: var(--color-accent-third)
