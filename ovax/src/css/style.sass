@@ -310,6 +310,21 @@ section
         display: flex
         flex-direction: column
         justify-content: space-between
+        background-color: var(--bgc)
+        z-index: 1
+        overflow: hidden
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            right: 0
+            display: block
+            height: 100%
+            width: 100%
+            z-index: -1
+            background: var(--bgi) right no-repeat
+            transition: all .3s
+            transform-origin: 100% 50%
         img
             width: 90px
         h3
@@ -320,7 +335,9 @@ section
             letter-spacing: 0.1em
             text-transform: uppercase
             color: #fff
-
+        &:hover
+            &::before
+                transform: scale(1.2)
 .static
     &__subtitle
         margin: 30px auto 0
@@ -839,6 +856,38 @@ section
         color: #fff
         opacity: .6
 
+.news
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 10px
+        margin: 40px 0 0
+    &__baner
+        background-repeat: no-repeat
+        background-position: center left
+        background-size: cover
+        background-color: #fff
+        background-color: #3c6390
+        padding: 22px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-end
+        border-radius: 20px
+        min-height: 200px
+        p
+            font: 900 20px $font-family
+            text-transform: uppercase
+            text-align: right
+            color: #fff
+            max-width: 160px
+        img
+            width: 90px
+    &__desc
+        margin: 20px 0 0
+        font: 600 20px $font-family
+        color: #fff
+
 @media ( max-width: 1024px )
     .nav
         &__list,
@@ -1009,6 +1058,9 @@ section
             gap: 20px
         &__wrapper
             gap: 50px
+    .news
+        &__wrapper
+            grid-template-columns: 100%
 
 @media ( max-width: 600px )
     .header
@@ -1093,6 +1145,7 @@ section
         &__wrapper
             grid-template-columns: 100%
             gap: 30px
+
 
 @keyframes moveAlongPath 
     0% 
