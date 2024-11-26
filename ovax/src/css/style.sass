@@ -35,6 +35,17 @@ body
         position: relative
         overflow: hidden
         transition: all .3s
+        display: grid
+        grid-template-columns: 1fr 16px
+        gap: 11px
+        &::after
+            content: ''
+            display: block
+            width: 16px
+            height: 16px
+            background: url('../img/arrow.svg') center no-repeat
+            background-size: contain
+            transition: all .3s
         &::before
             content: ''
             display: block
@@ -49,6 +60,8 @@ body
             transition: all .3s
         &:hover
             color: #000
+            &::after
+                filter: invert(1)
             &::before
                 transform: translateY(0%)
     &__wht
@@ -1363,17 +1376,6 @@ section
         grid-template-columns: 1fr 16px
         gap: 11px
         align-items: center
-        &::after
-            content: ''
-            display: block
-            width: 16px
-            height: 16px
-            background: url('../img/arrow.svg') center no-repeat
-            background-size: contain
-            transition: all .3s
-        &:hover
-            &::after
-                filter: invert(1)
     &::before
         content: ''
         display: block
