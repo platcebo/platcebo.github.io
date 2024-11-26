@@ -33,28 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
-    // setTimeout( () => {
-    //     const o = new IntersectionObserver(e => {
-    //         e.forEach(t => {
-    //             var s = t.target.querySelectorAll("path");
-    //             t.isIntersecting && (i(s, 7),
-    //             t.target.classList.contains("comet") && i(s, 2))
-    //           }
-    //         )
-    //       }
-    //     );
-    //     function i(e, t) {
-    //       e.forEach( (s, l) => {
-    //           setTimeout( () => {
-    //               s.classList.add("white-blink--active")
-    //             }
-    //             , l * t)
-    //         }
-    //       )
-    //     }
-    //     document.querySelectorAll(".scroll-spy").forEach(e => o.observe(e))
-    // }, 500);
-
 }, false);
 
 window.addEventListener('load', () => {
