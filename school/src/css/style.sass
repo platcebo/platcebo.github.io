@@ -1,0 +1,513 @@
+$background: #f2f4f7
+$white: #fff
+$background-dark: #f2f5fa
+$content-main: #283238
+$content-secondary: #9da6b2
+$content-white: #fbfdfe
+$content-color: #5daddc
+$font-family: "Manrope", sans-serif
+$second-family: "Alumni Sans", sans-serif
+$third-family: "Alana Pro RUS", sans-serif
+body
+    position: relative
+    overflow-x: hidden
+    background: $background
+section
+    position: relative
+.container
+    max-width: 1160px
+    padding: 0 20px
+    margin: 0 auto
+    box-sizing: content-box
+    &__block
+        padding: 100px 0
+        margin: 0 20px
+        border-radius: 20px
+        overflow: hidden
+        position: relative
+        z-index: 1
+        max-width: 1392px
+        margin: 0 auto
+        width: calc( 100% - 48px )
+.btn
+    &__blue
+        width: 100%
+        max-width: max-content
+        box-shadow: inset 0 0 26px 0 rgba(255, 255, 255, 0.6)
+        background: $content-color
+        border: none
+        padding: 12px 16px 12px 40px
+        font: 700 14px / 1.5 $font-family
+        color: $white
+        border-radius: 100px
+        display: grid
+        grid-template-columns: 1fr 44px
+        gap: 24px
+        align-items: center
+        transition: all .3s
+        text-align: left
+        z-index: 2
+        position: relative
+        span
+            width: 44px
+            height: 44px
+            background: linear-gradient(315deg, #7cc7f2 0%, #1e86c2 100%)
+            box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.3)
+            border-radius: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            transition: all .3s
+            img
+                width: 16px
+                height: 16px
+                object-fit: contain
+                transition: all .3s
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            z-index: -1
+            width: 100%
+            height: 38px
+            border-radius: 500px
+            filter: blur(41.15754699707031px)
+            background: radial-gradient(102.92% 371.47% at 50% 50%, #5daddc 0%, rgba(93, 173, 220, 0.6) 64.48%, rgba(93, 173, 220, 0) 100%)
+            opacity: 0.8
+            transition: all .3s
+            bottom: -8px
+            left: 0
+        &:hover
+            box-shadow: none
+            span
+                img
+                    transform: rotate(45deg)
+            &::before
+                opacity: 0
+
+.nav
+    position: relative
+    padding: 16px 0 
+    overflow: hidden
+    .container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &__block
+            padding: 12px 0
+            background: url('../img/nav_bg.jpg') center no-repeat
+            background-size: cover
+            z-index: 1
+            &::after
+                content: ''
+                width: 750px
+                height: 400px
+                background: url('../img/nav_con.png') center no-repeat
+                background-size: cover
+                position: absolute
+                display: block
+                top: -300px
+                right: -300px
+                z-index: -1
+                mix-blend-mode: color-dodge
+                opacity: 0.8
+                transform: rotate(110deg)
+            &::before
+                content: ''
+                width: 750px
+                height: 400px
+                background: url('../img/nav_con.png') center no-repeat
+                background-size: cover
+                position: absolute
+                display: block
+                top: -200px
+                left: -300px
+                z-index: -1
+                mix-blend-mode: color-dodge
+                opacity: 0.8
+                transform: rotate(-110deg)
+    &__logo
+        display: block
+        width: 245px
+        img
+            width: 100%
+    &__list
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 40px
+        a
+            font: 700 14px / 1.5 $font-family
+            color: $white
+            transition: all .3s
+            &.active,
+            &:hover
+                color: #69c5ec
+
+.header
+    position: relative
+    .container
+        display: grid
+        grid-template-columns: 560px 1fr
+        gap: 40px
+        align-items: center
+        &__block
+            background: url('../img/header_bg.jpg') right no-repeat    
+            background-size: cover
+            &::after
+                content: ''
+                width: 1105px
+                height: 620px
+                background: url('../img/nav_con.png') center no-repeat
+                background-size: cover
+                position: absolute
+                display: block
+                top: -230px
+                right: -400px
+                z-index: -1
+                mix-blend-mode: color-dodge
+                opacity: 0.8
+                transform: rotate(12deg)
+            &::before
+                content: ''
+                width: 1105px
+                height: 620px
+                background: url('../img/nav_con.png') center no-repeat
+                background-size: cover
+                position: absolute
+                display: block
+                top: -200px
+                left: -400px
+                z-index: -1
+                mix-blend-mode: color-dodge
+                opacity: 0.8
+                transform: rotate(-50deg)
+    h1
+        font: 500 106px / 0.9 $second-family
+        text-transform: uppercase
+        color: $content-white
+    &__info
+        position: relative
+    &__banner
+        position: absolute
+        top: 24px
+        right: 33px
+        width: 272px
+    &__logo
+        position: absolute
+        top: 201px
+        right: 24px
+        width: 171px
+        font: 400 16px / 1.5 $font-family
+        color: $content-white
+        span
+            font-weight: 700
+    &__row
+        margin: 40px 0 0
+        display: grid
+        grid-template-columns: auto 1fr
+        gap: 40px
+        align-items: start
+    &__client
+        max-width: 155px
+        p
+            font: 400 14px / 1.4 $font-family
+            color: $content-white
+            margin: 8px 0 0
+            span
+                font-weight: 700
+        &_row
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            img
+                width: 36px
+                height: 36px
+                border-radius: 100% 
+                border: 1px solid $white
+                margin: 0 -4px 0 0
+    &__arrow
+        position: absolute
+        left: 50%
+        bottom: 0
+        transform: translate(-50%, 50%)
+        width: 60px
+        height: 60px
+        border: 6px solid $background
+        border-radius: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        background: url('../img/header_bg.jpg') bottom center no-repeat    
+        background-size: auto
+        z-index: 2
+        img
+            width: 24px
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 24px
+        padding: 0 42px 0 0
+        position: relative
+        &_text
+            position: absolute
+            width: 444px
+            transform: rotate(90deg)
+            top: 215px
+            right: -200px
+            display: grid
+            grid-template-columns: auto 1fr auto
+            gap: 16px
+            align-items: center
+            p
+                font: 700 12px / 1.5 $font-family
+                letter-spacing: 0.1em
+                text-transform: uppercase
+                color: #7ac7ff
+            span
+                width: 100%
+                display: block
+                height: 1px
+                background: #7ac7ff
+    &__item
+        border-radius: 24px
+        padding: 32px
+        min-height: 210px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        backdrop-filter: blur(32px)
+        background: linear-gradient(225deg, rgba(163, 221, 255, 0.32) 0%, rgba(92, 169, 214, 0.32) 100%)
+        box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.6)
+        p
+            font: 700 18px / 1.5 $font-family
+            color: $content-white
+        a
+            font: 700 14px / 1.5 $font-family
+            text-decoration: underline
+            text-decoration-skip-ink: none
+            color: $content-white
+        &:nth-child(1)
+            grid-column: 2/3
+
+.school-desc
+    padding: 160px 0 
+    position: relative
+    .container
+        max-width: 755px
+    h2
+        font: 500 48px / 1 $second-family
+        text-transform: uppercase
+        text-align: center
+        color: $content-main
+        span
+            color: $content-color
+    p
+        margin: 40px 0 0
+        font: 400 18px / 1.5 $font-family
+        text-align: center
+        color: $content-main
+        span
+            font-weight: 700
+    &::after
+        content: ''
+        width: 628px
+        height: 371px
+        background: url('../img/school_con.png') center no-repeat
+        background-size: cover
+        position: absolute
+        display: block
+        top: -10px
+        right: -350px
+        z-index: -1
+        opacity: 0.7
+        transform: rotate(86deg)
+    &::before
+        content: ''
+        width: 628px
+        height: 371px
+        background: url('../img/school_con.png') center no-repeat
+        background-size: cover
+        position: absolute
+        display: block
+        top: 20px
+        left: -350px
+        z-index: -1
+        opacity: 0.7
+        transform: rotate(-86deg)
+
+.can
+    h2
+        font: 500 80px / 1 $second-family
+        text-transform: uppercase
+        text-align: center
+        color: $content-main
+        padding: 0 24px
+    .container
+        &__block
+            position: relative
+            margin-top: 40px
+            z-index: 1
+            height: 600px
+    &__bg
+        position: absolute
+        inset: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+        object-fit: cover
+    h3
+        font: 500 48px / 1 $second-family
+        text-transform: uppercase
+        text-align: center
+        color: $content-main
+        span
+            color: $content-color
+    &__subtitle
+        margin: 0 0 24px
+        font: 400 16px / 1.5 $font-family
+        text-align: center
+        color: $content-main
+    &__text
+        margin: 12px 0 0
+        font: 700 16px / 1.5 $font-family
+        color: $content-main
+        text-align: center
+    &__wrapper
+        margin: 140px 0 0
+        display: grid
+        grid-template-columns: 614px 1fr
+        gap: 100px
+    &__btn
+        display: grid
+        grid-template-columns: 100%
+        gap: 16px
+        button
+            max-width: 100%
+    &__info
+        h3
+            text-align: left
+        &_text
+            margin: 40px 0 0
+            display: grid
+            grid-template-columns: 36px 1fr
+            gap: 16px
+            p
+                font: 400 18px / 1.5 $font-family
+                color: $content-main
+                span
+                    font-weight: 700
+            div
+                box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.48)
+                background: linear-gradient(311deg, #75c0eb 0%, #1e86c2 100%)
+                border: none
+                display: block
+                width: 36px
+                height: 36px
+                border: 1px solid #73bbe5
+                border-radius: 10px
+                position: relative
+                display: flex
+                justify-content: center
+                align-items: center
+                margin: 4px 0 0
+                img
+                    width: 20px
+                    height: 20px
+                &::before
+                    content: ''
+                    display: block
+                    position: absolute
+                    z-index: -1
+                    width: 100%
+                    height: 38px
+                    border-radius: 500px
+                    filter: blur(41.15754699707031px)
+                    background: radial-gradient(102.92% 371.47% at 50% 50%, #5daddc 0%, rgba(93, 173, 220, 0.6) 64.48%, rgba(93, 173, 220, 0) 100%)
+                    opacity: 0.8
+                    transition: all .3s
+                    bottom: -8px
+                    left: 0
+
+.unique
+    padding: 160px 0 120px
+    h2
+        font: 500 80px / 1 $second-family
+        text-transform: uppercase
+        text-align: center
+        color: $content-main
+    &__wrapper
+        margin: 48px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 40px
+    &__item
+        position: relative
+        border-radius: 32px
+        background: linear-gradient(270deg, #07151a 0%, #07151a 57.53%, #172429 100%)
+        height: 380px
+        overflow: hidden
+        z-index: 2
+        padding: 24px
+        img
+            position: absolute
+            inset: 0
+            display: block
+            width: 100%
+            height: 100%
+            object-fit: cover
+            z-index: -1
+    &__info
+        background: $white
+        position: relative
+        padding: 24px 24px 40px
+        border-radius: 24px
+    &__text
+        font: 400 16px / 1.5 $font-family
+        text-align: center
+        color: $content-main
+        span
+            font-weight: 700
+    &__num
+        border: 5px solid #143652
+        box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.48)
+        background: linear-gradient(311deg, #75c0eb 0%, #1e86c2 100%), url("path_to_image")
+        border-radius: 10px
+        width: 36px
+        height: 36px
+        display: flex
+        justify-content: center
+        align-items: center
+        font: 500 22px / 1.5 $second-family
+        text-align: center
+        color: $white
+        position: absolute
+        bottom: 0
+        left: 50%
+        transform: translate(-50%, 50%)
+    &::after
+        content: ''
+        width: 628px
+        height: 371px
+        background: url('../img/school_con.png') center no-repeat
+        background-size: cover
+        position: absolute
+        display: block
+        top: -10px
+        right: -350px
+        z-index: -1
+        opacity: 0.7
+        transform: rotate(86deg)
+    &::before
+        content: ''
+        width: 628px
+        height: 371px
+        background: url('../img/school_con.png') center no-repeat
+        background-size: cover
+        position: absolute
+        display: block
+        top: 50%
+        left: -350px
+        z-index: -1
+        opacity: 0.7
+        transform: rotate(-86deg)
