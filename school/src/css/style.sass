@@ -1704,14 +1704,16 @@ section
 
 @media ( max-width: 1024px )
     .nav
+        transition: opacity .3s
         &__list
             display: none
         &.container
             &__block
                 max-height: 100%
+                transition: all .3s
         &__hum
             display: flex
-            justify-content: space-between
+            justify-content: center
             flex-direction: column
             width: 30px
             height: 20px
@@ -1726,9 +1728,16 @@ section
                 width: 100%
                 height: 1px
                 position: relative
-                // transition: all .3s
+                transition: all .3s
                 background: #fff
+            &::before
+                position: absolute
+                top: 0
+            &::after
+                position: absolute
+                top: 100%
         &.active
+            opacity: 1
             position: fixed
             top: 0
             left: 0
@@ -1751,7 +1760,7 @@ section
             .nav
                 &__hum
                     span
-                        display: none
+                        opacity: 0
                     &::before,
                     &::after
                         position: absolute
