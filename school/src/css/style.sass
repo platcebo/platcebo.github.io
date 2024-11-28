@@ -8,6 +8,27 @@ $content-color: #5daddc
 $font-family: "Manrope", sans-serif
 $second-family: "Alumni Sans", sans-serif
 $third-family: "Alana Pro RUS", sans-serif
+@keyframes canAnim 
+    0%
+        transform: scale(1)
+    50%
+        transform: scale(1.1)
+    100%
+        transform: scale(1)
+@keyframes stepAnim 
+    0%
+        transform: translateX(-50%) scale(1)
+    50%
+        transform: translateX(-50%) scale(1.05)
+    100%
+        transform: translateX(-50%) scale(1)
+@keyframes opacityAnim 
+    0%
+        opacity: 1
+    50%
+        opacity: 0
+    100%
+        opacity: 1
 body
     position: relative
     overflow-x: hidden
@@ -89,6 +110,8 @@ section
     position: relative
     padding: 16px 0 
     overflow: hidden
+    &__hum
+        display: none
     .container
         display: flex
         justify-content: space-between
@@ -112,6 +135,7 @@ section
                 mix-blend-mode: color-dodge
                 opacity: 0.8
                 transform: rotate(110deg)
+                animation: opacityAnim 3s 0s infinite
             &::before
                 content: ''
                 width: 750px
@@ -126,6 +150,7 @@ section
                 mix-blend-mode: color-dodge
                 opacity: 0.8
                 transform: rotate(-110deg)
+                animation: opacityAnim 3s 0s infinite
     &__logo
         display: block
         width: 245px
@@ -168,6 +193,7 @@ section
                 mix-blend-mode: color-dodge
                 opacity: 0.8
                 transform: rotate(12deg)
+                animation: opacityAnim 3s 0s infinite
             &::before
                 content: ''
                 width: 1105px
@@ -182,6 +208,7 @@ section
                 mix-blend-mode: color-dodge
                 opacity: 0.8
                 transform: rotate(-50deg)
+                animation: opacityAnim 3s 0s infinite
     h1
         font: 500 106px / 0.9 $second-family
         text-transform: uppercase
@@ -193,6 +220,8 @@ section
         top: 24px
         right: 33px
         width: 272px
+        img
+            width: 100%
     &__logo
         position: absolute
         top: 201px
@@ -243,6 +272,10 @@ section
         z-index: 2
         img
             width: 24px
+            transition: all .3s
+        &:hover
+            img
+                transform: scale(1.3)
     &__wrapper
         display: grid
         grid-template-columns: 1fr 1fr
@@ -279,16 +312,21 @@ section
         backdrop-filter: blur(32px)
         background: linear-gradient(225deg, rgba(163, 221, 255, 0.32) 0%, rgba(92, 169, 214, 0.32) 100%)
         box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.6)
+        transition: all .3s
         p
             font: 700 18px / 1.5 $font-family
             color: $content-white
-        a
-            font: 700 14px / 1.5 $font-family
-            text-decoration: underline
-            text-decoration-skip-ink: none
-            color: $content-white
+            transition: all .3s
+            &+p
+                font: 700 14px / 1.5 $font-family
+                text-decoration: underline
+                text-decoration-skip-ink: none
         &:nth-child(1)
             grid-column: 2/3
+        &:hover
+            box-shadow: 0px 0px 0px 3px hsla(0, 0%, 100%, .6)
+            p
+                color: #69c5ec
 
 .school-desc
     padding: 160px 0 
@@ -309,32 +347,43 @@ section
         color: $content-main
         span
             font-weight: 700
-    &::after
-        content: ''
-        width: 628px
-        height: 371px
-        background: url('../img/school_con.png') center no-repeat
-        background-size: cover
-        position: absolute
-        display: block
-        top: -10px
-        right: -350px
-        z-index: -1
-        opacity: 0.7
-        transform: rotate(86deg)
-    &::before
-        content: ''
-        width: 628px
-        height: 371px
-        background: url('../img/school_con.png') center no-repeat
-        background-size: cover
-        position: absolute
-        display: block
-        top: 20px
-        left: -350px
-        z-index: -1
-        opacity: 0.7
-        transform: rotate(-86deg)
+    &__bg
+        &_right
+            content: ''
+            width: 628px
+            height: 371px
+            // background: url('../img/school_con.png') center no-repeat
+            background-size: cover
+            position: absolute
+            display: block
+            top: -10px
+            right: -350px
+            z-index: -1
+            opacity: 0.7
+            transform: rotate(90deg)
+            img
+                width: 100%
+                height: 100%
+                min-height: 100%
+                object-fit: contain
+        &_left
+            content: ''
+            width: 628px
+            height: 371px
+            // background: url('../img/school_con.png') center no-repeat
+            background-size: cover
+            position: absolute
+            display: block
+            top: 20px
+            left: -350px
+            z-index: -1
+            opacity: 0.7
+            transform: rotate(-90deg) scale(-1)
+            img
+                width: 100%
+                height: 100%
+                min-height: 100%
+                object-fit: contain
 
 .can
     h2
@@ -356,6 +405,25 @@ section
         height: 100%
         z-index: -1
         object-fit: cover
+        border-radius: 32px
+        overflow: hidden
+        &_pic
+            height: 100%
+            min-height: 100%
+            width: 100%
+            object-fit: cover
+        &_left
+            width: 35%
+            position: absolute
+            bottom: 0
+            left: 4%
+            animation: canAnim 5s 0s infinite
+        &_right
+            width: 35%
+            position: absolute
+            bottom: 0
+            right: 4%
+            animation: canAnim 5s 0s infinite
     h3
         font: 500 48px / 1 $second-family
         text-transform: uppercase
@@ -377,13 +445,16 @@ section
         margin: 140px 0 0
         display: grid
         grid-template-columns: 614px 1fr
-        gap: 100px
     &__btn
+        max-width: 360px
+        margin: 0 0 0 auto
         display: grid
         grid-template-columns: 100%
         gap: 16px
+        width: 100%
         button
             max-width: 100%
+            gap: 17px
     &__info
         h3
             text-align: left
@@ -485,32 +556,43 @@ section
         bottom: 0
         left: 50%
         transform: translate(-50%, 50%)
-    &::after
-        content: ''
-        width: 628px
-        height: 371px
-        background: url('../img/school_con.png') center no-repeat
-        background-size: cover
-        position: absolute
-        display: block
-        top: -10px
-        right: -350px
-        z-index: -1
-        opacity: 0.7
-        transform: rotate(86deg)
-    &::before
-        content: ''
-        width: 628px
-        height: 371px
-        background: url('../img/school_con.png') center no-repeat
-        background-size: cover
-        position: absolute
-        display: block
-        top: 50%
-        left: -350px
-        z-index: -1
-        opacity: 0.7
-        transform: rotate(-86deg)
+    &__bg
+        &_right
+            content: ''
+            width: 628px
+            height: 371px
+            // background: url('../img/school_con.png') center no-repeat
+            background-size: cover
+            position: absolute
+            display: block
+            top: -10px
+            right: -350px
+            z-index: -1
+            opacity: 0.7
+            transform: rotate(90deg)
+            img
+                width: 100%
+                height: 100%
+                min-height: 100%
+                object-fit: contain
+        &_left
+            content: ''
+            width: 628px
+            height: 371px
+            // background: url('../img/school_con.png') center no-repeat
+            background-size: cover
+            position: absolute
+            display: block
+            top: 50%
+            left: -350px
+            z-index: -1
+            opacity: 0.7
+            transform: rotate(-90deg) scale(-1)
+            img
+                width: 100%
+                height: 100%
+                min-height: 100%
+                object-fit: contain
 
 .code
     .container
@@ -519,6 +601,21 @@ section
             background-size: cover
             position: relative
             z-index: 2
+            &::before
+                content: ''
+                width: 750px
+                height: 400px
+                background: url('../img/nav_con.png') center no-repeat
+                background-size: cover
+                position: absolute
+                display: block
+                top: -100px
+                left: -200px
+                z-index: -1
+                mix-blend-mode: color-dodge
+                opacity: 0.8
+                transform: rotate(-80deg)
+                animation: opacityAnim 3s 0s infinite
     &__row
         display: grid
         grid-template-columns: 1fr 624px
@@ -625,6 +722,7 @@ section
                 bottom: 0
                 left: 50%
                 transform: translateX(-50%)
+                animation: stepAnim 5s 0s infinite
         &_num
             font: 700 70px / 1.15 $font-family
             letter-spacing: -0.04em
@@ -694,26 +792,25 @@ section
         display: grid
         grid-template-columns: 1fr 1fr 1fr
         gap: 40px
-    &__item
-        border: 2px solid $white
-        border-radius: 32px
-        padding: 32px
-        box-shadow: 0 6px 24px 0 rgba(175, 214, 237, 0.12)
-        background: #fafcff
     &__name
         font: 500 32px / 1 $second-family
         text-transform: uppercase
         text-align: center
         color: $content-main
+        transition: all .3s
     &__img
         position: relative
         border-radius: 20px
         overflow: hidden
         margin: 20px 0 0
+        z-index: 1
+        transition: all .3s
         img
             width: 100%
             height: 240px
             object-fit: cover   
+            transition: all .3s
+            z-index: -1
         p
             font: 600 14px / 1.5 $font-family
             color: $content-main
@@ -724,6 +821,7 @@ section
             position: absolute
             top: 16px
             right: 16px
+            z-index: 2
     &__row
         margin: 20px 0 0
         display: flex
@@ -763,8 +861,6 @@ section
         text-decoration-skip-ink: none
         color: $content-main
         transition: all .3s
-        &:hover
-            color: #73bbe5
     &__more
         margin: 48px auto 0
     &__title
@@ -805,11 +901,11 @@ section
         margin: 48px 0 0
         overflow: visible  
     &__bg
-        &::after
+        &_right
             content: ''
             width: 628px
             height: 371px
-            background: url('../img/school_con.png') center no-repeat
+            // background: url('../img/school_con.png') center no-repeat
             background-size: cover
             position: absolute
             display: block
@@ -817,12 +913,17 @@ section
             right: -350px
             z-index: -1
             opacity: 0.7
-            transform: rotate(86deg)
-        &::before
+            transform: rotate(90deg)
+            img
+                width: 100%
+                height: 100%
+                min-height: 100%
+                object-fit: contain
+        &_left
             content: ''
             width: 628px
             height: 371px
-            background: url('../img/school_con.png') center no-repeat
+            // background: url('../img/school_con.png') center no-repeat
             background-size: cover
             position: absolute
             display: block
@@ -830,7 +931,28 @@ section
             left: -350px
             z-index: -1
             opacity: 0.7
-            transform: rotate(-86deg) 
+            transform: rotate(-90deg) scale(-1)
+            img
+                width: 100%
+                height: 100%
+                min-height: 100%
+                object-fit: contain
+    &__item
+        border: 2px solid $white
+        border-radius: 32px
+        padding: 32px
+        box-shadow: 0 6px 24px 0 rgba(175, 214, 237, 0.12)
+        background: #fafcff
+        transition: all .3s
+        &:hover
+            box-shadow: 0 6px 24px 0 #73bbe5
+            .practic
+                &__link,
+                &__name
+                    color: #73bbe5
+                &__img
+                    img
+                        transform: scale(1.1)
 
 .consul
     padding: 160px 0 0
@@ -1009,11 +1131,11 @@ section
             margin: 8px 0 0
             font: 500 14px / 1.4 $font-family
             color: $content-secondary
-    &::after
+    &__bg_right
         content: ''
         width: 628px
         height: 371px
-        background: url('../img/school_con.png') center no-repeat
+        // background: url('../img/school_con.png') center no-repeat
         background-size: cover
         position: absolute
         display: block
@@ -1021,7 +1143,12 @@ section
         right: -350px
         z-index: -1
         opacity: 0.7
-        transform: rotate(86deg)
+        transform: rotate(90deg)
+        img
+            width: 100%
+            height: 100%
+            min-height: 100%
+            object-fit: contain
         
 .expert
     padding: 160px 0 0
@@ -1113,14 +1240,17 @@ section
         text-decoration-skip-ink: none
         color: $content-main
         text-align: right
+        transition: all .3s
         img
             width: 16px
             height: 16px
-    &::before
+        &:hover
+            color: #73bbe5
+    &__bg_left
         content: ''
         width: 628px
         height: 371px
-        background: url('../img/school_con.png') center no-repeat
+        // background: url('../img/school_con.png') center no-repeat
         background-size: cover
         position: absolute
         display: block
@@ -1128,7 +1258,12 @@ section
         left: -350px
         z-index: -1
         opacity: 0.7
-        transform: rotate(-86deg) 
+        transform: rotate(-90deg) scale(-1)
+        img
+            width: 100%
+            height: 100%
+            min-height: 100%
+            object-fit: contain
 
 .comment
     padding: 160px 0 0
@@ -1184,6 +1319,11 @@ section
         margin: 16px 0 0
         font: 400 16px / 1.5 $font-family
         color: $content-main
+        overflow: hidden
+        display: -webkit-box
+        -webkit-line-clamp: 6
+        line-clamp: 6
+        -webkit-box-orient: vertical
     &__link
         display: block
         width: max-content
@@ -1195,6 +1335,40 @@ section
         transition: all .3s
         &:hover
             color: #69c5ec
+
+.comment-modal
+    padding: 30px 20px
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    overflow-y: auto
+    z-index: 10
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    &__overflow
+        z-index: -1
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: #000
+        opacity: .5
+    .comment
+        &__slide
+            margin: auto !important
+            height: max-content
+            width: 100%
+            max-width: 1160px
+        &__text
+            -webkit-line-clamp: none
+            line-clamp: none
+            display: block
+        &__link
+            display: none
 
 .article
     padding: 160px 0 0
@@ -1213,32 +1387,25 @@ section
             height: 1px
             min-height: 100%
             object-fit: cover
-    &__item
-        margin: 48px 0 0
-        display: grid
-        &_right
-            grid-template-columns: 1fr calc( 50% + 40px )
-            .article__prev
-                margin: 0 -40px 0 0
-        &_left
-            grid-template-columns: calc( 50% + 40px ) 1fr
-            .article__prev
-                margin: 0 0 0 -40px
+            transition: all .3s
     &__block
         padding: 48px
         border: 2px solid $white
         border-radius: 32px
         box-shadow: 0 6px 24px 0 rgba(175, 214, 237, 0.12)
         background: #fafcff
+        transition: all .3s
     &__name
         display: grid
         grid-template-columns: 36px 1fr
         gap: 16px
         align-items: center
+        transition: all .3s
         p
             font: 500 32px / 1 $second-family
             text-transform: uppercase
             color: $content-main
+            transition: all .3s
         span
             width: 36px
             height: 36px
@@ -1266,8 +1433,6 @@ section
         text-decoration-skip-ink: none
         color: $content-main
         transition: all .3s
-        &:hover
-            color: #69c5ec
     &__autor
         display: grid
         grid-template-columns: 40px 1fr
@@ -1285,11 +1450,11 @@ section
                 color: $content-main
     &__more
         margin: 48px auto 0
-    &::before
+    &__bg_left
         content: ''
         width: 628px
         height: 371px
-        background: url('../img/school_con.png') center no-repeat
+        // background: url('../img/school_con.png') center no-repeat
         background-size: cover
         position: absolute
         display: block
@@ -1297,7 +1462,35 @@ section
         left: -350px
         z-index: -1
         opacity: 0.7
-        transform: rotate(-86deg) 
+        transform: rotate(-90deg) scale(-1)
+        img
+            width: 100%
+            height: 100%
+            min-height: 100%
+            object-fit: contain
+    &__item
+        margin: 48px 0 0
+        display: grid
+        &_right
+            grid-template-columns: 1fr calc( 50% + 40px )
+            .article__prev
+                margin: 0 -40px 0 0
+        &_left
+            grid-template-columns: calc( 50% + 40px ) 1fr
+            .article__prev
+                margin: 0 0 0 -40px
+        &:hover
+            .article
+                &__link
+                    color: #69c5ec
+                &__name
+                    p
+                        color: #69c5ec
+                &__prev
+                    img
+                        transform: scale(1.1)
+                &__block
+                    box-shadow: 0 6px 24px 0 #69c5ec
 
 .footer
     padding: 160px 0 24px
@@ -1329,6 +1522,9 @@ section
         a
             font: 500 16px / 1.5 $font-family
             color: $content-white
+            transition: all .3s
+            &:hover
+                color: #69c5ec
     &__func
         display: flex
         flex-direction: column
@@ -1361,20 +1557,426 @@ section
             justify-content: center
             align-items: center
             backdrop-filter: blur(50px)
-            background: linear-gradient(134deg, rgba(192, 231, 255, 0.2) 0%, rgba(60, 123, 163, 0.2) 100%)
+            background: rgba(192, 231, 255, 0.2)
             transition: all .3s
-            img
+            svg
                 width: 24px
                 height: 24px
                 transition: all .3s
+                path
+                    transition: all .3s
             &:hover
-                img
+                svg
                     transform: scale(1.2)
+                    path
+                        fill-opacity: 1
     &__policy
         margin: 56px 0 0
         font: 400 14px / 1.3 $font-family
         text-decoration: underline
         text-decoration-skip-ink: none
         color: #d1eefb
+        transition: all .3s
+        &:hover
+            color: #69c5ec
     &__desc
         display: none
+
+@media ( max-width: 1200px )
+    .header
+        .container
+            grid-template-columns: 100%
+        &__info
+            max-width: 600px
+        &__wrapper
+            grid-template-columns: 1fr 1fr 1fr
+            padding: 0 0 42px 0
+            &_text
+                transform: none
+                bottom: 0
+                left: 0
+                width: 100%
+                top: auto
+        &__item
+            grid-column: auto !important
+    .code
+        &__row
+            grid-template-columns: 100%
+        &__step
+            height: auto
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr 1fr
+            gap: 32px
+            &_item
+                position: relative !important
+                inset: auto !important
+                padding: 0 24px 0 0
+                border-right: 1px solid $white
+                width: 100%
+                max-width: 100%
+                &:nth-child(4)
+                    padding: 0
+                    border: none
+            &_bg
+                display: none
+            &_num
+                display: none
+        &__title
+            max-width: 100%
+    .practic
+        &__item
+            padding: 32px 12px
+    .consul
+        &__block
+            padding: 32px
+            &_wrapper
+                gap: 24px
+        &__need
+            padding: 32px
+        &__help
+            align-items: start
+            &_wrapper
+                grid-template-columns: 100%
+            &_item
+                max-width: 100%
+        &__title
+            grid-template-columns: 100%
+    .footer
+        &__list
+            gap: 80px
+            row-gap: 16px
+
+@media ( max-width: 1024px )
+    .nav
+        &__list
+            display: none
+        &.container
+            &__block
+                max-height: 100%
+        &__hum
+            display: flex
+            justify-content: space-between
+            flex-direction: column
+            width: 30px
+            height: 20px
+            margin: 0 0 0 auto
+            cursor: pointer
+            position: relative
+            span,
+            &::before,
+            &::after
+                content: ''
+                display: block
+                width: 100%
+                height: 1px
+                position: relative
+                // transition: all .3s
+                background: #fff
+        &.active
+            position: fixed
+            top: 0
+            left: 0
+            width: 100vw
+            height: 100vh
+            background: $background
+            z-index: 10
+            .container
+                flex-wrap: wrap
+                &__block
+                    height: calc( 100vh - 32px )
+                    background: url('../img/consul_bg.jpg') center no-repeat
+                    background-size: cover
+                    &::before
+                        transform: rotate(-120deg)
+                        top: auto
+                        bottom: -100px
+                    &::after
+                        transform: rotate(80deg)
+            .nav
+                &__hum
+                    span
+                        display: none
+                    &::before,
+                    &::after
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%) rotate(45deg)
+                    &::after
+                        transform: translate(-50%, -50%) rotate(-45deg)
+                &__list
+                    display: flex
+                    flex-direction: column
+                    width: 100%
+                    order: 2
+                    margin: 30px 0 0
+                    gap: 20px
+                    align-items: flex-start
+    .container
+        &__block
+            padding: 30px 0
+    .header
+        .container
+            &__block
+                background: url('../img/consul_bg.jpg') center no-repeat
+                background-size: cover
+        &__info
+            max-width: 270px
+            display: flex
+            flex-direction: column
+        h1
+            font-size: 50px
+            margin: 12px 0 0
+        &__banner
+            order: -1
+            width: 100%
+            right: auto
+            top: auto
+            position: relative
+        &__logo
+            position: relative
+            inset: auto
+            margin: 15px 0 0
+        &__row
+            grid-template-columns: 100%
+        &__item
+            padding: 24px
+            min-height: 180px
+    .can
+        h2
+            font-size: 36px
+        h3
+            font-size: 28px
+        .container
+            &__block
+                height: 300px
+        &__bg
+            img
+                filter: brightness(110%)
+            &_right
+                right: -5%
+            &_left
+                left: -5%
+        &__text
+            font-size: 13px
+        &__wrapper
+            margin: 50px 0 0
+            grid-template-columns: 1fr 1fr
+            gap: 24px
+    .school-desc
+        padding: 100px 0 
+        h2
+            font-size: 36px
+        p
+            margin: 20px 0 0
+    .unique
+        padding: 100px 0
+        h2
+            font-size: 36px
+        &__wrapper
+            grid-template-columns: 100%
+            gap: 24px
+            max-width: 380px
+            margin: 20px auto 0
+    .code
+        h2
+            font-size: 36px
+        &__step
+            grid-template-columns: 1fr 1fr
+            &_item
+                &:nth-child(2)
+                    border: none
+        &__title
+            &_text
+                margin: 15px 0 0
+    .practic
+        padding: 100px 0 0
+        h2
+            font-size: 36px
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+            margin: 20px 0 0
+    .consul
+        padding: 100px 0 0
+        h2
+            font-size: 36px
+        &__wrapper
+            margin: 20px 0 0
+            grid-template-columns: 100%
+            background-position: bottom
+            background-size: cover
+        &__block
+            &_arrow
+                bottom: 0
+                left: 50%
+                transform: translate(-50%, 50%) rotate(90deg)
+                top: auto
+        &__help
+            margin: 20px 0 0
+            grid-template-columns: 100%
+            h3
+                max-width: 100%
+    .expert
+        padding: 80px 0 0
+        h2
+            font-size: 36px
+        &__wrapper
+            margin: 20px 0 0
+            max-width: 100%
+            gap: 20px
+        &__info
+            padding: 20px
+        &__row
+            flex-direction: column
+            gap: 10px
+            align-items: flex-start
+        &__link
+            text-align: left
+        &__item
+            padding: 250px 0 0
+    .comment
+        padding: 80px 0 0
+        h2
+            font-size: 36px
+        &__slider
+            margin: 20px 0 0
+        &__slide
+            padding: 20px 
+            max-width: 400px
+    .article
+        padding: 80px 0 0
+        h2
+            font-size: 36px
+        &__item
+            margin: 20px 0 0
+        &__block
+            padding: 20px
+    .practic
+        &__title
+            grid-template-columns: 100%
+            gap: 20px
+    .footer
+        padding: 80px 0 24px
+        .container
+            flex-direction: column
+            gap: 20px
+        &__logo
+            p
+                display: none
+            img
+                margin: 0
+        &__list
+            grid-template-columns: 1fr 1fr
+            max-width: 100%
+            width: 100%
+            gap: 20px
+        &__func
+            align-items: flex-start
+        &__soc
+            margin: 20px 0 0
+        &__policy
+            margin: 20px 0 0
+        &__desc
+            display: block
+            font: 400 14px / 1.3 $font-family
+            color: #d1eefb
+            margin: 20px 0 0
+        
+@media ( max-width: 768px )
+    .header
+        &__wrapper
+            grid-template-columns: 100%
+    .school-desc
+        padding: 80px 0
+        h2
+            font-size: 28px
+    .can
+        &__bg
+            img
+                filter: brightness(50%)
+            &_left
+                display: none
+            &_right
+                display: none
+        .container
+            &__block
+                height: auto
+                h3
+                    color: $white
+        &__subtitle
+            margin: 0 0 15px
+            color: $white
+        &__text
+            color: $white
+        &__wrapper
+            grid-template-columns: 100%
+        &__btn
+            max-width: 100%
+        &__info
+            &_text
+                margin: 20px 0 0
+    .code
+        &__wrapper
+            grid-template-columns: 100%
+        &__step
+            grid-template-columns: 100%
+            &_item
+                border: none !important
+                border-bottom: 1px solid #fff !important
+                padding: 0 0 12px
+                &:nth-child(4)
+                    border: none !important
+    .practic
+        &__wrapper
+            grid-template-columns: 100%
+            gap: 20px
+    .consul
+        &__block,
+        &__need
+            padding: 20px
+            h3
+                font-size: 24px
+        &__need
+            &_wrapper
+                grid-template-columns: 100%
+                gap: 20px
+        &__help
+            h3
+                font-size: 24px
+    .expert
+        &__wrapper
+            grid-template-columns: 100%
+    .comment
+        &__slide
+            max-width: calc( 100vw - 40px )
+    .article
+        &__item
+            grid-template-columns: 100%
+        &__prev
+            order: -1
+            height: 200px
+            margin: 0 0 -30px !important
+        &__name
+            p
+                font-size: 24px
+
+@media ( max-width: 600px )
+    .footer
+        &__list
+            grid-template-columns: 100%
+    .consul
+        &__block
+            &_wrapper
+                grid-template-columns: 100%
+                margin: 10px 0 0
+    .header
+        &__wrapper
+            &_text
+                display: none
+    .nav
+        &__logo
+            max-width: 150px
+    .container
+        padding: 0 10px
+        &__block
+            width: calc( 100% - 20px )
