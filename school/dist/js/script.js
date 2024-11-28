@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
         breakpoints: {
             600: {
                 spaceBetween: 40,
-                slidesPerView: 3
             },
         }
     });  
@@ -71,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 commentNode.innerHTML = '<div class="comment-modal__overflow"></div>' + item.outerHTML
                 document.body.append(commentNode);
                 document.body.classList.add('fix');
+                document.documentElement.classList.add('fix');
             })
         })
         document.body.addEventListener('click',(event)=>{
@@ -78,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if(target.closest('div.comment-modal__overflow') || target.closest('div.comment-modal__close')) {
                 commentNode.remove()
                 document.body.classList.remove('fix');
+            document.documentElement.classList.remove('fix');
             }
         })
     }
@@ -89,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navHum.addEventListener('click', ()=>{
             nav.classList.toggle('active');
             document.body.classList.toggle('fix');
+            document.documentElement.classList.toggle('fix');
         })
     }
 
