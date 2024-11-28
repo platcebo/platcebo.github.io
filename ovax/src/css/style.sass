@@ -46,24 +46,27 @@ body
             background: url('../img/arrow.svg') center no-repeat
             background-size: contain
             transition: all .3s
+            opacity: 0
+            filter: invert(1)
         &::before
+            border-radius: 50px
             content: ''
             display: block
             position: absolute
-            top: 0
-            left: 0
+            top: 0%
+            left: 0%
             width: 100%
             height: 100%
-            transform: translateY(-100%)
+            transform: scale(0) 
             background: linear-gradient(90deg, #87aedb 0%, #c9e1ff 100%)
             z-index: -1
             transition: all .3s
         &:hover
             color: #000
             &::after
-                filter: invert(1)
+                opacity: 1
             &::before
-                transform: translateY(0%)
+                transform: scale(1)
     &__wht
         border-radius: 50px
         padding: 20px 30px
@@ -141,16 +144,25 @@ section
                     background: url('../img/droplist_arrow.svg') center no-repeat
                     background-size: contain
     &__enter
-        border-radius: 50px
         padding: 18px 28px
-        border: none
-        background: linear-gradient(90deg, #87aedb 0%, #c9e1ff 100%)
         font: 500 16px $font-family
         color: #000
         display: grid
         grid-template-columns: auto 10px
         gap: 8px
         align-items: center
+        backdrop-filter: blur(20px)
+        background: linear-gradient( rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%)
+        text-align: center
+        color: #fff
+        width: max-content
+        z-index: 2
+        border: none
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 1px 0 0 1px rgba(255, 255, 255, 0.3)
+        position: relative
+        overflow: hidden
+        transition: all .3s
+        border-radius: 50px
         &::after
             content: ''
             display: block
@@ -158,7 +170,27 @@ section
             height: 10px
             background: url('../img/link_arrow.svg') center no-repeat
             background-size: contain
-
+            filter: invert(1)
+            transition: all .3s
+        &::before
+            border-radius: 50px
+            content: ''
+            display: block
+            position: absolute
+            top: 0%
+            left: 0%
+            width: 100%
+            height: 100%
+            transform: scale(0) 
+            background: linear-gradient(90deg, #87aedb 0%, #c9e1ff 100%)
+            z-index: -1
+            transition: all .3s
+        &:hover
+            color: #000
+            &::after
+                filter: invert(0)
+            &::before
+                transform: scale(1)
 .header
     padding: 130px 0 
     position: relative
@@ -337,14 +369,27 @@ section
         letter-spacing: 0.25em
         text-transform: uppercase
         text-align: center
-        color: #87aedb
+        color: #fff
     h2
         margin: 10px 0 0
         font: 600 40px $font-family
         text-align: center
-        color: #fff
+        color: #87aedb
+    h1
+        font: 600 48px $font-family
+        background: linear-gradient(90deg, #87aedb 0%, #c9e1ff 100%)
+        background-clip: text
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        text-align: center
 
 .prof
+    .title
+        p
+            color: #87aedb
+        h2
+            margin: 10px 0 0
+            color: #fff
     .star-left
         animation-delay: 4s
         left: 300px
@@ -1682,6 +1727,8 @@ section
     .title
         h2
             font-size: 24px
+        h1
+            font-size: 28px
     .btn
         &__blue,
         &__wht
@@ -1926,3 +1973,183 @@ section
     to 
         transform: translate(0)
         fill: var(--color-accent-third)
+
+.breadcrumbs
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 10px
+    flex-wrap: wrap
+    margin: 0 0 35px
+    a
+        font: 400 16px $font-family
+        color: #ffffff99
+        transition: all .3s
+        display: flex
+        justify-content: center
+        align-items: center
+        &:hover
+            color: rgb(255, 255, 255)
+        &::after
+            content: '»'
+            display: block
+            font: 400 16px $font-family
+            color: #fff
+            opacity: .6
+            margin: 0 0 0 10px
+        &:last-child
+            &::after
+                display: none
+
+.algorithm
+    &__title
+        h2,
+        p
+            text-align: left
+    &__wrapper
+        margin: 100px 0 0
+        display: grid
+        grid-template-columns: 475px 1fr
+        gap: 46px
+    &__text
+        margin: 50px 0 0
+        display: grid
+        grid-template-columns: 255px 190px 
+        gap: 30px
+        font: 400 20px $font-family
+        color: #fff
+        opacity: 0.6
+    &__img
+        width: 100%
+
+.profit
+    &__subtitle
+        margin: 30px 0 0
+        font: 400 20px $font-family
+        text-align: center
+        color: #fff
+        opacity: 0.6
+    &__wrapper
+        margin: 88px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 88px
+    &__img
+        position: relative
+        img
+            width: 100%
+            margin: -100px 0 -20px
+            height: 1px
+            min-height: calc( 100% + 120px )
+            object-fit: cover
+            border-radius: 14px
+    &__num
+        font: 600 16px $font-family
+        letter-spacing: 0.25em
+        text-transform: uppercase
+        color: #87aedb !important
+    &__name
+        margin: 18px 0 0
+        font: 600 32px $font-family
+        color: #fff
+    &__text
+        margin: 30px 0 0
+        font: 400 20px $font-family
+        color: #fff
+        opacity: .6
+    &__item
+        display: grid
+        border: 1.50px solid rgba(255, 255, 255, 0.1)
+        border-radius: 20px
+        backdrop-filter: blur(20px)
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%)
+        padding: 55px 50px
+        box-shadow: 0 0 0 2px hsla(0,0%,100%,.1),1px 0 0 1px hsla(0,0%,100%,.3)
+        &_left
+            grid-template-columns: 465px 1fr
+            gap: 40px
+        &_right
+            grid-template-columns: 1fr 465px
+            gap: 40px
+        .btn__blue
+            margin: 39px 0 0
+        &_wht
+            border: 1.50px solid rgba(255, 255, 255, 0.1)
+            backdrop-filter: blur(20px)
+            background: url("../img/profit_bg.jpg") center no-repeat     
+            background-size: cover
+            p
+                color: #0d1b29
+
+.money
+    &__wrapper
+        margin: 60px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 214px
+        position: relative
+        &::before
+            content: ''
+            height: 100%
+            width: 1px
+            background: rgba(255, 255, 255, 0.05)
+            position: absolute
+            top: 0
+            left: 50%
+            display: block
+    &__item
+        display: flex
+        flex-direction: column
+        .btn__blue
+            margin: 30px auto 0
+    &__emo
+        height: 109px
+        width: 100%
+        object-fit: contain
+        object-position: center
+    &__name
+        margin: 30px 0 0
+        font: 600 32px $font-family
+        text-align: center
+        color: #fff
+    &__text
+        margin: 20px 0 auto
+        font: 400 16px $font-family
+        text-align: center
+        color: #fff
+        opacity: 0.6
+    &__phone
+        margin: 8px auto 0
+        width: 100%
+        max-width: 303px
+
+@media ( max-width: 1024px )
+    .algorithm
+        &__wrapper
+            grid-template-columns: 100%
+            margin: 50px 0 0
+        &__text
+            grid-template-columns: 1fr 1fr
+    .profit
+        &__img
+            order: 2
+            img
+                margin: 0
+                min-height: 100%
+                height: auto
+        &__item
+            grid-template-columns: 100%
+    .money
+        &__wrapper
+            gap: 20px
+
+@media ( max-width: 600px )
+    .algorithm
+        &__text
+            grid-template-columns: 100%
+    .profit
+        &__item
+            padding: 24px
+    .money
+        &__wrapper
+            grid-template-columns: 100%
