@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             window.addEventListener('scroll', ()=>{
                 let animX = item.getBoundingClientRect().top - document.documentElement.clientHeight
                 if(animX < 0 && item.getBoundingClientRect().bottom > 0) {
-                    item.style.transform = 'translateX('+ item.getBoundingClientRect().top/15 +'%)'
+                    item.style.transform = 'translateX('+ item.getBoundingClientRect().top/30 +'%)'
                 }
             })
         })
