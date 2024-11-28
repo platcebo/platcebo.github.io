@@ -511,3 +511,870 @@ section
         z-index: -1
         opacity: 0.7
         transform: rotate(-86deg)
+
+.code
+    .container
+        &__block
+            background: url('../img/code_bg.jpg') top no-repeat
+            background-size: cover
+            position: relative
+            z-index: 2
+    &__row
+        display: grid
+        grid-template-columns: 1fr 624px
+        gap: 32px
+    h2
+        font: 500 80px / 1 $second-family
+        text-transform: uppercase
+        color: $content-white
+    &__subtitle
+        margin: 0 0 16px
+        font: 700 14px / 1.5 $font-family
+        letter-spacing: 0.16em
+        text-transform: uppercase
+        color: #7ac7ff
+    &__title
+        max-width: 431px
+        &_text
+            font: 400 16px / 1.5 $font-family
+            color: $content-white
+            margin: 48px 0 0
+            span
+                font-weight: 700
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 32px
+        &_item
+            border-radius: 24px
+            backdrop-filter: blur(16px)
+            background: linear-gradient(234deg, rgba(192, 231, 255, 0.2) 0%, rgba(68, 162, 221, 0.2) 100%)
+            padding: 32px
+            box-shadow: 0px 0px 0px 1px hsla(0,0%,100%,.6)
+        h3
+            font: 500 32px / 1 $second-family
+            text-transform: uppercase
+            color: $content-white
+        p
+            font: 400 16px / 1.5 $font-family
+            color: $content-white
+            span
+                font-weight: 700
+        ul
+            margin: 16px 0 0
+            display: grid
+            grid-template-columns: 100%
+    &__for
+        ul
+            gap: 8px
+        &_img
+            border: 1px solid #73bbe5
+            border-radius: 10px
+            box-shadow: inset 0 0 7px 0 rgba(255, 255, 255, 0.48)
+            background: linear-gradient(311deg, #75c0eb 0%, #1e86c2 100%), url("path_to_image")
+            width: 32px
+            height: 32px
+            display: flex
+            justify-content: center
+            align-items: center
+        li
+            display: grid
+            grid-template-columns: 32px 1fr
+            gap: 16px
+            align-items: center
+    &__list
+        ul
+            gap: 16px
+        li
+            display: grid
+            grid-template-columns: 20px 1fr
+            gap: 8px
+            align-items: start
+            &::before
+                content: ''
+                display: block
+                width: 20px
+                height: 20px
+                background: url('../img/check_wht.svg') center no-repeat
+                background-size: contain
+    &__step
+        height: 600px
+        margin: 50px 0 0
+        position: relative
+        &_bg
+            bottom: -100px
+            height: 750px
+            width: 100%
+            left: 0
+            position: absolute
+            &::before
+                content: ''
+                display: block
+                bottom: 0
+                height: 100%
+                width: 100%
+                left: 0
+                background: url('../img/code_ring.png') bottom no-repeat
+                background-size: contain
+                position: absolute
+                mix-blend-mode: overlay
+            img
+                width: 57%
+                display: block
+                position: absolute
+                bottom: 0
+                left: 50%
+                transform: translateX(-50%)
+        &_num
+            font: 700 70px / 1.15 $font-family
+            letter-spacing: -0.04em
+            color: $white
+            mix-blend-mode: overlay
+            opacity: 0.25
+            position: absolute
+            z-index: -1
+        &_step
+            font: 500 14px / 1.5 $font-family
+            color: #d1eefb
+        &_name
+            margin: 8px 0 0
+            font: 500 32px / 1 $second-family
+            text-transform: uppercase
+            color: $content-white
+        &_item
+            position: absolute
+            width: 100%
+            max-width: 190px
+            z-index: 1
+            a
+                display: block
+                width: max-content
+                margin: 24px 0 0
+                font: 700 14px / 1.5 $font-family
+                text-decoration: underline
+                text-decoration-skip-ink: none
+                color: $content-white
+                transition: all .3s
+                &:hover
+                    color: #73bbe5
+            &:nth-child(1)
+                bottom: 0
+                left: 60px
+                .code__step_num
+                    bottom: calc( 100% + 60px )
+                    left: 35px
+            &:nth-child(2)
+                bottom: 350px
+                left: 280px
+                .code__step_num
+                    bottom: calc( 100% + 19px )
+                    left: calc( 100% + 50px )
+            &:nth-child(3)
+                bottom: 360px
+                right: 280px
+                .code__step_num
+                    top: 140px
+                    left: calc( 100% + 96px )
+            &:nth-child(4)
+                bottom: 0
+                right: 0
+                .code__step_num
+                    top: calc( 100% + 17px )
+                    left: 97px
+    
+.practic
+    padding: 160px 0 0
+    h2
+        font: 500 80px / 1 $second-family
+        text-transform: uppercase
+        color: $content-main
+        text-align: center
+    &__wrapper
+        margin: 48px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 40px
+    &__item
+        border: 2px solid $white
+        border-radius: 32px
+        padding: 32px
+        box-shadow: 0 6px 24px 0 rgba(175, 214, 237, 0.12)
+        background: #fafcff
+    &__name
+        font: 500 32px / 1 $second-family
+        text-transform: uppercase
+        text-align: center
+        color: $content-main
+    &__img
+        position: relative
+        border-radius: 20px
+        overflow: hidden
+        margin: 20px 0 0
+        img
+            width: 100%
+            height: 240px
+            object-fit: cover   
+        p
+            font: 600 14px / 1.5 $font-family
+            color: $content-main
+            padding: 5px 12px 6px
+            border-radius: 32px
+            background: #fafdff
+            width: max-content
+            position: absolute
+            top: 16px
+            right: 16px
+    &__row
+        margin: 20px 0 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        gap: 10px
+    &__date
+        display: grid
+        grid-template-columns: 32px 1fr
+        gap: 8px
+        align-items: center
+        &_img
+            width: 32px
+            height: 32px
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 1px solid #73bbe5
+            border-radius: 10px
+            box-shadow: inset 0 0 7px 0 rgba(255, 255, 255, 0.48)
+            background: linear-gradient(311deg, #75c0eb 0%, #1e86c2 100%)
+            img
+                width: 20px
+                height: 20px
+                object-fit: contain
+        p
+            font: 400 18px / 1.5 $font-family
+            color: $content-main
+            white-space: nowrap
+    &__price
+        font: 600 22px / 1.5 $font-family
+        color: $content-main
+    &__link
+        font: 700 16px / 1.5 $font-family
+        text-decoration: underline
+        text-decoration-skip-ink: none
+        color: $content-main
+        transition: all .3s
+        &:hover
+            color: #73bbe5
+    &__more
+        margin: 48px auto 0
+    &__title
+        display: grid
+        grid-template-columns: 1fr auto
+        gap: 34px
+        align-items: center
+        h2
+            text-align: left
+        &_text
+            max-width: 344px
+            display: grid
+            grid-template-columns: 36px 1fr
+            gap: 16px
+            align-items: start
+            span
+                width: 36px
+                height: 36px
+                border: 1px solid #73bbe5
+                border-radius: 10px
+                box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.48)
+                background: linear-gradient(311deg, #75c0eb 0%, #1e86c2 100%)
+                display: flex
+                justify-content: center
+                align-items: center
+            img
+                width: 20px
+                height: 20px
+                object-fit: contain
+            p
+                font: 500 18px / 1.5 $font-family
+                color: $content-main
+                &+p
+                    margin: 8px 0 0
+                    font: 400 16px / 1.3 $font-family
+                    color: #93a0a6
+    &__slider
+        margin: 48px 0 0
+        overflow: visible  
+    &__bg
+        &::after
+            content: ''
+            width: 628px
+            height: 371px
+            background: url('../img/school_con.png') center no-repeat
+            background-size: cover
+            position: absolute
+            display: block
+            top: -10px
+            right: -350px
+            z-index: -1
+            opacity: 0.7
+            transform: rotate(86deg)
+        &::before
+            content: ''
+            width: 628px
+            height: 371px
+            background: url('../img/school_con.png') center no-repeat
+            background-size: cover
+            position: absolute
+            display: block
+            top: 50%
+            left: -350px
+            z-index: -1
+            opacity: 0.7
+            transform: rotate(-86deg) 
+
+.consul
+    padding: 160px 0 0
+    h2
+        font: 500 80px / 1 $second-family
+        text-transform: uppercase
+        color: $content-main
+    &__title
+        display: grid
+        grid-template-columns: 1fr 564px
+        gap: 32px
+        &_text
+            display: grid
+            grid-template-columns: 36px 1fr
+            gap: 16px
+            align-items: start
+            p
+                font: 400 18px / 1.5 $font-family
+                color: $content-main
+                span
+                    font-weight: 700
+        &_img
+            width: 36px
+            height: 36px
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 1px solid #73bbe5
+            border-radius: 10px
+            box-shadow: inset 0 0 7px 0 rgba(255, 255, 255, 0.48)
+            background: linear-gradient(311deg, #75c0eb 0%, #1e86c2 100%), url("path_to_image")
+            img
+                width: 20px
+                height: 20px
+                object-fit: contain
+    &__wrapper
+        margin: 48px 0 0
+        background-image: url('../img/consul_bg.jpg') 
+        background-position: right 
+        background-size: contain
+        background-repeat: no-repeat
+        border-radius: 32px 
+        overflow: hidden
+        display: grid
+        grid-template-columns: 1fr 1fr
+        h3
+            font: 500 32px / 1 $second-family
+            text-transform: uppercase
+            color: $content-white
+    &__block
+        box-shadow: 0 6px 24px 0 rgba(175, 214, 237, 0.12)
+        background: #fafcff
+        padding: 48px 
+        border-radius: 32px 
+        position: relative
+        h3
+            color: $content-main
+        &_wrapper
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 40px
+            row-gap: 48px
+            margin: 32px 0 0
+        &_item
+            display: grid
+            grid-template-columns: 50px 1fr
+            gap: 16px
+            align-items: start
+        &_img
+            img
+                width: 100%
+                height: 50px
+                border-radius: 8px
+        &_text
+            font: 400 16px / 1.45 $font-family
+            color: $content-main
+            span
+                font-weight: 700
+        &_arrow
+            width: 40px
+            height: 40px
+            border-radius: 100%
+            border: 4px solid $white
+            display: flex
+            justify-content: center
+            align-items: center
+            background: linear-gradient(270deg, #255d7d 0%, #0d3046 100%)
+            position: absolute
+            top: 50%
+            right: 0
+            transform: translate(50%, -50%)
+            img
+                transform: rotate(-90deg)
+                width: 24px
+                height: 24px
+    &__need
+        padding: 48px
+        &_wrapper
+            margin: 42px 0 0
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 32px
+        &_item
+            border-radius: 16px
+            backdrop-filter: blur(10px)
+            background: linear-gradient(136deg, rgba(122, 191, 234, 0.2) 0%, rgba(121, 184, 222, 0.2) 2.5%, rgba(18, 63, 91, 0.2) 100%)
+            box-shadow: 0px 0px 0px 1px hsla(0,0%,100%,.6)
+            position: relative
+            padding: 24px
+            p
+                font: 500 16px / 1.45 $font-family
+                color: $content-white
+        &_check
+            position: absolute
+            top: 0
+            left: 50%
+            transform: translate(-50%, -50%)
+            border: 1px solid #73bbe5
+            border-radius: 100%
+            width: 20px
+            height: 20px
+            box-shadow: inset 0 0 7px 0 rgba(255, 255, 255, 0.48)
+            background: linear-gradient(311deg, #75c0eb 0%, #1e86c2 100%)
+            display: flex
+            justify-content: center
+            align-items: center
+            img
+                width: 15px
+        &_text
+            margin: 32px 0 0
+            font: 400 14px / 1.5 $font-family
+            color: $content-white
+            span
+                font-weight: 700
+    &__help
+        margin: 48px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 32px
+        align-items: center
+        h3
+            font: 500 48px / 1 $second-family
+            text-transform: uppercase
+            color: $content-main
+            max-width: 508px
+        &_wrapper
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 32px
+        &_item
+            max-width: 250px
+            display: grid
+            grid-template-columns: 56px 1fr
+            gap: 16px
+            a
+                display: block
+                width: max-content
+                margin: 20px 0 0
+                font: 700 16px / 1.5 $font-family
+                text-decoration: underline
+                text-decoration-skip-ink: none
+                color: $content-main
+                transition: all .3s
+                &:hover
+                    color: #69c5ec
+        &_pers
+            margin: 4px 0 0
+            img
+                width: 100%
+                border-radius: 100%
+                height: 56px
+        &_name
+            font: 600 20px / 1.5 $font-family
+            color: $content-main
+        &_text
+            margin: 8px 0 0
+            font: 500 14px / 1.4 $font-family
+            color: $content-secondary
+    &::after
+        content: ''
+        width: 628px
+        height: 371px
+        background: url('../img/school_con.png') center no-repeat
+        background-size: cover
+        position: absolute
+        display: block
+        bottom: -10px
+        right: -350px
+        z-index: -1
+        opacity: 0.7
+        transform: rotate(86deg)
+        
+.expert
+    padding: 160px 0 0
+    h2
+        font: 500 80px / 1 $second-family
+        text-transform: uppercase
+        color: $content-main
+    &__wrapper
+        margin: 48px auto 0
+        max-width: 960px
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 40px
+    &__item
+        position: relative
+        padding: 320px 0 0
+        z-index: 1
+        ul
+            margin: 16px 0 0
+            display: grid
+            grid-template-columns: 100%
+            gap: 16px
+            p
+                font: 400 16px / 1.5 $font-family
+                color: $content-main
+                span
+                    font-weight: 700
+            li
+                display: grid
+                grid-template-columns: 6px 1fr
+                gap: 15px
+                &::before
+                    content: ''
+                    display: block
+                    width: 6px
+                    height: 6px
+                    border-radius: 100%
+                    background: $content-main
+                    margin: 10px 0 0
+    &__prev
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        z-index: -1
+        border-radius: 32px 32px 0 0
+        overflow: hidden
+        img
+            width: 100%
+            height: 360px
+            object-fit: cover
+            object-position: top center
+    &__info
+        box-shadow: 0 6px 24px 0 rgba(175, 214, 237, 0.12)
+        background: #fafcff
+        border-radius: 32px
+        padding: 48px 
+    &__name
+        display: grid
+        grid-template-columns: 32px 1fr
+        gap: 16px
+        align-items: start
+        span
+            width: 32px
+            height: 32px
+            border: 1px solid #73bbe5
+            border-radius: 10px
+            box-shadow: inset 0 0 7px 0 rgba(255, 255, 255, 0.48)
+            background: linear-gradient(311deg, #75c0eb 0%, #1e86c2 100%), url("path_to_image")
+            display: flex
+            justify-content: center
+            align-items: center
+            img
+                width: 24px
+                height: 24px
+                object-fit: contain 
+        p
+            font: 500 32px / 1 $second-family
+            text-transform: uppercase
+            color: $content-main
+    &__row
+        margin: 32px 0 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__link
+        font: 600 14px / 1.5 $font-family
+        text-decoration: underline
+        text-decoration-skip-ink: none
+        color: $content-main
+        text-align: right
+        img
+            width: 16px
+            height: 16px
+    &::before
+        content: ''
+        width: 628px
+        height: 371px
+        background: url('../img/school_con.png') center no-repeat
+        background-size: cover
+        position: absolute
+        display: block
+        top: 50%
+        left: -350px
+        z-index: -1
+        opacity: 0.7
+        transform: rotate(-86deg) 
+
+.comment
+    padding: 160px 0 0
+    position: relative
+    // overflow: hidden
+    h2
+        font: 500 80px / 1 $second-family
+        text-transform: uppercase
+        color: $content-main
+        text-align: center
+    &__subtitle
+        display: grid
+        grid-template-columns: 1fr 24px
+        width: max-content
+        margin: 16px auto 0
+        font: 500 16px / 1.5 $font-family
+        color: $content-secondary
+        gap: 8px
+        align-items: center
+        &::after
+            content: ''
+            display: block
+            width: 24px
+            height: 24px
+            background: url('../img/slide.svg') center no-repeat
+            background-size: contain
+    &__slider
+        margin: 48px 0 0
+        overflow: visible 
+    &__slide
+        width: 476px
+        padding: 48px
+        border: 2px solid $white
+        border-radius: 32px
+        box-shadow: 0 6px 24px 0 rgba(175, 214, 237, 0.12)
+        background: #fafcff
+    &__prev
+        display: grid
+        grid-template-columns: 56px 1fr
+        gap: 16px
+        align-items: center
+        img
+            border-radius: 100%
+            width: 100%
+            height: 56px
+        p
+            font: 600 20px / 1.5 $font-family
+            color: $content-main
+            &+p
+                font: 500 14px / 1.5 $font-family
+                color: $content-secondary
+    &__text
+        margin: 16px 0 0
+        font: 400 16px / 1.5 $font-family
+        color: $content-main
+    &__link
+        display: block
+        width: max-content
+        margin: 32px 0 0
+        font: 700 16px / 1.5 $font-family
+        text-decoration: underline
+        text-decoration-skip-ink: none
+        color: $content-main
+        transition: all .3s
+        &:hover
+            color: #69c5ec
+
+.article
+    padding: 160px 0 0
+    h2
+        font: 500 80px / 1 $second-family
+        text-transform: uppercase
+        color: $content-main
+        text-align: center
+    &__prev
+        position: relative
+        overflow: hidden
+        z-index: -1
+        border-radius: 32px
+        img
+            width: 100%
+            height: 1px
+            min-height: 100%
+            object-fit: cover
+    &__item
+        margin: 48px 0 0
+        display: grid
+        &_right
+            grid-template-columns: 1fr calc( 50% + 40px )
+            .article__prev
+                margin: 0 -40px 0 0
+        &_left
+            grid-template-columns: calc( 50% + 40px ) 1fr
+            .article__prev
+                margin: 0 0 0 -40px
+    &__block
+        padding: 48px
+        border: 2px solid $white
+        border-radius: 32px
+        box-shadow: 0 6px 24px 0 rgba(175, 214, 237, 0.12)
+        background: #fafcff
+    &__name
+        display: grid
+        grid-template-columns: 36px 1fr
+        gap: 16px
+        align-items: center
+        p
+            font: 500 32px / 1 $second-family
+            text-transform: uppercase
+            color: $content-main
+        span
+            width: 36px
+            height: 36px
+            border: 1px solid #73bbe5
+            border-radius: 10px
+            display: flex
+            justify-content: center
+            align-items: center
+            box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.48)
+            background: linear-gradient(311deg, #75c0eb 0%, #1e86c2 100%), url("path_to_image")
+            img
+                filter: invert(1)
+    &__text
+        font: 400 16px / 1.5 $font-family
+        color: $content-main
+        margin: 16px 0 0
+    &__row
+        margin: 16px 0 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__link
+        font: 700 16px / 1.5 $font-family
+        text-decoration: underline
+        text-decoration-skip-ink: none
+        color: $content-main
+        transition: all .3s
+        &:hover
+            color: #69c5ec
+    &__autor
+        display: grid
+        grid-template-columns: 40px 1fr
+        gap: 12px
+        width: max-content
+        img
+            width: 40px
+            height: 40px
+            border-radius: 100%
+        p
+            font: 500 12px / 1.5 $font-family
+            color: $content-secondary
+            &+p
+                font: 600 14px / 1.5 $font-family
+                color: $content-main
+    &__more
+        margin: 48px auto 0
+    &::before
+        content: ''
+        width: 628px
+        height: 371px
+        background: url('../img/school_con.png') center no-repeat
+        background-size: cover
+        position: absolute
+        display: block
+        bottom: 50px
+        left: -350px
+        z-index: -1
+        opacity: 0.7
+        transform: rotate(-86deg) 
+
+.footer
+    padding: 160px 0 24px
+    .container
+        display: flex
+        justify-content: space-between
+        align-items: start
+        &__block
+            padding: 60px 0 54px
+            background: url('../img/footer_bg.jpg') center no-repeat
+            background-size: cover
+            z-index: 1
+    &__logo
+        max-width: 260px
+        display: flex
+        flex-direction: column
+        img
+            width: 100%
+            margin: 0 0 32px
+        p
+            margin: auto 0 0
+            font: 400 14px / 1.3 $font-family
+            color: #d1eefb
+    &__list
+        display: grid
+        grid-template-columns: auto auto
+        gap: 120px
+        row-gap: 16px
+        a
+            font: 500 16px / 1.5 $font-family
+            color: $content-white
+    &__func
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        height: 100%
+    &__link
+        display: grid
+        grid-template-columns: 100%
+        gap: 6px
+        a
+            font: 500 16px / 1.5 $font-family
+            color: $content-white
+            display: grid
+            grid-template-columns: 16px 1fr
+            gap: 8px
+            align-items: center
+            transition: all .3s
+            &:hover
+                color: #69c5ec
+    &__soc
+        display: grid
+        grid-template-columns: 48px 48px 48px
+        gap: 16px
+        margin: 29px 0 auto
+        a
+            width: 48px
+            height: 48px
+            border-radius: 10px
+            display: flex
+            justify-content: center
+            align-items: center
+            backdrop-filter: blur(50px)
+            background: linear-gradient(134deg, rgba(192, 231, 255, 0.2) 0%, rgba(60, 123, 163, 0.2) 100%)
+            transition: all .3s
+            img
+                width: 24px
+                height: 24px
+                transition: all .3s
+            &:hover
+                img
+                    transform: scale(1.2)
+    &__policy
+        margin: 56px 0 0
+        font: 400 14px / 1.3 $font-family
+        text-decoration: underline
+        text-decoration-skip-ink: none
+        color: #d1eefb
+    &__desc
+        display: none
