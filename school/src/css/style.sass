@@ -29,10 +29,16 @@ $third-family: "Alana Pro RUS", sans-serif
         opacity: 0
     100%
         opacity: 1
+html
+    position: relative
+    overflow-x: hidden
 body
     position: relative
     overflow-x: hidden
     background: $background
+    height: 100%
+    &.fix
+        overflow: hidden 
 section
     position: relative
 .container
@@ -520,6 +526,7 @@ section
         overflow: hidden
         z-index: 2
         padding: 24px
+        transition: all .3s
         img
             position: absolute
             inset: 0
@@ -528,6 +535,11 @@ section
             height: 100%
             object-fit: cover
             z-index: -1
+            transition: all .3s
+        &:hover
+            box-shadow: 0 6px 24px 0 #73bbe5
+            img
+                transform: scale(1.1)
     &__info
         background: $white
         position: relative
@@ -1241,11 +1253,17 @@ section
         color: $content-main
         text-align: right
         transition: all .3s
-        img
+        svg
             width: 16px
             height: 16px
+            transform: translateY(3px)
+            path
+                transition: all .3s
         &:hover
             color: #73bbe5
+            svg
+                path
+                    stroke: #73bbe5
     &__bg_left
         content: ''
         width: 628px
@@ -1335,6 +1353,8 @@ section
         transition: all .3s
         &:hover
             color: #69c5ec
+    .comment-modal__close
+        display: none 
 
 .comment-modal
     padding: 30px 20px
@@ -1357,6 +1377,41 @@ section
         height: 100%
         background: #000
         opacity: .5
+    &__close
+        position: absolute
+        top: 20px
+        right: 20px
+        width: 20px
+        height: 20px
+        border-radius: 100%
+        cursor: pointer
+        display: block
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%) rotate(-45deg)
+            width: 20px
+            height: 1px
+            background: $content-main
+            transition: all .3s
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%) rotate(45deg)
+            width: 20px
+            height: 1px
+            background: $content-main
+            transition: all .3s
+        &:hover
+            &::before,
+            &::after
+                background: #69c5ec
     .comment
         &__slide
             margin: auto !important
@@ -1566,6 +1621,7 @@ section
                 path
                     transition: all .3s
             &:hover
+                background: $white
                 svg
                     transform: scale(1.2)
                     path
@@ -1887,20 +1943,16 @@ section
         &__wrapper
             grid-template-columns: 100%
     .school-desc
-        padding: 80px 0
+        padding: 60px 0
         h2
             font-size: 28px
     .can
         &__bg
             img
                 filter: brightness(50%)
-            &_left
-                display: none
-            &_right
-                display: none
         .container
             &__block
-                height: auto
+                height: 300px
                 h3
                     color: $white
         &__subtitle
@@ -1948,7 +2000,7 @@ section
             grid-template-columns: 100%
     .comment
         &__slide
-            max-width: calc( 100vw - 40px )
+            max-width: calc( 100vw - 60px )
     .article
         &__item
             grid-template-columns: 100%
@@ -1965,11 +2017,15 @@ section
         &__list
             grid-template-columns: 100%
     .consul
+        padding: 60px 0 0
         &__block
             &_wrapper
                 grid-template-columns: 100%
                 margin: 10px 0 0
     .header
+        &__item
+            min-height: auto
+            gap: 15px
         &__wrapper
             &_text
                 display: none
@@ -1980,3 +2036,44 @@ section
         padding: 0 10px
         &__block
             width: calc( 100% - 20px )
+    .can
+        h2
+            padding: 0 10px
+            text-align: left
+        &__bg
+            &_left
+                width: 45%
+            &_right
+                width: 45%
+    .unique
+        padding: 60px 0
+        h2
+            text-align: left
+    .practic
+        padding: 60px 0 0
+        h2
+            text-align: left
+    .expert
+        padding: 60px 0 0
+    .comment
+        padding: 60px 0 0
+        h2
+            text-align: left
+        p
+            text-align: left
+        &__subtitle
+            width: 100%
+            max-width: max-content
+            margin-left: 0
+        &__prev
+            grid-template-columns: 100%
+            img
+                width: 56px
+    .article
+        padding: 60px 0 0
+        h2
+            text-align: left
+    .school-desc
+        h2,
+        p
+            text-align: left

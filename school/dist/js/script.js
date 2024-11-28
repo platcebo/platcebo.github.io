@@ -3,13 +3,23 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     var swiper = new Swiper(".comment__slider", {
-        spaceBetween: 40,
+        spaceBetween: 10,
         freeMode: true,
         slidesPerView: 'auto',
+        breakpoints: {
+            600: {
+                spaceBetween: 40,
+                slidesPerView: 3
+            },
+        }
     });  
     var swiper = new Swiper(".practic__slider", {
         spaceBetween: 40,
         slidesPerView: 1,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },    
         breakpoints: {
             1025: {
                 spaceBetween: 40,
@@ -60,12 +70,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 event.preventDefault()
                 commentNode.innerHTML = '<div class="comment-modal__overflow"></div>' + item.outerHTML
                 document.body.append(commentNode);
+                document.body.classList.add('fix');
             })
         })
         document.body.addEventListener('click',(event)=>{
             let target = event.target;
-            if(target.closest('div.comment-modal__overflow')) {
+            if(target.closest('div.comment-modal__overflow') || target.closest('div.comment-modal__close')) {
                 commentNode.remove()
+                document.body.classList.remove('fix');
             }
         })
     }
@@ -76,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if(navHum !== null) {
         navHum.addEventListener('click', ()=>{
             nav.classList.toggle('active');
+            document.body.classList.toggle('fix');
         })
     }
 
