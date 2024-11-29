@@ -2,6 +2,23 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
+    var swiper = new Swiper(".friend__slider", {
+        direction: "vertical",
+        slidesPerView: 3,
+        centeredSlides: true,
+        spaceBetween: 10,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".friend__wrapper .swiper-button-next",
+            prevEl: ".friend__wrapper .swiper-button-prev",
+        },
+
+    });
+
     let serviceRow = document.querySelectorAll('.run-line__wrapper');
 
     if(serviceRow !== null) {
