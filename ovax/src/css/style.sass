@@ -2021,6 +2021,27 @@ section
         opacity: 0.6
     &__img
         width: 100%
+    &::before
+        content: ''
+        display: block
+        width: 100vw
+        max-width: 1338px
+        height: 1052px
+        top: 0px
+        left: 50%
+        transform: translate(-50%, -50%)
+        position: absolute
+        z-index: -1
+        background: url('../img/bg_ellipse.svg') center no-repeat
+        filter: blur(400px)    
+    .star-left
+        animation-delay: 4s
+        left: 300px
+        top: 20%
+    .star-right
+        animation-delay: 10s
+        right: 100px
+        left: auto
 
 .profit
     &__subtitle
@@ -2080,6 +2101,41 @@ section
             background-size: cover
             p
                 color: #0d1b29
+    &::before
+        content: ''
+        display: block
+        width: 100vw
+        max-width: 1338px
+        height: 1052px
+        top: 0px
+        left: 100%
+        transform: translate(-50%, 0%)
+        position: absolute
+        z-index: -1
+        background: url('../img/bg_ellipse.svg') center no-repeat
+        filter: blur(400px)    
+    &::after 
+        content: ''
+        display: block
+        width: 100vw
+        max-width: 1338px
+        height: 1052px
+        top: 50%
+        right: 100%
+        transform: translate(50%, 0%)
+        position: absolute
+        z-index: -1
+        background: url('../img/bg_ellipse.svg') center no-repeat
+        filter: blur(400px) 
+    .star-left
+        animation-delay: 4s
+        left: 200px
+        top: 50%
+    .star-right
+        top: 80%
+        animation-delay: 10s
+        right: 100px
+        left: auto   
 
 .money
     &__wrapper
@@ -2122,6 +2178,24 @@ section
         margin: 8px auto 0
         width: 100%
         max-width: 303px
+    &::before
+        content: ''
+        display: block
+        width: 100vw
+        max-width: 1338px
+        height: 1052px
+        top: 0px
+        left: 100%
+        transform: translate(-50%, 0%)
+        position: absolute
+        z-index: -1
+        background: url('../img/bg_ellipse.svg') center no-repeat
+        filter: blur(400px)  
+    .star-right
+        top: 0%
+        animation-delay: 10s
+        right: 100px
+        left: auto     
 
 @media ( max-width: 1024px )
     .algorithm
