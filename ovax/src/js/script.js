@@ -3,9 +3,9 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     var swiper = new Swiper(".friend__slider", {
-        direction: "vertical",
-        slidesPerView: 3,
-        centeredSlides: true,
+        direction: "horizontal",
+        slidesPerView: 1,
+        centeredSlides: false,
         spaceBetween: 10,
         loop: true,
         pagination: {
@@ -16,7 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
             nextEl: ".friend__wrapper .swiper-button-next",
             prevEl: ".friend__wrapper .swiper-button-prev",
         },
-
+        breakpoints: {
+            601: {
+                direction: "vertical",
+                slidesPerView: 3,
+                centeredSlides: true,
+            }
+        }
     });
 
     let serviceRow = document.querySelectorAll('.run-line__wrapper');
