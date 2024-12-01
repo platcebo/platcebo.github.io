@@ -81,6 +81,13 @@ section
     padding: 80px 0 0
     z-index: 1
     position: relative
+@keyframes motionAnim
+    0%
+        left: 0
+    50%
+        left: 100%
+    100%
+        left: 0
 @keyframes starTail
     0%
         transform: scale(1) rotate(-45deg) translate(0px, 0px)
@@ -3377,3 +3384,421 @@ section
                 grid-template-columns: 100%
                 img
                     width: 40px
+
+.how
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 30px
+        align-items: end
+        margin: 100px 0 0
+        h2
+            font: 600 40px / 1 $font-family
+            background: linear-gradient(90deg, #87aedb 0%, #c9e1ff 100%)
+            background-clip: text
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+        p
+            font: 400 20px / 1.25 $font-family
+            color: #fff
+            opacity: 0.6
+    &__block
+        margin: 40px 0 80px
+        padding: 50px 20px 
+        border: 1.50px solid rgba(255, 255, 255, 0.1)
+        border-radius: 20px
+        backdrop-filter: blur(20px)
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%)
+        box-shadow: 0 0 0 2px hsla(0,0%,100%,.1),1px 0 0 1px hsla(0,0%,100%,.3)
+        position: relative
+        p
+            text-align: center
+            max-width: 346px
+            margin: 0 auto
+        &::before
+            content: ''
+            height: 243px
+            width: 112px
+            background: url('../img/how_bg.svg') center no-repeat
+            background-size: contain
+            position: absolute
+            top: calc( 100% - 80px )
+            right: 50px
+            transform: rotate(15deg)
+    &::before
+        content: ''
+        display: block
+        width: 100vw
+        max-width: 1338px
+        height: 1052px
+        top: 0px
+        left: 50%
+        transform: translate(-50%, -50%)
+        position: absolute
+        z-index: -1
+        background: url('../img/bg_ellipse.svg') center no-repeat
+        filter: blur(400px)   
+    .star-left
+        animation-delay: 4s
+        left: 300px
+        top: 20%
+    .star-right
+        animation-delay: 10s
+        right: 100px
+        left: auto
+
+.motion
+    &__subtitle
+        margin: 40px auto 0
+        max-width: 730px
+        font: 400 20px / 1.25 $font-family
+        text-align: center
+        color: #fff
+        opacity: .6
+    &__wrapper
+        margin: 56px 0 0
+        position: relative
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        row-gap: 160px
+        flex-wrap: wrap
+    &__item
+        width: 156px
+        height: 156px
+        border-radius: 100%
+        border: 1px solid rgba(255, 255, 255, 0.1)
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        h3
+            font: 700 20px $font-family
+            color: #fff
+        p
+            font: 600 8px $font-family
+            letter-spacing: 0.25em
+            text-transform: uppercase
+            text-align: center
+            background: linear-gradient(90deg, #87aedb 0%, #c9e1ff 100%)
+            background-clip: text
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+        img
+            margin: 0 0 5px
+    &__row
+        width: 100%
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 20px
+        &:nth-child(1)
+            .motion
+                &__item
+                    &:nth-child(1)
+                        transform: translateY(60px)
+                    &:nth-child(2)
+                        margin: 0 auto 0 0
+                    &:nth-child(4)
+                        transform: translateY(60px)
+        &:nth-child(2)
+            .motion
+                &__item
+                    &:nth-child(1)
+                        transform: translateY(-60px)
+                    &:nth-child(2)
+                        margin: 0 auto 0 0
+                    &:nth-child(4)
+                        transform: translateY(-60px)
+    &__bg
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        width: 374px
+        height: 374px
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        border-radius: 100%
+        border: 1px solid #C9E1FF
+        &::before
+            content: ''
+            display: block
+            inset: 12px
+            position: absolute
+            background: url('../img/motion_bg.svg') center no-repeat
+            background-size: contain
+        p
+            margin: 20px 0 0
+            font: 400 17px / 1.47059 $font-family
+            text-align: center
+            color: #fff
+            opacity: .6
+        img
+            width: 94px
+    &__way
+        div
+            position: absolute
+            transform: rotate(20deg)
+            width: 5%
+            height: 1px
+            border-top: 1px dashed #C9E1FF
+            left: 29%
+            top: 30%
+            span
+                width: 12px
+                height: 12px
+                display: block
+                position: absolute
+                left: 0
+                top: 50%
+                transform: translate(-50%, -50%)
+                background: linear-gradient(90deg, #87aedb 0%, #c9e1ff 100%)
+                border-radius: 100%
+                animation: motionAnim 6s linear infinite
+            &:nth-child(1)
+                left: 14%
+                top: 41%
+                width: 18%
+                transform: rotate(10deg)
+            &:nth-child(3)
+                right: 29%
+                left: auto
+                transform: rotate(160deg)
+            &:nth-child(4)
+                right: 14%
+                top: 41%
+                left: auto
+                transform: rotate(170deg)
+                width: 18%
+            &:nth-child(5)
+                left: 14%
+                bottom: 41%
+                width: 18%
+                transform: rotate(-10deg)
+                top: auto
+            &:nth-child(6)
+                left: 29%
+                bottom: 30%
+                width: 5%
+                transform: rotate(-20deg)
+                top: auto
+            &:nth-child(7)
+                right: 29%
+                left: auto
+                bottom: 30%
+                width: 5%
+                transform: rotate(200deg)
+                top: auto
+            &:nth-child(8)
+                left: auto
+                right: 14%
+                bottom: 41%
+                width: 18%
+                transform: rotate(190deg)
+                top: auto
+    &::before
+        content: ''
+        display: block
+        width: 100vw
+        max-width: 1338px
+        height: 1052px
+        top: 0%
+        left: 100%
+        transform: translate(-50%, 0%)
+        position: absolute
+        z-index: -1
+        background: url('../img/bg_ellipse.svg') center no-repeat
+        filter: blur(400px) 
+    .star-left
+        animation-delay: 4s
+        left: 20px
+        top: 0%
+    .star-right
+        animation-delay: 10s
+        right: 200px
+        left: auto
+        top: 50%
+
+.vector
+    &__subtitle
+        max-width: 410px
+        margin: 40px auto 0
+        font: 400 20px / 1.25 $font-family
+        text-align: center
+        color: #fff
+        opacity: .6
+    &__wrapper
+        margin: 40px 0 0
+    &__item
+        border: 1px solid rgba(255, 255, 255, 0.1)
+        border-radius: 20px
+        padding: 30px 30px 130px
+        backdrop-filter: blur(20px)
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%)
+        box-shadow: 0 0 0 2px hsla(0,0%,100%,.1),1px 0 0 1px hsla(0,0%,100%,.3)
+    &__row
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 20px
+        &:nth-child(2)
+            max-width: 920px
+            margin: -90px auto 0
+        &:nth-child(3)
+            margin: -90px auto 0
+            max-width: 734px
+            grid-template-columns: 1fr 1fr
+            .vector__item
+                padding-bottom: 80px
+    &__title
+        display: grid
+        grid-template-columns: 40px 1fr
+        gap: 20px
+        img
+            width: 100%
+        p
+            font: 700 12px $font-family
+            letter-spacing: 0.25em
+            text-transform: uppercase
+            color: #fff
+            opacity: .6
+            &+p
+                opacity: 1
+                font: 600 24px $font-family
+                background: linear-gradient(90deg, #87aedb 0%, #c9e1ff 100%)
+                background-clip: text
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+                letter-spacing: 0
+                text-transform: none
+    &__text
+        margin: 20px 0 0
+        font: 400 16px / 1.375 $font-family
+        color: #fff
+        opacity: .6
+    &::before
+        content: ''
+        display: block
+        width: 100vw
+        max-width: 1338px
+        height: 1052px
+        bottom: 0%
+        left: 100%
+        transform: translate(-50%, 50%)
+        position: absolute
+        z-index: -1
+        background: url('../img/bg_ellipse.svg') center no-repeat
+        filter: blur(400px)    
+    &::after
+        content: ''
+        display: block
+        width: 100vw
+        max-width: 1338px
+        height: 1052px
+        top: 0%
+        right: 100%
+        transform: translate(50%, 0%)
+        position: absolute
+        z-index: -1
+        background: url('../img/bg_ellipse.svg') center no-repeat
+        filter: blur(400px)   
+    .star-left
+        animation-delay: 4s
+        left: 20px
+        top: 20%
+    .star-right
+        animation-delay: 3s
+        right: 100px
+        left: auto
+
+.mist
+    &__wrapper
+        display: grid
+        grid-template-columns: 2fr 1fr
+        gap: 40px
+        align-items: center
+    &__info
+        max-width: 587px
+        .title
+            h2,
+            p
+                text-align: left
+    &__text
+        margin: 40px 0 0
+        font: 400 20px / 1.25 $font-family
+        color: #fff
+        opacity: .6
+    &__prev
+        position: relative
+        &_bg
+            display: block
+            width: 100%
+        &_logo
+            position: absolute
+            top: 0
+            left: 0
+            width: 80px
+
+@media ( max-width: 1024px )
+    .how
+        &__wrapper
+            grid-template-columns: 100%
+            margin: 30px 0 0
+    .motion
+        &__way
+            display: none
+        &__wrapper
+            gap: 400px
+        &__item
+            transform: none !important
+        &__row
+            display: grid
+            grid-template-columns: 156px 156px
+            justify-content: center
+    .vector
+        &__item
+            padding: 30px !important
+        &__row
+            margin: 0 !important
+            grid-template-columns: 100% !important
+            max-width: 100% !important
+        &__wrapper
+            display: grid
+            grid-template-columns: 100%
+            gap: 20px
+    .mist
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+
+@media ( max-width: 600px )
+    .how
+        &__wrapper
+            h2
+                font-size: 24px
+        &__block
+            margin: 20px 0 40px
+            padding: 20px
+            &::before
+                content: none
+    .motion
+        &__wrapper
+            gap: 20px
+        &__row
+            grid-template-columns: 100%
+            gap: 20px
+        &__item
+            margin: 0 auto !important
+        &__bg
+            position: relative
+            inset: auto
+            transform: none
+            max-width: calc( 100vw - 40px )
+            max-height: calc( 100vw - 40px )
+    .vector
+        &__item
+            padding: 20px !important
+    .mist
+        &__wrapper
+            grid-template-columns: 100%
