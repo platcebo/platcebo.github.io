@@ -57,6 +57,7 @@ section
         max-width: 1392px
         margin: 0 auto
         width: calc( 100% - 48px )
+        -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC)
 .btn
     &__blue
         width: 100%
@@ -128,6 +129,8 @@ section
             background: url('../img/nav_bg.jpg') center no-repeat
             background-size: cover
             z-index: 1
+            border-radius: 20px
+            overflow: hidden
             &::after
                 content: ''
                 width: 750px
@@ -731,6 +734,7 @@ section
                 background-size: contain
                 position: absolute
                 mix-blend-mode: overlay
+                z-index: -1
             img
                 width: 57%
                 display: block
@@ -1171,6 +1175,7 @@ section
         font: 500 80px / 1 $second-family
         text-transform: uppercase
         color: $content-main
+        text-align: center
     &__wrapper
         margin: 48px auto 0
         max-width: 960px
@@ -1254,8 +1259,10 @@ section
         text-decoration: underline
         text-decoration-skip-ink: none
         color: $content-main
-        text-align: right
+        text-align: left
         transition: all .3s
+        max-width: 110px
+        width: auto
         svg
             width: 16px
             height: 16px
@@ -1553,7 +1560,7 @@ section
     .container
         display: flex
         justify-content: space-between
-        align-items: start
+        align-items: stretch
         &__block
             padding: 60px 0 54px
             background: url('../img/footer_bg.jpg') center no-repeat
@@ -1575,6 +1582,7 @@ section
         grid-template-columns: auto auto
         gap: 120px
         row-gap: 16px
+        align-content: start
         a
             font: 500 16px / 1.5 $font-family
             color: $content-white
@@ -1900,6 +1908,7 @@ section
             align-items: flex-start
         &__link
             text-align: left
+            max-width: 100%
         &__item
             padding: 250px 0 0
     .comment

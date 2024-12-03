@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         spaceBetween: 10,
         freeMode: true,
         slidesPerView: 'auto',
+        mousewheel: true,
         breakpoints: {
             600: {
                 spaceBetween: 40,
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         spaceBetween: 40,
         slidesPerView: 'auto',
         freeMode: true,
+        mousewheel: true,
         autoplay: {
             delay: 2500,
             disableOnInteraction: false,
