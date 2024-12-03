@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });  
     var swiper = new Swiper(".practic__slider", {
         spaceBetween: 40,
-        slidesPerView: 1,
+        slidesPerView: 'auto',
+        freeMode: true,
         autoplay: {
             delay: 2500,
             disableOnInteraction: false,
