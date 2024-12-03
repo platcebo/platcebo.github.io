@@ -18,10 +18,10 @@ document.addEventListener('DOMContentLoaded', function() {
         slidesPerView: 'auto',
         freeMode: true,
         mousewheel: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },    
+        // autoplay: {
+        //     delay: 2500,
+        //     disableOnInteraction: false,
+        // },    
         breakpoints: {
             1025: {
                 spaceBetween: 40,
