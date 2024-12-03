@@ -1,0 +1,540 @@
+$font-family: "Manrope", sans-serif
+$second-family: "Inter", sans-serif
+
+html
+    position: relative
+    overflow-x: hidden
+    overflow-y: visible
+    height: 100%
+body
+    background: #030115
+    position: relative
+    overflow: auto
+    overflow-x: hidden
+    height: 100%
+.container
+    max-width: 1394px
+    margin: 0 auto
+    padding: 0 15px
+    box-sizing: content-box
+
+.nav
+    padding: 34px 0 0
+    z-index: 2
+    position: relative
+    .container
+        display: flex
+        justify-content: flex-start
+        align-items: center
+    &__logo
+        font: 400 24px $font-family
+        text-align: center
+        color: #fff
+    &__list
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 80px
+        margin: 0 0 0 auto
+        a
+            font: 500 24px $font-family
+            color: #fff
+            position: relative
+            transition: all .3s
+        
+.header
+    padding: 179px 0 0
+    z-index: 1
+    position: relative
+    .container
+        position: relative
+    &__info
+        max-width: 950px
+    h1
+        font: 600 80px $font-family
+        color: #fff
+        position: relative
+        z-index: 1
+        &::after
+            width: 294px
+            height: 260px
+            content: ''
+            display: block
+            position: absolute
+            top: -80px
+            left: -60px
+            border-radius: 100%
+            background: radial-gradient(50% 50% at 50% 50%, rgb(47, 0, 255) 43.50000023841858%, rgb(19, 4, 150) 74.50000047683716%, rgb(3, 1, 21) 100%)
+            filter: blur(30px)
+            overflow: hidden
+            z-index: -1
+            opacity: .5
+        &::before
+            width: 172px
+            height: 151px
+            content: ''
+            display: block
+            position: absolute
+            bottom: -18px
+            left: 503px
+            border-radius: 100%
+            background: radial-gradient(50% 50% at 50% 50%, rgb(47, 0, 255) 43.50000023841858%, rgb(19, 4, 150) 74.50000047683716%, rgb(3, 1, 21) 100%)
+            filter: blur(30px)
+            overflow: hidden
+            z-index: -1
+            opacity: .5
+    p
+        margin: 50px 0 0
+        font: 500 24px $font-family
+        color: #fff
+        max-width: 735px
+        position: relative
+        &::after
+            width: 122px
+            height: 108px
+            content: ''
+            display: block
+            position: absolute
+            top: -16px
+            left: 104px
+            border-radius: 100%
+            background: radial-gradient(50% 50% at 50% 50%, rgb(47, 0, 255) 43.50000023841858%, rgb(19, 4, 150) 74.50000047683716%, rgb(3, 1, 21) 100%)
+            filter: blur(30px)
+            overflow: hidden
+            z-index: -1
+            opacity: .5
+    a
+        margin: 70px 0 0
+        max-width: max-content
+        display: block
+        border-radius: 35px
+        padding: 12px 38px
+        background: linear-gradient(90deg, #140070 0%, #2700d6 100%)
+        font: 600 24px $font-family
+        color: #fff
+    &__bg
+        position: absolute
+        right: -23px
+        top: 50%
+        transform: translateY(-50%)
+        z-index: -1
+        width: 997px
+        img
+            width: 100%
+
+.static
+    padding: 380px 0 0
+    h2
+        font: 600 80px $font-family
+        text-align: center
+        color: #fff
+        position: relative
+        max-width: 1040px
+        margin: 0 auto
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: -25px
+            left: -75px
+            right: -47px
+            bottom: -17px
+            border-radius: 100%
+            background: radial-gradient(50% 50% at 50% 50%, rgb(47, 0, 255) 43.50000023841858%, rgb(19, 4, 150) 74.50000047683716%, rgb(3, 1, 21) 100%)
+            filter: blur(30px)
+            overflow: hidden
+            z-index: -1
+            opacity: .5
+    &__wallet
+        margin: 37px 0 0
+        font: 500 36px $font-family
+        color: #fff
+        &_val
+            margin: 28px 0 0
+            font: 400 80px $font-family
+            text-align: center
+            color: #fff 
+            span
+                font-weight: 800
+    &__active
+        margin: 66px 0 0
+        font: 500 36px $font-family
+        color: #fff
+    &__table
+        margin: 11px 0 0
+    &__row
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 400px
+        gap: 20px
+        align-items: center
+    &__title
+        p
+            font: 500 24px $font-family
+            text-align: center
+            color: #fff
+            &:nth-child(1)
+                grid-column: 2/3
+            &:last-child
+                text-align: right
+    &__bal
+        padding: 20px 0 26px
+        border-bottom: 1px solid #ffffffbf
+        z-index: 1
+        position: relative
+        p
+            font: 400 24px $font-family
+            text-align: center
+            color: #fff
+            &.static
+                &__val
+                    font-weight: 800
+                    color: #00ae2e
+                &__pie
+                    text-align: right
+        &::before
+            content: ''
+            display: block
+            width: 100vw
+            height: 100%
+            top: 0
+            left: 50%
+            transform: translateX(-50%)
+            z-index: -1
+            background: linear-gradient(90deg, #0a022e 0%, #140070 60%, rgba(20, 0, 112, 0.8) 80.5%, #000 99.98%)
+            position: absolute
+        &:nth-child(odd)
+            &::before
+                opacity: 0
+        &:last-child
+            border-bottom: none
+    &__coin
+        display: grid
+        grid-template-columns: 46px 1fr
+        gap: 15px
+        align-items: center
+        img
+            width: 46px
+            height: 46px
+        p
+            text-align: left
+
+.how
+    padding: 150px 0 0
+    h2
+        font: 600 80px $font-family
+        text-align: center
+        color: #fff
+        position: relative
+        max-width: max-content
+        margin: 0 auto
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: 29px
+            left: -214px
+            right: -205px
+            bottom: 0
+            border-radius: 100%
+            background: radial-gradient(50% 50% at 50% 50%, rgb(47, 0, 255) 43.50000023841858%, rgb(19, 4, 150) 74.50000047683716%, rgb(3, 1, 21) 100%)
+            filter: blur(30px)
+            overflow: hidden
+            z-index: -1
+            opacity: .5
+    &__subtitle
+        margin: 76px 0 0
+        font: 400 40px $font-family
+        color: #fff
+        a
+            color: #2f00ff
+    &__wrapper
+        margin: 80px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 100px
+    &__item
+        display: grid
+        grid-template-columns: 620px 1fr
+        gap: 50px
+    &__name
+        font: 500 40px $font-family
+        color: #003dd8
+    &__text
+        font: 400 24px $font-family
+        color: #fff
+        margin: 30px 0 0
+    &__prev
+        img
+            width: 100%
+            max-width: 420px
+
+.ask
+    padding: 130px 0  
+    position: relative
+    h2
+        font: 600 80px $font-family
+        text-align: left
+        color: #fff
+        position: relative
+        max-width: max-content
+        margin: 0 
+        z-index: 2
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: 17px
+            left: -280px
+            right: -210px
+            bottom: 0
+            border-radius: 100%
+            background: radial-gradient(50% 50% at 50% 50%, rgb(47, 0, 255) 43.50000023841858%, rgb(19, 4, 150) 74.50000047683716%, rgb(3, 1, 21) 100%)
+            filter: blur(30px)
+            overflow: hidden
+            z-index: -1
+            opacity: .5
+    &__subtitle
+        margin: 76px 0 0
+        max-width: 960px
+        font: 400 36px $second-family
+        color: #fff
+    &__soc
+        margin: 50px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 13px
+        a
+            display: grid
+            grid-template-columns: 60px 1fr
+            gap: 20px
+            align-items: center
+        img
+            width: 100%
+        p
+            font: 500 24px $font-family
+            color: #fff
+    &__bg
+        position: absolute
+        top: 50%
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+        width: 930px
+        z-index: -1
+        img
+            width: 100%
+    
+.footer
+    padding: 180px 0 150px
+    &__logo
+        width: max-content
+        font: 400 24px $font-family
+        text-align: center
+        color: #fff
+        margin: 0 auto
+        display: block
+    &__list
+        margin: 80px 0 0
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 40px
+        a
+            font: 500 24px $font-family
+            color: #fff
+    &__soc
+        margin: 36px 0 0
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 24px
+        a
+            display: block
+            max-width: 50px
+        img
+            width: 100%
+
+@media ( max-width: 1440px )
+    .container
+        max-width: 1000px
+    .nav
+        &__list
+            a
+                font-size: 14px
+    .header
+        padding: 100px 0 0
+        h1
+            font-size: 50px
+            &::before
+                width: 90px
+                height: 80px
+                left: 300px
+                filter: blur(10px)
+            &::after
+                width: 150px
+                height: 130px
+                filter: blur(10px)
+                top: -30px
+                left: -40px
+        &__info
+            max-width: 600px
+        p
+            font-size: 14px
+            max-width: 440px
+            margin: 30px 0 0
+            &::after
+                width: 60px
+                height: 50px
+                filter: blur(10px)
+                top: 0
+        &__bg
+            width: 500px
+        a
+            font-size: 14px
+            margin: 30px 0 0
+    .static
+        padding: 100px 0 0
+        h2
+            font-size: 35px
+            max-width: 500px
+            &::before
+                filter: blur(10px)
+        &__wallet
+            font-size: 18px
+            margin: 25px 0 0
+            &_val
+                font-size: 40px
+                margin: 20px 0 0
+        &__active
+            font-size: 18px
+            margin: 30px 0 0
+        &__title
+            p
+                font-size: 14px
+        &__bal
+            p
+                font-size: 14px
+        &__coin
+            grid-template-columns: 20px 1fr
+            gap: 10px
+            img
+                width: 20px
+                height: 20px
+        &__row
+            grid-template-columns: 1fr 1fr 1fr 250px
+    .how
+        padding: 100px 0 0
+        h2
+            font-size: 35px
+            &::before
+                filter: blur(10px)
+                left: -100px
+                right: -100px
+                top: 0
+        &__subtitle
+            font-size: 14px
+            margin: 30px 0 0
+        &__wrapper
+            margin: 30px 0 0
+            gap: 50px
+        &__item
+            grid-template-columns: 200px 1fr
+        &__name
+            font-size: 18px
+        &__text
+            font-size: 14px
+    .ask
+        padding: 100px 0 0
+        h2
+            font-size: 35px
+            &::before
+                filter: blur(10px)
+                left: -100px
+                right: -100px
+                top: 0
+        &__subtitle
+            margin: 30px 0 0
+            font-size: 14px
+            max-width: 370px
+        &__soc
+            margin: 30px 0 0
+            a
+                grid-template-columns: 30px 1fr
+                gap: 10px
+            p
+                font-size: 14px
+        &__bg
+            width: 500px
+    .footer
+        padding: 100px 0 50px
+        &__list
+            margin: 30px 0 0
+            a
+                font-size: 14px
+        &__soc
+            margin: 30px 0 0
+            a
+                max-width: 30px
+
+@media ( max-width: 768px )
+    section
+        h2
+            font-size: 30px !important
+    .nav
+        &__list
+            gap: 20px
+    .header
+        padding: 50px 0 0
+        h1
+            font-size: 35px
+        &__bg
+            width: 50%
+    .static
+        padding: 50px 0 0
+        &__wallet
+            &_val
+                font-size: 25px
+    .how
+        padding: 50px 0 0
+    .ask
+        padding: 50px 0 0
+        &__bg
+            width: 50%
+
+@media ( max-width: 600px )
+    .nav
+        .container
+            flex-wrap: wrap
+            gap: 10px
+        &__list
+            width: 100%
+            justify-content: space-between
+            gap: 10px
+            a
+                font-size: 12px
+    .header
+        &__bg
+            display: none
+    .static
+        &__scroll
+            overflow: auto
+            position: relative
+            display: block
+        &__table
+            min-width: 570px
+    .how
+        &__item
+            grid-template-columns: 100%
+            gap: 20px
+        &__prev
+            img
+                margin: 0 auto
+                display: block
+    .ask
+        &__bg
+            display: none
+    .footer
+        &__list
+            gap: 10px
+            a
+                font-size: 12px

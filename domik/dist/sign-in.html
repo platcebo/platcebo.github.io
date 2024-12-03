@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atlas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/itc-custom-select.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="nav__row">
+                <a href="#" class="nav__logo">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <div class="nav__place modal-place__btn">
+                    <p class="">Ташкент</p>
+                    <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                </div>
+                <div class="nav__value">
+                    <a href="#">USD</a>
+                    <a href="#" class="active">UZS</a>
+                </div>
+                <div class="nav__lang">
+                    <img src="img/globe.svg" alt="" class="svg">
+                    <p class="">Русский</p>
+                    <ul>
+                        <li><a href="#" class="active">Русский </a></li>
+                        <li><a href="#">O'zbek </a></li>
+                    </ul>
+                    <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                </div>
+                <a href="#" class="nav__fav">
+                    <img src="img/heart.svg" alt="" class="svg">
+                </a>
+                <a href="#" class="nav__enter">Войти</a>
+                <div class="nav__humburger"><span></span></div>
+            </div>
+            <div class="nav__list">
+                <ul class="">
+                    <li>
+                        <a href="#" class="active">Купить</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="#">Снять</a></li>
+                    <li><a href="#">Каталог новостроек</a></li>
+                    <li><a href="#">Покупка дома или земли</a></li>
+                    <li><a href="#">Помещения для бизнеса</a></li>
+                </ul>
+                <button class="btn__blue">Разместить объявление</button>
+            </div>
+            <div class="nav__mob">
+                <div class="nav__mob_wrapper">
+                    <a href="#" class="nav__mob_enter">
+                        <img src="img/pers.svg" alt="" class="svg">
+                        <p>Войти</p>
+                    </a>
+                    <div class="nav__mob_row">
+                        <div class="nav__lang nav__lang_mob">
+                            <img src="img/globe.svg" alt="" class="svg">
+                            <p class="">Ру</p>
+                            <ul>
+                                <li><a href="#" class="active">Русский </a></li>
+                                <li><a href="#">O'zbek </a></li>
+                            </ul>
+                            <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                        </div>
+                        <div class="nav__value nav__value_mob">
+                            <a href="#">USD</a>
+                            <a href="#" class="active">UZS</a>
+                        </div>
+                    </div>
+                    <ul class="nav__mob_list">
+                        <li><a href="#" class="active">Купить</a></li>
+                        <li><a href="#">Снять</a></li>
+                        <li><a href="#">Каталог новостроек</a></li>
+                        <li><a href="#">Покупка дома или земли</a></li>
+                        <li><a href="#">Помещения для бизнеса</a></li>
+                    </ul>
+                    <button class="btn__blue">Разместить объявление</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="sign-in">
+        <div class="container">
+            <div class="sign-in__wrapper">
+                <div class="sign-in__header">
+                    <h1>Войти</h1>
+                </div>
+                <div class="sign-in__body">
+                    <ul class="sign-in__tab">
+                        <li><a href="#" class="active">Электронная почта</a></li>
+                        <li><a href="#">Номер телефона</a></li>
+                    </ul>
+                    <div class="sign-in__tab_wrapper active">
+                        <div class="sign-in__input sign-in__email">
+                            <p class="sign-in__input_text">Электронная почта <span>*</span></p>
+                            <div class="sign-in__input_wrapper">
+                                <input type="text" placeholder="ivan@domik.com" class="">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="sign-in__input_email">
+                                    <path d="M1.66699 5.8335L8.47109 10.5964C9.02207 10.982 9.29756 11.1749 9.59721 11.2496C9.8619 11.3156 10.1387 11.3156 10.4034 11.2496C10.7031 11.1749 10.9786 10.982 11.5296 10.5964L18.3337 5.8335M5.66699 16.6668H14.3337C15.7338 16.6668 16.4339 16.6668 16.9686 16.3943C17.439 16.1547 17.8215 15.7722 18.0612 15.3018C18.3337 14.767 18.3337 14.067 18.3337 12.6668V7.3335C18.3337 5.93336 18.3337 5.2333 18.0612 4.69852C17.8215 4.22811 17.439 3.84566 16.9686 3.60598C16.4339 3.3335 15.7338 3.3335 14.3337 3.3335H5.66699C4.26686 3.3335 3.5668 3.3335 3.03202 3.60598C2.56161 3.84566 2.17916 4.22811 1.93948 4.69852C1.66699 5.2333 1.66699 5.93336 1.66699 7.3335V12.6668C1.66699 14.067 1.66699 14.767 1.93948 15.3018C2.17916 15.7722 2.56161 16.1547 3.03202 16.3943C3.5668 16.6668 4.26686 16.6668 5.66699 16.6668Z" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="error sign-in__input_alert">
+                                    <g clip-path="url(#clip0_12520_3031)">
+                                    <path d="M7.99967 5.3335V8.00016M7.99967 10.6668H8.00634M14.6663 8.00016C14.6663 11.6821 11.6816 14.6668 7.99967 14.6668C4.31778 14.6668 1.33301 11.6821 1.33301 8.00016C1.33301 4.31826 4.31778 1.3335 7.99967 1.3335C11.6816 1.3335 14.6663 4.31826 14.6663 8.00016Z" stroke="#F04438" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_12520_3031">
+                                    <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>                                
+                            </div>
+                        </div>
+                        <div class="sign-in__input">
+                            <p class="sign-in__input_text">Пароль <span>*</span></p>
+                            <div class="sign-in__input_wrapper">
+                                <input type="password" placeholder="******" class="error sign-in__input_password">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="sign-in__input_watch">
+                                    <path d="M1.61342 8.47562C1.52262 8.33186 1.47723 8.25998 1.45182 8.14911C1.43273 8.06583 1.43273 7.9345 1.45182 7.85122C1.47723 7.74035 1.52262 7.66847 1.61341 7.52471C2.36369 6.33672 4.59693 3.3335 8.00027 3.3335C11.4036 3.3335 13.6369 6.33672 14.3871 7.52471C14.4779 7.66847 14.5233 7.74035 14.5487 7.85122C14.5678 7.9345 14.5678 8.06583 14.5487 8.14911C14.5233 8.25998 14.4779 8.33186 14.3871 8.47562C13.6369 9.6636 11.4036 12.6668 8.00027 12.6668C4.59693 12.6668 2.36369 9.6636 1.61342 8.47562Z" stroke="#F04438" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8.00027 10.0002C9.10484 10.0002 10.0003 9.10473 10.0003 8.00016C10.0003 6.89559 9.10484 6.00016 8.00027 6.00016C6.8957 6.00016 6.00027 6.89559 6.00027 8.00016C6.00027 9.10473 6.8957 10.0002 8.00027 10.0002Z" stroke="#F04438" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>   
+                                <p class="sign-in__input_error">This is an error message.</p>                 
+                            </div>
+                        </div>
+                        <div class="sign-in__row">
+                            <div class="sign-in__member">
+                                <input type="checkbox">
+                                <span></span>
+                                <p>Запомнить меня</p>
+                            </div>
+                            <a href="#" class="sign-in__forgot">Я забыл свой пароль</a>
+                        </div>
+                        <button class="btn__blue">Выбрать</button>
+                    </div>
+                    <div class="sign-in__tab_wrapper">
+                        <div class="sign-in__input sign-in__email">
+                            <p class="sign-in__input_text">Телефон <span>*</span></p>
+                            <div class="sign-in__input_wrapper">
+                                <input type="text" placeholder="+7 (777) 777-77-77" class="" data-phone-pattern>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="sign-in__input_email">
+                                    <path d="M6.98356 7.37779C7.56356 8.58581 8.35422 9.71801 9.35553 10.7193C10.3568 11.7206 11.4891 12.5113 12.6971 13.0913C12.801 13.1412 12.8529 13.1661 12.9187 13.1853C13.1523 13.2534 13.4392 13.2045 13.637 13.0628C13.6927 13.0229 13.7403 12.9753 13.8356 12.88C14.1269 12.5887 14.2726 12.443 14.4191 12.3478C14.9715 11.9886 15.6837 11.9886 16.2361 12.3478C16.3825 12.443 16.5282 12.5887 16.8196 12.88L16.9819 13.0424C17.4248 13.4853 17.6462 13.7067 17.7665 13.9446C18.0058 14.4175 18.0058 14.9761 17.7665 15.449C17.6462 15.6869 17.4248 15.9083 16.9819 16.3512L16.8506 16.4825C16.4092 16.9239 16.1886 17.1446 15.8885 17.3131C15.5556 17.5001 15.0385 17.6346 14.6567 17.6334C14.3126 17.6324 14.0774 17.5657 13.607 17.4322C11.0792 16.7147 8.69387 15.361 6.70388 13.371C4.7139 11.381 3.36017 8.99569 2.6427 6.46786C2.50919 5.99749 2.44244 5.7623 2.44141 5.41818C2.44028 5.03633 2.57475 4.51925 2.76176 4.18633C2.9303 3.88631 3.15098 3.66563 3.59233 3.22428L3.72369 3.09292C4.16656 2.65005 4.388 2.42861 4.62581 2.30833C5.09878 2.0691 5.65734 2.0691 6.1303 2.30832C6.36812 2.42861 6.58955 2.65005 7.03242 3.09291L7.19481 3.25531C7.48615 3.54665 7.63182 3.69231 7.72706 3.8388C8.08622 4.3912 8.08622 5.10336 7.72706 5.65576C7.63182 5.80225 7.48615 5.94791 7.19481 6.23925C7.09955 6.33451 7.05192 6.38214 7.01206 6.43782C6.87038 6.63568 6.82146 6.92256 6.88957 7.15619C6.90873 7.22193 6.93367 7.27389 6.98356 7.37779Z" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="error sign-in__input_alert">
+                                    <g clip-path="url(#clip0_12520_3031)">
+                                    <path d="M7.99967 5.3335V8.00016M7.99967 10.6668H8.00634M14.6663 8.00016C14.6663 11.6821 11.6816 14.6668 7.99967 14.6668C4.31778 14.6668 1.33301 11.6821 1.33301 8.00016C1.33301 4.31826 4.31778 1.3335 7.99967 1.3335C11.6816 1.3335 14.6663 4.31826 14.6663 8.00016Z" stroke="#F04438" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_12520_3031">
+                                    <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>                                
+                            </div>
+                        </div>
+                        <button class="btn__blue">Выбрать</button>
+                    </div>
+                </div>
+                <div class="sign-in__footer">
+                    <p>Нет аккаунта?</p>
+                    <a href="#">Зарегистрироваться</a>
+                </div>
+            </div>
+        </div>  
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__row">
+                <ul>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Помощь</a></li>
+                    <li><a href="#">Реклама</a></li>
+                </ul>
+                <div class="footer__soc">
+                    <a href="#">
+                        <img src="img/footer_soc_1.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/footer_soc_2.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/footer_soc_3.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="footer__text">
+                <p>Сервис применяет <a href="#">рекомендательные технологии</a>: предоставляет информацию на основе сбора, систематизации и анализа сведений, относящихся к предпочтениям пользователей интернета, находящихся в Узбекистане</p>
+                <p>Использование сайта означает согласие с <a href="#">Пользовательским соглашением</a> и <a href="#">Политикой обработки персональных данных</a></p>
+            </div>
+            <div class="footer__footer">
+                <a href="#" class="footer__logo"><img src="img/logo_wht.svg" alt=""></a>
+                <p class="footer__law">© 2028 Shinam UY. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/itc-custom-select.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

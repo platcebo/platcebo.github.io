@@ -1,0 +1,3401 @@
+$font-family: "Roboto", sans-serif
+
+body
+    background: #f9fafb
+
+.container
+    max-width: 1216px
+    padding: 0 15px
+    margin: 0 auto
+    box-sizing: content-box
+
+.select
+    &__input
+        position: absolute
+        inset: 0
+        opacity: 0
+
+.btn-light
+    padding: 12px 20px
+    border: none
+    width: max-content
+    border-radius: 4px
+    background: #376df6
+    font: 600 16px / 1.42857 $font-family
+    color: #fff
+    transition: all .3s
+    &:hover
+        background: #2b52b4
+
+.btn
+    &__blue
+        padding: 12px 20px
+        border: none
+        width: max-content
+        border-radius: 4px
+        background: #376df6
+        font: 600 16px / 1.42857 $font-family
+        color: #fff
+        transition: all .3s
+        display: block
+        cursor: pointer
+        &:hover
+            background: #2b52b4
+    &__wht
+        padding: 8px 14px
+        border: none
+        width: max-content
+        border-radius: 4px
+        border: 1px solid #eaecf0
+        background: #fff
+        font: 600 14px / 1.42857 $font-family
+        color: #344054
+        transition: all .3s
+        &:hover
+            background: #eaecf0
+
+.nav
+    background: #fff
+    &__humburger,
+    &__mob
+        display: none
+    &__row
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        position: relative
+        padding: 20px 0 
+        &::before
+            content: ''
+            display: block
+            width: 100vw
+            position: absolute
+            height: 1px
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+            background: #eaecf0
+    &__logo
+        display: block
+        width: 100%
+        max-width: 128px
+        img
+            width: 100%
+    &__place
+        background: #f2f4f7
+        border-radius: 4px
+        padding: 8px 14px
+        display: grid
+        grid-template-columns: auto 20px
+        gap: 8px
+        margin: 0 auto 0 16px
+        cursor: pointer
+        position: relative
+        cursor: pointer
+        align-items: center
+        select
+            position: absolute
+            inset: 0
+            opacity: 0
+        p
+            font: 600 14px / 1 $font-family
+            color: #475467
+            transition: all .3s
+        svg
+            width: 20px
+        &:hover
+            p
+                color: #376df6
+            svg
+                path
+                    stroke: #376df6
+    &__lang
+        position: relative
+        cursor: pointer
+        display: grid
+        grid-template-columns: 20px auto 20px
+        gap: 4px
+        margin: 0 12px
+        padding: 8px 12px
+        background: #f2f4f7
+        border-radius: 4px
+        select
+            position: absolute
+            inset: 0
+            opacity: 0
+        p
+            font: 600 14px / 1.42857 $font-family
+            color: #98a2b3
+            transition: all .3s
+        svg,
+        img
+            transition: all .3s
+            path
+                transition: all .3s
+            &:last-child
+                transform: rotate(90deg)
+                path
+                    stroke: #98a2b3
+        ul
+            position: absolute
+            width: 180px
+            top: calc( 100% + 4px )
+            right: 0
+            left: auto
+            box-shadow: 0 4px 6px -2px rgba(16, 24, 40, 0.03), 0 12px 16px -4px rgba(16, 24, 40, 0.08)
+            background: #fff
+            border: 1px solid #eaecf0
+            border-radius: 8px
+            padding: 6px
+            z-index: 2
+            display: grid
+            grid-template-columns: 100%
+            gap: 4px
+            opacity: 0
+            pointer-events: none
+            transition: all .3s
+            a
+                padding: 10px 38px 10px 8px
+                position: relative
+                transition: all .3s
+                font: 500 16px / 1.5 $font-family
+                color: #101828
+                display: block
+                border-radius: 6px
+                &::before
+                    content: ''
+                    display: block
+                    width: 20px
+                    height: 20px
+                    position: absolute
+                    top: 50%
+                    transform: translateY(-50%)
+                    right: 10px
+                    opacity: 0
+                    transition: all .3s
+                    background: url('../img/blue_check.svg') center no-repeat
+                    background-size: contain
+                &.active
+                    background: #f9fafb
+                    &::before
+                        opacity: 1
+                &:hover
+                    background: #f9fafb
+        &:hover
+            svg
+                path
+                    stroke: #376df6
+            p
+                color: #376df6
+        &_open
+            ul
+                opacity: 1
+                pointer-events: auto
+            svg,
+            img
+                &:last-child
+                    transform: rotate(-90deg)
+    .btn__blue
+        margin: 0 12px
+        font-size: 14px
+        padding: 8px 14px
+    &__enter
+        font: 500 14px / 1.42857 $font-family
+        color: #2963f5
+        transition: all .3s
+        border-radius: 4px
+        padding: 8px 14px
+        background: #e3ebfe
+        &:hover
+            background: #c1d3ff
+    &__fav
+        border-radius: 4px
+        padding: 8px
+        background: #e3ebfe
+        display: block
+        margin: 0 12px 0 0
+        transition: all .3s
+        svg
+            display: block
+            width: 20px
+            height: 20px
+        &:hover
+            background: #c1d3ff
+    &__list
+        padding: 12px 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 16px
+        .btn__blue
+            margin: 0 0 0 auto
+        ul
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            gap: 16px
+        a,
+        p
+            display: grid
+            font: 600 16px / 1.5 $font-family
+            color: #667085
+            transition: all .3s
+            border-radius: 6px
+            padding: 8px 12px
+            position: relative  
+            &::before
+                content: ''
+                display: block
+                width: 1px
+                height: 24px
+                background: #eaecf0
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                right: -8px
+            &:hover
+                color: #1d2939
+            &.active
+                color: #1d2939
+                background: #f2f4f7
+        li 
+            &:last-child a
+                &::before
+                    content: none
+        li
+            position: relative
+            &:hover
+                ol
+                    opacity: 1
+                    pointer-events: auto
+        ol
+            padding: 6px
+            border: 1px solid #eaecf0
+            border-radius: 12px
+            box-shadow: 0 4px 6px -2px rgba(16, 24, 40, 0.03), 0 12px 16px -4px rgba(16, 24, 40, 0.08)
+            background: #fff
+            position: absolute
+            top: 100%
+            left: 0
+            width: max-content  
+            min-width: 160px
+            display: grid
+            grid-template-columns: 100%
+            gap: 12px
+            opacity: 0
+            pointer-events: none
+            transition: all .3s
+            a
+                padding: 4px 8px
+                color: #101828
+                font-weight: 500
+                &:hover
+                    background: #f2f4f7
+    &__value
+        border-radius: 4px
+        background: #f2f4f7
+        position: relative
+        overflow: hidden
+        display: grid
+        grid-template-columns:  60px 60px
+        a
+            display: block
+            padding: 3px 7px
+            font: 500 14px / 1.5 $font-family
+            color: #98a2b3
+            width: 60px
+            border: 1px solid transparent
+            border-radius: 4px
+            text-align: center
+            &.active
+                border: 1px solid #5482f7
+                background: #e3ebfe
+                color: #2963f5
+
+fieldset
+    &:last-child
+        h4
+            border: none
+    .mse2_number_inputs
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 8px
+        min-width: 300px
+        label
+            font: 500 14px / 1.42857 $font-family
+            color: #344054
+            input
+                position: relative
+                height: auto
+                box-sizing: border-box
+                margin: 6px 0 0
+                padding: 8px 12px
+                font-size: 16px
+                color: #344054
+                opacity: 1
+                border: 1px solid #d0d5dd
+                border-radius: 4px
+                box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+                background: #fff
+.itc-select,
+fieldset
+    position: relative
+    &__toggle,
+    h4
+        height: 100%
+        border: none
+        border-right: 1px solid #d0d5dd
+        border-radius: 0
+        padding: 10px 0
+        justify-content: center
+        gap: 8px
+        font: 600 14px / 1.42857 $font-family
+        color: #344054
+        white-space: nowrap
+        display: flex
+        align-items: center
+        &::after
+            content: none
+        &::before
+            content: ''
+            display: block
+            position: relative
+            order: 2
+            width: 20px
+            height: 20px
+            background: url('../img/arrow-blc-botton.svg') center no-repeat
+            background-size: contain
+            transition: all .3s
+    &_show
+        .itc-select
+            &__toggle
+                &::before
+                    transform: rotate(-180deg)
+    .filter__fieldset
+        opacity: 0
+        pointer-events: none
+        transition: all .3s
+    &__dropdown,
+    .filter__fieldset
+        top: calc( 100% + 8px )
+        right: 0
+        left: auto
+        width: max-content
+        border: 1px solid #eaecf0
+        border-radius: 8px
+        box-shadow: 0 4px 6px -2px rgba(16, 24, 40, 0.03), 0 12px 16px -4px rgba(16, 24, 40, 0.08)
+        background: #fff
+        min-width: calc( 100% - 20px )
+        z-index: 4
+        position: absolute
+    &__options,
+    .filter__fieldset
+        display: grid
+        grid-template-columns: 100%
+        gap: 4px
+        padding: 6px
+        br
+            display: none
+    &__option,
+    .filter__fieldset span
+        padding: 0
+        border-radius: 0
+        background: transparent !important
+        &::before,
+        &::after
+            content: none
+        a
+            color: #101828
+            border-radius: 6px
+            padding: 10px 10px 10px 8px
+            font: 500 16px / 1.5 $font-family
+            color: #101828
+            padding: 10px 
+            gap: 8px
+            transition: all .3s
+            display: flex
+            align-items: center
+            justify-content: space-between
+            gap: 8px
+            width: 100%
+        &:hover
+            a
+                background: #f9fafb
+        &_selected
+            a
+                background: #f9fafb
+                &::after
+                    content: ''
+                    display: block
+                    width: 20px
+                    height: 20px
+                    background: url('../img/blue_check.svg') center no-repeat
+                    background-size: contain
+    .filter__fieldset 
+        label
+            position: relative
+        span
+            cursor: pointer
+            color: #101828
+            border-radius: 6px
+            padding: 10px 10px 10px 8px
+            font: 500 16px / 1.5 $font-family
+            color: #101828
+            padding: 10px 
+            gap: 8px
+            transition: all .3s
+            display: flex
+            align-items: center
+            justify-content: flex-start
+            gap: 8px
+            width: 100%
+            position: relative
+            &:hover
+                background: #f9fafb !important
+            &::before
+                border-radius: 4px
+                border: 1px solid #d0d5dd
+                opacity: 1
+                content: ''
+                display: block
+                width: 20px
+                height: 20px
+                background: transparent
+                background-size: contain
+                transition: all .3s
+        input
+            cursor: pointer
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            opacity: 0
+            &:checked
+                &+span
+                    &::before
+                        background: url('../img/blue_check.svg') center no-repeat
+            &:disabled
+                &+span
+                    opacity: .5
+    &.open
+        .filter__fieldset
+            opacity: 1
+            pointer-events: all
+    .mse2_number_slider
+        span.ui-slider-handle
+            width: 8px
+            height: 8px
+            border-radius: 100%
+            background: #376df6 !important
+            transition: all 0s 
+            padding: 0
+            border: none
+            top: calc( 50% - 4px )
+            margin: 0
+            transform: translateX(-50%)
+            &::before
+                content: none 
+        .ui-slider-range
+            background: #376df6
+            opacity: .5
+
+.header
+    padding: 120px 0 64px
+    position: relative
+    z-index: 1
+    min-height: 400px
+    &__post
+        display: none
+    &__bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100vw
+        z-index: -1
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            inset: 0
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 39%, rgba(55, 109, 246, 0.2) 100%)
+        img
+            width: 100%
+            height: 400px
+            object-fit: cover
+            z-index: -3
+    h1
+        font: 600 60px / 1.2 $font-family
+        letter-spacing: -0.02em
+        text-align: center
+        color: #fff
+        a
+            text-decoration: underline
+            text-decoration-skip-ink: none
+            color: #fff
+    &__block
+        margin: 90px 0 0
+    &__wrapper
+        border-radius: 0 20px 20px 20px
+        background: #fff
+        padding: 24px
+        display: none
+        &.active
+            display: block
+    &__tab
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 5px
+    &__point
+        border-radius: 20px 20px 0 0
+        padding: 16px 48px 10px
+        // border: 1px solid #eaecf0 
+        cursor: pointer
+        background: #f9fafb
+        font: 600 16px / 1.5 $font-family
+        color: #98a2b3
+        transition: all .3s
+        position: relative
+        &::before,
+        &::after 
+            content: ''
+            display: block
+            width: 20px
+            height: 20px
+            background-size: calc(20px * 1.5) calc(20px * 1.5)
+            position: absolute
+            bottom: 0
+            background-image: radial-gradient(circle at top left, transparent 45%, #f9fafb 47%)
+        &::before
+            left: calc(19px * -1)
+        &::after 
+            right: calc(19px * -1)
+            transform: rotate(90deg)
+        &:nth-child(1)
+            &::before
+                content: none
+        &.active
+            font: 600 16px / 1.5 $font-family
+            color: #5482f7
+            background: #fff
+            z-index: 2
+            &::before,
+            &::after
+                background-image: radial-gradient(circle at top left, transparent 45%, #fff 47%)
+        &:hover
+            color: #5482f7
+    &__form
+        // margin: 24px 0 0
+        display: grid
+        grid-template-columns: 1fr 252px
+        gap: 24px
+        &_link
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+            gap: 12px
+            margin: 24px 0 0
+            z-index: 2
+            position: relative
+        &_select
+            border: 1px solid #eaecf0
+            border-radius: 4px
+            display: grid
+            grid-template-columns: 22fr 11fr 10fr 36fr
+    &__input
+        position: relative
+        img
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: 14px
+        input
+            height: 100%
+            width: 100%
+            box-sizing: border-box  
+            border: none
+            font: 400 16px / 1.5 $font-family
+            color: #344054
+            background: transparent
+            padding: 0 10px 0 42px
+            &::placeholder
+                color: #667085
+    &__btn
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 12px
+        button
+            width: 100%
+            height: 100%
+            font-size: 16px
+    &__map
+        border: 1px solid #eaecf0
+        border-radius: 4px
+        padding: 12px 20px
+        background: #fff
+        display: grid
+        grid-template-columns: 20px 1fr
+        gap: 8px
+        align-items: center
+        font: 600 16px / 1.5 $font-family
+        color: #344054
+        transition: all .3s
+        img
+            width: 100%
+        &:hover
+            background: #eaecf0
+    &__link
+        border: 1px solid #eaecf0
+        border-radius: 8px
+        padding: 15px
+        display: block
+        transition: all .3s
+        span
+            position: relative
+            width: 32px
+            height: 32px
+            display: flex
+            justify-content: center
+            align-items: center
+            z-index: 10
+            transition: all .3s
+            border-radius: 6px
+            img
+                width: 16px
+            &::before
+                content: ''
+                display: block
+                position: absolute
+                top: -3px
+                right: -5px
+                width: 100%
+                height: 100%
+                border-radius: 6px
+                background: #2963f5
+                transform: rotate(15deg)
+                z-index: -10
+                transition: all .3s
+            &::after
+                backdrop-filter: blur(16px)
+                background: rgba(255, 255, 255, 0.6)
+                border: 1px solid rgba(255, 255, 255, 0.6)
+                border-radius: 6px
+                inset: 0
+                content: ''
+                display: block
+                position: absolute
+                z-index: -5
+                transition: all .3s
+        p
+            margin: 16px 0 0
+            font: 500 14px / 1.42857 $font-family
+            color: #344054
+        &:hover
+            background: #e3ebfe
+    &__more
+        border-radius: 8px
+        padding: 16px
+        background: #e3ebfe
+        display: block
+        transition: all .3s
+        span
+            position: relative
+            width: 32px
+            height: 32px
+            display: flex
+            justify-content: center
+            align-items: center
+            transition: all .3s
+            background: #225ef5
+            border-radius: 6px
+            img
+                width: 16px
+        p
+            margin: 16px 0 0
+            font: 500 14px / 1.42857 $font-family
+            color: #344054
+        &:hover
+            background: #c1d3ff
+
+.catalog
+    padding: 96px 0
+    z-index: 2
+    position: relative
+    &__wrapper
+        display: grid
+        grid-template-columns: 43fr 43fr 31fr
+        gap: 20px
+    &__item
+        padding: 24px
+        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+        background: #fff
+        border: 1px solid #eaecf0
+        border-radius: 24px 
+        position: relative
+        overflow: hidden
+        &_title
+            display: grid
+            grid-template-columns: 48px 1fr
+            gap: 16px
+            align-items: center
+            span
+                width: 48px
+                height: 48px
+                display: flex
+                justify-content: center
+                align-items: center
+                box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+                background: #fff
+                border: 1px solid #eaecf0
+                border-radius: 10px
+                img
+                    width: 24px
+            p
+                font: 600 20px / 1.5 $font-family
+                color: #1d2939
+                transition: all .3s
+            &:hover
+                p
+                    color: #225ef5
+        ul
+            margin: 32px 0 0
+            display: grid
+            grid-template-columns: 100%
+            gap: 12px
+            a
+                font: 600 14px / 1.42857 $font-family
+                color: #2963f5
+                transition: all .3s
+                &:hover
+                    color: #2b52b4
+            span
+                font: 500 12px / 1.5 $font-family
+                color: #98a2b3
+    &__bg
+        position: absolute
+        bottom: 0
+        right: 0
+        width: 120px
+        height: 200px
+        object-fit: cover
+        border-radius: 36px 0 0 0
+    &__town
+        background-size: cover
+        background-position: center bottom
+        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+        border: 1px solid #eaecf0
+        border-radius: 24px
+        overflow: hidden
+        position: relative
+        display: flex
+        flex-direction: column
+        padding: 24px
+        z-index: 1
+        &::before
+            content: ''
+            position: absolute
+            inset: 0
+            z-index: -1
+            background: linear-gradient(360deg, rgba(255, 255, 255, 0) 41.28%, #fff 90.97%)
+        p
+            font: 600 20px / 1.5 $font-family
+            color: #1d2939
+            text-align: center
+        .btn__wht
+            width: 100%
+            margin: auto 0 0
+    &__map
+        background-size: cover
+        background-position: center center
+        padding: 24px
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        border-radius: 24px
+        span
+            border: 1px solid #eaecf0
+            background: #fff
+            border-radius: 10px
+            width: 48px
+            height: 48px
+            display: flex
+            justify-content: center
+            align-items: center
+            img
+                width: 24px
+        p
+            margin: 20px 0 0
+            font: 600 20px / 1.5 $font-family
+            color: #fff
+        .btn__wht
+            margin: 20px 0 0
+            width: 100%
+
+.recom
+    padding: 96px 0
+    background: #fff
+    h2
+        font: 600 30px / 1.26667 $font-family
+        color: #101828
+    &__wrapper
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 20px
+    &__item
+        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+        box-shadow: 0 2px 4px -2px rgba(16, 24, 40, 0.06), 0 4px 8px -2px rgba(16, 24, 40, 0.1)
+        background: #fff
+        border: 1px solid #eaecf0
+        border-radius: 8px
+        position: relative
+        z-index: 1
+    &__prev
+        position: relative
+        border-radius: 8px 8px 0 0
+        overflow: hidden
+        display: block
+        img
+            width: 100%
+            height: 240px
+            object-fit: cover
+    &__fav
+        position: absolute
+        top: 12px
+        right: 12px
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 44px
+        height: 44px
+        border: 1px solid #d0d5dd
+        border-radius: 4px
+        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+        background: #fff
+        transition: all .3s
+        z-index: 2
+        img
+            width: 20px
+            height: 20px
+        svg
+            width: 20px
+            height: 20px
+            path
+                transition: all .3s
+                transition: all .3s
+                stroke: #344054
+                fill: transparent
+        &:hover
+            background: #e3ebfe
+            svg
+                path
+                    stroke: #2963f5
+        &.active
+            svg
+                path
+                    stroke: #2963f5
+                    fill: #2963f5
+    &__info
+        padding: 16px 24px 24px
+    &__price
+        &_wrapper
+            display: none
+            grid-template-columns: 1fr auto
+            gap: 10px
+            align-items: center
+            &.active
+                display: grid
+        &_val
+            font: 600 24px / 1.33333 $font-family
+            color: #1d2939
+        &_cur
+            border: 1px solid #344054
+            border-radius: 16px
+            padding: 2px 8px
+            font: 400 12px / 1.5 $font-family
+            text-align: center
+            color: #344054
+    &__square
+        font: 600 14px / 1.42857 $font-family
+        color: #98a2b3
+    &__row
+        margin: 16px 0 0
+        display: flex
+        flex-wrap: wrap
+        gap: 12px
+        span
+            position: absolute
+            bottom: calc( 100% + 6px )
+            left: 50%
+            transform: translateX(-50%)
+            padding: 8px 12px
+            border-radius: 8px
+            background: #101828
+            display: block
+            width: max-content
+            font: 600 12px / 1.5 $font-family
+            text-align: center
+            color: #fff
+            opacity: 0
+            transition: all .3s
+            pointer-events: none
+            &::before
+                content: ''
+                display: block
+                width: 8px
+                height: 8px
+                border-radius: 1px
+                background: #101828
+                bottom: -3px
+                left: 50%
+                transform: translateX(-50%) rotate(45deg)
+                position: absolute
+        div
+            display: grid
+            grid-template-columns: 20px auto
+            gap: 8px
+            padding: 0 12px 0 0
+            border-right: 1px solid #EAECF0
+            align-items: center
+            position: relative
+            &:last-child
+                padding: 0
+                border-right: none
+            &:hover
+                span
+                    opacity: 1
+        img
+            width: 20px
+        p
+            font: 600 14px / 1.42857 $font-family
+            color: #2963f5
+    &__place
+        margin: 16px 0 0
+        display: grid
+        grid-template-columns: 20px 1fr
+        gap: 4px
+        svg
+            width: 20px
+            height: 20px
+            path
+                stroke: #98A2B3
+        p
+            font: 500 14px / 1.42857 $font-family
+            color: #475467
+    &__more
+        margin: 32px auto 0
+        display: block
+
+.banner
+    padding: 96px 0
+    z-index: 1
+    &__wrapper
+        box-shadow: 0 8px 8px -4px rgba(16, 24, 40, 0.03), 0 20px 24px -4px rgba(16, 24, 40, 0.08)
+        background: #376df6
+        border-radius: 24px
+        padding: 64px
+        position: relative
+        z-index: 1
+        overflow: hidden
+    &__list
+        display: grid
+        grid-template-columns: 100%
+        gap: 24px
+        li
+            display: grid
+            grid-template-columns: 56px 1fr
+            gap: 16px
+            align-items: center
+        p
+            font: 600 20px / 1.5 $font-family
+            color: #fff
+    &__image
+        display: block
+        width: 56px
+        height: 56px
+        border-radius: 100%
+        border: 8px solid #e3ebfe
+        border-radius: 28px
+        background: #d5e1fe
+        display: flex
+        justify-content: center
+        align-items: center
+        img
+            width: 24px
+            height: 24px
+    &__bg
+        position: absolute
+        bottom: 0
+        right: 0
+        max-height: 100%
+        width: 50%
+        object-fit: contain
+        object-position: bottom right
+        z-index: -1
+
+.dream
+    padding: 96px 0
+    &__wrapper
+        border-radius: 24px
+        background: #f1f5ff
+        position: relative
+        overflow: hidden
+        gap: 0
+        display: grid
+        grid-template-columns: 3fr 2fr
+        align-items: center
+    &__info
+        padding: 64px
+        h2
+            font: 500 36px / 1.22222 $font-family
+            letter-spacing: -0.02em
+            color: #101828
+        p
+            margin: 16px 0 0
+            font: 400 16px / 1.5 $font-family
+            color: #667085
+        .btn__blue
+            margin: 24px 0 0
+    &__bg
+        width: 100%
+        height: 460px
+        object-fit: cover
+
+.guide
+    padding: 96px 0
+    background: #fff
+    position: relative
+    overflow: hidden
+    &__title
+        display: grid
+        grid-template-columns: 1fr auto
+        gap: 20px
+        align-items: start
+        h2
+            font: 600 36px / 1.22222 $font-family
+            letter-spacing: -0.02em
+            color: #101828
+            max-width: 768px
+        p
+            margin: 20px 0 0
+            font: 400 20px / 1.5 $font-family
+            color: #475467
+            max-width: 768px
+    &__wrapper
+        margin: 64px 0 0
+        overflow: visible
+    .swiper
+        &-slide
+            max-width: 592px
+            border: 1px solid #eaecf0
+            border-radius: 16px
+            overflow: hidden
+            position: relative
+    &__prev
+        position: relative
+        img
+            width: 100%
+            height: 280px
+            object-fit: cover
+        &_info
+            position: absolute
+            bottom: 0
+            left: 0
+            right: 0
+            padding: 24px
+            backdrop-filter: blur(24px)
+            background: rgba(255, 255, 255, 0.2)
+            display: grid
+            grid-template-columns: auto auto
+            justify-content: space-between
+        p
+            font: 600 14px / 1.42857 $font-family
+            color: #fff
+            &+p
+                font: 400 14px / 1.42857 $font-family
+    &__info
+        padding: 32px 24px
+        h3
+            font: 600 24px / 1.33333 $font-family
+            color: #101828
+        p
+            margin: 8px 0 0
+            font: 400 16px / 1.5 $font-family
+            color: #475467
+        a
+            margin: 24px 0 0
+            font: 600 16px / 1.5 $font-family
+            color: #2963f5
+            display: grid
+            grid-template-columns: 1fr auto
+            gap: 8px
+            width: max-content
+            align-items: center
+            transition: all .3s
+            svg
+                path
+                    transition: all .3s
+            &:hover
+                color: #2b52b4
+                svg
+                    path
+                        stroke: #2b52b4
+    &__arrow
+        display: grid
+        grid-template-columns: 56px 56px
+        gap: 32px
+        margin: 32px 0 0
+        .swiper-button-prev,
+        .swiper-button-next
+            position: relative
+            width: 56px
+            height: 56px
+            border-radius: 100%
+            border: 1px solid #eaecf0
+            transform: rotate(45deg)
+            opacity: 1
+            transition: all .3s
+            svg
+                width: 24px
+                height: 24px
+                path
+                    stroke: #667085
+            &::after
+                content: none
+            &:hover
+                background: #e3ebfe
+        .swiper-button-prev
+            transform: rotate(-135deg)
+    &__mob
+        display: none
+
+.about
+    padding: 96px 0
+    h2
+        font: 600 48px / 1.25 $font-family
+        letter-spacing: -0.02em
+        color: #101828
+    p
+        margin: 24px 0 0
+        font: 500 20px / 1.5 $font-family
+        color: #475467
+
+.footer
+    background: #141414
+    padding: 64px 0 48px
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        padding: 0 0 32px
+        border-bottom: 1px solid #667085
+        ul
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 24px
+            a
+                font: 600 14px / 1.42857 $font-family
+                color: #fff
+                transition: all .3s
+                &:hover
+                    color: #2963f5
+    &__soc
+        display: flex
+        justify-items: center
+        align-items: center
+        gap: 16px
+        a
+            width: 36px
+            height: 36px
+            border: 1px solid #fff
+            border-radius: 4px
+            display: flex
+            justify-content: center
+            align-items: center
+            img
+                width: 20px
+    &__text
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 24px
+        p
+            font: 400 16px / 1.5 $font-family
+            color: #98a2b3
+        a
+            color: #2963f5
+            transition: all .3s
+            &:hover
+                color: #fff
+    &__footer
+        margin: 80px 0 0
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+    &__logo
+        max-width: 94px
+        img
+            width: 100%
+    &__law
+        font: 400 16px / 1.5 $font-family
+        color: #d2d6db
+
+.mob-menu
+    display: none
+
+@media ( max-width: 1200px )
+    .nav
+        &__list
+            a
+                font-size: 14px
+    
+
+@media ( max-width: 1024px )
+    .nav
+        &__list
+            display: none
+        &__humburger
+            display: block
+            width: 20px
+            height: 14px
+            display: flex
+            justify-content: space-between
+            flex-direction: column
+            cursor: pointer
+            position: relative
+            &::before,
+            &::after,
+            span
+                content: ''
+                display: block
+                width: 100%
+                height: 2px
+                border-right: 2px
+                background: #344054
+                transition: all .3s
+        &__enter
+            display: none
+        &__fav
+            padding: 0
+            background: transparent
+            margin: 0 20px 0 12px
+            svg
+                path
+                    stroke: #475467
+        .btn__blue
+            display: none
+        &__lang
+            display: none
+            &_mob
+                display: grid
+                margin: 0
+                justify-content: center
+                background: #fff
+                p
+                    color: #667085
+                svg
+                    path
+                        stroke: #667085
+            ul
+                width: 100%
+        &__place
+            padding: 5px 8px
+            background: transparent
+            padding: 0
+            grid-template-columns: 20px 1fr
+            gap: 8px
+            margin: 0 0 0 auto
+            svg
+                display: none
+            p
+                font-size: 12px
+                color: #2963f5
+            &::before
+                content: ''
+                display: block
+                background: url('../img/navigation.svg') center no-repeat
+                background-size: contain
+                width: 20px
+                height: 20px
+        &__value
+            display: none
+            &_mob
+                display: grid
+                background: #fff
+                grid-template-columns: 1fr 1fr
+                a
+                    width: 100%
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    color: #667085
+        &__row
+            padding: 14px 0
+        &.active
+            position: fixed
+            width: 100%
+            background: #f9fafb
+            top: 0
+            left: 0
+            z-index: 5
+            .nav
+                &__humburger
+                    span
+                        opacity: 0
+                    &::before
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%) rotate(45deg)
+                    &::after
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%) rotate(-45deg)
+                &__mob
+                    z-index: -1
+                    display: block
+                    top: 0
+                    height: 100vh
+                    background: #eaecf0
+                    position: absolute
+                    left: 0
+                    width: 100%
+                    padding-top: 72px
+                    &_row
+                        margin: 8px 0 0
+                        display: grid
+                        grid-template-columns: 1fr 1fr
+                        gap: 8px
+                    &_wrapper
+                        background: #f9fafb
+                        border-radius: 24px 24px 0 0
+                        padding: 24px 16px
+                        height: 100%
+                        display: flex
+                        flex-direction: column
+                    &_enter
+                        border: 1px solid #d0d5dd
+                        border-radius: 4px
+                        padding: 10px 16px
+                        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+                        background: #fff
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        gap: 8px
+                        p
+                            font: 600 14px / 1.42857 $font-family
+                            color: #344054
+                    &_lang
+                        background: #eaecf0
+                        border-radius: 4px
+                        padding: 4px
+                        margin: 12px 0 0
+                        display: grid
+                        grid-template-columns: 1fr 1fr 1fr
+                        a
+                            padding: 8px
+                            font: 600 14px / 1.42857 $font-family
+                            color: #475467
+                            border-radius: 4px
+                            display: block
+                            text-align: center
+                            &.active
+                                background: #fff
+                    &_list
+                        margin: 12px 0 0
+                        display: grid
+                        grid-template-columns: 100%
+                        gap: 4px
+                        a
+                            display: block
+                            border-radius: 4px
+                            padding: 8px 12px
+                            background: #fff
+                            font: 600 16px / 1.5 $font-family
+                            color: #667085
+                            border: 1px solid #fff
+                            &.active
+                                color: #1d2939
+                                border: 1px solid #eaecf0
+                    .btn__blue
+                        width: 100%
+                        margin: auto 0 0
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        &::before
+                            content: ''
+                            display: block
+                            width: 20px
+                            height: 20px
+                            background: url('../img/plus-wht.svg') center no-repeat
+                            background-size: contain
+                            margin: 0 8px 0 0
+    .header
+        h1
+            font-size: 45px
+        &__form
+            grid-template-columns: 100%
+    .catalog
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+        &__town,
+        &__map
+            order: 2
+    .recom
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+
+@media ( max-width: 768px )
+    .header
+        padding: 64px 0 0
+        min-height: 240px
+        &__block
+            margin: 32px 0 0
+        &__tab
+            display: none
+        &__wrapper
+            border-radius: 20px
+            box-shadow: 0 2px 4px -2px rgba(16, 24, 40, 0.06), 0 4px 8px -2px rgba(16, 24, 40, 0.1)
+        &__select
+            display: none
+        &__form
+            gap: 8px
+            &_select
+                display: block
+            &_link
+                display: none
+        &__input
+            input
+                padding: 9px 16px 9px 36px
+            img
+                left: 10px
+        &__btn
+            gap: 8px
+            button
+                padding: 8px 
+        &__map
+            grid-template-columns: 20px auto
+            justify-content: center
+        &__post
+            width: 100%
+            margin: 32px 0 0
+            display: flex
+            justify-content: center
+            align-items: center
+            &::before
+                content: ''
+                display: block
+                width: 20px
+                height: 20px
+                background: url('../img/plus-wht.svg') center no-repeat
+                background-size: contain
+                margin: 0 8px 0 0
+        &__bg
+            img
+                height: 240px
+    .catalog
+        padding: 16px 0 36px
+        &__wrapper
+            grid-template-columns: 100%
+            gap: 12px
+        &__item
+            &_title
+                p
+                    font-size: 16px
+        &__bg
+            width: 80px
+            height: 180px
+        &__town
+            height: 422px
+    .recom
+        padding: 36px 0
+        h2
+            font-size: 16px
+        &__wrapper
+            margin: 12px 0 0
+            grid-template-columns: 100%
+        &__prev
+            img
+                height: 160px
+        &__fav
+            img
+                width: 20px
+                height: 20px
+        &__price
+            &_val
+                font-size: 16px
+            &_cur
+                border: 1px solid #344054
+        &__row
+            gap: 4px
+            div
+                padding: 0 4px 0 0
+                gap: 4px
+        &__info
+            padding: 8px 12px 12px
+    .banner
+        padding: 36px 0
+        &__wrapper
+            padding: 16px
+        &__list
+            gap: 12px
+            p
+                font-size: 14px
+        &__bg
+            width: 150px
+            height: 70px
+    .dream
+        padding: 36px 0
+        &__info
+            padding: 12px
+            h2
+                font-size: 16px
+            p
+                font-size: 12px
+                margin: 4px 0 0
+            .btn__blue
+                margin: 12px 0 0
+        &__bg
+            height: 176px
+    .guide
+        padding: 36px 0
+        &__title
+            display: block
+            h2
+                font-size: 16px
+            p
+                font-size: 12px
+                margin: 4px 0 0
+            .btn__blue
+                display: none
+        .swiper
+            &-slide
+                width: 240px
+        &__arrow
+            display: none
+        &__mob
+            display: block
+            margin: 32px 0 0
+        &__wrapper
+            margin: 32px 0 0
+        &__prev
+            img
+                height: 180px
+            &_info
+                padding: 8px
+        &__info
+            padding: 12px 
+            h3
+                font-size: 14px
+            p
+                font-size: 12px
+                margin: 8px 0 0
+            a
+                margin: 16px 0 0
+                font-size: 14px
+    .about
+        padding: 36px 0
+        h2
+            font-size: 16px
+        p
+            font-size: 12px
+            margin: 8px 0 0
+    .footer
+        padding: 36px 0 100px
+        &__row
+            display: grid
+            grid-template-columns: 100%
+            gap: 12px
+            ul
+                justify-content: flex-start
+        &__text
+            p
+                font-size: 14px
+        &__footer
+            margin: 40px 0 0
+            display: grid
+            grid-template-columns: 100%
+            gap: 8px
+            p
+                font-size: 12px
+    .mob-menu
+        display: block
+        position: fixed
+        z-index: 3
+        width: 100%
+        padding: 12px 0
+        border-left: 1px solid #eaecf0
+        border-right: 1px solid #eaecf0
+        border-top: 1px solid #eaecf0
+        border-radius: 16px 16px 0 0
+        background: #fff
+        bottom: 0
+        left: 0
+        .container
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+            gap: 5px
+            justify-items: center
+        a
+            display: flex
+            flex-direction: column
+            align-items: center
+            span
+                padding: 4px 10px
+                border-radius: 8px
+                background: transparent
+                transition: all .3s
+            svg
+                width: 20px
+                path
+                    stroke: #98A2B3
+                    transition: all .3s
+                g
+                    path
+                        stroke: transparent
+                        fill: #98A2B3
+            p
+                font: 500 12px / 1.1 $font-family
+                text-align: center
+                color: #98a2b3
+                margin: 2px 0 0
+            &.active
+                p
+                    color: #376df6
+                span
+                    background: #c6d6fd
+                svg
+                    path
+                        stroke: #376df6
+                        transition: all .3s
+                    g
+                        path
+                            stroke: transparent
+                            fill: #376df6
+                
+.search
+    padding: 32px 0
+    &__mob
+        display: none
+    &__row
+        display: grid
+        grid-template-columns: 1fr 252px
+        gap: 12px
+        &+.d-flex
+            margin: 12px 0 0
+    &__form
+        border: 1px solid#eaecf0
+        border-radius: 4px
+        padding: 4px 8px
+        background: #fff
+        display: grid
+        grid-template-columns: 22fr 11fr 10fr 38fr
+    &__btn
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 12px
+        button
+            width: 100%
+    &__filter
+        border: 1px solid #eaecf0
+        border-radius: 4px
+        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+        background: #fff
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        transition: all .3s
+        display: none
+        svg
+            width: 20px
+        &:hover
+            background: #eaecf0
+    #mse2_selected_wrapper
+        margin: 0
+        font: 500 14px / 1.42857 $font-family
+        color: #344054
+        white-space: nowrap
+        #mse2_selected
+            padding: 0
+            border-radius: 0
+            display: flex !important
+            justify-content: flex-start
+            align-items: center 
+            flex-wrap: nowrap
+            overflow-x: scroll
+            gap: 12px
+            margin: 16px 0 0
+            position: relative
+        a
+            display: block
+            width: max-content
+            padding-right: 30px
+            position: relative
+            sup
+                font-weight: 300
+                content: 'X'
+                display: block
+                font-size: 8px
+                width: 15px
+                height: 15px
+                border-radius: 100%
+                border: 0.5px solid #d0d5dd
+                color: #d0d5dd
+                display: flex
+                justify-content: center
+                align-items: center
+                position: absolute
+                top: 50%
+                right: 6px
+                transform: translateY(-50%)
+                box-sizing: border-box
+                transition: all .3s
+            &:hover
+                sup
+                    color: #376df6
+                    border-color: #376df6
+        strong
+            font: 500 14px / 1.42857 $font-family
+            color: #344054
+            white-space: nowrap
+    &__check
+        display: flex
+        justify-content: flex-start
+        align-items: center 
+        flex-wrap: nowrap
+        overflow-x: scroll
+        gap: 12px
+        margin: 16px 0 0
+        position: relative
+        .search__check
+            width: 100%
+        span
+            background: #f2f4f7
+            border-radius: 16px
+            position: absolute
+            inset: 0
+            z-index: -1
+            transition: all .3s
+        div
+            z-index: 1
+            position: relative
+            padding: 4px 12px
+            display: flex
+            justify-content: center
+            align-items: flex-end
+            gap: 8px
+            cursor: pointer
+        p
+            font: 500 14px / 1.42857 $font-family
+            color: #344054
+            white-space: nowrap
+            &+p
+                font: 400 12px / 1.5 $font-family
+                color: #98a2b3
+        input
+            position: absolute
+            inset: 0
+            opacity: 0
+            z-index: 2
+            width: 100%
+            cursor: pointer
+            height: 100%
+            &:checked
+                &+span
+                    background: #d5e1fe
+        a
+            font: 500 14px / 1.42857 $font-family
+            color: #344054
+            background: #f2f4f7
+            border-radius: 16px
+            transition: all .3s
+            padding: 4px 12px
+            &:hover
+                background: #d5e1fe
+    &+.recom
+        padding: 48px 0 64px
+        .recom
+            &__wrapper
+                margin: 0
+
+.pag
+    margin: 64px 0 0
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    border: 1px solid #d0d5dd
+    width: max-content
+    border-radius: 8px
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+    overflow: hidden
+    a
+        font: 500 14px / 1.42857 $font-family
+        color: #1d2939
+        padding: 10px 16px
+        display: block
+        transition: all .3s
+        &:hover
+            color: #376df6
+            svg
+                path
+                    stroke: #376df6
+        &.active
+            background: #f9fafb
+    li
+        border-right: 1px solid #d0d5dd
+        &:last-child
+            border: none
+    &__prev
+        display: grid !important
+        grid-template-columns: 20px 1fr
+        gap: 8px
+        align-items: center
+        svg
+            transform: rotate(-135deg)
+            width: 20px
+            height: 20px
+            path
+                stroke: #1d2939
+                transition: all .3s
+    &__next
+        display: grid !important
+        grid-template-columns: 1fr 20px
+        gap: 8px
+        align-items: center
+        svg
+            transform: rotate(45deg)
+            width: 20px
+            height: 20px
+            path
+                stroke: #1d2939
+                transition: all .3s
+
+.breadcrumb
+    font: 400 14px / 1.42857 $font-family
+    color: #475467
+    margin: 24px 0 0
+    li
+        display: inline
+        &::after
+            content: ' / '
+            margin: 0 
+            font: 400 14px / 1.42857 $font-family
+            color: #475467
+        &:last-child
+            &::after
+                content: none
+    a
+        color: #475467
+        transition: all .3s
+        &:hover
+            color: #376df6
+    &__block
+        padding: 36px 0
+        .breadcrumb
+            margin: 0
+
+@media ( max-width: 1024px )
+    .search
+        &__mob
+            display: grid
+            background: #fff
+            border: 1px solid #eaecf0
+            border-radius: 4px
+            box-shadow: 0 1px 2px 0 rgba(16,24,40,.05)
+        &__row
+            grid-template-columns: 52px 1fr
+        &__form
+            grid-column: 1/3
+            grid-template-columns: 10fr 10fr 40fr
+            .header__select
+                &:nth-child(1)
+                    display: none
+        &__btn
+            grid-column: 1/3
+
+@media ( max-width: 768px )
+    .search
+        padding: 16px 0
+        &__row
+            grid-template-columns: 36px 1fr
+            gap: 4px
+        .header
+            &__select
+                display: grid
+                background: #fff
+                border: 1px solid #eaecf0
+                border-radius: 4px
+                box-shadow: 0 1px 2px 0 rgba(16,24,40,.05)
+                &::before
+                    content: none
+                .itc-select__toggle
+                    padding: 8px 14px
+                    border: none
+            &__input
+                grid-column: 1/3
+                background: #fff
+                border: 1px solid #eaecf0
+                border-radius: 4px
+                box-shadow: 0 1px 2px 0 rgba(16,24,40,.05)
+                input
+                    padding: 9px 9px 9px 35px
+        &__form
+            gap: 4px
+            padding: 0
+            border: none
+            background: transparent
+            grid-template-columns: 1fr 1fr
+        &__btn
+            gap: 4px
+            button
+                padding: 8px
+                font-size: 14px
+        &+.recom
+            padding: 16px 0 36px 
+        &__check
+            margin: 12px 0 0
+    .breadcrumb
+        margin: 16px 0 0
+    .pag
+        width: 100%
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+        justify-content: center
+        margin: 24px 0 0
+        a
+            text-align: center
+        li
+            &:nth-child(6),
+            &:nth-child(7)
+                display: none
+            span
+                display: none
+        &__prev
+            display: flex !important
+            justify-content: flex-start
+        &__next
+            display: flex !important
+            justify-content: flex-end
+
+.article
+    background: #fff
+    &__block
+        display: grid
+        grid-template-columns: calc( 100% - 404px ) 376px
+        gap: 32px
+        align-items: start
+    &__main
+        border: 1px solid #eaecf0
+        border-radius: 12px
+        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.06), 0 1px 3px 0 rgba(16, 24, 40, 0.1)
+        background: #fff
+        padding: 24px
+    h1
+        font: 600 30px / 1.26667 $font-family
+        color: #101828
+    &__dop-info
+        margin: 8px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        p
+            font: 600 14px / 1.42857 $font-family
+            color: #98a2b3
+        &_watch
+            display: grid
+            grid-template-columns: 20px auto
+            gap: 8px
+        span
+            margin: 0 12px
+            font: 600 14px / 1.42857 $font-family
+            color: #98a2b3
+    &__slider
+        margin: 24px 0 0
+        .swiper
+            &-pagination
+                display: none
+            &-slide
+                border: 1px solid #eaecf0
+                border-radius: 12px
+                overflow: hidden
+                position: relative
+                img
+                    width: 100%
+                    height: 520px
+                    object-fit: cover
+        &_val
+            border-radius: 4px
+            padding: 10px 18px
+            background: #f9fafb
+            position: absolute
+            bottom: 24px
+            left: 24px
+            display: grid
+            grid-template-columns: 20px 1fr
+            gap: 8px
+            z-index: 5
+            img
+                width: 20px
+            p
+                font: 600 16px / 1.5 $font-family
+                color: #344054
+    &__arrow
+        display: grid
+        grid-template-columns: 56px 56px
+        gap: 16px
+        position: absolute
+        bottom: 24px
+        right: 24px
+        .swiper-button-prev,
+        .swiper-button-next
+            box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+            background: #fff
+            border: 1px solid #d0d5dd
+            border-radius: 4px
+            margin: 0
+            position: relative
+            width: 56px
+            height: 56px
+            opacity: 1
+            transition: all .3s
+            inset: auto
+            svg
+                width: 24px
+                height: 24px
+                path
+                    stroke: #344054
+            &::after
+                content: none
+            &:hover
+                background: #e3ebfe
+        .swiper-button-prev
+            transform: rotate(180deg)
+    &__thumb
+        margin: 16px 0 0
+        .swiper
+            &-slide
+                border: 1px solid #eaecf0
+                border-radius: 12px
+                overflow: hidden
+                position: relative
+                opacity: .5
+                transition: all .3s
+                img
+                    width: 100%
+                    height: 96px
+                    object-fit: cover
+                &-thumb-active
+                    opacity: 1
+    &__place
+        display: grid
+        grid-template-columns: 20px 1fr
+        align-items: center
+        gap: 8px
+        margin: 24px 0 0
+        p
+            font: 600 14px / 1.42857 $font-family
+            color: #667085
+        span
+            margin: 0 12px
+        a
+            font: 600 14px / 1.42857 $font-family
+            color: #5482f7
+            transition: all .3s
+            &:hover
+                color: #2b52b4
+        svg
+            path
+                stroke: #667085
+    &__metro
+        margin: 8px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        &_logo
+            border: 1px solid #d92d20
+            border-radius: 16px
+            padding: 3px 11px
+            font: 500 14px / 1.42857 $font-family
+            text-align: center
+            color: #b42318
+        &_name
+            font: 400 16px / 1.5 $font-family
+            color: #475467
+            margin: 0 12px 0 4px
+        &_time
+            font: 400 16px / 1.5 $font-family
+            color: #98a2b3
+            margin: 0 4px 0 0
+        svg
+            width: 16px
+    &__har
+        display: flex
+        flex-wrap: wrap
+        gap: 32px
+        margin: 24px 0 0
+        div
+            display: grid
+            grid-template-columns: 46px 1fr
+            gap: 9px
+            align-items: center
+        span
+            border: 6px solid #e3ebfe
+            border-radius: 28px
+            background: #d5e1fe
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 46px
+            height: 46px
+        p
+            font: 500 20px / 1.5 $font-family
+            color: #667085
+    h3
+        font: 600 18px / 1.55556 $font-family
+        color: #101828
+    &__desc
+        margin: 24px 0 0
+        &_text
+            margin: 16px 0 0
+            display: grid
+            grid-template-columns: 100%
+            gap: 21px
+            p
+                font: 400 14px / 1.42857 $font-family
+                color: #475467
+    &__info
+        margin: 24px 0 0
+        h3
+            padding: 24px 0 16px
+            border-top: 1px solid #EAECF0
+        &_list
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 32px
+            row-gap: 16px
+            li
+                display: grid
+                grid-template-columns: auto 1fr auto
+                gap: 8px
+                align-items: end
+        &_name
+            display: grid
+            grid-template-columns: 24px 1fr
+            gap: 8px
+            align-items: center
+            font: 400 16px / 1.5 $font-family
+            color: #98a2b3
+            img
+                width: 100%
+        &_val
+            font: 500 16px / 1.5 $font-family
+            color: #667085
+            text-align: right
+            width: max-content
+        &_dot
+            border-bottom: 1px dashed #d0d5dd
+            display: block
+            width: 100%
+    &__aside
+        border: 1px solid #eaecf0
+        border-radius: 12px
+        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.06), 0 1px 3px 0 rgba(16, 24, 40, 0.1)
+        background: #fff
+        padding: 24px
+        &_row
+            display: flex
+            justify-content: space-between
+            align-items: center
+        &_price
+            display: flex
+            justify-content: flex-start
+            align-items: flex-end
+            gap: 16px
+            display: none
+            cursor: pointer
+            h4
+                font: 600 20px / 1.5 $font-family
+                color: #1d2939
+            p
+                border: 1px solid #344054
+                border-radius: 16px
+                padding: 1px 7px
+                font: 400 12px / 1.5 $font-family
+                text-align: center
+                color: #344054
+            &.active
+                display: flex
+        &_fav
+            path
+                stroke: #f04438
+        &_com
+            background: #ecfdf3
+            border-radius: 16px
+            padding: 2px 10px
+            font: 500 14px / 1.42857 $font-family
+            color: #027a48
+            margin: 10px 0 0
+            width: max-content
+        &_list
+            margin: 40px 0 0
+            display: grid
+            grid-template-columns: 100%
+            gap: 24px
+            li
+                padding: 0 0 7px
+                border-bottom: 1px solid #eaecf0
+                display: flex
+                justify-content: space-between
+                align-items: center
+            p
+                font: 400 14px / 1.42857 $font-family
+                color: #667085
+                &+p
+                    font-weight: 500
+                    color: #475467
+        &_show
+            margin: 32px 0 0
+            width: 100%
+            font: 600 16px / 1.5 $font-family
+            padding: 10px
+            span
+                font: 400 14px / 1.42857 $font-family
+        &_func
+            display: grid
+            grid-template-columns: 40px 40px 40px 1fr
+            gap: 8px
+            margin: 8px 0 0
+            a
+                border: 1px solid #d0d5dd
+                border-radius: 4px
+                box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+                background: #fff
+                display: flex
+                justify-content: center
+                align-items: center
+                transition: all .3s
+                img
+                    width: 20px
+                &:hover
+                    background: #eaecf0
+            .btn__wht
+                display: flex
+                justify-content: center
+                align-items: center
+                gap: 8px
+                font: 600 14px / 1.42857 $font-family
+                padding: 10px
+                width: 100%
+                img
+                    width: 20px
+    &__autor
+        margin: 16px 0 0
+        border: 1px solid #eaecf0
+        border-radius: 12px
+        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.06), 0 1px 3px 0 rgba(16, 24, 40, 0.1)
+        background: #fff
+        padding: 24px
+        h4
+            font: 600 18px / 1.55556 $font-family
+            color: #101828
+        ul
+            margin: 24px 0 0
+            display: grid
+            grid-template-columns: 100%
+            gap: 24px
+        li
+            padding: 0 0 24px
+            border-bottom: 1px solid #eaecf0
+            display: grid
+            grid-template-columns: 67px 1fr
+            gap: 16px
+            align-items: center
+            &:last-child
+                padding: 0
+                border-bottom: none
+            img
+                width: 100%
+        &_pers
+            img
+                border-radius: 100%
+        &_name
+            font: 600 16px / 1.5 $font-family
+            color: #475467
+        &_info
+            margin: 4px 0 0
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            a
+                font: 400 14px / 1.42857 $font-family
+                color: #376df6
+                transition: all .3s
+                &:hover
+                    color: #2b52b4
+            p
+                font: 400 14px / 1.42857 $font-family
+                color: #475467
+            span
+                font: 400 14px / 1.42857 $font-family
+                color: #475467
+                margin: 0 4px
+        &_company
+            img
+                border-radius: 8px
+            p
+                font: 400 14px / 1.42857 $font-family
+                color: #98a2b3
+                &+p
+                    font: 600 16px / 1.5 $font-family
+                    color: #475467
+    &__mob
+        display: none
+
+@media ( max-width: 1024px )
+    .article
+        &__block
+            grid-template-columns: 100%
+            gap: 16px
+        &__menu
+            display: none
+        &__aside
+            display: block
+            padding: 0
+            border: none
+            box-shadow: none
+            margin: 16px 0 0
+            &_list
+                margin: 16px 0 0
+                gap: 12px
+                li
+                    padding: 0 0 4px
+        &__war
+            display: flex
+            margin: 16px 0 0
+            width: 100%
+            justify-content: center
+            align-items: center
+            gap: 8px
+        &__main
+            padding: 36px 0 0
+            border: none
+            box-shadow: none
+    
+@media ( max-width: 768px )
+    .article
+        h1
+            font-size: 18px
+        &__thumb
+            display: none
+        &__arrow
+            display: none
+        &__slider
+            &_val
+                display: none
+            .swiper
+                &-slide
+                    img
+                        height: 400px
+                &-pagination
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    margin: 0 
+                    bottom: 12px
+                    left: 0
+                    right: 0
+                    top: auto
+                    gap: 4px
+                    span
+                        margin: 0
+                        width: 32px
+                        height: 4px
+                        background: #fff
+                        border-radius: 6px
+                        transition: all .3s
+                        opacity: 1
+                        &.swiper-pagination-bullet-active
+                            background: #98a2b3
+        &__dop-info
+            span
+                margin: 0 8px
+        &__aside
+            &_price
+                h4
+                    font-size: 14px
+            &_com
+                font-size: 12px
+                padding: 2px 8px
+            &_list
+                p
+                    font-size: 12px
+        &__place
+            margin: 17px 0 0
+            p
+                font-size: 12px
+        &__metro
+            p
+                font-size: 12px
+            &_logo
+                font-size: 12px
+                padding: 2px 6px
+        &__har
+            margin: 16px 0 0
+            gap: 12px
+            div
+                grid-template-columns: 26px 1fr
+                span
+                    width: 26px
+                    height: 26px
+                    border: 2px solid #e3ebfe
+            img
+                width: 12px
+            p
+                font-size: 16px
+        h3
+            font-size: 16px
+        &__desc
+            margin: 16px 0 0
+            &_text
+                margin: 8px 0 0
+                gap: 18px
+                p
+                    font-size: 12px
+        &__info
+            margin: 16px 0 0
+            h3
+                padding: 16px 0 8px
+                display: flex
+                justify-content: flex-start
+                align-items: center
+                gap: 8px
+                cursor: pointer
+                &::after
+                    content: ''
+                    display: block
+                    width: 20px
+                    height: 20px
+                    background: url('../img/arrow-grey-right.svg') center no-repeat
+                    transform: rotate(90deg)
+                    transition: all .3s
+                &.active
+                    &::after
+                        transform: rotate(-90deg)
+                    &+ul
+                        display: grid
+            &_list
+                grid-template-columns: 100%
+                gap: 8px
+                display: none
+
+.modal
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    z-index: 10
+    padding: 50px
+    overflow-y: auto
+    opacity: 0
+    pointer-events: none
+    transition: all .3s
+    &.active
+        opacity: 1
+        pointer-events: auto
+    &__wrapper
+        margin: auto
+        border-radius: 12px
+        box-shadow: 0 8px 8px -4px rgba(16, 24, 40, 0.03), 0 20px 24px -4px rgba(16, 24, 40, 0.08)
+        background: #fff
+        position: relative
+        width: 100%
+        max-width: 1200px
+        padding: 24px
+    &__overflow
+        backdrop-filter: blur(16px)
+        background: rgba(52, 64, 84, 0.7)
+        position: fixed
+        inset: 0
+        z-index: -1
+    &__close
+        top: 26px
+        right: 26px
+        position: absolute
+        cursor: pointer
+        svg
+            width: 24px
+            height: 24px
+            path
+                transition: all .3s
+        &:hover
+            svg
+                path
+                    stroke: #376df6
+    &__logo
+        border: 1px solid #eaecf0
+        border-radius: 10px
+        width: 48px
+        height: 48px
+        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+        background: #fff
+        display: flex
+        justify-content: center
+        align-items: center
+        svg
+            width: 24px
+            height: 24px
+            path
+                stroke: #344054
+
+.modal-place
+    &__wrapper
+        max-width: 580px
+    &__name
+        margin: 16px 0 0
+        font: 600 18px / 1.55556 $font-family
+        color: #101828
+    &__row
+        display: grid
+        grid-template-columns: 1fr 106px
+        gap: 12px
+    &__form
+        margin: 20px 0 0
+    &__input
+        position: relative
+        &_list
+            position: absolute
+            top: calc( 100% + 8px )
+            left: 0
+            width: 100%
+            display: grid
+            grid-template-columns: 100%
+            gap: 4px
+            padding: 6px
+            border: 1px solid #eaecf0
+            border-radius: 8px
+            box-shadow: 0 4px 6px -2px rgba(16, 24, 40, 0.03), 0 12px 16px -4px rgba(16, 24, 40, 0.08)
+            background: #fff
+            overflow-y: auto
+            max-height: 272px
+            pointer-events: none
+            opacity: 0
+            transition: all .3s
+            a
+                padding: 10px 
+                border-radius: 6px
+                transition: all .3s
+                display: block
+                p
+                    font: 500 16px / 1.5 $font-family
+                    color: #101828
+                    &+p
+                        font: 400 12px / 1.5 $font-family
+                &:hover
+                    background: #f9fafb
+        &_clear
+            position: absolute
+            top: 50%
+            right: 14px
+            transform: translateY(-50%)
+            width: 24px
+            height: 24px
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 100%
+            background: #f2f4f7
+            cursor: pointer
+            svg
+                width: 12px
+                height: 12px
+                path
+                    transition: all .3s
+            &:hover
+                svg
+                    path
+                        stroke: #376df6
+        input
+            width: 100%
+            height: 100%
+            box-sizing: border-box  
+            border: 1px solid #d0d5dd
+            border-radius: 8px
+            padding: 10px 14px
+            box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+            background: #fff
+            transition: all .3s
+            font: 500 16px / 1.5 $font-family
+            color: #101828
+            transition: all .3s
+            &::placeholder
+                font: 400 16px / 1.5 $font-family
+                color: #667085
+            &:focus
+                border: 1px solid #9cb7fb
+                box-shadow: 0 0 0 4px #d5e1fe, 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+                &+.modal-place__input_list
+                    pointer-events: auto
+                    opacity: 1
+    &__list
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 8px
+        margin: 20px 0 0
+        a
+            font: 600 14px / 1.42857 $font-family
+            color: #475467
+            transition: all .3s
+            &:hover
+                color: #376df6
+
+.modal-filter
+    &__row
+        margin: 20px 0 0
+        display: grid
+        grid-template-columns: 12fr 14fr 24fr auto 10fr 20fr
+        border: 1px solid #d0d5dd
+        border-radius: 4px
+        padding: 4px
+        background: #fff
+    .itc-select
+        &__toggle
+            height: 100%
+            border: none
+            border-right: 1px solid #d0d5dd
+            border-radius: 0
+            padding: 10px 0
+            justify-content: center
+            gap: 8px
+            font: 600 14px / 1.42857 $font-family
+            color: #344054
+            &::after
+                content: none
+            &::before
+                content: ''
+                order: 2
+                width: 20px
+                height: 20px
+                background: url('../img/arrow-blc-botton.svg') center no-repeat
+                background-size: contain
+                transition: all .3s
+        &_show
+            .itc-select
+                &__toggle
+                    &::before
+                        transform: rotate(-180deg)
+        &__dropdown
+            top: calc( 100% + 8px )
+            right: 0
+            left: auto
+            width: max-content
+            border: 1px solid #eaecf0
+            border-radius: 8px
+            box-shadow: 0 4px 6px -2px rgba(16, 24, 40, 0.03), 0 12px 16px -4px rgba(16, 24, 40, 0.08)
+            background: #fff
+            min-width: calc( 100% - 20px )
+        &__options
+            display: grid
+            grid-template-columns: 100%
+            gap: 4px
+            padding: 6px
+        &__option
+            border-radius: 6px
+            padding: 10px 10px 10px 8px
+            font: 500 16px / 1.5 $font-family
+            color: #101828
+            padding: 10px 
+            gap: 8px
+            transition: all .3s
+            &_selected
+                background: #f9fafb
+                &::after
+                    width: 20px
+                    height: 20px
+                    background: url('../img/blue_check.svg') center no-repeat
+                    background-size: contain
+            &:hover
+                background: #f9fafb
+    &__check
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 8px
+        padding: 2px 8px
+        border-right: 1px solid #d0d5dd
+        div
+            position: relative
+        p
+            padding: 10px 15px
+            font: 600 14px / 1.42857 $font-family
+            color: #344054
+            border: 1px solid #d0d5dd
+            border-radius: 4px
+            box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+            background: #fff
+            transition: all .3s
+        input
+            position: absolute
+            inset: 0
+            width: 100%
+            height: 100%
+            opacity: 0
+            &:checked
+                &+p
+                    box-shadow: 0 0 0 4px #f2f4f7, 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+    &__price
+        padding: 0 4px
+        border-right: 1px solid #d0d5dd
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        gap: 8px
+        &_drop
+            top: calc( 100% + 8px )
+            right: 0
+            left: auto
+            width: max-content
+            border: 1px solid #eaecf0
+            border-radius: 8px
+            box-shadow: 0 4px 6px -2px rgba(16, 24, 40, 0.03), 0 12px 16px -4px rgba(16, 24, 40, 0.08)
+            background: #fff
+            display: grid
+            position: absolute
+            padding: 6px
+            max-width: 346px
+            opacity: 0
+            pointer-events: none
+            transition: all .3s
+        svg
+            transition: all .3s
+        &_open
+            .modal-filter__price_drop
+                opacity: 1
+                pointer-events: auto
+            svg
+                transform: rotate(-180deg)
+        &_cur
+            grid-template-columns: 1fr 1fr 41px
+            align-items: end
+            gap: 8px
+            display: none
+            &.active
+                display: grid
+            p
+                font: 500 14px / 1.42857 $font-family
+                color: #344054
+            input
+                border: 1px solid #d0d5dd
+                border-radius: 4px
+                padding: 8px 12px
+                margin: 6px 0 0
+                box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+                background: #fff
+                width: 100%
+                box-sizing: border-box  
+                font: 400 16px / 1.5 $font-family
+        &_btn
+            margin: 0 0 8px
+            font: 400 12px / 1.5 $font-family
+            text-align: center
+            color: #344054
+            border: 1.5px solid #344054
+            border-radius: 16px
+            padding: 2px 0
+            text-align: center
+        &_val
+            font: 600 14px / 1.42857 $font-family
+            color: #344054
+    &__input
+        padding: 0 8px
+        display: grid
+        grid-template-columns: 20px 1fr
+        gap: 8px
+        align-items: center
+        svg
+            width: 20px
+            height: 20px
+        input
+            font: 400 16px / 1.5 $font-family
+            color: #667085
+            border: none
+            width: 100%
+            height: 100%
+            box-sizing: border-box
+            padding: 0
+    h3
+        margin: 16px 0 0
+        font: 600 18px / 1.55556 $font-family
+        color: #101828
+    &__range
+        margin: 16px 0 0
+        &_name
+            font: 500 16px / 1.5 $font-family
+            color: #1d2939
+        &_wrapper
+            position: relative
+            margin: 8px 0 0
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 16px
+            width: 496px
+            max-width: calc( 100% - 40px )
+            p
+                font: 500 14px / 1.42857 $font-family
+                color: #344054
+            input
+                border: 1px solid #d0d5dd
+                border-radius: 4px
+                padding: 8px 12px
+                margin: 6px 0 0
+                box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+                background: #fff
+                width: 100%
+                box-sizing: border-box
+                font: 400 16px / 1.5 $font-family
+        &_square
+            &::before
+                content: 'м²'
+                position: absolute
+                bottom: 12px
+                left: calc( 100% + 16px )
+                font: 600 14px / 1.42857 $font-family
+                color: #475467
+    &__radio
+        margin: 16px 0 0
+        &_name
+            font: 500 16px / 1.5 $font-family
+            color: #1d2939
+        &_row
+            display: flex
+            justify-content: flex-start
+            flex-wrap: wrap
+            gap: 16px
+            margin: 8px 0 0
+            div
+                position: relative
+                cursor: pointer
+            p
+                font: 500 14px / 1.42857 $font-family
+                text-align: center
+                color: #344054
+                padding: 3px 11px
+                border: 1.50px solid #f2f4f7
+                border-radius: 16px
+                white-space: nowrap
+                transition: all .3s
+                background: #f2f4f7
+            input
+                position: absolute
+                inset: 0
+                width: 100%
+                height: 100%
+                opacity: 0
+                cursor: pointer
+                &:checked
+                    &+p
+                        background: #fff
+                        border: 1.50px solid #475467
+    &__comfort
+        margin: 16px 0 0
+        &_name
+            font: 500 16px / 1.5 $font-family
+            color: #1d2939
+        &_row
+            display: flex
+            justify-content: flex-start
+            flex-wrap: wrap
+            gap: 16px
+            margin: 8px 0 0
+            div
+                position: relative
+                cursor: pointer
+            p
+                font: 500 14px / 1.42857 $font-family
+                text-align: center
+                color: #344054
+                padding: 4px 12px
+                border-radius: 16px
+                white-space: nowrap
+                transition: all .3s
+                background: #f2f4f7
+            input
+                position: absolute
+                inset: 0
+                width: 100%
+                height: 100%
+                opacity: 0
+                cursor: pointer
+                &:checked
+                    &+p
+                        background: #e3ebfe
+                        color: #2963f5
+    &__func
+        margin: 32px 0 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__reset
+        display: grid
+        grid-template-columns: 20px 1fr
+        gap: 8px
+        align-items: center
+        img
+            width: 20px
+            height: 20px
+        p
+            font: 600 16px / 1.5 $font-family
+            color: #f04438
+
+.modal-share
+    &__wrapper
+        max-width: 400px
+        padding-top: 84px
+    h3
+        font: 600 24px / 1.33333 $font-family
+        text-align: center
+        color: #101828
+    &__row
+        margin: 16px auto 0
+        max-width: max-content
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 32px
+        a
+            border: 1px solid #d0d5dd
+            border-radius: 8px
+            width: 56px
+            height: 56px
+            display: flex
+            justify-content: center
+            align-items: center
+            img
+                width: 40px
+    .btn__blue
+        margin: 24px 0 0
+        max-width: 100%
+        width: 100%
+
+.modal-war
+    padding: 50px 16px
+    &__wrapper
+        max-width: 400px
+        padding: 24px
+    h3
+        font: 600 24px / 1.33333 $font-family
+        color: #101828
+    &__list
+        margin: 22px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 12px
+        li
+            position: relative
+            display: grid
+            grid-template-columns: 16px 1fr
+            gap: 8px
+            align-items: center
+        span
+            border: 1px solid #d0d5dd
+            border-radius: 100%
+            display: block
+            width: 16px
+            height: 16px
+            transition: all .3s
+        p
+            font: 500 14px / 1.42857 $font-family
+            color: #344054
+        input
+            position: absolute
+            inset: 0
+            top: 0
+            height: 0
+            width: 100%
+            height: 100%
+            opacity: 0
+            cursor: pointer
+            &:checked
+                &+span
+                    border: 1px solid #376df6
+                    background: #376df6
+    textarea
+        resize: none
+        width: 100%
+        height: 94px
+        box-sizing: border-box
+        padding: 8px 12px
+        border: 1px solid #d0d5dd
+        border-radius: 4px
+        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+        background: #fff
+        font: 400 16px / 1.5 $font-family
+        margin: 16px 0 0
+    .btn__blue
+        margin: 24px 0 0
+        max-width: 100%
+        width: 100%
+
+.modal-print
+    padding: 50px 16px
+    &__wrapper
+        max-width: 480px
+        padding: 24px
+    h3
+        font: 600 24px / 1.33333 $font-family
+        color: #101828
+    &__func
+        display: grid
+        grid-template-columns: 100%
+        gap: 12px
+        margin: 20px 0 0
+        a
+            display: grid
+            grid-template-columns: 20px 1fr
+            gap: 8px
+            border: 1px solid #d0d5dd
+            border-radius: 4px
+            padding: 10px 18px
+            box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+            background: #fff
+            transition: all .3s
+            &:hover
+                background: #eaecf0
+        svg
+            width: 20px
+            height: 20px
+        p
+            font: 600 16px / 1.5 $font-family
+            color: #344054
+
+@media ( max-width: 1200px )
+    .itc-select__toggle
+        padding: 10px 20px
+        justify-content: space-between
+    .modal-filter
+        &__row
+            grid-template-columns: 100%
+            border: none
+            gap: 8px
+        &__select,
+        &__price,
+        &__input
+            border: 1px solid #d0d5dd
+            border-radius: 4px
+        &__select
+            .itc-select__toggle
+                border-radius: 4px
+                padding: 10px 20px
+                border: none
+                justify-content: space-between
+        &__price
+            padding: 10px 20px
+            justify-content: space-between
+        &__input
+            input
+                padding: 10px 0
+        &__check
+            order: 2
+            justify-content: flex-start
+            padding: 0
+            border: none
+
+@media ( max-width: 600px )
+    .modal-place
+        .modal__logo
+            display: none
+        &__wrapper
+            height: 100vh
+            position: fixed
+            top: 0
+            left: 0
+            width: 100vw
+            overflow-y: auto
+            max-width: 100%
+            border-radius: 0
+            background: #eaecf0
+            padding: 24px 0 0
+            display: grid
+            grid-template-rows: auto 1fr
+            gap: 24px
+        &__logo
+            display: none
+        &__name
+            font: 600 16px / 1.5 $font-family
+            margin: 0 
+            padding: 0 24px
+        &__close
+            top: 24px
+            right: 24px
+        &__form
+            border-radius: 24px 24px 0 0
+            padding: 24px 16px
+            background: #f9fafb
+            margin: 0
+            height: 100%
+        &__row
+            display: grid
+            grid-template-columns: 100%
+            .btn__blue
+                width: 100%
+                max-width: 100%
+                box-sizing: border-box
+        &__input
+            &_list
+                display: none
+        &__list
+            grid-template-columns: 100%
+    .modal-filter
+        padding: 0
+        &__wrapper
+            border-radius: 0
+        &__range
+            &_wrapper
+                grid-template-columns: 100%
+                max-width: 100%
+                width: 100%
+                &::before
+                    content: none
+        &__func
+            flex-direction: column
+            gap: 10px
+            .btn__blue
+                width: 100%
+                max-width: 100%
+                order: -1
+    .modal-share
+        padding: 50px 16px
+        &__row
+            gap: 12px
+        &__wrapper
+            padding: 60px 16px 16px
+
+.sign-in
+    padding: 120px 0 
+    &__wrapper
+        max-width: 480px
+        border-radius: 12px
+        box-shadow: 0 4px 6px -2px rgba(16, 24, 40, 0.03), 0 12px 16px -4px rgba(16, 24, 40, 0.08)
+        background: #fff
+        margin: 0 auto
+    &__header
+        border-bottom: 1px solid #eaecf0
+        padding: 24px 0 20px
+        h1
+            font: 600 24px / 1.33333 $font-family
+            text-align: center
+            color: #101828
+    &__body
+        padding: 20px 36px 24px
+        border-bottom: 1px solid #eaecf0
+    &__tab
+        display: grid
+        grid-template-columns: 1fr 1fr
+        a
+            font: 500 14px / 1.42857 $font-family
+            color: #475467
+            display: block
+            transition: all .3s
+            border-bottom: 1px solid #eaecf0
+            text-align: center
+            padding: 8px 0
+            &.active
+                border-bottom: 1px solid #5482f7
+                color: #2963f5
+            &:hover
+                color: #2963f5
+        &_wrapper
+            display: none
+            &.active
+                display: block
+    &__input
+        margin: 24px 0 0
+        &_text
+            font: 500 14px / 1.42857 $font-family
+            color: #344054    
+            span
+                color: #f04438
+        &_wrapper
+            position: relative
+            margin: 6px 0 0
+        input
+            width: 100%
+            box-sizing: border-box  
+            border: 1px solid #d0d5dd
+            border-radius: 4px
+            padding: 10px 42px 10px 14px
+            &.error
+                border: 1px solid #fda29b
+        &_alert
+            position: absolute
+            right: 14px
+            top: 50%
+            transform: translateY(-50%)
+            opacity: 0
+        &_email
+            position: absolute
+            left: 14px
+            top: 50%
+            transform: translateY(-50%)
+        &_watch
+            position: absolute
+            right: 14px
+            top: 50%
+            transform: translateY(-50%)
+        &_error
+            position: absolute
+            top: 100%
+            left: 0
+            font: 400 14px / 1.42857 $font-family
+            color: #f04438
+    &__email
+        input
+            padding-left: 42px
+    &__row
+        margin: 24px 0 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__member
+        position: relative
+        display: grid
+        grid-template-columns: 16px 1fr
+        gap: 8px
+        align-items: center
+        span
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 16px
+            height: 16px
+            border-radius: 4px
+            border: 1px solid #d0d5dd
+            transition: all .3s
+            &::before
+                content: ''
+                display: block
+                width: 10px
+                height: 10px
+                background: url('../img/blue_check.svg') center no-repeat
+                background-size: contain
+                opacity: 0
+                transition: all .3s
+        p
+            font: 400 14px / 1 $font-family
+            color: #475467
+        input
+            position: absolute
+            inset: 0
+            width: 100%
+            height: 100%
+            opacity: 0
+            cursor: pointer
+            &:hover
+                &+span
+                    border-color: #2963f5
+            &:checked
+                &+span
+                    border-color: #2963f5
+                    &::before
+                        opacity: 1
+    &__forgot
+        font: 500 14px / 1.42857 $font-family
+        color: #2963f5
+        transition: all .3s
+        &:hover
+            color: #2b52b4
+    .btn__blue
+        margin: 20px 0 0
+        width: 100%
+        box-sizing: border-box  
+        text-align: center
+    &__footer
+        padding: 20px 0 24px
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 12px
+        p
+            font: 400 14px / 1 $font-family
+            color: #475467
+        a
+            font: 500 14px / 1 $font-family
+            color: #2963f5
+            transition: all .3s
+            &:hover
+                color: #2b52b4
+    &__check
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0 0 24px
+        gap: 16px
+        div
+            position: relative
+            width: max-content
+            display: grid
+            grid-template-columns: 16px 1fr
+            gap: 4px
+            align-items: center
+        span
+            width: 16px
+            height: 16px
+            border-radius: 100%
+            border: 1px solid #d0d5dd
+            display: flex
+            justify-content: center
+            align-items: center
+            transition: all .3s
+            &::before
+                content: ''
+                display: block
+                width: 6px
+                height: 6px
+                border-radius: 100%
+                background: #376df6
+                transition: all .3s
+                opacity: 0
+        p
+            font: 400 14px / 1 $font-family
+            color: #475467
+        input
+            position: absolute
+            inset: 0
+            width: 100%
+            height: 100%
+            opacity: 0
+            cursor: pointer
+            &:checked
+                &+span
+                    background: #e3ebfe
+                    border: 1px solid #376df6      
+                    &::before
+                        opacity: 1 
+
+.form-group-sort
+    margin: 0 0 20px
+    font: 400 14px / 1.42857 $font-family
+    color: #344054
+    a
+        margin: 0 0 0 10px
+        color: #98a2b3
+        &.active
+            color: #344054
+
+@media ( max-width: 600px )
+    .sign-in
+        padding: 36px 0
+        &__body
+            padding: 20px 16px
+        &__check
+            gap: 0
+            justify-content: space-between
