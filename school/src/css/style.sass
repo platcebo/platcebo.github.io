@@ -217,24 +217,24 @@ section
                 transform: rotate(-50deg)
                 animation: opacityAnim 3s 0s infinite
     h1
-        font: 500 106px / 0.9 $second-family
+        font: 500 52px / 0.9 $second-family
         text-transform: uppercase
         color: $content-white
+        margin: 32px 0 0
+        max-width: max-content
+        span
+            font-size: 3.11em
+            display: block
     &__info
         position: relative
     &__banner
-        position: absolute
-        top: 24px
-        right: 33px
-        width: 272px
+        width: 294px
         img
             width: 100%
     &__logo
-        position: absolute
-        top: 201px
-        right: 24px
-        width: 171px
-        font: 400 16px / 1.5 $font-family
+        margin: 24px 0 0
+        width: 100%
+        font: 400 20px / 1.5 $font-family
         color: $content-white
         span
             font-weight: 700
@@ -403,7 +403,7 @@ section
         &__block
             position: relative
             margin-top: 40px
-            z-index: 1
+            z-index: 2
             height: 600px
     &__bg
         position: absolute
@@ -506,6 +506,9 @@ section
                     transition: all .3s
                     bottom: -8px
                     left: 0
+    &__fix
+        z-index: 1 
+        position: relative
 
 .unique
     padding: 160px 0 120px
@@ -958,7 +961,6 @@ section
         background: #fafcff
         transition: all .3s
         &:hover
-            box-shadow: 0 6px 24px 0 #73bbe5
             .practic
                 &__link,
                 &__name
@@ -1545,8 +1547,6 @@ section
                 &__prev
                     img
                         transform: scale(1.1)
-                &__block
-                    box-shadow: 0 6px 24px 0 #69c5ec
 
 .footer
     padding: 160px 0 24px

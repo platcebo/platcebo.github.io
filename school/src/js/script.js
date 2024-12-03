@@ -94,4 +94,15 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    let canFix = document.querySelector('.can__fix'),
+        canFixWrapper = document.querySelector('.can__fix_wrapper');
+
+    if(canFix !== null) {
+        window.addEventListener('scroll', ()=>{
+            if(canFixWrapper.getBoundingClientRect().top <= 20 && canFixWrapper.getBoundingClientRect().bottom > canFix.getBoundingClientRect().height + 20) {
+                canFix.style.transform = 'translateY(' + -1 * (canFixWrapper.getBoundingClientRect().top - 20) +'px)'
+            }
+        })
+    }
+
 }, false);
