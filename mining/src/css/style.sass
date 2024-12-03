@@ -41,6 +41,22 @@ body
             color: #fff
             position: relative
             transition: all .3s
+            &::before
+                content: ''
+                display: block
+                top: -34px
+                bottom: -16px
+                left: -18px
+                right: -18px
+                border-radius: 3px
+                background: linear-gradient(180deg, #000 0%, #1e00a4 100%)
+                opacity: 0
+                position: absolute
+                transition: all .3s
+                z-index: -1
+            &:hover
+                &::before
+                    opacity: 1
         
 .header
     padding: 179px 0 0
@@ -112,6 +128,22 @@ body
         background: linear-gradient(90deg, #140070 0%, #2700d6 100%)
         font: 600 24px $font-family
         color: #fff
+        transition: all .3s
+        position: relative
+        overflow: hidden
+        z-index: 1
+        &::before
+            content: ''
+            display: block
+            inset: 0
+            position: absolute
+            background: #140070
+            opacity: 0
+            z-index: -1
+            transition: all .3s
+        &:hover
+            &::before
+                opacity: 1
     &__bg
         position: absolute
         right: -23px
@@ -303,16 +335,20 @@ body
         display: grid
         grid-template-columns: 100%
         gap: 13px
-        a
-            display: grid
-            grid-template-columns: 60px 1fr
-            gap: 20px
-            align-items: center
         img
             width: 100%
         p
             font: 500 24px $font-family
             color: #fff
+            transition: all .3s
+        a
+            display: grid
+            grid-template-columns: 60px 1fr
+            gap: 20px
+            align-items: center
+            &:hover
+                p
+                    color: #003dd8
     &__bg
         position: absolute
         top: 50%
@@ -342,6 +378,9 @@ body
         a
             font: 500 24px $font-family
             color: #fff
+            transition: all .3s
+            &:hover
+                color: #003dd8
     &__soc
         margin: 36px 0 0
         display: flex
@@ -483,6 +522,11 @@ body
     .nav
         &__list
             gap: 20px
+            a
+                &::before
+                    left: -10px
+                    right: -10px
+                    bottom: -5px
     .header
         padding: 50px 0 0
         h1
