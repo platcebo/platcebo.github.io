@@ -24,8 +24,8 @@
                     <img src="img/arrow-grey-right.svg" alt="" class="svg">
                 </div>
                 <div class="nav__value">
-                    <a href="#">USD</a>
-                    <a href="#" class="active">UZS</a>
+                    <div class="toggle-value">USD</div>
+                    <div class="toggle-value active">UZS</div>
                 </div>
                 <div class="nav__lang">
                     <img src="img/globe.svg" alt="" class="svg">
@@ -53,19 +53,51 @@
                             <li><a href="#">Апартаменты</a></li>
                         </ol>
                     </li>
-                    <li><a href="#">Снять</a></li>
-                    <li><a href="#">Каталог новостроек</a></li>
-                    <li><a href="#">Покупка дома или земли</a></li>
-                    <li><a href="#">Помещения для бизнеса</a></li>
+                    <li>
+                        <a href="#">Снять</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Каталог новостроек</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Покупка дома или земли</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Помещения для бизнеса</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
                 </ul>
                 <button class="btn__blue">Разместить объявление</button>
             </div>
             <div class="nav__mob">
                 <div class="nav__mob_wrapper">
-                    <a href="#" class="nav__mob_enter">
+                    <!-- <a href="#" class="nav__mob_enter">
                         <img src="img/pers.svg" alt="" class="svg">
                         <p>Войти</p>
-                    </a>
+                    </a> -->
                     <div class="nav__mob_row">
                         <div class="nav__lang nav__lang_mob">
                             <img src="img/globe.svg" alt="" class="svg">
@@ -76,17 +108,64 @@
                             </ul>
                             <img src="img/arrow-grey-right.svg" alt="" class="svg">
                         </div>
-                        <div class="nav__value nav__value_mob">
-                            <a href="#">USD</a>
-                            <a href="#" class="active">UZS</a>
+                        <div class="nav__lang nav__lang_mob">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.5846 4.16667C11.5846 5.08714 9.53261 5.83333 7.0013 5.83333C4.47 5.83333 2.41797 5.08714 2.41797 4.16667M11.5846 4.16667C11.5846 3.24619 9.53261 2.5 7.0013 2.5C4.47 2.5 2.41797 3.24619 2.41797 4.16667M11.5846 4.16667V5.41667M2.41797 4.16667V14.1667C2.41797 15.0871 4.47 15.8333 7.0013 15.8333M7.0013 9.16667C6.86085 9.16667 6.72187 9.16437 6.58463 9.15987C4.24859 9.08332 2.41797 8.3694 2.41797 7.5M7.0013 12.5C4.47 12.5 2.41797 11.7538 2.41797 10.8333M19.0846 9.58333C19.0846 10.5038 17.0326 11.25 14.5013 11.25C11.97 11.25 9.91797 10.5038 9.91797 9.58333M19.0846 9.58333C19.0846 8.66286 17.0326 7.91667 14.5013 7.91667C11.97 7.91667 9.91797 8.66286 9.91797 9.58333M19.0846 9.58333V15.8333C19.0846 16.7538 17.0326 17.5 14.5013 17.5C11.97 17.5 9.91797 16.7538 9.91797 15.8333V9.58333M19.0846 12.7083C19.0846 13.6288 17.0326 14.375 14.5013 14.375C11.97 14.375 9.91797 13.6288 9.91797 12.7083" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <p class="">UZS</p>
+                            <ul>
+                                <li><a href="#" class="active">UZS</a></li>
+                                <li><a href="#">USD</a></li>
+                            </ul>
+                            <img src="img/arrow-grey-right.svg" alt="" class="svg">
                         </div>
                     </div>
                     <ul class="nav__mob_list">
-                        <li><a href="#" class="active">Купить</a></li>
-                        <li><a href="#">Снять</a></li>
-                        <li><a href="#">Каталог новостроек</a></li>
-                        <li><a href="#">Покупка дома или земли</a></li>
-                        <li><a href="#">Помещения для бизнеса</a></li>
+                        <li class="nav__mob_drop">
+                            <p class="active">Купить</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Снять</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Каталог новостроек</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Покупка дома или земли</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Помещения для бизнеса</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
                     </ul>
                     <button class="btn__blue">Разместить объявление</button>
                 </div>
@@ -211,7 +290,7 @@
             </div>
             <div class="footer__footer">
                 <a href="#" class="footer__logo"><img src="img/logo_wht.svg" alt=""></a>
-                <p class="footer__law">© 2028 Shinam UY. Все права защищены.</p>
+                <p class="footer__law">© 2025 DOMIK.UZ Все права защищены.</p>
             </div>
         </div>
     </footer>

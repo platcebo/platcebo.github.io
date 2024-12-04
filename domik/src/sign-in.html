@@ -24,8 +24,8 @@
                     <img src="img/arrow-grey-right.svg" alt="" class="svg">
                 </div>
                 <div class="nav__value">
-                    <a href="#">USD</a>
-                    <a href="#" class="active">UZS</a>
+                    <div class="toggle-value">USD</div>
+                    <div class="toggle-value active">UZS</div>
                 </div>
                 <div class="nav__lang">
                     <img src="img/globe.svg" alt="" class="svg">
@@ -53,19 +53,51 @@
                             <li><a href="#">Апартаменты</a></li>
                         </ol>
                     </li>
-                    <li><a href="#">Снять</a></li>
-                    <li><a href="#">Каталог новостроек</a></li>
-                    <li><a href="#">Покупка дома или земли</a></li>
-                    <li><a href="#">Помещения для бизнеса</a></li>
+                    <li>
+                        <a href="#">Снять</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Каталог новостроек</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Покупка дома или земли</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Помещения для бизнеса</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
                 </ul>
                 <button class="btn__blue">Разместить объявление</button>
             </div>
             <div class="nav__mob">
                 <div class="nav__mob_wrapper">
-                    <a href="#" class="nav__mob_enter">
+                    <!-- <a href="#" class="nav__mob_enter">
                         <img src="img/pers.svg" alt="" class="svg">
                         <p>Войти</p>
-                    </a>
+                    </a> -->
                     <div class="nav__mob_row">
                         <div class="nav__lang nav__lang_mob">
                             <img src="img/globe.svg" alt="" class="svg">
@@ -76,17 +108,64 @@
                             </ul>
                             <img src="img/arrow-grey-right.svg" alt="" class="svg">
                         </div>
-                        <div class="nav__value nav__value_mob">
-                            <a href="#">USD</a>
-                            <a href="#" class="active">UZS</a>
+                        <div class="nav__lang nav__lang_mob">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.5846 4.16667C11.5846 5.08714 9.53261 5.83333 7.0013 5.83333C4.47 5.83333 2.41797 5.08714 2.41797 4.16667M11.5846 4.16667C11.5846 3.24619 9.53261 2.5 7.0013 2.5C4.47 2.5 2.41797 3.24619 2.41797 4.16667M11.5846 4.16667V5.41667M2.41797 4.16667V14.1667C2.41797 15.0871 4.47 15.8333 7.0013 15.8333M7.0013 9.16667C6.86085 9.16667 6.72187 9.16437 6.58463 9.15987C4.24859 9.08332 2.41797 8.3694 2.41797 7.5M7.0013 12.5C4.47 12.5 2.41797 11.7538 2.41797 10.8333M19.0846 9.58333C19.0846 10.5038 17.0326 11.25 14.5013 11.25C11.97 11.25 9.91797 10.5038 9.91797 9.58333M19.0846 9.58333C19.0846 8.66286 17.0326 7.91667 14.5013 7.91667C11.97 7.91667 9.91797 8.66286 9.91797 9.58333M19.0846 9.58333V15.8333C19.0846 16.7538 17.0326 17.5 14.5013 17.5C11.97 17.5 9.91797 16.7538 9.91797 15.8333V9.58333M19.0846 12.7083C19.0846 13.6288 17.0326 14.375 14.5013 14.375C11.97 14.375 9.91797 13.6288 9.91797 12.7083" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <p class="">UZS</p>
+                            <ul>
+                                <li><a href="#" class="active">UZS</a></li>
+                                <li><a href="#">USD</a></li>
+                            </ul>
+                            <img src="img/arrow-grey-right.svg" alt="" class="svg">
                         </div>
                     </div>
                     <ul class="nav__mob_list">
-                        <li><a href="#" class="active">Купить</a></li>
-                        <li><a href="#">Снять</a></li>
-                        <li><a href="#">Каталог новостроек</a></li>
-                        <li><a href="#">Покупка дома или земли</a></li>
-                        <li><a href="#">Помещения для бизнеса</a></li>
+                        <li class="nav__mob_drop">
+                            <p class="active">Купить</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Снять</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Каталог новостроек</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Покупка дома или земли</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Помещения для бизнеса</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
                     </ul>
                     <button class="btn__blue">Разместить объявление</button>
                 </div>
@@ -128,10 +207,15 @@
                             <p class="sign-in__input_text">Пароль <span>*</span></p>
                             <div class="sign-in__input_wrapper">
                                 <input type="password" placeholder="******" class="error sign-in__input_password">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="sign-in__input_watch">
-                                    <path d="M1.61342 8.47562C1.52262 8.33186 1.47723 8.25998 1.45182 8.14911C1.43273 8.06583 1.43273 7.9345 1.45182 7.85122C1.47723 7.74035 1.52262 7.66847 1.61341 7.52471C2.36369 6.33672 4.59693 3.3335 8.00027 3.3335C11.4036 3.3335 13.6369 6.33672 14.3871 7.52471C14.4779 7.66847 14.5233 7.74035 14.5487 7.85122C14.5678 7.9345 14.5678 8.06583 14.5487 8.14911C14.5233 8.25998 14.4779 8.33186 14.3871 8.47562C13.6369 9.6636 11.4036 12.6668 8.00027 12.6668C4.59693 12.6668 2.36369 9.6636 1.61342 8.47562Z" stroke="#F04438" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8.00027 10.0002C9.10484 10.0002 10.0003 9.10473 10.0003 8.00016C10.0003 6.89559 9.10484 6.00016 8.00027 6.00016C6.8957 6.00016 6.00027 6.89559 6.00027 8.00016C6.00027 9.10473 6.8957 10.0002 8.00027 10.0002Z" stroke="#F04438" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>   
+                                <div class="sign-in__input_watch">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="close">
+                                        <path d="M2.01677 10.5946C1.90328 10.4149 1.84654 10.3251 1.81477 10.1865C1.79091 10.0824 1.79091 9.91824 1.81477 9.81415C1.84654 9.67556 1.90328 9.58571 2.01677 9.40601C2.95461 7.92103 5.74617 4.16699 10.0003 4.16699C14.2545 4.16699 17.0461 7.92103 17.9839 9.40601C18.0974 9.58571 18.1541 9.67556 18.1859 9.81415C18.2098 9.91824 18.2098 10.0824 18.1859 10.1865C18.1541 10.3251 18.0974 10.4149 17.9839 10.5946C17.0461 12.0796 14.2545 15.8337 10.0003 15.8337C5.74617 15.8337 2.95461 12.0796 2.01677 10.5946Z" stroke="#667085" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M10.0003 12.5003C11.381 12.5003 12.5003 11.381 12.5003 10.0003C12.5003 8.61961 11.381 7.50033 10.0003 7.50033C8.61962 7.50033 7.50034 8.61961 7.50034 10.0003C7.50034 11.381 8.61962 12.5003 10.0003 12.5003Z" stroke="#667085" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="open">
+                                        <path d="M8.95245 4.2436C9.29113 4.19353 9.64051 4.16667 10.0003 4.16667C14.2545 4.16667 17.0461 7.9207 17.9839 9.40569C18.0974 9.58542 18.1542 9.67528 18.1859 9.81389C18.2098 9.91799 18.2098 10.0822 18.1859 10.1863C18.1541 10.3249 18.097 10.4154 17.9827 10.5963C17.7328 10.9918 17.3518 11.5476 16.8471 12.1504M5.6036 5.59586C3.80187 6.81808 2.57871 8.51615 2.01759 9.4044C1.90357 9.58489 1.84656 9.67514 1.81478 9.81373C1.79091 9.91783 1.7909 10.082 1.81476 10.1861C1.84652 10.3247 1.90328 10.4146 2.01678 10.5943C2.95462 12.0793 5.74618 15.8333 10.0003 15.8333C11.7157 15.8333 13.1932 15.223 14.4073 14.3972M2.50035 2.5L17.5003 17.5M8.23258 8.23223C7.78017 8.68464 7.50035 9.30964 7.50035 10C7.50035 11.3807 8.61963 12.5 10.0003 12.5C10.6907 12.5 11.3157 12.2202 11.7681 11.7678" stroke="#667085" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
                                 <p class="sign-in__input_error">This is an error message.</p>                 
                             </div>
                         </div>
@@ -201,7 +285,7 @@
             </div>
             <div class="footer__footer">
                 <a href="#" class="footer__logo"><img src="img/logo_wht.svg" alt=""></a>
-                <p class="footer__law">© 2028 Shinam UY. Все права защищены.</p>
+                <p class="footer__law">© 2025 DOMIK.UZ Все права защищены.</p>
             </div>
         </div>
     </footer>

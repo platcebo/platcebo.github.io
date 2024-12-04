@@ -41,6 +41,19 @@ body
         cursor: pointer
         &:hover
             background: #2b52b4
+    &__gray
+        padding: 12px 20px
+        border: none
+        width: max-content
+        border-radius: 4px
+        background: #f2f4f7
+        font: 600 16px / 1.42857 $font-family
+        color: #344054
+        transition: all .3s
+        display: block
+        cursor: pointer
+        &:hover
+            background: #c3c4c5
     &__wht
         padding: 8px 14px
         border: none
@@ -298,7 +311,7 @@ body
         overflow: hidden
         display: grid
         grid-template-columns:  60px 60px
-        a
+        div
             display: block
             padding: 3px 7px
             font: 500 14px / 1.5 $font-family
@@ -311,6 +324,82 @@ body
                 border: 1px solid #5482f7
                 background: #e3ebfe
                 color: #2963f5
+    &__pers
+        position: relative
+        border: 1px solid #d0d5dd
+        border-radius: 4px
+        padding: 4px 12px
+        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+        background: #fff
+        display: grid
+        grid-template-columns: 28px 1fr 20px
+        gap: 8px
+        align-items: center
+        cursor: pointer
+        &_arrow
+            transition: all .3s
+            transform: rotate(180deg)
+        img
+            width: 28px
+            height: 28px
+            border-radius: 100%
+            object: cover
+        ul
+            position: absolute
+            top: calc( 100% + 5px )
+            right: 0
+            opacity: 0
+            pointer-events: none
+            transition: all .3s
+            border: 1px solid #eaecf0
+            border-radius: 8px
+            box-shadow: 0 4px 6px -2px rgba(16, 24, 40, 0.03), 0 12px 16px -4px rgba(16, 24, 40, 0.08)
+            background: #fff
+            padding: 4px
+            width: 210px
+            display: grid
+            grid-template-columns: 100%
+            gap: 5px
+            a
+                padding: 8px 12px
+                border-radius: 6px
+                padding: 8px 12px
+                display: grid
+                grid-template-columns: 24px 1fr
+                gap: 12px
+                align-items: center
+                transition: all .3s
+                position: relative
+                &:hover
+                    background: #f9fafb
+            p
+                font: 500 16px / 1.5 $font-family
+                color: #475467
+            li
+                &:last-child
+                    a
+                        &::before
+                            content: ''
+                            display: block
+                            width: 100%
+                            height: 1px
+                            background: #eaecf0
+                            top: -3px
+                            left: 0
+                            position: absolute
+        &_name
+            p
+                font: 600 12px / 1.5 $font-family
+                color: #344054
+                &+p
+                    font: 400 10px / 1.3 $font-family
+                    color: #667085
+        &.active
+            ul
+                opacity: 1
+                pointer-events: auto
+            .nav__pers_arrow
+                transform: rotate(0)
 
 fieldset
     &:last-child
@@ -1196,7 +1285,7 @@ fieldset
             align-items: center
             gap: 24px
             a
-                font: 600 14px / 1.42857 $font-family
+                font: 600 16px / 1.42857 $font-family
                 color: #fff
                 transition: all .3s
                 &:hover
@@ -1222,7 +1311,7 @@ fieldset
         grid-template-columns: 100%
         gap: 24px
         p
-            font: 400 16px / 1.5 $font-family
+            font: 400 14px / 1.5 $font-family
             color: #98a2b3
         a
             color: #2963f5
@@ -1239,7 +1328,7 @@ fieldset
         img
             width: 100%
     &__law
-        font: 400 16px / 1.5 $font-family
+        font: 400 14px / 1.5 $font-family
         color: #d2d6db
 
 .mob-menu
@@ -1254,6 +1343,8 @@ fieldset
 
 @media ( max-width: 1024px )
     .nav
+        &__pers
+            display: none
         &__list
             display: none
         &__humburger
@@ -1340,7 +1431,33 @@ fieldset
             top: 0
             left: 0
             z-index: 5
+            border: none
             .nav
+                &__row
+                    &::before
+                        content: none
+                &__enter
+                    display: grid
+                    grid-template-columns: 20px 1fr
+                    gap: 8px
+                    margin: 0 12px 0 auto
+                    padding: 8px 14px
+                    background: #376df6 !important
+                    color: #fff
+                    font-size: 14px
+                    &::before
+                        content: ''
+                        display: block
+                        width: 20px
+                        height: 20px
+                        background: url('../img/pers_wht.svg') center no-repeat
+                        background-size: contain
+                &__pers
+                    margin: 0 12px 0 auto
+                    display: grid
+                &__fav,
+                &__place
+                    display: none
                 &__humburger
                     span
                         opacity: 0
@@ -1359,7 +1476,7 @@ fieldset
                     display: block
                     top: 0
                     height: 100vh
-                    background: #eaecf0
+                    background: #fff
                     position: absolute
                     left: 0
                     width: 100%
@@ -1370,7 +1487,7 @@ fieldset
                         grid-template-columns: 1fr 1fr
                         gap: 8px
                     &_wrapper
-                        background: #f9fafb
+                        background: #f2f4f7
                         border-radius: 24px 24px 0 0
                         padding: 24px 16px
                         height: 100%
@@ -1410,17 +1527,61 @@ fieldset
                         display: grid
                         grid-template-columns: 100%
                         gap: 4px
+                        li
+                            border-radius: 4px
+                            background: #fff
+                            padding: 8px 12px
                         a
                             display: block
-                            border-radius: 4px
-                            padding: 8px 12px
-                            background: #fff
                             font: 600 16px / 1.5 $font-family
                             color: #667085
-                            border: 1px solid #fff
-                            &.active
-                                color: #1d2939
-                                border: 1px solid #eaecf0
+                            display: grid
+                            grid-template-columns: 1fr 20px
+                            gap: 10px
+                            align-items: center
+                            cursor: pointer
+                        ol
+                            display: none
+                            li
+                                border-radius: 0
+                                background: transparent
+                                padding: 0
+                    &_drop
+                        p
+                            display: block
+                            font: 600 16px / 1.5 $font-family
+                            color: #667085
+                            display: grid
+                            grid-template-columns: 1fr 20px
+                            gap: 10px
+                            align-items: center
+                            cursor: pointer
+                            &::after
+                                transition: all .3s
+                                content: ''
+                                display: block
+                                width: 20px
+                                height: 20px
+                                background: url('../img/arrow-blc-botton.svg') center no-repeat
+                                background-size: contain
+                        a
+                            font: 400 14px / 1.42857 $font-family
+                            color: #475467
+                        ol
+                            display: none
+                            li
+                                border-radius: 0
+                                background: transparent
+                                padding: 0
+                        &.active
+                            ol
+                                display: grid
+                                grid-template-columns: 100%
+                                gap: 8px
+                                margin: 8px 0 0
+                            p
+                                &::after
+                                    transform: rotate(180deg)
                     .btn__blue
                         width: 100%
                         margin: auto 0 0
@@ -3233,7 +3394,8 @@ fieldset
             border: 1px solid #d0d5dd
             border-radius: 4px
             padding: 10px 42px 10px 14px
-            &.error
+            &.error,
+            &.si-error
                 border: 1px solid #fda29b
         &_alert
             position: absolute
@@ -3251,6 +3413,25 @@ fieldset
             right: 14px
             top: 50%
             transform: translateY(-50%)
+            width: 20px
+            height: 20px
+            cursor: pointer
+            svg
+                width: 20px
+                height: 20px
+                position: absolute
+                top: 0
+                right: 0
+                transition: all .3s
+            .open
+                opacity: 0
+            .close
+                opacity: 1
+            &.active
+                .open
+                    opacity: 1
+                .close
+                    opacity: 0
         &_error
             position: absolute
             top: 100%
@@ -3399,3 +3580,304 @@ fieldset
         &__check
             gap: 0
             justify-content: space-between
+
+.profile
+    padding: 48px 0 96px
+    &__wrapper
+        display: grid
+        grid-template-columns: 28fr 57fr 32fr
+        gap: 24px
+        margin: 32px 0 0
+        align-items: start
+    &__title
+        padding: 0 0 20px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border-bottom: 1px solid #eaecf0
+        h1
+            font: 600 30px / 1.26667 $font-family
+            color: #101828
+    &__id
+        padding: 10px 16px
+        border: 1px solid #d0d5dd
+        border-radius: 4px
+        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+        background: #fff
+        cursor: pointer
+        display: grid
+        grid-template-columns: 1fr 20px
+        gap: 8px
+        width: max-content
+        p
+            font: 500 14px / 1.42857 $font-family
+            color: #344054
+    &__menu
+        border: 1px solid #eaecf0
+        border-radius: 8px
+        background: #fff
+        padding: 16px 24px
+        &_pers
+            padding: 0 8px 24px
+            border-bottom: 1px solid #eaecf0
+            display: grid
+            grid-template-columns: 40px 1fr
+            gap: 12px
+            align-items: center
+            img
+                width: 40px
+                height: 40px
+                border-radius: 100%
+            p
+                font: 600 14px / 1.2 $font-family
+                color: #344054
+                &+p
+                    font: 400 14px / 1.2 $font-family
+                    color: #475467
+        &_list
+            display: grid
+            grid-template-columns: 100%
+            gap: 8px
+            margin: 16px 0 0
+            a
+                display: grid
+                grid-template-columns: 24px 1fr
+                gap: 12px
+                align-items: center
+                padding: 8px 12px
+                border-radius: 6px
+                transition: all .3s
+                &.active
+                    background: #f9fafb
+                    p
+                        color: #344054
+                &:hover
+                    background: #f9fafb
+            p
+                font: 500 16px / 1.5 $font-family
+                color: #475467
+        &_exit
+            margin: 16px 0 0
+            display: grid
+            grid-template-columns: 24px 1fr
+            gap: 12px
+            align-items: center
+            padding: 8px 12px
+            border-radius: 6px
+            transition: all .3s
+            position: relative
+            &:hover
+                background: #f9fafb
+            p
+                font: 500 16px / 1.5 $font-family
+                color: #475467
+            &::before
+                content: ''
+                display: block
+                width: 100%
+                height: 1px
+                background: #eaecf0
+                position: absolute
+                top: -8px
+                left: 0
+    &__block
+        padding: 24px
+        display: grid
+        grid-template-columns: 100px 1fr
+        gap: 24px
+        &_wrapper
+            border: 1px solid #eaecf0
+            border-radius: 8px
+            background: #fff
+            &+.profile__block_wrapper
+                margin: 24px 0 0
+        &+.profile__block
+            border-top: 1px solid #eaecf0
+    &__avatar
+        margin: 28px 0 0
+        img
+            display: block
+            width: 72px
+            height: 72px
+            border-radius: 100%
+            border: 3px solid #fff
+            box-shadow: 0 2px 4px -2px rgba(16, 24, 40, 0.06), 0 4px 8px -2px rgba(16, 24, 40, 0.1)
+            object-fit: cover
+            margin: 0 auto
+        &_input
+            position: relative
+            margin: 16px 0 0
+            display: grid
+            grid-template-columns: 20px 1fr
+            gap: 8px
+            align-items: center
+            input
+                position: absolute
+                inset: 0
+                width: 100%
+                height: 100%
+                opacity: 0
+                cursor: pointer
+            p
+                font: 500 14px / 1.42857 $font-family
+                color: #2963f5
+    &__form
+        display: grid
+        grid-template-columns: 100%
+        gap: 16px
+        grid-column: 2/3
+        .sign-in__input
+            margin: 0
+        h2
+            font: 600 18px / 1.55556 $font-family
+            color: #101828
+        .profile__btn
+            grid-column: auto
+    &__phone
+        display: grid
+        grid-template-columns: 1fr 40px
+        gap: 16px
+        align-items: end
+        &_edit
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 1px solid #d0d5dd
+            border-radius: 4px
+            box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+            background: #fff
+            height: 40px
+            width: 40px
+    &__btn
+        display: flex
+        justify-content: flex-end
+        align-items: start
+        gap: 12px
+        grid-column: 2/3
+    &__file
+        grid-column: 1/3
+        position: relative
+        border: 1px solid #eaecf0
+        border-radius: 8px
+        padding: 16px 24px
+        display: flex
+        flex-direction: column
+        align-items: center
+        input
+            inset: 0
+            width: 100%
+            height: 100%
+            opacity: 0
+            cursor: pointer
+            position: absolute
+        &_icon
+            width: 46px
+            height: 46px
+            border: 6px solid #f9fafb
+            border-radius: 28px
+            display: flex
+            justify-content: center
+            align-items: center
+            background: #f2f4f7
+        &_text
+            font: 400 14px / 1.42857 $font-family
+            color: #475467
+            margin: 9px 0 0
+            text-align: center
+            span
+                font-weight: 500
+                color: #2963f5
+        &_har
+            font: 400 12px / 1.3 $font-family
+            text-align: center
+            color: #475467
+            margin: 4px 0 0
+    &__banner
+        display: grid
+        grid-template-columns: 100%
+        gap: 24px
+    &__info
+        border: 1px dashed #d0d5dd
+        border-radius: 8px
+        padding: 16px
+        display: grid
+        grid-template-columns: 1fr 64px
+        gap: 16px
+        align-items: start
+        &_img
+            width: 64px
+            height: 64px
+        &_name
+            font: 600 18px / 1.55556 $font-family
+            color: #101828
+        &_text
+            font: 400 14px / 1.42857 $font-family
+            color: #667085
+            margin: 8px 0 0
+        a
+            margin: 8px 0 0
+            display: grid
+            grid-template-columns: 1fr 20px
+            gap: 8px
+            align-items: center
+            max-width: max-content
+            font: 500 14px / 1.42857 $font-family
+            color: #2963f5
+    &__get
+        border-radius: 8px
+        padding: 12px
+        background: #f1f5ff
+        display: grid
+        grid-template-columns: 20px 1fr
+        gap: 12px
+        p
+            font: 400 14px / 1.42857 $font-family
+            color: #667085
+            span
+                font-weight: 600
+            
+@media ( max-width: 1200px )
+    .profile
+        &__block
+            padding: 12px
+            &_wrapper
+                &+.profile__block_wrapper
+                    margin: 12px 0 0
+        &__menu
+            padding: 12px
+        &__wrapper
+            gap: 12px
+
+@media ( max-width: 1024px )
+    .profile
+        &__menu
+            display: none
+        &__banner
+            display: none
+        &__wrapper
+            display: block
+
+@media ( max-width: 600px )
+    .profile
+        padding: 36px 0
+        h1
+            font-size: 24px
+        &__title
+            padding: 0
+            border: none
+        &__wrapper
+            margin: 16px 0 0
+        &__block
+            grid-template-columns: 100%
+            gap: 16px
+        &__avatar
+            grid-column: auto
+            &_input
+                max-width: max-content
+                margin: 13px auto 0
+        &__form
+            grid-column: auto
+        &__file
+            grid-column: auto
+        &__btn
+            grid-column: auto

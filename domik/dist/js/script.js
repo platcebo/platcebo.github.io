@@ -128,13 +128,18 @@ document.addEventListener('DOMContentLoaded', function() {
     if(navLang !== null) {
         document.addEventListener('click', (event)=>{
             let target = event.target;
-            navLang.forEach((item)=>{
-                if(target.closest('div.nav__lang')) {
-                    item.classList.toggle('nav__lang_open')
-                } else {
-                    item.classList.remove('nav__lang_open')
+
+            if(target.closest('div.nav__lang')) {
+                // navLang.forEach(item => item.classList.remove('nav__lang_open'))
+                for(let i = 0; i < navLang.length; i++) {
+                    if(target.closest('div.nav__lang') == navLang[i]) {
+                        navLang[i].classList.toggle('nav__lang_open')
+                    }
                 }
-            })
+                console.log('sd')
+            } else {
+                navLang.forEach(item => item.classList.remove('nav__lang_open'))
+            }
         })
     }
 
@@ -321,11 +326,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if(signInWatch !== null) {
         signInWatch.forEach((item,i) =>{
-            item.addEventListener('mousedown',()=>{
-                signInPassword[i].setAttribute('type', 'text');
-            })
-            item.addEventListener('mouseup',()=>{
-                signInPassword[i].setAttribute('type', 'password');
+            item.addEventListener('click',()=>{
+                if(item.classList.contains('active')) {
+                    signInPassword[i].setAttribute('type', 'password');
+                    item.classList.remove('active')
+                } else {
+                    signInPassword[i].setAttribute('type', 'text');
+                    item.classList.add('active')
+                }
             })
         })
     }
@@ -390,5 +398,24 @@ document.addEventListener('DOMContentLoaded', function() {
         input.addEventListener("keydown", mask, false);
     
     });
+
+    let navMobList = document.querySelectorAll('.nav__mob_drop'),
+        navMobListBtn = document.querySelectorAll('.nav__mob_drop p');
+
+    if(navMobListBtn !== null) {
+        navMobListBtn.forEach((item,i) => {
+            item.addEventListener('click', ()=>{
+                navMobList[i].classList.toggle('active');
+            })
+        }) 
+    }
+
+    let navPers = document.querySelector('.nav__pers');
+    
+    if(navPers !== null) {
+        navPers.addEventListener('click', ()=>{
+            navPers.classList.toggle('active')
+        })
+    }
 
 }, false);
