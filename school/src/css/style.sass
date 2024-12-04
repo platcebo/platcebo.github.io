@@ -405,9 +405,29 @@ section
     .container
         &__block
             position: relative
-            margin-top: 40px
             z-index: 2
             height: 600px
+            margin: 40px auto 0
+    &__fix
+        &.fix
+            top: 20px
+            position: fixed
+            left: 50%
+            transform: translateX(-50%)
+        &.stop
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+        &_wrapper
+            margin: 40px 0 0
+            position: relative
+        &_block
+            margin: 0 auto
+            max-width: calc(100% - 48px)
+            .container__block
+                margin: 0
+                width: 100%
     &__bg
         position: absolute
         inset: 0
@@ -2077,6 +2097,9 @@ section
                 width: 45%
             &_right
                 width: 45%
+        &__fix
+            &_block
+                max-width: calc(100% - 20px)
     .unique
         padding: 60px 0
         h2
@@ -2412,5 +2435,10 @@ section
             transform: translateX(-50%)
             z-index: -1
             // mix-blend-mode: color-dodge
+        &::before
+            content: ''
+            width: 847px
+            height: 847px
+
     &__result
         margin: 120px 0 0

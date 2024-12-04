@@ -99,12 +99,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     let canFix = document.querySelector('.can__fix'),
+        canFixBlock = document.querySelector('.can__fix_block'),
         canFixWrapper = document.querySelector('.can__fix_wrapper');
 
     if(canFix !== null) {
+        canFixBlock.style.width = canFix.getBoundingClientRect().width + 'px'
+        canFixBlock.style.height = canFix.getBoundingClientRect().height + 'px'
+
         window.addEventListener('scroll', ()=>{
-            if(canFixWrapper.getBoundingClientRect().top <= 20 && canFixWrapper.getBoundingClientRect().bottom > canFix.getBoundingClientRect().height + 20) {
-                canFix.style.transform = 'translateY(' + -1 * (canFixWrapper.getBoundingClientRect().top - 20) +'px)'
+            if(canFixWrapper.getBoundingClientRect().top < 20 && canFixWrapper.getBoundingClientRect().bottom > canFix.getBoundingClientRect().height + 20) {
+                canFix.classList.add('fix');
+                canFix.classList.remove('stop');
+            } else if(canFixWrapper.getBoundingClientRect().top > 20) {
+                canFix.classList.remove('fix');
+                canFix.classList.remove('stop');
+            } else if(canFixWrapper.getBoundingClientRect().bottom < canFixBlock.getBoundingClientRect().height + 20) {
+                canFix.classList.remove('fix');
+                canFix.classList.add('stop');
             }
         })
     }
