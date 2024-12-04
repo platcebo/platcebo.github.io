@@ -409,25 +409,40 @@ section
             height: 600px
             margin: 40px auto 0
     &__fix
+        position: absolute
+        top: 0
+        left: 0
+        // max-width: calc(100% - 48px)
+        width: 100%
         &.fix
             top: 20px
             position: fixed
             left: 50%
             transform: translateX(-50%)
+            bottom: 0
+            max-width: calc(100% - 48px) 
+            width: 1392px
+            &.stop      
+                position: absolute
+                bottom: 0
+                left: 50%
+                transform: translateX(-50%)
         &.stop
             position: absolute
             bottom: 0
             left: 50%
             transform: translateX(-50%)
+            width: 100%
+            max-width: calc(100% - 48px)
         &_wrapper
             margin: 40px 0 0
             position: relative
+            overflow: hidden
         &_block
             margin: 0 auto
             max-width: calc(100% - 48px)
             .container__block
                 margin: 0
-                width: 100%
     &__bg
         position: absolute
         inset: 0
@@ -485,6 +500,14 @@ section
         button
             max-width: 100%
             gap: 17px
+            box-shadow: none
+            &::before
+                // content: none
+                filter: blur(10px)
+                opacity: 1
+                left: 20px
+                right: 20px
+                width: auto
     &__info
         h3
             text-align: left
@@ -2098,8 +2121,14 @@ section
             &_right
                 width: 45%
         &__fix
-            &_block
+            width: 100%
+            max-width: 100%
+            &.fix,
+            &.stop
                 max-width: calc(100% - 20px)
+            &_block
+                width: 100%
+                max-width: calc( 100% - 20px )
     .unique
         padding: 60px 0
         h2
@@ -2340,7 +2369,7 @@ section
     padding: 120px 0 0
     .container
         &__block
-            background: url('../img/born_bg.jpg') right no-repeat    
+            background: url('../img/born_bg.jpg') top no-repeat    
             background-size: cover
             &::after
                 content: ''
@@ -2439,6 +2468,500 @@ section
             content: ''
             width: 847px
             height: 847px
-
+            display: block
+            position: absolute
+            z-index: -2
+            transform: rotate(13deg)
+            right: -223px
+            bottom: -470px
+            background: url('../img/smoke.png') center no-repeat
+            background-size: contain
+            mix-blend-mode: color-dodge
+        &::after
+            content: ''
+            width: 847px
+            height: 847px
+            display: block
+            position: absolute
+            z-index: -2
+            transform: rotate(13deg)
+            left: -223px
+            bottom: -470px
+            background: url('../img/smoke.png') center no-repeat
+            background-size: contain
+            mix-blend-mode: color-dodge
     &__result
         margin: 120px 0 0
+        border-radius: 24px
+        backdrop-filter: blur(40px)
+        background: linear-gradient(225deg, rgba(163, 221, 255, 0.2) 0%, rgba(92, 169, 214, 0.2) 100%)
+        padding: 64px 
+        ul  
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr 1fr
+            gap: 40px
+            margin: 40px 0 0
+        li
+            max-width: 231px
+            display: grid
+            grid-template-columns: 34px 1fr
+            gap: 15px
+            align-items: start
+            div
+                margin: 6px 0 0
+                width: 34px
+                height: 34px
+                display: flex
+                justify-content: center
+                align-items: center
+                border: 1px solid #73bbe5
+                border-radius: 10px
+                box-shadow: inset 0 0 7px 0 rgba(255, 255, 255, 0.48)
+                background: linear-gradient(311deg, #75c0eb 0%, #1e86c2 100%), url("path_to_image")
+            p
+                font: 400 16px / 1.5 $font-family
+                color: #d1eefb
+                span
+                    font-weight: 700
+    &__autor
+        margin: 100px 0 0
+        display: grid
+        grid-template-columns: 400px 1fr
+        gap: 30px
+        align-items: start
+        &_list
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 20px
+        &_item
+            max-width: 322px
+            display: grid
+            grid-template-columns: 56px 1fr
+            gap: 20px
+            img
+                width: 56px
+                height: 56px
+                border-radius: 100%
+                margin: 7px 0 0
+            a
+                display: block
+                width: max-content
+                font: 700 16px / 1.5 $font-family
+                text-decoration: underline
+                text-decoration-skip-ink: none
+                color: $content-white
+                margin: 30px 0 0
+                transition: all .3s
+                &:hover
+                    color: #69c5ec
+        &_name
+            font: 600 20px / 1.5 $font-family
+            color: $white
+        &_text
+            margin: 10px 0 0
+            font: 400 14px / 1.45 $font-family
+            color: #d1eefb
+    .btn__blue
+        margin: 80px auto 0
+
+.input
+    position: relative
+    svg
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: 16px
+    input
+        border: 1px solid $white
+        border-radius: 24px
+        padding: 16px 16px 16px 48px
+        background: $background-dark
+        font: 500 14px / 1.5 $font-family
+        width: 100%
+        box-sizing: border-box
+        &::placeholder
+            color: $content-secondary
+    textarea
+        border: 1px solid $white
+        border-radius: 24px
+        padding: 16px 
+        background: $background-dark
+        font: 500 14px / 1.5 $font-family
+        width: 100%
+        box-sizing: border-box
+        height: 116px
+        resize: none
+        &::placeholder
+            color: $content-secondary
+
+.last
+    padding: 160px 0 0
+    &__wrapper
+        display: grid
+        grid-template-columns: 275px 1fr
+        gap: 80px
+        align-items: center
+    &__title
+        h2
+            font: 500 80px / 1 $second-family
+            text-transform: uppercase
+            color: $content-main
+        p
+            margin: 24px 0 0
+            font: 400 18px / 1.5 $font-family
+            color: $content-main
+    &__form
+        border: 2px solid $white
+        border-radius: 32px
+        box-shadow: 0 6px 24px 0 rgba(175, 214, 237, 0.12)
+        background: #fafcff
+        padding: 48px 
+    &__row
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 16px
+        margin: 0 0 16px
+    &__btn
+        margin: 24px 0 0
+        display: grid
+        grid-template-columns: 280px 1fr
+        gap: 40px
+        align-items: center
+        .btn__blue
+            max-width: 100%
+            text-align: center
+        p
+            font: 400 12px / 1.5 $font-family
+            color: $content-secondary
+            a
+                text-decoration: underline
+                text-decoration-skip-ink: none
+                color: $content-secondary
+                transition: all .3s
+                &:hover
+                    color: #69c5ec
+
+.practic-padding
+    padding: 100px 0 0
+
+@media ( max-width: 1024px )
+    .code-header
+        h1
+            font-size: 50px
+        &__row
+            gap: 20px
+    .cours
+        padding: 100px 0 0
+        h2
+            font-size: 36px
+        &__wrapper
+            margin: 20px 0 0
+            padding: 0  100px
+        &__left
+            width: 130px
+        &__right
+            width: 130px
+        &__list
+            padding: 20px
+            gap: 20px
+    .contrast
+        padding: 100px 0 0
+        h2
+            font-size: 36px
+        &__wrapper
+            margin: 20px 0 0
+            grid-template-columns: 1fr 1fr
+            gap: 20px
+    .born
+        padding: 100px 0 0
+        h2
+            font-size: 36px
+        &__title
+            grid-template-columns: 100%
+        &__target
+            margin: 40px 0 0
+            &_bg,
+            &::before,
+            &::after
+                display: none
+            &_list
+                margin: 40px 0 0
+                display: grid
+                grid-template-columns: 1fr 1fr
+                gap: 20px
+            &_col
+                gap: 20px
+        h3
+            font-size: 30px
+        &__result
+            margin: 40px 0 0
+            padding: 20px
+            ul
+                margin: 20px 0 0
+                gap: 20px
+                grid-template-columns: 1fr 1fr
+        &__autor
+            grid-template-columns: 100%
+            margin: 40px 0 0
+    .last
+        padding: 100px 0 0
+        &__wrapper
+            grid-template-columns: 100%
+            gap: 30px
+        h2
+            font-size: 36px
+        &__form
+            padding: 20px
+
+@media ( max-width: 768px )
+    .code-header
+        &__row
+            margin: 20px 0 0
+            justify-content: space-between
+            flex-wrap: wrap
+            row-gap: 200px
+            .btn__blue
+                width: 100%
+                max-width: 100%
+                order: -1
+                text-align: center
+        &__left,
+        &__right
+            width: auto
+            height: 250px
+        .container
+            &__block
+                &::after,
+                &::before
+                    content: none
+        &__info
+            font-size: 12px
+    .cours
+        &__list
+            grid-template-columns: 100%
+    .contrast
+        &__wrapper
+            grid-template-columns: 100%
+        &__item
+            padding: 20px
+            min-height: auto
+
+@media ( max-width: 600px )
+    .code-header
+        &__pers
+            padding: 5px
+            background: #fff
+            align-items: center !important
+            backdrop-filter: blur(0px)
+            width: max-content
+            p
+                color: #283238 !important
+                text-align: center !important
+            span
+                display: none
+        &__right,
+        &__left
+            max-width: 50%
+            object-fit: cover
+            object-position: top 
+        &__row
+            column-gap: 0
+    .cours
+        padding: 60px 0 0
+        h2
+            text-align: left
+        &__wrapper
+            padding: 0
+        &__left,
+        &__right
+            display: none
+    .contrast
+        padding: 60px 0 0
+        h2
+            text-align: left
+    .born
+        padding: 60px 0 0
+        &__target
+            &_list
+                grid-template-columns: 1fr
+        &__result
+            ul
+                grid-template-columns: 1fr
+        &__autor
+            &_list
+                grid-template-columns: 100%
+            &_item
+                a
+                    margin: 10px 0 0
+    .last
+        padding: 60px 0 0
+        &__row
+            grid-template-columns: 1fr
+        &__btn
+            grid-template-columns: 1fr
+            gap: 10px
+    .practic-padding
+        padding: 60px 0 0
+
+.single-article
+    padding: 100px 0 0
+    &__header
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 64px
+        align-items: stretch    
+    &__prev
+        border-radius: 30px
+        overflow: hidden
+        position: relative
+        img
+            height: 1px
+            min-height: 100%
+            width: 100%
+            object-fit: cover
+    &__text
+        font: 700 16px / 1.5 $font-family
+        color: $content-main
+    h1
+        margin: 24px 0 0
+        font: 500 80px / 1 $second-family
+        text-transform: uppercase
+        color: $content-main
+    &__autor
+        margin: 48px 0 0
+        max-width: 340px
+        display: grid
+        grid-template-columns: 56px 1fr
+        gap: 20px
+        align-items: center
+        img
+            width: 56px
+            height: 56px
+            border-radius: 100%
+        p
+            font: 600 20px / 1.5 $font-family
+            color: $content-main
+            &+p
+                margin: 8px 0 0
+                font: 400 14px / 1.3 $font-family
+                color: $content-secondary
+    &__wrapper
+        margin: 100px 0 0
+        p
+            margin: 64px 0 0
+            font: 400 20px / 1.5 $font-family
+            color: #31373a
+            span
+                font-weight: 700
+            &:nth-child(1)
+                margin: 0
+        blockquote
+            padding: 24px 24px 0
+            font: 700 16px / 1.5 $font-family
+            color: #31373a
+
+.rate
+    padding: 140px 0 0
+    &__block
+        border: 2px solid $white
+        border-radius: 32px
+        box-shadow: 0 6px 24px 0 rgba(175, 214, 237, 0.12)
+        background: #fafcff
+        padding: 60px
+        position: relative
+        display: grid
+        grid-template-columns: 355px 360px
+        justify-content: space-between
+        align-items: center
+        z-index: 1
+    h2
+        font: 500 80px / 1 $second-family
+        text-transform: uppercase
+        color: $content-main
+    &__sub
+        margin: 24px 0 0
+        display: grid
+        grid-template-columns: 36px 1fr
+        gap: 16px
+        span
+            width: 36px
+            height: 36px
+            border: 1px solid #73bbe5
+            border-radius: 10px
+            display: flex
+            justify-content: center
+            align-items: center
+            box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.48)
+            background: linear-gradient(311deg, #75c0eb 0%, #1e86c2 100%), url("path_to_image")
+            margin: 4px 0 0
+        p
+            font: 400 18px / 1.5 $font-family
+            color: $content-main
+    &__form
+        display: grid
+        grid-template-columns: 100%
+        gap: 16px
+        .btn__blue
+            max-width: 100%
+            margin: 8px 0 0
+    &__desc
+        font: 400 12px / 1.5 $font-family
+        color: $content-secondary
+        a
+            text-decoration: underline
+            text-decoration-skip-ink: none
+            transition: all .3s
+            color: $content-secondary
+            &:hover
+                color: #69c5ec
+    &__bg
+        position: absolute
+        bottom: 0
+        left: 300px
+        width: 36.8%
+        display: block
+        z-index: -1
+
+@media ( max-width: 1024px )
+    .single-article
+        h1
+            font-size: 50px
+        &__header
+            gap: 20px
+        &__wrapper
+            margin: 50px 0 0
+            p
+                font-size: 16px
+                margin: 30px 0 0
+            blockquote
+                padding: 12px 12px 0
+                font-size: 14px
+    .rate
+        &__block
+            padding: 20px 20px 60px
+            grid-template-columns: 300px 360px
+        h2
+            font-size: 45px
+        &__sub
+            p
+                font-size: 16px
+        &__bg
+            left: 200px
+
+@media ( max-width: 768px )
+    .single-article
+        padding: 50px 0 0
+        &__header
+            grid-template-columns: 100%
+        &__prev
+            height: 50vw
+    .rate
+        padding: 60px 0 0
+        &__block
+            padding: 20px
+            grid-template-columns: 100%
+            gap: 20px
+        &__bg
+            display: none
+        &__sub
+            max-width: 300px

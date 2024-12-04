@@ -105,17 +105,28 @@ document.addEventListener('DOMContentLoaded', function() {
     if(canFix !== null) {
         canFixBlock.style.width = canFix.getBoundingClientRect().width + 'px'
         canFixBlock.style.height = canFix.getBoundingClientRect().height + 'px'
+        let canFixWrapperTop,
+            canFixWrapperBottom,
+            canFixHeight;
 
         window.addEventListener('scroll', ()=>{
-            if(canFixWrapper.getBoundingClientRect().top < 20 && canFixWrapper.getBoundingClientRect().bottom > canFix.getBoundingClientRect().height + 20) {
-                canFix.classList.add('fix');
-                canFix.classList.remove('stop');
-            } else if(canFixWrapper.getBoundingClientRect().top > 20) {
+            canFixWrapperTop = canFixWrapper.getBoundingClientRect().top;
+            canFixWrapperBottom = canFixWrapper.getBoundingClientRect().bottom;
+            canFixHeight = canFix.getBoundingClientRect().height;
+
+
+            if(canFixWrapperTop > 20) {
                 canFix.classList.remove('fix');
                 canFix.classList.remove('stop');
-            } else if(canFixWrapper.getBoundingClientRect().bottom < canFixBlock.getBoundingClientRect().height + 20) {
+                canFix.style.top = 'auto'
+            } else if(canFixWrapperBottom < canFixHeight + 20) {
                 canFix.classList.remove('fix');
                 canFix.classList.add('stop');
+                canFix.style.top = 'auto'
+            } else if(canFixWrapperTop < 20 && canFixWrapperBottom > canFixHeight + 20) {
+                canFix.classList.add('fix');
+                canFix.classList.remove('stop');
+                canFix.style.top = 20 +'px'
             }
         })
     }
