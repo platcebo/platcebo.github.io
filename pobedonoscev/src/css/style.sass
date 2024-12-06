@@ -1,0 +1,362 @@
+$font-family: "Roboto", sans-serif
+$second-family: "Plus Jakarta Sans", sans-serif
+$third-family: "Roboto Condensed", sans-serif
+
+body
+    background: #000
+    padding: 13px
+    color: #fff
+    display: grid
+    grid-template-columns: 282px calc( 100% - 293px )
+    gap: 11px
+    min-height: 100vh
+    align-items: start
+.content
+    position: relative
+.btn
+    &__gold
+        border-radius: 11px
+        width: 100%
+        box-sizing: border-box
+        padding: 6px
+        box-shadow: 0 0 13px 7px rgba(204, 161, 120, 0.46)
+        background: #cca178
+        font: 400 15px $font-family
+        color: #fff
+        transition: all .3s
+        border: none
+        &:hover
+            box-shadow: none
+.content
+    position: relative
+.nav-lang
+    z-index: 5
+    position: absolute
+    top: 57px
+    right: 90px
+    border: 1px solid #000
+    border-radius: 11px
+    display: grid
+    grid-template-columns: 1fr 1fr
+    width: 87px
+    overflow: hidden
+    a
+        position: relative
+        overflow: hidden
+        transform: skewX(-30deg)
+        color: #bababa
+        font: 400 16px / 1.1 $second-family
+        background: #313131
+        display: flex
+        justify-content: center
+        align-items: center
+        &:nth-child(1)
+            border-right: 1px solid #000
+        &.active
+            background: transparent
+            color: #000
+        span
+            transform: skewX(30deg)
+
+.nav
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+    background: #171717
+    height: calc( 100vh - 26px )
+    position: relative
+    overflow-y: auto
+    position: sticky
+    top: 13px
+    padding: 40px 23px
+    border-radius: 32px
+    display: flex
+    flex-direction: column
+    &__logo
+        max-width: 206px
+        display: block
+        margin: 0 auto 
+        img
+            width: 100%
+    &__list
+        margin: 50px 0 auto 33px
+        display: grid
+        grid-template-columns: 100%
+        gap: 27px
+        a,
+        p
+            font: 400 18px $font-family
+            color: #fff
+            transition: all .3s
+            cursor: pointer
+            &:hover
+                color: #cca178
+    &__soc
+        margin: 42px 0 0
+        display: grid
+        grid-template-columns: 30px 30px 30px 30px
+        gap: 14px
+        a
+            display: block
+            transition: all .3s
+            &:hover
+                opacity: .8
+        img
+            width: 100%
+    &__desc
+        margin: 23px 0 0
+        font: 400 13px / 1.37502 $font-family
+        color: #cca178
+    &__link
+        margin: 50px 0 0
+    &__hum
+        display: none
+
+.drop
+    display: grid
+    grid-template-columns: 100%
+    gap: 9px
+    margin: 17px 0 0
+    max-height: 0
+    overflow: hidden
+    margin: 0
+    transition: all .3s
+    &.active
+        margin: 17px 0 0
+        max-height: 200px
+    &__btn
+        position: relative
+        &::before
+            content: ''
+            display: block
+            width: 10px
+            height: 10px
+            position: absolute
+            left: -16px
+            top: 6px
+            background: url('../img/gold-arrow.svg') center no-repeat
+            transition: all .3s
+        &.active
+            &::before
+                transform: rotate(60deg)
+    a
+        font: 400 15px $font-family
+        color: #6c6c6c
+        &:hover
+            color: #fff
+
+.header
+    position: relative
+    border-radius: 32px
+    overflow: hidden
+    &__info
+        position: absolute
+        bottom: 190px
+        left: 80px
+        max-width: calc( 100% - 160px ) 
+        z-index: 5
+        h1
+            font: 400 64px / 1.1 $second-family
+            color: #fff
+            span
+                color: #cca178
+        p
+            font: 400 18px $font-family
+            color: #fff
+            margin: 7px 0 0
+    &__slider
+        min-height: 100%
+
+        img
+            width: 100%
+            height: calc( 100vh - 26px )
+            object-fit: cover
+            min-height: 100%
+    .swiper-button-next
+        right: 80px
+        bottom: 70px
+        margin: 0
+        display: grid
+        grid-template-columns: 1fr 6px
+        gap: 10px
+        padding: 5px 9px
+        border: 1px solid #fff
+        border-radius: 11px
+        width: auto
+        height: auto
+        top: auto
+        transition: all .3s
+        z-index: 2
+        p
+            font: 400 18px $font-family
+            color: #fff
+            transition: all .3s
+        svg
+            path
+                transition: all .3s
+        &::after
+            content: none
+        &:hover
+            border-color: #cca178
+            p
+                color: #cca178
+            svg
+                path
+                    stroke: #cca178
+    .swiper-button-prev
+        left: 80px
+        bottom: 70px
+        margin: 0
+        display: grid
+        grid-template-columns: 6px 1fr
+        gap: 10px
+        padding: 5px 9px
+        border: 1px solid #fff
+        border-radius: 11px
+        width: auto
+        height: auto
+        top: auto
+        transition: all .3s
+        z-index: 2
+        p
+            font: 400 18px $font-family
+            color: #fff
+            transition: all .3s
+        svg
+            path
+                transition: all .3s
+        &::after
+            content: none
+        &:hover
+            border-color: #cca178
+            p
+                color: #cca178
+            svg
+                path
+                    stroke: #cca178
+    .swiper-pagination
+        transform: none
+        margin: 0
+        bottom: 70px
+        gap: 13px
+        display: flex
+        justify-content: center
+        align-items: center
+        z-index: 2
+        span
+            width: 111px
+            height: 9px
+            border-radius: 14px
+            background: #a0a0a0
+            transition: all .3s
+            opacity: 1
+            margin: 0
+            &.swiper-pagination-bullet-active
+                background: #fff
+
+@media ( max-width: 1200px )
+    .nav-lang
+        top: 20px
+        right: 20px
+    .header
+        &__info
+            left: 20px
+            bottom: 100px
+        .swiper-button-prev
+            left: 20px
+            bottom: 20px
+        .swiper-button-next
+            right: 20px
+            bottom: 20px
+        .swiper-pagination
+            gap: 5px
+            bottom: 25px
+            span
+                width: 35px
+                height: 3px
+        h1
+            font-size: 40px
+        p
+            font-size: 16px
+    .nav
+        padding: 20px
+        &__logo
+            margin: 0
+        &__list
+            margin: 20px 0 auto 10px
+            gap: 10px
+            a,
+            p
+                font-size: 16px
+        &__soc
+            margin: 20px 0 0
+    .drop
+        gap: 5px
+        a
+            font-size: 12px
+        &.active
+            margin: 10px 0 0
+
+@media ( max-width: 1024px )
+    body
+        grid-template-columns: 100%
+    .nav
+        padding: 50px 20px 20px
+        position: fixed
+        top: 13px
+        left: 13px
+        z-index: 10
+        width: 290px
+        max-width: calc( 100% - 26px )
+        transform: translateX(-200%)
+        transition: all .3s
+        &__hum
+            display: block
+            position: fixed
+            width: 20px
+            height: 15px
+            z-index: 15
+            left: 30px
+            top: 30px
+            cursor: pointer
+            span,
+            &::before,
+            &::after
+                content: ''
+                display: block
+                width: 100%
+                height: 1px
+                background: #fff
+                position: absolute
+                top: 0
+                left: 0
+                transition: all .3s
+            span
+                top: 50%
+            &::before
+                top: 100%
+            &.active
+                span
+                    opacity: 0
+                &::before
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%) rotate(-45deg)
+                &::after
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%) rotate(45deg)
+        &.active
+            transform: translateX(0%)
+
+@media ( max-width: 600px )
+    .nav
+        width: calc( 100% - 26px )
+    .header
+        .swiper-button-next,
+        .swiper-button-prev
+            display: none
+        &__info
+            bottom: 50px
+            max-width: calc( 100% - 40px )
+        h1
+            font-size: 30px
+            white-space: pre-wrap
