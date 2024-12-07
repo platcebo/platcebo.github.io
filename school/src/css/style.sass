@@ -2320,11 +2320,21 @@ section
         bottom: 0
         width: 294px
         left: 0
+        animation: coursMove 7s 0s infinite
     &__right
         position: absolute
         top: 0
         width: 330px
         right: 0
+        animation: ease coursMove 5s 0s infinite 
+
+@keyframes coursMove
+    0%
+        transform: translateY(-5%)
+    50%
+        transform: translateY(5%)
+    100%
+        transform: translateY(-5%)
 
 .contrast
     padding: 158px 0 0
@@ -2367,6 +2377,8 @@ section
 
 .born
     padding: 120px 0 0
+    &+.born
+        padding: 60px 0 0
     .container
         &__block
             background: url('../img/born_bg.jpg') top no-repeat    
@@ -2674,6 +2686,8 @@ section
             gap: 20px
     .born
         padding: 100px 0 0
+        &+.born
+            padding: 50px 0 0
         h2
             font-size: 36px
         &__title
@@ -2781,6 +2795,8 @@ section
             text-align: left
     .born
         padding: 60px 0 0
+        &+.born
+            padding: 30px 0 0
         &__target
             &_list
                 grid-template-columns: 1fr
