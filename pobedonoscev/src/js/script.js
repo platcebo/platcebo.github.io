@@ -19,6 +19,29 @@ document.addEventListener('DOMContentLoaded', function() {
         },
     });
 
+    var swiper = new Swiper(".project__slider", {
+        loop: true,
+        spaceBetween: 30,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".project .swiper-pagination",
+          clickable: true,
+        },
+    });
+
+    var swiper = new Swiper(".news__slider", {
+        loop: false,
+        spaceBetween: 23,
+        slidesPerView: "auto",
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+    });
+
     let drop = document.querySelectorAll('.drop'),
         dropBtn = document.querySelectorAll('.drop__btn');
 
@@ -36,8 +59,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if(nav !== null) {
         navHum.addEventListener('click', ()=>{
-            nav.classList.toggle('active');
-            navHum.classList.toggle('active');
+            if(nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                navHum.classList.remove('active');
+                document.body.classList.remove('fix');
+                document.documentElement.classList.remove('fix');
+                nav.style.maxHeight = window.clientHeight + 'px'
+            } else {
+                nav.classList.add('active');
+                navHum.classList.add('active');
+                document.body.classList.add('fix');
+                document.documentElement.classList.add('fix');
+            }
+
         })
     }
 
