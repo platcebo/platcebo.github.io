@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atlas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/itc-custom-select.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="nav__row">
+                <a href="#" class="nav__logo">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <div class="nav__place modal-place__btn">
+                    <p class="">Ташкент</p>
+                    <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                </div>
+                <div class="nav__value">
+                    <div class="toggle-value">USD</div>
+                    <div class="toggle-value active">UZS</div>
+                </div>
+                <div class="nav__lang">
+                    <img src="img/globe.svg" alt="" class="svg">
+                    <p class="">Русский</p>
+                    <ul>
+                        <li><a href="#" class="active">Русский </a></li>
+                        <li><a href="#">O'zbek </a></li>
+                    </ul>
+                    <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                </div>
+                <a href="#" class="nav__fav">
+                    <img src="img/heart.svg" alt="" class="svg">
+                </a>
+                <a href="#" class="nav__enter">Войти</a>
+                <div class="nav__humburger"><span></span></div>
+            </div>
+            <div class="nav__list">
+                <ul class="">
+                    <li>
+                        <a href="#" class="active">Купить</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Снять</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Каталог новостроек</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Покупка дома или земли</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Помещения для бизнеса</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                </ul>
+                <button class="btn__blue">Разместить объявление</button>
+            </div>
+            <div class="nav__mob">
+                <div class="nav__mob_wrapper">
+                    <!-- <a href="#" class="nav__mob_enter">
+                        <img src="img/pers.svg" alt="" class="svg">
+                        <p>Войти</p>
+                    </a> -->
+                    <div class="nav__mob_row">
+                        <div class="nav__lang nav__lang_mob">
+                            <img src="img/globe.svg" alt="" class="svg">
+                            <p class="">Ру</p>
+                            <ul>
+                                <li><a href="#" class="active">Русский </a></li>
+                                <li><a href="#">O'zbek </a></li>
+                            </ul>
+                            <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                        </div>
+                        <div class="nav__lang nav__lang_mob">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.5846 4.16667C11.5846 5.08714 9.53261 5.83333 7.0013 5.83333C4.47 5.83333 2.41797 5.08714 2.41797 4.16667M11.5846 4.16667C11.5846 3.24619 9.53261 2.5 7.0013 2.5C4.47 2.5 2.41797 3.24619 2.41797 4.16667M11.5846 4.16667V5.41667M2.41797 4.16667V14.1667C2.41797 15.0871 4.47 15.8333 7.0013 15.8333M7.0013 9.16667C6.86085 9.16667 6.72187 9.16437 6.58463 9.15987C4.24859 9.08332 2.41797 8.3694 2.41797 7.5M7.0013 12.5C4.47 12.5 2.41797 11.7538 2.41797 10.8333M19.0846 9.58333C19.0846 10.5038 17.0326 11.25 14.5013 11.25C11.97 11.25 9.91797 10.5038 9.91797 9.58333M19.0846 9.58333C19.0846 8.66286 17.0326 7.91667 14.5013 7.91667C11.97 7.91667 9.91797 8.66286 9.91797 9.58333M19.0846 9.58333V15.8333C19.0846 16.7538 17.0326 17.5 14.5013 17.5C11.97 17.5 9.91797 16.7538 9.91797 15.8333V9.58333M19.0846 12.7083C19.0846 13.6288 17.0326 14.375 14.5013 14.375C11.97 14.375 9.91797 13.6288 9.91797 12.7083" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <p class="">UZS</p>
+                            <ul>
+                                <li><a href="#" class="active">UZS</a></li>
+                                <li><a href="#">USD</a></li>
+                            </ul>
+                            <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                        </div>
+                    </div>
+                    <ul class="nav__mob_list">
+                        <li class="nav__mob_drop">
+                            <p class="active">Купить</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Снять</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Каталог новостроек</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Покупка дома или земли</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Помещения для бизнеса</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                    <button class="btn__blue">Разместить объявление</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="sign-in">
+        <div class="container">
+            <div class="sign-in__wrapper">
+                <div class="sign-in__header">
+                    <h1>Войти</h1>
+                </div>
+                <div class="sign-in__body">
+                    <ul class="sign-in__tab">
+                        <li><a href="#">Электронная почта</a></li>
+                        <li><a href="#" class="active">Номер телефона</a></li>
+                    </ul>
+                    <div class="sign-in__tab_wrapper">
+                        <div class="sign-in__input sign-in__email">
+                            <p class="sign-in__input_text">Электронная почта <span>*</span></p>
+                            <div class="sign-in__input_wrapper">
+                                <input type="text" placeholder="ivan@domik.com" class="">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="sign-in__input_email">
+                                    <path d="M1.66699 5.8335L8.47109 10.5964C9.02207 10.982 9.29756 11.1749 9.59721 11.2496C9.8619 11.3156 10.1387 11.3156 10.4034 11.2496C10.7031 11.1749 10.9786 10.982 11.5296 10.5964L18.3337 5.8335M5.66699 16.6668H14.3337C15.7338 16.6668 16.4339 16.6668 16.9686 16.3943C17.439 16.1547 17.8215 15.7722 18.0612 15.3018C18.3337 14.767 18.3337 14.067 18.3337 12.6668V7.3335C18.3337 5.93336 18.3337 5.2333 18.0612 4.69852C17.8215 4.22811 17.439 3.84566 16.9686 3.60598C16.4339 3.3335 15.7338 3.3335 14.3337 3.3335H5.66699C4.26686 3.3335 3.5668 3.3335 3.03202 3.60598C2.56161 3.84566 2.17916 4.22811 1.93948 4.69852C1.66699 5.2333 1.66699 5.93336 1.66699 7.3335V12.6668C1.66699 14.067 1.66699 14.767 1.93948 15.3018C2.17916 15.7722 2.56161 16.1547 3.03202 16.3943C3.5668 16.6668 4.26686 16.6668 5.66699 16.6668Z" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="error sign-in__input_alert">
+                                    <g clip-path="url(#clip0_12520_3031)">
+                                    <path d="M7.99967 5.3335V8.00016M7.99967 10.6668H8.00634M14.6663 8.00016C14.6663 11.6821 11.6816 14.6668 7.99967 14.6668C4.31778 14.6668 1.33301 11.6821 1.33301 8.00016C1.33301 4.31826 4.31778 1.3335 7.99967 1.3335C11.6816 1.3335 14.6663 4.31826 14.6663 8.00016Z" stroke="#F04438" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_12520_3031">
+                                    <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>                                
+                            </div>
+                        </div>
+                        <div class="sign-in__input">
+                            <p class="sign-in__input_text">Пароль <span>*</span></p>
+                            <div class="sign-in__input_wrapper">
+                                <input type="password" placeholder="******" class="error sign-in__input_password">
+                                <div class="sign-in__input_watch">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="close">
+                                        <path d="M2.01677 10.5946C1.90328 10.4149 1.84654 10.3251 1.81477 10.1865C1.79091 10.0824 1.79091 9.91824 1.81477 9.81415C1.84654 9.67556 1.90328 9.58571 2.01677 9.40601C2.95461 7.92103 5.74617 4.16699 10.0003 4.16699C14.2545 4.16699 17.0461 7.92103 17.9839 9.40601C18.0974 9.58571 18.1541 9.67556 18.1859 9.81415C18.2098 9.91824 18.2098 10.0824 18.1859 10.1865C18.1541 10.3251 18.0974 10.4149 17.9839 10.5946C17.0461 12.0796 14.2545 15.8337 10.0003 15.8337C5.74617 15.8337 2.95461 12.0796 2.01677 10.5946Z" stroke="#667085" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M10.0003 12.5003C11.381 12.5003 12.5003 11.381 12.5003 10.0003C12.5003 8.61961 11.381 7.50033 10.0003 7.50033C8.61962 7.50033 7.50034 8.61961 7.50034 10.0003C7.50034 11.381 8.61962 12.5003 10.0003 12.5003Z" stroke="#667085" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="open">
+                                        <path d="M8.95245 4.2436C9.29113 4.19353 9.64051 4.16667 10.0003 4.16667C14.2545 4.16667 17.0461 7.9207 17.9839 9.40569C18.0974 9.58542 18.1542 9.67528 18.1859 9.81389C18.2098 9.91799 18.2098 10.0822 18.1859 10.1863C18.1541 10.3249 18.097 10.4154 17.9827 10.5963C17.7328 10.9918 17.3518 11.5476 16.8471 12.1504M5.6036 5.59586C3.80187 6.81808 2.57871 8.51615 2.01759 9.4044C1.90357 9.58489 1.84656 9.67514 1.81478 9.81373C1.79091 9.91783 1.7909 10.082 1.81476 10.1861C1.84652 10.3247 1.90328 10.4146 2.01678 10.5943C2.95462 12.0793 5.74618 15.8333 10.0003 15.8333C11.7157 15.8333 13.1932 15.223 14.4073 14.3972M2.50035 2.5L17.5003 17.5M8.23258 8.23223C7.78017 8.68464 7.50035 9.30964 7.50035 10C7.50035 11.3807 8.61963 12.5 10.0003 12.5C10.6907 12.5 11.3157 12.2202 11.7681 11.7678" stroke="#667085" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <p class="sign-in__input_error">This is an error message.</p>                 
+                            </div>
+                        </div>
+                        <div class="sign-in__row">
+                            <div class="sign-in__member">
+                                <input type="checkbox">
+                                <span></span>
+                                <p>Запомнить меня</p>
+                            </div>
+                            <a href="#" class="sign-in__forgot">Я забыл свой пароль</a>
+                        </div>
+                        <button class="btn__blue">Войти</button>
+                    </div>
+                    <div class="sign-in__tab_wrapper active">
+                        <p class="sign-in__sms">Мы отправили вам код в SMS на номер: <br> <span>+99 (890) 001 - 47 - 47</span></p>
+                        <div class="sign-in__input">
+                            <p class="sign-in__input_text">Введите код из SMS </p>
+                            <div class="sign-in__input_wrapper">
+                                <input type="text" placeholder="_ _ _ _" class=" ">
+                            </div>
+                        </div>
+                        <p class="sign-in__sms">Отправить код повторно через 59 секунд.</p>
+                        <a href="#" class="sign-in__new-code">Получить новый код</a>
+                        <button class="btn__blue">Войти</button>
+                    </div>
+                </div>
+                <div class="sign-in__footer">
+                    <p>Нет аккаунта?</p>
+                    <a href="#">Зарегистрироваться</a>
+                </div>
+            </div>
+        </div>  
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__row">
+                <ul>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Помощь</a></li>
+                    <li><a href="#">Реклама</a></li>
+                </ul>
+                <div class="footer__soc">
+                    <a href="#">
+                        <img src="img/footer_soc_1.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/footer_soc_2.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/footer_soc_3.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="footer__text">
+                <p>Сервис применяет <a href="#">рекомендательные технологии</a>: предоставляет информацию на основе сбора, систематизации и анализа сведений, относящихся к предпочтениям пользователей интернета, находящихся в Узбекистане</p>
+                <p>Использование сайта означает согласие с <a href="#">Пользовательским соглашением</a> и <a href="#">Политикой обработки персональных данных</a></p>
+            </div>
+            <div class="footer__footer">
+                <a href="#" class="footer__logo"><img src="img/logo_wht.svg" alt=""></a>
+                <p class="footer__law">© 2025 DOMIK.UZ Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/itc-custom-select.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

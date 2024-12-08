@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atlas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/itc-custom-select.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="nav__row">
+                <a href="#" class="nav__logo">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <div class="nav__place modal-place__btn">
+                    <p class="">Ташкент</p>
+                    <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                </div>
+                <div class="nav__value">
+                    <div class="toggle-value">USD</div>
+                    <div class="toggle-value active">UZS</div>
+                </div>
+                <div class="nav__lang">
+                    <img src="img/globe.svg" alt="" class="svg">
+                    <p class="">Русский</p>
+                    <ul>
+                        <li><a href="#" class="active">Русский </a></li>
+                        <li><a href="#">O'zbek </a></li>
+                    </ul>
+                    <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                </div>
+                <a href="#" class="nav__fav">
+                    <img src="img/heart.svg" alt="" class="svg">
+                </a>
+                <a href="#" class="nav__enter">Войти</a>
+                <div class="nav__humburger"><span></span></div>
+            </div>
+            <div class="nav__list">
+                <ul class="">
+                    <li>
+                        <a href="#" class="active">Купить</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Снять</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Каталог новостроек</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Покупка дома или земли</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Помещения для бизнеса</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                </ul>
+                <button class="btn__blue">Разместить объявление</button>
+            </div>
+            <div class="nav__mob">
+                <div class="nav__mob_wrapper">
+                    <!-- <a href="#" class="nav__mob_enter">
+                        <img src="img/pers.svg" alt="" class="svg">
+                        <p>Войти</p>
+                    </a> -->
+                    <div class="nav__mob_row">
+                        <div class="nav__lang nav__lang_mob">
+                            <img src="img/globe.svg" alt="" class="svg">
+                            <p class="">Ру</p>
+                            <ul>
+                                <li><a href="#" class="active">Русский </a></li>
+                                <li><a href="#">O'zbek </a></li>
+                            </ul>
+                            <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                        </div>
+                        <div class="nav__lang nav__lang_mob">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.5846 4.16667C11.5846 5.08714 9.53261 5.83333 7.0013 5.83333C4.47 5.83333 2.41797 5.08714 2.41797 4.16667M11.5846 4.16667C11.5846 3.24619 9.53261 2.5 7.0013 2.5C4.47 2.5 2.41797 3.24619 2.41797 4.16667M11.5846 4.16667V5.41667M2.41797 4.16667V14.1667C2.41797 15.0871 4.47 15.8333 7.0013 15.8333M7.0013 9.16667C6.86085 9.16667 6.72187 9.16437 6.58463 9.15987C4.24859 9.08332 2.41797 8.3694 2.41797 7.5M7.0013 12.5C4.47 12.5 2.41797 11.7538 2.41797 10.8333M19.0846 9.58333C19.0846 10.5038 17.0326 11.25 14.5013 11.25C11.97 11.25 9.91797 10.5038 9.91797 9.58333M19.0846 9.58333C19.0846 8.66286 17.0326 7.91667 14.5013 7.91667C11.97 7.91667 9.91797 8.66286 9.91797 9.58333M19.0846 9.58333V15.8333C19.0846 16.7538 17.0326 17.5 14.5013 17.5C11.97 17.5 9.91797 16.7538 9.91797 15.8333V9.58333M19.0846 12.7083C19.0846 13.6288 17.0326 14.375 14.5013 14.375C11.97 14.375 9.91797 13.6288 9.91797 12.7083" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <p class="">UZS</p>
+                            <ul>
+                                <li><a href="#" class="active">UZS</a></li>
+                                <li><a href="#">USD</a></li>
+                            </ul>
+                            <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                        </div>
+                    </div>
+                    <ul class="nav__mob_list">
+                        <li class="nav__mob_drop">
+                            <p class="active">Купить</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Снять</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Каталог новостроек</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Покупка дома или земли</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Помещения для бизнеса</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                    <button class="btn__blue">Разместить объявление</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="content-page">
+        <div class="container">
+            <div class="content-page__header">
+                <a href="#" class="content-page__link">DOMIK.UZ</a>
+                <h1>Как выбрать идеальную квартиру в Ташкенте? (H1)</h1>
+                <p class="content-page__text">Покупка квартиры — это важный шаг, требующий внимания к множеству деталей. Мы собрали основные советы, чтобы помочь вам сделать правильный выбор. (text 1)</p>
+            </div>
+            <div class="content-page__wrapper">
+                <h1>H1 Покупка квартиры — это важный шаг</h1>
+                <h2>H2 Покупка квартиры — это важный шаг</h2>
+                <h3>H3 Покупка квартиры — это важный шаг</h3>
+                <h4>H4 Покупка квартиры — это важный шаг</h4>
+                <h5>H5 Покупка квартиры — это важный шаг</h5>
+                <h6>H6 Покупка квартиры — это важный шаг</h6>
+                <p>Text 5 Мы собрали основные советы, чтобы помочь вам сделать правильный выбор.</p>
+                <p><i>Text 5 Мы собрали основные советы, чтобы помочь вам сделать правильный выбор.</i></p>
+                <p><strong>Text 5 Мы собрали основные советы, чтобы помочь вам сделать правильный выбор.</strong></p>
+                <p><strong><i>Text 5 Мы собрали основные советы, чтобы помочь вам сделать правильный выбор.</i></strong></p>
+                <ul>
+                    <li>
+                        <p>Определите ваш бюджет.</p>
+                    </li>
+                    <li>
+                        <p>Выберите подходящий район.</p>
+                    </li>
+                    <li>
+                        <p>Оцените инфраструктуру (школы, магазины, транспорт).</p>
+                    </li>
+                    <li>
+                        <p>Проверьте документы на недвижимость.</p>
+                    </li>
+                </ul>
+                <ol>
+                    <li>
+                        <p>Юнусабад — для семей с детьми, много зелени.</p>
+                    </li>
+                    <li>
+                        <p>Чиланзар — доступное жилье и удобный транспорт.</p>
+                    </li>
+                    <li>
+                        <p>Мирзо-Улугбек — элитное жилье, современные дома.</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__row">
+                <ul>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Помощь</a></li>
+                    <li><a href="#">Реклама</a></li>
+                </ul>
+                <div class="footer__soc">
+                    <a href="#">
+                        <img src="img/footer_soc_1.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/footer_soc_2.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/footer_soc_3.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="footer__text">
+                <p>Сервис применяет <a href="#">рекомендательные технологии</a>: предоставляет информацию на основе сбора, систематизации и анализа сведений, относящихся к предпочтениям пользователей интернета, находящихся в Узбекистане</p>
+                <p>Использование сайта означает согласие с <a href="#">Пользовательским соглашением</a> и <a href="#">Политикой обработки персональных данных</a></p>
+            </div>
+            <div class="footer__footer">
+                <a href="#" class="footer__logo"><img src="img/logo_wht.svg" alt=""></a>
+                <p class="footer__law">© 2025 DOMIK.UZ Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/itc-custom-select.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
