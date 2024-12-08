@@ -2475,7 +2475,7 @@ section
             max-width: calc( 100vw - 48px )
             transform: translateX(-50%)
             z-index: -1
-            // mix-blend-mode: color-dodge
+            animation: stepAnim 5s 0s infinite
         &::before
             content: ''
             width: 847px
@@ -2489,6 +2489,7 @@ section
             background: url('../img/smoke.png') center no-repeat
             background-size: contain
             mix-blend-mode: color-dodge
+            animation: opacityAnim 3s 0s infinite
         &::after
             content: ''
             width: 847px
@@ -2502,6 +2503,7 @@ section
             background: url('../img/smoke.png') center no-repeat
             background-size: contain
             mix-blend-mode: color-dodge
+            animation: opacityAnim 3s 0s infinite
     &__result
         margin: 120px 0 0
         border-radius: 24px

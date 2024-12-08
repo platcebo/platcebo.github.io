@@ -2,6 +2,7 @@ $font-family: "Roboto", sans-serif
 
 body
     background: #f9fafb
+    font-family: $font-family
 
 .container
     max-width: 1216px
@@ -3972,3 +3973,54 @@ fieldset
             grid-template-columns: 21px 1fr
             p
                 margin: 0
+    table
+        margin: 32px 0 0
+        border: 1px solid #eaecf0
+        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.06), 0 1px 3px 0 rgba(16, 24, 40, 0.1)
+        background: #fff
+        width: 100%
+        border-radius: 8px
+        overflow: hidden
+        position: relative
+        tr
+            border-bottom: 1px solid #eaecf0
+            &:nth-child(even)
+                background: #f9fafb
+        th
+            border: 1px solid transparent
+            text-align: left
+            padding: 13px 24px
+            font: 500 12px / 1.5 $font-family
+            color: #475467
+            border: none
+        td
+            padding: 18px 24px
+            font: 500 14px / 1.5 $font-family
+            border: none
+            &:nth-child(1)
+                color: #475467
+                vertical-align: middle
+            &:nth-child(2)
+                color: #667085
+
+@media ( max-width: 500px )
+    .content-page
+        padding: 50px 0
+        &__wrapper
+            margin: 50px 0 0
+        h1
+            font-size: 30px
+        h2
+            font-size: 24px
+        h3
+            font-size: 20px
+        h4
+            font-size: 18px
+        h5
+            font-size: 16px
+        table
+            width: 100%
+            position: relative
+            max-width: 100%
+            overflow-x: scroll
+            white-space: nowrap
