@@ -56,6 +56,23 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    let passwordBtn = document.querySelectorAll('.sign-in__password'),
+        passwordInput = document.querySelectorAll('.sign-in__password_input');
+
+    if(passwordBtn !== null) {
+        passwordBtn.forEach((item,i)=>{
+            item.addEventListener('click', ()=>{
+                if(item.classList.contains('active')) {
+                    passwordInput[i].setAttribute('type', 'password');
+                    item.classList.remove('active')
+                } else {
+                    passwordInput[i].setAttribute('type', 'text');
+                    item.classList.add('active')
+                }
+            })
+        })
+    }
+
 }, false);
 
 window.addEventListener('load', () => {
@@ -80,4 +97,4 @@ window.addEventListener('load', () => {
         }
         document.querySelectorAll(".scroll-spy").forEach(e => o.observe(e))
       }, 500);
-  })
+})
