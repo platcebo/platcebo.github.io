@@ -17494,7 +17494,7 @@ color: #2f2d2f;
     padding: 0 ;
   }
   .new-cheese .showcase__item-wrapper {
-    padding: 20px 0 !important; 
+    padding: 57px 0 !important; 
   }
   .new-cheese__info {
     width: 280px;
@@ -17505,7 +17505,7 @@ color: #2f2d2f;
     font-size: 32px;
   }
   .cheese-desc {
-    padding: 0 20px 30px; 
+    padding: 0 20px 50px; 
   }
   .cheese-desc__item {
     grid-template-columns: 100%;
