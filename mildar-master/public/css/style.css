@@ -17258,29 +17258,29 @@ body {
 .new-cheese__block .showcase__item-wrapper {
   justify-content: flex-start;
   height: 100%;
-  min-height: 100vh;
+  min-height: 100%;
 }
 .new-cheese__block .container-fluid {
   padding: 20px 290px 40px;
   min-height: 100%;
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 .new-cheese__block .showcase__wrapper {
   min-height: 1056px;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 /* .new-cheese .showcase__item {
   min-height: 100vh;
 } */
 .new-cheese__block .showcase__wrapper .slick-list, .showcase__wrapper .slick-track {
-  min-height: 100vh !important;
-  /* height: 1056px; */
+  min-height: 1056px !important;
+  height: 1056px;
 }
 .new-cheese__block .showcase__item-container {
   height: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 .new-cheese__block .slick-arrow__title {
   width: 130px;
@@ -17291,7 +17291,7 @@ body {
 }
 .new-cheese__info {
   position: absolute;
-  top: 180px;
+  top: 160px;
   left: 408px;
   padding: 23px 60px 17px;
   background: url('../img/cheese-bg.svg') center no-repeat;
@@ -17366,7 +17366,7 @@ color: #2f2d2f;
 
 @media (max-width: 1599.98px) {
   .new-cheese__info {
-    top: 100px;
+    top: 130px;
     left: 170px;
   }
   .new-cheese__block .container-fluid {
@@ -17376,11 +17376,11 @@ color: #2f2d2f;
     align-items: center;
   }
   .new-cheese__block .showcase__wrapper {
-    min-height: 750px;
+    min-height: 650px;
   }
   .new-cheese__block .showcase__wrapper .slick-list, .showcase__wrapper .slick-track {
-    min-height: 750px !important;
-    height: 750px;
+    min-height: 650px !important;
+    height: 650px;
   }
   .cheese-desc__item {
     width: 47vw;
@@ -17406,6 +17406,12 @@ color: #2f2d2f;
 }
 
 @media (max-width: 1350px) {
+  .new-cheese .showcase__item-wrapper {
+    padding: 20px 0;
+  }
+  .new-cheese .showcase .slick-dots {
+    bottom: 40px;
+  }
   .cheese-desc {
     position: relative;
     padding: 0 100px 130px; 
@@ -17451,6 +17457,7 @@ color: #2f2d2f;
     /* min-height: 100vh; */
   }
   .new-cheese__info {
+    top: 90px;
     left: 50%;
     transform: translateX(-50%);
   }
