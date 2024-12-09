@@ -1332,12 +1332,13 @@ body
     &__close
         display: none
     &__tab
-        max-width: calc( (100% - 58px ) /3 )
+        max-width: 100%
         margin: 32px 0 0
         display: grid
-        grid-template-columns: 1fr 1fr
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
         gap: 24px
-        &_item
+        &_item,
+        a
             background: $white
             padding: 20px
             width: 100%
@@ -2341,7 +2342,8 @@ section
         &__text
             font-size: 16px
         &__tab
-            max-width: 600px
+            max-width: 900px
+            grid-template-columns: 1fr 1fr 1fr 
     .faq
         padding: 50px 0
         &__text
@@ -2699,7 +2701,8 @@ section
             margin: 0
     .gallery
         &__tab
-            max-width: 466px
+            max-width: 100%
+            gap: 12px
         &__text
             text-align: center  
         &__arrow
