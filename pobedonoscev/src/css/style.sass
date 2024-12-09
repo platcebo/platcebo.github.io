@@ -377,16 +377,20 @@ body
             white-space: pre-wrap
 
 .project
-    padding: 105px 20px 20px
+    padding: 105px 20px 50px
     background: #fff
     border-radius: 32px
     color: #000
     min-height: calc( 100vh - 26px )
+    display: flex
+    flex-direction: column
+    justify-content: center
     &__slider
         max-width: 1034px
         margin: 0 auto
         border-radius: 9px
         overflow: hidden
+        width: 100%
     &__slider
         border-radius: 9px
         position: relative
@@ -436,7 +440,7 @@ body
 
 @media ( max-width: 1200px )
     .project
-        padding: 50px 20px 20px
+        padding: 50px 20px 50px
         .swiper-pagination
             margin: 10px 0 0
             span
