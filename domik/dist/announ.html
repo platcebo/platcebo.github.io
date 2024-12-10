@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atlas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/itc-custom-select.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="nav__row">
+                <a href="#" class="nav__logo">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <div class="nav__place modal-place__btn">
+                    <p class="">Ташкент</p>
+                    <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                </div>
+                <div class="nav__value">
+                    <div class="toggle-value">USD</div>
+                    <div class="toggle-value active">UZS</div>
+                </div>
+                <div class="nav__lang">
+                    <img src="img/globe.svg" alt="" class="svg">
+                    <p class="">Русский</p>
+                    <ul>
+                        <li><a href="#" class="active">Русский </a></li>
+                        <li><a href="#">O'zbek </a></li>
+                    </ul>
+                    <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                </div>
+                <a href="#" class="nav__fav">
+                    <img src="img/heart.svg" alt="" class="svg">
+                </a>
+                <a href="#" class="nav__enter">Войти</a>
+                <div class="nav__humburger"><span></span></div>
+            </div>
+            <div class="nav__list">
+                <ul class="">
+                    <li>
+                        <a href="#" class="active">Купить</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Снять</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Каталог новостроек</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Покупка дома или земли</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Помещения для бизнеса</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                </ul>
+                <button class="btn__blue">Разместить объявление</button>
+            </div>
+            <div class="nav__mob">
+                <div class="nav__mob_wrapper">
+                    <!-- <a href="#" class="nav__mob_enter">
+                        <img src="img/pers.svg" alt="" class="svg">
+                        <p>Войти</p>
+                    </a> -->
+                    <div class="nav__mob_row">
+                        <div class="nav__lang nav__lang_mob">
+                            <img src="img/globe.svg" alt="" class="svg">
+                            <p class="">Ру</p>
+                            <ul>
+                                <li><a href="#" class="active">Русский </a></li>
+                                <li><a href="#">O'zbek </a></li>
+                            </ul>
+                            <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                        </div>
+                        <div class="nav__lang nav__lang_mob">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.5846 4.16667C11.5846 5.08714 9.53261 5.83333 7.0013 5.83333C4.47 5.83333 2.41797 5.08714 2.41797 4.16667M11.5846 4.16667C11.5846 3.24619 9.53261 2.5 7.0013 2.5C4.47 2.5 2.41797 3.24619 2.41797 4.16667M11.5846 4.16667V5.41667M2.41797 4.16667V14.1667C2.41797 15.0871 4.47 15.8333 7.0013 15.8333M7.0013 9.16667C6.86085 9.16667 6.72187 9.16437 6.58463 9.15987C4.24859 9.08332 2.41797 8.3694 2.41797 7.5M7.0013 12.5C4.47 12.5 2.41797 11.7538 2.41797 10.8333M19.0846 9.58333C19.0846 10.5038 17.0326 11.25 14.5013 11.25C11.97 11.25 9.91797 10.5038 9.91797 9.58333M19.0846 9.58333C19.0846 8.66286 17.0326 7.91667 14.5013 7.91667C11.97 7.91667 9.91797 8.66286 9.91797 9.58333M19.0846 9.58333V15.8333C19.0846 16.7538 17.0326 17.5 14.5013 17.5C11.97 17.5 9.91797 16.7538 9.91797 15.8333V9.58333M19.0846 12.7083C19.0846 13.6288 17.0326 14.375 14.5013 14.375C11.97 14.375 9.91797 13.6288 9.91797 12.7083" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <p class="">UZS</p>
+                            <ul>
+                                <li><a href="#" class="active">UZS</a></li>
+                                <li><a href="#">USD</a></li>
+                            </ul>
+                            <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                        </div>
+                    </div>
+                    <ul class="nav__mob_list">
+                        <li class="nav__mob_drop">
+                            <p class="active">Купить</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Снять</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Каталог новостроек</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Покупка дома или земли</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Помещения для бизнеса</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                    <button class="btn__blue">Разместить объявление</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="profile">
+        <div class="container">
+            <div class="profile__title">
+                <h1>Мой профиль</h1>
+            </div>
+            <div class="profile__wrapper">
+                <div class="profile__menu">
+                    <div class="profile__menu_pers">
+                        <img src="img/avatar.jpg" alt="">
+                        <div>
+                            <p>Пользователь</p>
+                            <p>Компания</p>
+                        </div>
+                    </div>
+                    <ul class="profile__menu_list">
+                        <li>
+                            <a href="#" class="active">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 20C5.33579 17.5226 8.50702 16 12 16C15.493 16 18.6642 17.5226 21 20M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Мой профиль</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 8.00001V12M10.25 5.5H6.8C5.11984 5.5 4.27976 5.5 3.63803 5.82698C3.07354 6.1146 2.6146 6.57355 2.32698 7.13803C2 7.77977 2 8.61985 2 10.3L2 11.5C2 12.4319 2 12.8978 2.15224 13.2654C2.35523 13.7554 2.74458 14.1448 3.23463 14.3478C3.60218 14.5 4.06812 14.5 5 14.5V18.75C5 18.9822 5 19.0983 5.00963 19.196C5.10316 20.1456 5.85441 20.8968 6.80397 20.9904C6.90175 21 7.01783 21 7.25 21C7.48217 21 7.59826 21 7.69604 20.9904C8.64559 20.8968 9.39685 20.1456 9.49037 19.196C9.5 19.0983 9.5 18.9822 9.5 18.75V14.5H10.25C12.0164 14.5 14.1772 15.4469 15.8443 16.3556C16.8168 16.8858 17.3031 17.1509 17.6216 17.1119C17.9169 17.0757 18.1402 16.9431 18.3133 16.7011C18.5 16.4402 18.5 15.918 18.5 14.8737V5.12629C18.5 4.082 18.5 3.55985 18.3133 3.29889C18.1402 3.0569 17.9169 2.9243 17.6216 2.88813C17.3031 2.84912 16.8168 3.1142 15.8443 3.64436C14.1772 4.55312 12.0164 5.5 10.25 5.5Z" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Мои объявления</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 7L10.1649 12.7154C10.8261 13.1783 11.1567 13.4097 11.5163 13.4993C11.8339 13.5785 12.1661 13.5785 12.4837 13.4993C12.8433 13.4097 13.1739 13.1783 13.8351 12.7154L22 7M6.8 20H17.2C18.8802 20 19.7202 20 20.362 19.673C20.9265 19.3854 21.3854 18.9265 21.673 18.362C22 17.7202 22 16.8802 22 15.2V8.8C22 7.11984 22 6.27976 21.673 5.63803C21.3854 5.07354 20.9265 4.6146 20.362 4.32698C19.7202 4 18.8802 4 17.2 4H6.8C5.11984 4 4.27976 4 3.63803 4.32698C3.07354 4.6146 2.6146 5.07354 2.32698 5.63803C2 6.27976 2 7.11984 2 8.8V15.2C2 16.8802 2 17.7202 2.32698 18.362C2.6146 18.9265 3.07354 19.3854 3.63803 19.673C4.27976 20 5.11984 20 6.8 20Z" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Мои сообщения</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9932 5.13581C9.9938 2.7984 6.65975 2.16964 4.15469 4.31001C1.64964 6.45038 1.29697 10.029 3.2642 12.5604C4.89982 14.6651 9.84977 19.1041 11.4721 20.5408C11.6536 20.7016 11.7444 20.7819 11.8502 20.8135C11.9426 20.8411 12.0437 20.8411 12.1361 20.8135C12.2419 20.7819 12.3327 20.7016 12.5142 20.5408C14.1365 19.1041 19.0865 14.6651 20.7221 12.5604C22.6893 10.029 22.3797 6.42787 19.8316 4.31001C17.2835 2.19216 13.9925 2.7984 11.9932 5.13581Z" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Избранное</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#" class="profile__menu_exit">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 17L21 12M21 12L16 7M21 12H9M12 17C12 17.2956 12 17.4434 11.989 17.5714C11.8748 18.902 10.8949 19.9968 9.58503 20.2573C9.45903 20.2823 9.31202 20.2987 9.01835 20.3313L7.99694 20.4448C6.46248 20.6153 5.69521 20.7005 5.08566 20.5055C4.27293 20.2454 3.60942 19.6515 3.26118 18.8725C3 18.2882 3 17.5162 3 15.9723V8.0277C3 6.48377 3 5.7118 3.26118 5.12752C3.60942 4.34848 4.27293 3.7546 5.08566 3.49453C5.69521 3.29947 6.46246 3.38472 7.99694 3.55522L9.01835 3.66871C9.31212 3.70135 9.45901 3.71767 9.58503 3.74273C10.8949 4.00316 11.8748 5.09804 11.989 6.42861C12 6.55663 12 6.70442 12 7" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <p>Выйти</p>
+                    </a>
+                </div>
+                <div class="announ">
+                    <div class="announ__type announ__block">
+                        <h3>Тип объявления</h3>
+                        <div class="announ__type_row">
+                            <div class="announ__type_item">
+                                <input type="radio" name="announ__type_row">
+                                <span></span>
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.0003 28V18.1333C12.0003 17.3866 12.0003 17.0132 12.1457 16.728C12.2735 16.4771 12.4775 16.2732 12.7283 16.1453C13.0136 16 13.3869 16 14.1337 16H17.867C18.6137 16 18.9871 16 19.2723 16.1453C19.5232 16.2732 19.7272 16.4771 19.855 16.728C20.0003 17.0132 20.0003 17.3866 20.0003 18.1333V28M2.66699 12.6667L14.7203 3.62667C15.1793 3.28241 15.4088 3.11028 15.6609 3.04393C15.8834 2.98536 16.1173 2.98536 16.3398 3.04393C16.5918 3.11028 16.8213 3.28241 17.2803 3.62667L29.3337 12.6667M5.33366 10.6667V23.7333C5.33366 25.2268 5.33366 25.9735 5.62431 26.544C5.87998 27.0457 6.28792 27.4537 6.78969 27.7094C7.36012 28 8.10686 28 9.60033 28H22.4003C23.8938 28 24.6405 28 25.211 27.7094C25.7127 27.4537 26.1207 27.0457 26.3763 26.544C26.667 25.9735 26.667 25.2268 26.667 23.7333V10.6667L18.5603 4.58667C17.6423 3.89815 17.1833 3.55389 16.6792 3.42119C16.2342 3.30405 15.7665 3.30405 15.3215 3.42119C14.8174 3.55389 14.3584 3.89815 13.4403 4.58667L5.33366 10.6667Z" stroke="#376DF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <div>
+                                    <p>Продажа</p>
+                                    <p>Продайте свою недвижимость быстро и легко</p>
+                                </div>
+                            </div>
+                            <div class="announ__type_item">
+                                <input type="radio" name="announ__type_row">
+                                <span></span>
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M28 13.3332H4M28 16.6665V11.7332C28 9.49296 28 8.37286 27.564 7.51721C27.1805 6.76456 26.5686 6.15264 25.816 5.76914C24.9603 5.33317 23.8402 5.33317 21.6 5.33317H10.4C8.15979 5.33317 7.03969 5.33317 6.18404 5.76914C5.43139 6.15264 4.81947 6.76456 4.43597 7.51721C4 8.37286 4 9.49296 4 11.7332V22.9332C4 25.1734 4 26.2935 4.43597 27.1491C4.81947 27.9018 5.43139 28.5137 6.18404 28.8972C7.03969 29.3332 8.15979 29.3332 10.4 29.3332H16M21.3333 2.6665V7.99984M10.6667 2.6665V7.99984M19.3333 25.3332L22 27.9998L28 21.9998" stroke="#98A2B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <div>
+                                    <p>Аренда</p>
+                                    <p>Подайте объявление о сдаче жилья в аренду без усилий</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="announ__block announ__property">
+                        <h3>Тип недвижимости </h3>
+                        <div class="announ__property_row">
+                            <div>
+                                <input type="radio" name="announ__property">
+                                <p>Квартира</p>
+                            </div>
+                            <div>
+                                <input type="radio" name="announ__property">
+                                <p>Дом</p>
+                            </div>
+                            <div>
+                                <input type="radio" name="announ__property">
+                                <p>Для бизнеса </p>
+                            </div>
+                            <div>
+                                <input type="radio" name="announ__property">
+                                <p>Земельный участок</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="announ__block announ__property">
+                        <h3>Квартира </h3>
+                        <div class="announ__property_row">
+                            <div>
+                                <input type="radio" name="announ__property_2">
+                                <p>Вторичка</p>
+                            </div>
+                            <div>
+                                <input type="radio" name="announ__property_2">
+                                <p>Новостройка</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="announ__block announ__property">
+                        <h3>Количество комнат</h3>
+                        <div class="announ__property_row">
+                            <div>
+                                <input type="radio" name="announ__property_3">
+                                <p>1</p>
+                            </div>
+                            <div>
+                                <input type="radio" name="announ__property_3">
+                                <p>2</p>
+                            </div>
+                            <div>
+                                <input type="radio" name="announ__property_3">
+                                <p>3</p>
+                            </div>
+                            <div>
+                                <input type="radio" name="announ__property_3">
+                                <p>4</p>
+                            </div>
+                            <div>
+                                <input type="radio" name="announ__property_3">
+                                <p>5</p>
+                            </div>
+                            <div>
+                                <input type="radio" name="announ__property_3">
+                                <p>6+</p>
+                            </div>
+                            <div>
+                                <input type="radio" name="announ__property_3">
+                                <p>Студия</p>
+                            </div>
+                            <div>
+                                <input type="radio" name="announ__property_3">
+                                <p>Свободная планировка</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="announ__block announ__square">
+                        <h3>Площадь квартиры</h3>
+                        <div class="announ__square_row">
+                            <div class="sign-in__input">
+                                <div class="sign-in__input_wrapper">
+                                    <input type="text" placeholder="Укажите площадь" class="sign-in__input_password"> 
+                                </div>
+                            </div>
+                            <p class="announ__square_name">м²</p>
+                        </div>
+                    </div>
+                    <div class="announ__block announ__square">
+                        <h3>Площадь кухни</h3>
+                        <div class="announ__square_row">
+                            <div class="sign-in__input">
+                                <div class="sign-in__input_wrapper">
+                                    <input type="text" placeholder="Укажите площадь" class="sign-in__input_password"> 
+                                </div>
+                            </div>
+                            <p class="announ__square_name">м²</p>
+                        </div>
+                    </div>
+                    <div class="announ__block announ__square">
+                        <div class="announ__square_wrapper">
+                            <div>
+                                <h3>Этажность здания</h3>
+                                <div class="sign-in__input">
+                                    <div class="sign-in__input_wrapper">
+                                        <input type="text" placeholder="Этажей в зданий" class="sign-in__input_password"> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h3>Этаж</h3>
+                                <div class="sign-in__input">
+                                    <div class="sign-in__input_wrapper">
+                                        <input type="text" placeholder="Укажите этаж" class="sign-in__input_password"> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="announ__block announ__price">
+                        <h3>Цена</h3>
+                        <div class="announ__property_row">
+                            <div>
+                                <input type="radio" name="announ__property_4">
+                                <p>За все</p>
+                            </div>
+                            <div>
+                                <input type="radio" name="announ__property_4">
+                                <p>За м²</p>
+                            </div>
+                        </div>
+                        <div class="announ__square_row">
+                            <div class="sign-in__input">
+                                <div class="sign-in__input_wrapper">
+                                    <input type="text" placeholder="Цена" class="sign-in__input_password"> 
+                                </div>
+                            </div>
+                            <div class="nav__lang nav__lang_mob">
+                                <p class="">сум</p>
+                                <ul>
+                                    <li><a href="#" class="active">сум </a></li>
+                                    <li><a href="#">сум </a></li>
+                                </ul>
+                                <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="announ__block announ__comf">
+                        <h3>Удобства</h3>
+                        <div class="announ__comf_wrapper">
+                            <div class="announ__comf_item">
+                                <input type="checkbox">
+                                <span></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.5 3.375H4.5C4.20163 3.375 3.91548 3.49353 3.7045 3.7045C3.49353 3.91548 3.375 4.20163 3.375 4.5V19.5C3.375 19.7984 3.49353 20.0845 3.7045 20.2955C3.91548 20.5065 4.20163 20.625 4.5 20.625H19.5C19.7984 20.625 20.0845 20.5065 20.2955 20.2955C20.5065 20.0845 20.625 19.7984 20.625 19.5V4.5C20.625 4.20163 20.5065 3.91548 20.2955 3.7045C20.0845 3.49353 19.7984 3.375 19.5 3.375ZM16.875 10.125V19.875H12.375V10.125H16.875ZM11.625 19.875H7.125V10.125H11.625V19.875ZM19.875 19.5C19.875 19.5995 19.8355 19.6948 19.7652 19.7652C19.6948 19.8355 19.5995 19.875 19.5 19.875H17.625V9.75C17.625 9.65054 17.5855 9.55516 17.5152 9.48483C17.4448 9.41451 17.3495 9.375 17.25 9.375H6.75C6.65054 9.375 6.55516 9.41451 6.48483 9.48483C6.41451 9.55516 6.375 9.65054 6.375 9.75V19.875H4.5C4.40054 19.875 4.30516 19.8355 4.23484 19.7652C4.16451 19.6948 4.125 19.5995 4.125 19.5V4.5C4.125 4.40054 4.16451 4.30516 4.23484 4.23484C4.30516 4.16451 4.40054 4.125 4.5 4.125H19.5C19.5995 4.125 19.6948 4.16451 19.7652 4.23484C19.8355 4.30516 19.875 4.40054 19.875 4.5V19.5ZM13.875 6.75C13.875 6.84946 13.8355 6.94484 13.7652 7.01517C13.6948 7.08549 13.5995 7.125 13.5 7.125H10.5C10.4005 7.125 10.3052 7.08549 10.2348 7.01517C10.1645 6.94484 10.125 6.84946 10.125 6.75C10.125 6.65054 10.1645 6.55516 10.2348 6.48483C10.3052 6.41451 10.4005 6.375 10.5 6.375H13.5C13.5995 6.375 13.6948 6.41451 13.7652 6.48483C13.8355 6.55516 13.875 6.65054 13.875 6.75Z" fill="#98A2B3" />
+                                </svg>
+                                <p>Лифт</p>
+                            </div>
+                            <div class="announ__comf_item">
+                                <input type="checkbox">
+                                <span></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 14.4383C12 14.1582 12 14.0182 12.0545 13.9113C12.1024 13.8172 12.1789 13.7407 12.273 13.6928C12.38 13.6383 12.52 13.6383 12.8 13.6383H17.7C17.98 13.6383 18.12 13.6383 18.227 13.6928C18.3211 13.7407 18.3976 13.8172 18.4455 13.9113C18.5 14.0182 18.5 14.1582 18.5 14.4383V16.8383C18.5 17.1183 18.5 17.2583 18.4455 17.3653C18.3976 17.4593 18.3211 17.5358 18.227 17.5838C18.12 17.6383 17.98 17.6383 17.7 17.6383H12.8C12.52 17.6383 12.38 17.6383 12.273 17.5838C12.1789 17.5358 12.1024 17.4593 12.0545 17.3653C12 17.2583 12 17.1183 12 16.8383V14.4383Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M2 7.80016C2 6.12 2 5.27992 2.32698 4.63818C2.6146 4.0737 3.07354 3.61476 3.63803 3.32714C4.27976 3.00016 5.11984 3.00015 6.8 3.00015H17.2C18.8802 3.00015 19.7202 3.00016 20.362 3.32714C20.9265 3.61476 21.3854 4.0737 21.673 4.63818C22 5.27992 22 6.12 22 7.80016V16.3383C22 18.0184 22 18.8585 21.673 19.5002C21.3854 20.0647 20.9265 20.5237 20.362 20.8113C19.7202 21.1383 18.8802 21.1383 17.2 21.1383H6.8C5.11984 21.1383 4.27976 21.1383 3.63803 20.8113C3.07354 20.5237 2.6146 20.0647 2.32698 19.5002C2 18.8585 2 18.0184 2 16.3383V7.80016Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Микроволновая печь</p>
+                            </div>
+                            <div class="announ__comf_item">
+                                <input type="checkbox">
+                                <span></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.302 21.615C11.5234 21.7442 11.6341 21.8087 11.7903 21.8422C11.9116 21.8682 12.0884 21.8682 12.2097 21.8422C12.3659 21.8087 12.4766 21.7442 12.698 21.615C14.646 20.4785 20 16.9086 20 12.0001V7.21772C20 6.4182 20 6.01845 19.8692 5.67482C19.7537 5.37126 19.566 5.10039 19.3223 4.88564C19.0465 4.64255 18.6722 4.50219 17.9236 4.22146L12.5618 2.21079C12.3539 2.13283 12.25 2.09385 12.143 2.07839C12.0482 2.06469 11.9518 2.06469 11.857 2.07839C11.75 2.09385 11.6461 2.13283 11.4382 2.21079L6.0764 4.22146C5.3278 4.50219 4.9535 4.64255 4.67766 4.88564C4.43398 5.10039 4.24627 5.37126 4.13076 5.67482C4 6.01845 4 6.4182 4 7.21772V12.0001C4 16.9086 9.35396 20.4785 11.302 21.615Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Охрана</p>
+                            </div>
+                            <div class="announ__comf_item">
+                                <input type="checkbox">
+                                <span></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 13H8M2 9L4 10L5.27064 6.18807C5.53292 5.40125 5.66405 5.00784 5.90729 4.71698C6.12208 4.46013 6.39792 4.26132 6.70951 4.13878C7.06236 4 7.47705 4 8.30643 4H15.6936C16.523 4 16.9376 4 17.2905 4.13878C17.6021 4.26132 17.8779 4.46013 18.0927 4.71698C18.3359 5.00784 18.4671 5.40125 18.7294 6.18807L20 10L22 9M16 13H19M6.8 10H17.2C18.8802 10 19.7202 10 20.362 10.327C20.9265 10.6146 21.3854 11.0735 21.673 11.638C22 12.2798 22 13.1198 22 14.8V17.5C22 17.9647 22 18.197 21.9616 18.3902C21.8038 19.1836 21.1836 19.8038 20.3902 19.9616C20.197 20 19.9647 20 19.5 20H19C17.8954 20 17 19.1046 17 18C17 17.7239 16.7761 17.5 16.5 17.5H7.5C7.22386 17.5 7 17.7239 7 18C7 19.1046 6.10457 20 5 20H4.5C4.03534 20 3.80302 20 3.60982 19.9616C2.81644 19.8038 2.19624 19.1836 2.03843 18.3902C2 18.197 2 17.9647 2 17.5V14.8C2 13.1198 2 12.2798 2.32698 11.638C2.6146 11.0735 3.07354 10.6146 3.63803 10.327C4.27976 10 5.11984 10 6.8 10Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Парковка</p>
+                            </div>
+                            <div class="announ__comf_item">
+                                <input type="checkbox">
+                                <span></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 19.5H12.01M22.8064 8.70076C19.9595 6.09199 16.1656 4.5 11.9999 4.5C7.83414 4.5 4.04023 6.09199 1.19336 8.70076M4.73193 12.243C6.67006 10.5357 9.21407 9.5 12 9.5C14.7859 9.5 17.3299 10.5357 19.268 12.243M15.6983 15.7751C14.6792 14.9763 13.3952 14.5 11.9999 14.5C10.5835 14.5 9.28172 14.9908 8.25537 15.8116" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Интернет</p>
+                            </div>
+                            <div class="announ__comf_item">
+                                <input type="checkbox">
+                                <span></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.34025 16.9997C2.0881 14.8298 2.72473 12.0644 4.79795 10.6601L4.80018 10.6578C6.46564 9.53235 8.65775 9.57012 10.2843 10.7523L13.7164 13.2477C15.3418 14.4299 17.5339 14.4676 19.2005 13.3421L19.2027 13.3399C21.2771 11.9356 21.9148 9.16792 20.6604 7.00026M17.002 20.6593C14.8321 21.9114 12.0667 21.2748 10.6623 19.2016L10.6601 19.1994C9.53457 17.5339 9.57234 15.3418 10.7545 13.7152L13.2499 10.2832C14.4321 8.6577 14.4699 6.46559 13.3444 4.79901L13.3399 4.79679C11.9356 2.72468 9.16792 2.08582 7.00026 3.3402M19.0705 4.92901C22.9758 8.83436 22.9758 15.1651 19.0705 19.0705C15.1651 22.9758 8.83436 22.9758 4.92901 19.0705C1.02366 15.1651 1.02366 8.83436 4.92901 4.92901C8.83436 1.02366 15.1651 1.02366 19.0705 4.92901Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Кондиционер</p>
+                            </div>
+                            <div class="announ__comf_item">
+                                <input type="checkbox">
+                                <span></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14M15 9H15.01M9 9H9.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM15.5 9C15.5 9.27614 15.2761 9.5 15 9.5C14.7239 9.5 14.5 9.27614 14.5 9C14.5 8.72386 14.7239 8.5 15 8.5C15.2761 8.5 15.5 8.72386 15.5 9ZM9.5 9C9.5 9.27614 9.27614 9.5 9 9.5C8.72386 9.5 8.5 9.27614 8.5 9C8.5 8.72386 8.72386 8.5 9 8.5C9.27614 8.5 9.5 8.72386 9.5 9Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Детская площадка</p>
+                            </div>
+                            <div class="announ__comf_item">
+                                <input type="checkbox">
+                                <span></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 3L12 7L7 3M6.8 21H17.2C18.8802 21 19.7202 21 20.362 20.673C20.9265 20.3854 21.3854 19.9265 21.673 19.362C22 18.7202 22 17.8802 22 16.2V11.8C22 10.1198 22 9.27976 21.673 8.63803C21.3854 8.07354 20.9265 7.6146 20.362 7.32698C19.7202 7 18.8802 7 17.2 7H6.8C5.11984 7 4.27976 7 3.63803 7.32698C3.07354 7.6146 2.6146 8.07354 2.32698 8.63803C2 9.27976 2 10.1198 2 11.8V16.2C2 17.8802 2 18.7202 2.32698 19.362C2.6146 19.9265 3.07354 20.3854 3.63803 20.673C4.27976 21 5.11984 21 6.8 21Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Телевизор</p>
+                            </div>
+                            <div class="announ__comf_item">
+                                <input type="checkbox">
+                                <span></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 12C5 8.13401 8.13401 5 12 5M16.4999 7.5L11.9999 12M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM13 12C13 12.5523 12.5523 13 12 13C11.4477 13 11 12.5523 11 12C11 11.4477 11.4477 11 12 11C12.5523 11 13 11.4477 13 12Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Сауна</p>
+                            </div>
+                            <div class="announ__comf_item">
+                                <input type="checkbox">
+                                <span></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 12C18 15.3137 15.3137 18 12 18C8.68629 18 6 15.3137 6 12M18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12M18 12C18 16.4183 14.4183 20 10 20C5.58172 20 2 16.4183 2 12M6 12C6 7.58172 9.58172 4 14 4C18.4183 4 22 7.58172 22 12M13 12C13 12.5523 12.5523 13 12 13C11.4477 13 11 12.5523 11 12C11 11.4477 11.4477 11 12 11C12.5523 11 13 11.4477 13 12Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Стиральная машина</p>
+                            </div>
+                            <div class="announ__comf_item">
+                                <input type="checkbox">
+                                <span></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.5 20.5002C15.2465 20.814 13.6884 21 12 21C10.3116 21 8.75349 20.814 7.5 20.5002M18 16.4305C16.5341 16.9842 14.3894 17.3333 12 17.3333C9.61061 17.3333 7.46589 16.9842 6 16.4305M4.5 11.6679C5.93143 12.5598 8.75311 13.1667 12 13.1667C15.2469 13.1667 18.0686 12.5598 19.5 11.6679M21 6C21 7.65685 16.9706 9 12 9C7.02944 9 3 7.65685 3 6C3 4.34315 7.02944 3 12 3C16.9706 3 21 4.34315 21 6Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Канализация</p>
+                            </div>
+                            <div class="announ__comf_item">
+                                <input type="checkbox">
+                                <span></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.2429 5.75732C18.586 8.10047 18.586 11.8995 16.2429 14.2426M7.75758 14.2426C5.41443 11.8995 5.41443 8.10047 7.75758 5.75732M4.92893 17.0711C1.02369 13.1658 1.02369 6.8342 4.92893 2.92896M19.0715 2.92896C22.9768 6.8342 22.9768 13.1658 19.0715 17.0711M12.0002 12C13.1048 12 14.0002 11.1046 14.0002 10C14.0002 8.89543 13.1048 8 12.0002 8C10.8957 8 10.0002 8.89543 10.0002 10C10.0002 11.1046 10.8957 12 12.0002 12ZM12.0002 12V21" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Спутниковое ТВ</p>
+                            </div>
+                            <div class="announ__comf_item">
+                                <input type="checkbox">
+                                <span></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.0623 8.5L5.93792 15.5M18.0623 8.5L19.1604 4.40192M18.0623 8.5L22.1604 9.59808M5.93792 15.5L1.83984 14.4019M5.93792 15.5L4.83984 19.5981M18.0622 15.4999L5.93784 8.49986M18.0622 15.4999L22.1604 14.4018M18.0622 15.4999L19.1604 19.598M5.93784 8.49986L4.83999 4.40203M5.93784 8.49986L1.83999 9.59819M12.0001 5L12.0001 19M12.0001 5L9.0001 2M12.0001 5L15.0001 2M12.0001 19L9.0001 22M12.0001 19L15.0001 22" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Холодилник</p>
+                            </div>
+                            <div class="announ__comf_item">
+                                <input type="checkbox">
+                                <span></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.038 19.346C4.896 19.346 4.77733 19.2983 4.682 19.203C4.58667 19.1076 4.53867 18.9886 4.538 18.846V17.846H4C3.436 17.846 2.96167 17.6536 2.577 17.269C2.19233 16.8843 2 16.41 2 15.846V10.846C2 10.2053 2.21167 9.71198 2.635 9.36598C3.05767 9.01931 3.51267 8.84598 4 8.84598V7.23098C4 6.66698 4.19233 6.19265 4.577 5.80798C4.96167 5.42331 5.436 5.23065 6 5.22998H18C18.564 5.22998 19.0383 5.42231 19.423 5.80698C19.8077 6.19165 20 6.66598 20 7.22998V8.84498C20.5387 8.84498 21.0067 9.02765 21.404 9.39298C21.8013 9.75831 22 10.2426 22 10.846V15.846C22 16.41 21.8077 16.8843 21.423 17.269C21.0383 17.6536 20.564 17.846 20 17.846H19.462V18.846C19.462 18.988 19.4207 19.1066 19.338 19.202C19.2553 19.2973 19.143 19.3453 19.001 19.346C18.859 19.3466 18.74 19.2986 18.644 19.202C18.548 19.1053 18.5 18.9866 18.5 18.846V17.846H5.539V18.846C5.539 18.9886 5.49067 19.1076 5.394 19.203C5.298 19.2983 5.17933 19.346 5.038 19.346ZM4 16.846H20C20.2833 16.846 20.521 16.7503 20.713 16.559C20.905 16.3676 21.0007 16.13 21 15.846V10.846C21 10.5626 20.904 10.3253 20.712 10.134C20.52 9.94265 20.2827 9.84665 20 9.84598C19.7173 9.84531 19.48 9.94131 19.288 10.134C19.096 10.3266 19 10.564 19 10.846V14.346H5V10.846C5 10.5626 4.904 10.3253 4.712 10.134C4.52 9.94265 4.28267 9.84665 4 9.84598C3.71733 9.84531 3.48 9.94131 3.288 10.134C3.096 10.3266 3 10.564 3 10.846V15.846C3 16.1293 3.096 16.367 3.288 16.559C3.48 16.751 3.71733 16.8466 4 16.846ZM6 13.346H18V10.846C18 10.486 18.0917 10.1546 18.275 9.85198C18.4583 9.54931 18.7 9.31398 19 9.14598V7.23098C19 6.94765 18.904 6.70998 18.712 6.51798C18.52 6.32598 18.2827 6.23031 18 6.23098H6C5.71667 6.23098 5.47933 6.32665 5.288 6.51798C5.09667 6.70931 5.00067 6.94698 5 7.23098V9.14598C5.3 9.31398 5.54167 9.54931 5.725 9.85198C5.90833 10.1546 6 10.486 6 10.846V13.346Z" fill="#98A2B3" />
+                                </svg>
+                                <p>Мебель</p>
+                            </div>
+                            <div class="announ__comf_item">
+                                <input type="checkbox">
+                                <span></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.85864 6C6.67357 4.14864 9.20268 3 12.0001 3C14.7975 3 17.3266 4.14864 19.1415 6M16.4723 9C15.3736 7.7725 13.777 7 12 7C10.223 7 8.62647 7.7725 7.52783 9M12 17C13.5105 17 14.9608 17.2576 16.3094 17.7313C16.3542 17.747 16.3767 17.7549 16.412 17.7705C16.7326 17.9118 16.9788 18.2591 17.0058 18.6084C17.0088 18.647 17.0088 18.6811 17.0088 18.7494C17.0088 18.9821 17.0088 19.0985 17.0185 19.1965C17.1122 20.1457 17.8631 20.8966 18.8123 20.9903C18.9103 21 19.0267 21 19.2594 21H19.5044C19.965 21 20.1952 21 20.3868 20.9622C21.1829 20.8053 21.8053 20.1829 21.9622 19.3868C22 19.1952 22 18.965 22 18.5044V18.3062C22 17.831 22 17.5933 21.9493 17.3209C21.8358 16.7119 21.3933 15.9583 20.9166 15.5624C20.7035 15.3854 20.5589 15.3048 20.2698 15.1435C17.822 13.7781 15.0019 13 12 13C8.99812 13 6.17797 13.7781 3.73021 15.1435C3.4411 15.3048 3.29654 15.3854 3.0834 15.5624C2.60675 15.9583 2.16421 16.7119 2.05074 17.3209C2 17.5933 2 17.831 2 18.3062V18.5044C2 18.965 2 19.1952 2.03776 19.3868C2.19469 20.1829 2.81709 20.8053 3.61321 20.9622C3.80476 21 4.03504 21 4.4956 21H4.74057C4.97332 21 5.0897 21 5.18773 20.9903C6.13689 20.8966 6.8878 20.1457 6.98152 19.1965C6.9912 19.0985 6.9912 18.9821 6.9912 18.7494C6.9912 18.6811 6.9912 18.647 6.99418 18.6084C7.02122 18.2591 7.2674 17.9118 7.58798 17.7705C7.62335 17.7549 7.64577 17.747 7.69061 17.7313C9.03921 17.2576 10.4895 17 12 17Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Телефонная линия</p>
+                            </div>
+                            <div class="announ__comf_item">
+                                <input type="checkbox">
+                                <span></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.055 14.3439C16.8674 15.392 16.3632 16.3575 15.6103 17.1105C14.8574 17.8634 13.8919 18.3676 12.8438 18.5551C12.8127 18.5599 12.7814 18.5624 12.75 18.5626C12.6086 18.5632 12.4721 18.5105 12.3678 18.4149C12.2635 18.3194 12.1991 18.1881 12.1872 18.0472C12.1754 17.9062 12.2171 17.766 12.304 17.6545C12.391 17.5429 12.5167 17.4682 12.6562 17.4451C14.2856 17.1714 15.6684 15.7876 15.945 14.1564C15.9699 14.0092 16.0522 13.8779 16.1738 13.7914C16.2341 13.7486 16.3022 13.718 16.3742 13.7015C16.4463 13.685 16.5209 13.6828 16.5938 13.6951C16.6666 13.7075 16.7364 13.734 16.799 13.7733C16.8616 13.8125 16.9159 13.8637 16.9587 13.924C17.0016 13.9842 17.0321 14.0523 17.0486 14.1244C17.0651 14.1964 17.0673 14.271 17.055 14.3439ZM20.0625 13.5001C20.0625 15.6384 19.2131 17.6892 17.701 19.2012C16.189 20.7132 14.1383 21.5626 12 21.5626C9.86169 21.5626 7.81096 20.7132 6.29895 19.2012C4.78694 17.6892 3.9375 15.6384 3.9375 13.5001C3.9375 10.9248 4.95469 8.2867 6.96094 5.65889C7.00911 5.59489 7.0704 5.54193 7.1407 5.50353C7.211 5.46513 7.28869 5.44219 7.36858 5.43624C7.44846 5.4303 7.52869 5.44148 7.6039 5.46905C7.67911 5.49661 7.74757 5.53992 7.80469 5.59608L10.2741 7.99233L12.4387 2.05702C12.4696 1.97232 12.5204 1.89629 12.5869 1.83533C12.6533 1.77437 12.7334 1.73027 12.8204 1.70675C12.9074 1.68322 12.9988 1.68096 13.0869 1.70015C13.175 1.71934 13.2572 1.75942 13.3266 1.81702C15.3487 3.49983 20.0625 8.00639 20.0625 13.5001ZM18.9375 13.5001C18.9375 8.96264 15.3141 5.07764 13.2122 3.20639L11.0287 9.19327C10.9966 9.2815 10.9429 9.36029 10.8725 9.42246C10.8022 9.48462 10.7173 9.52817 10.6258 9.54914C10.5343 9.57011 10.439 9.56784 10.3485 9.54252C10.2581 9.5172 10.1755 9.46965 10.1081 9.4042L7.48312 6.85233C5.87531 9.10608 5.0625 11.3439 5.0625 13.5001C5.0625 15.3401 5.79341 17.1047 7.09445 18.4057C8.39548 19.7067 10.1601 20.4376 12 20.4376C13.8399 20.4376 15.6045 19.7067 16.9056 18.4057C18.2066 17.1047 18.9375 15.3401 18.9375 13.5001Z" fill="#98A2B3" />
+                                </svg>
+                                <p>Газ</p>
+                            </div>
+                            <div class="announ__comf_item">
+                                <input type="checkbox">
+                                <span></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.4155 15.3411C18.5924 17.3495 14.8895 17.5726 11.877 16M2.58445 8.65889C5.41439 6.64566 9.12844 6.42638 12.1448 8.01149M15.3737 14.1243C18.2604 12.305 19.9319 8.97413 19.601 5.51222M8.58184 9.90371C5.72231 11.7291 4.06959 15.0436 4.39878 18.4878M15.5269 10.137C15.3939 6.72851 13.345 3.61684 10.1821 2.17222M8.47562 13.9256C8.63112 17.3096 10.6743 20.392 13.8177 21.8278M19.071 4.92893C22.9763 8.83418 22.9763 15.1658 19.071 19.071C15.1658 22.9763 8.83416 22.9763 4.92893 19.071C1.02369 15.1658 1.02369 8.83416 4.92893 4.92893C8.83418 1.02369 15.1658 1.02369 19.071 4.92893ZM14.8284 9.17157C16.3905 10.7337 16.3905 13.2663 14.8284 14.8284C13.2663 16.3905 10.7337 16.3905 9.17157 14.8284C7.60948 13.2663 7.60948 10.7337 9.17157 9.17157C10.7337 7.60948 13.2663 7.60948 14.8284 9.17157Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Видеонаблюдение</p>
+                            </div>
+                            <div class="announ__comf_item">
+                                <input type="checkbox">
+                                <span></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 15H21M7.8 3H16.2C17.8802 3 18.7202 3 19.362 3.32698C19.9265 3.6146 20.3854 4.07354 20.673 4.63803C21 5.27976 21 6.11984 21 7.8V16.2C21 17.8802 21 18.7202 20.673 19.362C20.3854 19.9265 19.9265 20.3854 19.362 20.673C18.7202 21 17.8802 21 16.2 21H7.8C6.11984 21 5.27976 21 4.63803 20.673C4.07354 20.3854 3.6146 19.9265 3.32698 19.362C3 18.7202 3 17.8802 3 16.2V7.8C3 6.11984 3 5.27976 3.32698 4.63803C3.6146 4.07354 4.07354 3.6146 4.63803 3.32698C5.27976 3 6.11984 3 7.8 3Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Балкон</p>
+                            </div>
+                            <div class="announ__comf_item">
+                                <input type="checkbox">
+                                <span></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 21.5C13.8565 21.5 15.637 20.7625 16.9497 19.4497C18.2625 18.137 19 16.3565 19 14.5C19 12.5 18 10.6 16 9C14 7.4 12.5 5 12 2.5C11.5 5 10 7.4 8 9C6 10.6 5 12.5 5 14.5C5 16.3565 5.7375 18.137 7.05025 19.4497C8.36301 20.7625 10.1435 21.5 12 21.5Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Водоснабжение</p>
+                            </div>
+                            <div class="announ__comf_item">
+                                <input type="checkbox">
+                                <span></span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16 6V5.2C16 4.0799 16 3.51984 15.782 3.09202C15.5903 2.71569 15.2843 2.40973 14.908 2.21799C14.4802 2 13.9201 2 12.8 2H11.2C10.0799 2 9.51984 2 9.09202 2.21799C8.71569 2.40973 8.40973 2.71569 8.21799 3.09202C8 3.51984 8 4.0799 8 5.2V6M10 11.5V16.5M14 11.5V16.5M3 6H21M19 6V17.2C19 18.8802 19 19.7202 18.673 20.362C18.3854 20.9265 17.9265 21.3854 17.362 21.673C16.7202 22 15.8802 22 14.2 22H9.8C8.11984 22 7.27976 22 6.63803 21.673C6.07354 21.3854 5.6146 20.9265 5.32698 20.362C5 19.7202 5 18.8802 5 17.2V6" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Мусоропровод</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="announ__block announ__address">
+                        <h3>Адрес</h3>
+                        <div class="sign-in__input">
+                            <div class="sign-in__input_wrapper">
+                                <input type="text" placeholder="Улица, массив или район" class="sign-in__input_password"> 
+                            </div>
+                        </div>
+                        <div class="announ__address_map">
+                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2d8e76e6229be0be9b920ebd25a4147240bc6d57d64c83bdbb20ac2ce98804fc&amp;source=constructor" width="100%" height="360" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    <div class="announ__block announ__desc">
+                        <h3>Описание</h3>
+                        <div class="sign-in__input">
+                            <div class="sign-in__input_wrapper">
+                                <textarea name="" id="" placeholder="Просторный и уютный дом идеально расположен в живописном районе, предлагая своим обитателям оазис покоя и комфорта. Этот дом – идеальное место для создания незабываемых семейных моментов и жизненных воспоминаний."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="announ__block announ__pic">
+                        <h3>Фотографии</h3>
+                        <p class="announ__pic_subtitle">Добавьте минимум 3 фотографии.</p>
+                        <div class="announ__pic_wrapper">
+                            <div class="announ__pic_item">
+                                <div class="announ__pic_null">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.5604 17.2733L9.05752 11.7761C9.38753 11.4461 9.55254 11.2811 9.74281 11.2193C9.91018 11.1649 10.0905 11.1649 10.2578 11.2193C10.4481 11.2811 10.6131 11.4461 10.9431 11.7761L16.4036 17.2366M11.667 12.5L14.0575 10.1095C14.3875 9.77946 14.5525 9.61445 14.7428 9.55263C14.9102 9.49825 15.0905 9.49825 15.2578 9.55263C15.4481 9.61445 15.6131 9.77946 15.9431 10.1095L18.3337 12.5M8.33366 7.5C8.33366 8.42047 7.58747 9.16667 6.66699 9.16667C5.74652 9.16667 5.00033 8.42047 5.00033 7.5C5.00033 6.57953 5.74652 5.83333 6.66699 5.83333C7.58747 5.83333 8.33366 6.57953 8.33366 7.5ZM5.66699 17.5H14.3337C15.7338 17.5 16.4339 17.5 16.9686 17.2275C17.439 16.9878 17.8215 16.6054 18.0612 16.135C18.3337 15.6002 18.3337 14.9001 18.3337 13.5V6.5C18.3337 5.09987 18.3337 4.3998 18.0612 3.86502C17.8215 3.39462 17.439 3.01217 16.9686 2.77248C16.4339 2.5 15.7338 2.5 14.3337 2.5H5.66699C4.26686 2.5 3.5668 2.5 3.03202 2.77248C2.56161 3.01217 2.17916 3.39462 1.93948 3.86502C1.66699 4.3998 1.66699 5.09987 1.66699 6.5V13.5C1.66699 14.9001 1.66699 15.6002 1.93948 16.135C2.17916 16.6054 2.56161 16.9878 3.03202 17.2275C3.5668 17.5 4.26686 17.5 5.66699 17.5Z" stroke="#475467" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="announ__pic_item">
+                                <div class="announ__pic_null">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.5604 17.2733L9.05752 11.7761C9.38753 11.4461 9.55254 11.2811 9.74281 11.2193C9.91018 11.1649 10.0905 11.1649 10.2578 11.2193C10.4481 11.2811 10.6131 11.4461 10.9431 11.7761L16.4036 17.2366M11.667 12.5L14.0575 10.1095C14.3875 9.77946 14.5525 9.61445 14.7428 9.55263C14.9102 9.49825 15.0905 9.49825 15.2578 9.55263C15.4481 9.61445 15.6131 9.77946 15.9431 10.1095L18.3337 12.5M8.33366 7.5C8.33366 8.42047 7.58747 9.16667 6.66699 9.16667C5.74652 9.16667 5.00033 8.42047 5.00033 7.5C5.00033 6.57953 5.74652 5.83333 6.66699 5.83333C7.58747 5.83333 8.33366 6.57953 8.33366 7.5ZM5.66699 17.5H14.3337C15.7338 17.5 16.4339 17.5 16.9686 17.2275C17.439 16.9878 17.8215 16.6054 18.0612 16.135C18.3337 15.6002 18.3337 14.9001 18.3337 13.5V6.5C18.3337 5.09987 18.3337 4.3998 18.0612 3.86502C17.8215 3.39462 17.439 3.01217 16.9686 2.77248C16.4339 2.5 15.7338 2.5 14.3337 2.5H5.66699C4.26686 2.5 3.5668 2.5 3.03202 2.77248C2.56161 3.01217 2.17916 3.39462 1.93948 3.86502C1.66699 4.3998 1.66699 5.09987 1.66699 6.5V13.5C1.66699 14.9001 1.66699 15.6002 1.93948 16.135C2.17916 16.6054 2.56161 16.9878 3.03202 17.2275C3.5668 17.5 4.26686 17.5 5.66699 17.5Z" stroke="#475467" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="announ__pic_item">
+                                <div class="announ__pic_null">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.5604 17.2733L9.05752 11.7761C9.38753 11.4461 9.55254 11.2811 9.74281 11.2193C9.91018 11.1649 10.0905 11.1649 10.2578 11.2193C10.4481 11.2811 10.6131 11.4461 10.9431 11.7761L16.4036 17.2366M11.667 12.5L14.0575 10.1095C14.3875 9.77946 14.5525 9.61445 14.7428 9.55263C14.9102 9.49825 15.0905 9.49825 15.2578 9.55263C15.4481 9.61445 15.6131 9.77946 15.9431 10.1095L18.3337 12.5M8.33366 7.5C8.33366 8.42047 7.58747 9.16667 6.66699 9.16667C5.74652 9.16667 5.00033 8.42047 5.00033 7.5C5.00033 6.57953 5.74652 5.83333 6.66699 5.83333C7.58747 5.83333 8.33366 6.57953 8.33366 7.5ZM5.66699 17.5H14.3337C15.7338 17.5 16.4339 17.5 16.9686 17.2275C17.439 16.9878 17.8215 16.6054 18.0612 16.135C18.3337 15.6002 18.3337 14.9001 18.3337 13.5V6.5C18.3337 5.09987 18.3337 4.3998 18.0612 3.86502C17.8215 3.39462 17.439 3.01217 16.9686 2.77248C16.4339 2.5 15.7338 2.5 14.3337 2.5H5.66699C4.26686 2.5 3.5668 2.5 3.03202 2.77248C2.56161 3.01217 2.17916 3.39462 1.93948 3.86502C1.66699 4.3998 1.66699 5.09987 1.66699 6.5V13.5C1.66699 14.9001 1.66699 15.6002 1.93948 16.135C2.17916 16.6054 2.56161 16.9878 3.03202 17.2275C3.5668 17.5 4.26686 17.5 5.66699 17.5Z" stroke="#475467" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="announ__pic_item">
+                                <div class="announ__pic_null">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.5604 17.2733L9.05752 11.7761C9.38753 11.4461 9.55254 11.2811 9.74281 11.2193C9.91018 11.1649 10.0905 11.1649 10.2578 11.2193C10.4481 11.2811 10.6131 11.4461 10.9431 11.7761L16.4036 17.2366M11.667 12.5L14.0575 10.1095C14.3875 9.77946 14.5525 9.61445 14.7428 9.55263C14.9102 9.49825 15.0905 9.49825 15.2578 9.55263C15.4481 9.61445 15.6131 9.77946 15.9431 10.1095L18.3337 12.5M8.33366 7.5C8.33366 8.42047 7.58747 9.16667 6.66699 9.16667C5.74652 9.16667 5.00033 8.42047 5.00033 7.5C5.00033 6.57953 5.74652 5.83333 6.66699 5.83333C7.58747 5.83333 8.33366 6.57953 8.33366 7.5ZM5.66699 17.5H14.3337C15.7338 17.5 16.4339 17.5 16.9686 17.2275C17.439 16.9878 17.8215 16.6054 18.0612 16.135C18.3337 15.6002 18.3337 14.9001 18.3337 13.5V6.5C18.3337 5.09987 18.3337 4.3998 18.0612 3.86502C17.8215 3.39462 17.439 3.01217 16.9686 2.77248C16.4339 2.5 15.7338 2.5 14.3337 2.5H5.66699C4.26686 2.5 3.5668 2.5 3.03202 2.77248C2.56161 3.01217 2.17916 3.39462 1.93948 3.86502C1.66699 4.3998 1.66699 5.09987 1.66699 6.5V13.5C1.66699 14.9001 1.66699 15.6002 1.93948 16.135C2.17916 16.6054 2.56161 16.9878 3.03202 17.2275C3.5668 17.5 4.26686 17.5 5.66699 17.5Z" stroke="#475467" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile__file">
+                            <input type="file">
+                            <div class="profile__file_icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.5604 17.2733L9.05752 11.7761C9.38753 11.4461 9.55254 11.2811 9.74281 11.2193C9.91018 11.1649 10.0905 11.1649 10.2578 11.2193C10.4481 11.2811 10.6131 11.4461 10.9431 11.7761L16.4036 17.2366M11.667 12.5L14.0575 10.1095C14.3875 9.77946 14.5525 9.61445 14.7428 9.55263C14.9102 9.49825 15.0905 9.49825 15.2578 9.55263C15.4481 9.61445 15.6131 9.77946 15.9431 10.1095L18.3337 12.5M8.33366 7.5C8.33366 8.42047 7.58747 9.16667 6.66699 9.16667C5.74652 9.16667 5.00033 8.42047 5.00033 7.5C5.00033 6.57953 5.74652 5.83333 6.66699 5.83333C7.58747 5.83333 8.33366 6.57953 8.33366 7.5ZM5.66699 17.5H14.3337C15.7338 17.5 16.4339 17.5 16.9686 17.2275C17.439 16.9878 17.8215 16.6054 18.0612 16.135C18.3337 15.6002 18.3337 14.9001 18.3337 13.5V6.5C18.3337 5.09987 18.3337 4.3998 18.0612 3.86502C17.8215 3.39462 17.439 3.01217 16.9686 2.77248C16.4339 2.5 15.7338 2.5 14.3337 2.5H5.66699C4.26686 2.5 3.5668 2.5 3.03202 2.77248C2.56161 3.01217 2.17916 3.39462 1.93948 3.86502C1.66699 4.3998 1.66699 5.09987 1.66699 6.5V13.5C1.66699 14.9001 1.66699 15.6002 1.93948 16.135C2.17916 16.6054 2.56161 16.9878 3.03202 17.2275C3.5668 17.5 4.26686 17.5 5.66699 17.5Z" stroke="#475467" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <p class="profile__file_text"><span>Нажмите, чтобы загрузить</span><br> Или перетащите и отпустите</p>
+                            <p class="profile__file_har">PNG, JPG или PDF (макс. 5 мб)</p>
+                        </div>
+                    </div>
+                    <div class="announ__block announ__square">
+                        <h3>Номер телефона</h3>
+                        <div class="sign-in__input">
+                            <div class="sign-in__input_wrapper">
+                                <input type="text" placeholder="Номер телефона" class="sign-in__input_password"> 
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn__blue">Опубликовать</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__row">
+                <ul>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Помощь</a></li>
+                    <li><a href="#">Реклама</a></li>
+                </ul>
+                <div class="footer__soc">
+                    <a href="#">
+                        <img src="img/footer_soc_1.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/footer_soc_2.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/footer_soc_3.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="footer__text">
+                <p>Сервис применяет <a href="#">рекомендательные технологии</a>: предоставляет информацию на основе сбора, систематизации и анализа сведений, относящихся к предпочтениям пользователей интернета, находящихся в Узбекистане</p>
+                <p>Использование сайта означает согласие с <a href="#">Пользовательским соглашением</a> и <a href="#">Политикой обработки персональных данных</a></p>
+            </div>
+            <div class="footer__footer">
+                <a href="#" class="footer__logo"><img src="img/logo_wht.svg" alt=""></a>
+                <p class="footer__law">© 2025 DOMIK.UZ Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/itc-custom-select.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

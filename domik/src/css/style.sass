@@ -3389,7 +3389,9 @@ fieldset
         &_wrapper
             position: relative
             margin: 6px 0 0
-        input
+        input,
+        textarea
+            font: 400 14px / 1.42857 $font-family
             width: 100%
             box-sizing: border-box  
             border: 1px solid #d0d5dd
@@ -3398,6 +3400,9 @@ fieldset
             &.error,
             &.si-error
                 border: 1px solid #fda29b
+        textarea
+            height: 160px !important
+            resize: none
         &_alert
             position: absolute
             right: 14px
@@ -4024,3 +4029,277 @@ fieldset
             max-width: 100%
             overflow-x: scroll
             white-space: nowrap
+
+.announ
+    display: grid
+    grid-template-columns: 1fr
+    gap: 24px
+    grid-column: 2/4
+    max-width: 688px
+    &__block
+        padding: 24px
+        border: 1px solid #eaecf0
+        border-radius: 8px
+        background: #fff
+        h3
+            font: 600 18px / 1.55556 $font-family
+            color: #101828
+    &__type
+        &_row
+            margin: 16px 0 0
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 12px
+        &_item
+            position: relative
+            padding: 16px
+            z-index: 1
+            display: grid
+            grid-template-columns: 32px 1fr
+            gap: 12px
+            align-items: start
+            span
+                border: 1px solid #eaecf0
+                border-radius: 8px
+                display: block
+                position: absolute
+                inset: 0
+                background: #fff
+                z-index: -1
+                transition: all .3s
+            svg
+                path
+                    transition: all .3s
+                    stroke: #98A2B3
+            p
+                font: 500 14px / 1.4 $font-family
+                color: #344054
+                transition: all .3s
+                &+p
+                    font-weight: 400
+            input
+                position: absolute
+                inset: 0
+                width: 100%
+                height: 100%
+                opacity: 0
+                cursor: pointer
+                &:checked
+                    &+span
+                        border: 1px solid #376df6
+                        background: #e3ebfe
+                        &+svg
+                            path
+                                stroke: #376DF6
+                            &+div
+                                p
+                                    color: #376df6
+    &__property
+        &_row
+            margin: 16px 0 0
+            display: flex
+            justify-content: flex-start
+            align-items: flex-start
+            flex-wrap: wrap
+            gap: 8px
+            border: 1px solid #f2f4f7
+            border-radius: 8px
+            padding: 4px
+            background: #f9fafb
+            div
+                position: relative
+            p
+                padding: 8px 12px
+                transition: all .3s
+                font: 600 14px / 1.42857 $font-family
+                color: #667085
+                border-radius: 6px
+                white-space: nowrap
+            input
+                position: absolute
+                inset: 0
+                width: 100%
+                height: 100%
+                opacity: 0
+                cursor: pointer
+                &:checked
+                    &+p
+                        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.06), 0 1px 3px 0 rgba(16, 24, 40, 0.1)
+                        background: #fff
+                        color: #344054
+    &__square
+        .sign-in__input
+            margin: 16px 0 0
+        .sign-in__input_wrapper
+            margin: 0
+        &_row
+            display: grid
+            grid-template-columns: 1fr auto
+            gap: 16px
+            align-items: center
+            margin: 16px 0 0
+            .sign-in__input,
+            .sign-in__input_wrapper
+                margin: 0
+        &_name
+            font: 400 14px / 1.42857 $font-family
+            color: #475467
+        &_wrapper
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 16px
+            .sign-in__input
+                margin: 16px 0 0
+            .sign-in__input_wrapper
+                margin: 0
+    &__price
+        .nav__lang
+            margin: 0 
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 1px solid #d0d5dd
+            border-radius: 4px
+            padding: 10px 16px
+            box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+            background: #fff
+            p
+                color: #344054
+                font-weight: 500
+            svg
+                path
+                    stroke: #344054
+    &__comf
+        &_wrapper
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 16px
+            row-gap: 12px
+            margin: 16px 0 0
+        &_item
+            position: relative
+            display: grid
+            grid-template-columns: 24px 1fr
+            gap: 8px
+            align-items: center
+            z-index: 1
+            padding: 12px
+            p
+                font: 500 14px / 1.42857 $font-family
+                color: #344054
+                transition: all .3s
+            svg
+                path
+                    stroke: #98a2b3
+                    transition: all .3s
+            span
+                position: absolute
+                z-index: -1
+                inset: 0
+                width: 100%
+                height: 100%
+                border: 1px dashed #eaecf0
+                border-radius: 4px
+                transition: all .3s
+            input
+                position: absolute
+                inset: 0
+                width: 100%
+                height: 100%
+                opacity: 0
+                cursor: pointer
+                &:checked
+                    &+span
+                        background: #5482f7
+                        border: 1px solid #5482f7
+                        &+svg
+                            path
+                                stroke: #fff
+                            &+p
+                                color: #fff
+    &__address
+        .sign-in__input
+            margin: 32px 0 0
+        .sign-in__input_wrapper
+            margin: 0
+        &_map
+            margin: 32px 0 0
+            border-radius: 8px
+            position: relative
+            overflow: hidden
+    &__desc
+        .sign-in__input
+            margin: 16px 0 0
+        .sign-in__input_wrapper
+            margin: 0
+    &__pic
+        &_wrapper
+            margin: 16px 0
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr 1fr
+            gap: 16px
+        &_item
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 1px dashed #eaecf0
+            border-radius: 8px
+            background: #fff
+            height: 94px
+            img
+                width: 100%
+                height: 100%
+                min-height: 100%
+                object-fit: cover
+        &_null
+            margin: auto
+            width: 40px
+            height: 40px
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 6px solid #f9fafb
+            border-radius: 100%
+            background: #f2f4f7
+    .btn
+        &__blue
+            margin: 0 0 0 auto
+
+@media ( max-width: 1024px )
+    .announ
+        margin: 0 auto
+
+@media ( max-width: 600px )
+    .announ
+        &__block
+            padding: 8px
+            h3
+                font-size: 16px
+        &__type
+            &_row
+                grid-template-columns: 1fr
+            &_item
+                padding: 8px
+                grid-template-columns: 100%
+                gap: 4px
+                svg
+                    width: 24px
+                    height: 24px
+        &__property
+            &_row
+                padding: 1px
+                p
+                    padding: 2px 4px
+                    font-size: 12px
+        &__square
+            &_wrapper
+                gap: 8px
+                grid-template-columns: 100%
+            &_row
+                gap: 8px
+        &__comf
+            &_wrapper
+                grid-template-columns: 1fr
+        &__pic
+            &_wrapper
+                grid-template-columns: 1fr
