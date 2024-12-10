@@ -1756,19 +1756,22 @@ section
 
 @media ( max-width: 1024px )
     .nav
+        padding-top: 0
         transition: opacity .3s
         &__list
             display: none
         &.container
             &__block
+                border-radius: 0 0 20px 20px 
                 max-height: 100%
                 transition: all .3s
         &__hum
             display: flex
             justify-content: center
             flex-direction: column
-            width: 30px
-            height: 20px
+            align-items: flex-end
+            width: 22px
+            height: 14px
             margin: 0 0 0 auto
             cursor: pointer
             position: relative
@@ -1777,11 +1780,13 @@ section
             &::after
                 content: ''
                 display: block
-                width: 100%
+                width: 14px
                 height: 1px
                 position: relative
                 transition: all .3s
                 background: #fff
+            span
+                width: 100%
             &::before
                 position: absolute
                 top: 0
@@ -1807,8 +1812,10 @@ section
                         transform: rotate(-120deg)
                         top: auto
                         bottom: -100px
+                        width: 100%
                     &::after
                         transform: rotate(80deg)
+                        width: 100%
             .nav
                 &__hum
                     span
@@ -1818,9 +1825,9 @@ section
                         position: absolute
                         top: 50%
                         left: 50%
-                        transform: translate(-50%, -50%) rotate(45deg)
-                    &::after
                         transform: translate(-50%, -50%) rotate(-45deg)
+                    &::after
+                        transform: translate(-50%, -50%) rotate(45deg)
                 &__list
                     display: flex
                     flex-direction: column
@@ -1832,6 +1839,11 @@ section
     .container
         &__block
             padding: 30px 0
+            width: 100%
+    .nav
+        .container
+            &__block
+                border-radius: 0 0 20px 20px
     .header
         .container
             &__block
@@ -1869,6 +1881,7 @@ section
         .container
             &__block
                 height: 300px
+                max-width: calc(100vw - 48px)
         &__bg
             img
                 filter: brightness(110%)
@@ -1901,7 +1914,12 @@ section
         h2
             font-size: 36px
         &__step
+            border-radius: 20px
             grid-template-columns: 1fr 1fr
+            margin: 50px -20px -30px
+            padding: 40px 30px 20px
+            backdrop-filter: blur(30px)
+            background: linear-gradient(234deg, rgba(192, 231, 255, 0.22) 0%, rgba(68, 162, 221, 0.22) 100%)
             &_item
                 &:nth-child(2)
                     border: none
@@ -1976,10 +1994,12 @@ section
             grid-template-columns: 100%
             gap: 20px
     .footer
-        padding: 80px 0 24px
+        padding: 80px 0 0
         .container
             flex-direction: column
             gap: 20px
+            &__block
+                border-radius: 20px 20px 0 0
         &__logo
             p
                 display: none
@@ -2083,14 +2103,31 @@ section
 
 @media ( max-width: 600px )
     .footer
+        .container
+            gap: 32px
+            &__block
+                padding: 40px 0
         &__list
             grid-template-columns: 100%
+            gap: 12px
+            padding: 0 0 32px
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+        &__soc
+            padding: 0 0 32px
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+            width: 100%
+        &__policy
+            order: 2
+        &__logo
+            max-width: 100%
     .consul
         padding: 60px 0 0
         &__block
             &_wrapper
                 grid-template-columns: 100%
                 margin: 10px 0 0
+        &__wrapper
+            margin: 20px -10px 0
     .header
         &__item
             min-height: auto
@@ -2109,8 +2146,6 @@ section
             max-width: 150px
     .container
         padding: 0 10px
-        &__block
-            width: calc( 100% - 20px )
     .can
         h2
             padding: 0 10px
@@ -2129,6 +2164,9 @@ section
             &_block
                 width: 100%
                 max-width: calc( 100% - 20px )
+        .container
+            &__block
+                max-width: calc(100vw - 20px)
     .unique
         padding: 60px 0
         h2
@@ -2161,6 +2199,9 @@ section
         h2,
         p
             text-align: left
+    .code
+        &__step
+            margin: 30px -10px -30px
 
 .code-header
     .container
@@ -2321,12 +2362,16 @@ section
         width: 294px
         left: 0
         animation: coursMove 7s 0s infinite
+        img
+            width: 100%
     &__right
         position: absolute
         top: 0
         width: 330px
         right: 0
         animation: ease coursMove 5s 0s infinite 
+        img
+            width: 100%
 
 @keyframes coursMove
     0%
@@ -2787,10 +2832,22 @@ section
         h2
             text-align: left
         &__wrapper
-            padding: 0
-        &__left,
+            padding: 200px 0
+            background: url('../img/cours_bg_mob.jpg') center no-repeat
+            background-size: cover
+            // background: url("../img/cours_bg.jpg") center no-repeat
+            // background-size: contain
+            // background-repeat: repeat
+        &__left
+            left: 10px
+            width: 200px
+            bottom: -70px
+            img
+                transform: rotate(-30deg)
         &__right
-            display: none
+            right: 0
+            width: 250px
+            top: -100px
     .contrast
         padding: 60px 0 0
         h2
