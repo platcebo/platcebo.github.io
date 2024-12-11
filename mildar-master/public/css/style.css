@@ -17271,15 +17271,15 @@ body {
   /* min-height: 100vh; */
 }
 .new-cheese__block .showcase__wrapper {
-  min-height: 1056px;
+  min-height: 940px;
   /* min-height: 100vh; */
 }
 /* .new-cheese .showcase__item {
   min-height: 100vh;
 } */
 .new-cheese__block .showcase__wrapper .slick-list, .showcase__wrapper .slick-track {
-  min-height: 1056px !important;
-  height: 1056px;
+  min-height: 940px !important;
+  height: 940px;
 }
 .new-cheese__block .showcase__item-container {
   height: 100%;
@@ -17319,7 +17319,7 @@ body {
 }
 .cheese-desc__item {
   position: absolute;
-  top: 166px;
+  top: 130px;
   left: 800px;
   display: grid;
   grid-template-columns: 64px 1fr;
@@ -17334,17 +17334,17 @@ body {
   transform: scale(1.2);
 }
 .cheese-desc__item:nth-child(2) {
-  top: 370px;
+  top: 330px;
   left: 900px;
 }
 .cheese-desc__item:nth-child(3) {
   top: auto;
-  bottom: 370px;
+  bottom: 320px;
   left: 900px;
 }
 .cheese-desc__item:nth-child(4) {
   top: auto;
-  bottom: 166px;
+  bottom: 130px;
   left: 800px;
 }
 .cheese-desc__img {
@@ -17394,7 +17394,7 @@ color: #2f2d2f;
     left: 580px;
   }
   .cheese-desc__item:nth-child(2) {
-    top: 230px;
+    top: 245px;
     left: 660px;
   }
   .cheese-desc__item:nth-child(3) {
@@ -17410,11 +17410,15 @@ color: #2f2d2f;
 }
 
 @media (max-width: 1370px) {
-  .new-cheese .showcase__item-wrapper {
-    padding: 20px 0;
+  .new-cheese__block .showcase__wrapper {
+    min-height: 650px;
   }
-  .new-cheese .showcase .slick-dots {
-    bottom: 40px;
+  .new-cheese__block .showcase__wrapper .slick-list, .showcase__wrapper .slick-track {
+    min-height: 650px !important;
+    height: 650px;
+  }
+  .new-cheese .showcase__item-wrapper {
+    padding: 0 0;
   }
   .cheese-desc {
     position: relative;
@@ -17457,11 +17461,12 @@ color: #2f2d2f;
   }
   .new-cheese .container-fluid {
     justify-content: center;
-    padding: 20px 100px; 
+    align-items: flex-start;
+    padding: 78px 100px 20px; 
     /* min-height: 100vh; */
   }
   .new-cheese__info {
-    top: 90px;
+    top: 40px;
     left: 50%;
     transform: translateX(-50%);
   }
