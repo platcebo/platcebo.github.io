@@ -17246,6 +17246,9 @@ body {
 .cheese--yellow::before {
   background: #ffe9a5
 }
+.new-cheese {
+  background: #ffe9a5
+}
 .new-cheese__block {
   margin: 36px 0 0;
 }
@@ -17282,13 +17285,13 @@ body {
   height: 100%;
   /* min-height: 100vh; */
 }
-.new-cheese__block .slick-arrow__title {
+/* .new-cheese__block .slick-arrow__title {
   width: 130px;
-}
-.new-cheese__block .slick-next .slick-arrow__title {
+} */
+/* .new-cheese__block .slick-next .slick-arrow__title {
   right: 0;
   margin: 48px 0 0 -82px;
-}
+} */
 .new-cheese__info {
   position: absolute;
   top: 160px;
@@ -17370,7 +17373,7 @@ color: #2f2d2f;
     left: 170px;
   }
   .new-cheese__block .container-fluid {
-    padding: 100px 150px 100px;
+    padding: 100px 200px 100px;
     min-height: 100%;
     display: flex;
     align-items: center;
@@ -17383,29 +17386,30 @@ color: #2f2d2f;
     height: 750px;
   }
   .cheese-desc__item {
-    width: 47vw;
+    /* width: 30vw; */
+    width: 600px;
   }
   .cheese-desc__item:nth-child(1) {
-    top: 100px;
+    top: 90px;
     left: 580px;
   }
   .cheese-desc__item:nth-child(2) {
-    top: 250px;
+    top: 230px;
     left: 660px;
   }
   .cheese-desc__item:nth-child(3) {
     top: auto;
-    bottom: 250px;
+    bottom: 230px;
     left: 660px;
   }
   .cheese-desc__item:nth-child(4) {
     top: auto;
-    bottom: 100px;
+    bottom: 90px;
     left: 580px;
   }
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1370px) {
   .new-cheese .showcase__item-wrapper {
     padding: 20px 0;
   }

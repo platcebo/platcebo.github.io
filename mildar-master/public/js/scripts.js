@@ -32,7 +32,7 @@ if ($(window).width() > 767) {
   });
 }
 
-if ($(window).width() < 1351) {
+if ($(window).width() < 1371) {
   $('.cheese-desc').slick({
     dots: true,
     arrows: false,
