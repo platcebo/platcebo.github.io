@@ -133,9 +133,14 @@ body {
 .catalog {
   padding: 100px 0;
 }
-.catalog h2 {
+.catalog a {
   font-size: 100px;
   font-weight: 400;
+  transition: all 0.3s;
+  color: #000;
+}
+.catalog a:hover {
+  opacity: 0.7;
 }
 
 .footer {
@@ -214,7 +219,7 @@ body {
   .catalog {
     padding: 60px 0;
   }
-  .catalog h2 {
+  .catalog a {
     font-size: 70px;
   }
   .footer__logo {
@@ -313,7 +318,7 @@ body {
     width: 50px;
     height: 50px;
   }
-  .catalog h2 {
+  .catalog a {
     font-size: 50px;
   }
   .footer__link p {
