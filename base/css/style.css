@@ -1,0 +1,116 @@
+body {
+  font-family: "Unbounded", serif;
+}
+
+.container {
+  padding: 0 30px;
+  max-width: 1860px;
+  box-sizing: content-box;
+  margin: 0 auto;
+}
+
+.nav {
+  background: #000;
+  padding: 45px 0;
+}
+.nav .container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav a {
+  font-weight: 400;
+  font-size: 50px;
+  color: #fff;
+  transition: all 0.3s;
+}
+.nav a:hover {
+  opacity: 0.8;
+}
+.nav__list {
+  margin: 0 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.nav__list a {
+  font-size: 37px;
+}
+
+.header {
+  padding: 240px 0 155px;
+  background: url("../img/header_bg.png") center no-repeat;
+  background-size: cover;
+}
+.header h1 {
+  font-weight: 400;
+  font-size: 125px;
+  padding: 0 0 0 150px;
+}
+.header h1 span {
+  display: block;
+  padding: 0 0 0 100px;
+}
+.header__link {
+  margin: 80px auto 0;
+  max-width: 1370px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: #000;
+}
+.header__link a {
+  display: flex;
+  height: 236px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-shadow: inset 0px 0px 15px 0px white;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 200;
+}
+
+.info {
+  padding: 100px 0;
+  position: relative;
+}
+.info__text {
+  max-width: 60%;
+}
+.info__text p {
+  color: #000;
+  font-size: 45px;
+  font-weight: 400;
+}
+.info__text p span {
+  color: #ff0000;
+}
+.info__bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40%;
+}
+
+.har {
+  padding: 100px 0;
+}
+.har__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.har__item {
+  width: 30%;
+}
+.har__item img {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+}/*# sourceMappingURL=style.css.map */
