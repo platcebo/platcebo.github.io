@@ -2,24 +2,31 @@ body
     font-family: "Unbounded", serif
 .container
     padding: 0 30px
-    max-width: 1860px
+    max-width: 1400px
     box-sizing: content-box
     margin: 0 auto
 
 .nav
-    background: #000
-    padding: 45px 0
+    background: #fff
+    padding: 15px 0
+    box-shadow: 0px 0px 30px 0px #000
+    &__logo
+        width: 300px
+        img
+            width: 100%
     .container
         display: flex
-        justify-content: flex-start
+        justify-content: space-between
         align-items: center
     a
         font-weight: 400
-        font-size: 50px
-        color: #fff
+        font-size: 24px
+        color: #000
+        display: block
         transition: all .3s
+        text-align: right
         &:hover
-            opacity: .8
+            opacity: .7
     &__list
         margin: 0 0 0 auto
         display: flex
@@ -28,33 +35,38 @@ body
         gap: 30px
         a
             font-size: 37px
+    &__soc
+        margin: 10px 0 0 auto
+        display: grid
+        grid-template-columns: 48px 48px
+        max-width: max-content
+        gap: 10px
 
 .header
     padding: 240px 0 155px
-    background: url('../img/header_bg.png') center no-repeat
+    background: url('../img/header_bg.png') right top no-repeat
     background-size: cover
     h1
         font-weight: 400
-        font-size: 125px
-        padding: 0 0 0 150px
+        font-size: 80px
         span
             display: block
-            padding: 0 0 0 100px
+            padding: 0 0 0 80px
     &__link
         margin: 80px auto 0
-        max-width: 1370px
+        max-width: 1070px
         display: grid
         grid-template-columns: 1fr 1fr 1fr
         background: #000
         a
             display: flex
-            height: 236px
+            height: 170px
             justify-content: center
             align-items: center
             padding: 20px
             box-shadow: inset 0px 0px 15px 0px #ffff
             color: #fff
-            font-size: 40px
+            font-size: 30px
             font-weight: 200
 
 .info
@@ -64,7 +76,7 @@ body
         max-width: 60%
         p
             color: #000
-            font-size: 45px
+            font-size: 35px
             font-weight: 400
             span
                 color: #ff0000
@@ -87,26 +99,26 @@ body
     &__item
         width: 30%
         img
-            width: 250px
-            height: 250px
+            width: 150px
+            height: 150px
             margin: 0 auto
             object-fit: contain
             display: block
     &__name
-        font-size: 45px
+        font-size: 25px
         text-align: center
         font-weight: 600
         font-style: italic
     &__text
-        margin: 30px 0 0
-        font-size: 37px
+        margin: 15px 0 0
+        font-size: 20px
         font-weight: 300
         text-align: center
 
 .catalog
     padding: 100px 0
     a
-        font-size: 100px
+        font-size: 80px
         font-weight: 400
         transition: all .3s
         color: #000
@@ -114,72 +126,62 @@ body
             opacity: .7
 
 .footer
-    padding: 50px 0 100px
+    padding: 50px 0 
     &__logo
-        width: 100%
-        max-width: 990px
-        display: block
-        margin: 0 auto
+        width: 300px
+        img
+            width: 100%
     &__link
-        margin: 0 auto
         width: max-content
-        p
-            font-size: 37px
+        a
             font-weight: 400
-            color: #313131
+            font-size: 24px
+            color: #000
+            display: block
+            transition: all .3s
+            text-align: right
+            &:hover
+                opacity: .7
+    .container
+        display: flex
+        justify-content: space-between
+        align-items: center
 
 @media ( max-width: 1440px )
-    .nav
-        a
-            font-size: 35px
-        &__list
-            a
-                font-size: 25px
-    .header
-        padding: 200px 0 150px
-        h1
-            padding: 0
-            font-size: 90px
-            span
-                padding: 0 0 0 70px
-        &__link
-            a
-                height: 200px
-                font-size: 30px
-    .info
-        padding: 60px 0
-        &__bg
-            position: relative
-            margin: 20px -30px 0 auto
-            display: block
-            width: 100%
-            max-width: 600px
-        &__text
-            max-width: 100%
-            p
-                font-size: 37px
+    // .info
+    //     padding: 60px 0
+    //     &__bg
+    //         position: relative
+    //         margin: 20px -30px 0 auto
+    //         display: block
+    //         width: 100%
+    //         max-width: 600px
+    //     &__text
+    //         max-width: 100%
+    //         p
+    //             font-size: 37px
     .har
-        padding: 60px 0
+        // padding: 60px 0
         &__wrapper
             gap: 5%
-        &__item
-            img
-                width: 150px
-                height: 150px
-        &__name
-            font-size: 35px
-        &__text
-            font-size: 27px
-    .catalog
-        padding: 60px 0 
-        a
-            font-size: 70px
-    .footer
-        &__logo
-            max-width: 600px
-        &__link
-            p
-                font-size: 27px
+        // &__item
+        //     img
+        //         width: 150px
+        //         height: 150px
+        // &__name
+        //     font-size: 35px
+        // &__text
+        //     font-size: 27px
+    // .catalog
+    //     padding: 60px 0 
+    //     a
+    //         font-size: 70px
+    // .footer
+    //     &__logo
+    //         max-width: 600px
+    //     &__link
+    //         p
+    //             font-size: 27px
 
 @media ( max-width: 1024px )
     .container
@@ -197,6 +199,7 @@ body
             max-width: 350px
     .info
         &__text
+            max-width: 100%
             p
                 font-size: 20px
         &__bg
@@ -235,14 +238,22 @@ body
             margin: 20px auto 0
             flex-direction: column
             gap: 15px
+        a
+            text-align: center
+            font-size: 16px
+        &__soc
+            margin: 10px auto 0
     .header
         h1
             font-size: 43px
             span
                 padding: 0 0 0 30px
         &__link
+            width: 70%
             a
+                padding: 10px
                 height: 140px
+                font-size: 20px
     .info
         padding: 50px 0
     .har
@@ -258,8 +269,12 @@ body
                 height: 50px
     .catalog
         a
-            font-size: 50px
+            font-size: 35px
     .footer
         &__link
             p
                 font-size: 18px
+        .container
+            flex-direction: column
+        a
+            text-align: center

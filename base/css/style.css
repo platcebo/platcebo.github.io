@@ -4,28 +4,37 @@ body {
 
 .container {
   padding: 0 30px;
-  max-width: 1860px;
+  max-width: 1400px;
   box-sizing: content-box;
   margin: 0 auto;
 }
 
 .nav {
-  background: #000;
-  padding: 45px 0;
+  background: #fff;
+  padding: 15px 0;
+  box-shadow: 0px 0px 30px 0px #000;
+}
+.nav__logo {
+  width: 300px;
+}
+.nav__logo img {
+  width: 100%;
 }
 .nav .container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
 }
 .nav a {
   font-weight: 400;
-  font-size: 50px;
-  color: #fff;
+  font-size: 24px;
+  color: #000;
+  display: block;
   transition: all 0.3s;
+  text-align: right;
 }
 .nav a:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 .nav__list {
   margin: 0 0 0 auto;
@@ -37,37 +46,44 @@ body {
 .nav__list a {
   font-size: 37px;
 }
+.nav__soc {
+  margin: 10px 0 0 auto;
+  display: grid;
+  grid-template-columns: 48px 48px;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  gap: 10px;
+}
 
 .header {
   padding: 240px 0 155px;
-  background: url("../img/header_bg.png") center no-repeat;
+  background: url("../img/header_bg.png") right top no-repeat;
   background-size: cover;
 }
 .header h1 {
   font-weight: 400;
-  font-size: 125px;
-  padding: 0 0 0 150px;
+  font-size: 80px;
 }
 .header h1 span {
   display: block;
-  padding: 0 0 0 100px;
+  padding: 0 0 0 80px;
 }
 .header__link {
   margin: 80px auto 0;
-  max-width: 1370px;
+  max-width: 1070px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   background: #000;
 }
 .header__link a {
   display: flex;
-  height: 236px;
+  height: 170px;
   justify-content: center;
   align-items: center;
   padding: 20px;
   box-shadow: inset 0px 0px 15px 0px white;
   color: #fff;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 200;
 }
 
@@ -80,7 +96,7 @@ body {
 }
 .info__text p {
   color: #000;
-  font-size: 45px;
+  font-size: 35px;
   font-weight: 400;
 }
 .info__text p span {
@@ -110,22 +126,22 @@ body {
   width: 30%;
 }
 .har__item img {
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   margin: 0 auto;
   -o-object-fit: contain;
      object-fit: contain;
   display: block;
 }
 .har__name {
-  font-size: 45px;
+  font-size: 25px;
   text-align: center;
   font-weight: 600;
   font-style: italic;
 }
 .har__text {
-  margin: 30px 0 0;
-  font-size: 37px;
+  margin: 15px 0 0;
+  font-size: 20px;
   font-weight: 300;
   text-align: center;
 }
@@ -134,7 +150,7 @@ body {
   padding: 100px 0;
 }
 .catalog a {
-  font-size: 100px;
+  font-size: 80px;
   font-weight: 400;
   transition: all 0.3s;
   color: #000;
@@ -144,89 +160,38 @@ body {
 }
 
 .footer {
-  padding: 50px 0 100px;
+  padding: 50px 0;
 }
 .footer__logo {
+  width: 300px;
+}
+.footer__logo img {
   width: 100%;
-  max-width: 990px;
-  display: block;
-  margin: 0 auto;
 }
 .footer__link {
-  margin: 0 auto;
   width: -moz-max-content;
   width: max-content;
 }
-.footer__link p {
-  font-size: 37px;
+.footer__link a {
   font-weight: 400;
-  color: #313131;
+  font-size: 24px;
+  color: #000;
+  display: block;
+  transition: all 0.3s;
+  text-align: right;
+}
+.footer__link a:hover {
+  opacity: 0.7;
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @media (max-width: 1440px) {
-  .nav a {
-    font-size: 35px;
-  }
-  .nav__list a {
-    font-size: 25px;
-  }
-  .header {
-    padding: 200px 0 150px;
-  }
-  .header h1 {
-    padding: 0;
-    font-size: 90px;
-  }
-  .header h1 span {
-    padding: 0 0 0 70px;
-  }
-  .header__link a {
-    height: 200px;
-    font-size: 30px;
-  }
-  .info {
-    padding: 60px 0;
-  }
-  .info__bg {
-    position: relative;
-    margin: 20px -30px 0 auto;
-    display: block;
-    width: 100%;
-    max-width: 600px;
-  }
-  .info__text {
-    max-width: 100%;
-  }
-  .info__text p {
-    font-size: 37px;
-  }
-  .har {
-    padding: 60px 0;
-  }
   .har__wrapper {
     gap: 5%;
-  }
-  .har__item img {
-    width: 150px;
-    height: 150px;
-  }
-  .har__name {
-    font-size: 35px;
-  }
-  .har__text {
-    font-size: 27px;
-  }
-  .catalog {
-    padding: 60px 0;
-  }
-  .catalog a {
-    font-size: 70px;
-  }
-  .footer__logo {
-    max-width: 600px;
-  }
-  .footer__link p {
-    font-size: 27px;
   }
 }
 @media (max-width: 1024px) {
@@ -245,6 +210,9 @@ body {
   .header__link {
     grid-template-columns: 1fr;
     max-width: 350px;
+  }
+  .info__text {
+    max-width: 100%;
   }
   .info__text p {
     font-size: 20px;
@@ -294,14 +262,26 @@ body {
     flex-direction: column;
     gap: 15px;
   }
+  .nav a {
+    text-align: center;
+    font-size: 16px;
+  }
+  .nav__soc {
+    margin: 10px auto 0;
+  }
   .header h1 {
     font-size: 43px;
   }
   .header h1 span {
     padding: 0 0 0 30px;
   }
+  .header__link {
+    width: 70%;
+  }
   .header__link a {
+    padding: 10px;
     height: 140px;
+    font-size: 20px;
   }
   .info {
     padding: 50px 0;
@@ -319,9 +299,15 @@ body {
     height: 50px;
   }
   .catalog a {
-    font-size: 50px;
+    font-size: 35px;
   }
   .footer__link p {
     font-size: 18px;
+  }
+  .footer .container {
+    flex-direction: column;
+  }
+  .footer a {
+    text-align: center;
   }
 }/*# sourceMappingURL=style.css.map */
