@@ -1,0 +1,103 @@
+@use '../component/variables' as *;
+
+.step {
+    padding: 70px 0 0;
+    &__wrapper {
+        margin: 40px 0 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 6px;
+    }
+    &__item {
+        border-radius: 20px;
+        background: #373737;
+        position: relative;
+        padding: 10px 6px 6px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        display: grid;
+        grid-template-columns: 40px 1fr 40px;
+        gap: 5px;
+        align-items: center;
+        margin: 0 0 auto;
+        min-height: 52px;
+        img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+    }
+    &__num {
+        font: 700 32px / 1 $font-family;
+        color: #ff9549;
+    }
+    &__name {
+        font: 400 26px / 1 $second-family;
+        color: #fff;
+    }
+    &__text {
+        border-radius: 18px;
+        background: #fff;
+        min-height: 196px;
+        padding: 20px;
+        margin: 20px 0 0;
+        position: relative;
+        z-index: 1;
+        p {
+            font: 400 16px / 1.2 $font-family;
+            color: #222;
+            opacity: .8;
+        }
+        img {
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            object-fit: contain;
+            bottom: 10px;
+            right: 10px;
+            z-index: -1;
+        }
+    }
+    &__phone {
+        grid-column: 3/5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        background: url(../../img/line_bg_blc.jpg) top left;
+        background-size: 50px;
+        border-radius: 20px;
+        &_row {
+            display: grid;
+            grid-template-columns: 99px auto;
+            gap: 23px;
+            align-items: start;
+            img {
+                width: 100px;
+                height: 100px;
+            }
+            p {
+                font: 700 40px / 1.1 $third-family;
+                color: #fff;
+                span {
+                    font: 400 40px / 1.1 $second-family;
+                    color: #ff9549;
+                    display: block;
+                }
+            }
+        }
+    }
+    &__ban {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        margin: 40px 0 0;
+        width: 100%;
+        p {
+            font-weight: 700;
+        }
+    }
+}

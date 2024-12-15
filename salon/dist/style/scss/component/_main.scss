@@ -10,3 +10,14 @@ body {
     padding: 0 19px;
     box-sizing: content-box;
 }
+.title {
+    font: 400 50px / 1 $second-family;
+    color: #222;
+    text-align: center;
+    strong {
+        font: 700 50px / 1 $third-family;
+    }
+    span {
+        color: #ff9549;
+    }
+}
