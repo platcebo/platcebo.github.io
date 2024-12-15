@@ -1,0 +1,50 @@
+@use '../component/variables' as *;
+
+.header {
+    padding: 60px 0 80px;
+    position: relative;
+    background: url('../../img/header_bg.jpg') center no-repeat;
+    background-size: contain;
+    h1 {
+        font: 400 60px $second-family;
+        color: #222;
+        span {
+            font: 700 60px $third-family;
+            color: #ff9549
+        }
+    }
+    &__info {
+       max-width: 600px; 
+    }
+    &__text {
+        margin: 20px 0 0;
+        font: 400 28px $second-family;
+        color: #222;
+        opacity: .9;
+        span {
+            font: 700 28px $third-family;
+        }
+    }
+    &__dir {
+        margin: 60px 0 0;
+        display: grid;
+        grid-template-columns: 308px 1fr;
+        gap: 20px;
+        align-items: center;
+        &_sign {
+            width: 206px;
+        }
+        p {
+            font: 400 18px $font-family;
+            color: #222;
+            opacity: .6;
+            margin: 14px 0 0; 
+            &+p {
+                font: 400 28px $second-family;
+                color: #222;
+                opacity: 1;
+                margin: 3px 0 0; 
+            }
+        }
+    }
+}

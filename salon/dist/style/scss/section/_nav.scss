@@ -1,0 +1,245 @@
+@use '../component/variables' as *;
+
+.nav {
+    background: #373737;
+    position: relative;
+    &__row {
+        position: relative;
+        z-index: 3;
+        padding: 14px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &::before {
+            content: '';
+            display: block;
+            width: 100vw;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: url('../../img/line_bg_blc.jpg') top left repeat;
+            background-size: 50px;
+            z-index: -1;
+            border-bottom: 1px solid rgba(255, 149, 73, 0.4);            
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 80%;
+        width: 100%;
+        a {
+            font: 400 16px $font-family;
+            text-transform: uppercase;
+            color: #ccc;
+            transition: all .3s;
+            &:hover {
+                color: #ff9549
+            }
+        }
+    }
+    &__list li {
+        position: relative;
+    }
+    &__search {
+        position: relative;
+        width: 155px;
+        input {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 9px 25px 9px 0;
+            font: 400 16px $font-family;
+            color: #ccc;
+            background: transparent;
+            border: none;
+        }
+        img {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+    }
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 21px 0;
+    }
+    &__logo {
+        width: 290px;
+        gap: 13px;
+        display: grid;
+        grid-template-columns: 160px auto;
+        align-items: center;
+        img {
+            width: 100%;
+        }
+        p {
+            font: 400 13px / 1 $font-family;
+            color: #fff;
+            opacity: .8;
+            span {
+                font: 600 13px / 1 $font-family;
+            }
+        }
+    }
+    &__menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        a {
+            font: 500 16px $font-family;
+            text-transform: uppercase;
+            color: #343434;
+            position: relative;
+            transition: all .3s;
+            &:hover {
+                color: #ff9549;
+            }
+            &::before {
+                content: '';
+                display: block;
+                width: 1px;
+                height: 14px;
+                background: #969696;
+                position: absolute;
+                right: -30px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        li:last-child a::before {
+            content: none;
+        }
+        &_wrapper {
+            padding: 4px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2;
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 100vw;
+                height: 100%;
+                background: #fff;
+                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+                z-index: -1;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    &__catalog {
+        position: relative;
+        .drop__btn {
+            font: 700 22px $third-family;
+            color: #fff;
+            cursor: pointer;
+            grid-template-columns: 20px auto;
+            gap: 10px;
+            padding: 10px 14px;
+            border-radius: 6px;
+            background: linear-gradient(180deg, #0c8dce 0%, #38afeb 50.5%, #0e82bc 100%);
+            &:after {
+                display: none;
+            }
+            i {
+                display: flex;
+                width: 20px;
+                height: 17px;
+                justify-content: space-between;
+                flex-direction: column;
+                &::before,
+                &::after,
+                span {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    background: #fff;
+                }
+            }
+        }
+    }
+    &__fav {
+        display: grid;
+        grid-template-columns: 20px auto;
+        gap: 10px;
+        align-items: center;
+        font: 400 16px $font-family;
+        color: #222;
+    }
+    &__baner {
+        max-width: 241px;
+        display: grid;
+        grid-template-columns: 34px 1fr;
+        gap: 14px;
+        align-items: center;
+        img {
+            width: 100%;
+        }
+        p {
+            font: 400 16px / 1.25 $second-family;
+            color: #fff;
+            span {
+                color: #ff9549;
+            }
+            strong {
+                font: 700 16px / 1.25 $third-family;
+            }
+        }
+    }
+    &__soc {
+        display: grid;
+        grid-template-columns: 47px 47px;
+        gap: 14px;
+        a {
+            display: block;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    &__contact {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 14px;
+        &_phone {
+            font: 700 26px $third-family;
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            text-align: right;
+            color: #fff;
+            display: block;
+            transition: all .3s;
+            &:hover {
+                color: #ff9549;
+            }
+        }
+        &_email {
+            font: 400 16px $second-family;
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            text-align: right;
+            color: #fff;
+            display: block;
+            opacity: .8;
+            transition: all .3s;
+            &:hover {
+                opacity: 1;
+                color: #ff9549;
+            }
+        }
+    }
+}
