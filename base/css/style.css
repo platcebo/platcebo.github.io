@@ -311,6 +311,12 @@ body {
   .info {
     padding: 50px 0;
   }
+  .info h2 {
+    font-size: 28px;
+  }
+  .har h2 {
+    font-size: 28px;
+  }
   .har__name, .har__text {
     font-size: 20px;
   }
