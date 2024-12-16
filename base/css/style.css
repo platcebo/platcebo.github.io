@@ -99,7 +99,7 @@ body {
 }
 .info__text {
   margin: 20px 0 0;
-  max-width: 60%;
+  width: 100%;
 }
 .info__text p {
   color: #000;
