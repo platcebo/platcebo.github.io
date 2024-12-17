@@ -17429,6 +17429,37 @@ color: #2f2d2f;
 }
 
 @media (max-width: 1370px) {
+  .cheese-desc__name {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 1350px) {
+  .cheese-desc {
+    left: 500px;
+  }
+  .new-cheese__info {
+    top: 190px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .new-cheese__block .container-fluid {
+    padding: 100px 50px;
+  }
+  .new-cheese__info {
+    left: 80px;
+    top: 150px;
+  }
+  .cheese-desc {
+    left: 450px;
+  }
+}
+
+@media (max-width: 1070px) {
+  .cheese-desc__name {
+    font-size: 48px;
+  }
   .new-cheese__block .showcase__wrapper {
     min-height: 650px;
   }
