@@ -17401,7 +17401,7 @@ color: #2f2d2f;
   }
   .cheese-desc {
     top: 50px;
-    height: 570px;
+    height: 620px;
     left: 580px;
   }
   .cheese-desc__item:nth-child(2),
@@ -17463,6 +17463,7 @@ color: #2f2d2f;
   }
   .cheese-desc {
     left: 450px;
+    height: 600px;
   }
 }
 
@@ -17482,7 +17483,7 @@ color: #2f2d2f;
   }
   .cheese-desc {
     position: relative;
-    padding: 0 100px 57px; 
+    padding: 0 100px 30px; 
     background: #ffe9a5;
     inset: auto;
     left: auto;
