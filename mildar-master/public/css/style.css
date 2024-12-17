@@ -17401,7 +17401,7 @@ color: #2f2d2f;
   }
   .cheese-desc {
     top: 50px;
-    height: 620px;
+    height: 600px;
     left: 580px;
   }
   .cheese-desc__item:nth-child(2),
@@ -17540,7 +17540,7 @@ color: #2f2d2f;
 
 @media (max-width: 768px) {
   .cheese-desc {
-    padding: 0 20px 100px;
+    padding: 0 20px 30px;
   }
   .cheese-desc__item {
     grid-template-columns: 100%;
