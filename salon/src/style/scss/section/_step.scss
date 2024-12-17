@@ -101,3 +101,14 @@
         }
     }
 }
+
+@media (max-width: 1200px) {
+    .step {
+        &__wrapper {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        &__phone {
+            grid-column: 2/4;
+        }
+    }
+}

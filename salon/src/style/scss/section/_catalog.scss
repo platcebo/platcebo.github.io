@@ -1,0 +1,199 @@
+@use '../component/variables' as *;
+
+.catalog {
+    background: url('../../img/catalog_bg.jpg') center repeat;
+    background-size: auto 100%;
+    padding: 70px 0;
+    position: relative;
+    overflow: hidden;
+    h2 {
+        text-align: left;
+        color: #fff;
+    }
+    &__tab {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 30px;
+        margin: 50px 0 0;
+        z-index: 2;
+        position: relative;
+        &_item {
+            position: relative;
+            p {
+                font: 400 24px / 0.9 $second-family;
+                color: #c2c2c2;
+                text-align: center;
+                padding: 15px;
+                border: 2px solid transparent;
+                transition: all .3s;
+                border-radius: 7px;
+                position: relative;
+            }
+            input {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100px;
+                opacity: 0;
+                z-index: 2;
+                cursor: pointer;
+                &:checked+p {
+                    border: 2px solid #ff9549;
+                    box-shadow: 0 4px 20px 0 #ff9c06;    
+                }
+            }
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: calc(100% + 15px);
+                transform: translateY(-50%);
+                width: 2px;
+                height: 45px;
+                background: #7a7a7a;
+            }
+        }
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 600px 1fr;
+        gap: 15px;
+        margin: 50px 0 0;
+        z-index: 1;
+        position: relative;
+    }
+    &__block {
+        position: relative;
+        z-index: -1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        img {
+            width: 800px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            position: absolute;
+            z-index: -1;
+        }
+        &::before {
+            content: '';
+            display: block;
+            width: 1100px;
+            height: 1100px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: url('../../img/book_bg.svg') center no-repeat ;
+            background-size: contain;
+            position: absolute;
+            z-index: -2;
+        }
+    }
+    &__update {
+        font: 400 16px / 1.5625 $font3;
+        color: #dcdcdc;
+        opacity: .8;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            width: 12px;
+            height: 12px;
+            border-radius: 100%;
+            top: 7px;
+            right: calc(100% + 19px);
+            background: #20b038;
+            position: absolute;
+        }
+    }
+    &__info {
+        z-index: 2;
+    }
+    &__ready {
+        font: 400 22px / 1.1 $font-family;
+        color: #c2c2c2;
+        opacity: .8;
+        span {
+            font: 600 22px / 1.1 $font-family;
+            color: #fff;
+            display: block;
+        }
+    }
+    &__idea {
+        margin: 30px 0 0;
+        display: grid;
+        grid-template-columns: 55px 1fr;
+        gap: 20px;
+        img {
+            width: 100%;
+        }
+        p {
+            max-width: 270px;
+            font: 400 28px / 1.1 $font-family;
+            color: #c2c2c2;
+            opacity: .8;
+        }
+    }
+    &__form {
+        border-top: 1px solid #dbdbdb;
+        margin: 34px 0 0;
+        padding: 40px 0 0;
+        &_name {
+            font: 400 33px / 0.9 $second-family;
+            color: #ff9549;
+        }
+        &_text {
+            font: 400 22px / 1.52 $font-family;
+            color: #c2c2c2;
+            opacity: .8;
+        }
+        &_row {
+            margin: 25px 0 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            position: relative;
+            input {
+                padding: 0 0 5px;
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid #fff; 
+                font: 400 24px / 1.1 $second-family;
+                text-align: center;
+                color: #fff;        
+            }
+        }
+        &_select {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            border-radius: 92px;
+            padding: 19px;
+            background: rgba(255, 255, 255, 0.1);
+            select {
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+            p {
+                font: 400 24px / 1.1 $second-family;
+                color: #fff;
+            }
+        }
+        .btn__blue {
+            width: 100%;
+            font: 700 29px / 1.1 $third-family;
+            padding: 17px;
+            margin: 15px 0 0;
+        }
+    }
+}

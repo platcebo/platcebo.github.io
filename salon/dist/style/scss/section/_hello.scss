@@ -1,0 +1,94 @@
+@use '../component/variables' as *;
+
+.hello {
+    padding: 70px 0;
+    background: #373737;
+    position: relative;
+    z-index: 1;
+    h2 {
+        color: #fff
+    }
+    &__wrapper {
+        border-radius: 12px;
+        border: 7px solid #ff9549;
+        position: relative;
+        display: block;
+        z-index: 1;
+        margin: 60px 0 0;
+    }
+    &__bg {
+        position: absolute;
+        width: 500px;
+        bottom: 0px;
+        left: 0px;
+        z-index: -1;
+    }
+    &__block {
+        width: calc(100% - 540px);
+        margin: 0 0 0 auto; 
+        padding: 0 28px 50px 0;
+    }
+    &__logo {
+        margin: -8px 0 0;
+        padding: 0 15px;
+        background: #373737; 
+        width: 334px;
+        img {
+            width: 100%;
+        }
+    }
+    &__result {
+        margin: 60px 0 0;
+        h3 {
+            font: 400 40px / 0.9 $second-family;
+            color: #fff;
+            span {
+                font: 700 40px / 0.9 $third-family;
+                color: #ff9549;
+            }
+        }
+        div {
+            display: grid;
+            grid-template-columns: 76px 1fr;
+            gap: 33px;
+            margin: 30px 0 0;
+        }
+        p {
+            font: 400 18px / 1.2 $font-family;
+            color: #fff;
+            opacity: 0.7;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    &__do {
+        margin: 60px 0 0;
+        h3 {
+            font: 700 40px / 0.9 $third-family;
+            color: #fff;
+            span {
+                font: 400 40px / 0.9 $second-family;
+                color: #ff9549;
+            }
+        }
+        p {
+            margin: 30px 0 0;
+            opacity: .7;
+            font: 400 18px / 1.2 $font-family;
+            color: #fff;
+        }
+    }
+    &::before {
+        content: '';
+        display: block;
+        width: 436px;
+        height: 283px;
+        background: url('../../img/ck_wht.svg') center no-repeat;
+        background-size: contain;
+        position: absolute;
+        bottom: 130px;
+        left: calc(50% + 323px);
+        z-index: -1;
+    }
+}

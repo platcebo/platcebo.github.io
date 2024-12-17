@@ -243,3 +243,34 @@
         }
     }
 }
+
+@media (max-width: 1200px) {
+    .nav {
+        &__row {
+            padding: 10px;
+        }
+        &__list {
+            max-width: calc(100% - 200px);
+            a {
+                font-size: 12px;
+            }
+        }
+        &__flex {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        &__baner {
+            order: 2;
+        }
+        &__menu {
+            gap: 30px;
+            a {
+                font-size: 12px;
+                &::before {
+                    right: -15px;
+                }
+            }
+        }
+    }
+}

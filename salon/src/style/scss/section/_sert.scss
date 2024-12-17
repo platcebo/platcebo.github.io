@@ -1,0 +1,115 @@
+@use '../component/variables' as *;
+
+.sert {
+    padding: 70px 0;
+    &__block {
+        padding: 50px 0;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            width: 100vw;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: url(../../img/line_bg_wht.jpg) top left;
+            background-size: 50px;
+            z-index: -1;
+        }
+    }
+    h2 {
+        font: 400 48px / 1.1 $second-family;
+        color: #222;
+        max-width: 550px;
+        strong {
+            font: 700 48px / 1.1 $third-family;
+        }
+        span {
+            font: 700 48px / 1.1 $third-family;
+            color: #ff9549;
+        }
+    }
+    &__price {
+        margin: 17px 0 0;
+        font: 400 26px / 0.9 $second-family;
+        color: #222;
+        opacity: .7;
+    }
+    &__row {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 35px;
+        align-items: center;
+        margin: 90px 0 0;
+        .catalog__form_select {
+            background: rgba(34, 34, 34, 0.1);
+            position: relative;
+            p {
+                color: #222;
+            }
+            &::before {
+                content:'Куда вам его отправить?';
+                display: block;
+                left: 0;
+                width: 100%;
+                bottom: calc(100% + 15px);
+                font: 400 16px $font3;
+                text-align: center;
+                color: #222;
+                opacity: .5;
+                position: absolute;
+            }
+        }
+        .catalog__form_row {
+            margin: 0;
+            input {
+                border-bottom: 1px solid #222;
+            }
+        }
+        .btn__blue {
+            padding: 19px;
+            font: 700 20px $third-family;
+        }
+    }
+    .consul__check {
+        align-items: start;
+        margin: 0;
+        a {
+            font: 400 14px $font3;
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            color: #222;
+            opacity: .5;
+        }
+        span {
+            border: 1px solid #222;
+            background: transparent;
+        }
+    }
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: calc(50% - 130px);
+        width: 727px;
+    }
+    &__last {
+        margin: 70px 0 0;
+        display: grid;
+        grid-template-columns: 100px auto;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 100%;
+        }
+        p {
+            font: 700 50px / 1.1 $third-family;
+            color: #313131;
+            span {
+                color: #ff9549;
+            }
+        }
+    }
+}

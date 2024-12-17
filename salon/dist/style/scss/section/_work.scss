@@ -1,0 +1,38 @@
+@use '../component/variables' as *;
+
+.work {
+    padding: 70px 0;
+    &__wrapper {
+        margin: 54px 0 0;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .step {
+        &__item {
+            width: calc(100% / 3 - 30px);
+        }
+        &__title {
+            gap: 20px;
+            img {
+                order: -1;
+            }
+        }
+        &__num {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 57px;
+            height: 57px;
+            border-radius: 0 20px;
+            box-shadow: 0 4px 4px 0 rgba(105, 105, 105, 0.25);
+            background: #ff9549;
+            font: 700 27px / 1 $font-family;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

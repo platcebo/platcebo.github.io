@@ -99,3 +99,21 @@
     }
     
 }
+
+@media (max-width: 1200px) {
+    .timetable {
+        &__line {
+            display: none;
+        }
+        &__row {
+            grid-template-columns: 1fr 1fr;
+            row-gap: 110px;
+        }
+        &__item {
+            &::before {
+                bottom: calc(100% + 40px);
+                left: -10px;
+            }
+        }
+    }
+}

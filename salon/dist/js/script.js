@@ -21,6 +21,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    var swiper = new Swiper('.montage__slider .swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,  
+        loop: true,
+        navigation: {
+            nextEl: ".montage__slider .swiper-button-next",
+            prevEl: ".montage__slider .swiper-button-prev",
+        },
+    });
+
+    let expSwiper = document.querySelectorAll(".exp__block .exp__slider"),
+        expNext = document.querySelectorAll(".exp__block .swiper-button-next"),
+        expprev = document.querySelectorAll(".exp__block .swiper-button-prev");
+
+    for(let i = 0; i < expSwiper.length; i++) {
+        var swiper = new Swiper(expSwiper[i], {
+            slidesPerView: 1,
+            spaceBetween: 20,  
+            navigation: {
+                nextEl: expNext[i],
+                prevEl: expprev[i],
+            },
+        });
+    }
+
+
     let drop = document.querySelectorAll('.drop'),
         dropBtn = document.querySelectorAll('.drop__btn');
 
@@ -40,4 +66,15 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    let select = document.querySelectorAll('.catalog__form_select select'),
+        selectText = document.querySelectorAll('.catalog__form_select p');
+
+    if (select !== null) {
+        select.forEach((item, i)=>{
+            selectText[i].innerHTML = item.value
+            item.addEventListener('change', ()=>{
+                selectText[i].innerHTML = item.value
+            })
+        })
+    }
 })
