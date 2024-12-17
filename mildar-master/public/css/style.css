@@ -17377,10 +17377,10 @@ margin: 0;
 color: #2f2d2f;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1599px) {
   .new-cheese__info {
     top: 130px;
-    left: 170px;
+    left: 210px;
   }
   .new-cheese__block .container-fluid {
     padding: 100px 200px 100px;
@@ -17400,7 +17400,7 @@ color: #2f2d2f;
     width: 600px;
   }
   .cheese-desc {
-    top: 90px;
+    top: 50px;
     height: 570px;
     left: 580px;
   }
@@ -17440,6 +17440,12 @@ color: #2f2d2f;
   }
   .new-cheese__info {
     top: 190px;
+    left: 190px;
+    width: 330px;
+  }
+  .new-cheese__info p {
+    font-size: 36px;
+
   }
 }
 
@@ -17450,6 +17456,10 @@ color: #2f2d2f;
   .new-cheese__info {
     left: 80px;
     top: 150px;
+    width: 392px;
+  }
+  .new-cheese__info p {
+    font-size: 48px;
   }
   .cheese-desc {
     left: 450px;
