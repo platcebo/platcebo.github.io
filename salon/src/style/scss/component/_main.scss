@@ -39,3 +39,20 @@ body {
         filter: brightness(80%);
     }
 }
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 32px;
+        text-align: left;
+        span,
+        strong {
+            font-size: 32px;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .container {
+        padding: 0 10px;
+    }
+}

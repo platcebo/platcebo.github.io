@@ -36,3 +36,28 @@
         }
     }
 }
+
+@media (max-width: 1024px) {
+    .work {
+        &__wrapper {
+            gap: 20px
+        }
+        .step__item {
+            width: calc(50% - 10px);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .work {
+        &__wrapper {
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            overflow-x: auto;
+        }
+        .step__item {
+            width: 383px;
+            min-width: 383px;
+        }
+    }
+}

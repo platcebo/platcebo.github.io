@@ -70,3 +70,34 @@
         }
     }
 }
+
+@media (max-width: 1024px) {
+    .guar {
+        &__row {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        &__list {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .guar {
+        h2 {
+            text-align: center;
+        }
+        &__row {
+            grid-template-columns: 1fr;
+            p {
+                font-size: 24px;
+            }
+        }
+        &__subtitle {
+            font-size: 24px;
+        }
+        &__list {
+            grid-template-columns: 1fr;
+        }
+    }
+}

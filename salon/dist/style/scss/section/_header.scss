@@ -50,3 +50,48 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .header {
+        padding: 30px 0;
+        background: url('../../img/header_bg_mob.jpg') center no-repeat;
+        background-size: cover;
+        h1 {
+            font-size: 34px;
+            span {
+                font-size: 34px;
+            }
+        }
+        &__text {
+            margin: 20px 0 0;
+            font-size: 24px;
+        }
+        &__dir {
+            grid-template-columns: 1fr 1fr;
+            &_pers {
+                width: 100%;
+            }
+            &_sign {
+                width: 150px;
+            }
+            p {
+                font-size: 14px; 
+                &+p {
+                    margin: 2px 0 0;
+                    font: 400 22px $second-family; 
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .header {
+        &__dir {
+            grid-template-columns: 1fr;
+            &_pers {
+                order: 2;
+            }
+        }
+    }
+}

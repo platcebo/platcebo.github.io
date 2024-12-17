@@ -65,3 +65,38 @@
         color: #6b6b6b;
     }
 }
+
+@media (max-width: 1200px) {
+    .achiev {
+        &__wrapper {
+            grid-template-columns: 1fr 250px 2fr;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .achiev {
+        &__block {
+            padding-bottom: 70px;
+        }
+        &__wrapper {
+            grid-template-columns: 1fr;
+            gap: 70px
+        }
+        &__row {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .achiev {
+        &__row,
+        &__col {
+            grid-template-columns: 1fr;
+        }
+        &__item_full {
+            grid-column: auto;
+        }
+    }
+}

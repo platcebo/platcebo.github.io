@@ -141,3 +141,30 @@
         z-index: -1;
     }
 }
+
+@media (max-width: 768px) {
+    .consul {
+        h2 {
+            font-size: 34px;
+        }
+        &__subtitle {
+            font-size: 24px;
+            margin: 10px 0 0;
+        }
+        &__link {
+            grid-template-columns: 1fr;
+            max-width: 200px;
+        }
+        &__row {
+            margin: 35px 0 0;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            max-width: 306px;
+        }
+        &__bg {
+            left: auto;
+            right: -150px;
+            width: 400px;
+        }
+    }
+}

@@ -46,3 +46,26 @@
         display: block;
     }
 }
+
+@media (max-width: 1024px) {
+    .care {
+        &__wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .care {
+        &__subtitle {
+            font-size: 24px;
+            text-align: left;
+        }
+        &__name {
+            font-size: 44px;
+        }
+        &__text {
+            font-size: 24px;
+        }
+    }
+}

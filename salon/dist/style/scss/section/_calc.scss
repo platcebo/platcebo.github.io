@@ -43,6 +43,7 @@
         border-bottom: 1px solid #fff; 
         font: 400 16px / 1.5625 $font3;
         color: #fff;
+        width: 100%;
     }
     &__file {
         position: relative;
@@ -75,5 +76,18 @@
     }
     .btn__blue {
         width: 192px;
+    }
+}
+
+@media (max-width: 768px) {
+    .calc {
+        &__row {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            max-width: 300px;
+            .btn__blue {
+                width: 100%;
+            }
+        }
     }
 }

@@ -4,5 +4,14 @@
     padding: 70px 0 0;
     &__bg {
         margin: -112px 0 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px){
+    .order {
+        &__bg {
+            margin: 0;
+        }
     }
 }

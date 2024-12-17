@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     for(let i = 0; i < produceSwiper.length; i++) {
         var swiper = new Swiper(produceSwiper[i], {
-            slidesPerView: 3,
-            spaceBetween: 16,  
+            slidesPerView: 1,
+            spaceBetween: 25,  
             navigation: {
                 nextEl: produceNext[i],
                 prevEl: produceprev[i],
@@ -18,6 +18,14 @@ document.addEventListener('DOMContentLoaded', function() {
               el: ".produce__block .swiper-pagination",
             },
             watchSlidesProgress: true,
+            breakpoints: {
+                1025: {
+                  slidesPerView: 3,
+                },
+                769: {
+                    slidesPerView: 2,
+                }
+            }
         });
     }
 
@@ -75,6 +83,15 @@ document.addEventListener('DOMContentLoaded', function() {
             item.addEventListener('change', ()=>{
                 selectText[i].innerHTML = item.value
             })
+        })
+    }
+
+    let navHum = document.querySelector('.nav__hum'),
+        nav = document.querySelector('.nav');
+
+    if(nav !== null) {
+        navHum.addEventListener('click', ()=>{
+            nav.classList.toggle('active')
         })
     }
 })

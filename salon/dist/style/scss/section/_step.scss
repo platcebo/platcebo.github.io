@@ -112,3 +112,38 @@
         }
     }
 }
+
+@media (max-width: 1024px) {
+    .step {
+        &__wrapper {
+            grid-template-columns: 1fr 1fr;
+        }
+        &__phone {
+            grid-column: 1/3;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .step {
+        padding: 50px 0 0;
+        &__wrapper {
+            margin: 24px -19px 0;
+            padding: 0 19px;
+            display: flex;
+            gap: 7px;
+            overflow-x: auto;
+        }
+        &__item {
+            width: 290px;
+            min-width: 290px;
+        }
+        &__phone {
+            width: 586px;
+            min-width: 586px;
+        }
+        .nav__baner {
+            display: grid;
+        }
+    }
+}

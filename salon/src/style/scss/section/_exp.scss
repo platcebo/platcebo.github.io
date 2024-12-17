@@ -109,3 +109,42 @@
         right: 0;
     }
 }
+
+@media (max-width: 768px) {
+    .exp {
+        h2 {
+            text-align: center;
+        }
+        &__subtitle {
+            font-size: 24px;
+        }
+        &__title {
+            h3,
+            p {
+                font-size: 24px;
+            }
+        }
+        &__block {
+            padding: 0;
+        }
+        .swiper-button-next {
+            right: -10px;
+        }
+        .swiper-button-prev {
+            left: -10px;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .exp {
+        &__title {
+            display: flex;
+            justify-content: flex-start;
+            &::before,
+            &::after {
+                content: none;
+            }
+        }
+    }
+}
