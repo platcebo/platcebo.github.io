@@ -16,11 +16,11 @@ body
             width: 100%
     .container
         display: flex
-        justify-content: space-between
+        justify-content: flex-start
         align-items: center
     a
         font-weight: 400
-        font-size: 24px
+        font-size: 20px
         color: #000
         display: block
         transition: all .3s
@@ -41,14 +41,47 @@ body
         grid-template-columns: 48px 48px
         max-width: max-content
         gap: 10px
+    &__form 
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 10px
+        width: 350px
+        margin: 0 20px 0 auto
+        input 
+            position: relative
+            width: 100%
+            box-sizing: border-box
+            border-radius: 20px
+            border: 1px solid #000
+            padding: 5px 10px
+            font-family: "Unbounded", serif
+            font-size: 12px
+            font-weight: 400
+        button 
+            grid-column: 1/3
+            border: 1px solid #000
+            padding: 5px 10px
+            font-family: "Unbounded", serif
+            font-size: 12px
+            font-weight: 400
+            border-radius: 20px
+            background: #000
+            transition: all .3s
+            color: #fff
+            &:hover
+                background: transparent
+                color: #000
+
 
 .header
-    padding: 240px 0 155px
+    padding: 50px 0 50px
     background: url('../img/header_bg.png') right top no-repeat
     background-size: cover
     h1
         font-weight: 600
         font-size: 80px
+        font-style: italic
+        text-shadow: 0 0 20px #fff
         span
             display: block
             padding: 0 0 0 80px
@@ -57,23 +90,26 @@ body
         max-width: 600px
         display: grid
         grid-template-columns: 1fr 1fr 1fr
-        background: #000
         a
+            background: #fff
             display: flex
             height: 130px
             justify-content: center
             align-items: center
             padding: 20px
-            box-shadow: inset 0px 0px 15px 0px #ffff
-            color: #fff
+            box-shadow: inset 0px 0px 15px 0px #000
+            color: #000
             font-size: 18px
             font-weight: 200
+            transition: all .3s
+            &:hover
+                background: #e3e3e3
 
 .info
-    padding: 100px 0
+    padding: 60px 0
     position: relative
     h2
-        font-size: 80px
+        font-size: 50px
         font-weight: 400
         transition: all .3s
         color: #000
@@ -82,8 +118,8 @@ body
         width: 100%
         p
             color: #000
-            font-size: 35px
-            font-weight: 400
+            font-size: 20px
+            font-weight: 300
             span
                 color: #ff0000
     &__bg
@@ -95,9 +131,9 @@ body
         display: none
 
 .har
-    padding: 100px 0
+    padding: 60px 0
     h2
-        font-size: 80px
+        font-size: 50px
         font-weight: 400
         transition: all .3s
         color: #000
@@ -117,20 +153,20 @@ body
             object-fit: contain
             display: block
     &__name
-        font-size: 25px
+        font-size: 20px
         text-align: center
         font-weight: 600
         font-style: italic
     &__text
         margin: 15px 0 0
-        font-size: 20px
+        font-size: 16px
         font-weight: 300
         text-align: center
 
 .catalog
-    padding: 100px 0
+    padding: 60px 0
     a
-        font-size: 80px
+        font-size: 50px
         font-weight: 400
         transition: all .3s
         color: #000
@@ -168,13 +204,18 @@ body
     .container
         padding: 0 10px
     .nav
-        a
-            font-size: 25px
-        &__list
-            a
-                font-size: 20px
+        .container 
+            flex-wrap: wrap
+            gap: 20px
+        &__logo
+            margin: 0 auto 0 0
+        &__form
+            margin: 0
+            width: 100%
+            order: 2
+            grid-template-columns: 170px 170px
+            justify-content: center
     .header
-        padding: 100px 0
         &__link
             grid-template-columns: 1fr
             max-width: 250px
@@ -221,6 +262,8 @@ body
 @media ( max-width: 768px )
     .nav
         padding: 20px 0 
+        &__logo
+            margin: 0
         .container
             flex-direction: column
         &__list
@@ -232,6 +275,10 @@ body
             font-size: 16px
         &__soc
             margin: 10px auto 0
+        &__form 
+            grid-template-columns: 170px
+            button
+                grid-column: auto
     .header
         h1
             font-size: 43px
@@ -245,15 +292,20 @@ body
                 height: 100px
                 font-size: 16px
     .info
-        padding: 50px 0
+        padding: 30px 0
         h2
             font-size: 28px
+        &__text 
+            p
+                font-size: 16px
     .har
+        padding: 30px 0
         h2
             font-size: 28px
-        &__name,
+        &__name
+            font-size: 18px
         &__text
-            font-size: 20px
+            font-size: 16px
         &__item
             gap: 10px
             align-items: start
@@ -262,8 +314,9 @@ body
                 width: 50px
                 height: 50px
     .catalog
+        padding: 30px 0
         a
-            font-size: 35px
+            font-size: 28px
     .footer
         &__link
             a
