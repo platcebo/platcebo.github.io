@@ -35,7 +35,7 @@
         &__block {
             margin: 70px 0 0;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 406px 1fr;
             gap: 30px;
             padding: 40px;
             border-radius: 20px;
@@ -177,6 +177,18 @@
             }
             &__text {
                 font: 400 34px / 1 $second-family;
+            }
+            &__mob {
+                display: flex;
+                flex-direction: column;
+                ul {
+                    order: -1;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 10px;
+                    li {
+                        grid-template-columns: 1fr;
+                    }
+                }
             }
         }
     }

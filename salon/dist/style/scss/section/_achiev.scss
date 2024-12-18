@@ -91,12 +91,36 @@
 
 @media (max-width: 768px) {
     .achiev {
+        padding: 50px 0;
+        // background: #373737;
+        position: relative;
+        z-index: 1;
+        // background: #373737, linear-gradient(180deg, rgba(55, 55, 55, 0) 0%, #373737 100%),url("../../img/achiev_img.jpg"), linear-gradient(360deg, rgba(255, 149, 73, 0.9) 0%, rgba(255, 149, 73, 0.9) 100%);
+        background-size: 800px;
+        background-position: center top;
+        background-repeat: no-repeat;
         &__row,
         &__col {
             grid-template-columns: 1fr;
         }
         &__item_full {
             grid-column: auto;
+        }
+        &__block {
+            padding: 0;
+            background: transparent;
+            box-shadow: none;
+        }
+        &__img {
+            display: none;
+            width: 850px;
+            height: 850px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+            background-blend-mode: overlay;
         }
     }
 }

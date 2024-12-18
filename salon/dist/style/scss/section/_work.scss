@@ -15,6 +15,8 @@
         }
         &__title {
             gap: 20px;
+            padding: 0 50px 0 20px;
+            grid-template-columns: 40px 1fr;
             img {
                 order: -1;
             }
@@ -33,6 +35,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+        &__text {
+            p {
+                max-width: 200px;
+            }
+            img {
+                width: 150px;
+                height: 150px;
+                right: 20px;
+                bottom: 20px;
+            }
         }
     }
 }

@@ -31,6 +31,7 @@
         padding: 30px;
         position: relative;
         z-index: 1;
+        overflow: hidden;
         img {
             width: 200px;
             height: 200px;
@@ -47,7 +48,7 @@
     &__num {
         box-shadow: 0 4px 4px 0 rgba(105, 105, 105, 0.25);
         background: #ff9549;
-        border-radius: 10px;
+        border-radius: 10px 0 10px 10px;
         width: 55px;
         height: 55px;
         position: absolute;
@@ -62,6 +63,7 @@
     &__name {
         font: 400 34px / 1 $second-family;
         color: #222;
+        padding: 0 30px 0 0;
         span {
             font: 700 34px / 1 $third-family;
         }
@@ -90,6 +92,7 @@
             gap: 10px;
             align-items: center;
             span {
+                margin: -1px 0 -1px -1px;
                 border-radius: 4px;
                 width: 60px;
                 height: 60px;
@@ -174,6 +177,7 @@
         &__num {
             top: 0;
             left: 0;
+            border-radius: 10px;
         }
         &__text {
             gap: 0

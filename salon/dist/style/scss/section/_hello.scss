@@ -5,6 +5,9 @@
     background: #373737;
     position: relative;
     z-index: 1;
+    &__mob {
+        display: none;
+    }
     h2 {
         color: #fff
     }
@@ -125,12 +128,34 @@
             right: 30px;
             position: absolute;
             width: 250px;
+            background: transparent;
+            padding: 0;
         }
         &__bg {
             width: 280px;
         }
         &__wrapper {
             margin: 100px 0 0;
+        }
+        &__mob {
+            display: block;
+            margin: 40px 0 0;
+            .hello {
+                &__result {
+                    position: relative;
+                    inset: auto;
+                    display: block;
+                    max-width: 100%;
+                    padding: 0 0 41px;
+                    border-bottom: 1px solid #ff9549;
+                    div {
+                        display: grid;
+                    }
+                }
+                &__do {
+                    display: block;
+                }
+            }
         }
     }
 }

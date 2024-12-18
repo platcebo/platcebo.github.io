@@ -61,6 +61,10 @@
                 border-radius: 8px;
                 opacity: 1;
                 background: #fff;
+                transition: all .3s;
+                &:hover {
+                    filter: brightness(80%);
+                }
                 &::after {
                     content: none;
                 }

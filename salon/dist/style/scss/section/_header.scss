@@ -67,9 +67,18 @@
             font-size: 24px;
         }
         &__dir {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
+            max-width: 390px;
+            padding: 0 0 0 240px;
+            position: relative;
             &_pers {
+                position: absolute;
+                left: 0;
+                // top: 50%;
+                // transform: translateY(-50%);
+                bottom: 0;
                 width: 100%;
+                max-width: 310px;
             }
             &_sign {
                 width: 150px;

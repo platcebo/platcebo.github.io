@@ -99,7 +99,8 @@
             width: 20px;
             height: 20px;
             border-radius: 3px;
-            background: #fff;
+            background: transparent;
+            border: 1px solid #ffffffb3;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -165,6 +166,11 @@
             left: auto;
             right: -150px;
             width: 400px;
+        }
+        &__check {
+            a {
+                color: #373737;
+            }
         }
     }
 }

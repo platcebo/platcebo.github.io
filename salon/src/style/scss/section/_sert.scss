@@ -17,6 +17,9 @@
             background: url(../../img/line_bg_wht.jpg) top left;
             background-size: 50px;
             z-index: -1;
+            mask-image: url('../../img/mask.png');
+            mask-size: auto 100%;
+            mask-repeat: repeat;
         }
     }
     h2 {
@@ -66,6 +69,7 @@
             margin: 0;
             input {
                 border-bottom: 1px solid #222;
+                color: #222;
             }
         }
         .btn__blue {
@@ -109,6 +113,9 @@
             color: #313131;
             span {
                 color: #ff9549;
+                br {
+                    display: none;
+                }
             }
         }
     }
@@ -139,7 +146,7 @@
 
 @media (max-width: 768px) {
     .sert {
-        padding: 0 0 50px;
+        padding: 20px 0 50px;
         h2 {
             font-size: 35px;
             span,
@@ -156,13 +163,30 @@
         &__last {
             grid-template-columns: 1fr;
             justify-content: center;
+            border-radius: 20px;
+            background: url(../../img/line_bg_wht.jpg) top left;
+            background-size: 50px;
+            display: block;
+            position: relative;
+            padding: 70px 20px 50px;
+            max-width: 100%;
             img {
                 width: 100px;
                 margin: 0 auto;
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translate(-50%, -50%);
             }
             p {
                 font-size: 34px;
                 text-align: center;
+                span {
+                    color: #313131;
+                    br {
+                        display: block;
+                    }
+                }
             }
         }
     }

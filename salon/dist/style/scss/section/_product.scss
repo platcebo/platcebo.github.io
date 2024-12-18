@@ -125,6 +125,7 @@
         &__wrapper {
             grid-template-columns: 1fr;
             img {
+                border: none;
                 &:nth-child(3) {
                     grid-column: auto;
                     grid-row: auto;

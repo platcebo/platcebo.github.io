@@ -23,6 +23,7 @@
         align-items: center;
         margin: 0 0 auto;
         min-height: 52px;
+        padding: 0 14px;
         img {
             width: 40px;
             height: 40px;
@@ -94,8 +95,9 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 25px;
-        margin: 40px 0 0;
+        margin: 40px auto 0;
         width: 100%;
+        max-width: 520px;
         p {
             font-weight: 700;
         }

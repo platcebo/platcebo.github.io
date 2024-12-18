@@ -46,6 +46,24 @@
         border-radius: 20px;
         background: #373737;
         padding: 40px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        &::before {
+            content: '';
+            display: block;
+            width: 483px;
+            height: 483px;
+            border-radius: 100%;
+            background: #2F2F2F;
+            z-index: -1;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            border: 60px solid #323232;
+            box-sizing: border-box
+        }
         h3 {
             font: 400 24px / 1.12 $second-family;
             text-align: center;
@@ -72,6 +90,10 @@
             left: 0;
             top: 50%;
             z-index: 5;
+            transition: all .3s;
+            &:hover {
+                filter: brightness(80%);
+            }
             img {
                 width: 100%;
             }
