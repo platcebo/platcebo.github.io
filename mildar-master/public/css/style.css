@@ -17602,3 +17602,14 @@ color: #2f2d2f;
     margin: 10px 0 0;
   }
 }
+
+.about__btn {
+  margin: 0 auto 110px;
+}
+
+@media (max-width: 1440px) {
+  .about__btn {
+    margin: 0 auto 60px;
+    display: block;
+  }
+}
