@@ -66,6 +66,10 @@
     }
 }
 
+.achiev-mob {
+    display: none;
+}
+
 @media (max-width: 1200px) {
     .achiev {
         &__wrapper {
@@ -91,6 +95,7 @@
 
 @media (max-width: 768px) {
     .achiev {
+        display: none;
         padding: 50px 0;
         // background: #373737;
         position: relative;
@@ -121,6 +126,59 @@
             transform: translateX(-50%);
             z-index: -1;
             background-blend-mode: overlay;
+        }
+    }
+    .achiev-mob {
+        display: block;
+        padding: 50px 0 0;
+        background: url('../../img/achiev-mob_bg.jpg') top center;
+        background-size: 800;
+        background-repeat: no-repeat;
+        background-color: #373737;
+        h2 {
+            font: 700 60px / 0.9 $third-family;
+            text-align: center;
+            color: #fff;
+        }
+        &__subtitle {
+            margin: 5px 0 0;
+            font: 700 24px / 0.9 $third-family;
+            text-align: center;
+            color: #fff;
+        }
+        &__wrapper {
+            padding: 0 0 40px;
+            margin: 450px 0 0;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 70px;
+            border-bottom: 1px solid #ff9549
+        }
+        .achiev {
+            &__item {
+                max-width: 230px;
+                &_full {
+                    max-width: 100%;
+                }
+                &::before {
+                    width: 150px;
+                    height: 150px;
+                    box-sizing: border-box  
+                }
+                &:nth-child(even) {
+                    margin: 0 0 0 auto;
+                }
+            }
+            &__name {
+                font: 700 37px / 0.9 $third-family;
+                color: #fff;
+            }
+            &__text {
+                font: 400 20px / 1.1 $font-family;
+                color: #fff;
+            }
         }
     }
 }
