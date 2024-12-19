@@ -428,7 +428,7 @@
             }
             &_item {
                 border-top: 1px solid #ffffff33;
-                padding: 20px 0 0;
+                padding: 20px 0 0 36px;
             }
         }
         &__follow {
@@ -564,6 +564,9 @@
             }
             &_logo {
                 grid-template-columns: 1fr;
+            }
+            &_item {
+                padding: 20px 0 0;
             }
         }
         &-mob {

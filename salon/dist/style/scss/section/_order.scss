@@ -6,12 +6,33 @@
         margin: -112px 0 0;
         width: 100%;
     }
+    &__mob {
+        display: none;
+    }
 }
 
 @media (max-width: 768px){
     .order {
         &__bg {
             margin: 0;
+        }
+        &__desc {
+            display: none;
+        }
+        &__mob {
+            display: block;
+            margin: -64px 0 0 -19px;
+            width: calc(100% + 38px);
+            max-width: 400px;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .order {
+        &__mob {
+            margin: -64px 0 0 -10px;
+            width: calc(100% + 10px);
         }
     }
 }

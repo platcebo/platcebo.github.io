@@ -163,6 +163,9 @@
         &__row {
             margin: 46px 0 0;
             grid-template-columns: 1fr;
+            .btn__blue {
+                padding: 17px;
+            }
         }
         .catalog__form_row {
             grid-column: auto;
@@ -194,6 +197,10 @@
                         display: block;
                     }
                 }
+                i {
+                    text-decoration: underline;
+                    text-decoration-skip-ink: none;
+                }
             }
         }
         &__mob {
@@ -224,6 +231,9 @@
                     max-width: 130px;
                 }
             }
+        }
+        .consul__check {
+            display: none;
         }
     }
 }

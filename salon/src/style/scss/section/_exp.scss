@@ -23,6 +23,9 @@
         grid-template-columns: 1fr auto auto 1fr;
         gap: 16px;
         align-items: center;
+        .produce__title_vol {
+            display: none;
+        }
         p {
             font: 400 32px / 0.9 $second-family;
             text-align: center;
@@ -123,9 +126,32 @@
             font-size: 24px;
         }
         &__title {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 12px;
+            &::before,
+            &::after {
+                content: none;
+            }
             h3,
             p {
                 font-size: 24px;
+                white-space: nowrap;
+            }
+            .produce__title_vol {
+                display: block;
+                width: 100%;
+                p {
+                    font-size: 20px;
+                    text-align: left;
+                }
+            }
+        }
+        &__img {
+            img {
+                height: 439px;
+                object-fit: cover;
             }
         }
         &__block {
@@ -136,19 +162,6 @@
         }
         .swiper-button-prev {
             left: -10px;
-        }
-    }
-}
-
-@media (max-width: 420px) {
-    .exp {
-        &__title {
-            display: flex;
-            justify-content: flex-start;
-            &::before,
-            &::after {
-                content: none;
-            }
         }
     }
 }

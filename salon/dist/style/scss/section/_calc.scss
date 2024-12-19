@@ -26,6 +26,9 @@
                 opacity: .7;
                 margin: 10px 0 0;
             }
+            br {
+                display: none;
+            }
         }
     }
     &__row {
@@ -81,13 +84,47 @@
 
 @media (max-width: 768px) {
     .calc {
+        background: url(../../img/calc_bg_mob.jpg) bottom right no-repeat;
+        background-size: cover;
         &__row {
             grid-template-columns: 1fr;
             gap: 30px;
             max-width: 300px;
             .btn__blue {
                 width: 100%;
+                font-size: 24px;
+                padding: 16px;
             }
+        }
+        h2 {
+            font-size: 34px;
+            span,
+            strong {
+                font-size: 34px;
+            }
+        }
+        &__text {
+            p {
+                font-size: 24px;
+                span {
+                    font-size: 24px;
+                }
+                br {
+                    display: block;
+                }
+            }
+        }
+        &__file {
+            justify-content: center;
+            grid-template-columns: 22px auto;
+            padding: 16px;
+            span {
+                font: 400 24px $second-family;
+            }
+        }
+        .consul__check a {
+            color: #373737;
+            opacity: .8;
         }
     }
 }

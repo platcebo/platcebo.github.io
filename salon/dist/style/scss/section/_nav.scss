@@ -1,12 +1,15 @@
 @use '../component/variables' as *;
 
+.nav-menu {
+    display: none;
+}
 .nav {
     background: #373737;
     position: relative;
     &__row {
         position: relative;
         z-index: 3;
-        padding: 10px 0;
+        padding: 1px 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -304,9 +307,11 @@
 @media (max-width: 768px) {
     .nav {
         &__flex {
+            padding: 15px 0;
             display: flex;
             gap: 30px;
-            justify-content: flex-start
+            justify-content: flex-start;
+            align-items: start;
         }
         &__soc {
             display: none;
@@ -522,6 +527,119 @@
             &.active {
                 img {
                     filter: none;
+                }
+            }
+        }
+    }
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        box-sizing: border-box;
+        padding: 15px 0 100px;
+        overflow-y: auto;
+        z-index: 40;
+        background: #373737;
+        &.active {
+            display: block;
+        }
+        .nav__hum {
+            position: relative;
+            border-color: #ff9549;
+            span {
+                opacity: 0;
+                background: #ff9549;
+            }
+            &::before,
+            &::after {
+                width: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+                background: #ff9549;
+            }
+            &::after {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+        &__row {
+            display: grid;
+            grid-template-columns: 89px 1fr 40px;
+            gap: 20px;
+            align-items: start;
+        }
+        &__sell {
+            margin: -15px 0 0;
+            width: 89px;
+            img {
+                width: 100%;
+            }
+        }
+        &__search {
+            position: relative;
+            input {
+                width: 100%;
+                box-sizing: border-box;
+                border-radius: 4px;
+                background: #f2f2f2;
+                padding: 11px 40px 11px 18px;
+                border: none;
+            }
+            a {
+                position: absolute;
+                right: 17px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        &__list {
+            margin: 18px 0 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4px;
+            .drop__btn,
+            a {
+                border-radius: 4px;
+                background: #222;
+                padding: 13px 20px;
+                display: block;
+                font: 400 30px / 1.1 $second-family;
+                color: #dbdbdb;
+            }
+            .drop__btn {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &::after {
+                    background: url(../../img/arrow_orange.svg) center no-repeat;
+                    width: 20px;
+                    height: 16px;
+                    object-fit: contain;
+                }
+            }
+            ol {
+                position: relative;
+                inset: auto;
+                max-width: 100%;
+                margin: 4px 0 0;
+                display: grid;
+                grid-template-columns: 1fr;
+                background: transparent;
+                display: none;
+                width: 100%;
+                &.active {
+                    display: grid;
+                }
+                a {
+                    border-radius: 0;
+                    background: #222 !important;
+                    padding: 5px 20px;
+                    display: block;
+                    font: 400 20px / 1.1 $second-family;
+                    color: #dbdbdb !important;
                 }
             }
         }

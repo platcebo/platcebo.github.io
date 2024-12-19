@@ -86,12 +86,14 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
-    let navHum = document.querySelector('.nav__hum'),
-        nav = document.querySelector('.nav');
+    let navHum = document.querySelectorAll('.nav__hum'),
+        nav = document.querySelector('.nav-menu');
 
     if(nav !== null) {
-        navHum.addEventListener('click', ()=>{
-            nav.classList.toggle('active')
+        navHum.forEach((item)=>{
+            item.addEventListener('click', ()=>{
+                nav.classList.toggle('active')
+            })
         })
     }
 })

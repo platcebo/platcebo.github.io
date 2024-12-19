@@ -274,12 +274,17 @@
             .btn__blue {
                 font-size: 24px;
                 padding: 17px;
+                margin: 20px 0 0;
             }
             &_row {
                 grid-template-columns: 1fr;
                 gap: 30px;
                 input {
                     text-align: left;
+                    padding: 0 0 16px;
+                    &::placeholder{
+                        color: #d9d9d9;
+                    }
                 }
             }
             &_name {

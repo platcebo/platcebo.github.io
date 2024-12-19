@@ -140,6 +140,26 @@
 @media (max-width: 768px) {
     .advant {
         padding: 50px 0;
+        h2 {
+            max-width: 250px;
+            text-align: center;
+            transform: translateY(-16px);
+            background: transparent;
+            position: relative;
+            z-index: 1;
+            &::before {
+                content: '';
+                display: block;
+                top: 0;
+                width: 130px;
+                height: 32px;
+                left: 50%;
+                transform: translateX(-50%);
+                position: absolute;
+                z-index: -1;
+                background: #f5f5f5;
+            }
+        }
         &__wrapper {
             padding: 0 10px 40px;
             grid-template-columns: 1fr 1fr;
@@ -154,6 +174,7 @@
                 padding: 0;
                 background: transparent;
                 box-shadow: none;
+                gap: 20px;
                 h2 {
                     font-size: 34px;
                     span,
@@ -172,7 +193,11 @@
                     }
                 }
                 ul {
-                    margin: 20px 0;
+                    margin: 0 0 20px;
+                }
+                .advant-will__img {
+                    width: 100%;
+                    max-width: 100%;
                 }
             }
             &__text {
@@ -188,6 +213,11 @@
                     li {
                         grid-template-columns: 1fr;
                     }
+                }
+                img {
+                    max-width: 336px;
+                    margin: 30px auto 0;
+                    transform: rotate(7deg);
                 }
             }
         }
