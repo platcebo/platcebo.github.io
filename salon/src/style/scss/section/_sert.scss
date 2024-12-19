@@ -120,6 +120,9 @@
                     display: none;
                 }
             }
+            a {
+                color: inherit
+            }
         }
     }
 }
@@ -202,7 +205,7 @@
                         display: block;
                     }
                 }
-                i {
+                a {
                     text-decoration: underline;
                     text-decoration-skip-ink: none;
                 }

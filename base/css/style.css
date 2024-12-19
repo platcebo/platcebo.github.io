@@ -125,6 +125,7 @@ body {
   color: #000;
   font-size: 18px;
   font-weight: 400;
+  text-align: center;
   transition: all 0.3s;
 }
 .header__link a:hover {
@@ -269,6 +270,9 @@ body {
     order: 2;
     grid-template-columns: 170px 170px;
     justify-content: center;
+  }
+  .nav__contact_wrapper {
+    margin: 0 auto;
   }
   .header__link {
     grid-template-columns: 1fr;
