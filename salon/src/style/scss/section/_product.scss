@@ -119,6 +119,10 @@
 @media (max-width: 768px) {
     .product {
         padding: 50px 0;
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
         &__subtitle {
             font-size: 24px;
             text-align: left;
@@ -140,6 +144,14 @@
                     grid-column: auto;
                 }
             }
+        }
+        &__title {
+            max-width: 320px;
+            margin: 40px 0 0;
+            order: 2;
+        }
+        &__row {
+            order: 3;
         }
     }
 }

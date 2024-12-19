@@ -47,6 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
         var swiper = new Swiper(expSwiper[i], {
             slidesPerView: 1,
             spaceBetween: 20,  
+            pagination: {
+                el: ".exp__block .swiper-pagination",
+              },
             navigation: {
                 nextEl: expNext[i],
                 prevEl: expprev[i],

@@ -148,15 +148,27 @@
         &__slider {
             padding: 20px;
         }
-        .swiper-button-next,
+        .swiper-button-next {
+            right: -5px;
+        }
         .swiper-button-prev {
-            display: none;
+            left: -5px;
         }
         &__text {
             font-size: 18px;
         }
         &__list p {
             font-size: 18px;
+        }
+        &__slide {
+            &_text {
+                display: none;
+            }
+        }
+        &__slider {
+            &::before {
+                bottom: -50px;
+            }
         }
     }
 }
