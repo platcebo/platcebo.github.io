@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Road</title>
+  <style>
+    @keyframes gradientAnimation {
+      0% {
+        stop-color: gray;
+      }
+      100% {
+        stop-color: blue;
+      }
+    }
+
+    /* Анимация для первого цвета градиента */
+    #paint0_linear_38_22795 stop:first-child {
+      animation: gradientAnimation 4s infinite alternate;
+    }
+
+    /* Анимация для второго цвета градиента */
+    #paint0_linear_38_22795 stop:last-child {
+      animation: gradientAnimation 4s infinite alternate;
+      animation-delay: 2s; /* Смещение для эффекта плавного перехода */
+    }
+
+    @keyframes moveGradient {
+      0% {
+        stop-color: gray;
+        offset: 0%;
+      }
+      100% {
+        stop-color: blue;
+        offset: 100%;
+      }
+    }
+
+    /* Анимация для первой границы */
+    #paint0_linear_38_22795 stop:first-child {
+      stop-color: gray;
+      animation: moveGradient 4s infinite alternate;
+    }
+
+    /* Граница синего цвета */
+    #paint0_linear_38_22795 stop:last-child {
+      stop-color: blue;
+      animation: moveGradient 4 alternate infinite;
+    }
+  </style>
+</head>
+<body>
+  <svg width="1112" height="2466" viewBox="0 0 1112 2466" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M559 0C559 59.5 537 62 492 62C263.928 62 102.293 62 67 62C10.5 62 1.5 98 1.5 112.5C1.5 127 7 164 67 164H1032.5C1094.5 164 1110.67 216.333 1111 242.5V300.5V543.5C1110.67 569.667 1094.5 622 1032.5 622H80C18 622 1.83333 674.333 1.5 700.5V786.25V872V997.5C1.83337 1023.67 18 1076 80 1076H1032.5C1094.5 1076 1110.67 1128.33 1111 1154.5V1183.5V1453C1110.67 1479.17 1094.5 1531.5 1032.5 1531.5H556.25H80C18 1531.5 1.83337 1583.83 1.5 1610L1.5 1852.5V1881.5C1.83337 1907.67 18 1960 80 1960H1032.5C1094.5 1960 1110.67 2012.33 1111 2038.5V2357.5V2386.5C1110.67 2412.67 1094.5 2465 1032.5 2465H80" 
+      stroke="url(#paint0_linear_38_22795)" stroke-width="2"/>
+    <defs>
+      <linearGradient id="paint0_linear_38_22795" x1="1.5" y1="1232.5" x2="1111" y2="1232.5" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="gray"/>
+        <stop offset="100%" stop-color="blue"/>
+      </linearGradient>
+    </defs>
+  </svg>
+</body>
+</html>

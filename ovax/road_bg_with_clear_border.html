@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Road with Clear Border</title>
+  <style>
+    @keyframes moveGradient {
+      0% {
+        stop-color: gray;
+        offset: 0%;
+      }
+      100% {
+        stop-color: blue;
+        offset: 100%;
+      }
+    }
+
+    /* Анимация для первой границы */
+    #paint0_linear_38_22795 stop:first-child {
+      stop-color: gray;
+      animation: moveGradient 4s infinite alternate;
+    }
+
+    /* Граница синего цвета */
+    #paint0_linear_38_22795 stop:last-child {
+      stop-color: blue;
+      animation: moveGradient 4 alternate infinite;
+    }
+</html>

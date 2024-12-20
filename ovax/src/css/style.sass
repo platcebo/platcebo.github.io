@@ -4496,3 +4496,295 @@ section
             grid-auto-rows: auto
         &__block
             padding: 20px
+
+.planned
+    &__title
+        margin: 100px 0 0
+        h2 
+            font: 600 40px $font-family
+            background: linear-gradient(90deg, #87aedb 0%, #c9e1ff 100%)
+            background-clip: text
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            margin: 10px 0 0
+        p
+            font: 600 16px $font-family
+            letter-spacing: 0.25em
+            text-transform: uppercase
+            color: #fff
+    &__wrapper
+        margin: 50px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 30px
+        align-items: start
+    &__text 
+        p
+            font: 400 20px / 1.25 $font-family
+            color: #fff
+            opacity: .6
+            margin: 20px 0 0
+        h3
+            font: 700 24px / 1.04167 $font-family
+            color: #fff
+    &__ban 
+        margin: 20px 0 0
+        border: 1px solid rgba(255, 255, 255, 0.1)
+        border-radius: 20px
+        backdrop-filter: blur(20px)
+        background: linear-gradient(17deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 50.5%, rgba(255, 255, 255, 0.05) 100%)
+        box-shadow: 0 0 0 2px hsla(0,0%,100%,.1),1px 0 0 1px hsla(0,0%,100%,.3)
+        padding: 20px
+        display: grid
+        grid-template-columns: 48px 1fr
+        gap: 10px
+        align-items: start
+        p
+            font: 400 20px / 1.25 $font-family
+            color: #fff
+            opacity: .6
+    &::before
+        content: ''
+        display: block
+        width: 100vw
+        max-width: 1338px
+        height: 1052px
+        top: 0px
+        left: 50%
+        transform: translate(-50%, -50%)
+        position: absolute
+        z-index: -1
+        background: url('../img/bg_ellipse.svg') center no-repeat
+        filter: blur(400px)      
+    .star-left
+        animation-delay: 4s
+        left: 200px
+        top: 0%
+    .star-right
+        animation-delay: 10s
+        right: 200px
+        left: auto
+        top: 50% 
+
+.road
+    z-index: 1
+    &__subtitle
+        font: 400 20px / 1.25 $font-family
+        text-align: center
+        color: #fff
+        opacity: .6
+        margin: 20px auto 0
+        max-width: 540px
+    &__start
+        margin: 40px auto 0
+        border: 1.50px solid rgba(255, 255, 255, 0.1)
+        border-radius: 100px
+        padding: 20px 30px
+        width: max-content
+        max-width: 100%
+        backdrop-filter: blur(20px)
+        background: linear-gradient(90deg, #87aedb 0%, #c9e1ff 100%)
+        font: 500 20px $font-family
+        text-align: center
+        color: #000
+    &__wrapper 
+        margin: 110px auto 0
+        max-width: calc( 100% - 100px )
+        display: grid
+        grid-template-columns: 1fr 
+        grid-template-rows: 415px 415px 415px 395px 464px
+        gap: 40px
+        // padding: 0 50px
+        position: relative
+    &__row 
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 20px
+        position: relative
+        &_dec
+            position: absolute
+            top: 90px
+            right: -26px
+            transform: scaleX(-1)
+            z-index: -1
+        &_year
+            position: absolute
+            left: -110px
+            top: 50%
+            transform: translateY(-50%) rotate(-90deg)
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 150px
+            p
+                font: 600 40px $font-family
+                text-align: center
+                background: linear-gradient(90deg, #87aedb 0%, #c9e1ff 100%)
+                background-clip: text
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+            svg
+                transform: rotate(90deg)
+        &:nth-child(even)
+            .road__row
+                &_year
+                    left: auto
+                    right: -110px
+                &_dec
+                    right: auto
+                    left: -26px
+                    transform: none
+    &__item 
+        padding: 30px
+        border-radius: 20px
+        &_num
+            border: 1px solid rgba(255, 255, 255, 0.1)
+            border-radius: 10px
+            width: 40px
+            height: 40px
+            backdrop-filter: blur(20px)
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%)
+            display: flex
+            justify-content: center
+            align-items: center
+        &_date
+            margin: 20px 0 0
+            font: 400 16px / 1.5625 $font-family
+            background: linear-gradient(90deg, #87aedb 0%, #c9e1ff 100%)
+            background-clip: text
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+        h3
+            margin: 10px 0 0
+            font: 700 20px / 1.25 $font-family
+            color: #fff
+        &_text
+            margin: 10px 0 0
+            font: 400 16px / 1.5625 $font-family
+            color: #fff
+            opacity: .6
+        &.active
+            border: 1px solid rgba(255, 255, 255, 0.1)
+            backdrop-filter: blur(20px)
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%)
+            .road__item
+                &_num
+                    background: linear-gradient(133deg, #c9e1ff 0%, #87aedb 100%)
+                    backdrop-filter: none
+                    border: none
+    &__line 
+        position: absolute
+        left: 40px
+        right: -50px
+        top: 50px
+        bottom: -90px
+        z-index: 3
+        &_color
+            height: 100%
+            svg
+                width: 100%
+                height: 100%
+                stroke-dasharray: 100
+                stroke-dashoffset: 100
+                // fill: none !important
+                path
+                    width: 100%
+                    height: 100%
+    &__bg
+        top: -110px
+        left: -50px
+        right: -50px
+        position: absolute
+        z-index: -1
+        &_gray
+            top: -110px
+            left: -50px
+            right: -50px
+            position: absolute
+    .animated-line 
+        stroke: #87AEDB
+        stroke-width: 2
+        stroke-dasharray: 5600
+        stroke-dashoffset: 10000
+        animation: drawLine 5s linear forwards
+    &::before
+        content: ''
+        display: block
+        width: 100vw
+        max-width: 1338px
+        height: 1052px
+        top: 0%
+        right: 100%
+        transform: translate(50%, 0%)
+        position: absolute
+        z-index: -1
+        background: url('../img/bg_ellipse.svg') center no-repeat
+        filter: blur(400px)  
+    &::after
+        content: ''
+        display: block
+        width: 100vw
+        max-width: 1338px
+        height: 1052px
+        bottom: 0%
+        left: 100%
+        transform: translate(-50%, 0%)
+        position: absolute
+        z-index: -1
+        background: url('../img/bg_ellipse.svg') center no-repeat
+        filter: blur(400px)    
+
+@keyframes drawLine 
+    0% 
+        stroke-dashoffset: 5600 
+    100% 
+        stroke-dashoffset: 0 
+
+@media ( max-width: 1150px )
+    .road
+        &__bg
+            display: none
+            &_gray
+                display: none
+        &__wrapper
+            grid-template-rows: auto
+
+@media ( max-width: 1024px )
+    .road
+        &__wrapper 
+            margin: 50px auto 0
+        &__row
+            grid-template-columns: 1fr 1fr
+            &:nth-child(even)
+                .road__item
+                    &:nth-child(6)
+                        order: -4
+                    &:nth-child(5)
+                        order: -3
+                    &:nth-child(4)
+                        order: -2
+                    &:nth-child(3)
+                        order: -1
+
+@media ( max-width: 600px )
+    .road
+        &__wrapper
+            max-width: 100%
+        &__row
+            grid-template-columns: 1fr
+            &_dec
+                display: none
+            &_year
+                position: relative
+                inset: auto !important
+                transform: none
+                width: 100%
+                justify-content: center
+                order: -10
+                svg
+                    display: none
+    .planned
+        &__wrapper
+            grid-template-columns: 1fr 
+        &__ban
+            grid-template-columns: 1fr
