@@ -1,0 +1,5938 @@
+$green: #00cc4e
+$red: #cb2727
+$hover: #ff7468
+$coral: #f0564a
+$blue: #3f7de5
+$black: #2c2c2c
+$dark-gray: #333
+$gray: #6f6f6f
+$stroke: #d9d9d9
+$bg: #f5f5f7
+$white: #fff
+$font-family: "Onest", sans-serif
+
+body
+    background: $bg
+    position: relative
+.container
+    padding: 0 48px
+.link
+    transition: all .3s
+    position: relative
+    overflow: hidden
+    display: block
+    span
+        transition: all .3s
+        display: block
+        position: relative
+    &::before
+        content: attr(data-content)
+        display: block
+        color: $hover
+        transition: all .3s
+        position: absolute
+        top: 0
+        left: 0
+        transform: translateY(100%)
+    &:hover
+        span
+            transform: translateY(-100%)
+        &::before
+            transform: translateY(0)
+.btn
+    &__blue
+        border: none
+        max-width: max-content
+        width: 100%
+        font-family: $font-family
+        font-weight: 500
+        font-size: 16px
+        line-height: 1.25
+        letter-spacing: 0.02em
+        text-transform: uppercase
+        transition: all .3s
+        display: block
+        padding: 0
+        position: relative
+        background: transparent
+        text-align: center
+        .norm
+            background: $coral
+            padding: 20px 32px
+            color: $white
+            transition: all .5s
+            display: block
+            position: relative
+            transform: translateY(0) rotateX(0)
+            opacity: 1
+        .hover
+            background: $hover
+            padding: 20px 32px
+            color: $white
+            transition: all .5s
+            display: block
+            position: absolute
+            inset: 0
+            transform: translateY(-50%) rotateX(90deg)
+            opacity: 0
+        &:hover
+            .norm
+                transform: translateY(50%) rotateX(90deg)
+                opacity: 0
+            .hover
+                transform: translateY(0) rotateX(0)
+                opacity: 1
+    &__wht
+        display: block
+        max-width: max-content
+        width: 100%
+        font-family: $font-family
+        font-weight: 500
+        font-size: 16px
+        line-height: 1.25
+        letter-spacing: 0.02em
+        text-transform: uppercase
+        transition: all .5s
+        padding: 0
+        background: transparent
+        border: none
+        position: relative
+        text-align: center
+        .norm
+            border: 1px solid $coral
+            padding: 20px 32px
+            background: transparent
+            color: $dark-gray
+            transition: all .5s
+            display: block
+            position: relative
+            transform: translateY(0) rotateX(0)
+            opacity: 1
+        .hover
+            background: $hover
+            border: 1px solid $hover
+            color: $white
+            padding: 20px 32px
+            transition: all .5s
+            display: block
+            position: absolute
+            inset: 0
+            transform: translateY(-50%) rotateX(90deg)
+            opacity: 0
+        &:hover
+            .norm
+                transform: translateY(50%) rotateX(90deg)
+                opacity: 0
+            .hover
+                transform: translateY(0) rotateX(0)
+                opacity: 1
+.element-animation
+    opacity: 0
+    transition: all 1s
+    transform: translateY(50%)
+.element-show
+    opacity: 1
+    transform: translateY(0)
+.input
+    position: relative
+    z-index: 1
+    &__error
+        position: absolute
+        top: calc( 100% + 2px )
+        left: 0
+        display: block
+        font-family: $font-family
+        font-weight: 400
+        font-size: 12px
+        line-height: 1.35
+        color: $red
+        transition: all .3s
+        opacity: 0
+        &.error
+            opacity: 1
+    &.wrapper_error
+        .input__error
+            opacity: 1
+    p
+        font-family: $font-family
+        font-weight: 400
+        font-size: 18px
+        line-height: 1.35
+        color: $gray
+        position: absolute
+        left: 0
+        top: 0
+        transition: all .3s
+        z-index: -1
+        span
+            color: $red
+    input,
+    textarea
+        padding: 0 0 16px
+        border: none
+        background: transparent
+        border-bottom: 1px solid $stroke
+        width: 100%
+        box-sizing: border-box  
+        transition: all .3s
+        font-family: $font-family
+        font-weight: 400
+        font-size: 18px
+        line-height: 1.35
+        color: $black
+        border-radius: 0
+        &:hover
+            border-bottom: 1px solid $hover
+            &+p
+                color: $black
+        &:not(:placeholder-shown),
+        &:focus
+            border-bottom: 1px solid $coral
+            &+p
+                color: $gray
+                transform: translateY(-100%)
+                font-size: 12px
+        &.error
+            border-bottom: 1px solid $red
+    textarea
+        position: relative
+        resize: vertical
+        height: 40px
+        &::-webkit-resizer
+            background: url('../img/resize.svg') center no-repeat
+            width: 24px
+            height: 24px
+            position: absolute
+            bottom: 0 
+            right: 0
+.itc-select
+    position: relative
+    z-index: 2
+    svg
+        position: absolute
+        top: 0
+        right: 0
+        width: 24px
+        height: 24px
+        transform: rotate(90deg)
+        z-index: -1
+        transition: all .3s
+        path
+            transition: all .3s
+            stroke: $dark-gray
+    &.itc-select_show
+        svg
+            transform: rotate(-90deg)
+    &__toggle
+        padding: 0 0 16px
+        border: none
+        background: transparent
+        border-bottom: 1px solid $stroke
+        width: 100%
+        box-sizing: border-box  
+        transition: all .3s
+        font-family: $font-family
+        font-weight: 400
+        font-size: 18px
+        line-height: 1.35
+        color: $black
+        border-radius: 0
+        font-style: normal
+        &:hover
+            border-bottom: 1px solid $hover
+            color: $black
+            &+svg
+                path
+                    stroke: $hover
+        &::after
+            content: none
+        &::placeholder
+            color: $gray
+    &__dropdown
+        border-radius: 0
+        border: 1px solid $stroke
+        z-index: 1
+        &::-webkit-scrollbar 
+            width: 4px
+        &::-webkit-scrollbar-track 
+            background: $bg
+        &::-webkit-scrollbar-thumb 
+            background: $stroke
+            border-radius: 100px
+    &__option
+        padding: 10px 16px
+        font-family: $font-family
+        font-weight: 400
+        font-size: 18px
+        line-height: 1.35
+        color: $dark-gray
+        &::after
+            content: none
+        &_selected,
+        &:hover
+            background: $hover
+            color: $white
+
+.nav
+    padding: 0
+    position: relative
+    overflow: hidden
+    &__hum
+        display: none
+    .container
+        padding: 24px 48px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+    &__logo
+        display: block
+        max-width: 146px
+        img
+            width: 100%
+    ul
+        margin: 0 auto 0 48px
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 24px
+        a
+            font-family: $font-family
+            font-weight: 500
+            font-size: 18px
+            line-height: 1.25
+            letter-spacing: 0.02em
+            text-transform: uppercase
+            color: $dark-gray
+            transition: all .3s
+            position: relative
+            overflow: hidden
+            display: block
+            span
+                transition: all .3s
+                display: block
+                position: relative
+            &::before
+                content: attr(data-content)
+                display: block
+                font-family: $font-family
+                font-weight: 500
+                font-size: 18px
+                line-height: 1.25
+                letter-spacing: 0.02em
+                text-transform: uppercase
+                color: $hover
+                transition: all .3s
+                position: absolute
+                top: 0
+                left: 0
+                transform: translateY(100%)
+            &:hover
+                span
+                    transform: translateY(-100%)
+                &::before
+                    transform: translateY(0)
+    &__phone
+        a
+            font-family: $font-family
+            font-weight: 400
+            font-size: 24px
+            line-height: 1.35
+            text-transform: uppercase
+            color: $dark-gray
+            transition: all .3s
+            display: block
+            &:hover
+                color: $hover
+        p
+            display: none
+            margin: 4px 0 0 auto
+            font-family: $font-family
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.35
+            color: $gray
+            text-align: right
+            width: max-content
+            &::before
+                text-align: right
+    &__soc
+        margin: 0 12px 0 
+        display: grid
+        grid-template-columns: 60px 60px 60px
+        gap: 12px
+        a
+            display: block
+            width: 100%
+            height: 60px
+            background: $white
+            transition: all .3s
+            display: flex
+            align-items: center
+            justify-content: center
+            svg
+                width: 100%
+                path
+                    transition: all .3s
+                    fill: $dark-gray
+                    stroke: none
+                g
+                    path
+                        stroke: $dark-gray
+                        fill: none
+            &:hover
+                box-shadow: 0 25px 55px 0 rgba(93, 92, 96, 0.1), 0 100px 100px 0 rgba(93, 92, 96, 0.09), 0 225px 135px 0 rgba(93, 92, 96, 0.05), 0 400px 160px 0 rgba(93, 92, 96, 0.01)
+                background: $hover
+                svg
+                    path
+                        fill: white
+                        stroke: none
+                    g
+                        path
+                            stroke: white
+                            fill: none
+
+.header
+    padding: 0 0 60px
+    &__slider
+        position: relative
+    &__slide
+        position: relative
+        padding: 32px 
+        z-index: 1
+        height: calc( 100vh - 220px )
+        display: flex
+        align-items: center
+        min-height: 600px
+    &__bg
+        position: absolute
+        inset: 0
+        object-fit: cover
+        width: 100%
+        height: 100%
+        z-index: -1
+        filter: brightness(70%)
+    h1,
+    h2
+        font-family: $font-family
+        font-weight: 500
+        font-size: 70px
+        line-height: 1.15
+        text-transform: uppercase
+        color: $white
+    &__subtitle
+        margin: 12px 0 0
+        font-family: $font-family
+        font-weight: 400
+        font-size: 24px
+        line-height: 1.35
+        color: $white
+    &__info
+        max-width: 840px
+        width: 100%
+    &__plan
+        position: absolute
+        background: $white
+        bottom: 32px
+        right: 32px
+        width: 100%
+        max-width: 296px
+        padding: 32px
+        z-index: 5
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.35
+            color: $dark-gray
+            text-align: center
+        &_logo
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr 1fr
+            gap: 24px
+            margin: 16px 0 0
+        img
+            width: 100%
+    &__func
+        position: absolute
+        bottom: 32px
+        left: 32px
+        display: grid
+        grid-template-columns: 48px auto 44px auto 48px
+        gap: 12px
+        z-index: 2
+        align-items: center
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 24px
+            line-height: 1.35
+            color: $white
+        &.dis
+            display: none
+    &__arrow
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 48px
+        height: 48px
+        border-radius: 100%
+        border: 1px solid $white
+        position: relative
+        inset: auto
+        margin: 0
+        transition: all .3s
+        &.swiper-button-disabled
+            opacity: 1
+        svg
+            width: 24px
+            height: 24px
+        &::after
+            content: none
+        &:hover
+            background: $hover
+            border: 1px solid $hover
+    &__prev
+        transform: rotate(180deg)
+    &__pag
+        position: relative
+        inset: auto
+        margin: 0
+        width: 100%
+        height: 1px
+        background: #ffffff80
+        span
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            height: 100%
+            background: #fff
+            width: 0%
+        &.active
+            span
+                width: 100%
+                transition: all 5s linear
+    &__row
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 24px
+    &__item
+        background: $white
+        padding: 32px
+        display: grid
+        grid-template-columns: 96px 1fr
+        align-items: center
+        gap: 16px
+        div
+            background: $bg
+            width: 100%
+            height: 96px
+            display: flex
+            justify-content: center
+            align-items: center
+        svg
+            width: 48px
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 20px
+            line-height: 1.35
+            color: $dark-gray
+            br
+                display: none
+    .modal-video__play
+        position: relative
+        inset: auto
+        width: 100%
+        max-width: 216px
+        transform: none
+        border-radius: 0
+        height: 60px
+    &__btn
+        margin: 32px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 16px
+        button
+            span
+                height: 60px
+    
+.project
+    padding: 210px 0 60px
+    margin: -150px 0 0
+    z-index: 2
+    &__desktop
+        display: none
+    &__mob
+        display: flex
+        justify-content: flex-start
+        align-items: end
+        gap: 6px
+    &__title
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 24px
+        align-items: center
+    &__tab
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        flex-wrap: wrap
+        gap: 24px
+        &_item,
+        a
+            background: $white
+            padding: 20px 0
+            font-family: $font-family
+            font-weight: 500
+            font-size: 16px
+            line-height: 1.25
+            letter-spacing: 0.02em
+            text-transform: uppercase
+            color: $dark-gray
+            cursor: pointer
+            text-align: center
+            transition: all .3s
+            width: calc( 100% / 3 - 16px )
+            &.active,
+            &:hover
+                background: $coral
+                color: $white
+    &__wrapper
+        margin: 32px 0 0
+        display: none
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 24px
+        &.active
+            display: grid
+            &+.btn__wht
+                display: block
+        &+.btn__wht
+            margin: 32px auto 0
+            display: none
+    &__item
+        position: relative
+        // padding: 0 0 125px
+        overflow: hidden
+        transform: translateY(30%)
+        &.element-show
+            transform: translateY(0)
+        &.hover
+            .project
+                &__info
+                    transform: translateY(0)
+                &__dop
+                    opacity: 1
+        h3
+            font-family: $font-family
+            font-weight: 500
+            font-size: 42px
+            line-height: 1.1
+            color: $dark-gray
+            position: relative
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+    &__pic
+        display: block
+        width: 100%
+        height: 350px
+        object-fit: cover
+    &__info
+        // position: absolute
+        position: relative
+        bottom: 0
+        background: $white
+        // transform: translateY(calc( 100% - 125px ))
+        width: 100%
+        transition: all .3s
+        &_header
+            // padding: 32px 32px 24px
+            padding: 32px 32px 0
+            // border-bottom: 1px solid $stroke
+            display: grid
+            grid-template-columns: 1fr auto
+            gap: 12px
+            align-items: start
+            // display: none
+        &_body
+            padding: 24px 32px 32px 
+            *
+                display: none
+            .btn__blue
+                max-width: 100%
+                margin: 32px 0 0
+                display: block
+                margin: 0
+    &__name
+        display: grid
+        grid-template-columns: auto 1fr
+        align-items: end
+        p
+            margin: 0 0 0 12px
+            font-family: $font-family
+            font-weight: 400
+            font-size: 24px
+            line-height: 1.35
+            color: $gray
+            white-space: nowrap
+    &__price
+        font-family: $font-family
+        font-weight: 500
+        font-size: 28px
+        line-height: 1.1
+        text-align: right
+        color: $dark-gray        
+    &__sale
+        font-family: $font-family
+        font-weight: 400
+        font-size: 18px
+        line-height: 1.35
+        text-decoration: line-through
+        color: $gray
+        opacity: 0.7
+    &__dop
+        margin: 12px 0 0
+        display: flex
+        flex-wrap: wrap
+        gap: 12px
+        align-items: center
+        // opacity: 0
+        transition: all .3s
+        div
+            display: grid
+            grid-template-columns: 24px 1fr
+            gap: 8px
+            align-items: center
+        img
+            width: 100%
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.35
+            color: $gray
+            white-space: nowrap
+    &__var
+        font-family: $font-family
+        font-weight: 400
+        font-size: 24px
+        line-height: 1.35
+        color: $dark-gray
+    &__block
+        margin: 16px 0 0
+        // display: grid
+        display: none
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+        gap: 16px
+        a
+            display: block
+            cursor: auto
+            pointer-events: none
+        img
+            width: 100%
+            height: 120px
+            object-fit: cover
+        p
+            margin: 8px 0 0
+            font-family: $font-family
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.35
+            color: $gray
+    &__more
+        margin: 32px auto 0
+        display: block
+    &__wind
+        position: absolute
+        top: 0
+        left: 0
+        background: $coral
+        padding: 24px
+        max-width: 146px
+        h3
+            font-family: $font-family
+            font-weight: 500
+            font-size: 42px
+            line-height: 1.1
+            text-align: center
+            color: $white
+            margin: 8px 0 0
+        p
+            opacity: .7
+            font-family: $font-family
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.35
+            text-align: center
+            color: $white
+
+.pref
+    padding: 210px 0 60px
+    margin: -150px 0 0
+    &__mob
+        display: none
+    &__block
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 24px
+    &__prev
+        img
+            width: 100%
+            // height: 662px
+            min-height: 100%
+            object-fit: cover
+    &__info
+        background: $white
+        padding: 48px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: center
+        transform: translateY(30%)
+        &.element-show
+            transform: translateY(0)
+        .btn__blue
+            margin: 32px 0 0
+        p
+            margin: 10px 0 0
+            font-family: $font-family
+            font-weight: 400
+            font-size: 20px
+            line-height: 1.35
+            color: $dark-gray
+    &__row
+        margin: 24px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 
+        img
+            width: 100%
+    
+.program
+    padding: 60px 0
+    &__row
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 24px
+        margin: 32px 0 0
+        position: relative
+    &__item
+        position: relative
+        height: 445px
+        z-index: 1
+        &_wrapper
+            opacity: 1 !important
+            .btn__wht
+                max-width: 100%
+                margin: 12px 0 0
+            &.element-animation
+                transform: none
+            &.element-show
+                // transform: translateY(calc( -100% - 24px ))
+                opacity: 1
+    h4
+        font-family: $font-family
+        font-weight: 500
+        font-size: 32px
+        line-height: 1.1
+        color: $white
+        position: absolute
+        top: 32px
+        left: 32px
+    &__bg
+        position: absolute
+        inset: 0
+        object-fit: cover
+        z-index: -1
+        width: 100%
+        height: 100%
+    &__info
+        position: absolute
+        bottom: 0
+        right: 0
+        width: 174px
+        background: $coral
+        padding: 24px
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 20px
+            line-height: 1.35
+            text-align: center
+            color: $white
+            opacity: .7
+        h2
+            font-family: $font-family
+            font-weight: 500
+            font-size: 52px
+            line-height: 1.15
+            text-transform: uppercase
+            text-align: center
+            color: $white
+            margin: 8px 0 0
+    &__text
+        font-family: $font-family
+        font-weight: 400
+        font-size: 18px
+        line-height: 1.35
+        color: $gray
+        position: relative
+        max-width: 823px
+        grid-column: 1/5
+
+.service
+    padding: 60px 0
+    &__block
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 24px
+        align-items: start
+    &__acc
+        display: grid
+        grid-template-columns: 100%
+        gap: 24px
+    &__text
+        padding: 0 32px
+        font-family: $font-family
+        font-weight: 400
+        font-size: 20px
+        line-height: 1.35
+        color: $dark-gray
+        max-height: 0
+        overflow: hidden
+        transition: all .3s
+        p
+            margin: 12px 0 0
+            &:nth-child(1)
+                margin: 0
+        strong
+            font-weight: 500
+        a
+            color: #3F7DE5
+            transition: all .3s
+            &:hover
+                color: $coral
+        ol
+            margin: 12px 0 0
+            display: grid
+            grid-template-columns: 100%
+            gap: 12px
+            counter-reset: faq 0
+            &:nth-child(1)
+                margin: 0
+            p
+                margin: 0
+            li
+                display: grid
+                grid-template-columns: 30px 1fr
+                align-items: start
+                font-family: $font-family
+                font-weight: 400
+                font-size: 20px
+                line-height: 1.35
+                color: $dark-gray
+                &::before
+                    content: counter(faq)
+                    counter-increment: faq 1
+                    display: block
+                    font-family: $font-family
+                    font-weight: 400
+                    font-size: 20px
+                    line-height: 1.35
+                    color: $dark-gray
+        ul
+            margin: 12px 0 0
+            display: grid
+            grid-template-columns: 100%
+            gap: 12px
+            &:nth-child(1)
+                margin: 0
+            p
+                margin: 0
+            li
+                display: grid
+                grid-template-columns: 30px 1fr
+                align-items: start
+                font-family: $font-family
+                font-weight: 400
+                font-size: 20px
+                line-height: 1.35
+                color: $dark-gray
+                &::before
+                    content: ''
+                    display: block
+                    width: 5px
+                    height: 5px
+                    border-radius: 100%
+                    background: #333
+                    margin: 10px auto 0
+        img
+            display: none
+    &__btn
+        padding: 32px
+        display: grid
+        grid-template-columns: 1fr 24px
+        gap: 24px
+        align-items: center
+        cursor: pointer
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 24px
+            line-height: 1.35
+            color: $dark-gray
+            transition: all .3s
+        svg
+            transition: all .3s
+            transform: rotate(90deg)
+            path
+                stroke: $dark-gray
+                transition: all .3s
+        &:hover
+            p
+                color: $hover
+            svg
+                path
+                    stroke: $hover
+    &__item
+        background: $white
+        &.active
+            .service
+                &__btn
+                    p
+                        color: $coral
+                    svg
+                        transform: rotate(-90deg)
+                        path
+                            stroke: $coral
+                &__text
+                    padding: 0 32px 32px
+                    max-height: none
+    &__prev
+        position: relative
+        z-index: 1
+        &::before
+            content: ''
+            display: block
+            width: 500px
+            height: 340px
+            position: absolute
+            top: 53px
+            right: 160px
+            background: url('../img/logo_bg.svg') center no-repeat
+            background-size: contain
+            z-index: -1
+        img
+            position: absolute
+            top: 0
+            left: 0
+            width: 438px
+            height: 445px
+            opacity: 0
+            transition: all .3s
+            object-fit: cover
+            &.active
+                opacity: 1
+    .btn__blue
+        margin: 32px 0 0 calc( 50% + 12px )
+
+.advantage
+    padding: 60px 0
+    position: relative
+    overflow: hidden
+    &__pag
+        display: none
+    &__slider
+        overflow: visible
+        margin: 32px 0 0
+    &__slide
+        position: relative
+        background: $white
+        padding: 32px 
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-end
+        height: 545px
+        z-index: 1
+        transition: all .3s
+        overflow: hidden
+        h4
+            font-family: $font-family
+            font-weight: 500
+            font-size: 28px
+            line-height: 1.1
+            color: $dark-gray
+            transition: all .3s
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 20px
+            line-height: 1.35
+            color: $gray
+            margin: 12px 0 0
+            transition: all .3s
+        img
+            position: absolute
+            top: 32px
+            right: 32px
+            width: 180px
+            height: 180px
+            object-fit: cover
+            display: block
+            transition: all .3s
+            z-index: -1
+        &:hover
+            // background: #000
+            h4,
+            p
+                color: $white
+            img
+                right: 0
+                top: 0
+                height: 100%
+                width: 100%
+                // opacity: .6
+                filter: brightness(70%)
+    &__arrow
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 48px
+        height: 48px
+        border-radius: 100%
+        border: 1px solid $coral
+        inset: auto
+        margin: 0
+        transition: all .3s
+        bottom: calc( 100% + 44px )
+        right: 0
+        opacity: 1 !important
+        svg
+            width: 24px
+            height: 24px
+            path
+                stroke: $coral
+        &::after
+            content: none
+        &:hover
+            background: $hover
+            border: 1px solid $hover
+            svg
+                path
+                    stroke: $white
+    &__prev
+        transform: rotate(180deg)
+        right: 64px
+
+.tech
+    padding: 210px 0 60px
+    margin: -150px 0 0
+    z-index: 2
+    &__title
+        display: grid
+        grid-template-columns: 1fr 1fr 
+        gap: 24px
+        p
+            grid-column: 2/3
+            font-family: $font-family
+            font-weight: 400
+            font-size: 20px
+            line-height: 1.35
+            color: $gray
+    &__wrapper
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 24px
+    &__num
+        font-family: $font-family
+        font-weight: 400
+        font-size: 24px
+        line-height: 1.35
+        color: $dark-gray
+        transition: all .3s
+        max-width: calc( 100% - 30px )
+        span
+            display: none
+        svg
+            display: none
+    &__text
+        margin: 24px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 16px
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 20px
+            line-height: 1.35
+            color: $dark-gray
+            background: linear-gradient(0deg, rgba(66, 66, 66, 0) 0%, #424242 100%)
+            background-clip: text
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            transition: all .3s
+    &__btn
+        position: absolute
+        cursor: pointer
+        display: flex
+        justify-content: flex-end
+        padding: 36px 32px
+        align-items: center
+        gap: 16px
+        top: 0
+        left: 0
+        width: 100%
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 24px
+            line-height: 1.35
+            color: $dark-gray
+            transition: all .3s
+        svg
+            transition: all .3s
+            transform: rotate(90deg)
+            path
+                transition: all .3s
+                stroke: $dark-gray
+        &:hover
+            p
+                color: $hover
+            svg
+                path
+                    stroke: $hover
+    &__slider
+        margin: 24px 0 0
+    &__slide
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &__arrow
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 48px
+        height: 48px
+        border-radius: 100%
+        border: 1px solid $coral
+        inset: auto
+        margin: 0
+        transition: all .3s
+        z-index: 1
+        top: 50%
+        transform: translateY(-50%)
+        right: 24px
+        opacity: 1 !important
+        svg
+            width: 24px
+            height: 24px
+            path
+                transition: all .3s
+                stroke: $coral
+        &::after
+            content: none
+        &:hover
+            background: $hover
+            border: 1px solid $hover
+            svg
+                path
+                    stroke: $white
+        &.swiper-button-disabled
+            opacity: 0 !important
+    &__prev
+        transform: translateY(-50%) rotate(180deg)
+        right: auto
+        left: 24px
+    &__pag
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 8px
+        margin: 0
+        bottom: 24px !important
+        top: auto !important
+        span
+            margin: 0 !important
+            width: 8px
+            height: 8px
+            border: 1px solid $stroke
+            background: transparent
+            transition: all .3s
+            opacity: 1
+            &.swiper-pagination-bullet-active
+                background: $coral
+                border: 1px solid $coral
+    &__list
+        display: flex
+        flex-direction: column
+        // max-height: 50%
+        gap: 24px
+        margin: 24px 0 0
+        row-gap: 16px
+        counter-reset: example 0
+        flex-wrap: wrap
+        min-height: max-content
+        li
+            display: grid
+            grid-template-columns: 30px 1fr
+            align-items: start
+            width: calc( 50% - 12px )
+            &::before
+                content: counter(example) '.'
+                counter-increment: example 1
+                font-family: $font-family
+                font-weight: 400
+                font-size: 20px
+                line-height: 1.35
+                color: $dark-gray
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 20px
+            line-height: 1.35
+            color: $dark-gray
+    &__item
+        padding: 32px
+        background: $white
+        position: relative
+        overflow: hidden
+        display: grid
+        grid-template-columns: calc( 50% - 12px ) calc( 50% - 12px )
+        gap: 24px
+        max-height: 136px
+        transition: all .3s
+        &.active
+            max-height: none
+            .tech
+                &__text
+                    p
+                        background: $dark-gray
+                        background-clip: text
+                        -webkit-background-clip: text
+                        -webkit-text-fill-color: transparent
+                &__num
+                    color: $coral
+                &__btn
+                    p
+                        color: $coral
+                    svg
+                        transform: rotate(-90deg)
+                        path
+                            stroke: $coral
+
+.gallery
+    padding: 210px 0 60px
+    position: relative
+    overflow: hidden
+    margin: -150px 0 0
+    &__pag
+        display: none
+    &__overflow,
+    &__close
+        display: none
+    &__tab
+        max-width: 100%
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+        gap: 24px
+        &_item,
+        a
+            background: $white
+            padding: 20px
+            width: 100%
+            font-family: $font-family
+            font-weight: 500
+            font-size: 16px
+            line-height: 1.25
+            letter-spacing: 0.02em
+            text-transform: uppercase
+            color: $dark-gray
+            transition: all .3s
+            cursor: pointer
+            text-align: center
+            &.active,
+            &:hover
+                background: $coral
+                color: $white
+    &__wrapper
+        margin: 32px 0 0
+        display: none
+        &.active
+            display: block
+    &__slider
+        overflow: visible
+    &__slide
+        position: relative
+        overflow: hidden
+        img,
+        video
+            width: 100%
+            object-fit: cover
+            height: 100%
+            transition: all .3s
+            min-height: 100%
+        &:hover
+            img
+                transform: scale(1.2)
+    &__play
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        cursor: pointer
+        border-radius: 100%
+        border: 1px solid $white    
+        width: 64px
+        height: 64px
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all .3s
+        svg
+            path
+                transition: all .3s
+        &:hover
+            background: $white
+            svg
+                path
+                    fill: $hover
+                    stroke: $hover
+    &__text
+        margin: 24px 0 0
+        font-family: $font-family
+        font-weight: 400
+        font-size: 18px
+        line-height: 1.35
+        color: $dark-gray
+        opacity: .7
+    &__arrow
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 48px
+        height: 48px
+        border-radius: 100%
+        border: 1px solid $coral
+        inset: auto
+        margin: 0
+        transition: all .3s
+        bottom: calc( 100% + 24px )
+        right: 0
+        opacity: 1 !important
+        svg
+            width: 24px
+            height: 24px
+            path
+                stroke: $coral
+        &::after
+            content: none
+        &:hover
+            background: $hover
+            border: 1px solid $hover
+            svg
+                path
+                    stroke: $white
+    &__prev
+        transform: rotate(180deg)
+        right: 64px
+
+.faq
+    padding: 60px 0
+    z-index: 2
+    &__mob
+        display: none
+    h2
+        max-width: 746px
+    &__block
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 24px
+        align-items: start
+        position: relative
+    &__wa
+        width: 100%
+        max-width: 360px
+        margin: 32px 0 0
+        background: transparent
+        font-family: $font-family
+        font-weight: 500
+        font-size: 16px
+        line-height: 1.25
+        letter-spacing: 0.02em
+        text-transform: uppercase
+        color: $white
+        border: none
+        transition: all .3s
+        display: block
+        padding: 0
+        position: relative
+        overflow: hidden
+        span
+            gap: 10px
+            padding: 20px 32px
+            display: flex
+            justify-content: center
+            align-items: center
+            transition: all .5s
+        svg
+            path
+                stroke: $white
+        .norm
+            position: relative
+            transform: translateY(0) rotateX(0)
+            opacity: 1
+            border: 1px solid $stroke
+            color: $dark-gray
+            svg
+                path
+                    stroke: $dark-gray
+        .hover
+            position: absolute
+            inset: 0
+            transform: translateY(-50%) rotateX(90deg)
+            opacity: 0
+            background: linear-gradient(180deg, #42e35f 0%, #21c741 100%)
+        &:hover
+            .norm
+                transform: translateY(50%) rotateX(90deg)
+                opacity: 0
+            .hover
+                transform: translateY(0) rotateX(0)
+                opacity: 1
+    &__tg
+        width: 100%
+        max-width: 360px
+        margin: 12px 0 0
+        background: transparent
+        font-family: $font-family
+        font-weight: 500
+        font-size: 16px
+        line-height: 1.25
+        letter-spacing: 0.02em
+        text-transform: uppercase
+        color: $white
+        border: none
+        transition: all .3s
+        display: block
+        padding: 0
+        position: relative
+        overflow: hidden
+        span
+            gap: 10px
+            padding: 20px 32px
+            display: flex
+            justify-content: center
+            align-items: center
+            transition: all .5s
+        svg
+            path
+                fill: $white
+        .norm
+            position: relative
+            transform: translateY(0) rotateX(0)
+            opacity: 1
+            border: 1px solid $stroke
+            color: $dark-gray
+            svg
+                path
+                    fill: $dark-gray
+        .hover
+            position: absolute
+            inset: 0
+            transform: translateY(-50%) rotateX(90deg)
+            opacity: 0
+            background: linear-gradient(180deg, #35b2e2 0%, #1b95d4 100%)
+        &:hover
+            .norm
+                transform: translateY(50%) rotateX(90deg)
+                opacity: 0
+            .hover
+                transform: translateY(0) rotateX(0)
+                opacity: 1
+    &__text
+        padding: 0 32px
+        font-family: $font-family
+        font-weight: 400
+        font-size: 20px
+        line-height: 1.35
+        color: $dark-gray
+        max-height: 0
+        overflow: hidden
+        transition: all .3s
+        p
+            margin: 12px 0 0
+            &:nth-child(1)
+                margin: 0
+        a
+            color: #3F7DE5
+            transition: all .3s
+            &:hover
+                color: $coral
+        strong
+            font-weight: 500
+        ol
+            margin: 12px 0 0
+            display: grid
+            grid-template-columns: 100%
+            gap: 12px
+            counter-reset: faq 0
+            &:nth-child(1)
+                margin: 0
+            p
+                margin: 0
+            li
+                display: grid
+                grid-template-columns: 30px 1fr
+                align-items: start
+                font-family: $font-family
+                font-weight: 400
+                font-size: 20px
+                line-height: 1.35
+                color: $dark-gray
+                &::before
+                    content: counter(faq)
+                    counter-increment: faq 1
+                    display: block
+                    font-family: $font-family
+                    font-weight: 400
+                    font-size: 20px
+                    line-height: 1.35
+                    color: $dark-gray
+        ul
+            margin: 12px 0 0
+            display: grid
+            grid-template-columns: 100%
+            gap: 12px
+            &:nth-child(1)
+                margin: 0
+            p
+                margin: 0
+            li
+                display: grid
+                grid-template-columns: 30px 1fr
+                align-items: start
+                font-family: $font-family
+                font-weight: 400
+                font-size: 20px
+                line-height: 1.35
+                color: $dark-gray
+                &::before
+                    content: ''
+                    display: block
+                    width: 5px
+                    height: 5px
+                    border-radius: 100%
+                    background: #333
+                    margin: 10px auto 0
+        img
+            display: block
+            width: 100%
+            margin: 12px 0 0
+            object-fit: cover
+    &__btn
+        padding: 32px
+        display: grid
+        grid-template-columns: 1fr 24px
+        gap: 24px
+        align-items: center
+        cursor: pointer
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 24px
+            line-height: 1.35
+            color: $dark-gray
+            transition: all .3s
+        svg
+            transition: all .3s
+            transform: rotate(90deg)
+            path
+                stroke: $dark-gray
+                transition: all .3s
+        &:hover
+            p
+                color: $hover
+            svg
+                path
+                    stroke: $hover
+    &__item
+        background: $white
+        display: none
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5)
+            display: block
+        &.show
+            display: block
+        &.active
+            .faq
+                &__btn
+                    p
+                        color: $coral
+                    svg
+                        transform: rotate(-90deg)
+                        path
+                            stroke: $coral
+                &__text
+                    padding: 0 32px 32px
+                    max-height: none
+    &__acc
+        display: grid
+        grid-template-columns: 100%
+        gap: 24px
+    &__wrapper
+        .btn__wht
+            margin: 32px 0 0
+    &__fix
+        position: relative
+        &.fix
+            display: block
+            position: fixed
+            top: 20px
+            left: 48px
+            z-index: 5
+        &.bottom
+            position: absolute
+            top: auto
+            bottom: 0
+            left: 0
+
+.contact
+    padding: 210px 0 120px
+    margin: -150px 0 0
+    &__wrapper
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 24px
+    &__block
+        background: $white
+        padding: 32px
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: flex-start
+    &__name
+        font-family: $font-family
+        font-weight: 400
+        font-size: 20px
+        line-height: 1.35
+        color: $gray
+        margin: 0 0 auto
+    &__link,
+    &__adress
+        font-family: $font-family
+        font-weight: 400
+        font-size: 20px
+        line-height: 1.35
+        color: $dark-gray
+    &__adress
+        margin: 0 0 12px
+        &:last-child
+            margin: 0
+    &__link
+        transition: all .3s
+        &:hover
+            color: $hover
+    &__soc
+        display: flex
+        flex-wrap: wrap-reverse
+        gap: 12px
+        a
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 60px
+            height: 60px
+            background: $bg
+            transition: all .3s
+            svg
+                width: 32px
+                path
+                    transition: all .3s
+                    fill: $dark-gray
+                    stroke: none
+                g
+                    path
+                        stroke: $dark-gray
+                        fill: none
+            &:hover
+                box-shadow: 0 25px 55px 0 rgba(93, 92, 96, 0.1), 0 100px 100px 0 rgba(93, 92, 96, 0.09), 0 225px 135px 0 rgba(93, 92, 96, 0.05), 0 400px 160px 0 rgba(93, 92, 96, 0.01)
+                background: $hover
+                svg
+                    path
+                        fill: $white
+                        stroke: none
+                    g
+                        path
+                            stroke: $white
+                            fill: none
+    &__req
+        background: $white
+        padding: 32px
+        h4
+            font-family: $font-family
+            font-weight: 500
+            font-size: 32px
+            line-height: 1.1
+            color: $dark-gray
+            max-width: 610px
+    &__mob
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: 1fr 1fr
+        gap: 24px
+    &__form
+        margin: 48px 0 0
+        display: grid
+        grid-template-columns: 100% 
+        gap: 32px
+        .btn__blue
+            max-width: 100%
+            span
+                padding: 20px 0
+    &__row
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 24px
+    &__check
+        position: relative
+        display: grid
+        grid-template-columns: 16px 1fr
+        gap: 8px
+        align-items: start
+        z-index: 1
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 14px
+            line-height: 1.35
+            color: $gray
+            a
+                color: $blue
+                text-decoration: none
+                z-index: 5
+        span
+            border: 1px solid $stroke
+            display: block
+            width: 16px
+            height: 16px
+            transition: all .3s
+            position: relative
+            &::before
+                content: ''
+                display: block
+                inset: 0
+                transition: all .3s
+                position: absolute
+                width: 100%
+                height: 100%
+                opacity: 0
+                background: url('../img/check.svg') center no-repeat
+        input
+            position: absolute
+            top: 0
+            left: 0
+            opacity: 0
+            z-index: 1
+            width: 16px
+            height: 16px
+            &:checked
+                &+span
+                    border: 1px solid $coral
+                    &::before
+                        opacity: 1
+            &:hover
+                &+span
+                    border: 1px solid $coral
+
+.footer
+    padding: 48px 0 32px
+    background: $black
+    position: relative
+    overflow: hidden
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 48px
+        align-items: start
+        gap: 26px
+    &__logo
+        display: flex
+        flex-direction: column
+        height: 100%
+        img
+            width: 146px
+    &__text
+        margin: auto 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 12px
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.35
+            color: $gray
+    &__list
+        display: grid
+        grid-template-columns: 100%
+        gap: 12px
+        a
+            font-family: $font-family
+            font-weight: 500
+            font-size: 16px
+            line-height: 1.25
+            letter-spacing: 0.02em
+            text-transform: uppercase
+            color: $white
+            display: block
+            position: relative
+            overflow: hidden
+            span
+                transition: all .3s
+                display: block
+                position: relative
+            &::before
+                content: attr(data-content)
+                display: block
+                font-family: $font-family
+                font-weight: 500
+                line-height: 1.25
+                letter-spacing: 0.02em
+                text-transform: uppercase
+                color: $hover
+                transition: all .3s
+                position: absolute
+                top: 0
+                left: 0
+                transform: translateY(100%)
+            &:hover
+                span
+                    transform: translateY(-100%)
+                &::before
+                    transform: translateY(0)
+    &__func
+        display: grid
+        grid-template-columns: 100%
+        gap: 12px
+        max-width: 300px
+        a
+            font-family: $font-family
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.35
+            color: $white
+            display: block
+            position: relative
+            overflow: hidden
+            transition: all .3s
+            &:hover
+                color: $hover
+            span
+                transition: all .3s
+                display: block
+                position: relative
+            &::before
+                content: attr(data-content)
+                display: block
+                font-weight: 400
+                line-height: 1.35
+                color: $hover
+                transition: all .3s
+                position: absolute
+                top: 0
+                left: 0
+                transform: translateY(100%)
+            &:hover
+                span
+                    transform: translateY(-100%)
+                &::before
+                    transform: translateY(0)
+    &__contact
+        max-width: 390px
+        ul
+            display: grid
+            grid-template-columns: 100%
+            gap: 8px
+            justify-items: start
+            svg
+                width: 100%
+                g
+                    opacity: 1
+                path
+                    fill: $white
+                    opacity: .5
+                    transition: all .3s
+            li
+                &:last-child
+                    display: grid
+                    grid-template-columns: 32px 1fr
+                    gap: 16px
+                    align-items: start
+                &:nth-child(3)
+                    display: none
+            p
+                font-family: $font-family
+                font-weight: 400
+                font-size: 24px
+                line-height: 1.35
+                color: $white
+                transition: all .3s
+                grid-column: 2/3
+            a
+                display: grid
+                grid-template-columns: 32px 1fr
+                gap: 16px
+                align-items: center
+                &:hover
+                    p
+                        color: $hover
+                    svg
+                        path
+                            fill: $hover
+                            opacity: 1
+    &__soc
+        display: flex
+        flex-wrap: wrap-reverse
+        gap: 12px
+        margin: 32px 0 0
+        a
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 60px
+            height: 60px
+            background: #ffffff1a
+            transition: all .3s
+            svg
+                width: 32px
+                path
+                    transition: all .3s
+                    fill: white
+                    stroke: none
+                g
+                    path
+                        stroke: white
+                        fill: none
+            &:hover
+                box-shadow: 0 25px 55px 0 rgba(93, 92, 96, 0.1), 0 100px 100px 0 rgba(93, 92, 96, 0.09), 0 225px 135px 0 rgba(93, 92, 96, 0.05), 0 400px 160px 0 rgba(93, 92, 96, 0.01)
+                background: $hover
+                svg
+                    path
+                        fill: white
+                        stroke: none
+                    g
+                        path
+                            stroke: white
+                            fill: none
+    &__up
+        cursor: pointer
+        border-radius: 100%
+        width: 48px
+        height: 48px
+        border: 1px solid #ffffff4d
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all .3s
+        svg
+            transform: rotate(-90deg)
+            path
+                transition: all .3s
+        &:hover
+            background: #ffffff
+            border: 1px solid #fff
+            svg
+                path
+                    stroke: $hover
+    &__row
+        margin: 24px 0 0
+        padding: 24px 0 0
+        display: grid
+        grid-template-columns: 10fr 10fr 14fr 48px 6fr
+        gap: 26px
+        align-items: center
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            display: block
+            width: 100vw
+            height: 1px
+            left: 50%
+            transform: translateX(-50%)
+            background: rgba(255,255,255,.2)
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 14px
+            line-height: 1.35
+            color: $gray
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 5px
+            max-width: max-content
+            br
+                display: none
+            &:nth-child(2)
+                max-width: 295px
+                font-size: 14px
+            &:last-child
+                grid-column: 5/6
+                margin: 0 0 0 auto
+        a
+            font-family: $font-family
+            font-weight: 400
+            font-size: 14px
+            line-height: 1.35
+            color: $white
+            transition: all .3s
+            transition: all .3s
+            &:hover
+                color: $hover
+    &__mob
+        display: none
+
+.nav-part
+    background: $white
+    padding: 12px 0
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    &__close
+        position: absolute
+        top: 50%
+        right: 16px
+        transform: translateY(-50%)
+        cursor: pointer
+        svg
+            path
+                transition: all .3s
+        &:hover
+            svg
+                path
+                    fill: $hover
+    img
+        width: 24px
+    p
+        margin: 0 0 0 8px
+        font-family: $font-family
+        font-weight: 500
+        font-size: 16px
+        line-height: 1.25
+        letter-spacing: 0.02em
+        text-transform: uppercase
+        text-align: center
+        color: $dark-gray
+    &.remove
+        display: none
+
+section
+    position: relative
+    overflow: hidden
+    h2
+        font-family: $font-family
+        font-weight: 500
+        font-size: 56px
+        line-height: 1.1
+        text-transform: uppercase
+        color: $dark-gray
+        span
+            color: $coral
+
+@media ( max-width: 1820px )
+    section
+        h2
+            font-size: 52px
+    .btn
+        &__blue,
+        &__wht
+            span
+                font-size: 14px
+    .nav-part
+        p
+            font-size: 14px
+    .nav
+        &__logo
+            max-width: 106px
+        ul
+            margin: 0 auto 0 32px
+            gap: 16px
+            a
+                font-size: 16px
+                &::before
+                    font-size: 16px
+        &__phone
+            order: 2
+            a
+                font-weight: 400
+            p
+                text-align: right
+                margin: 6px 0 0 auto
+                font-size: 14px
+                letter-spacing: 0.02em
+                cursor: pointer
+        .btn__blue
+            display: none
+        &__soc
+            margin: 0 12px 0 auto
+    .header
+        &__slide
+            padding: 24px
+        h1,
+        h2
+            font-size: 64px
+        &__func
+            bottom: 24px
+            left: 24px
+        &__plan
+            bottom: 24px
+            right: 24px
+            padding: 24px
+            max-width: 280px
+            p
+                font-size: 16px
+        &__item
+            padding: 16px
+            p
+                font-size: 18px
+        &__row
+            margin: 24px 0 0
+    .footer
+        &__row
+            p
+                br
+                    display: block
+
+@media ( max-width: 1600px )
+    .header
+        padding: 0 0 50px
+    .project
+        padding: 200px 0 50px
+        &__item
+            // padding: 0 0 100px
+            h3
+                font-size: 36px
+        &__pic
+            height: 256px
+        &__info
+            // transform: translateY(calc(100% - 100px))
+            &_header
+                // padding: 24px 24px 16px
+                padding: 24px 24px 0
+            &_body
+                padding: 16px 24px 24px
+                .btn__blue
+                    // margin: 16px 0 0
+        &__price
+            font-size: 26px
+        &__sale
+            font-size: 14px
+        &__dop
+            p
+                font-size: 16px
+        &__block
+            margin: 12px 0 0
+            gap: 12px
+            img
+                height: 84px
+            p
+                font-size: 14px
+        &__wind
+            h3
+                font-size: 36px
+            p
+                font-size: 16px
+        &__tab
+            &_item,
+            a
+                font-size: 14px
+        &__name
+            p
+                font-size: 18px
+    .pref
+        padding: 200px 0 50px
+        &__info
+            padding: 70px 24px
+            p
+                font-size: 18px
+                max-width: 612px
+        // &__prev
+        //     img
+                // height: 630px
+    .program
+        padding: 50px 0
+        &__item
+            height: 325px
+        h4
+            font-size: 26px
+            top: 24px
+            left: 24px
+        &__info
+            width: 130px
+            h2
+                font-size: 36px
+                margin: 4px 0 0
+            p
+                font-size: 16px
+        &__text
+            font-size: 16px
+            max-width: 660px
+    .service
+        padding: 50px 0
+        &__prev
+            &::before
+                right: 0
+        &__text
+            font-size: 18px
+            padding: 0 24px
+            ul,
+            ol
+                li
+                    font-size: 18px
+                    &::before
+                        font-size: 18px
+        &__btn
+            padding: 24px
+        &__item
+            &.active
+                .service__text
+                    padding: 0 24px 24px
+    .advantage
+        padding: 50px 0
+        &__slide
+            height: 450px
+            padding: 24px
+            h4
+                font-size: 20px
+            p
+                font-size: 18px
+                margin: 12px 0 0
+            img
+                top: 24px
+                right: 24px
+                width: 150px
+                height: 150px
+    .tech
+        padding: 200px 0 50px
+        &__title
+            p
+                font-size: 18px
+        &__item
+            padding: 24px
+            max-height: 115px
+        &__btn
+            padding: 28px 24px
+        &__text
+            margin: 16px 0 0
+            p
+                font-size: 18px
+        &__list
+            p
+                font-size: 18px
+            li
+                &::before
+                    font-size: 18px
+    .gallery
+        padding: 200px 0 50px
+        &__text
+            font-size: 16px
+        &__tab
+            max-width: 900px
+            grid-template-columns: 1fr 1fr 1fr 
+    .faq
+        padding: 50px 0
+        &__text
+            font-size: 18px
+            padding: 0 24px
+            ul,
+            ol
+                li
+                    font-size: 18px
+                    &::before
+                        font-size: 18px
+        &__btn
+            padding: 24px
+        &__item
+            &.active
+                .faq__text
+                    padding: 0 24px 24px
+    .contact
+        padding: 200px 0 100px
+        &__link,
+        &__adress
+            font-size: 16px
+        &__block
+            padding: 24px
+            gap: 0
+        &__name
+            font-size: 18px
+        &__req
+            padding: 24px
+            h4
+                font-size: 26px
+        &__form
+            margin: 24px 0 0
+    .input
+        input,
+        textarea
+            padding: 0 0 12px
+            font-size: 16px
+        p
+            font-size: 16px
+    .itc-select
+        &__toggle
+            font-size: 16px
+        &__option
+            font-size: 16px
+    .footer
+        padding: 48px 0
+        &__logo
+            img
+                width: 106px
+        &__text
+            p
+                font-size: 14px
+        &__list
+            a
+                font-size: 14px
+        &__func
+            max-width: 230px
+            a
+                font-size: 16px
+        &__contact
+            ul
+                svg
+                    height: 24px
+                a
+                    grid-template-columns: 24px 1fr
+                    gap: 8px
+                    margin: 0 auto
+                    width: max-content
+                p
+                    font-size: 18px
+                    max-width: 320px
+                li
+                    &:last-child
+                        grid-template-columns: 24px 1fr
+                        gap: 8px
+        &__soc
+            a
+                width: 48px
+                height: 48px
+                svg
+                    width: 24px
+        &__row
+            grid-template-columns: 10fr 10fr 10fr 48px 10fr
+            a,
+            p
+                font-size: 12px
+
+@media ( max-width: 1450px )
+    .nav ul a
+        font-size: 14px
+        &::before
+            font-size: 14px
+
+@media ( max-width: 1300px )
+    .container
+        padding: 0 32px
+    .nav
+        .container
+            padding: 24px 32px
+            display: grid
+            grid-template-columns: 112px 1fr 60px
+        ul
+            display: none
+        &__soc
+            display: none
+        &__phone
+            margin: 0 auto
+            order: 0
+            a
+                font-weight: 600
+            p
+                display: none
+        &__hum
+            display: block
+            width: 60px
+            height: 60px
+            background: $coral
+            position: relative
+            cursor: pointer
+            &::before,
+            &::after,
+            span
+                content: ''
+                display: block
+                position: absolute
+                width: 20px
+                height: 1px
+                background: $white
+                left: 20px
+                transition: all .3s
+            &::before
+                top: 24px
+            &::after  
+                top: 36px
+            span
+                top: 30px
+        &.active
+            position: fixed
+            top: 0
+            left: 0
+            width: 100%
+            z-index: 10
+            background: $bg
+            overflow-y: scroll
+            max-height: 100%
+            ul
+                order: 2
+                grid-column: 1/4
+                display: grid
+                grid-template-columns: 100%
+                gap: 16px
+                padding: 24px 0 0
+                margin: 16px 0 0
+                position: relative
+                &::before
+                    content: ''
+                    display: block
+                    width: 100vw
+                    height: 1px
+                    background: $stroke
+                    position: absolute
+                    top: 0
+                    left: 50%
+                    transform: translateX(-50%)
+                a
+                    font-size: 16px
+                    &::before
+                        font-size: 16px
+                li
+                    padding: 0 0 16px
+                    border-bottom: 1px solid $stroke
+                    display: block
+            .btn__blue
+                max-width: 100%
+                display: grid
+                grid-column: 1/4
+                order: 4
+                margin: 16px 0 0
+            .nav
+                &__hum
+                    span
+                        opacity: 0
+                    &::before,
+                    &::after
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%) rotate(45deg)
+                    &::after
+                        transform: translate(-50%, -50%) rotate(-45deg)
+                &__soc
+                    display: grid
+                    margin: 24px 0 0
+                    order: 3
+                    grid-column: 1/4
+    .header
+        .container
+            padding: 0
+        &__slide
+            padding: 32px
+            min-height: 844px
+            align-items: flex-start
+            max-height: calc( 100vh - 150px )
+        h1,
+        h2
+            font-size: 58px
+        &__plan
+            bottom: 32px
+            right: 32px
+        &__func
+            bottom: 32px
+            left: 32px
+        &__row
+            padding: 0 32px
+            grid-template-columns: 1fr 1fr
+            gap: 24px
+            grid-template-rows: 1fr 1fr
+        &__item
+            grid-template-columns: 100%
+            gap: 16px
+            align-content: start
+            div
+                width: 96px
+                height: 96px
+                margin: 0 auto
+            p
+                text-align: center
+                margin: 0 auto
+                max-width: 292px
+                br
+                    display: block
+    .project
+        &__wrapper
+            grid-template-columns: 100%
+            &+.btn__blue
+                max-width: 100%
+        &__title
+            grid-template-columns: 100%
+        .btn__wht
+            width: 100%
+            max-width: 100%
+        &__mob
+            display: none
+        &__desktop
+            display: block
+        &__price
+            font-size: 36px
+        &__name
+            p
+                font-size: 24px
+    .pref
+        &__info
+            padding: 0
+            background: transparent
+        &__mob
+            display: block
+            width: 100%
+            object-fit: cover
+            margin: 16px 0 0
+        &__prev
+            display: none
+        &__block
+            grid-template-columns: 100%
+            gap: 0
+        &__prev
+            order: -1
+        .btn__blue
+            max-width: 100%
+            margin: 24px 0 0
+        &__footer
+            padding: 24px
+            background: $white
+            width: 100%
+        &__row
+            max-width: 608px
+            margin: 0 auto
+    .program
+        h2
+            // font-size: 48px
+            max-width: 100%
+        &__row
+            margin: 32px 0 0
+            grid-template-columns: 100%
+        &__item
+            height: 445px
+            &_wrapper
+                transform: none !important
+        &__text
+            inset: auto !important
+            position: relative
+            width: 100% !important
+            grid-column: auto
+        &__info
+            width: 156px
+            p
+                font-size: 20px
+            h2
+                font-size: 48px
+    .service
+        &__prev
+            display: none
+        &__block
+            grid-template-columns: 100%
+        &__text
+            img
+                display: block
+                width: 100%
+                height: 350px
+                object-fit: cover
+                margin: 0 0 16px
+        .btn__blue
+            margin: 32px auto 0
+            display: block
+            max-width: 100%
+    .advantage
+        &__arrow
+            display: none
+        &__slide
+            background: #000
+            h4,
+            p
+                color: $white
+            img
+                inset: 0
+                height: 100%
+                width: 100%
+                filter: brightness(70%)
+        .advantage__pag
+            display: block
+            position: relative
+            bottom: auto
+            left: auto
+            margin: 32px 0 0
+            span
+                width: 8px
+                height: 8px
+                border: 1px solid $stroke
+                background: transparent
+                transition: all .3s
+                opacity: 1
+                background: $coral
+                border: 1px solid $coral
+                opacity: .5
+                &.swiper-pagination-bullet-active
+                    background: $coral
+                    border: 1px solid $coral
+                    opacity: 1
+    .tech
+        &__title
+            grid-template-columns: 100%
+            gap: 16px
+            p
+                grid-column: auto
+        &__item
+            grid-template-columns: 100%
+            gap: 24px
+        &__num
+            span
+                display: inline
+        &__block
+            .tech__num
+                display: none
+        &__slider
+            margin: 0
+    .gallery
+        &__tab
+            max-width: 100%
+            gap: 12px
+        &__text
+            text-align: center  
+        &__arrow
+            display: none
+        .gallery__pag
+            display: block
+            position: relative
+            bottom: auto
+            left: auto
+            margin: 32px 0 0
+            span
+                width: 8px
+                height: 8px
+                border: 1px solid $stroke
+                background: transparent
+                transition: all .3s
+                opacity: 1
+                background: $coral
+                border: 1px solid $coral
+                opacity: .5
+                &.swiper-pagination-bullet-active
+                    background: $coral
+                    border: 1px solid $coral
+                    opacity: 1
+    .faq
+        &__block
+            grid-template-columns: 100%
+        .btn
+            &__wht
+                max-width: 100%
+        &__title
+            .faq
+                &__wa,
+                &__tg
+                    display: none
+        &__mob
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 12px
+            margin: 32px 0 0
+            button
+                margin: 0
+                max-width: 100%
+    .contact
+        &__wrapper
+            grid-template-columns: 100%
+        &__req
+            order: 5
+        &__block
+            height: 255px
+        &__soc
+            max-width: 270px
+    .footer
+        &__logo
+            p
+                display: none
+            img
+                width: 106px
+        &__wrapper
+            grid-template-columns: 106px 1fr 106px
+        &__contact
+            grid-column: 1/4
+            order: 2
+            max-width: 100%
+            margin: 24px 0 0
+            padding: 24px 0 0
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                top: 0
+                display: block
+                width: 100vw
+                height: 1px
+                left: 50%
+                transform: translateX(-50%)
+                background: rgba(255,255,255,.2)
+            &.footer__desc
+                display: none
+            ul
+                margin: 0 auto
+                justify-items: center
+                grid-template-columns: 100%
+                gap: 18px
+                width: max-content
+                li
+                    display: flex
+                    gap: 5px
+                    &:last-child
+                        grid-column: auto
+                        display: grid
+                p
+                    text-align: center
+                    max-width: 100%
+                    max-width: 355px
+                    font-size: 14px
+                    br
+                        display: none
+                a
+                    display: flex
+                    svg
+                        width: 24px
+        &__list
+            grid-template-columns: 100%
+            justify-items: center
+        &__soc
+            justify-content: center
+        &__func
+            display: none
+        &__mob
+            display: grid
+            grid-template-columns: auto auto
+            gap: 12px
+            justify-content: center
+            max-width: 100%
+            margin: 24px 0 0
+        &__row
+            grid-template-columns: 1fr auto 1fr
+            gap: 5px
+            position: relative
+            border: none
+            &::before
+                content: ''
+                position: absolute
+                top: 0
+                display: block
+                width: 100vw
+                height: 1px
+                left: 50%
+                transform: translateX(-50%)
+                background: rgba(255,255,255,.2)
+            p,
+            a
+                font-size: 12px
+                justify-content: flex-start
+                width: max-content
+                &:nth-child(3)
+                    text-align: center
+                &:last-child
+                    grid-column: auto
+        &__up
+            margin: 0 0 0 auto
+        &__text
+            margin: 16px 0 0
+        &__soc
+            margin: 16px 0 0
+
+@media ( max-width: 900px )
+    .header
+        &__plan
+            padding: 32px
+            max-width: 320px
+        &__arrow
+            display: none
+        &__func
+            grid-template-columns: auto 1fr auto
+            max-width: calc(100% - 48px)
+            width: 260px
+        &__btn
+            display: grid
+            grid-template-columns: 100%
+            gap: 16px
+            width: 100%
+            max-width: 100%
+            .btn__blue,
+            .modal-video__play
+                width: 100%
+                max-width: 100%
+        &__info
+            width: 100%
+    
+@media ( max-width: 1300px )
+    section h2
+        font-size: 48px
+
+@media ( max-width: 700px )
+    .container
+        padding: 0 24px
+    section
+        h2
+            font-size: 24px
+    .nav
+        .container
+            padding: 16px 24px 
+        &__phone
+            display: grid
+            grid-template-columns: 100%
+            gap: 10px
+            a
+                font-weight: 500
+                font-size: 19px
+        &__logo
+            max-width: 90px
+        .container
+            grid-template-columns: 90px 1fr 60px
+    .header
+        padding: 0 0 30px
+        h1,
+        h2
+            font-size: 26px
+        &__subtitle
+            font-size: 18px
+            margin: 12px 0 0
+        &__slide
+            min-height: 490px
+            padding: 32px 24px
+        &__plan
+            position: relative
+            inset: auto
+            max-width: 100%
+        &__row
+            padding: 0 24px
+            gap: 16px
+        &__func
+            width: auto
+            bottom: auto
+            top: 440px
+            right: 24px
+            left: 24px
+            grid-template-columns: auto 1fr auto
+            p
+                font-size: 18px
+        &__arrow
+            display: none
+        &__info
+            .btn__blue
+                max-width: 100%
+        &__item
+            background: transparent
+            padding: 0
+            div
+                background: $white
+                margin: 0
+                width: 64px
+                height: 64px
+                svg
+                    width: 32px
+                    height: 32px
+            p
+                text-align: left
+                margin: 0
+                font-size: 14px
+    .project
+        padding: 180px 0 30px
+        .project__item_parent__6
+            .project__var,
+            .project__block
+                display: none
+        &__title
+            grid-template-columns: 100%
+        &__tab
+            display: grid
+            grid-template-columns: 100%
+            gap: 12px
+            &_item,
+            a
+                width: 100%
+        &__name
+            h3
+                font-size: 22px
+            p
+                font-size: 14px
+        &__price
+            font-size: 22px
+        &__sale
+            font-size: 12px
+        &__desktop
+            display: none
+        &__mob
+            display: flex
+            flex-wrap: wrap
+        &__price
+            text-align: left
+        &__dop
+            gap: 12px
+            div
+                gap: 4px
+            p
+                font-size: 12px
+        &__block
+            grid-template-columns: 100%
+            gap: 4px
+            img
+                display: none
+            p
+                font-size: 14px
+                margin: 0
+                color: $gray
+            a
+                display: grid
+                grid-template-columns: 14px 1fr
+                gap: 0
+                &::before
+                    content: ''
+                    display: block
+                    width: 3px
+                    height: 3px
+                    margin: 7px auto 0
+                    border-radius: 100%
+                    background: $gray
+        &__var
+            font-size: 18px
+        &__info
+            // transform: translateY(calc(100% - 100px))
+            &_header
+                grid-template-columns: 100%
+        &__item
+            // padding: 0 0 90px
+        &__pic
+            height: 97vw
+        &__wind
+            h3
+                font-size: 24px
+            p
+                font-size: 14px
+    .pref
+        padding: 180px 0 30px
+        &__mob
+            display: block
+            width: 100%
+            height: 330px
+            object-fit: cover
+            margin: 16px 0 0
+        &__prev
+            display: none
+        .container
+            background: $white
+        &__info
+            padding: 24px 0
+            p
+                font-size: 16px
+            .btn__blue
+                max-width: 100%
+                span
+                    padding: 20px 0
+        &__row
+            grid-template-columns: 1fr 1fr
+            max-width: 100%
+            gap: 8px
+        &__footer
+            padding: 16px 24px 24px
+    .program
+        padding: 30px 0
+        &__item
+            height: 67vw
+            img
+                object-position: top
+        h4
+            font-size: 20px
+        &__info
+            width: 104px
+            padding: 16px 
+            h2
+                font-size: 24px
+            p
+                font-size: 14px
+                margin: 4px 0 0
+    .service
+        padding: 30px 0
+        &__btn
+            p
+                font-size: 18px
+        &__text
+            img
+                height: 250px
+    .tech
+        padding: 180px 0 30px
+        &__arrow
+            display: none
+        &__list
+            grid-template-columns: 100%
+            max-height: none !important
+            li
+                width: 100%
+        &__num
+            font-size: 18px
+        &__btn
+            padding: 24px
+            height: 132px
+            align-items: flex-start
+        &__text
+            p
+                font-size: 16px
+                // max-height: 80px
+        &__item
+            max-height: 132px
+    .gallery
+        padding: 180px 0 30px
+        &__tab
+            margin: 24px 0 0
+            grid-template-columns: 100%
+            gap: 12px
+    .faq
+        padding: 30px 0
+        &__btn
+            p
+                font-size: 18px
+        &__mob
+            margin: 24px 0 0
+            grid-template-columns: 100%
+            button
+                max-width: 100%
+    .contact
+        padding: 180px 0 60px
+        &__req
+            h4
+                font-size: 20px
+        &__mob
+            grid-template-columns: 100%
+            padding: 24px
+            gap: 16px
+            background: $white
+        &__row
+            grid-template-columns: 100%
+        &__block
+            padding: 0
+            height: auto
+            gap: 8px
+            padding: 0 0 16px
+            border-bottom: 1px solid $stroke
+            &:last-child
+                padding: 0
+                border: none
+        &__name
+            font-size: 16px
+        &__link,
+        &__adress
+            font-size: 18px
+        &__adress
+            margin: 0 0 8px
+            &:last-child
+                margin: 0
+        &__soc
+            gap: 6px
+            width: 264px
+            max-width: 100%
+            a
+                height: 48px
+                width: 48px
+                svg
+                    width: 24px
+                    height: 24px
+    .footer
+        padding: 32px 0
+        position: relative
+        &__text
+            gap: 4px
+            p
+                font-size: 12px
+        &__wrapper
+            grid-template-columns: 100%
+        &__up
+            position: absolute
+            top: 32px
+            right: 24px
+        &__contact
+            grid-column: auto
+            ul
+                margin: 0
+                justify-items: start
+                grid-template-columns: 100%
+                max-width: 235px
+                li
+                    grid-column: auto !important
+                svg
+                    width: 19px
+                    height: 19px
+                p
+                    text-align: left
+                    font-size: 12px
+                    br
+                        display: block
+        &__list
+            margin: 16px 0 0
+            grid-template-columns: 100%
+            gap: 12px
+            justify-items: start
+            a
+                font-size: 12px
+                &::before
+                    content: none
+                span
+                    transform: translateY(0)
+                &:hover
+                    color: #ff7468
+                    span
+                        transform: translateY(0)
+        &__func
+            margin: 16px 0 0
+            a
+                font-size: 12px
+        &__soc
+            justify-content: start
+        &__row
+            margin: 8px 0 0
+            padding: 0
+            grid-template-columns: 100%
+            gap: 16px
+            align-items: center
+            p
+                justify-content: center !important
+                margin: 0 auto !important
+                &:nth-child(3)
+                    position: relative
+                    order: -1
+                    text-align: left !important
+                    justify-content: start !important
+                    margin: 0
+                    padding: 0 0 16px
+                    max-width: 100%
+                    margin: 0 !important
+                    width: auto
+                    &::before
+                        content: ''
+                        position: absolute
+                        bottom: 0
+                        display: block
+                        width: 100vw
+                        height: 1px
+                        left: 50%
+                        transform: translateX(-50%)
+                        background: rgba(255,255,255,.2)
+            a,
+            p
+                font-size: 12px
+            &::before
+                content: none
+        &__mob
+            justify-content: start
+            grid-template-columns: 100%
+        &__text
+            margin: 24px 0 0
+            grid-template-columns: auto auto
+            gap: 12px
+    .nav-part
+        p
+            font-size: 12px
+            text-transform: none
+        &__close
+            right: 12px
+
+@media ( max-width: 500px )
+    .header
+        &__slide
+            min-height: 400px
+            max-height: 400px
+        &__func
+            top: 365px
+
+@media ( max-width: 400px )
+    .nav
+        &__phone
+            a
+                font-size: 14px
+
+.modal-call
+    &__container
+        max-width: 663px
+.modal-faq
+    &__container
+        max-width: 575px
+
+.modal
+    opacity: 0
+    pointer-events: none
+    transition: all .3s
+    z-index: 10
+    inset: 0
+    width: 100%
+    height: 100%
+    position: fixed
+    overflow-x: scroll
+    padding: 24px
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    &.active
+        opacity: 1
+        pointer-events: auto
+    &__overflow
+        backdrop-filter: blur(12px)
+        background: rgba(41, 41, 41, 0.45)
+        position: fixed
+        inset: 0
+        z-index: -1
+    &__container
+        width: 100%
+        display: block
+        margin: auto
+        background: $white
+        padding: 48px
+        position: relative
+    h2
+        font-family: $font-family
+        font-weight: 500
+        font-size: 56px
+        line-height: 1.1
+        text-transform: uppercase
+        text-align: center
+        color: $dark-gray
+        span
+            color: $coral
+    &__subtitle
+        margin: 12px 0 0
+        font-family: $font-family
+        font-weight: 400
+        font-size: 20px
+        line-height: 1.35
+        text-align: center
+        color: $gray
+    &__form
+        margin: 56px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 32px
+    &__check
+        position: relative
+        display: grid
+        grid-template-columns: 16px auto
+        gap: 8px
+        align-items: start
+        justify-content: center
+        max-width: max-content
+        margin: 0 auto
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 14px
+            line-height: 1.35
+            color: $gray
+            a
+                color: $blue
+                text-decoration: none
+                z-index: 5
+        span
+            border: 1px solid $stroke
+            display: block
+            width: 16px
+            height: 16px
+            transition: all .3s
+            position: relative
+            &::before
+                content: ''
+                display: block
+                inset: 0
+                transition: all .3s
+                position: absolute
+                width: 100%
+                height: 100%
+                opacity: 0
+                background: url('../img/check.svg') center no-repeat
+        input
+            position: absolute
+            top: 0
+            left: 0
+            opacity: 0
+            z-index: 1
+            width: 16px
+            height: 16px
+            &:checked
+                &+span
+                    border: 1px solid $coral
+                    &::before
+                        opacity: 1
+            &:hover
+                &+span
+                    border: 1px solid $coral
+    .btn__blue
+        margin: 32px 0 0
+        max-width: 100%
+    &__close
+        position: absolute
+        top: 16px
+        right: 16px
+        cursor: pointer
+        svg
+            width: 24px
+            height: 24px
+            path
+                fill: $stroke
+                transition: all .3s
+        &:hover
+            svg
+                path
+                    fill: $hover
+
+@media ( max-width: 1500px )
+    .modal
+        &-faq
+            &__container
+                max-width: 537px
+        &-call
+            &__container
+                max-width: 623px
+        h2
+            font-size: 52px
+        &__subtitle
+            font-size: 18px
+
+@media ( max-width: 900px )
+    .modal
+        &-faq
+            &__container
+                max-width: 537px
+        &-call
+            &__container
+                max-width: 577px
+        h2
+            font-size: 48px
+        &__close
+            top: 8px
+            right: 8px
+            width: 20px
+            height: 20px
+            svg
+                width: 20px
+                height: 20px
+            
+@media ( max-width: 600px )
+    .modal
+        &__container
+            padding: 24px
+        h2
+            font-size: 24px
+        &__subtitle
+            font-size: 16px
+            max-width: 190px
+            margin: 12px auto 0
+        &__form
+            margin: 40px 0 0
+
+.thanks
+    padding: 193px 0 200px
+    position: relative
+    overflow: hidden
+    h1
+        font-family: $font-family
+        font-weight: 500
+        font-size: 70px
+        line-height: 1.15
+        text-transform: uppercase
+        text-align: center
+        color: $dark-gray
+        max-width: 812px
+        margin: 0 auto
+        span
+            color: $coral
+    &__subtitle
+        margin: 12px 0 0
+        font-family: $font-family
+        font-weight: 400
+        font-size: 20px
+        line-height: 1.35
+        text-align: center
+        color: $gray
+    .btn__blue
+        margin: 32px auto 0
+        max-width: 284px
+    &::before,
+    &::after
+        content: ''
+        display: block
+        width: 666px
+        height: 388px
+        position: absolute
+        transform: translateY(-50%)
+        top: 50%
+        right: calc( 50% + 567px )
+        background: url('../img/logo_bg.svg') center no-repeat
+        background-size: contain
+    &::after
+        left: calc( 50% + 557px )
+        right: auto
+
+.error
+    &-block
+        padding: 12px 0 56px
+        position: relative
+        h1
+            font-family: $font-family
+            font-weight: 500
+            font-size: 70px
+            line-height: 1.15
+            text-transform: uppercase
+            text-align: center
+            color: $dark-gray
+            margin: 0 auto
+            span
+                color: $coral
+        .btn__blue
+            margin: 32px auto 0
+            max-width: 284px
+    &__bg
+        display: block
+        width: 100%
+        max-width: 800px
+        margin: 0 auto
+    &__subtitle
+        margin: 12px auto 0
+        font-family: $font-family
+        font-weight: 400
+        font-size: 20px
+        line-height: 1.35
+        text-align: center
+        color: $gray
+        max-width: 860px
+
+@media ( max-width: 1500px )
+    .thanks
+        padding: 160px 0 180px
+        &::before,
+        &:after
+            width: 516px
+            height: 300px
+            right: calc( 50% + 406px )
+        &::after
+            right: auto
+            left: calc( 50% + 420px )
+        h1
+            font-size: 64px
+        &__subtitle
+            font-size: 18px
+    .error
+        &-bock
+            padding: 23px 0 93px
+            h1
+                font-size: 64px
+        &__subtitle
+            font-size: 18px
+        &__bg
+            max-width: 711px
+
+@media ( max-width: 1024px )
+    .nav
+        &__border
+            border-bottom: 1px solid $stroke
+    .thanks
+        padding: 194px 0 300px
+        &::before
+            top: auto
+            width: 100%
+            height: 500px
+            bottom: 0
+            left: 0
+            right: 0
+            transform: none
+            background-position: bottom
+        &::after
+            content: none
+        h1
+            font-size: 58px
+        &__subtitle
+            font-size: 18px
+    .error
+        &-block
+            padding: 46px 0 137px
+            h1
+                font-size: 58px
+                span
+                    display: block
+        &__subtitle
+            font-size: 20px
+            max-width: 460px
+        &__bg
+            max-width: 100%
+
+@media ( max-width: 600px )
+    .thanks
+        padding: 140px 0 160px
+        h1
+            font-size: 26px
+            max-width: 310px
+        &__subtitle
+            font-size: 16px
+            max-width: 170px
+            margin: 12px auto 0
+        .btn__blue
+            margin: 24px 0 0
+            max-width: 100%
+    .error
+        &-block
+            padding: 31px 0 52px
+            h1
+                font-size: 26px
+            .btn__blue
+                margin: 24px 0 0
+                max-width: 100%
+        &__subtitle
+            font-size: 16px
+
+.breadcrumbs
+    display: flex
+    flex-wrap: wrap
+    margin: 0 0 48px
+    a
+        font-family: $font-family
+        font-weight: 400
+        font-size: 14px
+        line-height: 1.35
+        color: $dark-gray
+        position: relative
+        transition: all .3s
+        padding: 0 30px 0 0
+        &:hover
+            color: $hover
+        &::before 
+            display: block
+            content: '/'
+            font-family: $font-family
+            font-weight: 400
+            font-size: 14px
+            line-height: 1.35
+            color: $gray
+            position: absolute
+            top: 0
+            right: 12px
+    a,
+    p
+        display: block
+    p
+        padding: 0 30px 0 0 
+        position: relative
+        font-family: $font-family
+        font-weight: 400
+        font-size: 14px
+        line-height: 1.35
+        color: $gray
+        &::before 
+            display: block
+            content: '/'
+            font-family: $font-family
+            font-weight: 400
+            font-size: 14px
+            line-height: 1.35
+            color: $gray
+            position: absolute
+            top: 0
+            right: 12px
+        &:last-child
+            &::before
+                content: none
+
+.privacy
+    padding: 24px 0 120px
+    h1
+        font-family: $font-family
+        font-weight: 500
+        font-size: 70px
+        line-height: 1.15
+        text-transform: uppercase
+        max-width: 950px
+        color: $dark-gray
+        span
+            color: $coral
+    &__wrapper
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 32px
+    &__name
+        font-family: $font-family
+        font-weight: 600
+        font-size: 18px
+        line-height: 1.35
+        text-transform: uppercase
+        color: $dark-gray
+        max-width: 560px
+    &__block
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 32px
+    &__text
+        display: grid
+        grid-template-columns: 100%
+        gap: 24px
+        p,
+        li,
+        a
+            font-family: $font-family
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.35
+            color: $gray
+        a
+            color: $blue
+            transition: all .3s
+            &:hover
+                color: $hover
+    table
+        border: 1px solid $stroke
+        tr
+            border-bottom: 1px solid $stroke
+            &:last-child
+                border: none
+        th,
+        td
+            border-right: 1px solid $stroke
+            padding: 24px 32px
+            color: $gray
+            text-align: start
+            vertical-align: middle
+            &:last-child
+                border: none
+            p,
+            li,
+            a
+                font-family: $font-family
+                font-weight: 400
+                font-size: 18px
+                line-height: 1.35
+            a
+                color: $blue
+        th
+            color: $black
+        li
+            display: grid
+            grid-template-columns: 26px 1fr
+            &::before
+                content: ''
+                display: block
+                width: 4px
+                height: 4px
+                border-radius: 100%
+                margin: 9px auto 0
+                background: $gray
+
+@media ( max-width: 1500px )
+    .privacy
+        table
+            th,
+            td
+                padding: 24px
+                p,
+                li,
+                a
+                    font-size: 16px
+        h1
+            font-size: 64px
+        &__text
+            li,
+            p,
+            a
+                font-size: 16px
+
+@media ( max-width: 1024px )
+    .privacy
+        h1
+            font-size: 58px
+        &__block
+            grid-template-columns: 100%
+            gap: 24px
+        &__text
+            gap: 16px
+            p,
+            a,
+            li
+                font-size: 18px
+        &__name
+            font-size: 24px
+
+@media ( max-width: 600px )
+    .breadcrumbs
+        margin: 0 0 24px
+    .privacy
+        padding: 24px 0 64px
+        table
+            tr
+                padding: 24px
+                display: block
+            td
+                margin: 16px 0 0
+            th,
+            td
+                padding: 0
+                border: none
+                display: block
+        h1
+            font-size: 26px
+            max-width: 400px
+        &__name
+            font-size: 16px
+        &__wrapper
+            margin: 24px 0 0
+            gap: 24px
+        &__block
+            gap: 16px
+        &__text
+            p,
+            li,
+            a
+                font-size: 16px
+
+.header-cart
+    padding: 24px 0 60px
+    &__back
+        display: block
+        width: max-content  
+        display: grid
+        grid-template-columns: 24px 1fr
+        gap: 0
+        align-items: center
+        font-family: $font-family
+        font-weight: 500
+        font-size: 16px
+        line-height: 1.25
+        letter-spacing: 0.02em
+        text-transform: uppercase
+        color: $dark-gray
+        transition: all .3s
+        margin: 0 0 0 auto
+        svg
+            transform: rotate(180deg)
+            path
+                stroke: #424242
+                transition: all .3s
+        &:hover
+            color: $hover
+            svg
+                path
+                    stroke: $hover
+    &__block
+        margin: 24px 0 0
+        display: grid
+        grid-template-columns: 440px calc( 100% - 464px )
+        gap: 24px
+    &__info
+        background: $white
+        height: 100%
+        &_mob
+            display: none
+        &_header
+            padding: 32px 32px 24px
+            border-bottom: 1px solid $stroke
+            h1
+                font-family: $font-family
+                font-weight: 500
+                font-size: 42px
+                line-height: 1.1
+                color: $dark-gray
+            p
+                margin: 8px 0 0
+                font-family: $font-family
+                font-weight: 400
+                font-size: 24px
+                line-height: 1.35
+                color: $gray
+        &_body
+            padding: 24px 32px 
+            border-bottom: 1px solid $stroke
+        &_name
+            font-family: $font-family
+            font-weight: 400
+            font-size: 24px
+            line-height: 1.35
+            color: $dark-gray
+        &_scroll
+            padding: 0 10px 0 0
+            display: grid
+            grid-template-columns: 1fr 1fr
+            overflow-y: auto
+            max-height: 288px
+            height: 288px
+            gap: 16px
+            margin: 16px 0 0
+            &::-webkit-scrollbar 
+                width: 4px
+            &::-webkit-scrollbar-track 
+                background: $bg
+            &::-webkit-scrollbar-thumb 
+                background: $stroke
+                border-radius: 100px
+        &_check
+            width: 100%
+            position: relative
+            z-index: 1
+            img
+                width: 100%
+                height: 80px
+                object-fit: cover
+            p
+                font-family: $font-family
+                font-weight: 400
+                font-size: 14px
+                line-height: 1.35
+                color: $gray
+                margin: 8px 0 0
+                transition: all .3s
+            span
+                width: 16px
+                height: 16px
+                position: absolute
+                top: 12px
+                left: 12px
+                border-radius: 100%
+                background: $white
+                display: flex
+                justify-content: center
+                align-items: center
+                z-index: 1
+                &::before
+                    content: ''
+                    display: block
+                    width: 8px
+                    height: 8px
+                    border-radius: 100%
+                    background: $coral
+                    opacity: 0
+                    transition: all .3s
+            input
+                width: 100%
+                height: 100%
+                position: absolute
+                top: 0
+                left: 0
+                opacity: 0
+                z-index: 2
+                &:hover
+                    &+p
+                        color: $coral
+                &:checked
+                    &+p
+                        color: $coral
+                        &+span
+                            &::before
+                                opacity: 1
+        &_footer
+            padding: 24px 32px 32px
+        &_price
+            font-family: $font-family
+            font-weight: 500
+            font-size: 42px
+            line-height: 1.1
+            color: $dark-gray
+        &_sale
+            font-family: $font-family
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.35
+            text-decoration: line-through
+            color: $gray
+            margin: 4px 0 0
+        &_text
+            margin: 16px 0 0
+            font-family: $font-family
+            font-weight: 400
+            font-size: 14px
+            line-height: 1.35
+            color: $gray
+        .btn__blue
+            margin: 24px 0 0
+            max-width: 100%
+    &__wrapper
+        display: grid
+        grid-template-columns: 100%
+        grid-template-rows: calc( 100% - 184px ) 160px
+        gap: 24px
+        position: relative
+    &__slider
+        width: 100%
+        position: absolute
+        top: 0
+        left: 0
+        pointer-events: none
+        opacity: 0
+        &.active
+            opacity: 1
+            position: relative
+            pointer-events: auto
+            top: auto
+            left: auto
+        &_sale
+            position: absolute
+            top: 0
+            left: 0
+            width: 146px
+            padding: 24px
+            background: $coral
+            p
+                font-family: $font-family
+                font-weight: 400
+                font-size: 18px
+                line-height: 1.35
+                text-align: center
+                color: $white
+                opacity: .7
+            h3
+                margin: 8px 0 0
+                font-family: $font-family
+                font-weight: 500
+                font-size: 42px
+                line-height: 1.1
+                text-align: center
+                color: $white
+    &__slide
+        position: relative
+        padding: 32px 
+        z-index: 1
+        height: 100%
+        display: flex
+        align-items: center
+    &__bg
+        position: absolute
+        inset: 0
+        object-fit: cover
+        width: 100%
+        height: 100%
+        z-index: -1
+    &__func
+        position: absolute
+        top: 50%
+        left: 32px
+        right: 32px
+        display: grid
+        transform: translateY(-50%)
+        grid-template-columns: 48px 1fr 48px
+        gap: 12px
+        z-index: 2
+        align-items: center
+        width: auto
+        z-index: 1
+        pointer-events: none
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 24px
+            line-height: 1.35
+            color: $white
+            display: none
+        &.dis
+            display: none
+    &__arrow
+        pointer-events: all
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 48px
+        height: 48px
+        border-radius: 100%
+        border: 1px solid $white
+        inset: auto
+        margin: 0
+        transition: all .3s
+        position: relative
+        z-index: 3
+        &.swiper-button-disabled
+            opacity: 1
+        svg
+            width: 24px
+            height: 24px
+        &::after
+            content: none
+        &:hover
+            background: $hover
+            border: 1px solid $hover
+    &__prev
+        transform: rotate(180deg)
+    .header-cart__pag
+        position: relative
+        opacity: 0
+        inset: auto
+        margin: 0
+        width: 100%
+        height: 2px
+        background: #ffffff80
+        span
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            height: 100%
+            background: #fff
+    &__row
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 24px
+        &_item
+            padding: 32px
+            background: $white
+            display: grid
+            grid-template-columns: 96px 1fr
+            gap: 16px
+            align-items: center
+        &_img
+            display: flex
+            justify-content: center
+            align-items: center
+            background: $bg
+            width: 96px
+            height: 96px
+            img
+                width: 48px
+        h4
+            font-family: $font-family
+            font-weight: 500
+            font-size: 32px
+            line-height: 1.1
+            color: $dark-gray
+        p
+            margin: 12px 0 0
+            font-family: $font-family
+            font-weight: 400
+            font-size: 20px
+            line-height: 1.35
+            color: $dark-gray
+
+.plan
+    padding: 60px 0
+    &__wrapper
+        display: none
+        grid-template-columns: 1fr 1fr
+        gap: 24px
+        margin: 32px 0 0
+        &.active
+            display: grid
+        p
+            font-family: $font-family
+            font-weight: 500
+            font-size: 32px
+            line-height: 1.1
+            color: $coral    
+        img
+            margin: 24px 0 0
+            width: 100%
+    &__tab
+        margin: 24px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+        gap: 16px
+        &_point
+            background: $white
+            padding: 20px 40px
+            font-family: $font-family
+            font-weight: 500
+            font-size: 16px
+            line-height: 1.25
+            letter-spacing: 0.02em
+            text-transform: uppercase
+            color: $dark-gray
+            cursor: pointer
+            text-align: center
+            transition: all .3s
+            &.active,
+            &:hover
+                background: $coral
+                color: $white
+
+.about
+    padding: 60px 0
+    z-index: 2
+    &__block
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 48px
+        margin: 32px 0 0
+    &__name
+        font-family: $font-family
+        font-weight: 500
+        font-size: 32px
+        line-height: 1.1
+        color: $coral
+    &__har
+        padding: 32px 
+        background: $white
+        ul
+            margin: 24px 0 0
+            border-top: 1px solid $stroke 
+        li
+            padding: 16px 0
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+            border-bottom: 1px solid $stroke
+            gap: 5px
+            p
+                font-family: $font-family
+                font-weight: 400
+                font-size: 24px
+                line-height: 1.35
+                color: $dark-gray
+                &+p
+                    opacity: .7
+                    white-space: nowrap
+            &:last-child
+                border: none
+                padding-bottom: 0
+                p+p
+                    opacity: 1
+    &__desc
+        h4
+            font-family: $font-family
+            font-weight: 500
+            font-size: 32px
+            line-height: 1.1
+            color: $dark-gray
+    &__text
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 16px
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 20px
+            line-height: 1.35
+            color: $gray
+    .btn__blue
+        margin: 32px auto 0
+
+.equip
+    padding: 60px 0
+    &__total
+        display: none
+    &__table
+        border-top: 1px solid $stroke
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 100%
+        gap: 24px
+    &__title,
+    &__footer
+        padding: 32px 24px
+        display: grid
+        grid-template-columns: 2fr 1fr 1fr 24px
+        gap: 24px
+        align-items: end
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.35
+            color: $gray
+        h4
+            font-family: $font-family
+            font-weight: 500
+            font-size: 32px
+            line-height: 1.1
+            color: $dark-gray
+    &__title
+        align-items: start
+    &__footer
+        background: $white
+        h4
+            color: $coral
+    &__name
+        background: $white
+        padding: 32px 24px
+        display: grid
+        grid-template-columns: 2fr 1fr 1fr 24px
+        gap: 24px
+        align-items: end
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 24px
+            line-height: 1.35
+            color: $dark-gray
+            transition: all .3s
+        svg
+            display: block
+            transform: rotate(90deg)
+            transition: all .3s
+            align-self: center
+            path
+                stroke: $dark-gray
+                transition: all .3s
+        &.active
+            p
+                color: $coral
+            svg
+                transform: rotate(-90deg)
+                path
+                    stroke: $coral
+        &:hover
+            p
+                color: $hover
+            svg
+                path
+                    stroke: $hover
+    &__row
+        padding: 24px
+        display: grid
+        grid-template-columns: 2fr 1fr 1fr 24px
+        gap: 24px
+        align-items: start
+        &+.equip__row
+            padding: 0 24px 24px
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 20px
+            line-height: 1.35
+            color: $dark-gray
+            &+p
+                color: $gray
+    &__tab
+        display: none
+        &.active
+            display: block
+
+.consul
+    padding: 60px 0
+    &__block
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 24px
+    &__prev
+        display: flex
+        flex-direction: column
+        position: relative
+        z-index: 1
+        img
+            display: block
+            margin: auto 0 0
+            max-width: 438px
+            width: 100%
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            bottom: 54px
+            left: 50%
+            transform: translateX(-50%)
+            width: 496px
+            height: 340px
+            background: url('../img/logo_bg.svg') center no-repeat  
+            z-index: -1
+    .contact__req
+        grid-row: 1/3
+        grid-column: 2/3
+
+.check-more
+    padding: 60px 0 120px
+    position: relative
+    overflow: hidden
+    &__slider
+        overflow: visible
+        margin: 32px 0 0
+    &__arrow
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 48px
+        height: 48px
+        border-radius: 100%
+        border: 1px solid $coral
+        inset: auto
+        margin: 0
+        transition: all .3s
+        bottom: calc( 100% + 39px )
+        right: 0
+        opacity: 1 !important
+        svg
+            width: 24px
+            height: 24px
+            path
+                stroke: $coral
+        &::after
+            content: none
+        &:hover
+            background: $hover
+            border: 1px solid $hover
+            svg
+                path
+                    stroke: $white
+    &__prev
+        transform: rotate(180deg)
+        right: 64px
+    &__pag
+        display: none
+    &__slide
+        position: relative
+        height: 100%
+        display: grid
+        grid-template-rows: 1fr auto
+        overflow: hidden
+        &:hover
+            .check-more__img img
+                transform: scale(1.2)
+    &__img
+        width: 100%
+        position: relative
+        overflow: hidden
+        img
+            width: 100%
+            height: 469px
+            object-fit: cover
+            transition: all .3s
+    &__info
+        padding: 32px
+        background: $white
+        height: 100%
+        z-index: 2
+    &__price,
+    &__name
+        display: grid
+        grid-template-columns: auto auto
+        justify-content: start
+        align-items: center
+        gap: 12px
+        h3
+            font-family: $font-family
+            font-weight: 500
+            font-size: 32px
+            line-height: 1.1
+            color: $dark-gray
+            white-space: nowrap
+            position: relative
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 24px
+            line-height: 1.35
+            color: $gray
+            white-space: nowrap
+            position: relative
+            overflow: hidden
+            text-overflow: ellipsis
+    &__price
+        margin: 12px 0 0
+        h3
+            color: $dark-gray
+        p
+            text-decoration: line-through
+            color: $gray
+            opacity: 0.7
+            font-size: 18px
+    &__sale
+        position: absolute
+        top: 0
+        left: 0
+        width: 146px
+        padding: 24px
+        background: $coral
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.35
+            text-align: center
+            color: $white
+            opacity: .7
+        h3
+            margin: 8px 0 0
+            font-family: $font-family
+            font-weight: 500
+            font-size: 42px
+            line-height: 1.1
+            text-align: center
+            color: $white
+
+@media ( max-width: 1600px )
+    .header-cart
+        .breadcrumbs
+            margin: 0 0 24px
+        &__block
+            grid-template-columns: 320px 1fr
+        &__info
+            &_header
+                padding: 24px
+                h1
+                    font-size: 32px
+                p
+                    font-size: 18px
+            &_body
+                padding: 24px
+            &_name
+                font-size: 18px
+            &_scroll
+                margin: 12px 0 0
+                gap: 8px
+                max-height: 260px
+                height: 260px
+                row-gap: 12px
+            &_check
+                img
+                    height: 94px
+            &_footer
+                padding: 24px
+            &_price
+                font-size: 36px
+            &_sale
+                font-size: 16px
+                margin: 4px 0 0
+            .btn__blue
+                margin: 16px 0 0
+            &_text
+                font-size: 14px
+        &__wrapper
+            grid-template-rows: calc(100% - 152px) 128px
+        &__row
+            &_item
+                padding: 16px
+                h4
+                    font-size: 26px
+                p
+                    font-size: 18px
+                    margin: 8px 0 0
+        &__slider
+            &_sale
+                width: 132px
+                h3
+                    font-size: 36px
+                p
+                    font-size: 16px
+    .plan
+        &__wrapper
+            p
+                font-size: 26px
+        &__tab
+            &_point
+                font-size: 16px
+                padding: 20px 0
+    .about
+        &__name
+            font-size: 26px
+        &__block
+            gap: 40px
+        &__desc
+            h4
+                font-size: 26px
+        &__text
+            margin: 24px 0 0
+            p
+                font-size: 18px
+    .equip
+        &__title
+            padding: 24px
+            p
+                font-size: 16px
+        &__name
+            padding: 24px
+        &__row
+            padding: 16px 24px
+            p
+                font-size: 18px
+            &+.equip__row
+                padding: 0 24px 16px
+    .consul
+        .contact__req
+            grid-row: auto
+            grid-column: auto
+        h2
+            grid-column: 1/3
+    .check-more
+        &__sale
+            max-width: 132px
+            h3
+                font-size: 36px
+        &__img
+            img
+                height: 400px
+        &__name
+            h3
+                font-size: 32px
+        &__price
+            h3
+                font-size: 30px
+            p
+                font-size: 16px
+        &__info
+            padding: 24px
+
+@media ( max-width: 1300px )
+    .header-cart
+        padding: 24px 0 50px
+        h1
+            font-size: 48px
+        .breadcrumbs
+            padding: 0 36px
+        &__back
+            margin: 0 24px 0 auto
+        .container
+            padding: 0
+        &__block
+            grid-template-columns: 100%
+            gap: 0
+            position: relative
+            overflow: hidden
+        &__row
+            display: none
+        &__slider
+            height: 73vw
+            overflow: visible
+        &__wrapper
+            display: block
+            order: -1
+            // width: calc( 100% + 64px )
+            // margin: 0 -32px 0
+            overflow: visible
+        &__slider
+            &_sale
+                left: 32px
+        &__func
+            display: block
+            position: absolute
+            top: auto
+            transform: none
+            pointer-events: auto
+            left: auto
+            right: auto
+            bottom: -30px
+            width: 100%
+        .header-cart__pag
+            opacity: 1
+            display: block
+            position: relative
+            bottom: auto
+            left: auto
+            background: transparent
+            height: auto
+            span
+                width: 8px
+                height: 8px
+                border: 1px solid $stroke
+                background: transparent
+                transition: all .3s
+                opacity: 1
+                background: $coral
+                border: 1px solid $coral
+                opacity: .5
+                position: relative
+                display: inline-block
+                &.swiper-pagination-bullet-active
+                    background: $coral
+                    border: 1px solid $coral
+                    opacity: 1
+        &__arrow
+            display: none
+        &__info
+            &_header
+                padding: 64px 32px 32px
+                p
+                    font-size: 20px
+                    margin: 0 0 5px
+            &_title
+                display: flex
+                justify-content: flex-start
+                align-items: flex-end
+                gap: 12px
+            &_mob
+                display: flex
+                flex-wrap: wrap
+                gap: 16px
+                margin: 8px 0 0
+                div
+                    display: grid
+                    grid-template-columns: 24px 1fr
+                    gap: 8px
+                    align-items: center
+                img
+                    width: 100%
+                p
+                    font-family: $font-family
+                    font-weight: 400
+                    font-size: 18px
+                    line-height: 1.35
+                    color: $gray
+                    margin: 0
+            &_body
+                padding: 24px 32px
+            &_scroll
+                display: flex
+                gap: 16px
+                overflow-x: auto
+                padding: 0 0 10px
+                height: auto
+                &::-webkit-scrollbar 
+                    width: 0
+                    height: 4px
+                &::-webkit-scrollbar-track 
+                    background: $bg
+                &::-webkit-scrollbar-thumb 
+                    background: $stroke
+                    border-radius: 100px
+            &_check
+                min-width: 128px
+                width: 128px
+            &_footer
+                padding: 24px 32px
+    .plan
+        padding: 50px 0
+        .container
+            display: grid
+            grid-template-columns: 100%
+        h2
+            order: -2
+        &__tab
+            order: -1
+            grid-template-columns: 1fr 1fr 1fr 1fr
+        &__wrapper
+            grid-template-columns: 100%
+    .about
+        padding: 50px 0
+        &__block
+            grid-template-columns: 100%
+            gap: 32px
+        &__har
+            padding: 24px
+    .equip
+        padding: 50px 0
+        &__title,
+        &__footer
+            h4
+                font-size: 24px
+        &__name
+            p
+                font-size: 18px
+        &__footer
+            h4
+                font-size: 18px
+    .consul
+        padding: 50px 0
+        &__block
+            grid-template-columns: 100%
+            gap: 0
+        h2
+            grid-column: auto
+            max-width: 55px
+        &__prev
+            margin: 32px 0 0
+            img
+                width: 100%
+                max-width: 100%
+                object-fit: cover
+            &::before
+                content: none
+    .check-more
+        &__img
+            img
+                height: 478px
+        &__sale
+            max-width: 132px
+            h3
+                font-size: 36px
+        &__info
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+        &__price
+            display: grid
+            grid-template-columns: 100%
+            gap: 0
+        &__arrow
+            display: none
+        .check-more__pag
+            display: block
+            position: relative
+            bottom: auto
+            left: auto
+            margin: 32px 0 0
+            span
+                width: 8px
+                height: 8px
+                border: 1px solid $stroke
+                background: transparent
+                transition: all .3s
+                opacity: 1
+                background: $coral
+                border: 1px solid $coral
+                opacity: .5
+                &.swiper-pagination-bullet-active
+                    background: $coral
+                    border: 1px solid $coral
+                    opacity: 1
+
+@media ( max-width: 700px )
+    .consul
+        padding: 30px 0
+    .header-cart
+        padding: 16px 0 32px
+        &__slider
+            height: 91vw
+        .breadcrumbs
+            padding: 0 0 0 24px
+        &__back
+            margin: 0 auto 0 24px
+            font-size: 12px
+        &__slider
+            &_sale
+                left: 0
+                padding: 16px
+                width: 88px
+                p
+                    font-size: 12px
+                h3
+                    font-size: 24px
+        &__info
+            &_header
+                padding: 64px 24px 24px
+                h1
+                    font-size: 26px
+                p
+                    font-size: 16px
+                    margin: 0
+            &_mob
+                p
+                    font-size: 12px
+            &_body
+                padding: 16px 24px 
+            &_check
+                width: 106px
+                min-width: 106px
+                p
+                    font-size: 12px
+                img
+                    height: 76px
+            &__footer
+                padding: 16px 24px 24px
+            &_price
+                font-size: 22px
+    .plan
+        padding: 32px 0
+        &__tab
+            grid-template-columns: calc(50% - 8px) calc(50% - 8px) calc(50% - 8px) calc(50% - 8px)
+            overflow-x: scroll
+    .about
+        padding: 32px 0
+        &__har
+            li
+                font-size: 18px
+        &__text
+            p
+                font-size: 16px
+        &__desc
+            h4
+                font-size: 20px
+    .pref
+        .container
+            background: transparent
+        &__info
+            padding: 0
+            background: transparent
+            .btn__blue
+                margin: 16px 0 0
+    .equip
+        padding: 32px 0
+
+@media ( max-width: 600px )
+    .plan
+        &__wrapper
+            p
+                font-size: 20px
+    .about
+        &__name
+            font-size: 20px
+        &__har
+            li
+                p
+                    font-size: 18px
+                    max-width: 180px
+    .pref
+        &__row
+            max-width: 100%
+            width: 100%
+    .equip
+        h2
+            padding: 0 24px
+        .container
+            padding: 0
+        &__title
+            padding: 24px 24px 16px
+        &__name
+            grid-template-columns: 1fr 24px
+            p
+                display: none
+                &:nth-child(1)
+                    display: block
+        &__row
+            grid-template-columns: 1fr auto
+            align-items: start
+            p
+                font-size: 16px
+                display: none
+                &:nth-child(1),
+                &.active
+                    display: block
+        &__title
+            grid-template-columns: 1fr 1fr
+            gap: 16px
+            p
+                grid-column: 1/3
+            h4
+                color: $dark-gray
+                padding: 20px
+                background: $white  
+                text-align: center
+                transition: all .3s
+                font-size: 16px
+                min-height: 100%
+                display: flex
+                justify-content: center
+                align-items: center
+                &.active,
+                &:hover
+                    color: $white
+                    background: $coral
+        &__footer
+            grid-template-columns: 1fr auto
+            h4
+                display: none
+                &.active,
+                &:nth-child(1)
+                    display: block
+        &__total
+            display: block
+            border-top: 1px solid $stroke   
+            padding: 16px 24px 24px
+            p
+                font-family: $font-family
+                font-weight: 400
+                font-size: 18px
+                line-height: 1.35
+                text-align: right
+                color: $coral
+                display: none
+                &.active
+                    display: block
+    .check-more
+        padding: 30px 0 60px
+        &__sale
+            max-width: 88px
+            padding: 16px
+            p
+                font-size: 12px
+            h3
+                font-size: 24px
+        &__img
+            img
+                height: 97vw
+        &__slider
+            margin: 24px 0 0
+        &__info
+            flex-direction: column
+        &__name
+            h3
+                font-size: 20px
+                color: $dark_gray
+            p
+                font-size: 14px
+        &__price
+            grid-template-columns: auto auto
+            gap: 8px
+            margin: 4px 0 0
+            h3
+                font-size: 20px
+            p
+                font-size: 12px
+
+.gallery-popup
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    z-index: 10
+    padding: 120px 
+    overflow: hidden
+    opacity: 0
+    pointer-events: none
+    transition: all .3s
+    &.active
+        opacity: 1
+        pointer-events: auto
+    &__overflow
+        backdrop-filter: blur(12px)
+        background: rgba(41, 41, 41, 0.45)
+        position: fixed
+        inset: 0
+        z-index: -1
+    &__close
+        position: absolute
+        top: 48px
+        right: 48px
+        z-index: 5
+        cursor: pointer
+        svg
+            width: 24px
+            height: 24px
+            path
+                fill: $white
+                transition: all .3s
+        &:hover
+            svg
+                path
+                    fill: $hover
+    &__slide
+        height: calc( 100vh - 240px )
+        display: flex
+        justify-content: center
+        align-items: center
+        img,
+        video,
+        iframe
+            width: 100%
+            object-fit: contain
+            max-width: max-content
+            max-height: 100%
+            margin: auto
+            display: block
+        iframe
+            height: 100%
+            position: absolute
+            max-width: 960px
+            max-height: 500px
+    &__slider
+        overflow: visible
+    .swiper-pagination
+        display: block
+        bottom: auto
+        left: auto
+        margin: 32px 0 0
+        top: calc( 100% + 64px )
+        bottom: auto
+        margin: 0
+        span
+            width: 8px
+            height: 8px
+            border: 1px solid $stroke
+            background: transparent
+            transition: all .3s
+            opacity: 1
+            opacity: .5
+            &.swiper-pagination-bullet-active
+                background: $stroke
+                border: 1px solid $stroke
+    &__arrow
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 48px
+        height: 48px
+        border-radius: 100%
+        border: 1px solid $white
+        margin: 0
+        transition: all .3s
+        top: 50%
+        transform: translateY(-50%)
+        right: 48px
+        &.swiper-button-disabled
+            opacity: 1
+        svg
+            width: 24px
+            height: 24px
+        &::after
+            content: none
+        &:hover
+            background: $hover
+            border: 1px solid $hover
+    &__prev
+        transform: rotate(180deg) translateY(50%)
+        left: 48px
+
+@media ( max-width: 700px )
+    .gallery-popup
+        padding: 100px 20px
+        &__arrow
+            // right: 20px
+            // bottom: 20px
+            // top: auto
+            // transform: none
+            display: none
+        &__prev
+            left: 20px
+            transform: rotate(180deg)
+        &__slide
+            height: calc( 100vh - 200px )
+            iframe
+                height: 22vh
+        &__close
+            right: 20px
+
+.plan-popup
+    transition: all .3s
+    z-index: 10
+    inset: 0
+    width: 100%
+    height: 100%
+    position: fixed
+    padding: 120px
+    display: flex
+    justify-content: center
+    align-items: center
+    opacity: 1
+    pointer-events: auto
+    &__overflow
+        backdrop-filter: blur(12px)
+        background: rgba(41, 41, 41, 0.45)
+        position: fixed
+        inset: 0
+        z-index: -1
+    &__close
+        position: absolute
+        top: 48px
+        right: 48px
+        cursor: pointer
+        svg
+            width: 24px
+            height: 24px
+            path
+                fill: $stroke
+                transition: all .3s
+        &:hover
+            svg
+                path
+                    fill: $hover
+    img
+        width: 100%
+        height: 100%
+        object-fit: contain
+
+@media ( max-width: 700px )
+    .plan-popup
+        padding: 100px 20px
+        &__close
+            right: 20px
+
+.nav.fix
+    position: sticky
+    top: 0
+    left: 0
+    box-shadow: 0 53px 116px 0 rgba(27, 27, 29, 0.1)
+    background: $white
+    z-index: 10
+    animation: navAnim .5s ease-in
+    transition: all .3s
+    &.rem
+        opacity: 0
+        transform: translateY(-100%)
+    .nav-part
+        display: none
+    &.active
+        background: #f5f5f7
+    .nav__soc 
+        a
+            background: $bg
+            &:hover
+                box-shadow: 0 25px 55px 0 rgba(93,92,96,.1), 0 100px 100px 0 rgba(93,92,96,.09), 0 225px 135px 0 rgba(93,92,96,.05), 0 400px 160px 0 rgba(93,92,96,.01)
+                background: #ff7468
+
+@keyframes navAnim 
+    0%
+        opacity: 0
+        transform: translateY(-100%)
+    100%
+        opacity: 1
+        transform: translateY(0)
+
+.modal-video
+    transition: all .3s
+    z-index: 10
+    inset: 0
+    width: 100%
+    height: 100%
+    position: fixed
+    padding: 120px
+    display: flex
+    justify-content: center
+    align-items: center
+    opacity: 1
+    pointer-events: auto
+    iframe
+        width: 100%
+        max-width: 100%
+        height: 100%
+        margin: auto
+        display: block
+        max-width: 960px
+        max-height: 500px
+    &__play
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        cursor: pointer
+        border-radius: 100%
+        border: 1px solid $white    
+        width: 64px
+        height: 64px
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all .3s
+        cursor: pointer
+        svg
+            path
+                transition: all .3s
+        &:hover
+            background: $white
+            svg
+                path
+                    fill: $hover
+                    stroke: $hover
+    &__overflow
+        backdrop-filter: blur(12px)
+        background: rgba(41, 41, 41, 0.45)
+        position: fixed
+        inset: 0
+        z-index: -1
+    &__close
+        position: absolute
+        top: 48px
+        right: 48px
+        cursor: pointer
+        svg
+            width: 24px
+            height: 24px
+            path
+                fill: $stroke
+                transition: all .3s
+        &:hover
+            svg
+                path
+                    fill: $hover
+
+@media ( max-width: 700px )
+    .modal-video
+        padding: 100px 20px
+        iframe
+            height: 22vh
+        &__close
+            right: 20px
+
+.program-modal
+    transition: all .3s
+    z-index: 10
+    inset: 0
+    width: 100%
+    height: 100%
+    position: fixed
+    padding: 120px
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    opacity: 0
+    pointer-events: none
+    overflow-y: auto
+    &.active
+        opacity: 1
+        pointer-events: auto
+    &__overflow
+        backdrop-filter: blur(12px)
+        background: rgba(41, 41, 41, 0.45)
+        position: fixed
+        inset: 0
+        z-index: -1
+    &__close
+        position: absolute
+        top: 16px
+        right: 16px
+        cursor: pointer
+        svg
+            width: 24px
+            height: 24px
+            path
+                fill: #6F6F6F
+                transition: all .3s
+        &:hover
+            svg
+                path
+                    fill: $hover
+    &__wrapper
+        max-width: 1130px
+        display: grid
+        grid-template-columns: 414px 1fr
+        background: #FFFFFF
+        position: relative
+        margin: auto
+        min-height: 518px
+    &__prev
+        height: 100%
+        position: relative
+        padding: 24px
+        z-index: 1
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            position: absolute
+            top: 0
+            left: 0
+            z-index: -1
+        h4
+            font-family: $font-family
+            font-weight: 500
+            font-size: 32px
+            line-height: 1.35
+            color: #fff
+    &__info
+        position: absolute
+        bottom: 0
+        right: 0
+        width: 174px
+        background: $coral
+        padding: 24px
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 20px
+            line-height: 1.35
+            text-align: center
+            color: $white
+            opacity: .7
+        h2
+            font-family: $font-family
+            font-weight: 500
+            font-size: 52px
+            line-height: 1.15
+            text-transform: uppercase
+            text-align: center
+            color: $white
+            margin: 8px 0 0
+    &__text
+        padding: 48px
+        h3
+            font-family: $font-family
+            font-weight: 500
+            font-size: 32px
+            line-height: 1
+            color: #333
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 20px
+            line-height: 1
+            color: #333
+            margin: 24px 0 0
+            &.gray
+                font-size: 18px
+                color: #6F6F6F
+        ul
+            margin: 24px 0 0
+            display: grid
+            grid-template-columns: 100%
+            gap: 12px
+            p
+                margin: 0
+            li
+                display: grid
+                grid-template-columns: 30px 1fr
+                align-items: start
+                &::before
+                    content: ''
+                    display: block
+                    width: 5px
+                    height: 5px
+                    border-radius: 100%
+                    background: #333
+                    margin: 8px auto 0
+
+@media ( max-width: 1600px )
+    .program-modal
+        &__wrapper
+            max-width: 1000px
+            grid-template-columns: 376px 1fr
+            min-height: 478px
+        &__prev
+            h4
+                font-size: 26px
+        &__info
+            width: 130px
+            p
+                font-size: 16px
+            h2
+                font-size: 36px
+                margin: 4px 0 0
+        &__text
+            h3
+                font-size: 26px
+            p
+                font-size: 18px
+                &.gray
+                    font-size: 16px
+            ul
+                li
+                    &::before
+                        width: 4px
+                        height: 4px
+                        margin: 6px auto 0
+
+@media ( max-width: 1024px )
+    .program-modal
+        overflow-y: auto
+        padding: 32px
+        &__wrapper
+            max-width: 704px
+            grid-template-columns: 100%
+            min-height: auto
+        &__prev
+            height: 445px
+            h4
+                font-size: 28px
+        &__info
+            width: 174px
+            p
+                font-size: 20px
+            h2
+                font-size: 48px
+        &__text
+            h3
+                font-size: 28px
+            p
+                font-size: 18px
+                &.gray
+                    font-size: 14px
+        &__close
+            z-index: 2
+
+@media ( max-width: 600px )
+    .program-modal
+        &__prev
+            height: 244px
+            h4
+                font-size: 20px
+        &__info
+            width: 130px
+            p
+                font-size: 14px
+            h2
+                font-size: 24px
+                margin: 4px 0 0
+        &__text
+            padding: 24px
+            h3
+                font-size: 20px
+            p
+                font-size: 14px
+                margin: 16px 0 0
+                &.gray
+                    font-size: 12px
+            ul
+                margin: 16px 0 0
+
+.service
+    &__faq
+        .service
+            &__text
+                img
+                    display: block
+                    width: 100%
+                    margin: 12px 0 0
+                    object-fit: cover
+
+.catalog
+    padding: 60px 0 120px
+    &__wrapper
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 24px
+    &__item
+        padding: 0 0 90px
+        h3
+            font-family: $font-family
+            font-weight: 500
+            font-size: 32px
+            line-height: 1.1
+            color: $dark-gray
+            position: relative
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+        .project__name
+            display: grid
+            grid-template-columns: 100%
+            gap: 24px
+            p
+                margin: 0
+                display: none
+        .project__info_header
+            border: none
+            padding: 32px 32px 0
+        .project__info_body
+            padding: 0 32px 32px
+            margin: 24px 0 0
+            .btn__blue
+                margin: 0
+        .project__info
+            transform: translateY(0)
+            // transform: translateY(calc(100% - 90px))
+
+@media ( max-width: 1440px )
+    .catalog
+        padding: 50px 0 100px
+
+@media ( max-width: 1024px )
+    .catalog
+        &__wrapper
+            grid-template-columns: 100%
+            gap: 24px
+
+@media ( max-width: 600px )
+    .catalog
+        &__item
+            padding: 0 0 70px
+            h3
+                font-size: 22px
+            .project
+                &__info
+                    transform: translateY(0)
+                    // transform: translateY(calc(100% - 70px))
+                    &_header
+                        padding: 24px 24px 0
+                    &_body
+                        padding: 0 24px 24px
+                        margin: 16px 0 0
+
+.series
+    padding: 24px 0 120px
+    &__title
+        display: grid
+        grid-template-columns: 1fr auto
+        gap: 32px
+        align-items: end
+        h1
+            font-family: $font-family
+            font-weight: 500
+            font-size: 70px
+            line-height: 1.15
+            text-transform: uppercase
+            color: $dark-gray
+            span
+                color: $coral
+    &__subtitle
+        margin: 24px 0 0
+        font-family: $font-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.35
+        color: $gray
+        max-width: 1054px
+    &__btn
+        margin: 24px 0 0
+    .btn__wht
+        margin: 32px auto 0
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 24px
+        row-gap: 32px
+        margin: 48px 0 0
+    
+@media ( max-width: 1450px )
+    .series
+        padding: 24px 0 100px
+        &__title
+            h1
+                font-size: 63px
+            a
+                font-size: 14px
+        &__subtitle
+            max-width: 774px
+        &__wrapper
+            gap: 24px
+
+@media ( max-width: 1024px )
+    .series
+        &__title
+            grid-template-columns: 100%
+            h1
+                font-size: 58px
+                order: 1
+            a
+                margin: 0 auto 0 0
+        &__btn
+            max-width: 100%
+        &__wrapper
+            grid-template-columns: 100%
+        .btn__wht
+            max-width: 100%
+
+@media ( max-width: 600px )
+    .series
+        padding: 24px 0 64px
+        &__title
+            gap: 16px
+            h1
+                font-size: 26px
+            a
+                font-size: 12px
+        &__subtitle
+            margin: 16px 0 0
+            font-size: 14px
+        &__wrapper
+            margin: 32px 0 0
+
+.article-list
+    padding: 24px 0 120px
+    h1
+        font: 500 70px / 1.15 $font-family
+        text-transform: uppercase
+        color: $dark-gray
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 24px
+        row-gap: 32px
+        margin: 32px 0 0
+    &__item
+        position: relative
+        display: block
+        display: grid
+        grid-template-rows: auto 1fr
+        overflow: hidden
+        z-index: 1
+        img
+            width: 100%
+            height: 350px
+            object-fit: cover
+            transition: all .3s
+            z-index: -1
+        &:hover
+            .article-list__name
+                color: $hover
+            img
+                transform: scale(1.2)
+    &__info
+        padding: 32px
+        background: $white
+        height: 100%
+    &__date
+        font: 400 14px / 1.35 $font-family
+        color: $gray
+    &__name
+        margin: 12px 0 0
+        font: 500 28px / 1.1 $font-family
+        text-transform: uppercase
+        color: $dark-gray
+        transition: all .3s
+    .btn__wht
+        margin: 32px auto 0
+
+@media ( max-width: 1600px )
+    .article-list
+        padding: 24px 0 100px
+        .breadcrumbs
+            margin: 0 0 32px
+        h1
+            font-size: 64px
+        &__item
+            img
+                height: 250px
+        &__info
+            padding: 24px
+        &__name
+            font-size: 20px
+
+@media ( max-width: 1300px )
+    .article-list
+        padding: 24px 0 96px
+        h1
+            font-size: 58px
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+            margin: 24px 0 0
+            gap: 24px
+
+@media ( max-width: 900px )
+    .article-list
+        .btn__wht
+            width: 100%
+            max-width: 100%
+
+@media ( max-width: 700px )
+    .article-list
+        padding: 16px 0 64px
+        h1
+            font-size: 26px
+        &__wrapper
+            grid-template-columns: 100%
+            gap: 24px
+
+.article
+    padding: 24px 0 120px
+    .series
+        &__title
+            grid-template-columns: 100%
+            gap: 24px
+            a
+                order: -1
+                margin: 0
+    &__date
+        margin: 12px 0 0
+        font: 400 14px / 1.35 $font-family
+        color: $gray
+    &__wrapper
+        max-width: 900px
+        margin: 48px auto 0
+        p
+            font: 400 20px / 1.35 $font-family
+            color: $gray
+            margin: 24px 0 12px
+            strong
+                font-weight: 500
+                color: $dark-gray
+        img
+            width: calc( 50% - 24px )
+            height: 350px
+            object-fit: cover
+            display: block
+            &.justifyright
+                float: right
+                margin: 0 0 0 24px
+            &.justifyleft
+                float: left
+                margin: 0 24px 0 0
+            &.justifyfull
+                display: block
+                width: 100%
+                margin: 24px 0 0
+                height: 600px 
+        h2
+            text-transform: none
+            font-size: 42px
+            margin: 48px 0 0
+        ol,
+        ul
+            display: grid
+            grid-template-columns: 100%
+            gap: 18px
+            margin: 24px 0 0
+            width: 100%
+            counter-reset: article
+            li
+                font: 400 18px / 1.35 $font-family
+                color: #6f6f6f
+                position: relative
+                display: grid
+                grid-template-columns: 20px 1fr
+                gap: 7px
+                &::before
+                    content: ''
+                    display: block
+            p
+                color: #6f6f6f
+        ol
+            ul,
+            ol
+                grid-column: auto
+                margin: 12px 0 0
+                li
+                    &::before
+                        content: ''
+            li
+                align-items: start
+                ul ,
+                ol
+                    grid-column: 2/3
+                &::before
+                    counter-increment: article 1
+                    content: counter(article) '.'
+                    color: #6f6f6f
+        ul
+            ol,
+            ul
+                grid-column: auto
+                margin: 12px
+                li
+                    &::before
+                        counter-increment: article 1
+                        content: counter(article) '.'
+            li
+                ol,
+                ul
+                    grid-column: 2/3
+                &::before
+                    background: #6f6f6f
+                    width: 5px
+                    height: 5px
+                    border-radius: 100%
+                    margin: 10px auto 0
+        blockquote
+            display: grid
+            grid-template-columns: 100%
+            gap: 24px
+            margin: 48px 0 0
+            p
+                font: 500 42px / 1.1 $font-family
+                color: $dark-gray
+                margin: 0
+            &::before
+                content: ''
+                background: url('../img/blockquote.svg') center no-repeat
+                background-size: contain
+                display: block
+                width: 54px
+                height: 42px
+        a
+            color: $blue
+            transition: all .3s
+            &:hover
+                color: $hover
+    &__bg
+        height: calc(100vh - 220px)
+        width: 100%
+        object-fit: cover
+        margin: 32px 0 0
+    &-more
+        padding: 0 0 120px
+        &__slider
+            margin: 24px 0 0
+        .swiper-wrapper
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr 1fr
+            gap: 24px
+        &__pag
+            display: none
+    &+.gallery
+        padding: 0 0 120px
+        margin: -60px 0 0
+
+@media ( max-width: 1600px )
+    .article
+        padding-bottom: 100px
+        h1
+            span
+                display: block
+        h2
+            font-size: 36px
+        &__wrapper
+            p
+                font-size: 18px
+            blockquote
+                p
+                    font-size: 36px
+        &-more
+            padding: 0 0 100px
+        &+.gallery
+            padding: 0 0 120px
+            margin: -40px 0 0
+
+@media ( max-width: 1300px )
+    .article
+        padding-bottom: 96px
+        h2
+            font-size: 36px
+        &__bg
+            height: 450px
+        &__wrapper
+            img
+                height: 300px
+                &.justifyfull
+                    height: 450px
+        &-more
+            padding: 0 0 96px
+            .swiper-wrapper
+                grid-template-columns: 1fr 1fr
+        &+.gallery
+            padding: 0 0 120px
+            margin: -36px 0 0
+
+@media ( max-width: 700px )
+    .article
+        padding: 16px 0 64px
+        h2
+            font-size: 22px
+        &__bg
+            height: 220px
+        &__wrapper
+            img
+                height: 250px
+                float: none !important
+                width: 100%
+                margin: 48px 0 0 !important
+                &.justifyfull
+                    height: 250px
+            p
+                font-size: 16px
+            ol,
+            ul
+                li
+                    font-size: 16px
+                ol,
+                ul
+                    margin: 10px 0 0
+                    gap: 10px
+            blockquote
+                p
+                    font-size: 22px
+        &-more
+            padding: 0 0 64px
+            .swiper
+                &-wrapper
+                    display: flex
+                    gap: 0
+            &__pag
+                display: flex
+                justify-content: center
+                align-items: center
+                gap: 8px
+                position: relative
+                inset: auto !important
+                margin: 24px 0 0
+                transform: none !important
+                width: 100% !important
+                max-width: 100%
+                span
+                    left: auto !important
+                    display: block
+                    background: transparent
+                    margin: 0 !important
+                    width: 8px
+                    height: 8px
+                    border-radius: 100%
+                    border: 1px solid $stroke
+                    transition: all .3s !important
+                    transform: none !important
+                    opacity: 1 !important
+                    &.swiper-pagination-bullet-active
+                        background: $coral
+                        border-color: $coral
+        &+.gallery
+            padding: 0 0 60px
+            margin: -34px 0 0
