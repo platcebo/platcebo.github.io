@@ -638,7 +638,7 @@ body
     &__pic
         display: block
         width: 100%
-        height: 350px
+        height: 18vw
         object-fit: cover
     &__info
         // position: absolute
@@ -1375,7 +1375,7 @@ body
         video
             width: 100%
             object-fit: cover
-            height: 100%
+            height: 18vw
             transition: all .3s
             min-height: 100%
         &:hover
@@ -2225,8 +2225,6 @@ section
             // padding: 0 0 100px
             h3
                 font-size: 36px
-        &__pic
-            height: 256px
         &__info
             // transform: translateY(calc(100% - 100px))
             &_header
@@ -2262,6 +2260,12 @@ section
         &__name
             p
                 font-size: 18px
+        &__wind
+            padding: 16px
+            p
+                font-size: 14px
+            h3
+                font-size: 26px
     .pref
         padding: 200px 0 50px
         &__info
@@ -2602,6 +2606,8 @@ section
         &__name
             p
                 font-size: 24px
+        &__pic
+            height: 54vw
     .pref
         &__info
             padding: 0
@@ -2744,6 +2750,9 @@ section
                     background: $coral
                     border: 1px solid $coral
                     opacity: 1
+        &__slide 
+            img
+                height: 54vw
     .faq
         &__block
             grid-template-columns: 100%
@@ -3029,7 +3038,7 @@ section
         &__item
             // padding: 0 0 90px
         &__pic
-            height: 97vw
+            height: 51vw
         &__wind
             h3
                 font-size: 24px
@@ -3848,6 +3857,7 @@ section
     &__info
         background: $white
         height: 100%
+        max-height: 784px
         &_mob
             display: none
         &_header
@@ -3867,7 +3877,7 @@ section
                 line-height: 1.35
                 color: $gray
         &_body
-            padding: 24px 32px 
+            padding: 24px 32px 0
             border-bottom: 1px solid $stroke
         &_name
             font-family: $font-family
@@ -3876,7 +3886,8 @@ section
             line-height: 1.35
             color: $dark-gray
         &_scroll
-            padding: 0 10px 0 0
+            align-content: start
+            padding: 0 10px 24px 0
             display: grid
             grid-template-columns: 1fr 1fr
             overflow-y: auto
@@ -3974,7 +3985,7 @@ section
     &__wrapper
         display: grid
         grid-template-columns: 100%
-        grid-template-rows: calc( 100% - 184px ) 160px
+        grid-template-rows: 600px 160px
         gap: 24px
         position: relative
     &__slider
@@ -4404,7 +4415,7 @@ section
         overflow: hidden
         img
             width: 100%
-            height: 469px
+            height: 18vw
             object-fit: cover
             transition: all .3s
     &__info
@@ -4480,6 +4491,7 @@ section
         &__block
             grid-template-columns: 320px 1fr
         &__info
+            max-height: 594px
             &_header
                 padding: 24px
                 h1
@@ -4487,18 +4499,18 @@ section
                 p
                     font-size: 18px
             &_body
-                padding: 24px
+                padding: 24px 24px 0
             &_name
                 font-size: 18px
             &_scroll
                 margin: 12px 0 0
                 gap: 8px
-                max-height: 260px
-                height: 260px
+                max-height: 160px
+                height: 160px
                 row-gap: 12px
             &_check
                 img
-                    height: 94px
+                    height: 58px
             &_footer
                 padding: 24px
             &_price
@@ -4511,7 +4523,7 @@ section
             &_text
                 font-size: 14px
         &__wrapper
-            grid-template-rows: calc(100% - 152px) 128px
+            grid-template-rows: 442px 128px
         &__row
             &_item
                 padding: 16px
@@ -4571,9 +4583,6 @@ section
             max-width: 132px
             h3
                 font-size: 36px
-        &__img
-            img
-                height: 400px
         &__name
             h3
                 font-size: 32px
@@ -4604,7 +4613,7 @@ section
         &__row
             display: none
         &__slider
-            height: 73vw
+            height: 44vw
             overflow: visible
         &__wrapper
             display: block
@@ -4752,7 +4761,7 @@ section
     .check-more
         &__img
             img
-                height: 478px
+                height: 54vw
         &__sale
             max-width: 132px
             h3
@@ -4793,8 +4802,6 @@ section
         padding: 30px 0
     .header-cart
         padding: 16px 0 32px
-        &__slider
-            height: 91vw
         .breadcrumbs
             padding: 0 0 0 24px
         &__back
@@ -4823,12 +4830,12 @@ section
             &_body
                 padding: 16px 24px 
             &_check
-                width: 106px
-                min-width: 106px
+                width: 105px
+                min-width: 105px
                 p
                     font-size: 12px
                 img
-                    height: 76px
+                    height: 48px
             &__footer
                 padding: 16px 24px 24px
             &_price
@@ -4951,7 +4958,7 @@ section
                 font-size: 24px
         &__img
             img
-                height: 97vw
+                height: 51vw
         &__slider
             margin: 24px 0 0
         &__info
