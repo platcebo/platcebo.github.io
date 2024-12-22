@@ -211,6 +211,12 @@ body
         text-align: center
         max-width: 800px
         margin: 10px auto 0
+        color: #000
+        a
+            color: #ff0000
+            transition: all .3s
+            &:hover
+                color: #000
     &__wrapper
         margin: 50px auto 0
         max-width: 800px
@@ -243,6 +249,16 @@ body
             &:hover
                 background: transparent
                 color: #000
+    &__back
+        font-size: 18px
+        margin: 0 0 10px
+        text-align: left
+        color: #000
+        transition: all .3s
+        display: block
+        width: max-content
+        &:hover
+            opacity: .7
 
 @media ( max-width: 1440px )
     .har
