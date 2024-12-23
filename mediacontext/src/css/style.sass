@@ -3605,9 +3605,25 @@ textarea.input
         display: inline
     a
         transition: all .3s
-        margin: 0 3px 0 0
+        margin: 0 26px 0 0
+        position: relative
+        font: 500 20px / 1.4 $font-family
+        letter-spacing: -0.03em
+        color: $black
+        opacity: 1
+        &::before
+            content: ''
+            display: block
+            width: 6px
+            height: 6px
+            border-radius: 100%
+            background: $black
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: calc( 100% + 8px )
         &:hover
-            opacity: 1
+            color: #9373ea
 .container__thin
     max-width: 1135px
 
@@ -3949,7 +3965,7 @@ textarea.input
                 transform: rotate(10deg)
 
 .add-header
-    padding: 0 0 40px
+    padding: 20px 0 40px
     &__block
         position: relative
         background: $black
