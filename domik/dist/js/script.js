@@ -23,14 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const navSelect1 = new ItcCustomSelect('#nav__select-3');
     }
 
-    var swiper = new Swiper(".guide__wrapper", {
-        slidesPerView: "auto",
-        spaceBetween: 16,
-        navigation: {
-            nextEl: ".guide__wrapper .swiper-button-next",
-            prevEl: ".guide__wrapper .swiper-button-prev",
-        },
-    });
     var articleThumb = new Swiper(".article__thumb", {
         spaceBetween: 16,
         slidesPerView: 5,
@@ -49,6 +41,13 @@ document.addEventListener('DOMContentLoaded', function() {
             el: ".article__slider .swiper-pagination",
           },
     });
+    var swiper = new Swiper(".header__swiper", {
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+
 
     let svg = document.querySelectorAll('img.svg');
 
@@ -140,36 +139,6 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 navLang.forEach(item => item.classList.remove('nav__lang_open'))
             }
-        })
-    }
-
-    let articlePriceWrapper = document.querySelectorAll('.article__aside_price');
-
-    if(articlePriceWrapper !== null) {
-        articlePriceWrapper.forEach((item,i)=>{
-            item.addEventListener('click', ()=>{
-                item.classList.remove('active');
-                if (i % 2 == 0) {   
-                    articlePriceWrapper[i+1].classList.add('active')
-                } else {
-                    articlePriceWrapper[i-1].classList.add('active')
-                }
-            })
-        })
-    }
-
-    let recomPriceWrapper = document.querySelectorAll('.recom__price_wrapper');
-
-    if(recomPriceWrapper !== null) {
-        recomPriceWrapper.forEach((item,i)=>{
-            item.addEventListener('click', ()=>{
-                item.classList.remove('active');
-                if (i % 2 == 0) {   
-                    recomPriceWrapper[i+1].classList.add('active')
-                } else {
-                    recomPriceWrapper[i-1].classList.add('active')
-                }
-            })
         })
     }
 
@@ -417,5 +386,4 @@ document.addEventListener('DOMContentLoaded', function() {
             navPers.classList.toggle('active')
         })
     }
-
 }, false);

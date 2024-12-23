@@ -1,3 +1,4 @@
+// gulpfile.js
 var gulp = require('gulp');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass')(require('sass'));
@@ -6,112 +7,51 @@ var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var cssmin = require('gulp-cssmin');
 
-function styleSass (done) {
-    gulp.src('./src/css/**/*.sass')
-    .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(autoprefixer({
-        // overrideBrowserslist: ['last 8 versions'],
-        // browsers: [
-        //     'Android >= 4',
-        //     'Chrome >= 20',
-        //     'Firefox >= 24',
-        //     'Explorer >= 11',
-        //     'iOS >= 6',
-        //     'Opera >= 12',
-        //     'Safari >= 6',
-        // ],
-        // browsers: ['last 2 versions'],
-        cascade: false,
-    }))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./dist/css'))
-    .pipe(browserSync.stream());
+// Путь к директориям
+var paths = {
+    styles: {
+        src: 'src/css/**/*.{scss,css,sass}', // Исходные файлы стилей
+        dest: 'dist/css' // Директория для выходных файлов стилей
+    },
+    other: {
+        src: ['src/**/*', '!src/css/**/*'], // Все файлы, кроме файлов в src/css
+        dest: 'dist' // Директория для остальных файлов
+    }
+};
 
-    done()
+// Задача для компиляции SASS и CSS
+function styles() {
+    return gulp.src(paths.styles.src)
+        .pipe(sourcemaps.init()) // Инициализация sourcemaps
+        .pipe(sass().on('error', sass.logError)) // Компиляция SASS
+        .pipe(autoprefixer()) // Автопрефиксация
+        .pipe(cssmin()) // Минификация CSS
+        .pipe(rename({ suffix: '.min' })) // Переименование с добавлением .min
+        .pipe(sourcemaps.write('.')) // Запись sourcemaps
+        .pipe(gulp.dest(paths.styles.dest)) // Сохранение в dist/css
+        .pipe(browserSync.stream()); // Обновление браузера
 }
 
-function styleCss(done) {
-    gulp.src('./src/css/**/*.css')
-    .pipe(sourcemaps.init())
-    .pipe(cssmin())
-    .pipe(autoprefixer({
-        overrideBrowserslist: ['last 8 versions'],
-        browsers: [
-            'Android >= 4',
-            'Chrome >= 20',
-            'Firefox >= 24',
-            'Explorer >= 11',
-            'iOS >= 6',
-            'Opera >= 12',
-            'Safari >= 6',
-        ],
-    }))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./dist/css'))
-    .pipe(browserSync.stream());
-
-    done()
+// Задача для копирования остальных файлов
+function copy() {
+    return gulp.src(paths.other.src)
+        .pipe(gulp.dest(paths.other.dest)); // Копирование в dist
 }
 
-function file(done) {
-    gulp.src('./src/font/**/*')
-    .pipe(gulp.dest('./dist/font'))
-    .pipe(browserSync.stream());
-
-    gulp.src('./src/favicon/**/*')
-    .pipe(gulp.dest('./dist/favicon'))
-    .pipe(browserSync.stream());
-
-    gulp.src('./src/img/**/*')
-    .pipe(gulp.dest('./dist/img'))
-    .pipe(browserSync.stream());
-    
-    gulp.src('./src/video/**/*')
-    .pipe(gulp.dest('./dist/video'))
-    .pipe(browserSync.stream());
-
-    gulp.src('./src/js/**/*')
-    .pipe(gulp.dest('./dist/js'))
-    .pipe(browserSync.stream());
-
-    gulp.src('./src/php/**/*')
-    .pipe(gulp.dest('./dist/php'))
-    .pipe(browserSync.stream());
-    
-    gulp.src('./src/**/*.html')
-    .pipe(gulp.dest('./dist'))
-    .pipe(browserSync.stream());
-
-    done()
-}
-
-function sync(done){
+// Задача для запуска сервера
+function serve() {
     browserSync.init({
-        notify: true,
-        startPath: './dist/index.html',
-        reloadOnRestart: true,
-        server: ({
-            baseDir: "./"
-        }),
-        port: 3000
-    })
+        server: {
+            baseDir: './dist'
+        }
+    });
 
-    done()
+    gulp.watch(paths.styles.src, styles); // Наблюдение за изменениями в стилях
+    gulp.watch(paths.other.src, copy).on('change', browserSync.reload); // Наблюдение за изменениями в других файлах
 }
 
-function watch() {
-    gulp.watch("./src/favicon/**/*" , file);
-    gulp.watch("./src/img/**/*" , file);
-    gulp.watch("./src/video/**/*" , file);
-    gulp.watch("./src/font/**/*" , file);
-    gulp.watch("./src/js/**/*" , file);
-    gulp.watch("./src/php/**/*" , file);
-    gulp.watch("./src/**/*.html" , file);
-    gulp.watch("./src/css/**/*.sass" , styleSass);
-    gulp.watch("./src/css/**/*.css" , styleCss);
-}
-
-exports.default = gulp.series(file, styleCss, styleSass, gulp.parallel(watch, sync))
+// Экспорт задач
+exports.styles = styles;
+exports.copy = copy;
+exports.serve = serve;
+exports.default = gulp.series(styles, copy, serve); // Запуск по умолчанию

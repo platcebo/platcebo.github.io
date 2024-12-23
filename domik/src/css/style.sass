@@ -591,284 +591,78 @@ fieldset
             opacity: .5
 
 .header
-    padding: 120px 0 64px
+    background: #f2f4f7
+    padding: 40px 0
     position: relative
-    z-index: 1
-    min-height: 400px
-    &__post
-        display: none
-    &__bg
-        position: absolute
-        top: 0
-        left: 0
-        width: 100vw
-        z-index: -1
-        &::before
-            content: ''
-            display: block
-            position: absolute
-            inset: 0
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 39%, rgba(55, 109, 246, 0.2) 100%)
+    .container
+        position: relative
+    &__swiper
+        position: relative
+    &__slide
         img
             width: 100%
-            height: 400px
-            object-fit: cover
-            z-index: -3
-    h1
-        font: 600 60px / 1.2 $font-family
-        letter-spacing: -0.02em
-        text-align: center
-        color: #fff
-        a
-            text-decoration: underline
-            text-decoration-skip-ink: none
-            color: #fff
-    &__block
-        margin: 90px 0 0
-    &__wrapper
-        border-radius: 0 20px 20px 20px
-        background: #fff
-        padding: 24px
-        display: none
-        &.active
-            display: block
-    &__tab
+            border-radius: 16px
+    .swiper-pagination
+        width: calc( 100% - 72px )
+        left: 36px
+        bottom: 24px
         display: flex
         justify-content: flex-start
         align-items: center
-        gap: 5px
-    &__point
-        border-radius: 20px 20px 0 0
-        padding: 16px 48px 10px
-        // border: 1px solid #eaecf0 
-        cursor: pointer
-        background: #f9fafb
-        font: 600 16px / 1.5 $font-family
-        color: #98a2b3
-        transition: all .3s
-        position: relative
-        &::before,
-        &::after 
-            content: ''
-            display: block
-            width: 20px
-            height: 20px
-            background-size: calc(20px * 1.5) calc(20px * 1.5)
-            position: absolute
-            bottom: 0
-            background-image: radial-gradient(circle at top left, transparent 45%, #f9fafb 47%)
-        &::before
-            left: calc(19px * -1)
-        &::after 
-            right: calc(19px * -1)
-            transform: rotate(90deg)
-        &:nth-child(1)
-            &::before
-                content: none
-        &.active
-            font: 600 16px / 1.5 $font-family
-            color: #5482f7
-            background: #fff
-            z-index: 2
-            &::before,
-            &::after
-                background-image: radial-gradient(circle at top left, transparent 45%, #fff 47%)
-        &:hover
-            color: #5482f7
-    &__form
-        // margin: 24px 0 0
-        display: grid
-        grid-template-columns: 1fr 252px
-        gap: 24px
-        &_link
-            display: grid
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr
-            gap: 12px
-            margin: 24px 0 0
-            z-index: 2
-            position: relative
-        &_select
-            border: 1px solid #eaecf0
-            border-radius: 4px
-            display: grid
-            grid-template-columns: 22fr 11fr 10fr 36fr
-    &__input
-        position: relative
-        img
-            position: absolute
-            top: 50%
-            transform: translateY(-50%)
-            left: 14px
-        input
-            height: 100%
-            width: 100%
-            box-sizing: border-box  
-            border: none
-            font: 400 16px / 1.5 $font-family
-            color: #344054
-            background: transparent
-            padding: 0 10px 0 42px
-            &::placeholder
-                color: #667085
-    &__btn
-        display: grid
-        grid-template-columns: 1fr 1fr
-        gap: 12px
-        button
-            width: 100%
-            height: 100%
-            font-size: 16px
-    &__map
-        border: 1px solid #eaecf0
-        border-radius: 4px
-        padding: 12px 20px
-        background: #fff
-        display: grid
-        grid-template-columns: 20px 1fr
         gap: 8px
-        align-items: center
-        font: 600 16px / 1.5 $font-family
-        color: #344054
-        transition: all .3s
-        img
-            width: 100%
-        &:hover
-            background: #eaecf0
-    &__link
-        border: 1px solid #eaecf0
-        border-radius: 8px
-        padding: 15px
-        display: block
-        transition: all .3s
         span
-            position: relative
-            width: 32px
-            height: 32px
+            border-radius: 4px
+            width: 60px
+            height: 2px
+            background: #98a2b3
+            display: block
+            margin: 0
+            opacity: 1
+            transition: all .3s
+            &.swiper-pagination-bullet-active
+                background: #fff
+
+.public
+    padding: 40px 0 
+    background: #fff
+    &__wrapper
+        margin: 24px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 16px
+    &__title
+        display: grid
+        grid-template-columns: 1fr auto
+        gap: 32px
+    &__arrow
+        display: grid
+        grid-template-columns: 44px 44px
+        gap: 8px
+        a
+            border: 1px solid #d0d5dd
+            border-radius: 4px
+            padding: 12px
+            width: 44px
+            height: 44px
             display: flex
             justify-content: center
             align-items: center
-            z-index: 10
+            box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+            background: #fff
             transition: all .3s
-            border-radius: 6px
-            img
-                width: 16px
-            &::before
-                content: ''
-                display: block
-                position: absolute
-                top: -3px
-                right: -5px
-                width: 100%
-                height: 100%
-                border-radius: 6px
-                background: #2963f5
-                transform: rotate(15deg)
-                z-index: -10
-                transition: all .3s
-            &::after
-                backdrop-filter: blur(16px)
-                background: rgba(255, 255, 255, 0.6)
-                border: 1px solid rgba(255, 255, 255, 0.6)
-                border-radius: 6px
-                inset: 0
-                content: ''
-                display: block
-                position: absolute
-                z-index: -5
-                transition: all .3s
-        p
-            margin: 16px 0 0
-            font: 500 14px / 1.42857 $font-family
-            color: #344054
-        &:hover
-            background: #e3ebfe
-    &__more
-        border-radius: 8px
-        padding: 16px
-        background: #e3ebfe
-        display: block
-        transition: all .3s
-        span
-            position: relative
-            width: 32px
-            height: 32px
-            display: flex
-            justify-content: center
-            align-items: center
-            transition: all .3s
-            background: #225ef5
-            border-radius: 6px
-            img
-                width: 16px
-        p
-            margin: 16px 0 0
-            font: 500 14px / 1.42857 $font-family
-            color: #344054
-        &:hover
-            background: #c1d3ff
+            &:hover
+                background: #f2f4f7
 
 .catalog
-    padding: 96px 0
+    padding: 40px 0
     z-index: 2
     position: relative
+    background: #fff
     &__wrapper
         display: grid
-        grid-template-columns: 43fr 43fr 31fr
-        gap: 20px
-    &__item
-        padding: 24px
-        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
-        background: #fff
-        border: 1px solid #eaecf0
-        border-radius: 24px 
-        position: relative
-        overflow: hidden
-        &_title
-            display: grid
-            grid-template-columns: 48px 1fr
-            gap: 16px
-            align-items: center
-            span
-                width: 48px
-                height: 48px
-                display: flex
-                justify-content: center
-                align-items: center
-                box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
-                background: #fff
-                border: 1px solid #eaecf0
-                border-radius: 10px
-                img
-                    width: 24px
-            p
-                font: 600 20px / 1.5 $font-family
-                color: #1d2939
-                transition: all .3s
-            &:hover
-                p
-                    color: #225ef5
-        ul
-            margin: 32px 0 0
-            display: grid
-            grid-template-columns: 100%
-            gap: 12px
-            a
-                font: 600 14px / 1.42857 $font-family
-                color: #2963f5
-                transition: all .3s
-                &:hover
-                    color: #2b52b4
-            span
-                font: 500 12px / 1.5 $font-family
-                color: #98a2b3
-    &__bg
-        position: absolute
-        bottom: 0
-        right: 0
-        width: 120px
-        height: 200px
-        object-fit: cover
-        border-radius: 36px 0 0 0
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 16px
+        margin: 24px 0 0
     &__town
         background-size: cover
         background-position: center bottom
@@ -881,6 +675,8 @@ fieldset
         flex-direction: column
         padding: 24px
         z-index: 1
+        grid-column: 4/5
+        grid-row: 1/3
         &::before
             content: ''
             position: absolute
@@ -894,33 +690,6 @@ fieldset
         .btn__wht
             width: 100%
             margin: auto 0 0
-    &__map
-        background-size: cover
-        background-position: center center
-        padding: 24px
-        display: flex
-        justify-content: center
-        align-items: center
-        flex-direction: column
-        border-radius: 24px
-        span
-            border: 1px solid #eaecf0
-            background: #fff
-            border-radius: 10px
-            width: 48px
-            height: 48px
-            display: flex
-            justify-content: center
-            align-items: center
-            img
-                width: 24px
-        p
-            margin: 20px 0 0
-            font: 600 20px / 1.5 $font-family
-            color: #fff
-        .btn__wht
-            margin: 20px 0 0
-            width: 100%
 
 .recom
     padding: 96px 0
@@ -948,46 +717,60 @@ fieldset
         display: block
         img
             width: 100%
-            height: 240px
+            height: 180px
             object-fit: cover
+        &_tag
+            position: absolute
+            bottom: 7px
+            right: 11px
+            left: 11px
+            width: auto
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            flex-wrap: wrap
+            gap: 4px
+            div
+                border-radius: 16px
+                padding: 2px 8px 2px 6px
+                display: grid
+                grid-template-columns: 12px 1fr
+                gap: 4px
+                align-items: center
+                p
+                    font: 500 12px / 1.5 $font-family
+                    white-space: nowrap
+                &.blue
+                    background: #e3ebfe
+                    p
+                        color: #2963f5
+                &.yellow
+                    background: #fffaeb
+                    p
+                        color: #b54708
+                &.red
+                    background: #fef3f2
+                    p
+                        color: #b42318
     &__fav
         position: absolute
-        top: 12px
-        right: 12px
-        display: flex
-        justify-content: center
-        align-items: center
-        width: 44px
-        height: 44px
-        border: 1px solid #d0d5dd
-        border-radius: 4px
-        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
-        background: #fff
+        top: 20px
+        right: 20px
         transition: all .3s
         z-index: 2
-        img
-            width: 20px
-            height: 20px
         svg
-            width: 20px
-            height: 20px
+            width: 24px
+            height: 24px
             path
                 transition: all .3s
-                transition: all .3s
-                stroke: #344054
                 fill: transparent
-        &:hover
-            background: #e3ebfe
-            svg
-                path
-                    stroke: #2963f5
         &.active
             svg
                 path
-                    stroke: #2963f5
-                    fill: #2963f5
+                    fill: #fff
+                    fill-opacity: 1
     &__info
-        padding: 16px 24px 24px
+        padding: 8px 12px 12px
     &__price
         &_wrapper
             display: none
@@ -997,7 +780,7 @@ fieldset
             &.active
                 display: grid
         &_val
-            font: 600 24px / 1.33333 $font-family
+            font: 600 16px / 1.33333 $font-family
             color: #1d2939
         &_cur
             border: 1px solid #344054
@@ -1010,10 +793,10 @@ fieldset
         font: 600 14px / 1.42857 $font-family
         color: #98a2b3
     &__row
-        margin: 16px 0 0
+        margin: 8px 0 0
         display: flex
         flex-wrap: wrap
-        gap: 12px
+        gap: 8px
         span
             position: absolute
             bottom: calc( 100% + 6px )
@@ -1045,7 +828,7 @@ fieldset
             display: grid
             grid-template-columns: 20px auto
             gap: 8px
-            padding: 0 12px 0 0
+            padding: 0 8px 0 0
             border-right: 1px solid #EAECF0
             align-items: center
             position: relative
@@ -1061,24 +844,25 @@ fieldset
             font: 600 14px / 1.42857 $font-family
             color: #2963f5
     &__place
-        margin: 16px 0 0
+        margin: 8px 0 0
         display: grid
         grid-template-columns: 20px 1fr
         gap: 4px
+        align-items: center
         svg
             width: 20px
             height: 20px
             path
                 stroke: #98A2B3
         p
-            font: 500 14px / 1.42857 $font-family
+            font: 400 12px / 1.3 $font-family
             color: #475467
     &__more
         margin: 32px auto 0
         display: block
 
 .banner
-    padding: 96px 0
+    padding: 40px 0
     z-index: 1
     &__wrapper
         box-shadow: 0 8px 8px -4px rgba(16, 24, 40, 0.03), 0 20px 24px -4px rgba(16, 24, 40, 0.08)
@@ -1125,7 +909,7 @@ fieldset
         z-index: -1
 
 .dream
-    padding: 96px 0
+    padding: 40px 0
     &__wrapper
         border-radius: 24px
         background: #f1f5ff
@@ -1153,7 +937,7 @@ fieldset
         object-fit: cover
 
 .guide
-    padding: 96px 0
+    padding: 40px 0
     background: #fff
     position: relative
     overflow: hidden
@@ -1175,46 +959,45 @@ fieldset
     &__wrapper
         margin: 64px 0 0
         overflow: visible
-    .swiper
-        &-slide
-            max-width: 592px
-            border: 1px solid #eaecf0
-            border-radius: 16px
-            overflow: hidden
-            position: relative
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 16px
+    &__item
+        border: 1px solid #eaecf0
+        border-radius: 16px
+        overflow: hidden
+        position: relative
     &__prev
         position: relative
         img
             width: 100%
-            height: 280px
+            height: 246px
             object-fit: cover
         &_info
             position: absolute
             bottom: 0
             left: 0
             right: 0
-            padding: 24px
+            padding: 16px
             backdrop-filter: blur(24px)
             background: rgba(255, 255, 255, 0.2)
             display: grid
             grid-template-columns: auto auto
             justify-content: space-between
         p
-            font: 600 14px / 1.42857 $font-family
+            font: 400 14px / 1.42857 $font-family
             color: #fff
-            &+p
-                font: 400 14px / 1.42857 $font-family
     &__info
-        padding: 32px 24px
+        padding: 16px
         h3
-            font: 600 24px / 1.33333 $font-family
+            font: 600 20px / 1.33333 $font-family
             color: #101828
         p
             margin: 8px 0 0
             font: 400 16px / 1.5 $font-family
             color: #475467
         a
-            margin: 24px 0 0
+            margin: 16px 0 0
             font: 600 16px / 1.5 $font-family
             color: #2963f5
             display: grid
@@ -1261,7 +1044,7 @@ fieldset
         display: none
 
 .about
-    padding: 96px 0
+    padding: 40px 0
     h2
         font: 600 48px / 1.25 $font-family
         letter-spacing: -0.02em
@@ -1343,6 +1126,9 @@ fieldset
     
 
 @media ( max-width: 1024px )
+    .public
+        &__wrapper
+            grid-template-columns: 1fr 1fr 1fr
     .nav
         &__pers
             display: none
@@ -1597,85 +1383,39 @@ fieldset
                             background: url('../img/plus-wht.svg') center no-repeat
                             background-size: contain
                             margin: 0 8px 0 0
-    .header
-        h1
-            font-size: 45px
-        &__form
-            grid-template-columns: 100%
     .catalog
-        &__wrapper
-            grid-template-columns: 1fr 1fr
-        &__town,
-        &__map
-            order: 2
+        &__wrapper 
+            grid-template-columns: 1fr 1fr 1fr
+        .recom__item
+            &:nth-child(5),
+            &:nth-child(4)
+                display: none
+        &__town
+            grid-column: 3/4
     .recom
         &__wrapper
             grid-template-columns: 1fr 1fr
 
 @media ( max-width: 768px )
     .header
-        padding: 64px 0 0
-        min-height: 240px
-        &__block
-            margin: 32px 0 0
-        &__tab
-            display: none
+        padding: 24px 0
+        .swiper-pagination
+            justify-content: center
+    .public
+        padding: 24px 0
         &__wrapper
-            border-radius: 20px
-            box-shadow: 0 2px 4px -2px rgba(16, 24, 40, 0.06), 0 4px 8px -2px rgba(16, 24, 40, 0.1)
-        &__select
-            display: none
-        &__form
-            gap: 8px
-            &_select
-                display: block
-            &_link
-                display: none
-        &__input
-            input
-                padding: 9px 16px 9px 36px
-            img
-                left: 10px
-        &__btn
-            gap: 8px
-            button
-                padding: 8px 
-        &__map
-            grid-template-columns: 20px auto
-            justify-content: center
-        &__post
-            width: 100%
-            margin: 32px 0 0
-            display: flex
-            justify-content: center
-            align-items: center
-            &::before
-                content: ''
-                display: block
-                width: 20px
-                height: 20px
-                background: url('../img/plus-wht.svg') center no-repeat
-                background-size: contain
-                margin: 0 8px 0 0
-        &__bg
-            img
-                height: 240px
+            grid-template-columns: 1fr 1fr
     .catalog
-        padding: 16px 0 36px
+        padding: 24px 0
         &__wrapper
-            grid-template-columns: 100%
-            gap: 12px
-        &__item
-            &_title
-                p
-                    font-size: 16px
-        &__bg
-            width: 80px
-            height: 180px
+            grid-template-columns: 1fr 1fr
+        .recom__item:nth-child(4),
+        .recom__item:nth-child(5)
+            display: block
         &__town
-            height: 422px
+            display: none
     .recom
-        padding: 36px 0
+        padding: 24px 0
         h2
             font-size: 16px
         &__wrapper
@@ -1701,7 +1441,7 @@ fieldset
         &__info
             padding: 8px 12px 12px
     .banner
-        padding: 36px 0
+        padding: 24px 0
         &__wrapper
             padding: 16px
         &__list
@@ -1712,7 +1452,7 @@ fieldset
             width: 150px
             height: 70px
     .dream
-        padding: 36px 0
+        padding: 24px 0
         &__info
             padding: 12px
             h2
@@ -1725,7 +1465,7 @@ fieldset
         &__bg
             height: 176px
     .guide
-        padding: 36px 0
+        padding: 24px 0
         &__title
             display: block
             h2
@@ -1745,6 +1485,7 @@ fieldset
             margin: 32px 0 0
         &__wrapper
             margin: 32px 0 0
+            grid-template-columns: 1fr 1fr
         &__prev
             img
                 height: 180px
@@ -1760,6 +1501,9 @@ fieldset
             a
                 margin: 16px 0 0
                 font-size: 14px
+        &__item
+            &:last-child
+                display: none
     .about
         padding: 36px 0
         h2
@@ -3915,10 +3659,6 @@ fieldset
         margin: 0 auto 
         h1
             text-align: center
-    h1
-        font: 500 36px / 1.5 $font-family
-        letter-spacing: -0.02em
-        color: #101828
     &__text
         margin: 24px auto 0 !important
         font: 400 24px / 1.33333 $font-family
@@ -3928,6 +3668,10 @@ fieldset
     &__wrapper
         max-width: 720px
         margin: 96px auto 0
+    h1
+        font: 500 36px / 1.5 $font-family
+        letter-spacing: -0.02em
+        color: #101828
     h2
         font: 600 30px / 1.5 $font-family
         margin: 8px 0 0
@@ -4008,27 +3752,42 @@ fieldset
             &:nth-child(2)
                 color: #667085
 
+h1
+    font: 500 36px / 1.5 $font-family
+    letter-spacing: -0.02em
+    color: #101828
+h2
+    font: 600 30px / 1.5 $font-family
+h3
+    font: 600 24px / 1.5 $font-family
+h4
+    font: 600 20px / 1.5 $font-family
+h5
+    font: 600 18px / 1.5 $font-family
+h6
+    font: 600 16px / 1.5 $font-family
+
 @media ( max-width: 500px )
     .content-page
         padding: 50px 0
         &__wrapper
             margin: 50px 0 0
-        h1
-            font-size: 30px
-        h2
-            font-size: 24px
-        h3
-            font-size: 20px
-        h4
-            font-size: 18px
-        h5
-            font-size: 16px
-        table
-            width: 100%
-            position: relative
-            max-width: 100%
-            overflow-x: scroll
-            white-space: nowrap
+    h1
+        font-size: 30px
+    h2
+        font-size: 24px
+    h3
+        font-size: 20px
+    h4
+        font-size: 18px
+    h5
+        font-size: 16px
+    table
+        width: 100%
+        position: relative
+        max-width: 100%
+        overflow-x: scroll
+        white-space: nowrap
 
 .announ
     display: grid
