@@ -386,4 +386,25 @@ document.addEventListener('DOMContentLoaded', function() {
             navPers.classList.toggle('active')
         })
     }
+
+    let searchBtn = document.querySelectorAll('.search__aside_btn'),
+        searchItem = document.querySelectorAll('.search__aside_drop');
+
+    if(searchBtn !== null) {
+        searchBtn.forEach((item,i)=>{
+            item.addEventListener('click',()=>{
+                searchItem[i].classList.toggle('active');
+            })
+        })
+    }
+
+    let select = document.querySelectorAll('.select select'),
+        selectText = document.querySelectorAll('.select__text');
+
+    select.forEach((item,i)=>{
+        item.addEventListener('change', ()=>{
+            selectText[i].innerHTML = item.value
+        })
+    })
+
 }, false);
