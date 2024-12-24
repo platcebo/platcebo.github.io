@@ -185,17 +185,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if(serviceRow !== null) {
         serviceRow.forEach((element, i) => {
-            let text = element.innerHTML,
+            if  (element.classList.contains('cert__row') && window.innerWidth <= 600) {
+                return
+                console.log('as')
+            } else {
+                let text = element.innerHTML,
                 a = 1;
-            element.innerHTML = text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text
-            setInterval(() => {
-                element.style.transform = 'translateX(-' + a +'px)'
-                a += 0.3
-                // console.log(a)
-                if (a >= 5000) {
-                    a = 1
-                }
-            }, 10);
+                element.innerHTML = text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text
+                setInterval(() => {
+                    element.style.transform = 'translateX(-' + a +'px)'
+                    a += 0.3
+                    // console.log(a)
+                    if (a >= 5000) {
+                        a = 1
+                    }
+                }, 10);
+            }
         });
     }
 
@@ -1086,7 +1091,7 @@ document.addEventListener('DOMContentLoaded', function() {
             spaceBetween: 40,
             slidesPerView: 1,
             speed: 700,
-            loop: true,
+            loop: false,
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
