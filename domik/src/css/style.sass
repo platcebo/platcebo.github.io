@@ -4644,13 +4644,21 @@ h6
         display: flex
         justify-content: center
         align-items: center
-.modal-del
+.modal-del,
+.modal-exit
     .modal-block
         &__icon
             border: 8px solid #fef3f2
             background: #fee4e2
     .btn__blue
         background: #d92d20
+
+.saved
+    grid-column: 2/4
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 16px
 
 
 @media ( max-width: 768px )
@@ -4672,3 +4680,8 @@ h6
             flex-direction: column
             button
                 width: 100%
+
+@media ( max-width: 600px )
+    .saved
+        &__wrapper
+            grid-template-columns: 1fr

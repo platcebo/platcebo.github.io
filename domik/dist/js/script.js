@@ -254,6 +254,16 @@ document.addEventListener('DOMContentLoaded', function() {
             })
         })
     }
+    let modalExitBtn = document.querySelectorAll('.modal-exit__btn'),
+        modalExit = document.querySelector('.modal-exit');
+    if(modalExitBtn !== null) {
+        modalExitBtn.forEach((item)=>{
+            item.addEventListener('click', (e)=>{
+                e.preventDefault()
+                modalExit.classList.add('active')
+            })
+        })
+    }
     
     let modalPrintBtn = document.querySelectorAll('.modal-print__btn'),
         modalPrint = document.querySelector('.modal-print');
