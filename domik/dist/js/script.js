@@ -232,6 +232,28 @@ document.addEventListener('DOMContentLoaded', function() {
             })
         })
     }
+
+    let modalblockBtn = document.querySelectorAll('.modal-block__btn'),
+        modalblock = document.querySelector('.modal-block');
+    if(modalblockBtn !== null) {
+        modalblockBtn.forEach((item)=>{
+            item.addEventListener('click', (e)=>{
+                e.preventDefault()
+                modalblock.classList.add('active')
+            })
+        })
+    }
+
+    let modalDelBtn = document.querySelectorAll('.modal-del__btn'),
+        modalDel = document.querySelector('.modal-del');
+    if(modalDelBtn !== null) {
+        modalDelBtn.forEach((item)=>{
+            item.addEventListener('click', (e)=>{
+                e.preventDefault()
+                modalDel.classList.add('active')
+            })
+        })
+    }
     
     let modalPrintBtn = document.querySelectorAll('.modal-print__btn'),
         modalPrint = document.querySelector('.modal-print');
@@ -424,6 +446,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if(chatHistory !== null) {
         chatHistory.forEach(item=>{item.scrollTop = item.scrollHeight;})
+    }
+
+    let mesDots = document.querySelector('.message__pers_dots'),
+        mesList = document.querySelector('.message__pers_func');
+
+    if(mesDots !== null) {
+        document.body.addEventListener('click',(event)=>{
+            let target = event.target;
+
+            if(target.closest('div.message__pers_dots')) {
+                mesList.classList.toggle('active')
+            } else {
+                mesList.classList.remove('active')
+            }
+        })
     }
 
 }, false);
