@@ -407,4 +407,23 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     })
 
+    let searchMobBtn = document.querySelector('.search__mob_btn'),
+        searchFilter = document.querySelector('.search__mob_wrapper'),
+        searchMobClose = document.querySelector('.search__mob_filter');
+
+    if(searchMobBtn !== null) {
+        searchMobBtn.addEventListener('click', ()=>{
+            searchFilter.classList.toggle('active')
+        })
+        searchMobClose.addEventListener('click', ()=>{
+            searchFilter.classList.toggle('active')
+        })
+    }
+
+    var chatHistory = document.querySelectorAll(".message__block");
+
+    if(chatHistory !== null) {
+        chatHistory.forEach(item=>{item.scrollTop = item.scrollHeight;})
+    }
+
 }, false);

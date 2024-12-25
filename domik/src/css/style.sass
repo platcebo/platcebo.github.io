@@ -70,6 +70,8 @@ body
 
 .nav
     background: #fff
+    z-index: 5
+    position: relative
     &__humburger,
     &__mob
         display: none
@@ -692,8 +694,7 @@ fieldset
             margin: auto 0 0
 
 .recom
-    padding: 96px 0
-    background: #fff
+    padding: 64px 0 48px
     h2
         font: 600 30px / 1.26667 $font-family
         color: #101828
@@ -1128,7 +1129,7 @@ fieldset
 @media ( max-width: 1024px )
     .public
         &__wrapper
-            grid-template-columns: 1fr 1fr 1fr
+            grid-template-columns: 1fr 1fr
     .nav
         &__pers
             display: none
@@ -1661,15 +1662,16 @@ fieldset
             margin: 0
 
 
-@media ( max-width: 768px )
+@media ( max-width: 1024px )
     .breadcrumb
         margin: 16px 0 0
     .pag
-        width: 100%
+        width: max-content
         display: grid
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr
         justify-content: center
-        margin: 24px 0 0
+        margin: 24px auto 0
+
         a
             text-align: center
         li
@@ -1685,9 +1687,17 @@ fieldset
             display: flex !important
             justify-content: flex-end
 
+@media (max-width: 768px)
+    .pag
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+        li
+            &:nth-child(8),
+            &:nth-child(4)
+                display: none
+
 .article
-    background: #fff
     &__block
+        margin: 24px 0 0
         display: grid
         grid-template-columns: calc( 100% - 404px ) 376px
         gap: 32px
@@ -2072,6 +2082,7 @@ fieldset
             border: none
             box-shadow: none
             margin: 16px 0 0
+            background: transparent
             &_list
                 margin: 16px 0 0
                 gap: 12px
@@ -2085,9 +2096,10 @@ fieldset
             align-items: center
             gap: 8px
         &__main
-            padding: 36px 0 0
+            padding: 0
             border: none
             box-shadow: none
+            background: transparent
     
 @media ( max-width: 768px )
     .article
@@ -3394,6 +3406,24 @@ fieldset
             color: #667085
             span
                 font-weight: 600
+    &__none
+        grid-column: 2/4
+        border: 1px solid #eaecf0
+        border-radius: 8px
+        height: 800px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: #fff
+        flex-direction: column
+        padding: 20px
+        h5
+            text-align: center
+        p
+            margin: 4px 0 0
+            font: 400 14px / 1.42857 $font-family
+            text-align: center
+            color: #475467
             
 @media ( max-width: 1200px )
     .profile
@@ -3440,6 +3470,8 @@ fieldset
             grid-column: auto
         &__btn
             grid-column: auto
+        &__none
+            height: 500px
 
 .content-page
     padding: 96px 0 
@@ -4090,3 +4122,473 @@ h6
         display: grid
         grid-template-columns: 1fr 1fr 1fr
         gap: 16px
+    &__filter
+        margin: 20px 0 0
+        display: flex
+        justify-content: flex-start
+        flex-wrap: wrap
+        gap: 28px
+        align-items: center
+        &_tag
+            border-radius: 16px
+            padding: 2px 6px 2px 10px
+            background: #e3ebfe
+            display: grid
+            grid-template-columns: 1fr 12px
+            gap: 4px
+            align-items: center
+            position: relative
+            p
+                font: 500 14px / 1.42857 $font-family
+                text-align: center
+                color: #2963f5
+            &::before
+                content: ''
+                display: block
+                height: 13px
+                width: 1px
+                background: #475467
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                right: -14px
+        &_block
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 4px
+            position: relative
+            &::before
+                content: ''
+                display: block
+                height: 13px
+                width: 1px
+                background: #475467
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                right: -14px
+            &:last-child
+                &::before
+                    content: none
+        &_name
+            font: 500 14px / 1.42857 $font-family
+            color: #667085
+        &_check
+            border-radius: 16px
+            padding: 2px 6px 2px 10px
+            display: grid
+            grid-template-columns: 1fr 12px
+            gap: 4px
+            align-items: center
+            background: #f2f4f7
+            p
+                font: 500 14px / 1.42857 $font-family
+                text-align: center
+                color: #344054
+    &__sort
+        margin: 16px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        flex-wrap: wrap
+        gap: 16px
+        &_name
+            font: 400 14px / 1.42857 $font-family
+            color: #667085
+        &_val
+            display: grid
+            grid-template-columns: 1fr 20px
+            gap: 8px
+            cursor: pointer
+            p
+                font: 400 14px / 1.42857 $font-family
+                color: #475467
+                transition: all .3s
+            &.active
+                p
+                    color: #2963f5
+                    font-weight: 500
+                svg
+                    path
+                        stroke: #2963f5
+            &.down
+                svg
+                    transform: rotate(180deg)
+    &__mob
+        &_filter,
+        &_btn,
+        &_show
+            display: none
+
+@media ( max-width: 1024px )
+    .search
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+        &__container
+            grid-template-columns: 220px 1fr
+
+@media ( max-width: 768px )
+    .search
+        &__wrapper
+            grid-template-columns: 1fr
+
+@media ( max-width: 600px )
+    .search
+        &__container
+            display: grid
+            grid-template-columns: 1fr
+            margin: 16px 0 0
+        &__aside
+            display: none
+        &__mob
+            &_btn
+                display: grid
+                grid-template-columns: 1fr 36px
+                gap: 4px
+                div
+                    border: 1px solid #d0d5dd
+                    border-radius: 4px
+                    padding: 8px 14px
+                    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+                    background: #fff
+                    &+div
+                        padding: 0
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                p
+                    font: 500 14px / 1.42857 $font-family
+                    color: #344054
+            &_wrapper
+                &.active
+                    position: fixed
+                    top: 0
+                    left: 0
+                    width: 100vw
+                    height: 100vh
+                    overflow: auto
+                    padding: 16px
+                    background: #f2f4f7
+                    z-index: 50
+                    .search
+                        &__mob
+                            &_btn
+                                display: none
+                            &_filter
+                                display: grid
+                                grid-template-columns: 1fr 20px
+                                gap: 10px
+                                align-items: center
+                                p
+                                    font: 500 16px / 1.5 $font-family
+                                    color: #1d2939
+                            &_show
+                                display: block
+                                margin: 30px 0 0
+                                width: 100%
+                        &__aside
+                            display: block
+                            margin: 12px 0 0
+
+.message
+    border: 1px solid #eaecf0
+    border-radius: 8px
+    background: #fff
+    grid-column: 2/4
+    height: 960px
+    display: grid
+    grid-template-columns: 320px 1fr
+    &__aside
+        border-right: 1px solid #eaecf0
+        display: grid
+        grid-template-rows: auto auto 1fr
+        height: 960px
+    &__title
+        padding: 20px 24px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 8px
+        h3
+            font: 600 18px / 1.55556 $font-family
+            color: #101828
+        p
+            font: 500 12px / 1.5 $font-family
+            text-align: center
+            color: #2963f5
+            border-radius: 16px
+            padding: 2px 8px
+            background: #e3ebfe
+    &__search
+        margin: 0 16px 12px
+        position: relative
+        display: block
+        input
+            width: 100%
+            box-sizing: border-box  
+            padding: 10px 10px 10px 42px
+            font: 400 16px / 1.5 $font-family
+            color: #475467
+            border: 1px solid #d0d5dd
+            border-radius: 8px
+            box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+            background: #fff
+        a
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: 14px
+    &__list
+        overflow: auto
+        position: relative
+        max-height: 100%
+        &_item
+            border-bottom: 1px solid #eaecf0
+            padding: 16px 16px 16px 36px
+            display: grid
+            grid-template-columns: 40px 1fr auto
+            gap: 12px
+            align-items: start
+            position: relative
+            cursor: pointer
+            &.active
+                background: #f9fafb
+            &.new
+                &::before
+                    content: ''
+                    display: block
+                    width: 8px
+                    height: 8px
+                    border-radius: 100%
+                    background: #5482f7
+                    position: absolute
+                    top: 50%
+                    transform: translateY(-50%)
+                    left: 16px
+        &_pers
+            position: relative
+            img
+                width: 40px
+                height: 40px
+                border-radius: 100%
+            &::before
+                content: ''
+                display: block
+                width: 12px
+                height: 12px 
+                background: #d0d5dd
+                border: 1px solid #fff   
+                border-radius: 100%
+                position: absolute
+                bottom: -1px
+                right: -1px
+                box-sizing: border-box  
+            &.online
+                &::before
+                    background: #12b76a
+        &_name
+            font: 600 14px / 1.42857 $font-family
+            color: #344054
+        &_type
+            font: 400 14px / 1.42857 $font-family
+            color: #475467
+        &_date
+            font: 400 14px / 1.42857 $font-family
+            color: #475467
+    &__wrapper
+        display: grid
+        grid-template-rows: auto auto 1fr
+        height: 960px
+    &__pers
+        padding: 20px 24px
+        border-bottom: 1px solid #eaecf0
+        display: grid
+        grid-template-columns: 56px 1fr
+        gap: 16px
+        align-items: start
+        position: relative
+        img
+            width: 56px
+            height: 56px
+            border-radius: 100%
+        &_row
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            gap: 8px
+            h3
+                font: 600 18px / 1.55556 $font-family
+                color: #101828
+            p
+                border-radius: 16px
+                padding: 2px 8px 2px 18px
+                background: #ecfdf3
+                font: 500 12px / 1.5 $font-family
+                color: #027a48
+                position: relative
+                &::before
+                    content: ''
+                    display: block
+                    width: 6px
+                    height: 6px
+                    border-radius: 100%
+                    background: #12b76a
+                    position: absolute
+                    left: 7px
+                    top: 50%
+                    transform: translateY(-50%)
+        &_type
+            font: 400 14px / 1.42857 $font-family
+            color: #475467
+        &_dots
+            width: 20px
+            height: 20px
+            position: absolute
+            top: 20px
+            right: 24px
+            cursor: pointer
+    &__fix
+        background: #f1f5ff
+        border-bottom: 1px solid #eaecf0
+        padding: 12px 24px
+        display: grid
+        grid-template-columns: 64px 1fr
+        gap: 16px
+        align-items: start
+        img
+            width: 100%
+            height: 56px
+        h3
+            font: 600 16px / 1.5 $font-family
+            color: #101828
+        p
+            font: 400 12px / 1.3 $font-family
+            color: #475467
+    &__block
+        display: grid
+        grid-template-rows: 1fr auto
+        padding: 0 16px 24px
+        position: relative
+        max-height: 100%
+        overflow-y: scroll
+    &__input
+        position: relative
+        textarea
+            width: 100%
+            box-sizing: border-box
+            resize: none
+            height: 104px
+            border: 1px solid #d0d5dd
+            border-radius: 4px
+            padding: 12px 14px 60px
+            box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+            background: #fff
+            font: 400 16px / 1.5 $font-family
+            color: #475467
+        &_func
+            margin: 10px 0 0
+            position: relative
+            // right: 12px
+            // bottom: 12px
+            display: flex
+            justify-content: flex-end
+            align-items: center
+            gap: 16px
+    &__info
+        padding: 32px 0
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        gap: 16px
+        &_date
+            margin: 8px 0
+            display: grid
+            grid-template-columns: 1fr auto 1fr
+            gap: 8px
+            align-items: center
+            &::before,
+            &::after
+                content: ''
+                display: block
+                width: 100%
+                height: 1px
+                background: #eaecf0
+            p
+                font: 500 14px / 1.42857 $font-family
+                text-align: center
+                color: #475467
+    &__interlocutor
+        display: grid
+        grid-template-columns: 40px 1fr
+        gap: 12px
+        align-items: start
+        &_pers
+            position: relative
+            img
+                width: 40px
+                height: 40px
+            &.online
+                &::before
+                    content: ''
+                    display: block
+                    width: 12px
+                    height: 12px 
+                    background: #12b76a
+                    border: 1px solid #fff   
+                    border-radius: 100%
+                    position: absolute
+                    bottom: -1px
+                    right: -1px
+                    box-sizing: border-box  
+        &_name
+            font: 500 14px / 1.42857 $font-family
+            color: #344054
+        &_row
+            display: flex
+            justify-content: space-between
+            align-items: center
+        &_date
+            font: 400 12px / 1.3 $font-family
+            color: #475467
+        &_mes
+            border-radius: 0 8px 8px 8px
+            padding: 10px 14px
+            background: #f2f4f7
+            font: 400 16px / 1.5 $font-family
+            color: #101828
+            margin: 6px 0 0
+    &__me
+        max-width: 442px
+        margin: 0 0 0 auto
+        &_mes
+            border-radius: 8px 0 8px 8px
+            padding: 10px 14px
+            background: #376df6
+            font: 400 16px / 1.5 $font-family
+            color: #fff
+            margin: 6px 0 0
+    &__rect
+        margin: 6px 0 0
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        gap: 4px
+        div
+            border-radius: 16px
+            padding: 2px 8px
+            background: #f9fafb
+            img
+                width: 16px
+                height: 16px
+
+@media ( max-width: 768px )
+    .message
+        grid-template-columns: 1fr
+        grid-template-rows: 500px 960px
+        height: auto
+        &__aside
+            border: none
+            height: 500px
+            border-bottom: 1px solid #eaecf0

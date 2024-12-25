@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atlas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/itc-custom-select.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="nav__row">
+                <a href="#" class="nav__logo">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <div class="nav__place modal-place__btn">
+                    <p class="">Ташкент</p>
+                    <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                </div>
+                <div class="nav__value">
+                    <div class="toggle-value">USD</div>
+                    <div class="toggle-value active">UZS</div>
+                </div>
+                <div class="nav__lang">
+                    <img src="img/globe.svg" alt="" class="svg">
+                    <p class="">Русский</p>
+                    <ul>
+                        <li><a href="#" class="active">Русский </a></li>
+                        <li><a href="#">O'zbek </a></li>
+                    </ul>
+                    <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                </div>
+                <a href="#" class="nav__fav">
+                    <img src="img/heart.svg" alt="" class="svg">
+                </a>
+                <a href="#" class="nav__enter">Войти</a>
+                <div class="nav__humburger"><span></span></div>
+            </div>
+            <div class="nav__list">
+                <ul class="">
+                    <li>
+                        <a href="#" class="active">Купить</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Снять</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Каталог новостроек</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Покупка дома или земли</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Помещения для бизнеса</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                </ul>
+                <button class="btn__blue">Разместить объявление</button>
+            </div>
+            <div class="nav__mob">
+                <div class="nav__mob_wrapper">
+                    <!-- <a href="#" class="nav__mob_enter">
+                        <img src="img/pers.svg" alt="" class="svg">
+                        <p>Войти</p>
+                    </a> -->
+                    <div class="nav__mob_row">
+                        <div class="nav__lang nav__lang_mob">
+                            <img src="img/globe.svg" alt="" class="svg">
+                            <p class="">Ру</p>
+                            <ul>
+                                <li><a href="#" class="active">Русский </a></li>
+                                <li><a href="#">O'zbek </a></li>
+                            </ul>
+                            <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                        </div>
+                        <div class="nav__lang nav__lang_mob">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.5846 4.16667C11.5846 5.08714 9.53261 5.83333 7.0013 5.83333C4.47 5.83333 2.41797 5.08714 2.41797 4.16667M11.5846 4.16667C11.5846 3.24619 9.53261 2.5 7.0013 2.5C4.47 2.5 2.41797 3.24619 2.41797 4.16667M11.5846 4.16667V5.41667M2.41797 4.16667V14.1667C2.41797 15.0871 4.47 15.8333 7.0013 15.8333M7.0013 9.16667C6.86085 9.16667 6.72187 9.16437 6.58463 9.15987C4.24859 9.08332 2.41797 8.3694 2.41797 7.5M7.0013 12.5C4.47 12.5 2.41797 11.7538 2.41797 10.8333M19.0846 9.58333C19.0846 10.5038 17.0326 11.25 14.5013 11.25C11.97 11.25 9.91797 10.5038 9.91797 9.58333M19.0846 9.58333C19.0846 8.66286 17.0326 7.91667 14.5013 7.91667C11.97 7.91667 9.91797 8.66286 9.91797 9.58333M19.0846 9.58333V15.8333C19.0846 16.7538 17.0326 17.5 14.5013 17.5C11.97 17.5 9.91797 16.7538 9.91797 15.8333V9.58333M19.0846 12.7083C19.0846 13.6288 17.0326 14.375 14.5013 14.375C11.97 14.375 9.91797 13.6288 9.91797 12.7083" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <p class="">UZS</p>
+                            <ul>
+                                <li><a href="#" class="active">UZS</a></li>
+                                <li><a href="#">USD</a></li>
+                            </ul>
+                            <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                        </div>
+                    </div>
+                    <ul class="nav__mob_list">
+                        <li class="nav__mob_drop">
+                            <p class="active">Купить</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Снять</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Каталог новостроек</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Покупка дома или земли</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Помещения для бизнеса</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                    <button class="btn__blue">Разместить объявление</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- <div class="breadcrumbs__block">
+        <div class="container">
+            <p class="breadcrumbs">
+                <a href="#">Недвижимость в Ташкенте</a>
+                <span> / </span>
+                <a href="#">Продажа</a>
+                <span> / Продается 2-комн. квартира, 54 м²</span>
+            </p>
+        </div>
+    </div> -->
+    <section class="article">
+        <div class="container">
+            <p class="breadcrumb">
+                <a href="#">Недвижимость в Ташкенте</a>
+                <span> / Поиск</span>
+            </p>
+            <div class="article__block">
+                <div class="article__main">
+                    <h1>Продается 2-комн. квартира, 54 м²</h1>
+                    <div class="article__dop-info">
+                        <p>35 минут назад</p>
+                        <span>|</span>
+                        <p class="article__dop-info_watch">
+                            <img src="img/eye.svg" alt="">
+                            363 просмотра
+                        </p>
+                    </div>
+                    <div class="article__slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/article_slide.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/article_slide.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/article_slide.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/article_slide.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/article_slide.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/article_slide.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="article__slider_val">
+                            <img src="img/img.svg" alt="">
+                            <p>12 фото</p>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="article__arrow">
+                            <div class="swiper-button-prev"><img src="img/arrow-grey-right.svg" alt="" class="svg"></div>
+                            <div class="swiper-button-next"><img src="img/arrow-grey-right.svg" alt="" class="svg"></div>
+                        </div>
+                    </div>
+                    <div class="article__thumb swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/article_slide.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/article_slide.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/article_slide.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/article_slide.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/article_slide.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/article_slide.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article__mob article__aside">
+                        <div class="article__aside_row">
+                            <div class="article__aside_price active">
+                                <h4>590 871 000 сум</h4>
+                                <p>USD</p>
+                            </div>
+                            <div class="article__aside_price">
+                                <h4>45 939 usd</h4>
+                                <p>UZS</p>
+                            </div>
+                            <p class="article__aside_com">хорошая цена</p>
+                        </div>
+                        <ul class="article__aside_list">
+                            <li>
+                                <p>Цена за метр</p>
+                                <p>10 941 000 сум/м²</p>
+                            </li>
+                            <li>
+                                <p>Ипотека</p>
+                                <p>Возможна</p>
+                            </li>
+                            <li>
+                                <p>Условия сделки</p>
+                                <p>Свободная продажа</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="article__place">
+                        <img src="img/place.svg" alt="" class="svg">
+                        <p>Ташкент, Мирзо-Улугбекский район, Нодиров 54 <span>|</span> В городе <span>|</span><a href="#">На карте</a></p>
+                    </div>
+                    <div class="article__metro">
+                        <p class="article__metro_logo">М</p>
+                        <p class="article__metro_name">метро Юнусабад</p>
+                        <p class="article__metro_time">14 мин. пешком</p>
+                        <img src="img/Human.svg" alt="" class="svg">    
+                    </div>
+                    <div class="article__har">
+                        <div>
+                            <span>
+                                <img src="img/recom_1.svg" alt="">
+                            </span>
+                            <p>2</p>
+                        </div>
+                        <div>
+                            <span>
+                                <img src="img/recom_5.svg" alt="">
+                            </span>
+                            <p>54 м²</p>
+                        </div>
+                        <div>
+                            <span>
+                                <img src="img/recom_4.svg" alt="">
+                            </span>
+                            <p>2/9</p>
+                        </div>
+                    </div>
+                    <button class="btn__wht article__mob article__war">
+                        <img src="img/Warning.svg" alt="">
+                        Пожаловаться
+                    </button>
+                    <div class="article__desc">
+                        <h3>Описание</h3>
+                        <div class="article__desc_text">
+                            <p>Этот идеально расположенный оазис изысканности приветствует вас своим уютом и элегантностью. Пройдя через входные двери, вы погружаетесь в атмосферу изысканного дизайна, где каждая деталь создана для вашего комфорта.</p>
+                            <p>Пространство окутано нежными оттенками, создающими атмосферу спокойствия и умиротворения. Богатство естественного света, проникающего через широкие окна, придает квартире чувство простора и свежести.</p>
+                            <p>Модернизированная кухня, оборудованная последними технологиями, приглашает вас в мир кулинарных творений, а просторная гостиная станет идеальным местом для встреч с друзьями и семейных посиделок.</p>
+                        </div>
+                    </div>
+                    <div class="article__info">
+                        <h3 class="article__info_btn">О квартире</h3>
+                        <ul class="article__info_list">
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_1.svg" alt="">
+                                    <span>Лифт</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">Есть</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_2.svg" alt="">
+                                    <span>Телевизор</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">Есть</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_3.svg" alt="">
+                                    <span>Охрана</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">Есть</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_4.svg" alt="">
+                                    <span>Стиральная машина</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">Нет</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_5.svg" alt="">
+                                    <span>Интернет</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">Нет</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_6.svg" alt="">
+                                    <span>Спутниковое ТВ</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">Нет</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_7.svg" alt="">
+                                    <span>Сауна</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">Нет</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_8.svg" alt="">
+                                    <span>Мебель</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">Есть</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_9.svg" alt="">
+                                    <span>Канализация</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">Есть</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_10.svg" alt="">
+                                    <span>Газ</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">Нет</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_11.svg" alt="">
+                                    <span>Холодильник</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">Есть</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_12.svg" alt="">
+                                    <span>Отопление</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">На газе</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_13.svg" alt="">
+                                    <span>Телефонная линия</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">Есть</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_14.svg" alt="">
+                                    <span>Ремонт</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">Дизайнерский</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_15.svg" alt="">
+                                    <span>Санузел</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">Более одного</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_16.svg" alt="">
+                                    <span>Этаж</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">2</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_17.svg" alt="">
+                                    <span>Видеонаблюдение</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">Есть</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_18.svg" alt="">
+                                    <span>Год постройки</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">1986</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_19.svg" alt="">
+                                    <span>Бассейн</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">Нет</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_20.svg" alt="">
+                                    <span>Мусоропровод</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">Нет</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_21.svg" alt="">
+                                    <span>Вода</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">Возможно подведение</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_22.svg" alt="">
+                                    <span>Высота потолков</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">2.9 м</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_23.svg" alt="">
+                                    <span>Микроволновая печь</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">Есть</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_24.svg" alt="">
+                                    <span>Вид из окон</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">Во двор</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_25.svg" alt="">
+                                    <span>Парковка</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">Наземная</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_26.svg" alt="">
+                                    <span>Балкон</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">Есть</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_27.svg" alt="">
+                                    <span>Кондиционер</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">Есть</p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_list_28.svg" alt="">
+                                    <span>Кухня</span>
+                                </p>
+                                <span class="article__info_dot"></span>
+                                <p class="article__info_val">17,2 м²</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="article__info">
+                        <h3 class="article__info_btn">Рядом есть</h3>
+                        <ul class="article__info_list">
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_info_1.svg" alt="">
+                                    <span>Больница, поликлиника</span>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_info_2.svg" alt="">
+                                    <span>Развлекательные заведения </span>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_info_3.svg" alt="">
+                                    <span>Детская площадка</span>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_info_4.svg" alt="">
+                                    <span>Ресторан, кафе</span>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_info_5.svg" alt="">
+                                    <span>Детский сад</span>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_info_6.svg" alt="">
+                                    <span>Стоянка</span>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_info_7.svg" alt="">
+                                    <span>Остановка</span>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_info_8.svg" alt="">
+                                    <span>Супермаркет, магазины</span>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_info_9.svg" alt="">
+                                    <span>Парк, зелёная зона</span>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="article__info_name">
+                                    <img src="img/article_info_10.svg" alt="">
+                                    <span>Школа</span>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="article__menu">
+                    <div class="article__aside">
+                        <div class="article__aside_row">
+                            <div class="article__aside_price active">
+                                <h4>590 871 000 сум</h4>
+                                <p>USD</p>
+                            </div>
+                            <div class="article__aside_price">
+                                <h4>45 939 usd</h4>
+                                <p>UZS</p>
+                            </div>
+                            <div class="article__aside_fav">
+                                <img src="img/heart.svg" alt="" class="svg">
+                            </div>
+                        </div>
+                        <p class="article__aside_com">хорошая цена</p>
+                        <ul class="article__aside_list">
+                            <li>
+                                <p>Цена за метр</p>
+                                <p>10 941 000 сум/м²</p>
+                            </li>
+                            <li>
+                                <p>Ипотека</p>
+                                <p>Возможна</p>
+                            </li>
+                            <li>
+                                <p>Условия сделки</p>
+                                <p>Свободная продажа</p>
+                            </li>
+                        </ul>
+                        <button class="btn__blue article__aside_show">Показать телефон <span>+9 (ххх) ххх-хх-хх</span></button>
+                        <div class="article__aside_func">
+                            <a href="#">
+                                <img src="img/mail.svg" alt="">
+                            </a>
+                            <a href="#" class="modal-share__btn">
+                                <img src="img/share.svg" alt="">
+                            </a>
+                            <a href="#" class="modal-print__btn">
+                                <img src="img/print.svg" alt="">
+                            </a>
+                            <button class="btn__wht modal-war__btn">
+                                <img src="img/Warning.svg" alt="">
+                                Пожаловаться
+                            </button>
+                        </div>
+                    </div>
+                    <div class="article__autor">
+                        <h4>Автор объявления</h4>
+                        <ul>
+                            <li class="article__autor_pers">
+                                <img src="img/article_autor.jpg" alt="">
+                                <div>
+                                    <p class="article__autor_name">Алина Тимурова</p>
+                                    <div class="article__autor_info">
+                                        <a href="#">Риэлтор</a>
+                                        <span>•</span>
+                                        <p>INNURSKAPE</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="article__autor_company">
+                                <img src="img/article_comp.jpg" alt="">
+                                <div>
+                                    <p class="">Агентство по недвижимости</p>
+                                    <p>INNURSKAPE</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="recom">
+        <div class="container">
+            <div class="public__title">
+                <h2>Похожие предложения</h2>
+                <div class="public__arrow">
+                    <a href="#" class="public__arrow_next">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.5 15L7.5 10L12.5 5" stroke="#344054" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <a href="#" class="public__arrow_prev">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="#344054" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="public__wrapper">
+                <div class="recom__item">
+                    <div class="recom__prev">
+                        <img src="img/recom_prev.jpg" alt="">
+                        <div class="recom__prev_tag">
+                            <div class="blue">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_12593_1521)">
+                                        <path d="M6 1L7.00598 3.61554C7.14698 3.98216 7.21749 4.16547 7.32712 4.31965C7.42429 4.45631 7.54369 4.57571 7.68035 4.67288C7.83454 4.78251 8.01784 4.85302 8.38446 4.99402L11 6L8.38446 7.00598C8.01784 7.14698 7.83454 7.21749 7.68035 7.32712C7.54369 7.42429 7.42429 7.54369 7.32712 7.68035C7.21749 7.83454 7.14698 8.01784 7.00598 8.38446L6 11L4.99402 8.38446C4.85302 8.01784 4.78251 7.83454 4.67288 7.68035C4.57571 7.54369 4.45631 7.42429 4.31965 7.32712C4.16547 7.21749 3.98216 7.14698 3.61554 7.00598L1 6L3.61554 4.99402C3.98216 4.85302 4.16546 4.78251 4.31965 4.67288C4.45631 4.57571 4.57571 4.45631 4.67288 4.31965C4.78251 4.16546 4.85302 3.98216 4.99402 3.61554L6 1Z" stroke="#5482F7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_12593_1521">
+                                        <rect width="12" height="12" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <p>Новинка</p>
+                            </div>
+                            <div class="yellow">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9.5V2.5M6 2.5L2.5 6M6 2.5L9.5 6" stroke="#F79009" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Топ</p>
+                            </div>
+                            <div class="red">
+                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_12593_1685)">
+                                        <path d="M7.27483 1.22656L2.82156 6.57049C2.64716 6.77977 2.55995 6.88442 2.55862 6.97279C2.55746 7.04962 2.5917 7.12271 2.65146 7.17101C2.72021 7.22656 2.85642 7.22656 3.12885 7.22656H6.77483L6.27483 11.2266L10.7281 5.88264C10.9025 5.67335 10.9897 5.56871 10.991 5.48033C10.9922 5.4035 10.958 5.33041 10.8982 5.28212C10.8295 5.22656 10.6932 5.22656 10.4208 5.22656H6.77483L7.27483 1.22656Z" stroke="#F04438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_12593_1685">
+                                        <rect width="12" height="12" fill="white" transform="translate(0.773438 0.226562)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <p>Cуперцена</p>
+                            </div>
+                        </div>
+                        <a href="#" class="recom__fav active">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9932 5.13581C9.9938 2.7984 6.65975 2.16964 4.1547 4.31001C1.64964 6.45038 1.29697 10.029 3.2642 12.5604C4.89982 14.6651 9.84977 19.1041 11.4721 20.5408C11.6536 20.7016 11.7444 20.7819 11.8502 20.8135C11.9426 20.8411 12.0437 20.8411 12.1361 20.8135C12.2419 20.7819 12.3327 20.7016 12.5142 20.5408C14.1365 19.1041 19.0865 14.6651 20.7221 12.5604C22.6893 10.029 22.3797 6.42787 19.8316 4.31001C17.2835 2.19216 13.9925 2.7984 11.9932 5.13581Z" fill="black" fill-opacity="0.24" stroke="#FCFCFD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="recom__info">
+                        <div class="recom__price">
+                            <p class="recom__price_val">590 871 000 сум</p>
+                        </div>
+                        <p class="recom__square">10 941 000 сум/м²</p>
+                        <div class="recom__row">
+                            <div>
+                                <img src="img/recom_1.svg" alt="">
+                                <p>7</p>
+                                <span>Число комнат</span>
+                            </div>
+                            <div>
+                                <img src="img/recom_3.svg" alt="">
+                                <p>180 м²</p>
+                                <span>Число комнат</span>
+                            </div>
+                            <div>
+                                <img src="img/recom_4.svg" alt="">
+                                <p>2</p>
+                                <span>Число комнат</span>
+                            </div>
+                        </div>
+                        <div class="recom__place">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.9987 10.8332C11.3794 10.8332 12.4987 9.71388 12.4987 8.33317C12.4987 6.95246 11.3794 5.83317 9.9987 5.83317C8.61799 5.83317 7.4987 6.95246 7.4987 8.33317C7.4987 9.71388 8.61799 10.8332 9.9987 10.8332Z" stroke="#98A2B3" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9.9987 18.3332C13.332 14.9998 16.6654 12.0151 16.6654 8.33317C16.6654 4.65127 13.6806 1.6665 9.9987 1.6665C6.3168 1.6665 3.33203 4.65127 3.33203 8.33317C3.33203 12.0151 6.66536 14.9998 9.9987 18.3332Z" stroke="#98A2B3" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <p>Юнусабадский, Сабзават</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="recom__item">
+                    <div class="recom__prev">
+                        <img src="img/recom_prev.jpg" alt="">
+                        <div class="recom__prev_tag">
+                            <div class="blue">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_12593_1521)">
+                                        <path d="M6 1L7.00598 3.61554C7.14698 3.98216 7.21749 4.16547 7.32712 4.31965C7.42429 4.45631 7.54369 4.57571 7.68035 4.67288C7.83454 4.78251 8.01784 4.85302 8.38446 4.99402L11 6L8.38446 7.00598C8.01784 7.14698 7.83454 7.21749 7.68035 7.32712C7.54369 7.42429 7.42429 7.54369 7.32712 7.68035C7.21749 7.83454 7.14698 8.01784 7.00598 8.38446L6 11L4.99402 8.38446C4.85302 8.01784 4.78251 7.83454 4.67288 7.68035C4.57571 7.54369 4.45631 7.42429 4.31965 7.32712C4.16547 7.21749 3.98216 7.14698 3.61554 7.00598L1 6L3.61554 4.99402C3.98216 4.85302 4.16546 4.78251 4.31965 4.67288C4.45631 4.57571 4.57571 4.45631 4.67288 4.31965C4.78251 4.16546 4.85302 3.98216 4.99402 3.61554L6 1Z" stroke="#5482F7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_12593_1521">
+                                        <rect width="12" height="12" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <p>Новинка</p>
+                            </div>
+                            <div class="yellow">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9.5V2.5M6 2.5L2.5 6M6 2.5L9.5 6" stroke="#F79009" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Топ</p>
+                            </div>
+                            <div class="red">
+                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_12593_1685)">
+                                        <path d="M7.27483 1.22656L2.82156 6.57049C2.64716 6.77977 2.55995 6.88442 2.55862 6.97279C2.55746 7.04962 2.5917 7.12271 2.65146 7.17101C2.72021 7.22656 2.85642 7.22656 3.12885 7.22656H6.77483L6.27483 11.2266L10.7281 5.88264C10.9025 5.67335 10.9897 5.56871 10.991 5.48033C10.9922 5.4035 10.958 5.33041 10.8982 5.28212C10.8295 5.22656 10.6932 5.22656 10.4208 5.22656H6.77483L7.27483 1.22656Z" stroke="#F04438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_12593_1685">
+                                        <rect width="12" height="12" fill="white" transform="translate(0.773438 0.226562)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <p>Cуперцена</p>
+                            </div>
+                        </div>
+                        <a href="#" class="recom__fav active">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9932 5.13581C9.9938 2.7984 6.65975 2.16964 4.1547 4.31001C1.64964 6.45038 1.29697 10.029 3.2642 12.5604C4.89982 14.6651 9.84977 19.1041 11.4721 20.5408C11.6536 20.7016 11.7444 20.7819 11.8502 20.8135C11.9426 20.8411 12.0437 20.8411 12.1361 20.8135C12.2419 20.7819 12.3327 20.7016 12.5142 20.5408C14.1365 19.1041 19.0865 14.6651 20.7221 12.5604C22.6893 10.029 22.3797 6.42787 19.8316 4.31001C17.2835 2.19216 13.9925 2.7984 11.9932 5.13581Z" fill="black" fill-opacity="0.24" stroke="#FCFCFD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="recom__info">
+                        <div class="recom__price">
+                            <p class="recom__price_val">590 871 000 сум</p>
+                        </div>
+                        <p class="recom__square">10 941 000 сум/м²</p>
+                        <div class="recom__row">
+                            <div>
+                                <img src="img/recom_1.svg" alt="">
+                                <p>7</p>
+                                <span>Число комнат</span>
+                            </div>
+                            <div>
+                                <img src="img/recom_3.svg" alt="">
+                                <p>180 м²</p>
+                                <span>Число комнат</span>
+                            </div>
+                            <div>
+                                <img src="img/recom_4.svg" alt="">
+                                <p>2</p>
+                                <span>Число комнат</span>
+                            </div>
+                        </div>
+                        <div class="recom__place">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.9987 10.8332C11.3794 10.8332 12.4987 9.71388 12.4987 8.33317C12.4987 6.95246 11.3794 5.83317 9.9987 5.83317C8.61799 5.83317 7.4987 6.95246 7.4987 8.33317C7.4987 9.71388 8.61799 10.8332 9.9987 10.8332Z" stroke="#98A2B3" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9.9987 18.3332C13.332 14.9998 16.6654 12.0151 16.6654 8.33317C16.6654 4.65127 13.6806 1.6665 9.9987 1.6665C6.3168 1.6665 3.33203 4.65127 3.33203 8.33317C3.33203 12.0151 6.66536 14.9998 9.9987 18.3332Z" stroke="#98A2B3" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <p>Юнусабадский, Сабзават</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="recom__item">
+                    <div class="recom__prev">
+                        <img src="img/recom_prev.jpg" alt="">
+                        <div class="recom__prev_tag">
+                            <div class="blue">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_12593_1521)">
+                                        <path d="M6 1L7.00598 3.61554C7.14698 3.98216 7.21749 4.16547 7.32712 4.31965C7.42429 4.45631 7.54369 4.57571 7.68035 4.67288C7.83454 4.78251 8.01784 4.85302 8.38446 4.99402L11 6L8.38446 7.00598C8.01784 7.14698 7.83454 7.21749 7.68035 7.32712C7.54369 7.42429 7.42429 7.54369 7.32712 7.68035C7.21749 7.83454 7.14698 8.01784 7.00598 8.38446L6 11L4.99402 8.38446C4.85302 8.01784 4.78251 7.83454 4.67288 7.68035C4.57571 7.54369 4.45631 7.42429 4.31965 7.32712C4.16547 7.21749 3.98216 7.14698 3.61554 7.00598L1 6L3.61554 4.99402C3.98216 4.85302 4.16546 4.78251 4.31965 4.67288C4.45631 4.57571 4.57571 4.45631 4.67288 4.31965C4.78251 4.16546 4.85302 3.98216 4.99402 3.61554L6 1Z" stroke="#5482F7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_12593_1521">
+                                        <rect width="12" height="12" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <p>Новинка</p>
+                            </div>
+                            <div class="yellow">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9.5V2.5M6 2.5L2.5 6M6 2.5L9.5 6" stroke="#F79009" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Топ</p>
+                            </div>
+                            <div class="red">
+                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_12593_1685)">
+                                        <path d="M7.27483 1.22656L2.82156 6.57049C2.64716 6.77977 2.55995 6.88442 2.55862 6.97279C2.55746 7.04962 2.5917 7.12271 2.65146 7.17101C2.72021 7.22656 2.85642 7.22656 3.12885 7.22656H6.77483L6.27483 11.2266L10.7281 5.88264C10.9025 5.67335 10.9897 5.56871 10.991 5.48033C10.9922 5.4035 10.958 5.33041 10.8982 5.28212C10.8295 5.22656 10.6932 5.22656 10.4208 5.22656H6.77483L7.27483 1.22656Z" stroke="#F04438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_12593_1685">
+                                        <rect width="12" height="12" fill="white" transform="translate(0.773438 0.226562)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <p>Cуперцена</p>
+                            </div>
+                        </div>
+                        <a href="#" class="recom__fav active">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9932 5.13581C9.9938 2.7984 6.65975 2.16964 4.1547 4.31001C1.64964 6.45038 1.29697 10.029 3.2642 12.5604C4.89982 14.6651 9.84977 19.1041 11.4721 20.5408C11.6536 20.7016 11.7444 20.7819 11.8502 20.8135C11.9426 20.8411 12.0437 20.8411 12.1361 20.8135C12.2419 20.7819 12.3327 20.7016 12.5142 20.5408C14.1365 19.1041 19.0865 14.6651 20.7221 12.5604C22.6893 10.029 22.3797 6.42787 19.8316 4.31001C17.2835 2.19216 13.9925 2.7984 11.9932 5.13581Z" fill="black" fill-opacity="0.24" stroke="#FCFCFD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="recom__info">
+                        <div class="recom__price">
+                            <p class="recom__price_val">590 871 000 сум</p>
+                        </div>
+                        <p class="recom__square">10 941 000 сум/м²</p>
+                        <div class="recom__row">
+                            <div>
+                                <img src="img/recom_1.svg" alt="">
+                                <p>7</p>
+                                <span>Число комнат</span>
+                            </div>
+                            <div>
+                                <img src="img/recom_3.svg" alt="">
+                                <p>180 м²</p>
+                                <span>Число комнат</span>
+                            </div>
+                            <div>
+                                <img src="img/recom_4.svg" alt="">
+                                <p>2</p>
+                                <span>Число комнат</span>
+                            </div>
+                        </div>
+                        <div class="recom__place">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.9987 10.8332C11.3794 10.8332 12.4987 9.71388 12.4987 8.33317C12.4987 6.95246 11.3794 5.83317 9.9987 5.83317C8.61799 5.83317 7.4987 6.95246 7.4987 8.33317C7.4987 9.71388 8.61799 10.8332 9.9987 10.8332Z" stroke="#98A2B3" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9.9987 18.3332C13.332 14.9998 16.6654 12.0151 16.6654 8.33317C16.6654 4.65127 13.6806 1.6665 9.9987 1.6665C6.3168 1.6665 3.33203 4.65127 3.33203 8.33317C3.33203 12.0151 6.66536 14.9998 9.9987 18.3332Z" stroke="#98A2B3" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <p>Юнусабадский, Сабзават</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="recom__item">
+                    <div class="recom__prev">
+                        <img src="img/recom_prev.jpg" alt="">
+                        <div class="recom__prev_tag">
+                            <div class="blue">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_12593_1521)">
+                                        <path d="M6 1L7.00598 3.61554C7.14698 3.98216 7.21749 4.16547 7.32712 4.31965C7.42429 4.45631 7.54369 4.57571 7.68035 4.67288C7.83454 4.78251 8.01784 4.85302 8.38446 4.99402L11 6L8.38446 7.00598C8.01784 7.14698 7.83454 7.21749 7.68035 7.32712C7.54369 7.42429 7.42429 7.54369 7.32712 7.68035C7.21749 7.83454 7.14698 8.01784 7.00598 8.38446L6 11L4.99402 8.38446C4.85302 8.01784 4.78251 7.83454 4.67288 7.68035C4.57571 7.54369 4.45631 7.42429 4.31965 7.32712C4.16547 7.21749 3.98216 7.14698 3.61554 7.00598L1 6L3.61554 4.99402C3.98216 4.85302 4.16546 4.78251 4.31965 4.67288C4.45631 4.57571 4.57571 4.45631 4.67288 4.31965C4.78251 4.16546 4.85302 3.98216 4.99402 3.61554L6 1Z" stroke="#5482F7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_12593_1521">
+                                        <rect width="12" height="12" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <p>Новинка</p>
+                            </div>
+                            <div class="yellow">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9.5V2.5M6 2.5L2.5 6M6 2.5L9.5 6" stroke="#F79009" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Топ</p>
+                            </div>
+                            <div class="red">
+                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_12593_1685)">
+                                        <path d="M7.27483 1.22656L2.82156 6.57049C2.64716 6.77977 2.55995 6.88442 2.55862 6.97279C2.55746 7.04962 2.5917 7.12271 2.65146 7.17101C2.72021 7.22656 2.85642 7.22656 3.12885 7.22656H6.77483L6.27483 11.2266L10.7281 5.88264C10.9025 5.67335 10.9897 5.56871 10.991 5.48033C10.9922 5.4035 10.958 5.33041 10.8982 5.28212C10.8295 5.22656 10.6932 5.22656 10.4208 5.22656H6.77483L7.27483 1.22656Z" stroke="#F04438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_12593_1685">
+                                        <rect width="12" height="12" fill="white" transform="translate(0.773438 0.226562)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <p>Cуперцена</p>
+                            </div>
+                        </div>
+                        <a href="#" class="recom__fav active">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9932 5.13581C9.9938 2.7984 6.65975 2.16964 4.1547 4.31001C1.64964 6.45038 1.29697 10.029 3.2642 12.5604C4.89982 14.6651 9.84977 19.1041 11.4721 20.5408C11.6536 20.7016 11.7444 20.7819 11.8502 20.8135C11.9426 20.8411 12.0437 20.8411 12.1361 20.8135C12.2419 20.7819 12.3327 20.7016 12.5142 20.5408C14.1365 19.1041 19.0865 14.6651 20.7221 12.5604C22.6893 10.029 22.3797 6.42787 19.8316 4.31001C17.2835 2.19216 13.9925 2.7984 11.9932 5.13581Z" fill="black" fill-opacity="0.24" stroke="#FCFCFD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="recom__info">
+                        <div class="recom__price">
+                            <p class="recom__price_val">590 871 000 сум</p>
+                        </div>
+                        <p class="recom__square">10 941 000 сум/м²</p>
+                        <div class="recom__row">
+                            <div>
+                                <img src="img/recom_1.svg" alt="">
+                                <p>7</p>
+                                <span>Число комнат</span>
+                            </div>
+                            <div>
+                                <img src="img/recom_3.svg" alt="">
+                                <p>180 м²</p>
+                                <span>Число комнат</span>
+                            </div>
+                            <div>
+                                <img src="img/recom_4.svg" alt="">
+                                <p>2</p>
+                                <span>Число комнат</span>
+                            </div>
+                        </div>
+                        <div class="recom__place">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.9987 10.8332C11.3794 10.8332 12.4987 9.71388 12.4987 8.33317C12.4987 6.95246 11.3794 5.83317 9.9987 5.83317C8.61799 5.83317 7.4987 6.95246 7.4987 8.33317C7.4987 9.71388 8.61799 10.8332 9.9987 10.8332Z" stroke="#98A2B3" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9.9987 18.3332C13.332 14.9998 16.6654 12.0151 16.6654 8.33317C16.6654 4.65127 13.6806 1.6665 9.9987 1.6665C6.3168 1.6665 3.33203 4.65127 3.33203 8.33317C3.33203 12.0151 6.66536 14.9998 9.9987 18.3332Z" stroke="#98A2B3" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <p>Юнусабадский, Сабзават</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn__blue recom__more">Показать ещё </button>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__row">
+                <ul>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Помощь</a></li>
+                    <li><a href="#">Реклама</a></li>
+                </ul>
+                <div class="footer__soc">
+                    <a href="#">
+                        <img src="img/footer_soc_1.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/footer_soc_2.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/footer_soc_3.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="footer__text">
+                <p>Сервис применяет <a href="#">рекомендательные технологии</a>: предоставляет информацию на основе сбора, систематизации и анализа сведений, относящихся к предпочтениям пользователей интернета, находящихся в Узбекистане</p>
+                <p>Использование сайта означает согласие с <a href="#">Пользовательским соглашением</a> и <a href="#">Политикой обработки персональных данных</a></p>
+            </div>
+            <div class="footer__footer">
+                <a href="#" class="footer__logo"><img src="img/logo_wht.svg" alt=""></a>
+                <p class="footer__law">© 2025 DOMIK.UZ Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal modal-place">
+        <div class="modal__overflow modal-place__overflow"></div>
+        <div class="modal-place__wrapper modal__wrapper">
+            <div class="modal__close">
+                <img src="img/close.svg" class="svg" alt="">
+            </div>
+            <div class="modal__logo">
+                <img src="img/place.svg" alt="" class="svg">
+            </div>
+            <p class="modal-place__name">Выберите регион</p>
+            <div class="modal-place__form">
+                <div class="modal-place__row">
+                    <div class="modal-place__input">
+                        <input type="text" placeholder="Город">
+                        <ul class="modal-place__input_list">
+                            <li>
+                                <a href="#">
+                                    <p>Геленджик</p>
+                                    <p>Краснодарский край</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Геленджик</p>
+                                    <p>Краснодарский край</p>
+                                </a>
+                            </li>   
+                        </ul>
+                        <div class="modal-place__input_clear">
+                            <img src="img/close.svg" alt="" class="svg">
+                        </div>
+                    </div>
+                    <buttom class="btn__blue">Выбрать</buttom>
+                </div>
+                <ul class="modal-place__list">
+                    <li><a href="#">Москва</a></li>
+                    <li><a href="#">Санкт-Петербург</a></li>
+                    <li><a href="#">Нижний Новгород</a></li>
+                    <li><a href="#">Казань</a></li>
+                    <li><a href="#">Москва</a></li>
+                    <li><a href="#">Санкт-Петербург</a></li>
+                    <li><a href="#">Нижний Новгород</a></li>
+                    <li><a href="#">Казань</a></li>
+                    <li><a href="#">Казань</a></li>
+                    <li><a href="#">Казань</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="modal modal-share">
+        <div class="modal__overflow"></div>
+        <div class="modal__wrapper modal-share__wrapper">
+            <div class="modal__close">
+                <img src="img/close.svg" class="svg" alt="">
+            </div>
+            <h3>Поделится</h3>
+            <div class="modal-share__row">
+                <a href="#">
+                    <img src="img/tg.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="img/wa.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="img/twitter.svg" alt="">
+                </a>
+            </div>
+            <button class="btn__blue">Скопировать ссылку</button>
+        </div>
+    </div>
+    <div class="modal modal-war">
+        <div class="modal__overflow"></div>
+        <form action="#" class="modal__wrapper modal-war__wrapper">
+            <div class="modal__close">
+                <img src="img/close.svg" class="svg" alt="">
+            </div>
+            <h3>Пожаловаться</h3>
+            <ul class="modal-war__list">
+                <li>
+                    <input type="radio" name="war">
+                    <span></span>
+                    <p>Уже продано</p>
+                </li>
+                <li>
+                    <input type="radio" name="war">
+                    <span></span>
+                    <p>Не дозвонится</p>
+                </li>
+                <li>
+                    <input type="radio" name="war">
+                    <span></span>
+                    <p>Неверный номер</p>
+                </li>
+                <li>
+                    <input type="radio" name="war">
+                    <span></span>
+                    <p>Неверная цена</p>
+                </li>
+                <li>
+                    <input type="radio" name="war">
+                    <span></span>
+                    <p>Неверный адрес</p>
+                </li>
+                <li>
+                    <input type="radio" name="war">
+                    <span></span>
+                    <p>Проблемы с фото</p>
+                </li>
+                <li>
+                    <input type="radio" name="war">
+                    <span></span>
+                    <p>Проблемы с описанием</p>
+                </li>
+                <li>
+                    <input type="radio" name="war">
+                    <span></span>
+                    <p>Мошенничество или введение в заблуждение</p>
+                </li>
+                <li>
+                    <input type="radio" name="war">
+                    <span></span>
+                    <p>Другое</p>
+                </li>
+            </ul>
+            <textarea name="" id="" placeholder="Какая причина жалобы?"></textarea>
+            <button class="btn__blue">Отправить жалобу</button>
+        </form>
+    </div>
+    <div class="modal modal-print">
+        <div class="modal__overflow"></div>
+        <div class="modal__wrapper modal-print__wrapper">
+            <div class="modal__close">
+                <img src="img/close.svg" class="svg" alt="">
+            </div>
+            <h3>Выберите действие</h3>
+            <div class="modal-print__func">
+                <a href="#">
+                    <img src="img/print.svg" alt="" class="svg">
+                    <p>Печатать</p>
+                </a>
+                <a href="#">
+                    <img src="img/download.svg" alt="" class="svg">
+                    <p>Скачать</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/itc-custom-select.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
