@@ -3537,6 +3537,17 @@ textarea.input
                 stroke: $white
         &:hover
             background: $lighter-purple
+    .alert
+        margin: 10px auto 0
+        max-width: 380px
+        font-family: $font-family
+        font-weight: 500
+        font-size: 16px
+        line-height: 1.25
+        text-align: center
+        color: $gray
+        &-danger
+            color: $error
 
 @media ( max-width: 768px )
     .input
@@ -3603,6 +3614,7 @@ textarea.input
         color: $black
         opacity: .5
         display: inline
+        white-space: nowrap
     a
         transition: all .3s
         margin: 0 26px 0 0
@@ -6029,6 +6041,12 @@ textarea.input
         display: flex
         flex-direction: column
         justify-content: flex-start
+        p,
+        li
+            font: 500 20px / 1.4 $font-family
+            letter-spacing: -0.03em
+            opacity: 0.7
+            margin: 0
         .btn__violet,
         .btn__blc
             padding: 20px 20px 20px 30px
@@ -6054,14 +6072,11 @@ textarea.input
                 span
                     font-weight: 700
     &__text
-        font: 500 20px / 1.4 $font-family
-        letter-spacing: -0.03em
-        opacity: 0.7
-        margin: auto 0
+        display: none
     &__price
         font: 600 36px / 1 $font-family
         letter-spacing: -0.03em
-        margin: auto 0 0
+        margin: auto 0 0 !important
 
 .team
     &__structure

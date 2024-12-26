@@ -540,6 +540,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // }
     }
 
+    // document.querySelector('.modal-thanks').classList.add('active')
+
     function formVal(form) {
         let error = 0,
             formReq = document.querySelectorAll('.form__wrapper ._req');
