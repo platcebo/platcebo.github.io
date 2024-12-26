@@ -650,6 +650,25 @@ if(faqOpen !== null) {
     })
 }
 
+let articleVideo = document.querySelectorAll('.article__video'),
+    articlepopup = document.querySelectorAll('.article-popup'),
+    articleClose = document.querySelectorAll('.article-popup__close'),
+    articleOverflow = document.querySelectorAll('.article-popup__overflow');
+
+if(articleVideo !== null) {
+    articleVideo.forEach((item,i)=>{
+        item.addEventListener('click',()=>{
+            articlepopup[i].classList.add('active')
+        })
+        articleClose[i].addEventListener('click',()=>{
+            articlepopup[i].classList.remove('active')
+        })
+        articleOverflow[i].addEventListener('click',()=>{
+            articlepopup[i].classList.remove('active')
+        })
+    })
+}
+
 let formPrev = document.querySelector('.contact__form'),
     formReq = document.querySelectorAll('.contact__form ._req');
     
