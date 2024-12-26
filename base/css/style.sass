@@ -318,15 +318,19 @@ body
                 border: 1px solid #000
                 border-radius: 5px
                 display: block
+                font-size: 10px
                 &:hover
                     border: 1px solid #ff0000
     .product__aside_back
         font-weight: 300
     &__content
-        max-width: 470px
+        max-width: 100%
         margin: 0 auto
         img
+            max-width: 500px
+            margin: 0 auto
             width: 100%
+            display: block
     &__text
         margin: 30px 0 0
         display: grid
@@ -348,6 +352,47 @@ body
         &:hover
             color: #ff0000
             border: 1px solid #ff0000
+    &__table
+        margin: 30px 0 0
+        display: grid
+        grid-template-columns: 1fr
+        gap: 20px
+    &__row
+        display: grid
+        grid-template-columns: 3fr 1fr 100px
+        gap:10px
+        padding: 0 0 10px
+        border-bottom: 1px solid #000
+        align-items: center
+        p
+            font-size: 16px
+            font-weight: 400
+            display: block
+            position: relative
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+            &+p
+                font-size: 14px
+                font-weight: 300
+        a
+            border: 1px solid #000
+            text-align: center
+            padding: 7px
+            border-radius: 5px
+            transition: all .3s
+            color: #000
+            font-size: 12px
+            display: block
+            width: 100%
+            &:hover
+                color: #ff0000
+                border: 1px solid #ff0000
+        &_name
+            p+p
+                font-size: 16px
+                font-weight: 400
+
 
 @media ( max-width: 1440px )
     .har
@@ -426,8 +471,14 @@ body
         &__wrapper
             margin: 30px 0 0
             grid-template-columns: 1fr 1fr
-            
-        
+    .product
+        &__wrapper
+            grid-template-columns: 250px 1fr
+        &__row
+            p
+                font-size: 12px
+                &+p
+                    font-size: 12px
 
 @media ( max-width: 768px )
     .nav
@@ -509,5 +560,21 @@ body
             grid-template-columns: 1fr
         &__aside
             order: 2
+            ul
+                a
+                    font-size: 12px
         &__content
             max-width: 100%
+        &__row
+            grid-template-columns: 1fr
+            &_name
+                display: none
+            p
+                white-space: wrap
+                &::before
+                    content: 'Наименование товара: '
+                    font-size: 12px
+                    font-weight: 600
+                &+p
+                    &::before
+                        content: 'Цена: '
