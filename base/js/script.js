@@ -6,4 +6,6 @@ document.querySelectorAll('a[href^="#"]').forEach(item=> {
             behavior: 'smooth'
         });
     });
+
+    console.log(document.querySelectorAll('.product__row').length)
 });
