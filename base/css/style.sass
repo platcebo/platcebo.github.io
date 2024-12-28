@@ -176,6 +176,7 @@ body
         font-weight: 400
         transition: all .3s
         color: #000
+        text-decoration: underline  
         &:hover
             opacity: .7
 
@@ -565,16 +566,25 @@ body
                     font-size: 12px
         &__content
             max-width: 100%
+        &__table
+            gap: 10px
         &__row
-            grid-template-columns: 1fr
+            grid-template-columns: 1fr 60px 70px
+            gap: 5px
             &_name
                 display: none
             p
-                white-space: wrap
-                &::before
-                    content: 'Наименование товара: '
-                    font-size: 12px
-                    font-weight: 600
+                font-size: 8px
                 &+p
-                    &::before
-                        content: 'Цена: '
+                    font-size: 8px
+                // white-space: wrap
+                // &::before
+                //     content: 'Наименование товара: '
+                //     font-size: 12px
+                //     font-weight: 600
+                // &+p
+                //     &::before
+                //         content: 'Цена: '
+            a
+                font-size: 8px
+                padding: 4px
