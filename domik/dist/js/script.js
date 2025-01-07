@@ -92,16 +92,36 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    let selectInput = document.querySelectorAll('.select__input'),
-        selectVal = document.querySelectorAll('.select__val');
+    // let selectInput = document.querySelectorAll('.select__input'),
+    //     selectVal = document.querySelectorAll('.select__val');
 
-    if(selectInput !== null) {
-        selectInput.forEach((item, i)=>{
-            item.addEventListener('change', ()=>{
-                selectVal[i].innerHTML = item.options[item.selectedIndex].text
-            })
-        })
-    }
+    document.body.addEventListener('click', (event)=>{
+        let target = event.target;
+
+        if(target.classList.contains('select__input')) {
+
+            let selectInput = document.querySelectorAll('.select__input'),
+                selectVal = document.querySelectorAll('.select__val');
+
+            // console.log(target)
+
+            for(let i = 0; i < selectInput.length; i++) {
+                if(target && target == selectInput[i]) {
+                    selectInput[i].addEventListener('change', ()=>{
+                        selectVal[i].innerHTML = selectInput[i].options[selectInput[i].selectedIndex].text
+                    })
+                } 
+            }
+        }
+    })
+
+    // if(selectInput !== null) {
+    //     selectInput.forEach((item, i)=>{
+    //         item.addEventListener('change', ()=>{
+    //             selectVal[i].innerHTML = item.options[item.selectedIndex].text
+    //         })
+    //     })
+    // }
 
     let navHum = document.querySelector('.nav__humburger'),
         nav = document.querySelector('.nav');
@@ -472,5 +492,30 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         })
     }
+
+    // let sortVal = document.querySelectorAll('.search__sort_val');
+
+    // sortVal.forEach((item)=>{
+    //     item.addEventListener('click', ()=>{
+    //         if(item.classList.contains('active')) {
+    //             // клик по актив элементу, 
+    //             if(item.classList.contains('down')) {
+    //                 // стрелка вниз
+    //                 item.classList.remove('down');
+    //             } else {
+    //                 // стрелка вверх
+    //                 item.classList.add('down');
+    //             }
+    //         } else {
+    //             for(let a = 0; a < sortVal.length; a++) {
+    //                 sortVal[a].classList.remove('active')
+    //                 sortVal[a].classList.remove('down')
+    //             }
+    //             // клик по неактивному классу, стрелка вверх
+    //             item.classList.add('active');
+    //             item.classList.remove('down');
+    //         }
+    //     })
+    // })
 
 }, false);
