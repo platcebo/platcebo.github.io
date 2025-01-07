@@ -6734,15 +6734,15 @@ textarea.input
                 display: flex
                 justify-content: center
                 align-items: center
-                &::before
-                    content: ''
-                    display: block
-                    width: 12px
-                    height: 12px
-                    border-radius: 2px
-                    background: $purple
-                    opacity: 0
-                    transition: all .3s
+                // &::before
+                //     content: ''
+                //     display: block
+                //     width: 12px
+                //     height: 12px
+                //     border-radius: 2px
+                //     background: $purple
+                //     opacity: 0
+                //     transition: all .3s
             input
                 width: 20px
                 height: 20px
@@ -6829,4 +6829,191 @@ textarea.input
             top: 50%
             transform: translateY(-50%)
             right: 20px
-            
+    &__wrapper
+        margin: 40px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 
+        gap: 40px
+    &__item
+        border-radius: 40px
+        position: relative
+        overflow: hidden
+        background: $light-gray
+        &_prev
+            position: relative
+            height: 350px
+            overflow: hidden
+            img
+                width: 100%
+                height: 100%
+                min-height: 100%
+                object-fit: cover
+                transition: all .5s ease-in-out
+        &:hover
+            .blog-page__item_prev 
+                img
+                    transform: scale(110%)
+        &_banner
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            gap: 5px
+            position: absolute
+            top: 40px
+            left: 40px
+            right: 40px
+            p
+                border-radius: 40px
+                padding: 10px 15px
+                background: $white
+                font: 500 16px / 1.25 $font-family
+                color: $black
+        &_info
+            padding: 40px
+        &_date
+            font: 500 16px / 1.25 $font-family
+            color: $black
+            opacity: .5
+        &_name
+            font: 600 36px / 1 $font-family
+            letter-spacing: -0.03em
+            color: $black
+            margin: 10px 0 0
+        &_row
+            margin: 40px 0 0
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            gap: 20px
+            div
+                display: grid
+                grid-template-columns: 20px auto
+                gap: 5px
+                align-items: center
+                &:last-child
+                    margin: 0 0 0 auto
+            p
+                font: 500 20px / 1.4 $font-family
+                letter-spacing: -0.03em
+                color: $black
+                opacity: 0.5
+    &__more
+        margin: 40px auto 0
+        padding: 20px 20px 20px 30px
+        gap: 29px
+
+@media ( max-width: 1600px )
+    .blog-page
+        &__item
+            &_prev
+                height: 260px
+            &_banner
+                p
+                    font-size: 14px
+            &_name
+                font-size: 28px
+            &_date
+                font-size: 14px
+            &_row
+                p
+                    font-size: 16px
+        &__filter
+            p
+                font-size: 16px
+        &__subtitle
+            font-size: 28px
+        h1
+            font-size: 90px
+        &__more
+            padding: 10px 10px 10px 20px
+            gap: 40px
+
+@media ( max-width: 1320px )
+    .blog-page
+        &__wrapper
+            gap: 20px
+            grid-template-columns: 1fr 1fr
+
+@media ( max-width: 1200px )
+    .blog-page
+        &__block
+            padding: 40px
+        h1
+            font-size: 74px
+        &__subtitle
+            font-size: 24px
+            margin: 30px 0 0
+        &__filter
+            margin: 30px -40px 0
+            flex-wrap: nowrap
+            overflow: auto
+            padding: 0 40px
+        &__search
+            margin: 20px 0 0
+            input
+                font-size: 16px
+        &__wrapper
+            margin: 30px 0 0
+        &__item
+            &_info
+                padding: 30px
+            &_banner
+                top: 30px
+                left: 30px
+                right: 30px
+            &_name
+                font-size: 24px
+            &_row
+                gap: 10px
+    .check-blog
+        .check
+            &__form
+                p
+                    grid-column: auto
+            &__check
+                grid-column: 1/3
+                margin: 0
+
+@media ( max-width: 600px )
+    .blog-page
+        &__block
+            padding: 30px 20px
+        h1
+            font-size: 34px
+        &__subtitle
+            font-size: 18px
+            margin: 20px 0 0
+        &__filter
+            margin: 20px -20px 0
+            padding: 0 20px
+        &__wrapper
+            grid-template-columns: 1fr
+        &__item
+            &_banner
+                left: 20px
+                right: 20px
+                top: 20px
+                p
+                    font-size: 12px
+            &_info
+                padding: 20px
+            &_name
+                font-size: 18px
+                margin: 5px 0 0
+            &_row
+                margin: 20px 0 0
+                p
+                    font-size: 14px
+            &_prev
+                height: 200px
+        &__more
+            width: 100%
+            max-width: 100%
+            padding: 15px 15px 15px 20px
+            gap: 0
+            span
+                font-size: 12px
+    .check-blog
+        .check
+            &__check
+                grid-column: auto
