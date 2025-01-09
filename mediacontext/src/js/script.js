@@ -1245,4 +1245,97 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    let articleAside = document.querySelector('.article__aside'),
+        articleAsideVal = document.querySelector('.article__aside_val'),
+        articleAsideLink = document.querySelectorAll('.article__aside ul a'),
+        articleAsideTitle = document.querySelectorAll('.article__aside_title'),
+        articleBlock = document.querySelector('.article__block'),
+        articleTg = document.querySelector('.article__tg');
+
+    if(articleAside !== null) {
+        if(articleBlock.getBoundingClientRect().top <=  -40 && articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height >=  360) {
+            articleAside.classList.add('fix')
+            articleAside.classList.remove('bottom')
+            articleAside.style.left = articleBlock.getBoundingClientRect().right + 'px'
+        } else if (articleBlock.getBoundingClientRect().top >  -40) {
+            articleAside.classList.remove('fix')
+            articleAside.style.left = "auto"
+            articleAside.classList.remove('bottom')
+        } else if (articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height < 360) {
+            articleAside.classList.remove('fix')
+            articleAside.style.left = "auto"
+            articleAside.classList.add('bottom')
+        }
+
+        window.addEventListener('scroll', (event)=>{
+            if(articleBlock.getBoundingClientRect().top <=  -40 && articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height >=  360) {
+                articleAside.classList.add('fix')
+                articleAside.classList.remove('bottom')
+                articleAside.style.left = articleBlock.getBoundingClientRect().right + 'px'
+                articleAside.style.bottom = "auto"
+            } else if (articleBlock.getBoundingClientRect().top >  -40) {
+                articleAside.classList.remove('fix')
+                articleAside.style.left = "auto"
+                articleAside.classList.remove('bottom')
+                articleAside.style.bottom = "auto"
+            } else if (articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height < 360) {
+                articleAside.classList.remove('fix')
+                articleAside.style.left = "auto"
+                articleAside.classList.add('bottom')
+                articleAside.style.bottom = articleTg.getBoundingClientRect().height + 80 + 'px'
+            }
+
+            articleAsideTitle.forEach((item,i)=>{
+                if(item.getBoundingClientRect().top < 100 && item.getBoundingClientRect().top > -110 ) {
+                    for(let a = 0; a < articleAsideLink.length; a++) {
+                        articleAsideLink[a].classList.remove('active')
+                    }
+                    articleAsideLink[i].classList.add('active')
+                    articleAsideVal.innerHTML = '<span>'+ articleAsideCount() +'</span> / '+articleAsideLink.length
+                }
+            })
+        })
+
+        articleAsideVal.innerHTML = '<span>'+ articleAsideCount() +'</span> / '+articleAsideLink.length
+
+        function articleAsideCount() {
+            for(let i = 0; i < articleAsideLink.length; i++) {
+                if(articleAsideLink[i].classList.contains('active')) {
+                    return i + 1
+                }
+            }
+        }
+    }
+
+    if(articleTg !== null) {
+        if(articleBlock.getBoundingClientRect().top <=  -870 && articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height >=  360) {
+            articleTg.classList.add('fix')
+            articleTg.classList.remove('bottom')
+            articleTg.style.left = articleBlock.getBoundingClientRect().right + 'px'
+        } else if (articleBlock.getBoundingClientRect().top >  -870) {
+            articleTg.classList.remove('fix')
+            articleTg.style.left = "auto"
+            articleTg.classList.remove('bottom')
+        } else if (articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height < 360) {
+            articleTg.classList.remove('fix')
+            articleTg.style.left = "auto"
+            articleTg.classList.add('bottom')
+        }
+        window.addEventListener('scroll', (event)=>{
+            if(articleBlock.getBoundingClientRect().top <=  -870 && articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height >=  360) {
+                articleTg.classList.add('fix')
+                articleTg.classList.remove('bottom')
+                articleTg.style.left = articleBlock.getBoundingClientRect().right + 'px'
+            } else if (articleBlock.getBoundingClientRect().top >  -870) {
+                articleTg.classList.remove('fix')
+                articleTg.style.left = "auto"
+                articleTg.classList.remove('bottom')
+            } else if (articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height < 360) {
+                articleTg.classList.remove('fix')
+                articleTg.style.left = "auto"
+                articleTg.classList.add('bottom')
+            }
+        })
+    }
+
 }, false);

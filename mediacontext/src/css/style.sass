@@ -6768,9 +6768,12 @@ textarea.input
         padding: 60px 40px
         border-radius: 40px
         background: $white
-    h1
+    h1,
+    h2
         span
             color: $purple
+    h2
+        margin: 20px 0 0
     &__subtitle
         margin: 30px 0 0
         font: 600 36px / 1 $font-family
@@ -7017,3 +7020,427 @@ textarea.input
         .check
             &__check
                 grid-column: auto
+
+.mt40
+    margin: 40px 0 0
+
+.article
+    &__block
+        display: grid
+        grid-template-columns: 1fr 560px
+        gap: 40px
+        align-items: start
+        position: relative
+    &__banner
+        border-radius: 40px
+        height: 490px
+        width: 100%
+        object-fit: cover
+    &__row
+        display: flex
+        justify-content: flex-start
+        align-items: center
+    &__tag
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 10px
+        p
+            font: 500 20px / 1.4 $font-family
+            letter-spacing: -0.03em
+            text-align: center
+            color: $black
+            padding: 10px 30px
+            border-radius: 40px
+            background: $light-gray
+    &__date
+        margin: 0 0 0 20px
+        font: 500 20px / 1.4 $font-family
+        letter-spacing: -0.03em
+        color: $black
+        opacity: 0.7
+    &__func
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 20px
+        margin: 0 0 0 auto
+        div,
+        a
+            display: grid
+            grid-template-columns: 20px auto
+            gap: 5px
+            align-items: center
+        p
+            font: 500 20px / 1.4 $font-family
+            letter-spacing: -0.03em
+            color: $black
+            opacity: .5
+            transition: all .3s
+        svg
+            g
+                transition: all .3s
+        a
+            &:hover
+                p
+                    opacity: 1
+                svg
+                    g
+                        opacity: 1
+    h2
+        margin: 20px 0 0
+    &__content
+        p
+            font: 500 20px / 1.4 $font-family
+            letter-spacing: -0.03em
+            color: #1b1b1bb3
+            margin: 40px 0 0
+            &:nth-child(1)
+                margin-top: 0
+            b
+                font-weight: 700
+                color: $black
+            a
+                color: $purple
+                text-decoration: underline
+                transition: all .3s
+                &:hover
+                    color: $lighter-purple
+        h3
+            font: 600 36px / 1 $font-family
+            letter-spacing: -0.03em
+            color: $black
+            margin: 40px 0 0
+            &:nth-child(1)
+                margin-top: 0
+        h4
+            font: 600 24px / 1.4 $font-family
+            letter-spacing: -0.03em
+            color: $black
+            margin: 40px 0 0
+            &:nth-child(1)
+                margin-top: 0
+        ul
+            display: grid
+            grid-template-columns: 1fr
+            gap: 10px
+            margin: 40px 0 0
+            &:nth-child(1)
+                margin-top: 0
+            p
+                margin: 0
+            li
+                display: grid
+                grid-template-columns: 25px 1fr
+                &::before
+                    content: ''
+                    display: block
+                    width: 10px
+                    height: 10px
+                    border-radius: 100%
+                    background: $black
+                    margin: 9px 0 0
+        &_banner
+            margin: 40px 0 0
+            padding: 40px
+            border-radius: 40px
+            background: $light-gray
+            &:nth-child(1)
+                margin-top: 0
+            h4
+                margin: 0
+        ol
+            display: grid
+            grid-template-columns: 1fr
+            gap: 20px
+            margin: 40px 0 0
+            counter-reset: article 
+            &:nth-child(1)
+                margin-top: 0
+            p
+                margin: 0
+                b
+                    display: block
+                    margin: 0 0 10px
+            li
+                display: grid
+                grid-template-columns: 41px 1fr
+                gap: 15px
+                align-items: start
+                &::before
+                    content: counter(article)
+                    counter-increment: article
+                    width: 41px
+                    height: 41px
+                    border-radius: 100%
+                    background: $black
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    font: 500 12px / 1.4 $font-family
+                    letter-spacing: -0.03em
+                    text-align: center
+                    color: $white
+        blockquote
+            margin: 40px 0 0
+            padding: 40px
+            border-radius: 40px
+            background: $light-gray
+            &:nth-child(1)
+                margin-top: 0
+            .article__autor
+                margin: 30px 0 0
+            &::before
+                content: ''
+                width: 48px
+                height: 48px
+                display: block
+                background: url('../img/blockquote.svg') center no-repeat
+                background-size: contain
+        img
+            width: 100%
+            border-radius: 40px
+            display: block
+            margin: 40px 0 0
+            &:nth-child(1)
+                margin-top: 0
+    &__autor
+        display: grid
+        grid-template-columns: 100px 1fr
+        gap: 20px
+        max-width: max-content
+        width: 100%
+        align-items: center
+        margin: 0 40px 0 0
+        p
+            font: 600 22px / 1.4 $font-family
+            letter-spacing: -0.03em
+            color: $black
+            &+p
+                margin: 5px 0 0
+                font: 500 20px / 1.4 $font-family
+                opacity: 0.7
+        img
+            width: 100px
+            height: 100px
+            border-radius: 100%
+            object-fit: covers
+    &__tg
+        position: absolute
+        top: 1400px
+        border-radius: 40px
+        padding: 40px
+        background: $purple
+        width: 560px
+        right: 40px
+        &_img
+            display: flex
+            justify-content: center
+            align-items: center
+        img
+            width: 82px
+            height: 82px
+            border-radius: 100%
+            object-fit: cover
+            border: 3px solid $white
+            display: block
+            position: relative
+            &:nth-child(1)
+                margin: 0 -17px 0 0
+                z-index: 2
+        &_row
+            display: flex
+            justify-content: flex-start
+            align-items: center
+        a
+            margin: 0 0 0 17px
+            border-radius: 40px
+            padding: 10px 30px
+            background: $white
+            font: 500 20px / 1.4 $font-family
+            letter-spacing: -0.03em
+            text-align: center
+            color: $black
+            width: max-content
+        p
+            font: 600 24px / 1.1 $font-family
+            letter-spacing: -0.03em
+            color: $white
+            margin: 20px 0 0
+        &.fix
+            top: 530px
+            position: fixed
+            transform: translateX(calc( -100% - 40px ))
+        &.bottom
+            bottom: 60px
+            top: auto
+    &__aside
+        border-radius: 40px
+        padding: 40px
+        background: $light-gray
+        width: 560px
+        height: 490px
+        display: grid
+        grid-template-rows: auto 1fr auto
+        align-items: start
+        gap: 30px
+        position: relative
+        position: absolute
+        top: 60px
+        right: 40px
+        h3
+            font: 600 36px / 1 $font-family
+            letter-spacing: -0.03em
+            color: $black
+        ul
+            display: grid
+            grid-template-columns: 1fr
+            gap: 10px
+            height: 100%
+            align-content: start
+            max-height: 100%
+            overflow: auto
+            a
+                font: 500 20px / 1.4 $font-family
+                letter-spacing: -0.03em
+                color: $black
+                opacity: .7
+                transition: all .3s
+                &:hover
+                    color: $lighter-purple
+                    opacity: 1
+                &.active
+                    color: $purple
+                    opacity: 1
+        p
+            font: 500 20px / 1.4 $font-family
+            letter-spacing: -0.03em
+            color: rgba(27, 27, 27, 0.5)
+            span
+                color: $purple
+                opacity: 1
+        &_row
+            display: flex
+            justify-content: space-between
+            align-items: center
+        &.fix
+            top: 20px
+            position: fixed
+            transform: translateX(calc( -100% - 40px ))
+        &.bottom
+            bottom: 340px
+            top: auto
+    &__more
+        margin: 40px 0 0
+        grid-column: 1/2
+        &_text
+            font: 500 20px / 1.4 $font-family
+            letter-spacing: -0.03em
+            color: $black
+            opacity: 0.7
+        &_item
+            margin: 30px 0
+            display: grid
+            grid-template-columns: 141px 1fr
+            gap: 20px
+            align-items: center
+            &:hover
+                img
+                    transform: scale(1.2)
+                .article__more_link
+                    color: $purple
+        &_prev
+            width: 100%
+            height: 106px
+            position: relative
+            overflow: hidden
+            border-radius: 20px
+            img
+                width: 100%
+                height: 100%
+                min-height: 100%
+                object-fit: cover
+                transition: all .3s
+        &_name
+            font: 600 24px / 1.4 $font-family
+            letter-spacing: -0.03em
+            color: $black
+        &_func
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            gap: 15px
+            margin: 5px 0 0
+            div
+                display: grid
+                grid-template-columns: 20px auto
+                gap: 5px
+                align-items: center
+            p
+                font: 500 20px / 1.4 $font-family
+                letter-spacing: -0.03em
+                color: $black
+                opacity: .5
+        &_link
+            font: 700 16px / 1.25 $font-family
+            text-transform: uppercase
+            color: $black
+            text-decoration: underline
+            margin: 10px 0 0
+            opacity: 0.5
+            transition: all .3s
+    &__footer
+        grid-column: 1/2
+        border-top: 1px solid #1b1b1b4d 
+        margin: 40px 0 0
+        padding: 40px 0 0
+        h3
+            font: 600 36px / 1 $font-family
+            letter-spacing: -0.03em
+            color: $black
+        &_row
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            margin: 20px 0 0
+        &_soc
+            display: flex
+            gap: 10px
+            a
+                border-radius: 10px
+                width: 60px
+                height: 60px
+                background: $light-gray
+                display: flex
+                justify-content: center
+                align-items: center
+                transition: all .3s
+                svg
+                    path
+                        transition: all .3s
+                &:hover
+                    background: $black
+                    svg
+                        path
+                            fill: $white
+
+@media ( max-width: 1700px )
+    .article
+        &__block
+            grid-template-columns: 1fr 400px
+        &__aside,
+        &__tg
+            width: 400px
+        &__tg
+            &.fix
+                top: 440px 
+        &__aside
+            padding: 40px
+            height: 400px
+            h3
+                font-size: 28px
+            ul
+                a
+                    font-size: 16px
+            p
+                font-size: 16px
