@@ -2488,6 +2488,12 @@ textarea.input
     .container
         width: calc( 100% - 40px )
     .nav
+        &.fix
+            pointer-events: none
+            .nav__burger
+                pointer-events: all
+            &.active
+                pointer-events: all
         &__list
             display: none
         &__logo
@@ -3614,8 +3620,8 @@ textarea.input
         color: $black
         opacity: .5
         display: inline
-        white-space: nowrap
     a
+        white-space: nowrap
         transition: all .3s
         margin: 0 26px 0 0
         position: relative
@@ -6936,6 +6942,10 @@ textarea.input
         &__wrapper
             gap: 20px
             grid-template-columns: 1fr 1fr
+        &__article
+            .blog-page__item
+                &:nth-child(3)
+                    display: none
 
 @media ( max-width: 1200px )
     .blog-page
@@ -7016,6 +7026,10 @@ textarea.input
             gap: 0
             span
                 font-size: 12px
+        &__article
+            .blog-page__item
+                &:nth-child(3)
+                    display: block
     .check-blog
         .check
             &__check
@@ -7211,7 +7225,7 @@ textarea.input
         max-width: max-content
         width: 100%
         align-items: center
-        margin: 0 40px 0 0
+        margin: 0
         p
             font: 600 22px / 1.4 $font-family
             letter-spacing: -0.03em
@@ -7224,7 +7238,10 @@ textarea.input
             width: 100px
             height: 100px
             border-radius: 100%
-            object-fit: covers
+            object-fit: cover
+        &_row
+            gap: 40px
+            flex-wrap: wrap
     &__tg
         position: absolute
         top: 1400px
@@ -7288,6 +7305,8 @@ textarea.input
         position: absolute
         top: 60px
         right: 40px
+        &_arrow
+            display: none
         h3
             font: 600 36px / 1 $font-family
             letter-spacing: -0.03em
@@ -7432,8 +7451,15 @@ textarea.input
         &__tg
             width: 400px
         &__tg
+            top: 1310px
+            padding: 40px 40px 40px 40px
             &.fix
                 top: 440px 
+            a
+                font-size: 16px
+                padding: 10px 20px
+            p
+                font-size: 22px
         &__aside
             padding: 40px
             height: 400px
@@ -7444,3 +7470,233 @@ textarea.input
                     font-size: 16px
             p
                 font-size: 16px
+        &__banner
+            height: 400px
+        &__tag
+            p
+                font-size: 16px
+        &__date
+            font-size: 16px
+        &__func
+            p
+                font-size: 16px
+        &__content
+            p
+                font-size: 16px
+            h3
+                font-size: 28px
+            h4
+                font-size: 22px
+        &__autor
+            grid-template-columns: 80px 1fr
+            p
+                font-size: 22px
+                &+p
+                    font-size: 16px
+            img
+                width: 80px
+                height: 80px
+        &__more
+            &_text
+                font-size: 16px
+            &_func
+                p
+                    font-size: 16px
+        &__footer
+            h3
+                font-size: 28px
+
+@media ( max-width: 1200px )
+    .article
+        &__block
+            grid-template-columns: 1fr
+            position: relative
+            gap: 40px
+        &__more
+            margin: 0
+        &__aside
+            padding: 30px
+            position: relative
+            top: auto
+            right: auto
+            width: 100%
+            z-index: 10
+            width: calc(100vw - 120px)
+            height: 88px
+            overflow: hidden
+            grid-template-rows: auto 1fr
+            &_title
+                padding: 340px 0 0
+                margin: -300px 0 0 !important
+            &.fix
+                transform: none
+                width: calc(100vw - 120px)
+            &.bottom
+                position: absolute
+                bottom: 40px
+                width: calc(100vw - 120px)
+            &_wrapper
+                margin: 40px 0 0
+            &_row
+                display: none
+            &_arrow
+                position: absolute
+                top: 24px
+                right: 30px
+                width: 40px
+                height: 40px
+                border-radius: 100%
+                background: $purple
+                display: flex
+                justify-content: center
+                align-items: center
+                cursor: pointer
+                transform: rotate(180deg)
+                transition: all .3s
+            &.active
+                height: 280px
+                .article__aside_arrow
+                    transform: rotate(0)
+        &__tg
+            position: relative
+            transform: none
+            inset: auto
+            width: 100%
+        &__banner
+            height: 440px
+        &__tag
+            &_row
+                flex-direction: column
+                align-items: flex-start
+        &__func
+            margin: 20px 0 0
+        &__autor
+            margin: 0
+            &_row
+                gap: 30px
+                flex-wrap: wrap
+        &__content
+            &_banner
+                padding: 30px
+            h4
+                font-size: 20px
+            h3
+                font-size: 24px
+            p,
+            ol,
+            h3,
+            h4,
+            ul,
+            blockquote
+                margin: 30px 0 0
+            blockquote
+                padding: 30px
+        &__footer
+            &_row
+                justify-content: space-between
+        &__tg
+            padding: 30px
+
+@media ( max-width: 600px )
+    .mt40
+        margin: 20px 0 0
+    .article
+        &__block
+            gap: 20px
+        &__aside
+            width: calc(100vw - 80px) !important
+            padding: 20px
+            height: 64px
+            border-radius: 30px
+            h3
+                font-size: 24px
+            &_arrow
+                top: 12px
+        &__banner
+            height: 250px
+            margin: 0 -20px
+            width: calc( 100% + 40px )
+        &__block
+            padding: 0 20px 40px
+        &__tag
+            p
+                font-size: 14px
+                padding: 5px 15px
+        &__date
+            display: none
+        &__func
+            margin: 10px 0 0
+            gap: 10px
+            p
+                font-size: 14px
+        &__autor
+            grid-template-columns: 60px 1fr
+            gap: 10px
+            &_row
+                gap: 10px
+            img
+                width: 60px
+                height: 60px
+            p
+                font-size: 18px
+                &+p
+                    font-size: 14px
+                    margin: 0
+        &__content
+            ul
+                li
+                    grid-template-columns: 20px 1fr
+                    &::before
+                        margin: 9px 0 0
+                        width: 8px
+                        height: 8px
+            h4
+                font-size: 16px
+                font-weight: 500
+            &_banner
+                padding: 20px
+            ol
+                li
+                    grid-template-columns: 1fr
+                    gap: 10px
+                    &::before
+                        width: 30px
+                        height: 30px
+            blockquote
+                padding: 20px
+        &__tg
+            padding: 20px
+            img
+                width: 72px
+                height: 72px
+            &_row
+                flex-direction: column
+                align-items: flex-start
+            a
+                margin: 10px 0 0
+            p
+                font-size: 18px
+                margin: 10px 0 0
+        &__more
+            &_item
+                margin: 30px 0
+                grid-template-columns: 60px 1fr
+                align-items: flex-start
+            &_prev
+                width: 60px
+                height: 60px
+            &_name
+                font-size: 18px
+            &_func
+                gap: 10px
+                p
+                    font-size: 14px
+        &__footer
+            padding: 20px 0 0
+            margin: 10px 0 0
+            h3
+                font-size: 18px
+            &_row
+                margin: 10px
+                flex-direction: column
+                align-items: flex-start
