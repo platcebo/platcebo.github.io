@@ -5477,11 +5477,20 @@ section
 
 .catalog
     padding: 60px 0 120px
+    h1
+        font: 500 70px / 1.15 $font-family
+        text-transform: uppercase
+        color: $dark-gray
     &__wrapper
         margin: 32px 0 0
         display: grid
         grid-template-columns: 1fr 1fr
         gap: 24px
+        .project
+            &__item
+                padding: 0
+            &__pic
+                height: 26vw
     &__item
         padding: 0 0 90px
         h3
@@ -5516,12 +5525,22 @@ section
 @media ( max-width: 1440px )
     .catalog
         padding: 50px 0 100px
+        h1
+            font-size: 64px
+        &__wrapper
+            .project__pic
+                height: 25vw
 
 @media ( max-width: 1024px )
     .catalog
         &__wrapper
             grid-template-columns: 100%
             gap: 24px
+            .project__pic
+                height: 52vw
+        h1
+            font-size: 58px
+
 
 @media ( max-width: 600px )
     .catalog
@@ -5538,6 +5557,10 @@ section
                     &_body
                         padding: 0 24px 24px
                         margin: 16px 0 0
+        h1
+            font-size: 26px
+        &__wrapper
+            margin: 24px 0 0
 
 .series
     padding: 24px 0 120px
