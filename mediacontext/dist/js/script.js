@@ -1020,21 +1020,37 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
-    let price = document.querySelector('.price'),
-        priceBlock = document.querySelector('.price__block'),
+    let price = document.querySelector('.price__block'),
+        priceWrapper = document.querySelectorAll('.price__item_wrapper'),
         priceItem = document.querySelectorAll('.price__item');
 
     if (price !== null && window.innerWidth > 1200) {
-        let x = price.getBoundingClientRect().top
-        price.style.height = priceBlock.getBoundingClientRect().height + 40 + 'px'
+        priceWrapper.forEach((item,i) =>{
+            item.style.width = priceItem[i].getBoundingClientRect().width + 'px'
+            item.style.height = priceItem[i].getBoundingClientRect().height + 'px'
+        })
         window.addEventListener('scroll',()=>{
-            x = price.getBoundingClientRect().top
-            if(x < 0 && priceItem[1].getBoundingClientRect().top > 268) {
-                priceItem[1].style.marginTop = x + 'px'
-                priceBlock.style.top = x * -1 + 'px'
-            } else  if (x > 0) {
-                priceBlock.style.top = 0 + 'px'
-            }
+            priceItem.forEach((item,i)=>{
+                if(priceWrapper[i].getBoundingClientRect().top <=  (i) * 100 + 20 && price.getBoundingClientRect().bottom - item.getBoundingClientRect().height >=  60 + ((i) * 100 + 20)) {
+                    item.classList.add('fix')
+                    item.style.left =  priceWrapper[i].getBoundingClientRect().left + "px"
+                    item.style.top =  (i) * 100 + 20 + "px"
+                    item.classList.remove('bottom')
+                    item.style.bottom = "auto"
+                } else if (priceWrapper[i].getBoundingClientRect().top > (i) * 100 + 20) {
+                    item.classList.remove('fix')
+                    item.style.left = "auto"
+                    item.style.top = "auto"
+                    item.style.bottom = "auto"
+                    item.classList.remove('bottom')
+                } else if (price.getBoundingClientRect().bottom < price.getBoundingClientRect().bottom - item.getBoundingClientRect().height < 60 + ((i) * 100 + 20)) {
+                    item.classList.remove('fix')
+                    item.style.left = "0"
+                    item.style.top = "auto"
+                    item.style.bottom = "0"
+                    item.classList.add('bottom')
+                }
+            })
         })
     }
 
