@@ -1,0 +1,386 @@
+$main-dark: #383b49
+$blue-dark: #1d3b95
+$gray-dark: #686e7d
+$gray-fill: #969fa9
+$gray-light: #e9e9e9
+$bg-color: #f5f5f5
+$white: #fff
+$blue: #7d7aff
+$red: #d76060
+$green: #71a862
+$font-family: "IBM Plex Sans", sans-serif
+$second-family: "Open Sans", sans-serif
+$third-family: "Roboto", sans-serif
+$font3: "Lato", sans-serif
+
+html,
+body
+    position: relative
+    overflow-x: hidden
+    background: $bg-color
+    min-height: 100vh
+    font: 400 17px / 1.4 $font-family
+    color: $main-dark
+.container
+    max-width: 1305px
+    margin: 0 auto
+    padding: 0 15px
+    box-sizing: content-box
+a,
+button
+    transition: all .3s
+    &:hover
+        opacity: .6
+.btn
+    &__transparent
+        border: 1px solid $white
+        border-radius: 4px
+        padding: 8px 16px
+        display: block
+        width: max-content
+        box-shadow: 0 12px 10px 0 rgba(0, 0, 0, 0.07)
+        font: 600 15px $font-family
+        text-align: center
+        color: $white
+        background: transparent
+        transition: all .3s
+        &_blue
+            color: $blue-dark
+            border-color: $blue-dark
+    &__blue
+        border-radius: 4px
+        padding: 10px 16px
+        display: block
+        width: max-content
+        box-shadow: 0 12px 10px 0 rgba(0, 0, 0, 0.07)
+        background: $blue
+        border: none
+        font: 600 15px $font-family
+        text-align: center
+        color: $white
+.dropdown
+    position: relative
+    &__btn
+        cursor: pointer
+    &__list
+        padding: 14px 8px
+        background: $white
+        opacity: 0
+        pointer-events: none
+        position: absolute
+        top: calc(100% + 5px)
+        left: 0
+        width: max-content
+        display: grid
+        grid-template-columns: 1fr
+        gap: 9px
+        &.active
+            opacity: 1
+            pointer-events: auto
+        p
+            color: $blue-dark !important
+        li
+            display: block
+.select
+    position: relative
+    z-index: 2
+    padding: 9px 18px
+    border: 1px solid $bg-color
+    border-radius: 4px
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.12), inset 0 4px 4px 0 rgba(0, 0, 0, 0.1)
+    background: $white
+    display: flex
+    justify-content: space-between
+    align-items: center
+    select
+        position: absolute
+        inset: 0
+        width: 100%
+        height: 100%
+        opacity: 0
+        z-index: 2
+    p
+        font: 400 15px / 1.45 $font-family
+        color: $main-dark
+.title
+    padding: 0 38px 8px
+    border-bottom: 1px solid $gray-light
+    h2
+        font: 500 18px / 1.4 $font-family
+        color: $main-dark
+
+.nav
+    background: url('../img/nav_bg.svg') center no-repeat
+    background-size: cover
+    padding: 22px 15px
+    position: relative
+    &::before
+        content: ''
+        display: block
+        background: $white
+        opacity: .2
+        left: 50%
+        transform: translateX(-50%)
+        width: calc( 100% - 30px )  
+        max-width: 1305px
+        bottom: 0
+        height: 1px
+        position: absolute
+    .container
+        display: flex
+        justify-content: flex-start
+        align-items: center
+    &__logo
+        width: 115px
+        opacity: 1 !important
+    &__list
+        margin: 0 auto
+        gap: 100px
+        width: max-content  
+        display: flex
+        justify-content: center
+        align-items: center
+        a
+            font: 400 15px / 1.45 $font-family
+            text-align: center
+            color: $white
+            position: relative
+            transition: all .3s
+            &::before
+                content: ''
+                display: block
+                position: absolute
+                bottom: -31px
+                left: -15px
+                right: -15px
+                height: 2px
+                background: linear-gradient( 90deg, transparent 0%, #fff 50%, transparent 100%)
+                opacity: 0
+            &.active
+                &::before
+                    opacity: 1
+    &__lang
+        &_row
+            display: grid
+            grid-template-columns: 16px auto 8px
+            align-items: center
+            gap: 9px
+            a
+                display: grid
+                grid-template-columns: 16px auto 8px
+                align-items: center
+                gap: 9px
+            p
+                font: 400 14px $second-family
+                color: $white
+    &__enter
+        margin: 0 35px
+    &__for
+        font: 400 15px / 1.45 $font-family
+        text-align: center
+        color: $white
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 15px
+        padding: 0 0 0 32px
+        position: relative
+        transition: all .3s
+        &::before
+            content: ''
+            display: block
+            height: 36px
+            width: 1px
+            background: $white
+            opacity: .2
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+header,
+section
+    .nav
+        background: transparent
+
+.header
+    background-position: top center
+    background-size: cover
+    padding: 0 0 76px
+    &__block
+        margin: 60px 0 0
+    h1
+        font: 500 36px / 1.4 $font-family
+        text-align: center
+        color: $white
+    &__subtitle
+        text-align: center
+        span
+            font: 500 18px / 1.4 $font-family
+    &__row
+        margin: 36px auto 0
+        max-width: 853px
+        display: grid
+        grid-template-columns: 41fr 26fr auto
+        gap: 10px
+        input
+            font: 400 15px / 1.45 $font-family
+            color: $main-dark
+            padding: 9px 16px
+            border: 1px solid $bg-color
+            border-radius: 4px
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.12), inset 0 4px 4px 0 rgba(0, 0, 0, 0.1)
+            background: $white
+            width: 100%
+            box-sizing: border-box  
+    &__example
+        font: 400 15px / 1.45 $font-family
+        color: $gray-light
+        margin: 9px auto 0
+        max-width: 829px
+        a
+            border-bottom: 1px dashed $gray-light
+            color: $gray-light
+    
+.vacancy-row
+    padding: 49px 0 30px
+    &__row
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 9px
+    &__item
+        border-radius: 5px
+        box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+        background: $white
+        padding: 20px 26px
+        gap: 27px
+        grid-template-columns: 61px 1fr
+        align-items: center
+        display: grid
+        p
+            font: 400 17px / 1.4 $font-family
+            color: $main-dark
+            max-width: 160px
+
+.publish
+    padding: 0 0 30px
+    &__block
+        box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+        background: linear-gradient(144deg, #fff 0%, #ecf4fc 100%)
+        border-radius: 5px
+        display: grid
+        grid-template-columns: 500px 1fr
+        gap: 20px
+        align-items: center
+        padding: 0 36px
+    &__prev
+        img
+            width: 100%
+    &__info
+        padding: 20px 0 0
+        p
+            font: 400 17px / 1.4 $font-family
+            color: $gray-dark
+            margin: 8px 0 0
+        .btn__blue
+            margin: 31px 0 0
+    h2
+        font: 500 25px / 1.4 $font-family
+        color: $main-dark
+    
+.popular
+    padding: 0 0 59px
+    &__block
+        border-radius: 5px
+        box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+        background: $white
+        padding: 30px 
+    &__wrapper
+        margin: 27px auto 0
+        max-width: 1202px
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+        gap: 20px
+    &__item
+        img
+            width: 100%
+            box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+            border-radius: 15px
+        p
+            font: 500 13px / 1.25 $font-family
+            text-align: center
+            color: #364051
+            margin: 6px 0 0
+    .btn__transparent
+        margin: 40px auto 0
+
+.vacancy
+    padding: 0 0 45px
+    &__wrapper
+        margin: 24px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 14px
+    &__item
+        border-radius: 5px
+        box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+        background: $white
+        padding: 15px 25px
+        &_row
+            display: grid
+            grid-template-columns: 1fr 80px
+            align-items: start
+            gap: 20px
+        h3
+            font: 500 18px / 1.4 $font-family
+            color: $main-dark
+        &_logo
+            img
+                width: 80px
+                height: 80px
+                border-radius: 3px
+                box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+        &_pro
+            h3
+                &::after
+                    content: 'PRO'
+                    padding: 1px 10px
+                    border-radius: 3px
+                    background: $green
+                    font: 400 12px / 1.4 $font-family
+                    color: $white
+                    margin: 0 0 0 15px
+        &_place
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            gap: 9px
+            a
+                font: 400 18px $font-family
+                text-decoration: underline
+                text-decoration-skip-ink: none
+                color: $gray-fill
+            p
+                font: 400 17px / 1.4 $font-family
+                color: $gray-fill
+        &_salary
+            margin: 6px 0 0
+            font: 500 18px / 1.4 $font-family
+            color: $blue
+        &_desc
+            margin: 13px 0 0
+            p
+                font: 400 15px / 1.45 $font-family
+                color: $gray-dark
+        &_footer
+            margin: 11px 0 0
+            padding: 11px 0 0
+            border-top: 1px solid $gray-light
+            display: flex
+            justify-content: space-between
+            align-items: center
+            p
+                font: 400 15px / 1.45 $font-family
+                color: $gray-fill
+            a
+                font: 400 15px / 1.45 $font-family
+                color: $blue
