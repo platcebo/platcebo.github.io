@@ -1285,18 +1285,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 articleAside.style.bottom = articleTg.getBoundingClientRect().height + 80 + 'px'
             }
         } else {
-            articleAsideWrapper.style.width = articleAside.getBoundingClientRect().width + 'px'
-            articleAsideWrapper.style.height = articleAside.getBoundingClientRect().height + 'px'
-            if(articleAsideWrapper.getBoundingClientRect().top <=  20 && articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height >=  60) {
-                articleAside.classList.add('fix')
-                articleAside.classList.remove('bottom')
-            } else if (articleAsideWrapper.getBoundingClientRect().top >  20) {
-                articleAside.classList.remove('fix')
-                articleAside.classList.remove('bottom')
-            } else if (articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height <  60) {
-                articleAside.classList.remove('fix')
-                articleAside.classList.add('bottom')
-            }
+            // articleAsideWrapper.style.width = articleAside.getBoundingClientRect().width + 'px'
+            // articleAsideWrapper.style.height = articleAside.getBoundingClientRect().height + 'px'
+            // if(articleAsideWrapper.getBoundingClientRect().top <=  20 && articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height >=  60) {
+            //     articleAside.classList.add('fix')
+            //     articleAside.classList.remove('bottom')
+            // } else if (articleAsideWrapper.getBoundingClientRect().top >  20) {
+            //     articleAside.classList.remove('fix')
+            //     articleAside.classList.remove('bottom')
+            // } else if (articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height <  60) {
+            //     articleAside.classList.remove('fix')
+            //     articleAside.classList.add('bottom')
+            // }
         }
 
         window.addEventListener('scroll', (event)=>{
@@ -1318,16 +1318,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     articleAside.style.bottom = articleTg.getBoundingClientRect().height + 80 + 'px'
                 }
             } else {
-                if(articleAsideWrapper.getBoundingClientRect().top <=  20 && articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height >=  60) {
-                    articleAside.classList.add('fix')
-                    articleAside.classList.remove('bottom')
-                } else if (articleAsideWrapper.getBoundingClientRect().top >  20) {
-                    articleAside.classList.remove('fix')
-                    articleAside.classList.remove('bottom')
-                } else if (articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height <  60) {
-                    articleAside.classList.remove('fix')
-                    articleAside.classList.add('bottom')
-                }
+                // if(articleAsideWrapper.getBoundingClientRect().top <=  20 && articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height >=  60) {
+                //     articleAside.classList.add('fix')
+                //     articleAside.classList.remove('bottom')
+                // } else if (articleAsideWrapper.getBoundingClientRect().top >  20) {
+                //     articleAside.classList.remove('fix')
+                //     articleAside.classList.remove('bottom')
+                // } else if (articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height <  60) {
+                //     articleAside.classList.remove('fix')
+                //     articleAside.classList.add('bottom')
+                // }
             }
 
 
