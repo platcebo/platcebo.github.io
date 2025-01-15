@@ -6777,6 +6777,29 @@ textarea.input
                 font-size: 20px
 
 .blog-page
+    &__found
+        padding: 115px 0 55px
+        h3
+            font: 600 36px / 1 $font-family
+            letter-spacing: -0.03em
+            text-align: center
+            color: $black
+        p
+            margin: 20px 0 0
+            font: 500 20px / 1.4 $font-family
+            letter-spacing: -0.03em
+            color: #606060
+            text-align: center
+            a
+                color: $purple
+    &__result
+        margin: 40px 0 20px
+        font: 500 20px / 1.4 $font-family
+        letter-spacing: -0.03em
+        color: $black
+        opacity: 0.5
+        &+.blog-page__wrapper
+            margin: 0
     &__block
         padding: 60px 40px
         border-radius: 40px
@@ -6920,6 +6943,14 @@ textarea.input
 
 @media ( max-width: 1600px )
     .blog-page
+        &__found
+            padding: 100px 0 40px
+            h3
+                font-size: 28px
+            p
+                font-size: 16px
+        &__result
+            font-size: 16px
         &__item
             &_prev
                 height: 260px
@@ -6959,6 +6990,12 @@ textarea.input
 
 @media ( max-width: 1200px )
     .blog-page
+        &__found
+            padding: 136px 0 96px
+            h3
+                font-size: 24px          
+            p
+                margin: 10px 0 0      
         &__block
             padding: 40px
         h1
@@ -7006,6 +7043,15 @@ textarea.input
 
 @media ( max-width: 600px )
     .blog-page
+        &__found
+            padding: 106px 0 76px
+            h3
+                font-size: 18px
+            p
+                font-size: 14px
+        &__result
+            margin: 20px 0 10px
+            font-size: 14px
         &__block
             padding: 30px 20px
         h1
@@ -7018,6 +7064,15 @@ textarea.input
         &__filter
             margin: 20px -20px 0
             padding: 0 20px
+        &__search
+            input
+                font-size: 14px
+                padding: 10px 50px 10px 15px
+            svg
+                width: 16px
+                height: 16px
+            a
+                right: 10px
         &__wrapper
             grid-template-columns: 1fr
         &__item
