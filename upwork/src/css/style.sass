@@ -213,9 +213,11 @@ section
         text-align: center
         color: $white
     &__subtitle
+        font: 400 17px / 1.4 $font-family
         text-align: center
+        color: $white
         span
-            font: 500 18px / 1.4 $font-family
+            font-weight: 500
     &__row
         margin: 36px auto 0
         max-width: 853px
@@ -384,3 +386,130 @@ section
             a
                 font: 400 15px / 1.45 $font-family
                 color: $blue
+
+.sub
+    padding: 0 0 40px
+    color: $white
+    &__container
+        padding: 28px 60px 44px 555px
+        position: relative
+        box-shadow: 0 12px 20px 0 rgba(61, 58, 194, 0.08)
+        background: linear-gradient(148deg, #55408e 0%, #544485 100%)
+    &__bg
+        position: absolute
+        bottom: 12px
+        left: -12px
+        width: 525px
+    h3
+        font: 700 25px $font-family
+    &__subtitle
+        margin: 9px 0 0
+        font: 400 17px / 1.4 $font-family
+    &__row
+        margin: 29px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 20px
+        input
+            padding: 10px 16px
+            font: 400 15px / 1.45 $font-family
+            color: $main-dark
+            width: 100%
+            box-sizing: border-box  
+            border: 1px solid $bg-color
+            border-radius: 4px
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.12), inset 0 4px 4px 0 rgba(0, 0, 0, 0.1)
+            background: $white
+            &::placeholder
+                color: $gray-fill
+    &__func
+        margin: 20px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 20px
+        flex-wrap: wrap
+    &__link
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 9px
+        span
+            font: 400 15px / 1.45 $font-family
+            color: $white
+            text-decoration: underline  
+
+.article
+    padding: 0 0 45px 0 0
+    &__container
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 27px
+    &__job,
+    &__news
+        display: grid
+        grid-template-rows: auto 1fr
+    &__block
+        margin: 13px 0 0
+        box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+        background: $white
+        border-radius: 3px
+        padding: 30px
+    &__job
+        &_text
+            p
+                font: 400 17px / 1.4 $font-family
+                color: $main-dark
+    &__news
+        &_list
+            display: grid
+            grid-template-columns: 1fr 
+            gap: 14px
+        &_date
+            padding: 3px
+            width: 100%
+            border: 1px solid $blue-dark
+            border-radius: 2px
+            transition: all .3s
+            font: 400 16px / 1.375 $third-family
+            text-align: center
+            color: $blue-dark
+            text-align: center
+        &_info
+            p
+                font: 600 17px / 1.4 $font-family
+                color: $main-dark
+                &+p
+                    font: 400 15px / 1.45 $font-family
+                    color: $gray-dark
+        &_item
+            padding: 0 0 14px
+            border-bottom: 1px solid $gray-light
+            display: grid
+            grid-template-columns: 50px 1fr
+            gap: 20px
+            align-items: start
+            opacity: 1 !important
+            &:last-child
+                padding: 0
+                border-bottom: none
+            &:hover
+                .article__news
+                    &_date
+                        background: $blue-dark
+                        color: $white
+                    &_info
+                        p
+                            text-decoration: underline
+        &_func
+            margin: 24px 0 0
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            gap: 8px
+            a
+                font: 400 15px / 1.45 $font-family
+                color: $blue
+            p
+                font: 400 18px $font-family
+                color: $gray-fill 
