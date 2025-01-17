@@ -6863,11 +6863,36 @@ textarea.input
             border: none
             &::placeholder
                 color: #1b1b1bb3
-        a
+        a,
+        span
+            border: none
+            background: transparent
+            padding: 0
             position: absolute
             top: 50%
             transform: translateY(-50%)
             right: 20px
+            transition: all .3s
+            path
+                transition: all .3s
+            &:hover
+                path
+                    fill: $lighter-purple
+            &.clear
+                opacity: 0
+                pointer-events: none
+            &.search
+                opacity: 1
+                pointer-events: auto
+        &.active
+            a,
+            span
+                &.clear
+                    opacity: 1
+                    pointer-events: auto
+                &.search
+                    opacity: 0
+                    pointer-events: none
     &__wrapper
         margin: 40px 0 0
         display: grid
@@ -7583,7 +7608,7 @@ textarea.input
             ul
                 li
                     &::before
-                        margin: 4px 0 0
+                        margin: 2px 0 0
         &__autor
             grid-template-columns: 80px 1fr
             p

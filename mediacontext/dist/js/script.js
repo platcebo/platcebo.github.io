@@ -1390,4 +1390,27 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    let blogInput = document.querySelector('.blog-page__search input'),
+        blogClear = document.querySelector('.blog-page__search span.clear'),
+        blogWrapper = document.querySelector('.blog-page__search');
+
+    if(blogInput !== null) {
+        if(blogInput.value == '') {
+            blogWrapper.classList.remove('active')
+        } else {
+            blogWrapper.classList.add('active')
+        }
+        blogInput.addEventListener('input', ()=>{
+            if(blogInput.value == '') {
+                blogWrapper.classList.remove('active')
+            } else {
+                blogWrapper.classList.add('active')
+            }
+        })
+        blogClear.addEventListener('click', ()=>{
+            blogInput.value = '';
+            blogWrapper.classList.remove('active')
+        })
+    }
+
 }, false);
