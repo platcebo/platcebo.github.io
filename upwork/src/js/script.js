@@ -34,4 +34,15 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    let nav = document.querySelector('.nav'),
+        navHum = document.querySelector('.nav__hum');
+
+    if(nav !== null) {
+        navHum.addEventListener('click', ()=>{
+            nav.classList.toggle('active');
+            document.body.classList.toggle('fix')
+            document.body.parentNode.classList.toggle('fix')
+        })
+    }
+
 }, false);
