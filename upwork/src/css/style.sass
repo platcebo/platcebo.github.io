@@ -108,7 +108,8 @@ button
 .title
     padding: 0 38px 8px
     border-bottom: 1px solid $gray-light
-    h2
+    h2,
+    h1
         font: 500 18px / 1.4 $font-family
         color: $main-dark
 
@@ -280,10 +281,11 @@ section
         align-items: center
         padding: 0 36px
     &__prev
+        align-self: flex-end
         img
             width: 100%
     &__info
-        padding: 20px 0 0
+        padding: 20px 0
         p
             font: 400 17px / 1.4 $font-family
             color: $gray-dark
@@ -301,6 +303,8 @@ section
         box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
         background: $white
         padding: 30px 
+        .btn__transparent
+            margin: 40px auto 0
     &__wrapper
         margin: 27px auto 0
         max-width: 1202px
@@ -317,8 +321,6 @@ section
             text-align: center
             color: #364051
             margin: 6px 0 0
-    .btn__transparent
-        margin: 40px auto 0
 
 .vacancy
     padding: 0 0 45px
@@ -736,3 +738,188 @@ section
             li
                 &::before
                     content: none
+    .publish
+        &__block
+            grid-template-columns: 300px 1fr
+
+@media ( max-width: 768px )
+    .header
+        &__row
+            grid-template-columns: 1fr 
+            margin: 20px 0 0
+            .btn__blue
+                width: 100%
+    .publish
+        &__block
+            grid-template-columns: 1fr
+        &__prev
+            order: 2
+    .sub
+        &__container
+            padding: 20px 20px 150px
+        
+@media ( max-width: 600px )
+    .vacancy-row
+        &__row
+            grid-template-columns: 1fr
+    .publish
+        &__block
+            padding: 20px 20px 0
+        &__info
+            padding: 0
+    .popular
+        &__block
+            padding: 20px
+        &__wrapper
+            grid-template-columns: 1fr 1fr 1fr
+    .title
+        padding: 0 0 8px
+    .vacancy
+        &__item
+            padding: 15px
+            &_row
+                grid-template-columns: 1fr
+            &_logo
+                order: -1
+    .sub
+        &__row
+            grid-template-columns: 100%
+        &__func
+            .btn__blue
+                width: 100%
+    .article__block
+        padding: 20px
+
+.back
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    gap: 10px
+    font: 400 17px / 1.4 $font-family
+    color: $blue
+    margin: 0 0 30px
+
+.category
+    padding: 55px 0 105px
+    &__filter
+        padding: 0 14px 8px
+        border-bottom: 1px solid $gray-light
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 28px
+        h1
+            font: 400 17px / 1.4 $font-family
+            color: $main-dark
+    .select
+        box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+        width: 260px
+    &__check
+        position: relative
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 7px
+        p
+            font: 400 17px / 1.4 $font-family
+            color: $main-dark
+        span
+            width: 18px
+            height: 18px
+            border-radius: 2px
+            border: 1px solid #E4E4E4
+            display: flex
+            justify-content: center
+            align-items: center
+            svg
+                opacity: 0
+                transition: all .3s
+        input
+            position: absolute
+            inset: 0
+            width: 100%
+            height: 100%
+            opacity: 0
+            z-index: 2
+            &:checked
+                &+span
+                    svg
+                        opacity: 1
+    &__list
+        margin: 30px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 30px
+        div
+            display: flex
+            justify-content: flex-start
+            gap: 4px
+            flex-direction: column
+        ul
+            grid-template-columns: 1fr
+            gap: 4px
+            li
+                display: block
+                &::before
+                    content: '—'
+                    display: inline
+                    font: 400 17px / 1.4 $font-family
+                    color: $gray-fill
+            a
+                margin: 0 7px
+                display: inline
+                font: 400 17px / 1.4 $font-family
+                color: $blue
+                &:hover
+                    text-decoration: underline
+                    opacity: 1
+            span
+                display: inline
+                padding: 2px 4px
+                font: 400 12px / 1.4 $font-family
+                text-align: center
+                color: $gray-fill
+                border: 1px solid $gray-fill
+                border-radius: 4px
+        h3
+            margin: auto 0 0
+            font: 400 17px / 1.4 $font-family
+            color: $gray-fill
+            padding: 0 0 0 22px
+    &__row
+        margin: 30px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 30px
+        a
+            border-radius: 5px
+            box-shadow: 0 12px 20px 0 rgba(61, 58, 194, 0.08)
+            background: $white
+            padding: 20px 25px
+            display: grid
+            grid-template-columns: 61px 1fr
+            gap: 27px
+            align-items: center
+        p
+            font: 400 17px / 1.4 $font-family
+            color: $main-dark
+
+@media ( max-width: 1024px )
+    .category
+        &__list
+            grid-template-columns: 1fr
+            gap: 4px
+        &__filter
+            flex-direction: column
+            align-items: flex-start
+            gap: 10px
+        &__row
+            grid-template-columns: 1fr
+            gap: 10px
+
+@media ( max-width: 600px )
+    .back
+        margin: 0 0 15px
+    .category
+        &__filter
+            padding: 0 0 8px
