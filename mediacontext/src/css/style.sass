@@ -7198,22 +7198,25 @@ textarea.input
             grid-template-columns: 20px auto
             gap: 5px
             align-items: center
+        a
+            opacity: .5
+            transition: all .3s
+            .hover
+                opacity: 0
+                transition: all .3s
+            p
+                opacity: 1
         p
             font: 500 20px / 1.4 $font-family
             letter-spacing: -0.03em
             color: $black
             opacity: .5
             transition: all .3s
-        svg
-            g
-                transition: all .3s
         a
             &:hover
-                p
+                opacity: 1
+                .hover
                     opacity: 1
-                svg
-                    g
-                        opacity: 1
     h2
         margin: 20px 0 0
     &__content
