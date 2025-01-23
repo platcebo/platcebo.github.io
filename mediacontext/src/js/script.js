@@ -1413,4 +1413,25 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    let articleImg = document.querySelectorAll('.article__content img'),
+        articlePopup = document.createElement('div');;
+
+    if(articleImg !== null) {
+        articlePopup.className = 'modal modal-article active';
+        articleImg.forEach((item)=>{
+            item.addEventListener('click',()=>{
+                articlePopup.innerHTML = `
+                                            <div class="modal__overflow modal-artice__overflow"></div>
+                                            `+ item.outerHTML +`
+                                        `
+                document.body.append(articlePopup);
+            })
+        })
+        document.body.addEventListener('click', (event)=>{
+            if(event.target.classList.contains('modal-artice__overflow')) {
+                articlePopup.remove()
+            }
+        })
+    }
+
 }, false);

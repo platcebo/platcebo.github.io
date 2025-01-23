@@ -7338,6 +7338,9 @@ textarea.input
             border-radius: 40px
             display: block
             margin: 40px 0 0
+            z-index: 2
+            position: relative
+            pointer-events: all
             &:nth-child(1)
                 margin-top: 0
     &__autor
@@ -7361,6 +7364,7 @@ textarea.input
             height: 100px
             border-radius: 100%
             object-fit: cover
+            pointer-events: none
         &_row
             gap: 40px
             flex-wrap: wrap
@@ -7570,7 +7574,18 @@ textarea.input
                         path
                             fill: $white
 
+.modal-article
+    img
+        display: block
+        width: 100%
+        max-width: 1442px
+        margin: auto
+        border-radius: 40px
+
 @media ( max-width: 1700px )
+    .modal-article
+        img
+            max-width: 1160px
     .article
         &__block
             grid-template-columns: 1fr 400px
@@ -7759,6 +7774,9 @@ textarea.input
             padding: 30px
 
 @media ( max-width: 600px )
+    .modal-article
+        img
+            border-radius: 30px
     .mt40
         margin: 20px 0 0
     .article
