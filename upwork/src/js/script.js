@@ -45,4 +45,13 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    let asideBtn = document.querySelector('.search__aside .title'),
+        aside = document.querySelector('.search__aside');
+
+    if(aside !== null) {
+        asideBtn.addEventListener('click', ()=>{
+            aside.classList.toggle('active')
+        })
+    }
+
 }, false);

@@ -6793,6 +6793,7 @@ textarea.input
             a
                 color: $purple
                 transition: all .3s
+                text-decoration: underline
                 &:hover
                     color: $lighter-purple
     &__result
@@ -7099,15 +7100,17 @@ textarea.input
         &__search
             input
                 font-size: 14px
-                padding: 10px 50px 10px 15px
+                padding: 12px 50px 12px 15px
             svg
                 width: 16px
                 height: 16px
-            a
+            a,
+            span
                 right: 10px
         &__wrapper
             grid-template-columns: 1fr
         &__item
+            border-radius: 30px
             &_banner
                 left: 20px
                 right: 20px
@@ -7310,7 +7313,7 @@ textarea.input
                     display: flex
                     justify-content: center
                     align-items: center
-                    font: 500 12px / 1.4 $font-family
+                    font: 500 16px / 1.25 $font-family
                     letter-spacing: -0.03em
                     text-align: center
                     color: $white
@@ -7453,7 +7456,7 @@ textarea.input
         p
             font: 500 20px / 1.4 $font-family
             letter-spacing: -0.03em
-            color: rgba(27, 27, 27, 0.5)
+            color: rgba(27, 27, 27, 0.3)
             span
                 color: $purple
                 opacity: 1
@@ -7615,6 +7618,10 @@ textarea.input
                 li
                     &::before
                         margin: 6px 0 0
+            ol
+                li
+                    &::before
+                        font-size: 14px
         &__autor
             grid-template-columns: 80px 1fr
             p
@@ -7829,6 +7836,7 @@ textarea.input
                     &::before
                         width: 30px
                         height: 30px
+                        font-size: 12px
             blockquote
                 padding: 20px
             p

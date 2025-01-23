@@ -903,6 +903,21 @@ section
         p
             font: 400 17px / 1.4 $font-family
             color: $main-dark
+    &__city
+        display: block
+        margin: 14px 0 60px
+        &:last-child
+            margin: 14px 0 0
+        ul
+            display: grid
+            grid-template-rows: 1fr 1fr 1fr
+            grid-auto-flow: column
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+        &_block
+            .title
+                h1,
+                h2
+                    font-size: 25px
 
 @media ( max-width: 1024px )
     .category
@@ -916,6 +931,22 @@ section
         &__row
             grid-template-columns: 1fr
             gap: 10px
+        &__city
+            ul
+                grid-template-columns: 1fr 1fr 1fr 
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr
+
+@media ( max-width: 768px )
+    .category
+        &__city
+            ul
+                grid-template-columns: 1fr
+                grid-auto-flow: row
+            &_block
+                .title
+                    h1,
+                    h2
+                        font-size: 18px
 
 @media ( max-width: 600px )
     .back
@@ -923,3 +954,585 @@ section
     .category
         &__filter
             padding: 0 0 8px
+
+.header-search
+    background: url('../img/header_search.svg') top center no-repeat
+    background-size: cover
+    padding: 0 0 30px
+    .header
+        &__row
+            margin: 50px auto 0
+
+.search
+    padding: 36px 0 104px
+    &__container
+        display: grid
+        grid-template-columns: 320px 1fr
+        gap: 16px
+    &__aside
+        &_menu
+            display: none
+        .title
+            padding-left: 0
+        &_list
+            margin: 35px 0 0
+            ul
+                display: grid
+                grid-template-columns: 1fr
+                gap: 10px
+        &_check
+            position: relative
+            display: block
+            i
+                width: 18px
+                height: 18px
+                border-radius: 2px
+                border: 1px solid #E4E4E4
+                display: inline-flex
+                justify-content: center
+                align-items: center
+                background: linear-gradient(180deg, #fff 0%, #f6f6f6 52.6%, #fff 100%)
+                svg
+                    opacity: 0
+                    transition: all .3s
+            p
+                margin: 0 7px
+                display: inline
+                font: 400 17px / 1.4 $font-family
+                color: $main-dark
+                &.bold
+                    font: 500 18px / 1.4 $font-family
+            span
+                display: inline
+                padding: 2px 4px
+                font: 400 12px / 1.4 $font-family
+                text-align: center
+                color: $gray-fill
+                border: 1px solid $gray-fill
+                border-radius: 4px
+                &.pro
+                    border-radius: 3px
+                    padding: 0px 10px
+                    border: none
+                    background: $green
+                    font: 400 12px / 1.4 $font-family
+                    color: $white
+            input
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                opacity: 0
+                z-index: 2
+                &:checked
+                    &+i
+                        svg
+                            opacity: 1
+        &_more
+            margin: 10px 0 0
+            font: 400 17px / 1.4 $font-family
+            color: $blue
+            display: block
+            width: max-content
+        &_title
+            padding: 0 0 16px
+            border-bottom: 1px solid $gray-light
+            margin: 0 0 22px
+        &_input
+            margin: 0 0 17px
+            display: grid
+            grid-template-columns: 1fr
+            gap: 10px
+            div
+                display: grid
+                grid-template-columns: 25px 1fr 70px
+                gap: 10px
+                align-items: center
+            p
+                font: 400 15px / 1.45 $font-family
+                color: $gray-dark
+            input
+                padding: 9px 17px
+                font: 400 15px / 1.45 $font-family
+                color: $main-dark   
+                border: 1px solid $gray-light
+                border-radius: 4px
+                background: $white
+                width: 100%
+                box-sizing: border-box  
+                &::placeholder
+                    color: $gray-fill
+    &__row
+        display: grid
+        grid-template-columns: 1fr auto
+        gap: 20px
+        border-bottom: 1px solid #e9e9e9
+        padding: 0 0 11px
+        align-items: start
+    &__tag
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        flex-wrap: wrap
+        gap: 10px
+        div
+            border: 1px solid $gray-fill
+            border-radius: 3px
+            padding: 5px 12px
+            display: grid
+            grid-template-columns: 10px 1fr
+            gap: 5px
+            align-items: center
+        span
+            width: 10px
+            height: 10px
+            border-radius: 2px
+            background: $gray-fill
+            display: flex
+            justify-content: center
+            align-items: center
+            cursor: pointer
+        p
+            font: 400 15px / 1.45 $font-family
+            text-align: center
+            color: $blue
+            white-space: nowrap
+    &__filter
+        display: grid
+        grid-template-columns: auto auto
+        gap: 26px
+        .select
+            padding: 0
+            background: transparent
+            box-shadow: none
+            gap: 12px
+            p
+                color: $blue
+    &__item
+        padding: 20px
+        display: grid
+        grid-template-columns: 200px 1fr
+        gap: 30px
+        align-items: start
+        &_prev
+            img
+                width: 100%
+            p
+                margin: 11px 0 0
+                font: 500 18px / 1.4 $font-family
+                text-align: center
+                color: $main-dark
+            a
+                margin: 5px 0 0
+                font: 400 15px / 1.45 $font-family
+                text-align: center
+                color: $blue
+                width: 100%
+                display: block
+        &_row
+            display: grid
+            grid-template-columns: 1fr auto
+            gap: 20px
+        &_fav
+            display: grid
+            grid-template-columns: auto auto
+            gap: 5px
+            align-items: center
+            p
+                font: 400 15px / 1.45 $font-family
+                color: $red
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr
+        gap: 15px
+        margin: 15px 0 0
+    &__form
+        border-radius: 5px
+        box-shadow: 0 12px 20px 0 rgba(61, 58, 194, 0.08)
+        background: $white
+        padding: 27px 60px 44px
+        h2
+            font: 500 25px / 1.4 $font-family
+            color: $main-dark
+        p
+            margin: 8px 0 0
+            font: 400 17px / 1.4 $font-family
+            color: $blue
+        &_row
+            gap: 18px
+            margin: 20px 0 0
+            display: grid
+            grid-template-columns: 1fr auto auto
+        input
+            border-radius: 5px
+            background: $white
+            border: 1px solid rgba(40, 47, 54, 0.15)
+            padding: 9px 14px
+        &_link
+            display: grid
+            grid-template-columns: 30px 1fr
+            gap: 9px
+            align-items: center
+            span
+                font: 400 15px / 1.4 $font-family
+                text-decoration: underline
+                text-decoration-skip-ink: none
+                color: $blue
+
+.pag
+    margin: 50px auto 0
+    width: max-content
+    max-width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 15px
+    a
+        border-radius: 2px
+        padding: 3px 9px
+        background: linear-gradient(180deg, #fff 0%, #f6f6f6 52.6%, #fff 100%)
+        font: 400 12px / 1.4 $font-family
+        text-align: center
+        color: $blue-dark
+        &.active
+            background: linear-gradient(180deg, #f6f6f6 52.6%, #fff 100%)
+            color: $gray-fill
+    p
+        font: 400 12px / 1.4 $font-family
+        text-align: center
+        color: $blue-dark
+
+@media ( max-width: 1200px )
+    .search
+        &__form
+            padding: 20px
+            &_row
+                grid-template-columns: 1fr 1fr
+                input
+                    grid-column: 1/3
+                button
+                    width: 100%
+
+@media  ( max-width: 1024px )
+    .search
+        &__item
+            grid-template-columns: 1fr
+            &_prev
+                img
+                    max-width: 100px
+                p,
+                a
+                    text-align: left
+                    margin: 0
+        &__row
+            grid-template-columns: 1fr
+        &__filter
+            order: -1
+            width: max-content
+        &__container
+            grid-template-columns: 1fr
+        &__aside
+            &_list
+                display: none
+            .title
+                display: flex
+                justify-content: space-between
+                align-items: center
+                padding: 0 0 8px
+                cursor: pointer
+            &_menu
+                display: block
+                .close
+                    display: none
+                .arrow
+                    display: block
+            &.active
+                position: fixed
+                top: 0
+                left: 0
+                width: 100vw
+                height: 100vh
+                background: $white
+                overflow: auto
+                z-index: 20
+                padding: 20px
+                .search__aside
+                    &_list
+                        display: block
+                    &_menu
+                        .close
+                            display: block
+                        .arrow
+                            display: none
+
+@media ( max-width: 600px )
+    .search
+        &__item
+            padding: 10px
+            &_row
+                grid-template-columns: 1fr
+                gap: 10px
+            &_fav
+                width: max-content
+                order: -1
+
+.vacancy-page
+    position: relative
+    z-index: 1
+    padding: 0 0 50px
+    &::before
+        content: ''
+        display: block
+        width: 100vw
+        height: 374px
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        background: url('../img/vacancy-page.svg') top center no-repeat
+        background-size: cover
+    .back
+        margin: 105px 0 15px
+        color: $white
+        path
+            fill: $white
+    h1
+        font: 500 36px / 1.4 $font-family
+        color: $white
+    &__pro
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 15px
+        &_btn
+            border-radius: 3px
+            padding: 0px 10px
+            background: $green
+            font: 400 12px / 1.4 $font-family
+            color: $white
+        &_list
+            position: absolute
+            width: 250px
+            bottom: 30px
+            left: 50%
+            transform: translateX(-50%)
+            border-radius: 5px
+            background: $white
+            box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+            padding: 7px 14px
+            opacity: 0
+            pointer-events: all
+            transition: all .3s
+            p
+                font: 400 12px / 1.4 $font-family
+                color: $main-dark
+            a
+                font: 400 12px / 1.4 $font-family
+                color: $blue
+                margin: 20px 0 0
+        &_wrapper
+            position: relative
+            &:hover
+                .vacancy-page__pro_list
+                    opacity: 1
+                    pointer-events: all
+    &__container
+        margin: 40px 0 0
+        display: grid
+        grid-template-columns: 1fr 414px
+        gap: 30px
+        align-items: start
+    &__main
+        border-radius: 5px
+        box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+        background: $white
+        padding: 30px 40px
+        h3
+            font: 500 18px / 1.4 $font-family
+            color: $main-dark
+        h2
+            font: 500 25px / 1.4 $font-family
+            color: $main-dark
+    &__title
+        display: flex
+        justify-content: space-between
+        align-items: center
+        p
+            font: 400 15px / 1.45 $font-family
+            text-align: right
+            color: $gray-fill
+            text-decoration: underline  
+    &__block
+        padding: 25px 30px 35px
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 30px
+        border-radius: 4px
+        background: $bg-color
+        margin: 20px 0 0
+        ol
+            display: grid
+            grid-template-columns: 1fr
+            gap: 12px
+            li
+                display: grid
+                grid-template-columns: 18px 1fr
+                gap: 9px
+                align-items: start
+            svg
+                margin: 4px 0 0
+            p
+                font: 400 15px / 1.45 $font-family
+                color: $main-dark
+                span
+                    font: 500 18px / 1.4 $font-family
+                    color: $blue-dark
+        ul
+            margin: 11px 0 0
+            display: grid
+            grid-template-columns: 1fr
+            gap: 5px
+            p
+                font: 400 15px / 1.45 $font-family
+                color: $main-dark
+                &::before
+                    content: '· '
+                    font: 400 15px / 1.45 $font-family
+                    color: $main-dark
+                    display: inline
+    &__content
+        margin: 15px 0 0
+        border-top: 1px solid $gray-light 
+        padding: 15px 0 0
+        p
+            color: $main-dark
+            font: 400 15px / 1.45 $font-family
+        h3
+            margin: 20px 0 0
+    &__footer
+        margin: 20px 0 0
+        padding: 20px 0 0
+        border-top: 1px solid $gray-light   
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        &_fav
+            margin: 0 auto 0 30px
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 5px
+            font: 400 15px / 1.45 $font-family
+            color: $red
+        &_link
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 11px
+            p
+                font: 400 15px / 1.45 $font-family
+                color: $main-dark
+            a
+                display: block
+                width: 20px
+                height: 20px
+    &__comp
+        border-radius: 5px
+        box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+        background: $white
+        padding: 20px
+        &_logo
+            width: 100%
+        &_info
+            margin: 11px 0 0
+            padding: 0 0 13px
+            border-bottom: 1px solid $gray-light
+            a
+                font: 500 18px / 1.4 $font-family
+                text-align: center
+                color: $blue
+                width: max-content
+                display: block
+                margin: 0 auto
+                border-bottom: 1px dashed $blue
+            p
+                margin: 3px 0 0
+                font: 400 15px / 1.45 $font-family
+                text-align: center
+                color: $main-dark
+        &_desc
+            margin: 16px 0 0
+            display: grid
+            grid-template-columns: 1fr
+            gap: 19px
+            li
+                display: grid
+                grid-template-columns: 13px 1fr
+                gap: 14px
+                svg
+                    margin: 6px 0 0
+                p
+                    font: 400 15px / 1.45 $font-family
+                    color: $main-dark
+                    span
+                        text-decoration: underline
+                        text-decoration-skip-ink: none
+                        color: $gray-dark
+                    a
+                        color: $blue
+        &_row
+            margin: 37px 0 0
+            display: grid
+            grid-template-columns: auto auto
+            gap: 10px
+            button
+                width: 100%
+    &__hot
+        margin: 30px 0 0
+        border-radius: 5px
+        box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+        background: $white
+        padding: 20px
+        .title
+            padding: 0 0 8px
+        &_wrapper
+            margin: 0 -20px
+            width: calc( 100% + 40px )
+        &_item
+            padding: 20px
+            border: 1px solid transparent
+            border-bottom: 1px solid $gray-light
+            display: grid
+            grid-template-columns: 116px 1fr
+            gap: 10px
+            align-items: start
+            img
+                width: 100%
+            &:hover
+                border: 1px solid $gray-fill
+        &_name
+            font: 500 18px / 1.4 $font-family
+            color: $main-dark
+        &_price
+            font: 500 18px / 1.4 $font-family
+            color: $blue
+        &_info
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            gap: 9px
+            span
+                font: 400 18px $font-family
+                text-decoration: underline
+                text-decoration-skip-ink: none
+                color: $gray-fill
+            p
+                font: 400 17px / 1.4 $font-family
+                color: $gray-dark
+        &_more
+            font: 400 15px / 1.45 $font-family
+            text-align: right
+            color: $blue
+            margin: 27px 0 0
+            display: block
