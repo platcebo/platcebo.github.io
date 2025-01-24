@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atlas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/itc-custom-select.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="nav__row">
+                <a href="#" class="nav__logo">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <div class="nav__place modal-place__btn">
+                    <p class="">Ташкент</p>
+                    <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                </div>
+                <div class="nav__value">
+                    <div class="toggle-value">USD</div>
+                    <div class="toggle-value active">UZS</div>
+                </div>
+                <div class="nav__lang">
+                    <img src="img/globe.svg" alt="" class="svg">
+                    <p class="">Русский</p>
+                    <ul>
+                        <li><a href="#" class="active">Русский </a></li>
+                        <li><a href="#">O'zbek </a></li>
+                    </ul>
+                    <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                </div>
+                <a href="#" class="nav__fav">
+                    <img src="img/heart.svg" alt="" class="svg">
+                </a>
+                <a href="#" class="nav__enter">Войти</a>
+                <div class="nav__humburger"><span></span></div>
+            </div>
+            <div class="nav__list">
+                <ul class="">
+                    <li>
+                        <a href="#" class="active">Купить</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Снять</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Каталог новостроек</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Покупка дома или земли</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">Помещения для бизнеса</a>
+                        <ol>
+                            <li><a href="#">Малосемейки</a></li>
+                            <li><a href="#">Общежития</a></li>
+                            <li><a href="#">Гостинка</a></li>
+                            <li><a href="#">Апартаменты</a></li>
+                        </ol>
+                    </li>
+                </ul>
+                <button class="btn__blue">Разместить объявление</button>
+            </div>
+            <div class="nav__mob">
+                <div class="nav__mob_wrapper">
+                    <!-- <a href="#" class="nav__mob_enter">
+                        <img src="img/pers.svg" alt="" class="svg">
+                        <p>Войти</p>
+                    </a> -->
+                    <div class="nav__mob_row">
+                        <div class="nav__lang nav__lang_mob">
+                            <img src="img/globe.svg" alt="" class="svg">
+                            <p class="">Ру</p>
+                            <ul>
+                                <li><a href="#" class="active">Русский </a></li>
+                                <li><a href="#">O'zbek </a></li>
+                            </ul>
+                            <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                        </div>
+                        <div class="nav__lang nav__lang_mob">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.5846 4.16667C11.5846 5.08714 9.53261 5.83333 7.0013 5.83333C4.47 5.83333 2.41797 5.08714 2.41797 4.16667M11.5846 4.16667C11.5846 3.24619 9.53261 2.5 7.0013 2.5C4.47 2.5 2.41797 3.24619 2.41797 4.16667M11.5846 4.16667V5.41667M2.41797 4.16667V14.1667C2.41797 15.0871 4.47 15.8333 7.0013 15.8333M7.0013 9.16667C6.86085 9.16667 6.72187 9.16437 6.58463 9.15987C4.24859 9.08332 2.41797 8.3694 2.41797 7.5M7.0013 12.5C4.47 12.5 2.41797 11.7538 2.41797 10.8333M19.0846 9.58333C19.0846 10.5038 17.0326 11.25 14.5013 11.25C11.97 11.25 9.91797 10.5038 9.91797 9.58333M19.0846 9.58333C19.0846 8.66286 17.0326 7.91667 14.5013 7.91667C11.97 7.91667 9.91797 8.66286 9.91797 9.58333M19.0846 9.58333V15.8333C19.0846 16.7538 17.0326 17.5 14.5013 17.5C11.97 17.5 9.91797 16.7538 9.91797 15.8333V9.58333M19.0846 12.7083C19.0846 13.6288 17.0326 14.375 14.5013 14.375C11.97 14.375 9.91797 13.6288 9.91797 12.7083" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <p class="">UZS</p>
+                            <ul>
+                                <li><a href="#" class="active">UZS</a></li>
+                                <li><a href="#">USD</a></li>
+                            </ul>
+                            <img src="img/arrow-grey-right.svg" alt="" class="svg">
+                        </div>
+                    </div>
+                    <ul class="nav__mob_list">
+                        <li class="nav__mob_drop">
+                            <p class="active">Купить</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Снять</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Каталог новостроек</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Покупка дома или земли</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                        <li class="nav__mob_drop">
+                            <p>Помещения для бизнеса</p>
+                            <ol>
+                                <li><a href="#">Малосемейки</a></li>
+                                <li><a href="#">Общежития</a></li>
+                                <li><a href="#">Гостинка</a></li>
+                                <li><a href="#">Апартаменты</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                    <button class="btn__blue">Разместить объявление</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="blog-page">
+        <div class="container">
+            <div class="blog-page__title">
+                <p class="breadcrumb">
+                    <a href="#">Главная</a>
+                    <span>  /  Поиск</span>
+                </p>
+                <h1>Новости от DOMIK.UZ</h1>
+            </div>
+            <div class="blog-page__container">
+                <div class="blog-page__row">
+                    <div class="blog-page__input sign-in__input">
+                        <input type="text" placeholder="Поиск" class="sign-in__input_password">
+                        <a href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="announ__select">
+                        <p class="select__val">↑ Самый новые</p>
+                        <select name="" id="" class="select__input">
+                            <option value="1">↑ Самый новые1</option>
+                            <option value="2">↓ Самый новые2</option>
+                            <option value="1">↑ Самый новые1</option>
+                            <option value="2">↓ Самый новые2</option>
+                        </select>
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 15L13 10L8 5" stroke="#475467" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="blog-page__wrapper">
+                    <a href="#" class="blog-page__item">
+                        <div class="blog-page__item_prev">
+                            <img src="img/blog-page_prev.jpg" alt="">
+                            <div class="blog-page__item_date">
+                                <p>16 Март 2024</p>
+                                <p>Ипотека</p>
+                            </div>
+                        </div>
+                        <div class="blog-page__item_info">
+                            <p class="blog-page__item_name">Почему отказывают в выдаче ипотеки </p>
+                            <div class="blog-page__item_link">
+                                <p class="">Читать пост</p>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.83334 14.1667L14.1667 5.83337M14.1667 5.83337H5.83334M14.1667 5.83337V14.1667" stroke="#2963F5" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="blog-page__item">
+                        <div class="blog-page__item_prev">
+                            <img src="img/blog-page_prev.jpg" alt="">
+                            <div class="blog-page__item_date">
+                                <p>16 Март 2024</p>
+                                <p>Ипотека</p>
+                            </div>
+                        </div>
+                        <div class="blog-page__item_info">
+                            <p class="blog-page__item_name">Почему отказывают в выдаче ипотеки </p>
+                            <div class="blog-page__item_link">
+                                <p class="">Читать пост</p>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.83334 14.1667L14.1667 5.83337M14.1667 5.83337H5.83334M14.1667 5.83337V14.1667" stroke="#2963F5" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="blog-page__item">
+                        <div class="blog-page__item_prev">
+                            <img src="img/blog-page_prev.jpg" alt="">
+                            <div class="blog-page__item_date">
+                                <p>16 Март 2024</p>
+                                <p>Ипотека</p>
+                            </div>
+                        </div>
+                        <div class="blog-page__item_info">
+                            <p class="blog-page__item_name">Почему отказывают в выдаче ипотеки </p>
+                            <div class="blog-page__item_link">
+                                <p class="">Читать пост</p>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.83334 14.1667L14.1667 5.83337M14.1667 5.83337H5.83334M14.1667 5.83337V14.1667" stroke="#2963F5" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="blog-page__item">
+                        <div class="blog-page__item_prev">
+                            <img src="img/blog-page_prev.jpg" alt="">
+                            <div class="blog-page__item_date">
+                                <p>16 Март 2024</p>
+                                <p>Ипотека</p>
+                            </div>
+                        </div>
+                        <div class="blog-page__item_info">
+                            <p class="blog-page__item_name">Почему отказывают в выдаче ипотеки </p>
+                            <div class="blog-page__item_link">
+                                <p class="">Читать пост</p>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.83334 14.1667L14.1667 5.83337M14.1667 5.83337H5.83334M14.1667 5.83337V14.1667" stroke="#2963F5" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="blog-page__item">
+                        <div class="blog-page__item_prev">
+                            <img src="img/blog-page_prev.jpg" alt="">
+                            <div class="blog-page__item_date">
+                                <p>16 Март 2024</p>
+                                <p>Ипотека</p>
+                            </div>
+                        </div>
+                        <div class="blog-page__item_info">
+                            <p class="blog-page__item_name">Почему отказывают в выдаче ипотеки </p>
+                            <div class="blog-page__item_link">
+                                <p class="">Читать пост</p>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.83334 14.1667L14.1667 5.83337M14.1667 5.83337H5.83334M14.1667 5.83337V14.1667" stroke="#2963F5" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="blog-page__item">
+                        <div class="blog-page__item_prev">
+                            <img src="img/blog-page_prev.jpg" alt="">
+                            <div class="blog-page__item_date">
+                                <p>16 Март 2024</p>
+                                <p>Ипотека</p>
+                            </div>
+                        </div>
+                        <div class="blog-page__item_info">
+                            <p class="blog-page__item_name">Почему отказывают в выдаче ипотеки </p>
+                            <div class="blog-page__item_link">
+                                <p class="">Читать пост</p>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.83334 14.1667L14.1667 5.83337M14.1667 5.83337H5.83334M14.1667 5.83337V14.1667" stroke="#2963F5" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <ul class="pag">
+                    <li><a href="#" class="pag__prev">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.83203 14.1663L14.1654 5.83301M14.1654 5.83301H5.83203M14.1654 5.83301V14.1663" stroke="#2963F5" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Предыдущий</span>
+                    </a></li>
+                    <li><a href="#" class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">...</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#" class="pag__next">
+                        <span>Следующая</span> 
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.83203 14.1663L14.1654 5.83301M14.1654 5.83301H5.83203M14.1654 5.83301V14.1663" stroke="#2963F5" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a></li>
+                </ul>
+            </div>
+            <form action="#" class="blog-page__form">
+                <h3>Будьте в курсе свежих новостей и полезных советов о недвижимости! Оставьте свою почту, чтобы первыми получать актуальные обновления.</h3>
+                <div class="blog-page__form_row">
+                    <div class="blog-page__input sign-in__input">
+                        <input type="text" placeholder="Введите почту" class="sign-in__input_password">
+                        <a href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.66669 5.83325L8.47079 10.5961C9.02176 10.9818 9.29725 11.1746 9.59691 11.2493C9.8616 11.3153 10.1384 11.3153 10.4031 11.2493C10.7028 11.1746 10.9783 10.9818 11.5293 10.5961L18.3334 5.83325M5.66669 16.6666H14.3334C15.7335 16.6666 16.4336 16.6666 16.9683 16.3941C17.4387 16.1544 17.8212 15.772 18.0609 15.3016C18.3334 14.7668 18.3334 14.0667 18.3334 12.6666V7.33325C18.3334 5.93312 18.3334 5.23306 18.0609 4.69828C17.8212 4.22787 17.4387 3.84542 16.9683 3.60574C16.4336 3.33325 15.7335 3.33325 14.3334 3.33325H5.66669C4.26656 3.33325 3.56649 3.33325 3.03171 3.60574C2.56131 3.84542 2.17885 4.22787 1.93917 4.69828C1.66669 5.23306 1.66669 5.93312 1.66669 7.33325V12.6666C1.66669 14.0667 1.66669 14.7668 1.93917 15.3016C2.17885 15.772 2.56131 16.1544 3.03171 16.3941C3.56649 16.6666 4.26656 16.6666 5.66669 16.6666Z" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <button class="btn__blue">Начать читать</button>
+                </div>
+                <p>Мы заботимся о ваших данных в нашей политике <a href="#">конфиденциальности</a>.</p>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__row">
+                <ul>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Помощь</a></li>
+                    <li><a href="#">Реклама</a></li>
+                </ul>
+                <div class="footer__soc">
+                    <a href="#">
+                        <img src="img/footer_soc_1.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/footer_soc_2.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/footer_soc_3.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="footer__text">
+                <p>Сервис применяет <a href="#">рекомендательные технологии</a>: предоставляет информацию на основе сбора, систематизации и анализа сведений, относящихся к предпочтениям пользователей интернета, находящихся в Узбекистане</p>
+                <p>Использование сайта означает согласие с <a href="#">Пользовательским соглашением</a> и <a href="#">Политикой обработки персональных данных</a></p>
+            </div>
+            <div class="footer__footer">
+                <a href="#" class="footer__logo"><img src="img/logo_wht.svg" alt=""></a>
+                <p class="footer__law">© 2025 DOMIK.UZ Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/itc-custom-select.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

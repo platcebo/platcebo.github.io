@@ -4732,3 +4732,293 @@ select
     .saved
         &__wrapper
             grid-template-columns: 1fr
+
+.blog-page
+    h1
+        margin: 24px 0 0
+    .sign-in__input
+        margin: 0
+        position: relative
+        max-width: 320px
+        width: 100%
+        a
+            position: absolute  
+            top: 50%
+            transform: translateY(-50%)
+            left: 14px
+        input
+            padding: 10px 14px 10px 42px
+    &__container
+        margin: 40px 0 0
+        padding: 40px 0 
+        position: relative
+        z-index: 2
+        &::before
+            content: ''
+            display: block
+            position: absolute  
+            top: 0
+            left: 50%
+            transform: translateX(-50%)
+            width: 100vw
+            height: 100%
+            background: #fff
+            z-index: -1
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: center
+    .announ__select
+        width: 100%
+        max-width: 320px
+    &__wrapper
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 16px
+        row-gap: 24px
+    &__item
+        border: 1px solid #eaecf0
+        border-radius: 16px
+        background: #fff
+        position: relative
+        overflow: hidden
+        &_prev
+            position: relative
+            img
+                width: 100%
+                height: 246px
+                object-fit: cover
+        &_date
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            border-top: 1px solid rgba(255, 255, 255, 0.5)
+            backdrop-filter: blur(24px)
+            background: rgba(255, 255, 255, 0.3)
+            padding: 16px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            p
+                font: 400 14px / 1.42857 $font-family
+                color: #fff
+                &+p
+                    font-weight: 600
+        &_info
+            padding: 16px
+            height: 162px
+            display: flex
+            flex-direction: column
+        &_name
+            font: 500 20px / 1.5 $font-family
+            color: #101828
+            margin: 0 0 auto
+        &_link
+            margin: 16px 0 0
+            width: max-content
+            display: flex
+            align-items: center
+            gap: 8px
+            p
+                transition: all .3s
+                font: 600 16px / 1.5 $font-family
+                color: #2963f5
+        &:hover
+            .blog-page__item_link
+                p
+                    color: #2b52b4
+    &__form
+        padding: 40px 0
+        h3
+            color: #475467
+            font-weight: 400
+            max-width: 768px
+        p
+            margin: 6px 0 0
+            font: 400 14px / 1.42857 $font-family
+            color: #475467
+            max-width: 320px
+            a
+                transition: all .3s
+                text-decoration: underline
+                text-decoration-skip-ink: none
+                color: #475467
+                &:hover
+                    color: #2963f5
+        &_row
+            grid-template-columns: 320px auto
+            display: grid
+            justify-content: start
+            gap: 16px
+            margin: 16px 0 0
+            .btn__blue
+                padding: 10px 16px
+                font-size: 14px
+
+.blog
+    padding: 24px 0 40px
+    background: #fff
+    border-top: 1px solid #eaecf0
+    .breadcrumb
+        margin: 0
+    h1
+        margin: 24px 0 0
+        line-height: 1
+    &__date
+        margin: 24px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 12px
+        p
+            font: 500 18px / 1.55556 $font-family
+            color: #667085
+    &__import
+        margin: 24px 0 0
+        border-top: 1px solid #eaecf0
+        padding: 24px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 12px
+        p
+            font: 600 16px / 1.5 $font-family
+            color: #667085
+        a
+            padding: 10px
+            border: 1px solid #eaecf0
+            border-radius: 8px
+            box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 8px
+            transition: all .3s
+            p
+                font: 600 14px / 1.42857 $font-family
+                color: #344054
+            &:hover
+                opacity: .5
+    &__prev
+        margin: 40px 0 0
+        img
+            width: 100%
+    &__content
+        margin: 40px 0 0
+        *
+            &:nth-child(1)
+                margin: 0
+        h2
+            margin: 32px 0 0
+        p
+            margin: 32px 0 0
+            font: 400 20px / 1.5 $font-family
+            color: #475467
+    &__refusal
+        margin: 32px 0 0
+        padding: 32px
+        border-radius: 16px
+        background: #f9fafb
+        p
+            margin: 20px 0 0
+            font: 400 20px / 1.5 $font-family
+            color: #475467
+
+.error-page
+    padding: 190px 0 
+    &__block
+        max-width: 448px
+        margin: 0 auto
+        img
+            width: 100%
+        h1
+            margin: 16px 0 0
+            text-align: center
+        p
+            margin: 8px 0 0
+            font: 400 20px / 1.5 $font-family
+            text-align: center
+            color: #667085
+        .btn__blue
+            margin: 16px 0 0
+            width: 100%
+
+@media ( max-width: 768px )
+    .blog-page
+        &__container
+            margin: 24px 0 0
+            padding: 24px 0
+        &__row
+            flex-direction: column
+            gap: 16px
+        .sign-in__input,
+        .announ__select
+            width: 100%
+            max-width: 100%
+        h1
+            margin: 16px 0 0
+        &__wrapper
+            margin: 16px 0 0
+            grid-template-columns: 1fr 1fr
+        &__form
+            padding: 24px 0 
+            h3
+                font-size: 16px
+            &_row
+                grid-template-columns: 1fr auto
+                gap: 8px
+                margin: 16px 0 0
+    .blog
+        padding: 16px 0 24px
+        h1
+            font-size: 30px
+        h2
+            font-size: 24px
+        &__date
+            margin: 16px 0 0
+        &__import
+            flex-wrap: wrap
+            gap: 8px
+            row-gap: 12px
+            p
+                width: 100%
+        &__prev
+            margin: 24px 0 0
+        &__content
+            margin: 24px 0 0
+            p
+                margin: 16px 0 0
+                font-size: 16px
+            h2
+                margin: 24px 0 0
+        &__refusal
+            padding: 24px 20px
+            margin: 24px 0 0
+            p
+                font-size: 16px
+                margin: 16px 0 0
+
+
+@media ( max-width: 600px )
+    .blog-page
+        &__wrapper
+            gap: 3px
+            row-gap: 16px
+        &__item
+            &_prev
+                img
+                    height: 104px
+            &_date
+                padding: 4px
+                p
+                    font-size: 10px
+            &_info
+                padding: 4px 8px 8px
+                height: 102px
+            &_name
+                font-size: 12px
+            &_link
+                p
+                    font-size: 14px
