@@ -1276,6 +1276,11 @@ section
             &_fav
                 width: max-content
                 order: -1
+        &__form
+            &_row
+                grid-template-columns: 1fr
+                input
+                    grid-column: auto
 
 .vacancy-page
     position: relative
@@ -1301,16 +1306,19 @@ section
         font: 500 36px / 1.4 $font-family
         color: $white
     &__pro
-        display: flex
-        justify-content: flex-start
-        align-items: center
-        gap: 15px
+        // display: flex
+        // justify-content: flex-start
+        // align-items: center
+        // gap: 15px
+        h1
+            display: inline
         &_btn
             border-radius: 3px
             padding: 0px 10px
             background: $green
             font: 400 12px / 1.4 $font-family
             color: $white
+            display: inline
         &_list
             position: absolute
             width: 250px
@@ -1333,6 +1341,7 @@ section
                 margin: 20px 0 0
         &_wrapper
             position: relative
+            display: inline
             &:hover
                 .vacancy-page__pro_list
                     opacity: 1
@@ -1507,9 +1516,11 @@ section
             grid-template-columns: 116px 1fr
             gap: 10px
             align-items: start
+            opacity: 1
             img
                 width: 100%
             &:hover
+                opacity: 1
                 border: 1px solid $gray-fill
         &_name
             font: 500 18px / 1.4 $font-family
@@ -1536,3 +1547,128 @@ section
             color: $blue
             margin: 27px 0 0
             display: block
+
+.vacancy-like
+    padding: 0 0 45px
+    &__container
+        padding: 25px 
+        border-radius: 5px
+        box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+        background: $white
+    .title
+        padding: 0 0 8px
+    .vacancy-page
+        &__hot
+            &_item
+                max-width: 414px
+                transition: all .3s
+    &__arrow
+        position: relative
+        margin: 40px 0 0
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 19px
+        transition: all .3s
+        .swiper-button-next,
+        .swiper-button-prev
+            position: relative
+            margin: 0
+            transform: none
+            inset: auto
+            border-radius: 2px
+            padding: 3px 9px
+            background: linear-gradient(180deg, #f6f6f6 52.6%, #fff 100%)
+            font: 400 12px / 1.4 $font-family
+            text-align: center
+            color: $gray-fill
+            width: auto
+            height: auto
+            transition: all .3s
+            &::after
+                content: none
+            &:hover
+                color: $blue-dark
+
+.vacancy-form
+    padding: 0 0 40px
+    &__list
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 100px
+        margin: 0 0 40px
+        h3
+            font: 500 18px / 1.4 $font-family
+            color: $main-dark
+        ul
+            margin: 4px 0 0
+            a
+                font: 400 15px / 1.45 $font-family
+                text-decoration: underline
+                text-decoration-skip-ink: none
+                color: $blue
+            li
+                &::before
+                    content: '• '
+                    font: 400 15px / 1.45 $font-family
+                    color: $gray-fill
+
+@media ( max-width: 1200px )
+    .vacancy-page
+        &__container
+            grid-template-columns: 1fr
+            gap: 20px
+        &__col
+            display: grid
+            grid-template-columns: 1fr 414px
+            gap: 20px
+        &__hot
+            margin: 0
+            display: flex
+            flex-direction: column
+            &_wrapper
+                margin-bottom: auto
+        &__comp
+            display: flex
+            flex-direction: column
+            &_row
+                grid-template-columns: 1fr
+            &_desc
+                margin: 16px 0 auto
+    .vacancy-form
+        &__list
+            gap: 20px
+
+@media ( max-width: 768px )
+    .vacancy-page
+        .back
+            margin: 50px 0 15px
+        &__main
+            padding: 10px
+        &__block
+            grid-template-columns: 1fr
+            padding: 10px
+        &__col
+            grid-template-columns: 1fr
+    .vacancy-like
+        &__container
+            padding: 10px
+    .vacancy-form
+        &__list
+            grid-template-columns: 1fr
+
+@media ( max-width: 600px )
+    .vacancy-page
+        &__footer
+            flex-direction: column
+            align-items: flex-start
+            gap: 10px
+            &_fav
+                margin: 0
+        &__hot
+            &_item
+                grid-template-columns: 1fr
+                img
+                    max-width: 116px
+    .vacancy-like .vacancy-page__hot_item
+        max-width: 300px

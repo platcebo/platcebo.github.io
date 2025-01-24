@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -250,7 +251,7 @@
                         </div>
                     </div>
                 </div>
-                <div>
+                <div class="vacancy-page__col">
                     <div class="vacancy-page__comp">
                         <img src="img/vacancy-page_comp.jpg" alt="" class="vacancy-page__comp_logo">
                         <div class="vacancy-page__comp_info">
@@ -362,14 +363,59 @@
         </div>
     </section>
     <section class="vacancy-like">
-        <div class="vacancy-like__container">
-            <div class="title">
-                <h2>Похожие вакансии</h2>
-            </div>
-            <div class="vacancy-like__slider swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="#" class="vacancy-page__hot_item">
+        <div class="container">
+            <div class="vacancy-like__container">
+                <div class="title">
+                    <h2>Похожие вакансии</h2>
+                </div>
+                <div class="vacancy-like__slider swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="swiper-slide vacancy-page__hot_item">
+                            <img src="img/search_item.jpg" alt="">
+                            <div class="vacancy-page__hot_desc">
+                                <p class="vacancy-page__hot_name">Финансовый аналитик</p>
+                                <p class="vacancy-page__hot_price">от 2 500 000 сум/мес.</p>
+                                <div class="vacancy-page__hot_info">
+                                    <span>Darwin Global</span> 
+                                    <p>·</p> 
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.00059 0C4.29159 0 2.10059 2.191 2.10059 4.9C2.10059 8.575 7.00059 14 7.00059 14C7.00059 14 11.9006 8.575 11.9006 4.9C11.9006 2.191 9.70959 0 7.00059 0ZM7.00059 6.65C6.53646 6.65 6.09134 6.46563 5.76315 6.13744C5.43496 5.80925 5.25059 5.36413 5.25059 4.9C5.25059 4.43587 5.43496 3.99075 5.76315 3.66256C6.09134 3.33437 6.53646 3.15 7.00059 3.15C7.46471 3.15 7.90983 3.33437 8.23802 3.66256C8.56621 3.99075 8.75059 4.43587 8.75059 4.9C8.75059 5.36413 8.56621 5.80925 8.23802 6.13744C7.90983 6.46563 7.46471 6.65 7.00059 6.65Z" fill="#969FA9" />
+                                    </svg>
+                                    <p>Ташкент</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="swiper-slide vacancy-page__hot_item">
+                            <img src="img/search_item.jpg" alt="">
+                            <div class="vacancy-page__hot_desc">
+                                <p class="vacancy-page__hot_name">Финансовый аналитик</p>
+                                <p class="vacancy-page__hot_price">от 2 500 000 сум/мес.</p>
+                                <div class="vacancy-page__hot_info">
+                                    <span>Darwin Global</span> 
+                                    <p>·</p> 
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.00059 0C4.29159 0 2.10059 2.191 2.10059 4.9C2.10059 8.575 7.00059 14 7.00059 14C7.00059 14 11.9006 8.575 11.9006 4.9C11.9006 2.191 9.70959 0 7.00059 0ZM7.00059 6.65C6.53646 6.65 6.09134 6.46563 5.76315 6.13744C5.43496 5.80925 5.25059 5.36413 5.25059 4.9C5.25059 4.43587 5.43496 3.99075 5.76315 3.66256C6.09134 3.33437 6.53646 3.15 7.00059 3.15C7.46471 3.15 7.90983 3.33437 8.23802 3.66256C8.56621 3.99075 8.75059 4.43587 8.75059 4.9C8.75059 5.36413 8.56621 5.80925 8.23802 6.13744C7.90983 6.46563 7.46471 6.65 7.00059 6.65Z" fill="#969FA9" />
+                                    </svg>
+                                    <p>Ташкент</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="swiper-slide vacancy-page__hot_item">
+                            <img src="img/search_item.jpg" alt="">
+                            <div class="vacancy-page__hot_desc">
+                                <p class="vacancy-page__hot_name">Финансовый аналитик</p>
+                                <p class="vacancy-page__hot_price">от 2 500 000 сум/мес.</p>
+                                <div class="vacancy-page__hot_info">
+                                    <span>Darwin Global</span> 
+                                    <p>·</p> 
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.00059 0C4.29159 0 2.10059 2.191 2.10059 4.9C2.10059 8.575 7.00059 14 7.00059 14C7.00059 14 11.9006 8.575 11.9006 4.9C11.9006 2.191 9.70959 0 7.00059 0ZM7.00059 6.65C6.53646 6.65 6.09134 6.46563 5.76315 6.13744C5.43496 5.80925 5.25059 5.36413 5.25059 4.9C5.25059 4.43587 5.43496 3.99075 5.76315 3.66256C6.09134 3.33437 6.53646 3.15 7.00059 3.15C7.46471 3.15 7.90983 3.33437 8.23802 3.66256C8.56621 3.99075 8.75059 4.43587 8.75059 4.9C8.75059 5.36413 8.56621 5.80925 8.23802 6.13744C7.90983 6.46563 7.46471 6.65 7.00059 6.65Z" fill="#969FA9" />
+                                    </svg>
+                                    <p>Ташкент</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="swiper-slide vacancy-page__hot_item">
                             <img src="img/search_item.jpg" alt="">
                             <div class="vacancy-page__hot_desc">
                                 <p class="vacancy-page__hot_name">Финансовый аналитик</p>
@@ -385,8 +431,72 @@
                             </div>
                         </a>
                     </div>
+                    <div class="vacancy-like__arrow">
+                        <div class="swiper-button-prev">«</div>
+                        <div class="swiper-button-next">»</div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="vacancy-form">
+        <div class="container">
+            <div class="vacancy-form__list">
+                <div>
+                    <h3>Похожие должности в Ташкенте</h3>
+                    <ul>
+                        <li><a href="#">Химик</a></li>
+                        <li><a href="#">Учитель химии</a></li>
+                        <li><a href="#">Преподаватель химии</a></li>
+                        <li><a href="#">Технолог</a></li>
+                        <li><a href="#">Помощник технолога</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Вакансии в категориях</h3>
+                    <ul>
+                        <li><a href="#">Химик</a></li>
+                        <li><a href="#">Учитель химии</a></li>
+                        <li><a href="#">Преподаватель химии</a></li>
+                        <li><a href="#">Технолог</a></li>
+                        <li><a href="#">Помощник технолога</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Статистика</h3>
+                    <ul>
+                        <li><a href="#">Химик</a></li>
+                        <li><a href="#">Учитель химии</a></li>
+                        <li><a href="#">Преподаватель химии</a></li>
+                        <li><a href="#">Технолог</a></li>
+                        <li><a href="#">Помощник технолога</a></li>
+                    </ul>
+                </div>
+            </div>
+            <form action="#" class="search__form">
+                <h2>Подпишитесь на похожие вакансии</h2>
+                <p>IT, компьютеры, интернет · полная занятость · мужчины</p>
+                <div class="search__form_row">
+                    <input type="text" placeholder="Ваш email">
+                    <button class="btn__blue">Подписаться на вакансии</button>
+                    <a href="#" class="search__form_link">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="T/Telegram" clip-path="url(#clip0_3_2876)">
+                            <g id="Telegram">
+                            <rect id="Icon BG" width="30" height="30" rx="15" fill="#419FD9"/>
+                            <path id="Exclude" fill-rule="evenodd" clip-rule="evenodd" d="M18.3347 22.4277C19.3831 22.8864 19.7763 21.9253 19.7763 21.9253L22.5503 7.98972C22.5285 7.05049 21.2616 7.61839 21.2616 7.61839L5.73151 13.7125C5.73151 13.7125 4.98886 13.9746 5.05439 14.4333C5.11992 14.892 5.70967 15.1104 5.70967 15.1104L9.61949 16.421C9.61949 16.421 10.799 20.2871 11.0393 21.0297C11.2577 21.7505 11.4543 21.7724 11.4543 21.7724C11.6727 21.8598 11.8693 21.7069 11.8693 21.7069L14.403 19.4134L18.3347 22.4277ZM19.0118 10.4579C19.0118 10.4579 19.5579 10.1302 19.536 10.4579C19.536 10.4579 19.6234 10.5016 19.3394 10.8074C19.0773 11.0695 12.8959 16.6175 12.0659 17.3601C12.0003 17.4038 11.9566 17.4694 11.9566 17.5567L11.7164 19.6099C11.6727 19.8284 11.3887 19.8502 11.3232 19.6536L10.2966 16.2899C10.2529 16.1588 10.2966 16.0059 10.4277 15.9185L19.0118 10.4579Z" fill="white"/>
+                            </g>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_3_2876">
+                            <rect width="30" height="30" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                        <span>Отправлять мне в Telegram</span>                            
+                    </a>
+                </div>
+            </form>
         </div>
     </section>
     <footer class="footer">
@@ -473,6 +583,7 @@
     </footer>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

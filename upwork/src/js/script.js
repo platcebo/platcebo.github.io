@@ -1,6 +1,14 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', function() {
+    var swiper = new Swiper(".vacancy-like__slider", {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        navigation: {
+            nextEl: ".vacancy-like__slider .swiper-button-next",
+            prevEl: ".vacancy-like__slider .swiper-button-prev",
+        },
+    });
 
     let dropdown = document.querySelectorAll('.dropdown__list'),
         dropdownBtn = document.querySelectorAll('.dropdown__btn');
