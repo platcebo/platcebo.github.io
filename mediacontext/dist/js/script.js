@@ -1342,6 +1342,16 @@ document.addEventListener('DOMContentLoaded', function() {
             })
         })
 
+        articleAsideTitle.forEach((item,i)=>{
+            if(item.getBoundingClientRect().top < 100 && item.getBoundingClientRect().top > -110 ) {
+                for(let a = 0; a < articleAsideLink.length; a++) {
+                    articleAsideLink[a].classList.remove('active')
+                }
+                articleAsideLink[i].classList.add('active')
+                articleAsideVal.innerHTML = '<span>'+ articleAsideCount() +'</span> / '+articleAsideLink.length
+            }
+        })
+
         articleAsideVal.innerHTML = '<span>'+ articleAsideCount() +'</span> / '+articleAsideLink.length
 
         function articleAsideCount() {
