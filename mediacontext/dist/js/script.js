@@ -1284,19 +1284,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 articleAside.classList.add('bottom')
                 articleAside.style.bottom = articleTg.getBoundingClientRect().height + 80 + 'px'
             }
+
+            articleAsideTitle.forEach((item,i)=>{
+                if(item.getBoundingClientRect().top < 100 && item.getBoundingClientRect().top > -110 ) {
+                    for(let a = 0; a < articleAsideLink.length; a++) {
+                        articleAsideLink[a].classList.remove('active')
+                    }
+                    articleAsideLink[i].classList.add('active')
+                    articleAsideVal.innerHTML = '<span>'+ articleAsideCount() +'</span> / '+articleAsideLink.length
+                }
+            })
         } else {
-            // articleAsideWrapper.style.width = articleAside.getBoundingClientRect().width + 'px'
-            // articleAsideWrapper.style.height = articleAside.getBoundingClientRect().height + 'px'
-            // if(articleAsideWrapper.getBoundingClientRect().top <=  20 && articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height >=  60) {
-            //     articleAside.classList.add('fix')
-            //     articleAside.classList.remove('bottom')
-            // } else if (articleAsideWrapper.getBoundingClientRect().top >  20) {
-            //     articleAside.classList.remove('fix')
-            //     articleAside.classList.remove('bottom')
-            // } else if (articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height <  60) {
-            //     articleAside.classList.remove('fix')
-            //     articleAside.classList.add('bottom')
-            // }
+            articleAsideLink.forEach((item,i)=>{
+                item.addEventListener('click', ()=>{
+                    for(let a = 0; a < articleAsideLink.length; a++) {
+                        articleAsideLink[a].classList.remove('active')
+                    }
+                    item.classList.add('active')
+                    // console.log('sd')
+                })
+            })
         }
 
         window.addEventListener('scroll', (event)=>{
@@ -1317,39 +1324,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     articleAside.classList.add('bottom')
                     articleAside.style.bottom = articleTg.getBoundingClientRect().height + 80 + 'px'
                 }
-            } else {
-                // if(articleAsideWrapper.getBoundingClientRect().top <=  20 && articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height >=  60) {
-                //     articleAside.classList.add('fix')
-                //     articleAside.classList.remove('bottom')
-                // } else if (articleAsideWrapper.getBoundingClientRect().top >  20) {
-                //     articleAside.classList.remove('fix')
-                //     articleAside.classList.remove('bottom')
-                // } else if (articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height <  60) {
-                //     articleAside.classList.remove('fix')
-                //     articleAside.classList.add('bottom')
-                // }
-            }
 
-
-            articleAsideTitle.forEach((item,i)=>{
-                if(item.getBoundingClientRect().top < 100 && item.getBoundingClientRect().top > -110 ) {
-                    for(let a = 0; a < articleAsideLink.length; a++) {
-                        articleAsideLink[a].classList.remove('active')
+                articleAsideTitle.forEach((item,i)=>{
+                    if(item.getBoundingClientRect().top < 100 && item.getBoundingClientRect().top > -110 ) {
+                        for(let a = 0; a < articleAsideLink.length; a++) {
+                            articleAsideLink[a].classList.remove('active')
+                        }
+                        articleAsideLink[i].classList.add('active')
+                        articleAsideVal.innerHTML = '<span>'+ articleAsideCount() +'</span> / '+articleAsideLink.length
                     }
-                    articleAsideLink[i].classList.add('active')
-                    articleAsideVal.innerHTML = '<span>'+ articleAsideCount() +'</span> / '+articleAsideLink.length
-                }
-            })
-        })
-
-        articleAsideTitle.forEach((item,i)=>{
-            if(item.getBoundingClientRect().top < 100 && item.getBoundingClientRect().top > -110 ) {
-                for(let a = 0; a < articleAsideLink.length; a++) {
-                    articleAsideLink[a].classList.remove('active')
-                }
-                articleAsideLink[i].classList.add('active')
-                articleAsideVal.innerHTML = '<span>'+ articleAsideCount() +'</span> / '+articleAsideLink.length
-            }
+                })
+            } 
         })
 
         articleAsideVal.innerHTML = '<span>'+ articleAsideCount() +'</span> / '+articleAsideLink.length

@@ -7690,9 +7690,6 @@ textarea.input
                 display: flex
                 justify-content: space-between
                 align-items: center
-            &_title
-                padding: 340px 0 0
-                margin: -300px 0 0 !important
             &.fix
                 top: 20px
                 transform: none
@@ -7813,7 +7810,12 @@ textarea.input
                 font-size: 14px
                 padding: 5px 15px
         &__date
-            display: none
+            font-size: 14px
+            order: -1
+            margin: 0 0 10px
+        &__row
+            flex-direction: column
+            align-items: flex-start
         &__func
             margin: 20px 0 0
             gap: 10px
@@ -7844,7 +7846,6 @@ textarea.input
                         height: 8px
             h4
                 font-size: 16px
-                font-weight: 500
             &_banner
                 padding: 20px
             ol
