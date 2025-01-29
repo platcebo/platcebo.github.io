@@ -7906,3 +7906,140 @@ textarea.input
                 gap: 20px
             .article__func
                 gap: 20px
+
+.contact
+    &__container
+        border-radius: 40px
+        background: $white
+        padding: 60px 40px
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 40px
+    &__info
+        display: flex
+        flex-direction: column
+    &__text
+        margin: 40px 0 auto
+        display: grid
+        grid-template-columns: 1fr
+        gap: 20px
+        font: 600 36px / 1 $font-family
+        letter-spacing: -0.03em
+        color: $black
+    &__wrapper
+        margin: 40px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 40px
+        row-gap: 20px
+        max-width: 740px
+    &__link
+        display: grid
+        grid-template-columns: 60px 1fr
+        gap: 15px
+        align-items: center
+        span
+            width: 60px
+            height: 60px
+            border-radius: 10px
+            background: $light-gray
+            display: flex
+            justify-content: center
+            align-items: center
+            transition: all .3s
+            path
+                transition: all .3s
+        p
+            font: 600 24px / 1.4 $font-family
+            letter-spacing: -0.03em
+            color: $black
+            transition: all .3s
+            &+p
+                font: 500 20px / 1.4 $font-family
+                color: $black
+                opacity: .5
+        &:hover
+            span
+                background: $black
+                path
+                    fill: $light-gray
+            p
+                color: $purple
+                &+p
+                    color: $lighter-purple
+                    opacity: 1
+    &__map
+        border-radius: 40px
+        position: relative
+        overflow: hidden
+        z-index: 2
+        iframe
+            position: relative
+            z-index: 2
+            pointer-events: all
+            height: 600px !important
+
+@media ( max-width: 1600px )
+    .contact
+        h1
+            font-size: 90px
+        &__text
+            font-size: 28px
+        &__wrapper
+            gap: 20px
+        &__link
+            p
+                &+p
+                    font-size: 16px
+        &__container
+            gap: 20px
+        &__map
+            iframe
+                height: 480px !important
+
+@media ( max-width: 1320px )
+    .contact
+        &__container
+            padding: 40px
+            grid-template-columns: 1fr
+            gap: 30px
+        h1
+            font-size: 74px
+        &__text
+            margin: 30px 0 0
+            gap: 10px
+            font-size: 24px
+        &__wrapper
+            margin: 30px 0 0
+        &__map
+            iframe
+                height: 370px !important
+
+@media ( max-width: 750px )
+    .contact
+        &__container
+            padding: 30px 20px
+            gap: 20px
+            border-radius: 30px
+        &__map
+            iframe
+                height: 340px !important
+        &__wrapper
+            grid-template-columns: 1fr
+            gap: 10px
+            margin: 20px 0 0
+        &__link
+            grid-template-columns: 40px 1fr
+            gap: 10px
+            span
+                width: 40px
+                height: 40px
+            p
+                font-size: 16px
+                &+p
+                    font-size: 12px
+        &__text
+            font-size: 18px
+            margin: 20px 0 0
+        h1
+            font-size: 34px
