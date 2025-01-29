@@ -7926,6 +7926,11 @@ textarea.input
         font: 600 36px / 1 $font-family
         letter-spacing: -0.03em
         color: $black
+        a
+            color: $black
+            transition: all .3s
+            &:hover
+                color: $purple
     &__wrapper
         margin: 40px 0 0
         display: grid
@@ -7956,7 +7961,6 @@ textarea.input
             transition: all .3s
             &+p
                 font: 500 20px / 1.4 $font-family
-                color: $black
                 opacity: .5
         &:hover
             span
@@ -7966,8 +7970,7 @@ textarea.input
             p
                 color: $purple
                 &+p
-                    color: $lighter-purple
-                    opacity: 1
+                    color: $black
     &__map
         border-radius: 40px
         position: relative
