@@ -1268,21 +1268,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if(articleAside !== null) {
         if(window.innerWidth > 1200) {
-            if(articleBlock.getBoundingClientRect().top <=  -40 && articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height >=  100 + articleTg.getBoundingClientRect().height) {
-                articleAside.classList.add('fix')
-                articleAside.classList.remove('bottom')
-                articleAside.style.left = articleBlock.getBoundingClientRect().right + 'px'
-                articleAside.style.bottom = "auto"
-            } else if (articleBlock.getBoundingClientRect().top >  -40) {
-                articleAside.classList.remove('fix')
-                articleAside.style.left = "auto"
-                articleAside.classList.remove('bottom')
-                articleAside.style.bottom = "auto"
-            } else if (articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height < 100 + articleTg.getBoundingClientRect().height) {
-                articleAside.classList.remove('fix')
-                articleAside.style.left = "auto"
-                articleAside.classList.add('bottom')
-                articleAside.style.bottom = articleTg.getBoundingClientRect().height + 80 + 'px'
+            if (articleTg !== null) {
+                if(articleBlock.getBoundingClientRect().top <=  -40 && articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height >=  100 + articleTg.getBoundingClientRect().height) {
+                    articleAside.classList.add('fix')
+                    articleAside.classList.remove('bottom')
+                    articleAside.style.left = articleBlock.getBoundingClientRect().right + 'px'
+                    articleAside.style.bottom = "auto"
+                } else if (articleBlock.getBoundingClientRect().top >  -40) {
+                    articleAside.classList.remove('fix')
+                    articleAside.style.left = "auto"
+                    articleAside.classList.remove('bottom')
+                    articleAside.style.bottom = "auto"
+                } else if (articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height < 100 + articleTg.getBoundingClientRect().height) {
+                    articleAside.classList.remove('fix')
+                    articleAside.style.left = "auto"
+                    articleAside.classList.add('bottom')
+                    articleAside.style.bottom = articleTg.getBoundingClientRect().height + 80 + 'px'
+                }
+            } else {
+                if(articleBlock.getBoundingClientRect().top <=  -40 && articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height >=  20) {
+                    articleAside.classList.add('fix')
+                    articleAside.classList.remove('bottom')
+                    articleAside.style.left = articleBlock.getBoundingClientRect().right + 'px'
+                    articleAside.style.bottom = "auto"
+                } else if (articleBlock.getBoundingClientRect().top >  -40) {
+                    articleAside.classList.remove('fix')
+                    articleAside.style.left = "auto"
+                    articleAside.classList.remove('bottom')
+                    articleAside.style.bottom = "auto"
+                } else if (articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height < 20) {
+                    articleAside.classList.remove('fix')
+                    articleAside.style.left = "auto"
+                    articleAside.classList.add('bottom')
+                    articleAside.style.bottom = 20 + 'px'
+                }
             }
 
             articleAsideTitle.forEach((item,i)=>{
@@ -1308,21 +1327,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
         window.addEventListener('scroll', (event)=>{
             if(window.innerWidth > 1200) {
-                if(articleBlock.getBoundingClientRect().top <=  -40 && articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height >=  100 + articleTg.getBoundingClientRect().height) {
-                    articleAside.classList.add('fix')
-                    articleAside.classList.remove('bottom')
-                    articleAside.style.left = articleBlock.getBoundingClientRect().right + 'px'
-                    articleAside.style.bottom = "auto"
-                } else if (articleBlock.getBoundingClientRect().top >  -40) {
-                    articleAside.classList.remove('fix')
-                    articleAside.style.left = "auto"
-                    articleAside.classList.remove('bottom')
-                    articleAside.style.bottom = "auto"
-                } else if (articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height < 100 + articleTg.getBoundingClientRect().height) {
-                    articleAside.classList.remove('fix')
-                    articleAside.style.left = "auto"
-                    articleAside.classList.add('bottom')
-                    articleAside.style.bottom = articleTg.getBoundingClientRect().height + 80 + 'px'
+                if (articleTg !== null) {
+                    if(articleBlock.getBoundingClientRect().top <=  -40 && articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height >=  100 + articleTg.getBoundingClientRect().height) {
+                        articleAside.classList.add('fix')
+                        articleAside.classList.remove('bottom')
+                        articleAside.style.left = articleBlock.getBoundingClientRect().right + 'px'
+                        articleAside.style.bottom = "auto"
+                    } else if (articleBlock.getBoundingClientRect().top >  -40) {
+                        articleAside.classList.remove('fix')
+                        articleAside.style.left = "auto"
+                        articleAside.classList.remove('bottom')
+                        articleAside.style.bottom = "auto"
+                    } else if (articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height < 100 + articleTg.getBoundingClientRect().height) {
+                        articleAside.classList.remove('fix')
+                        articleAside.style.left = "auto"
+                        articleAside.classList.add('bottom')
+                        articleAside.style.bottom = articleTg.getBoundingClientRect().height + 80 + 'px'
+                    }
+                } else {
+                    if(articleBlock.getBoundingClientRect().top <=  20 && articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height >=  20) {
+                        articleAside.classList.add('fix')
+                        articleAside.classList.remove('bottom')
+                        articleAside.style.left = articleBlock.getBoundingClientRect().right + 'px'
+                        articleAside.style.bottom = "auto"
+                    } else if (articleBlock.getBoundingClientRect().top >  20) {
+                        articleAside.classList.remove('fix')
+                        articleAside.style.left = "auto"
+                        articleAside.classList.remove('bottom')
+                        articleAside.style.bottom = "auto"
+                    } else if (articleBlock.getBoundingClientRect().bottom - articleAside.getBoundingClientRect().height < 20) {
+                        articleAside.classList.remove('fix')
+                        articleAside.style.left = "auto"
+                        articleAside.classList.add('bottom')
+                        articleAside.style.bottom = 0 + 'px'
+                    }
                 }
 
                 articleAsideTitle.forEach((item,i)=>{
