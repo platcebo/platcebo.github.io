@@ -1429,4 +1429,52 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    let caseAside = document.querySelector('.case-list__aside_fix'),
+        caseBlock = document.querySelector('.case-list__container'),
+        caseBtn = document.querySelector('.case-list__aside_btn'),
+        caseClose = document.querySelector('.case-list__aside_close'),
+        caseMenu = document.querySelector('.case-list__aside');
+
+    if(caseAside !== null) {
+        if(window.innerWidth > 1200) {
+            window.addEventListener('scroll', (event)=>{
+                if(caseBlock.getBoundingClientRect().top <=  20 && caseBlock.getBoundingClientRect().bottom - caseAside.getBoundingClientRect().height >=  20 ) {
+                    caseAside.classList.add('fix')
+                    caseAside.classList.remove('bottom')
+                    caseAside.style.left = caseBlock.getBoundingClientRect().left + 'px'
+                } else if (caseBlock.getBoundingClientRect().top >  -40) {
+                    caseAside.classList.remove('fix')
+                    caseAside.style.left = "auto"
+                    caseAside.classList.remove('bottom')
+                } else if (caseBlock.getBoundingClientRect().bottom - caseAside.getBoundingClientRect().height < 20 ) {
+                    caseAside.classList.remove('fix')
+                    caseAside.style.left = "auto"
+                    caseAside.classList.add('bottom')
+                }
+            })
+            if(caseBlock.getBoundingClientRect().top <=  20 && caseBlock.getBoundingClientRect().bottom - caseAside.getBoundingClientRect().height >=  20 ) {
+                caseAside.classList.add('fix')
+                caseAside.classList.remove('bottom')
+                caseAside.style.left = caseBlock.getBoundingClientRect().left + 'px'
+            } else if (caseBlock.getBoundingClientRect().top >  -40) {
+                caseAside.classList.remove('fix')
+                caseAside.style.left = "auto"
+                caseAside.classList.remove('bottom')
+            } else if (caseBlock.getBoundingClientRect().bottom - caseAside.getBoundingClientRect().height < 20 ) {
+                caseAside.classList.remove('fix')
+                caseAside.style.left = "auto"
+                caseAside.classList.add('bottom')
+            }
+        } else {
+            caseBtn.addEventListener('click', ()=>{
+                caseMenu.classList.add('active')
+                document.body.classList.add('fix')
+            })
+            caseClose.addEventListener('click', ()=>{
+                caseMenu.classList.remove('active')
+                document.body.classList.remove('fix')
+            })
+        }
+    }
+
 }, false);

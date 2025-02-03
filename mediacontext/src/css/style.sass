@@ -7,6 +7,7 @@ $gray: #bfbfc1
 $logo-pink: #dd6c92
 $logo-yellow: #ffb92c
 $lighter-purple: #b197f9
+$gold: #cea451
 $error: #de5d5d
 $font-family: "Manrope", sans-serif
 
@@ -8048,3 +8049,363 @@ textarea.input
                 display: none
         h1
             font-size: 34px
+
+.case-list
+    padding: 20px 0 40px
+    &__block
+        border-radius: 40px
+        background: $white
+        padding: 60px 40px
+        position: relative
+    &__container
+        display: grid
+        grid-template-columns: 410px 1fr
+        gap: 40px
+        align-items: start
+        position: relative
+        margin: 40px 0 0
+    &__aside
+        &_btn,
+        &_filter,
+        &_mob
+            display: none
+        &_fix
+            border-radius: 40px
+            padding: 40px
+            background: $light-gray
+            width: 410px
+            position: relative
+            &.fix
+                top: 20px
+                position: fixed
+            &.bottom
+                bottom: 0
+                position: absolute
+        &_title
+            display: flex
+            justify-content: space-between
+            align-items: flex-end
+            flex-wrap: wrap
+            p
+                font: 600 24px / 1.4 $font-family
+                letter-spacing: -0.03em
+                color: $black
+                &+p
+                    font: 500 20px / 1.4 $font-family
+                    letter-spacing: -0.03em
+                    text-align: right
+                    opacity: 0.5
+        &_block
+            padding: 30px 0 0
+            margin: 30px 0 0
+            border-top: 1px solid #bfbfc180 
+        &_check
+            margin: 20px 0 0
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            flex-wrap: wrap
+            gap: 10px
+            div
+                position: relative
+            p
+                border-radius: 40px
+                padding: 10px 30px
+                background: $white
+                transition: all .3s
+                font: 500 20px / 1.4 $font-family
+                letter-spacing: -0.03em
+                color: $black
+            input
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                opacity: 0
+                &:checked
+                    &+p
+                        background: $purple
+                        color: $white
+        &_link
+            max-height: 300px
+            display: grid
+            grid-template-columns: 1fr
+            gap: 15px
+            overflow-y: auto
+            margin: 20px 0 0
+            a
+                font: 500 20px / 1.4 $font-family
+                letter-spacing: -0.03em
+                color: $black
+                opacity: .7
+                transition: all .3s
+                &:hover
+                    color: $purple
+                &.active
+                    color: $purple
+                    opacity: 1
+        &_more
+            font: 500 20px / 1.4 $font-family
+            letter-spacing: -0.03em
+            color: $purple
+            text-decoration: underline  
+            text-decoration-skip-ink: none
+            margin: 15px 0 0
+            display: block
+            width: max-content
+            transition: all .3s
+            &:hover
+                color: $lighter-purple
+        &_enter
+            display: none
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 40px
+    &__item
+        display: grid
+        grid-template-rows: 1fr auto
+        border-radius: 40px
+        background: $light-gray
+        overflow: hidden
+        &_info
+            padding: 40px
+            h3
+                font: 600 36px / 1 $font-family
+                letter-spacing: -0.03em
+                color: $black
+                span
+                    color: $purple
+            p
+                margin: 20px 0 0
+                font: 500 20px / 1.4 $font-family
+                letter-spacing: -0.03em
+                color: $black
+                opacity: 0.7
+        &_prev
+            position: relative
+            overflow: hidden
+        &_img
+            width: 100%
+            height: 100%
+            min-height: 100%
+            display: block
+            object-fit: cover
+            transition: all .3s
+        &_banner
+            width: 80px
+            height: 80px
+            top: 20px
+            left: 20px
+            position: absolute
+        &_desc
+            border-radius: 40px
+            padding: 10px 15px
+            top: 20px
+            right: 20px
+            background: $gold
+            font: 500 16px / 1.25 $font-family
+            color: $white
+            position: absolute
+        &:hover
+            .case-list__item_img
+                transform: scale(1.2)
+    &__more
+        margin: 40px auto 0
+        padding: 20px 20px 20px 30px
+
+@media ( max-width: 1600px )
+    .case-list
+        &__more
+            padding: 10px 10px 10px 20px
+        h1
+            font-size: 90px
+        &__container
+            grid-template-columns: 290px 1fr
+        &__aside
+            &_fix
+                width: 290px
+            &_title
+                p
+                    font-size: 20px
+            &_block
+                margin: 20px 0 0
+                padding: 20px 0 0
+            &_check
+                gap: 5px
+                p
+                    padding: 10px 15px
+                    font-size: 16px
+            &_link
+                max-height: 210px
+                a
+                    font-size: 16px
+            &_more
+                font-size: 16px
+        &__item
+            &_banner
+                width: 60px
+                height: 60px
+            &_info
+                h3
+                    font-size: 28px
+                p
+                    font-size: 16px
+
+@media ( max-width: 1320px )
+    .case-list
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+        &__item
+            grid-column: auto !important
+
+@media ( max-width: 1200px )
+    .case-list
+        padding: 20px 0 0
+        &__more
+            padding: 10px 10px 10px 20px
+            max-width: 260px
+            width: 100%
+            span
+                font-size: 12px
+        &__item
+            &_info
+                padding: 30px
+        &__aside
+            &_more
+                display: none
+            &_enter
+                display: flex
+                margin: 30px 0 0
+                padding: 10px 10px 10px 20px
+                width: 100%
+                span
+                    font-size: 14px
+            &_check
+                p
+                    background: $light-gray
+            &_link
+                max-height: none
+                grid-template-columns: 1fr 1fr
+                gap: 10px
+            &_mob
+                display: block
+            &_btn
+                display: flex
+                justify-content: space-between
+                align-items: center
+                border-radius: 30px
+                padding: 20px
+                background: $light-gray
+                cursor: pointer
+                p
+                    font: 700 18px / 1.4 $font-family
+                    letter-spacing: -0.03em
+                    color: $black
+            &_fix
+                display: none
+            &_close
+                width: 50px
+                height: 50px
+                border-radius: 100%
+                background: $purple
+                display: flex
+                justify-content: center
+                align-items: center
+                cursor: pointer
+            &_filter
+                p
+                    font: 600 24px / 1 $font-family
+                    letter-spacing: -0.06em
+                    color: $black
+            &.active
+                position: fixed
+                top: 0
+                left: 0
+                width: 100vw
+                height: 100vh
+                overflow: auto
+                z-index: 100
+                background: $light-gray
+                padding: 20px
+                .case-list__aside
+                    &_btn
+                        display: none
+                    &_filter
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                    &_fix
+                        display: block
+                        width: 100%
+                        border-radius: 40px
+                        background: $white
+                        margin: 20px 0 0
+        &__container
+            display: block
+        &__block
+            padding: 40px
+        &__wrapper
+            margin: 30px 0 0
+            gap: 20px
+        h1
+            font-size: 74px
+
+@media ( max-width: 750px )
+    .case-list
+        &__aside
+            &_link
+                grid-template-columns: 1fr
+        
+@media ( max-width: 600px )
+    .case-list
+        padding: 0
+        &__more
+            padding: 15px 15px 15px 20px
+            max-width: 100%
+            width: 100%
+            margin: 20px 0 0
+        &__aside
+            &_enter
+                padding: 15px 15px 15px 20px
+                span
+                    font-size: 14px
+            &_btn
+                p
+                    font-size: 14px
+                svg
+                    width: 24px
+                    height: 24px
+            &_fix
+                padding: 30px 20px
+            &_title
+                p
+                    font-size: 18px
+                    &+p
+                        font-size: 14px
+            &_check
+                p
+                    padding: 5px 15px
+                    font-size: 14px
+        &__block
+            padding: 30px 20px
+            border-radius: 30px
+        h1
+            font-size: 34px
+        &__container
+            margin: 20px 0 0
+        &__wrapper
+            margin: 20px 0 0
+            grid-template-columns: 1fr 
+        &__item
+            border-radius: 30px
+            &_info
+                padding: 20px
+            h3
+                font-size: 18px
+            p
+                font-size: 14px
+                margin: 10px 0 0
+            &_img
+                height: 55vw
