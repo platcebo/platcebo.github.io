@@ -1641,6 +1641,8 @@ section
 
 @media ( max-width: 768px )
     .vacancy-page
+        &__container
+            margin: 0
         .back
             margin: 50px 0 15px
         &__main
@@ -1672,3 +1674,524 @@ section
                     max-width: 116px
     .vacancy-like .vacancy-page__hot_item
         max-width: 300px
+
+.company
+    &::before
+        background: url('../img/company_bg.jpg') center no-repeat
+        background-size: cover
+    &__form
+        margin: 30px 0 0
+        padding: 40px 20px
+        .search
+            &__form
+                &_row
+                    grid-template-columns: 1fr
+                    margin: 40px 0 0
+                    justify-items: center
+        p
+            font: 500 18px / 1.4 $font-family
+            text-align: center
+            color: $main-dark
+            margin: 0
+        input
+            width: 100%
+            max-width: 330px
+            box-sizing: border-box
+    &__block
+        padding: 40px 40px 20px
+        border: 1px solid $bg-color
+        border-radius: 5px
+        box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+        background: $white
+        color: $main-dark
+    h1
+        color: $main-dark
+        font: 500 25px / 1.4 $font-family
+    &__desc
+        margin: 27px 0 0
+        font: 400 17px / 1.4 $font-family
+        color: $main-dark
+        span
+            font: 500 18px / 1.4 $font-family
+    &__row
+        margin: 50px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        h2
+            font: 500 25px / 1.4 $font-family
+            color: $main-dark
+    &__val
+        margin: 0 auto 0 11px
+        font: 500 12px / 1.35 $font3
+        text-align: center
+        color: $gray-fill
+        border: 1px solid $gray-fill
+        border-radius: 4px
+        padding: 3px 5px
+    &__select
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 25px
+        .select
+            padding: 0
+            border: none
+            background: transparent
+            box-shadow: none
+            gap: 12px
+        p
+            color: $blue
+    .search
+        &__item
+            display: block
+    &__wrapper
+        margin: 20px 0 0
+        display: grid
+        grid-template-columns: 1fr 
+        gap: 20px
+    .vacancy-page
+        &__footer
+            margin: 120px 0 0
+            justify-content: flex-end
+
+@media ( max-width: 1200px )
+    .company
+        &__form
+            margin: 0
+            align-self: start
+            .search
+                &__form
+                    &_row
+                        grid-template-columns: 1fr
+            input
+                grid-column: auto
+
+@media ( max-width: 768px )
+    .company
+        &__block
+            padding: 10px
+        .vacancy-page
+            &__footer
+                margin: 30px 0 0
+        &__form
+            padding: 10px
+            button
+                max-width: max-content
+
+@media ( max-width: 600px )
+    .company
+        &__row
+            flex-wrap: wrap
+            margin: 20px 0 0
+            row-gap: 10px
+        &__select
+            width: 100%
+            justify-content: flex-start
+            flex-wrap: wrap
+            gap: 20px
+            row-gap: 10px
+            p
+                white-space: nowrap
+            .select
+                gap: 10px
+
+.article-list
+    border: 1px solid $bg-color
+    border-radius: 5px
+    box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+    background: $white
+    padding: 40px           
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__search
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 25px
+        input
+            border-radius: 5px
+            background: $white
+            border: 1px solid rgba(40, 47, 54, 0.15)
+            padding: 8px 14px
+            font: 400 15px / 1.45 $font-family
+            color: $main-dark
+            width: 300px
+            max-width: 300px
+    &__tag
+        margin: 30px 0 0
+        display: flex
+        flex-wrap: wrap
+        justify-content: flex-start
+        align-items: center
+        gap: 10px
+        a,
+        p
+            padding: 3px 14px
+            border-radius: 6px
+            font: 400 12px / 1.4 $font-family
+            color: var(--color)
+            position: relative
+            overflow: hidden
+            z-index: 2
+            &::before
+                content: ''
+                display: block
+                z-index: -1
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background: var(--color)
+                opacity: .2
+                position: absolute
+    &__grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 30px
+        margin: 50px 0 0
+        display: grid
+    &__item
+        border: 1px solid $gray-light
+        padding: 10px
+        img
+            width: 100%
+            height: 230px
+            object-fit: cover
+        &_row
+            margin: 20px 0 0
+            display: flex
+            justify-content: space-between
+            align-items: center
+        &_desc
+            margin: 10px 0 0
+            h3
+                font: 500 18px / 1.4 $font-family
+                color: $blue
+            p
+                margin: 5px 0 0
+                font: 400 15px / 1.45 $font-family
+                color: $main-dark
+        &_tag
+            margin: 0
+        &_watch
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 6px
+            p
+                font: 400 12px / 1.4 $font-family
+                color: $gray-fill
+    &__list
+        margin: 20px 0 0
+        display: grid
+        grid-template-columns: 1fr
+        gap: 21px
+        padding: 20px
+        border: 1px solid $gray-light
+        &_item
+            padding: 0 0 20px
+            border: none
+            border-bottom: 1px solid $gray-light
+            display: grid
+            grid-template-columns: 171px 1fr
+            gap: 16px
+            align-items: start
+            &:last-child
+                border: none
+                padding: 0
+            img
+                height: 140px
+            .article-list__item
+                &_row
+                    margin: 0
+                    gap: 25px
+                    justify-content: flex-start
+
+@media ( max-width: 1200px )
+    .article-list
+        &__grid
+            grid-template-columns: 1fr 1fr
+
+@media ( max-width: 768px )
+    .article-list
+        padding: 10px
+        &__grid
+            margin: 30px 0 0
+            gap: 10px
+        &__row
+            flex-direction: column
+            align-items: flex-start
+            gap: 10px
+        &__search
+            width: 100%
+            input
+                width: 100%
+                max-width: 100%
+        &__grid
+            grid-template-columns: 1fr
+            &_item
+                grid-column: auto !important
+        &__list
+            padding: 10px
+            gap: 10px
+            &_item
+                padding: 0 0 10px
+                grid-template-columns: 1fr
+                img
+                    height: 230px
+
+.article-item
+    border: 1px solid $bg-color
+    border-radius: 5px
+    box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+    background: $white
+    padding: 40px
+    &__title
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__date
+        font: 400 15px / 1.45 $font-family
+        text-align: right
+        color: $gray-fill
+        text-decoration: underline
+    &__desc
+        margin: 35px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 43px
+        flex-wrap: wrap
+        &_func
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            gap: 10px
+            div
+                display: flex
+                justify-content: flex-start
+                align-items: center
+                gap: 6px
+            p
+                font: 400 12px / 1.4 $font-family
+                color: $gray-fill
+        .article-list__tag
+            margin: 0
+    &__content
+        margin: 30px 0 0
+        *
+            &:nth-child(1)
+                margin: 0
+        p
+            font: 400 17px / 1.4 $font-family
+            color: $main-dark
+            margin: 10px 0 0
+        img
+            width: 100%
+            margin: 30px 0 0
+        ol,
+        ul
+            margin: 30px 0 0
+            display: grid
+            grid-template-columns: 1fr
+            gap: 20px
+            counter-reset: article 0
+            p
+                margin: 0
+                font: 400 17px / 1.4 $font-family
+                color: $main-dark
+            li
+                display: grid
+                grid-template-columns: 25px 1fr
+                align-items: start
+                position: relative
+                z-index: 2
+                &::before
+                    content: counter(article)
+                    counter-increment: article 1
+                    font: 500 18px / 1.4 $font-family
+                    text-align: center
+                    color: $blue
+                &::after
+                    content: ''
+                    display: block
+                    width: 15px
+                    height: 15px
+                    background: $blue
+                    opacity: 0.3
+                    position: absolute
+                    top: -5px
+                    left: -9px
+        h3
+            font: 500 18px / 1.4 $font-family
+            color: $main-dark
+            margin: 30px 0 0
+        blockquote
+            position: relative
+            margin: 50px 0 0
+            z-index: 2
+            p
+                font: italic 400 17px / 1.4 $font-family
+                text-align: center
+                color: $main-dark
+            &::before,
+            &::after
+                content: '“'
+                font: italic 400 117px / 1.4 $font-family
+                text-align: center
+                color: $gray-light
+                position: absolute
+                bottom: -100px
+                right: -20px
+                z-index: -1
+            &::after
+                top: -50px
+                bottom: auto
+                right: auto
+                left: -20px
+        
+.article-like
+    border: 1px solid $bg-color
+    border-radius: 5px
+    box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+    background: $white
+    .title
+        padding: 18px 38px 8px
+    .article__block
+        padding: 30px 20px
+        margin: 0
+
+.article-comment
+    border: 1px solid $bg-color
+    border-radius: 5px
+    box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+    background: $white
+    padding: 40px
+    margin: 30px 0 0
+    &__title
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 15px
+        h2
+            font: 500 25px / 1.4 $font-family
+            color: $main-dark
+        span
+            font: 500 12px / 1.35 $font3
+            text-align: center
+            color: $gray-fill
+            border: 1px solid $gray-fill
+            border-radius: 4px
+            padding: 3px 5px
+    &__wrapper
+        margin: 30px 0 0
+        display: grid
+        grid-template-columns: 1fr 
+        gap: 20px
+    &__item
+        padding: 0 0 14px
+        border-bottom: 1px solid $gray-light
+        &_row
+            display: flex
+            justify-content: space-between
+            align-items: flex-end
+        &_name
+            font: 500 18px / 1.4 $font-family
+            color: $main-dark
+        &_date
+            font: 400 17px / 1.4 $font-family
+            text-align: right
+            color: $gray-dark
+        &_text
+            margin: 7px 0 0
+            p
+                font: 400 17px / 1.4 $font-family
+                color: $main-dark
+            a
+                margin: 5px 0 0
+                font: 400 17px / 1.4 $font-family
+                color: $blue
+                display: block
+    &__send
+        margin: 80px 0 0
+        textarea
+            border-radius: 5px
+            background: $white
+            border: 1px solid rgba(40, 47, 54, 0.15)
+            resize: none
+            padding: 10px 15px
+            font: 400 15px / 1.45 $font-family
+            color: $main-dark
+            width: 100%
+            box-sizing: border-box
+            height: 178px
+        &_row
+            margin: 28px 0 0
+            display: flex
+            justify-content: flex-end
+            align-items: center
+            gap: 40px
+        &_check
+            position: relative
+            display: block
+            span
+                width: 18px
+                height: 18px
+                border-radius: 2px
+                border: 1px solid #E4E4E4
+                display: inline-flex
+                justify-content: center
+                align-items: center
+                background: linear-gradient(180deg, #fff 0%, #f6f6f6 52.6%, #fff 100%)
+                svg
+                    opacity: 0
+                    transition: all .3s
+            p
+                margin: 0 7px
+                display: inline
+                font: 400 17px / 1.4 $font-family
+                color: $main-dark
+                &.bold
+                    font: 500 18px / 1.4 $font-family
+            input
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                opacity: 0
+                z-index: 2
+                &:checked
+                    &+span
+                        svg
+                            opacity: 1
+
+@media ( max-width: 768px )
+    .article-item,
+    .article-comment
+        padding: 10px
+    .article-comment
+        &__send
+            &_row
+                flex-direction: column
+                gap: 10px
+                align-items: flex-end
+
+@media ( max-width: 600px )
+    .article-item
+        &__title
+            flex-direction: column-reverse
+            align-items: flex-start
+        &__desc
+            margin: 20px 0 0
+            gap: 10px
+            .article-list
+                &__tag
+                    width: 100%
+    .article-comment
+        &__item
+            &_row
+                flex-direction: column-reverse
+                align-items: flex-start
