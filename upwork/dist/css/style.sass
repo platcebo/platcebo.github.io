@@ -1704,7 +1704,8 @@ section
         box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
         background: $white
         color: $main-dark
-    h1
+    h1,
+    h2
         color: $main-dark
         font: 500 25px / 1.4 $font-family
     &__desc
@@ -1752,7 +1753,6 @@ section
         gap: 20px
     .vacancy-page
         &__footer
-            margin: 120px 0 0
             justify-content: flex-end
 
 @media ( max-width: 1200px )
@@ -2195,3 +2195,363 @@ section
             &_row
                 flex-direction: column-reverse
                 align-items: flex-start
+
+.contact-page
+    &__block
+        padding: 40px
+        border: 1px solid $bg-color
+        border-radius: 5px
+        box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+        background: $white
+    &__container
+        display: grid
+        grid-template-columns: 1fr 303px
+        gap: 30px
+    &__text
+        margin: 12px 0 0
+        font: 400 15px / 1.45 $font-family
+        color: $gray-dark
+        max-width: 787px
+    &__row
+        margin: 20px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 20px
+        row-gap: 10px
+        textarea
+            grid-column: 2/3
+            grid-row: 1/3
+        textarea,
+        input
+            width: 100%
+            box-sizing: border-box  
+            border-radius: 5px
+            border: 1px solid rgba(40, 47, 54, 0.15)
+            background: $white
+            padding: 8px 14px
+            height: 100%
+            resize: none
+            font: 400 15px / 1.45 $font-family
+            color: $main-dark
+    &__btn
+        margin: 17px 0 0
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        gap: 27px
+        a
+            font: 400 15px / 1.45 $font-family
+            text-decoration: underline
+            text-decoration-skip-ink: none
+            color: $gray-fill
+    &__admin
+        padding: 20px
+        border: 1px solid $bg-color
+        border-radius: 5px
+        box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+        background: $white
+        img
+            width: 100%
+        &_title
+            margin: 0 -20px 
+            padding: 0 20px 5px
+            border-bottom: 1px solid $gray-light
+            p
+                font: 400 15px / 1.45 $font-family
+                color: $main-dark
+        ul
+            margin: 10px 0 0
+            display: grid
+            grid-template-columns: 1fr
+            gap: 10px
+            li
+                display: grid
+                grid-template-columns: 17px 1fr
+                align-items: center
+                gap: 8px
+            a
+                font: 400 15px / 1.45 $font-family
+                color: $blue
+            p
+                font: 400 15px / 1.45 $font-family
+                color: $main-dark
+
+@media ( max-width: 1024px )
+    .contact-page
+        &__row
+            grid-template-columns: 1fr
+            textarea
+                grid-column: auto
+                grid-row: auto
+                height: 90px
+
+@media ( max-width: 768px )
+    .contact-page
+        &__container
+            grid-template-columns: 1fr
+        &__block
+            padding: 10px
+        &__admin
+            padding: 10px
+
+@media ( max-width: 600px )
+    .contact-page
+        &__btn
+            flex-direction: column
+            align-items: flex-start
+            gap: 10px
+            button
+                width: 100%
+
+.about-us
+    display: grid
+    grid-template-columns: 300px calc( 100% - 330px )
+    gap: 30px
+    align-items: start
+    &__aside
+        border: 1px solid $bg-color
+        border-radius: 5px
+        box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+        background: $white
+        position: relative
+        overflow: hidden
+        li
+            border-bottom: 1px solid $bg-color  
+            &:last-child
+                border-bottom: none
+        a
+            transition: all .3s
+            padding: 20px
+            font: 400 15px / 1.45 $font-family
+            color: $main-dark
+            display: block
+            position: relative
+            &::before
+                content: ''
+                display: block
+                width: 1px
+                height: 37px
+                background: $gray-light
+                position: absolute
+                top: 50%
+                left: 0
+                transform: translateY(-50%)
+            &.active
+                font: 700 15px / 1.4 $font-family
+                color: $blue-dark
+                background: rgba(125, 122, 255, 0.3)
+                &::before
+                    background: $blue
+    &__static
+        border: 1px solid $bg-color
+        border-radius: 5px
+        box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+        background: $white
+        padding: 30px 40px 40px
+        margin: 30px 0 0
+        &_wrapper
+            margin: 30px 0 0
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr 1fr
+            gap: 20px
+        &_item
+            display: flex
+            flex-direction: column
+            align-items: center
+            p
+                margin: 6px 0 0
+                font: 500 25px / 1.4 $font-family
+                text-align: center
+                color: $blue
+                &+p
+                    font: 600 15px / 1.45 $font-family
+                    color: $main-dark
+    h2
+        font: 500 25px / 1.4 $font-family
+        color: $main-dark
+    &__comment
+        border: 1px solid $bg-color
+        border-radius: 5px
+        box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+        background: $white
+        padding: 30px 40px 40px
+        margin: 30px 0 0
+        &_wrapper
+            margin: 30px 0 0
+        &_item
+            img
+                width: 100%
+                max-width: 155px
+                box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+            p
+                margin: 12px 0 0
+                font: 400 15px / 1.4 $font-family
+                color: $main-dark
+                b
+                    font: 600 15px / 1.45 $font-family
+    &__cond
+        border: 1px solid $bg-color
+        border-radius: 5px
+        box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+        background: $white
+        padding: 30px 40px 40px
+        margin: 30px 0 0
+        p
+            margin: 30px auto 0
+            font: 500 18px / 1.4 $font-family
+            text-align: center
+            color: $gray-dark
+            max-width: 747px
+        button
+            margin: 20px auto 0
+    &__contact
+        border: 1px solid $bg-color
+        border-radius: 5px
+        box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+        background: $white
+        padding: 30px 40px 40px
+        margin: 30px 0 0
+        &_wrapper
+            margin: 10px 0 0
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+            gap: 30px
+        &_item
+            border: 1px solid $gray-light
+            border-radius: 5px
+            box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+            background: #fdfdfd
+            p
+                padding: 9px 25px
+                font: 400 15px / 1.45 $font-family
+                color: $main-dark
+                border-bottom: 1px solid $gray-light
+            ul
+                margin: 10px 0 0
+                display: grid
+                grid-template-columns: 1fr
+                gap: 10px
+                padding: 9px 25px 25px
+                p
+                    padding: 0
+                    border: none
+                li
+                    display: grid
+                    grid-template-columns: 17px 1fr
+                    align-items: center
+                    gap: 8px
+                a
+                    font: 400 15px / 1.45 $font-family
+                    color: $blue
+                p
+                    font: 400 15px / 1.45 $font-family
+                    color: $main-dark
+
+@media ( max-width: 1200px )
+    .about-us
+        &__static
+            &_wrapper
+                grid-template-columns: 1fr 1fr
+
+@media ( max-width: 1024px )
+    .about-us
+        grid-template-columns: 100%
+        &__static
+            &_wrapper
+                grid-template-columns: 1fr 1fr 1fr 1fr
+
+@media ( max-width: 768px )
+    .about-us
+        &__static,
+        &__comment,
+        &__contact,
+        &__cond
+            padding: 10px
+        &__static
+            &_wrapper
+                grid-template-columns: 1fr 1fr
+        &__contact
+            &_wrapper
+                grid-template-columns: 1fr 
+
+@media ( max-width: 600px )
+    .about-us
+        &__aside
+            a
+                padding: 10px
+        &__static
+            &_wrapper
+                grid-template-columns: 1fr 
+
+.help-page
+    border: 1px solid $bg-color
+    border-radius: 5px
+    box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+    background: $white
+    padding: 40px
+    margin: 0 0 30px
+    .article-list__tag
+        justify-content: center
+        p,
+        a
+            font: 600 15px / 1.45 $font-family
+            padding: 18px 32px
+    &__wrapper
+        margin: 60px auto 0
+        display: grid
+        max-width: 716px
+    &__btn
+        display: grid
+        grid-template-columns: 1fr 25px
+        gap: 30px
+        padding: 15px 0 
+        border-bottom: 1px solid $gray-light
+        p
+            font: 400 15px / 1.45 $font-family
+            color: $main-dark
+        span
+            width: 25px
+            height: 25px
+            background: linear-gradient(180deg, #fff 0%, #f6f6f6 52.6%, #fff 100%)
+            transform: rotate(-90deg)
+            border-radius: 2px
+            font: 400 12px / 1.4 $font-family
+            text-align: center
+            color: $blue-dark
+            display: flex
+            justify-content: center
+            align-items: center
+            cursor: pointer
+            transition: all .3s
+            &:hover
+                opacity: .7
+        &+.help-page__text
+            padding: 0 30px
+            max-height: 0
+            overflow: hidden
+        &.active
+            p
+                color: $blue
+            span
+                transform: rotate(90deg)
+            &+.help-page__text
+                padding: 20px 30px
+                max-height: none
+    &__text
+        background: $bg-color
+        display: grid
+        grid-template-columns: 1fr
+        gap: 15px
+        position: relative
+        p
+            font: 400 12px / 1.4 $font-family
+            color: $main-dark
+
+@media ( max-width: 768px )
+    .help-page
+        padding: 10px
+        .article-list__tag
+            p,
+            a
+                padding: 3px 14px
+                font: 400 12px/1.4 "IBM Plex Sans",sans-serif

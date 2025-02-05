@@ -9,6 +9,19 @@ document.addEventListener('DOMContentLoaded', function() {
             prevEl: ".vacancy-like__slider .swiper-button-prev",
         },
     });
+    var swiper = new Swiper(".about-us__comment_wrapper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".about-us__comment_wrapper .swiper-button-next",
+            prevEl: ".about-us__comment_wrapper .swiper-button-prev",
+        }, 
+        breakpoints: {
+            769: {
+                slidesPerView: 2,
+            }
+        }
+    });
 
     let dropdown = document.querySelectorAll('.dropdown__list'),
         dropdownBtn = document.querySelectorAll('.dropdown__btn');
@@ -59,6 +72,17 @@ document.addEventListener('DOMContentLoaded', function() {
     if(aside !== null) {
         asideBtn.addEventListener('click', ()=>{
             aside.classList.toggle('active')
+        })
+    }
+
+    let helpBtn = document.querySelectorAll('.help-page__btn'),
+        helpText = document.querySelectorAll('.help-page__text');
+
+    if(helpBtn !== null) {
+        helpBtn.forEach((item, i)=>{
+            item.addEventListener('click', ()=>{
+                item.classList.toggle('active');
+            })
         })
     }
 
