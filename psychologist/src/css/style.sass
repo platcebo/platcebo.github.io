@@ -8,3 +8,673 @@ $beige-dark: #f1dfd4
 $red: #bf4720
 $black: #1f2019
 
+body,
+html
+    overflow-x: hidden
+    background: $beige-light
+    position: relative
+a,
+button
+    transition: all .3s
+    &:hover
+        opacity: .5
+h2
+    font: 700 42px / 1.05952 $second-family
+    text-align: center
+    color: $black
+h3
+    font: 700 32px $font-family
+    color: $black
+h4
+    font: 700 24px / 1.3 $font-family
+    color: $black
+section
+    padding: 100px 0 
+.btn
+    &__red
+        border-radius: 20px
+        padding: 20px 30px
+        background: $red
+        font: 400 20px $font-family
+        text-align: center
+        color: $white
+        width: max-content  
+        display: block
+        border: none
+.container
+    max-width: 1170px
+    margin: 0 auto
+    padding: 0 15px
+    box-sizing: content-box
+
+.nav
+    padding: 24px 0 0
+    .container
+        max-width: 1720px
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__logo
+        font: 700 32px $second-family
+        color: $black
+    &__soc
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 18px
+.header
+    padding: 13px 0 100px
+    z-index: 2
+    position: relative
+    .container
+        display: grid
+        grid-template-columns: auto 1fr
+        gap: 55px
+        align-items: center
+    &__prev
+        padding: 15% 14% 7% 15.7%
+        background: url('../img/header_bg.svg') center no-repeat
+        background-size: contain
+        img
+            width: 100%
+            border-radius: 150px 20px
+    h1
+        font: 700 32px / 1.05952 $font-family
+        color: $black
+    &__name
+        font: 900 79px / 1.05952 $second-family
+        color: $black
+        margin: 8px 0 0
+    &__info
+        max-width: 480px
+    &__text
+        margin: 30px 0 0
+        padding: 0 0 0 43px
+        position: relative
+        font: 400 24px $font-family
+        color: $red
+        &::before
+            content: ''
+            display: block
+            width: 100vw
+            height: 1px
+            background: $red
+            position: absolute
+            top: 14px
+            right: calc( 100% - 24px )
+    .btn__red
+        margin: 50px 0 0
+.trouble
+    position: relative
+    z-index: 1
+    &__tag
+        margin: 80px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        flex-wrap: wrap
+        gap: 15px
+        p
+            font: 400 20px $font-family
+            color: $red
+            border: 1px solid $red
+            border-radius: 50px
+            padding: 19px 33px
+            transition: all .3s
+            cursor: pointer
+            &.active
+                background: $red
+                color: $white
+    &__wrapper
+        margin: 50px 0 0
+        position: relative
+    &__slide
+        display: grid
+        grid-template-columns: 480px 1fr
+        gap: 0
+        background: $beige-dark
+        position: relative
+        border-radius: 20px
+        overflow: hidden
+        min-height: 466px
+    &__prev
+        position: relative
+        img
+            width: 100%
+            height: 1px
+            min-height: 100%
+            object-fit: cover
+        &::before
+            content: ''
+            display: block
+            bottom: 0
+            left: 0
+            top: 0
+            width: 100%
+            position: absolute
+            background: url('../img/trouble_bg.png') left bottom no-repeat
+            background-size: contain
+    &__info
+        padding: 50px
+        p
+            margin: 24px 0 0
+            font: 400 18px / 1.35 $font-family
+            color: $black
+    .swiper-button-next,
+    .swiper-button-prev
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 44px
+        height: 44px
+        border-radius: 100%
+        background: $red
+        margin: 0
+        transform: translateY(-50%)
+        top: 50%
+        right: calc( 100% + 50px )
+        left: auto
+        transition: all .3s
+        &:hover
+            opacity: .5
+        &::after
+            content: none
+        svg
+            width: 24px
+            height: 24px
+    .swiper-button-next
+        right: auto
+        left: calc( 100% + 50px )
+    &::before
+        content: ''
+        display: block
+        bottom: 506px
+        left: 0
+        width: 313px
+        height: 757px
+        background: url('../img/trouble_flover.png') left no-repeat
+        background-size: contain
+        position: absolute
+        z-index: -1
+.consul
+    position: relative
+    z-index: 1
+    &__wrapper
+        margin: 80px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 16px
+    &__item
+        border-radius: 20px
+        padding: 230px 50px 50px 50px
+        background: $beige-dark
+        position: relative
+        overflow: hidden
+        z-index: 1
+        h3
+            margin: 24px 0 0
+    &__prev
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        z-index: -1
+        img
+            width: 100%
+            height: 275px
+            object-fit: cover
+        &::before
+            content: ''
+            display: block
+            width: 100%
+            height: 230px
+            position: absolute
+            bottom: 0
+            left: 0
+            background: linear-gradient(180deg, rgba(241, 223, 212, 0) 0%, #f1dfd4 100%)
+    &__num
+        font: 700 42px / 1.05952 $second-family
+        color: $red
+    &__text
+        margin: 24px 0 0
+        font: 400 18px / 1.33333 $font-family
+        color: $black
+    .btn__red
+        margin: 50px auto 0
+    &::before
+        content: ''
+        display: block
+        bottom: 530px
+        right: 0
+        width: 313px
+        height: 757px
+        background: url('../img/trouble_flover.png') left no-repeat
+        background-size: contain
+        position: absolute
+        transform: scaleX(-1)
+        z-index: -1
+.faq
+    position: relative
+    z-index: 1
+    &::before
+        content: ''
+        display: block
+        top: 0
+        transform: translateY(-50%)
+        left: 0
+        width: 313px
+        height: 757px
+        background: url('../img/trouble_flover.png') left no-repeat
+        background-size: contain
+        position: absolute
+        z-index: -1
+    &__wrapper
+        margin: 80px 0 0
+        border-bottom: 1px solid $red
+    &__text
+        max-height: 0
+        overflow: hidden
+        padding: 0 
+        p
+            font: 400 18px / 1.35 $font-family
+            color: $black
+            padding: 0 0 32px
+    &__btn
+        border-top: 1px solid $red
+        position: relative
+        padding: 32px 32px 24px 0
+        span
+            position: absolute
+            top: 39px
+            right: 0
+            transition: all .3s
+        .close
+            opacity: 0
+        .open
+            opacity: 1
+        p
+            font: 400 24px / 1.6 $font-family
+            color: $black
+        &.active
+            .close
+                opacity: 1
+            .open
+                opacity: 0
+            &+.faq__text
+                max-height: none
+.price
+    position: relative
+    z-index: 1
+    &::before
+        content: ''
+        display: block
+        top: 0
+        right: 0
+        width: 313px
+        height: 757px
+        background: url('../img/trouble_flover.png') left no-repeat
+        background-size: contain
+        position: absolute
+        transform: scaleX(-1) translateY(-50%)
+        z-index: -1
+    &__wrapper
+        margin: 80px 0 0
+        display: grid
+        grid-template-columns: 1fr
+        gap: 16px
+    &__item
+        border-radius: 20px
+        padding: 50px
+        background: $beige-dark
+        display: grid
+        grid-template-columns: 2fr 3fr 3fr auto
+        gap: 20px
+        align-items: start
+        ul
+            display: grid
+            grid-template-columns: 1fr 
+            gap: 16px
+            p
+                font: 400 18px / 1.3 $font-family
+                color: $black
+            li
+                display: grid
+                grid-template-columns: 20px 1fr
+                gap: 12px
+                &::before
+                    content: ''
+                    display: block
+                    width: 20px
+                    height: 20px
+                    background: url('../img/check.svg') center no-repeat
+                    background-size: contain
+    &__price
+        p
+            font: 700 18px / 1.3 $font-family
+            color: $red
+            &+p
+                font: 700 50px / 1.3 $second-family
+                color: $black
+.comment
+    position: relative
+    .swiper-button-next,
+    .swiper-button-prev
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 44px
+        height: 44px
+        border-radius: 100%
+        background: $red
+        margin: 0
+        transform: translateY(-50%)
+        top: 50%
+        right: calc( 100% + 50px )
+        left: auto
+        transition: all .3s
+        &:hover
+            opacity: .5
+        &::after
+            content: none
+        svg
+            width: 24px
+            height: 24px
+    .swiper-button-next
+        right: auto
+        left: calc( 100% + 50px )
+    &__wrapper
+        position: relative
+        margin: 80px 0 0
+    &__slide
+        border-radius: 20px
+        padding: 50px
+        background: $beige-dark
+    &__name
+        display: grid
+        grid-template-columns: 90px 1fr
+        gap: 24px
+        align-items: center
+        img
+            width: 90px
+            height: 90px
+            border-radius: 100%
+        p
+            font: 700 32px / 1.3 $font-family
+            color: $black
+            &+p
+                margin: 6px 0 0
+                font: 400 18px / 1.3 $font-family
+                color: $red
+    &__text
+        margin: 30px 0 0
+        p
+            font: 400 18px / 1.35 $font-family
+            color: $black
+.contact
+    position: relative
+    z-index: 1
+    &::before
+        content: ''
+        display: block
+        top: 0
+        transform: translateY(-50%)
+        left: 0
+        width: 313px
+        height: 757px
+        background: url('../img/trouble_flover.png') left no-repeat
+        background-size: contain
+        position: absolute
+        z-index: -1
+    &__wrapper
+        margin: 80px 0 0
+        display: grid
+        grid-template-columns: 1fr 478px
+        gap: 16px
+    &__map
+        border-radius: 20px
+        position: relative
+        overflow: hidden
+        iframe
+            height: 100%
+            min-height: 300px
+    &__info
+        padding: 50px
+        border-radius: 20px
+        background: $beige-dark
+        display: grid
+        grid-template-columns: 1fr
+        gap: 24px
+        li
+            display: grid
+            grid-template-columns: 32px 1fr
+            gap: 24px
+            align-items: start
+        a,
+        p
+            font: 400 24px $font-family
+            color: $black
+        a
+            &:hover
+                opacity: 1
+                color: $red
+.footer
+    border-radius: 20px 20px 0 0
+    background: $beige-dark
+    padding: 23px 0
+    margin: 100px 0 0
+    p
+        font: 400 16px / 1.2 $font3
+        text-align: center
+        color: $red
+
+@media ( max-width: 1440px )
+    section
+        padding: 80px 0
+    h2
+        font-size: 36px
+    h3
+        font-size: 24px
+    h4
+        font-size: 20px
+    .nav
+        .container
+            max-width: 1170px
+        &__logo
+            font-size: 24px
+    .header
+        padding: 20px 0 80px
+        .container
+            grid-template-columns: 1fr 507px
+        h1
+            font-size: 24px
+        &__name
+            font-size: 64px
+        &__text
+            font-size: 20px
+        .btn__red
+            margin: 50px 0 0
+    .trouble,
+    .consul,
+    .faq,
+    .price,
+    .contact
+        &::before
+            content: none
+    .trouble
+        &__tag
+            margin: 50px 0 0
+            p
+                font-size: 18px
+        &__slide
+            min-height: 400px
+        &__info
+            p
+                margin: 16px 0 0
+                font-size: 16px
+    .consul
+        &__wrapper
+            margin: 50px 0 0
+        &__num
+            font-size: 36px
+        &__text
+            font-size: 16px
+            margin: 16px 0 0
+        h3
+            max-width: 220px
+            margin: 20px 0 0
+        .btn__red
+            margin: 40px auto 0
+    .faq
+        &__wrapper
+            margin: 50px 0 0
+        &__btn
+            p
+                font-size: 20px
+        &__text
+            p
+                font-size: 16px
+    .price
+        &__item
+            ul
+                p
+                    font-size: 16px
+        &__price
+            p
+                font-size: 16px
+                &+p
+                    font-size: 48px
+    .comment,
+    .contact
+        &__wrapper
+            margin: 50px 0 0
+    .contact
+        &__info
+            a,
+            p
+                font-size: 20px
+            li
+                gap: 16px
+    .trouble,
+    .comment
+        &__wrapper
+            padding: 0 16px
+        .swiper-button-next,
+        .swiper-button-prev
+            right: -12px
+            left: auto
+            width: 24px
+            height: 24px
+            svg
+                width: 16px
+                height: 16px
+        .swiper-button-prev
+            left: -12px
+            right: auto
+
+@media ( max-width: 1024px )
+    .header
+        padding: 36px 0 80px
+        .container
+            grid-template-columns: 1fr
+        &__prev
+            max-width: 600px
+            margin: 0 auto
+            img
+                border-radius: 100px 15px
+    .trouble
+        &__slide
+            grid-template-columns: 1fr
+        &__prev
+            &::before
+                background: url('../img/trouble_mob.png') left top no-repeat
+                background-size: cover
+
+            img
+                height: 575px
+        &__info
+            padding: 24px
+    .consul
+        &__item
+            padding: 196px 24px 24px
+    .price
+        &__item
+            grid-template-columns: 1fr
+            padding: 24px
+    .comment
+        &__slide
+            padding: 24px
+    .contact
+        &__info
+            padding: 24px
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+
+@media ( max-width: 768px )
+    section
+        padding: 50px 0
+    h2
+        font-size: 32px
+    .nav
+        &__logo
+            font-size: 20px
+    .header
+        padding: 36px 0 50px
+        &__name
+            font-size: 48px
+        .container
+            gap: 40px
+    .trouble
+        &__tag
+            gap: 8px
+            p
+                font-size: 14px
+                padding: 8px 15px
+        &__prev
+            img
+                height: 274px
+    .consul
+        &__wrapper
+            grid-template-columns: 1fr
+        &__prev
+            img
+                height: 235px
+    .price
+        &__price
+            p
+                &+p
+                    font-size: 36px
+    .comment
+        &__name
+            grid-template-columns: 63px 1fr
+            gap: 16px
+            img
+                width: 63px
+                height: 63px
+            p
+                font-size: 24px
+                &+p
+                    font-size: 16px
+        &__text
+            margin: 24px 0 0
+            p
+                font-size: 16px
+    .contact
+        &__wrapper
+            grid-template-columns: 1fr
+            gap: 16px
+        &__map
+            iframe
+                height: 215px
+                min-height: 215px
+        &__info
+            a,
+            p
+                font-size: 16px
+            li
+                gap: 14px
+                grid-template-columns: 24px 1fr
+                svg
+                    width: 24px
+                    height: 24px
+    .footer
+        margin: 0
