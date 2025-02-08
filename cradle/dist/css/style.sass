@@ -3,3 +3,425 @@ $second-family: "Inter", sans-serif
 $third-family: "Comic CAT", sans-serif
 $font3: "m_Brody", sans-serif
 $font4: "HelveticaNeueCyr", sans-serif
+
+body,
+html
+    background: #f0f0f0
+    position: relative
+    overflow-x: hidden
+header,
+section,
+footer
+    padding: 80px 0
+h1
+    font: 400 90px / 1 $third-family
+    text-transform: uppercase
+    color: #0082c9
+.btn
+    &__red
+        padding: 15px 22px
+        border: none
+        border-radius: 55px
+        background: #ff7f56
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 8px
+        font: 400 18px / 1 $font-family
+        color: #fff
+        transition: all .3s
+        width: max-content
+        &:hover
+            background: #ff6635
+    &__trans
+        border: 1px solid #bdd9e8
+        padding: 14px 21px
+        border-radius: 55px
+        background: transparent
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 8px
+        font: 400 18px / 1 $font-family
+        color: #0082c9
+        transition: all .3s
+        width: max-content
+        &:hover
+            color: #fff
+            border: 1px solid #0082c9
+            background: #0082c9
+.container
+    max-width: 1200px
+    margin: 0 auto
+    padding: 0 20px
+    box-sizing: content-box
+    &__title
+        font: 500 15px / 1.2 $font-family
+        text-transform: uppercase
+        color: #0082c9
+    &__wrapper
+        display: grid
+        grid-template-columns: 290px 1fr
+        gap: 10px
+        align-items: start
+.nav
+    padding: 19px 0
+    .container
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__btn
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 15px
+    .btn
+        &__red
+            &::before
+                content: ''
+                display: block
+                width: 18px
+                height: 19px
+                background: url('../img/heart_trans.svg') center no-repeat
+                background-size: contain
+            &:hover
+                &::before
+                    background: url('../img/heart_full.svg') center no-repeat
+                background-size: contain
+.header
+    &__wrapper
+        margin: 45px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 10px
+        img
+            width: 100%
+            border-radius: 30px
+            height: 400px
+            object-fit: cover
+            opacity: 0
+            transition: all 0.5s 1s
+            transform: translateY(50px)
+    &__slider
+        margin: 45px 0 0
+    &__name
+        font: 400 90px / 1 $third-family
+        text-transform: uppercase
+        color: #0082c9
+        max-width: calc( 100% - 100px )
+        span
+            display: block
+            opacity: 0
+            transition: all 0.5s 0.5s
+            transform: translateY(50px)
+            &+span
+                transition-delay: 0.8s
+    &__text
+        font: 400 18px / 1.4 $font-family
+        color: #4686a8
+        max-width: 444px
+        opacity: 0
+        transition: all 0.5s 1s
+        transform: translateY(50px)
+    .btn__trans
+        margin: 35px 0 0
+        opacity: 0
+        transition: all .3s, transform 0.5s 1s, opacity 0.5s 1s
+        transform: translateY(50px)
+    &__slide
+        opacity: 0 !important
+        transition: all 0.5s 0s !important
+        &.swiper-slide-active
+            opacity: 1 !important
+            .btn__trans
+                opacity: 1 
+                transform: translateY(0)    
+            .header
+                &__wrapper
+                    img
+                        opacity: 1 
+                        transform: translateY(0)
+                &__name
+                    span
+                        opacity: 1
+                        transform: translateY(0)
+                &__text
+                    opacity: 1
+                    transform: translateY(0)
+    .swiper-button-prev,
+    .swiper-button-next
+        opacity: 1
+        width: 57px
+        height: 47px
+        margin: 0
+        right: auto
+        top: auto
+        transform: none
+        left: 0
+        bottom: 0
+        path
+            transition: all .3s
+        &::after
+            content: none
+        &:hover,
+        &.swiper-button-disabled
+            path
+                fill: #82aec5
+    .swiper-button-next
+        left: 82px
+    .swiper-pagination
+        width: max-content
+        left: auto
+        top: auto
+        transform: none
+        right: 0
+        margin: 0
+        bottom: 435px
+        font: 500 35px / 1.2 $font-family
+        color: #bdd9e8
+        .swiper-pagination-current
+            color: #0082c9
+.fees
+    &__wrapper
+        border-bottom: 1px solid #bdd9e8
+    &__prev
+        transition: all .3s
+        position: relative
+        overflow: hidden
+        border-radius: 20px
+        img
+            width: 290px
+            height: 290px
+            object-fit: cover
+    &__info
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        gap: 20px
+        p
+            color: #0082c9
+            transition: all .3s
+    &__for
+        font: 400 16px / 1.3 $font-family
+        color: #5d98b9 !important
+    &__name
+        font: 500 35px / 1.2 $font-family
+    &__price
+        font: 400 20px / 1.3 $font-family
+        margin: auto 0 0
+    &__item
+        padding: 35px 0
+        border-top: 1px solid #bdd9e8
+        display: grid
+        grid-template-columns: 290px 1fr 40px
+        gap: 30px
+        &:hover
+            .fees
+                &__info
+                    p
+                        color: #82aec5 !important
+                &__prev
+                    border-radius: 70px
+    .btn__trans
+        margin: 35px 0 0
+.stat
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 
+        gap: 10px
+    &__item
+        border-radius: 20px
+        background: #fff
+        padding: 30px 25px 25px
+        min-height: 380px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        &:nth-child(2)
+            grid-column: 3/4
+    &__val
+        font: 500 70px $font-family
+        text-transform: uppercase
+        color: #0082c9
+    &__text
+        font: 400 18px / 1.4 $font-family
+        color: #4686a8
+.sup
+    color: #fff
+    background: #0082c9
+    .container__title
+        color: #e8f2ff
+    &__title
+        font: 400 50px / 1.1 $third-family
+        text-transform: uppercase
+        color: #fff
+        span
+            transition: all .5s
+            opacity: 0
+            transform: translateY(50px)
+            transition-delay: 0s
+            display: block
+            &+span
+                transition-delay: 0.3s
+                &+span
+                    transition-delay: 0.6s
+        &.element-show
+            span
+                opacity: 1
+                transform: translateY(0)
+    &__text
+        margin: 40px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 30px
+        p
+            font: 400 18px / 1.4 $font-family
+            color: #d1e9f6
+    .btn__red
+        margin: 30px 0 0
+.method
+    &__item
+        border-top: 1px solid #bdd9e8
+        padding: 35px 0
+        display: grid
+        grid-template-columns: 290px 1fr 147px
+        gap: 10px
+        &:last-child
+            padding: 35px 0 0
+    &__name
+        font: 500 25px / 1.3 $font-family
+        color: #0082c9
+    &__info
+        display: flex
+        flex-direction: column
+        p
+            font: 400 18px / 1.4 $font-family
+            color: #4686a8
+            margin: 0 0 10px
+            max-width: 370px
+        .btn__trans
+            margin: auto 0 0
+    &__prev
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 147px
+        border-radius: 20px
+        background: #fff
+.about
+    &__name
+        font: 400 50px / 1.1 $third-family
+        text-transform: uppercase
+        color: #0082c9
+        span
+            transition: all .5s
+            opacity: 0
+            transform: translateY(50px)
+            display: inline-block
+        &.element-show
+            span
+                opacity: 1
+                transform: translateY(0)
+    &__wrapper
+        margin: 40px 0 0
+        display: grid
+        grid-template-columns: 280px 1fr
+        gap: 20px
+    &__text
+        display: flex
+        flex-direction: column
+        gap: 20px
+        p
+            font: 400 18px / 1.4 $font-family
+            color: #4686a8
+        .btn__trans
+            margin: auto 0 0
+    &__prev
+        img
+            height: 342px
+            width: 100%
+            object-fit: cover
+            border-radius: 30px
+.parthner
+    background: #0082c9
+    position: relative
+    overflow: hidden
+    .container__title
+        color: #e8f2ff
+    &__wrapper
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 10px
+        display: grid
+    &__item
+        border: 1px solid rgba(255, 255, 255, 0.2)
+        border-radius: 20px
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 20px
+        img
+            max-width: 200px
+            width: 100%
+            height: 80px
+            object-fit: contain
+    &__run
+        max-height: 400px
+.news
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 10px
+    &__prev
+        position: relative
+        overflow: hidden
+        border-radius: 10px
+        transition: all .3s
+        img
+            width: 100%
+            height: 200px
+            object-fit: cover
+    &__row
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        flex-wrap: wrap
+        gap: 15px
+        margin: 0 0 auto
+        p
+            font: 400 14px / 1.4 $font-family
+            color: #77aecc
+    &__name
+        font: 500 25px / 1.3 $font-family
+        color: #0082c9
+        max-width: calc( 100% - 50px )
+        transition: all .3s
+    &__link
+        position: absolute
+        bottom: 25px
+        right: 25px
+    .btn__trans
+        margin: 35px 0 0
+    &__item
+        min-height: 440px
+        display: flex
+        flex-direction: column
+        gap: 18px
+        padding: 25px
+        border-radius: 20px
+        background: #fff
+        position: relative
+        &:hover
+            .news
+                &__prev
+                    border-radius: 70px
+                &__name
+                    color: #82aec5
+
+.footer
+    background: #0082c9
+    .container
+        &__title
+            color: #e8f2ff
+    &__name
+        font: 400 14px / 1.4 $font-family
+        color: #91cbea
