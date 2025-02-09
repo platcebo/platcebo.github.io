@@ -90,10 +90,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 nav[i].classList.toggle('active');
                 if(nav[i].classList.contains('active')) {
                     document.body.style.overflow = "hidden"
-                    item.innerHTML = 'Закрыть'
+                    item.innerHTML = '<i link="Закрыть"><span>Закрыть</span></i>'
                 } else {
                     document.body.style.overflow = "visible"
-                    item.innerHTML = 'Меню'
+                    item.innerHTML = '<i link="Меню"><span>Меню</span></i>'
                 }
             })
         })
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     navFix.classList.remove('vis')
                 } else {
                     navFix.classList.add('vis')
-                    up = window.scrollY + 10
+                    up = window.scrollY
                 }
             } else {
                 navFix.classList.remove('vis')
