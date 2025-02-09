@@ -125,4 +125,16 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    let pageArrow = document.querySelector('.arrow-up');
+        
+    if(pageArrow !== null) {
+        function scrollToTop () {
+            if (window.scrollY > 0) {
+                window.scrollBy(0, -70); 
+                setTimeout(scrollToTop, 0); 
+            }
+        }
+        pageArrow.addEventListener("click", scrollToTop)
+    }
+
 }, false);
