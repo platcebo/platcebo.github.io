@@ -45,15 +45,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function onEntry(entry) {
         entry.forEach(change => {
             if (change.isIntersecting) {
-                if(change.target.classList.contains('title-anim')) {
-                    change.target.classList.add('element-show');
-                    let index = 0;
-                    for (let element of change.target.children) {
-                        element.style.transitionDelay = index * 0.1 + 's';
-                        index++;
-                    }
-                } else {
-                    change.target.classList.add('element-show');
+                change.target.classList.add('element-show');
+                let index = 0;
+                for (let element of change.target.children) {
+                    element.style.transitionDelay = index * 0.1 + 's';
+                    index++;
                 }
             }
         });
@@ -80,6 +76,53 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }, 10);
         });
+    }
+
+    let nav = document.querySelectorAll('.nav'),
+        navFix = document.querySelector('.nav.fix'),
+        navCall = document.querySelectorAll('.nav__call'),
+        navOverflow = document.querySelectorAll('.nav__overflow'),
+        navBtn = document.querySelectorAll('.nav__menu_btn');
+
+    if(nav !== null) {
+        navCall.forEach((item,i)=>{
+            item.addEventListener('click', ()=>{
+                nav[i].classList.toggle('active');
+                if(nav[i].classList.contains('active')) {
+                    document.body.style.overflow = "hidden"
+                    item.innerHTML = 'Закрыть'
+                } else {
+                    document.body.style.overflow = "visible"
+                    item.innerHTML = 'Меню'
+                }
+            })
+        })
+        navOverflow.forEach((item,i)=>{
+            item.addEventListener('click', ()=>{
+                nav[i].classList.toggle('active');
+            })
+        })
+        navBtn.forEach((item)=>{
+            item.addEventListener('click', (e)=>{
+                e.preventDefault()
+                item.classList.toggle('active');
+            })
+        })
+        let up = window.scrollY
+        window.addEventListener('scroll', ()=>{
+            
+            if(window.scrollY > navFix.getBoundingClientRect().height) {
+                if(up < window.scrollY) {
+                    up = window.scrollY
+                    navFix.classList.remove('vis')
+                } else {
+                    navFix.classList.add('vis')
+                    up = window.scrollY + 10
+                }
+            } else {
+                navFix.classList.remove('vis')
+            }
+        })
     }
 
 }, false);

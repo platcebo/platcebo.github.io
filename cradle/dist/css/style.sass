@@ -8,15 +8,31 @@ body,
 html
     background: #f0f0f0
     position: relative
-    overflow-x: hidden
 header,
 section,
 footer
     padding: 80px 0
+    z-index: 1
+    position: relative
 h1
     font: 400 90px / 1 $third-family
     text-transform: uppercase
     color: #0082c9
+.element-animation
+    i
+        display: inline-block
+        position: relative
+        overflow: hidden
+    span
+        transition: all .5s
+        opacity: 1
+        transform: translateY(100%)
+        transition-delay: inherit
+        display: inline-block
+    &.element-show
+        span
+            opacity: 1
+            transform: translateY(0)
 .btn
     &__red
         padding: 15px 22px
@@ -66,6 +82,11 @@ h1
         align-items: start
 .nav
     padding: 19px 0
+    z-index: 15
+    position: relative
+    background: #f0f0f0
+    top: 0
+    transition: all .3s
     &__logo
         display: block
         width: 100%
@@ -76,11 +97,13 @@ h1
         display: flex
         justify-content: space-between
         align-items: center
+        position: relative
     &__btn
         display: flex
         justify-content: center
         align-items: center
         gap: 15px
+        z-index: 20
     .btn
         &__red
             &::before
@@ -94,6 +117,159 @@ h1
                 &::before
                     background: url('../img/heart_full.svg') center no-repeat
                 background-size: contain
+    &__overflow
+        background: rgba(0, 0, 0, 0.45)
+        position: fixed
+        top: 0
+        left: 0
+        width: 100vw
+        height: 100vh
+        z-index: 10
+        opacity: 0
+        pointer-events: none
+        transition: all .3s
+    &__menu
+        position: absolute
+        top: calc( 100% + 15px )
+        max-height: calc(100vh - 120px)
+        overflow-y: hidden
+        left: 20px
+        right: 20px
+        z-index: 15
+        background: #f0f0f0
+        border-radius: 30px
+        padding: 30px 25px 25px 25px
+        opacity: 0
+        pointer-events: none
+        transition: all .3s
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            width: 1px
+            height: 100%
+            max-height: 100%
+            left: 50%
+            bottom: 0
+            top: 0
+            background: #bdd9e8
+        &_soc
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            flex-wrap: wrap
+            gap: 10px
+            margin: 120px 0 0
+            &_wrapper
+                display: flex
+                flex-direction: column
+                gap: 20px
+            a
+                position: relative
+                width: 56px
+                height: 56px
+                border-radius: 100%
+                border: 1px solid #bdd9e8
+                display: flex
+                justify-content: center
+                align-items: center
+                overflow: hidden
+                transition: all .3s
+                img
+                    width: 26px
+                    height: 26px
+                    display: block
+                    position: relative
+                    transition: all .3s
+                &::before
+                    content: ''
+                    position: relative
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -200%)
+                    transition: all .3s
+                    background: var(--bg) center no-repeat
+                    background-size: contain
+                    width: 26px
+                    height: 26px
+                    display: block
+                    position: absolute
+                &:hover
+                    border: 1px solid #0082c9
+                    background: #0082c9
+                    &::before
+                        transform: translate(-50%, -50%)
+                    img
+                        transform: translateY(200%)
+        ul
+            display: grid
+            grid-template-columns: 1fr
+            gap: 30px
+            a
+                font: 500 35px / 1.2 $font-family
+                color: #0082c9
+                transition: all .3s
+                path
+                    transition: all .3s
+                &:hover
+                    color: #82aec5
+                    path
+                        fill: #82aec5
+        ol
+            display: grid
+            grid-template-columns: 1fr
+            gap: 20px
+            max-height: 0
+            overflow: hidden
+            a
+                font: 400 22px / 1.3 $font-family
+                color: #4686a8
+                &:hover
+                    color: #82aec5
+        &_list
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 50px
+            align-items: start
+            position: relative
+        &_btn
+            display: flex
+            justify-content: space-between
+            align-items: center
+            &.active
+                path
+                    &:nth-child(2)
+                        opacity: 0
+                &+ol
+                    max-height: none
+                    padding: 30px 0
+                    border-bottom: 1px solid #bdd9e8
+    &.active
+        z-index: 15
+        position: sticky
+        top: 0
+        left: 0
+        width: 100vw
+        .btn__trans
+            background: #fff
+            &:hover
+                background: #0082c9
+        .nav
+            &__overflow,
+            &__menu
+                opacity: 1
+                pointer-events: all
+    &.fix
+        width: 100%
+        position: fixed
+        top: 0
+        left: 0
+        transition: all .3s
+        box-shadow: 0px -15px 20px 0px #000
+        transform: translateY(-100%)
+    &.vis
+        transform: none
 .header
     &__wrapper
         margin: 45px 0 0
@@ -115,13 +291,15 @@ h1
         text-transform: uppercase
         color: #0082c9
         max-width: calc( 100% - 100px )
+        i
+            display: inline-block
+            position: relative
+            overflow: hidden                
         span
-            display: block
-            opacity: 0
+            display: inline-block
+            opacity: 1
             transition: all 0.5s 0.5s
-            transform: translateY(50px)
-            &+span
-                transition-delay: 0.8s
+            transform: translateY(100%) !important
     &__text
         font: 400 18px / 1.4 $font-family
         color: #4686a8
@@ -149,8 +327,7 @@ h1
                         transform: translateY(0)
                 &__name
                     span
-                        opacity: 1
-                        transform: translateY(0)
+                        transform: translateY(0) !important
                 &__text
                     opacity: 1
                     transform: translateY(0)
@@ -261,20 +438,6 @@ h1
         font: 400 50px / 1.1 $third-family
         text-transform: uppercase
         color: #fff
-        span
-            transition: all .5s
-            opacity: 0
-            transform: translateY(50px)
-            transition-delay: 0s
-            display: block
-            &+span
-                transition-delay: 0.3s
-                &+span
-                    transition-delay: 0.6s
-        &.element-show
-            span
-                opacity: 1
-                transform: translateY(0)
     &__text
         margin: 40px 0 0
         display: grid
@@ -319,15 +482,6 @@ h1
         font: 400 50px / 1.1 $third-family
         text-transform: uppercase
         color: #0082c9
-        span
-            transition: all .5s
-            opacity: 0
-            transform: translateY(50px)
-            display: inline-block
-        &.element-show
-            span
-                opacity: 1
-                transform: translateY(0)
     &__wrapper
         margin: 40px 0 0
         display: grid
@@ -422,7 +576,6 @@ h1
                     border-radius: 70px
                 &__name
                     color: #82aec5
-
 .footer
     background: #0082c9
     padding-bottom: 36px
@@ -602,6 +755,32 @@ h1
                 content: none
         &__logo
             max-width: 112px
+        &__menu
+            padding: 20px 15px 15px
+            ul
+                gap: 15px
+                a
+                    font-size: 25px
+                svg
+                    width: 16px
+                    height: 16px
+            ol
+                gap: 10px
+                a
+                    font-size: 15px
+            &_btn
+                &.active
+                    &+ol
+                        padding: 15px 0
+            &_soc
+                margin: 70px 0 0
+                a
+                    width: 45px
+                    height: 45px
+                    img,
+                    &::before
+                        width: 20px
+                        height: 20px
     .header
         &__slider
             margin: 20px 0 0
@@ -823,6 +1002,15 @@ h1
             gap: 30px
     .nav
         padding: 11px 0
+        &__menu
+            left: 10px
+            right: 10px
+            overflow: auto
+            &::before
+                content: none
+            &_list
+                grid-template-columns: 1fr
+                gap: 15px
     .header
         &__name
             font-size: 42px
@@ -902,8 +1090,6 @@ h1
             transform: rotate(-90deg) translateY(-50%)
             width: 145px
             height: 75px
-            img
-                w100
     .news
         &__wrapper
             overflow: auto
