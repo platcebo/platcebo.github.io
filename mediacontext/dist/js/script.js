@@ -1517,4 +1517,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    let CaseMore = document.querySelector('.case-list__aside_more'),
+        caseCheck = document.querySelector('.case-list__aside_link');
+
+    if(CaseMore !== null) {
+        CaseMore.addEventListener('click', (e)=>{
+            e.preventDefault();
+            caseCheck.classList.toggle('active');
+        })
+    }
+
+    let caseArrow = document.querySelectorAll('.case-list__aside_arrow');
+
+    if(caseArrow !== null) {
+        caseArrow.forEach((item)=>{
+            item.addEventListener('click', ()=>{
+                item.classList.toggle('active')
+            })
+        })
+    }
+
 }, false);
