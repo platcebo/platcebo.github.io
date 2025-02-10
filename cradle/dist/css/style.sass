@@ -179,7 +179,7 @@ h1
         transition: all .3s
     &__menu
         position: absolute
-        top: calc( 100% + 15px )
+        top: calc( 100% + 19px )
         max-height: calc(100vh - 120px)
         overflow-y: hidden
         left: 20px
@@ -187,7 +187,7 @@ h1
         z-index: 15
         background: #f0f0f0
         border-radius: 30px
-        padding: 30px 25px 25px 25px
+        padding: 22px 25px 25px 25px
         opacity: 0
         pointer-events: none
         transition: all .3s
@@ -208,7 +208,7 @@ h1
             align-items: center
             flex-wrap: wrap
             gap: 10px
-            margin: 120px 0 0
+            margin: 112px 0 0
             &_wrapper
                 display: flex
                 flex-direction: column
@@ -258,7 +258,7 @@ h1
         ul
             display: grid
             grid-template-columns: 1fr
-            gap: 30px
+            gap: 13px
             a
                 font: 500 35px / 1.2 $font-family
                 color: #0082c9
@@ -272,9 +272,10 @@ h1
         ol
             display: grid
             grid-template-columns: 1fr
-            gap: 20px
+            gap: 10px
             max-height: 0
             overflow: hidden
+            transition: all .3s
             a
                 font: 400 22px / 1.3 $font-family
                 color: #4686a8
@@ -290,14 +291,20 @@ h1
             display: flex
             justify-content: space-between
             align-items: center
+            svg
+                position: relative
             &.active
                 path
                     &:nth-child(2)
-                        opacity: 0
+                        // position: absolute
+                        // top: 50%
+                        // left: 50%
+                        transform: rotate(-90deg) translate(-100%, 0)
                 &+ol
-                    max-height: none
-                    padding: 30px 0
+                    max-height: 500px
+                    padding: 30px 0 22px
                     border-bottom: 1px solid #bdd9e8
+                    margin-bottom: 9px
     &.active
         z-index: 15
         position: sticky
@@ -913,13 +920,17 @@ h1
         &__menu
             left: 20em
             right: 20em
-            padding: 20em 15em 15em
+            padding: 14em 15em 15em
+            top: calc(100% + 11em)
+            border-radius: 15em
+            &_list
+                gap: 33px
             ul
-                gap: 15em
+                gap: 5em
                 a
                     font-size: 25em
             ol
-                gap: 10em
+                gap: 6em
                 a
                     font-size: 15em
             &_btn
@@ -929,9 +940,11 @@ h1
                     height: 16em
                 &.active
                     &+ol
-                        padding: 20em 0
+                        padding: 21em 0 13em
+                        margin-bottom: 6em
             &_soc
-                margin: 70em 0 0
+                margin: 64em 0 0
+                gap: 8em
                 a
                     width: 45em
                     height: 45em
@@ -1238,7 +1251,7 @@ h1
                 content: none
             &_list
                 grid-template-columns: 1fr
-                gap: 15em
+                gap: 5em
     .header
         &__name
             font-size: 42em
@@ -1438,3 +1451,223 @@ h1
         background: #fff
         z-index: 5
         cursor: pointer
+
+.rep
+    padding: 91px 0 120px
+    .container__pad
+        margin-bottom: 136px
+    h1
+        line-height: 0.9
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 10px
+        box-sizing: border-box
+        max-height: 0
+        overflow: hidden
+        transition: all .3s
+        &_row
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 100%
+        a
+            width: 100%
+            height: 385px
+            position: relative
+            border-radius: 20px
+            background: #fff
+            transition: all .3s
+            display: flex
+            align-items: flex-end
+            padding: 25px 25px 20px
+            p   
+                font: 400 18px / 1.4 $font-family
+                color: #0082c9
+                transition: all .3s
+                &+p
+                    color: #bdd9e8
+            svg
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                width: 91px
+                height: 91px
+            path
+                transition: all .3s
+            &:hover
+                background: #0082c9
+                path
+                    stroke: #fff
+                p
+                    color: #fff
+                    &+p
+                        color: #77aecc
+    &__btn
+        padding: 27px 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border-top: 1px solid #bdd9e8
+        cursor: pointer
+        p
+            font: 500 35px / 1.2 $font-family
+            color: #0082c9
+        svg,
+        path,
+        p
+            transition: all .3s
+        svg
+            transform: rotate(180deg)
+        &:hover
+            p
+                color: #82aec5
+            path
+                fill: #82aec5
+                stroke: #82aec5
+        &.active
+            &+.rep__wrapper
+                max-height: 1155px
+                padding: 0 0 35px
+            svg
+                transform: rotate(0)
+
+.team
+    padding: 90px 0 160px
+    .container
+        &__pad
+            margin: 0 0 -34px
+        &__wrapper
+            margin: 160px 0 0
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 10px
+    &__item,
+    &__link
+        padding: 25px 25px 15px
+        border: 1px solid #bdd9e8
+        border-radius: 20px
+        min-height: 320px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        gap: 20px
+        img
+            border-radius: 15px
+            width: 140px
+            height: 140px
+            object-fit: cover
+        p
+            font: 500 25px / 1.3 $font-family
+            color: #0082c9
+    &__link
+        &_prev
+            border-radius: 15px
+            background: #fff
+            width: 141px
+            height: 138px
+            display: flex
+            justify-content: center
+            align-items: center
+            transition: all .3s
+            path
+                transition: all .3s
+        &:hover
+            .team
+                &__link
+                    &_prev
+                        background: #0082c9
+                        path
+                            stroke: #EEEEEE
+
+@media ( max-width: 1024px )
+    .rep
+        padding: 48em 0 60em
+        .container
+            &__pad
+                margin-bottom: 67em
+        &__btn
+            padding: 14px 0
+            p
+                font-size: 25em
+            svg
+                width: 14em
+                height: 7em
+            &.active
+                &+.rep__wrapper
+                    padding: 0 0 21em
+        &__wrapper
+            gap: 10em
+            a
+                border-radius: 15em
+                height: 220em
+                padding: 15em 15em 10em
+                p
+                    font-size: 13em
+                svg
+                    width: 60em
+                    height: 60em
+    .team
+        padding: 44em 0 77em
+        .container
+            &__wrapper
+                margin: 80em 0 0
+            &__pad
+                margin-bottom: -20em
+        &__wrapper
+            grid-template-columns: 1fr
+            gap: 8em
+        &__item,
+        &__link
+            border-radius: 15em
+            padding: 15em
+            display: grid
+            grid-template-columns: 127em 1fr
+            align-items: end
+            min-height: auto
+            img,
+            &_prev
+                width: 100%
+                height: 126em
+                svg
+                    width: 47em
+                    height: 47em
+            p
+                font-size: 19em
+
+@media ( max-width: 600px )
+    .rep
+        padding: 66em 0 60em
+        .container
+            &__pad
+                margin-bottom: 66em
+            &__title
+                display: none
+        &__wrapper
+            grid-template-columns: 1fr
+            a
+                height: 300em
+    .team
+        padding: 64em 0 80em
+        .container
+            &__wrapper
+                margin: 81em 0 0
+            &__title
+                br
+                    display: none
+        &__item,
+        &__link
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: start
+            min-height: 216em
+            img,
+            &_prev
+                width: 95em
+                height: 95em
+                svg
+                    width: 35em
+                    height: 35em

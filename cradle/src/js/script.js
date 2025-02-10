@@ -137,4 +137,14 @@ document.addEventListener('DOMContentLoaded', function() {
         pageArrow.addEventListener("click", scrollToTop)
     }
 
+    let repBtn = document.querySelectorAll('.rep__btn');
+
+    if(repBtn !== null) {
+        repBtn.forEach((item)=>{
+            item.addEventListener('click', ()=>{
+                item.classList.toggle('active')
+            })
+        })
+    }
+
 }, false);
