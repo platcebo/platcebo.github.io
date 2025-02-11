@@ -8199,8 +8199,27 @@ textarea.input
             transition: all .3s
             &:hover
                 color: $lighter-purple
-        &_enter
-            display: none
+        &_enter,
+        &_res
+            width: 100%
+            max-width: 100%
+            padding: 20px 20px 20px 30px
+            margin: 30px 0 0
+        &_res
+            margin: 10px 0 0
+            background: $white
+            span
+                color: $black
+                transition: all .3s
+            i
+                padding: 8px
+                transform: none
+                background: $light-gray
+                img
+                    width: 24px
+            &:hover
+                span
+                    color: $white
     &__wrapper
         display: grid
         grid-template-columns: 1fr 1fr 1fr
@@ -8285,6 +8304,9 @@ textarea.input
                     font-size: 16px
             &_more
                 font-size: 16px
+            &_enter,
+            &_res
+                padding: 10px 10px 10px 20px
         &__item
             &_banner
                 width: 60px
@@ -8315,6 +8337,10 @@ textarea.input
             &_info
                 padding: 30px
         &__aside
+            &_res
+                background: $light-gray
+                i
+                    background: $white
             &_more
                 display: none
             &_enter
@@ -8434,7 +8460,8 @@ textarea.input
             width: 100%
             margin: 20px 0 0
         &__aside
-            &_enter
+            &_enter,
+            &_res
                 padding: 15px 15px 15px 20px
                 span
                     font-size: 14px
@@ -8454,6 +8481,9 @@ textarea.input
             &_check
                 p
                     padding: 5px 15px
+                    font-size: 14px
+            &_link
+                p
                     font-size: 14px
         &__block
             padding: 30px 20px
@@ -8559,6 +8589,9 @@ textarea.input
             height: 60px
             border-radius: 10px
             background: $light-gray
+            transition: all .3s
+            path
+                transition: all .3s
         p
             font: 600 36px / 1 $font-family
             letter-spacing: -0.03em
@@ -8571,6 +8604,10 @@ textarea.input
                 color: $black
                 opacity: .5
         &:hover
+            span
+                background: $black
+                path
+                    fill: $white
             p
                 color: $purple
                 &+p
@@ -8723,6 +8760,7 @@ textarea.input
                 grid-template-columns: 60px 1fr
                 gap: 10px
                 align-items: start
+                margin: 20px 0 0
                 img
                     width: 60px
                     height: 60px
