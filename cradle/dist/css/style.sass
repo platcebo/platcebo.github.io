@@ -2087,8 +2087,10 @@ h1
 .purpose
     padding-top: 91px 
     padding-bottom: 71px
+    h1
+        line-height: 0.9
     .container__pad
-        margin-bottom: 142px
+        margin-bottom: 135px
     &__item
         border: 1px solid #bdd9e8
         border-radius: 20px
@@ -2141,6 +2143,13 @@ h1
             width: 100%
             padding: 18px 23px
             text-transform: uppercase
+    &__fund
+        .btn__red
+            display: flex
+            width: 100%
+            padding: 18px 23px
+        img
+            height: 350px
 
 .desc
     &__name
@@ -2200,6 +2209,8 @@ h1
 @media ( max-width: 1024px )
     .purpose
         padding: 41em 0 33em
+        h1
+            line-height: 1
         .container__pad
             margin-bottom: 60em
         &__item
@@ -2234,6 +2245,9 @@ h1
                 height: 250em
             .btn__red
                 display: none
+        &__fund
+            .purpose__info
+                gap: 30em
     .desc
         &__name
             font-size: 32em
@@ -2282,6 +2296,9 @@ h1
             letter-spacing: -.1px
         &__info
             gap: 65em
+        &__fund
+            .purpose__info
+                gap: 36em
     .desc
         .container__wrapper
             gap: 24em
