@@ -2083,3 +2083,221 @@ h1
                 height: 14em
                 top: -5em
                 right: -10em
+
+.purpose
+    padding-top: 91px 
+    padding-bottom: 71px
+    .container__pad
+        margin-bottom: 142px
+    &__item
+        border: 1px solid #bdd9e8
+        border-radius: 20px
+        padding: 17px 25px 25px
+        display: grid
+        grid-template-columns: 399fr 419fr
+        gap: 30px
+    &__name
+        font: 500 25px / 1.3 $font-family
+        color: #0082c9
+        margin: 0 0 auto
+    &__val
+        max-width: 268px
+        p
+            font: 500 35px / 1.2 $font-family
+            color: #0082c9
+            &+p
+                margin: 5px 0 0
+                font: 400 18px / 1.4 $font-family
+                color: #82aec5
+    &__line
+        margin: 15px 0 0
+        border-radius: 4px
+        background: #dbdbdb
+        position: relative
+        overflow: hidden
+        height: 5px
+        span
+            position: absolute
+            left: 0
+            top: 0
+            bottom: 0
+            background: #81ba64
+    &__info
+        display: flex
+        flex-direction: column
+        gap: 20px
+        .btn__red
+            display: none
+            text-transform: uppercase
+    &__prev
+        padding: 8px 0 0
+        img
+            width: 100%
+            height: 285px
+            object-fit: cover
+            border-radius: 15px
+        .btn__red
+            margin: 10px 0 0
+            width: 100%
+            padding: 18px 23px
+            text-transform: uppercase
+
+.desc
+    &__name
+        font: 400 50px / 1.1 $third-family
+        text-transform: uppercase
+        color: #0082c9
+    &__text
+        margin: 21px 0 0
+        display: grid
+        grid-template-columns: 422fr 444fr
+        gap: 30px
+        p
+            font: 400 18px / 1.4 $font-family
+            color: #4686a8
+
+.help
+    padding-top: 73px
+    &__wrapper
+        border-radius: 20px
+        padding: 23px 25px 30px
+        background: #fff
+        display: grid
+        gap: 25px
+    &__item
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: auto 1fr
+        gap: 10px
+        min-height: 160px
+        border-bottom: 1px solid #bdd9e8
+        padding: 0 0 10px
+        &:last-child
+            padding: 0
+            border: none
+    &__val
+        font: 500 35px / 1.2 $font-family
+        color: #0082c9
+        margin: 0 0 auto
+    &__desc
+        display: grid
+        gap: 8px
+        align-self: end
+        p
+            font: 400 16px / 1.3 $font-family
+            color: #89b0c5
+    &__name
+        font: 400 18px / 1.4 $font-family
+        color: #0082c9
+        grid-column: 2/3
+        grid-row: 1/2
+    .btn__trans
+        margin: 35px 0 0
+
+.method__about
+    padding: 80px 0 160px
+
+@media ( max-width: 1024px )
+    .purpose
+        padding: 41em 0 33em
+        .container__pad
+            margin-bottom: 60em
+        &__item
+            padding: 15em
+            grid-template-columns: 1fr
+            gap: 10em
+            border-radius: 20em
+        &__name
+            font-size: 19em
+            line-height: 1.2
+        &__info
+            gap: 55em
+            order: 2
+            .btn__red
+                display: flex
+                width: 100%
+                padding: 13em 13em
+                margin: 20em 0 0
+        &__line
+            margin: 9em 0 0
+            height: 5em
+        &__val
+            max-width: 100%
+            p
+                font-size: 28em
+                &+p
+                    font-size: 13em
+                    margin: calc(var(--gum) * 5) 0 0
+        &__prev
+            padding: 0
+            img
+                height: 250em
+            .btn__red
+                display: none
+    .desc
+        &__name
+            font-size: 32em
+            line-height: 1
+        &__text
+            margin: 17em 0 0
+            gap: 10em
+            grid-template-columns: 1fr
+            p
+                font-size: 13em
+    .help
+        padding: 34em 0 0
+        &__wrapper
+            padding: 15em 15em 18em
+            gap: 17em
+        &__item
+            min-height: 123em
+        &__name
+            font-size: 13em
+        &__val
+            font-size: 25em
+        &__desc
+            gap: 5em
+            p
+                font-size: 11em
+        .btn__trans
+            margin: 20em 0 0
+            padding: 12em 18em
+    .method__about
+        padding: 75em 0 80px
+
+@media ( max-width: 600px )
+    .purpose
+        padding: 64em 0 39em
+        h1
+            line-height: 0.9
+        .container__pad
+            margin-bottom: 65em
+        &__prev
+            img
+                height: 200em
+                border-radius: 12em
+        &__item
+            gap: 10em
+        &__name
+            letter-spacing: -.1px
+        &__info
+            gap: 65em
+    .desc
+        .container__wrapper
+            gap: 24em
+    .help
+        &__wrapper
+            border-radius: 15em
+        &__item
+            min-height: 165em
+            padding: 0 0 10em
+            grid-template-columns: 1fr
+            gap: 5em
+        &__name
+            grid-row: auto
+            grid-column: auto
+        &__desc
+            order: 2
+            display: flex
+            justify-content: space-between
+            align-items: center
