@@ -14,6 +14,19 @@ document.addEventListener('DOMContentLoaded', function() {
         },
     });
 
+    var swiper = new Swiper(".about-page__slider", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".about-page__slider .swiper-button-next",
+          prevEl: ".about-page__slider .swiper-button-prev",
+        },
+        pagination: {
+          el: ".about-page__slider .swiper-pagination",
+          type: "fraction",
+        },
+    });
+
     let statNum = document.querySelectorAll('.stat__val');
 
     if(statNum !== null) {
@@ -143,6 +156,22 @@ document.addEventListener('DOMContentLoaded', function() {
         repBtn.forEach((item)=>{
             item.addEventListener('click', ()=>{
                 item.classList.toggle('active')
+            })
+        })
+    }
+
+    let tabPoint = document.querySelectorAll('.activity__tab_point'),
+        tabWrapper = document.querySelectorAll('.activity__wrapper');
+
+    if(tabPoint !== null) {
+        tabPoint.forEach((item,i)=>{
+            item.addEventListener('click', ()=>{
+                for(let a = 0; a < tabPoint.length; a++) {
+                    tabPoint[a].classList.remove('active')
+                    tabWrapper[a].classList.remove('active')
+                }
+                item.classList.add('active')
+                tabWrapper[i].classList.add('active')
             })
         })
     }

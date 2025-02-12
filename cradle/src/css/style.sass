@@ -123,7 +123,7 @@ h1
         color: #0082c9
     &__wrapper
         display: grid
-        grid-template-columns: 282px 1fr
+        grid-template-columns: 282px calc(100% - 302px)
         gap: 20px
         align-items: start
     &__pad
@@ -892,7 +892,7 @@ h1
         &__title
             font-size: 11em
         &__wrapper
-            grid-template-columns: 130em 1fr
+            grid-template-columns: 130em calc( 100% - 150em )
             gap: 20em
         &__pad
             padding-left: 153em
@@ -1227,7 +1227,7 @@ h1
     .container
         padding: 0 10em
         &__wrapper
-            grid-template-columns: 1fr
+            grid-template-columns: 100%
             gap: 27em
         &__pad
             padding-left: 0
@@ -1582,6 +1582,33 @@ h1
                         path
                             stroke: #EEEEEE
 
+.doc
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr
+        gap: 10px
+    &__item
+        position: relative
+        border-radius: 20px
+        box-shadow: 0 0 0 0 rgba(120, 120, 120, 0.02), 0 2px 5px 0 rgba(120, 120, 120, 0.02), 0 10px 10px 0 rgba(120, 120, 120, 0.02), 0 22px 13px 0 rgba(120, 120, 120, 0.01), 0 39px 16px 0 rgba(120, 120, 120, 0), 0 61px 17px 0 rgba(120, 120, 120, 0)
+        background: #fff
+        padding: 18px 25px
+        min-height: 200px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: start
+        .btn__trans
+            position: absolute
+            bottom: 24px
+            right: 24px
+        p
+            font: 500 25px / 1.3 $font-family
+            color: #0082c9            
+            &+p
+                font: 400 18px / 1.4 $font-family
+                color: #bdd9e8
+
 @media ( max-width: 1024px )
     .rep
         padding: 48em 0 60em
@@ -1636,6 +1663,22 @@ h1
                     height: 47em
             p
                 font-size: 19em
+    .doc
+        padding: 44em 0 80em
+        &__wrapper
+            gap: 10em
+        &__item
+            min-height: 150em
+            padding: 12em 17em 9em
+            border-radius: 10em
+            p
+                font-size: 19em
+                &+p
+                    font-size: 13em
+            .btn__trans
+                bottom: 14em
+                right: 15em
+                padding: 11em 15em
 
 @media ( max-width: 600px )
     .rep
@@ -1674,3 +1717,369 @@ h1
                 svg
                     width: 35em
                     height: 35em
+    .doc
+        &__item
+            min-height: 180em
+            padding: 12em 15em 9em
+            .btn__trans
+                bottom: 17em
+
+.about-page
+    padding: 90px 0 78px
+    &__content
+        max-width: 750px
+        h3
+            font: 500 25px / 1.2 $font-family
+            color: #0082c9
+            margin: 0 0 30px
+        p
+            font: 400 18px / 1.4 $font-family
+            color: #4686a8
+            margin: 0 0 20px
+            &:last-child
+                margin: 0
+    &__slider
+        margin: 44px 0 0
+    &__slide
+        position: relative
+        overflow: hidden
+        border-radius: 30px
+        img
+            height: 600px
+            object-fit: cover
+            width: 100%
+    .swiper-button-prev,
+    .swiper-button-next
+        opacity: 1
+        width: 57px
+        height: 47px
+        margin: 0
+        right: auto
+        top: auto
+        transform: none
+        left: 30px
+        bottom: 20px
+        svg
+            transition: all .3s
+        &::after
+            content: none
+        &:hover,
+        &.swiper-button-disabled
+            svg
+                opacity: .5
+    .swiper-button-next
+        left: 112px
+    .swiper-pagination
+        width: max-content
+        left: auto
+        top: auto
+        transform: none
+        right: 30px
+        margin: 0
+        bottom: 30px
+        font: 500 35px / 1.2 $font-family
+        color: rgba(255, 255, 255, 0.5)
+        .swiper-pagination-current
+            color: #fff
+
+.activity
+    &__tab
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 10px
+        flex-wrap: wrap
+        &_point
+            border: 1px solid #bdd9e8
+            border-radius: 8px
+            padding: 10px 30px
+            min-width: 205px
+            font: 500 20px / 1.2 $font-family
+            color: #82aec5
+            transition: all .3s
+            text-align: center
+            cursor: pointer
+            &.active,
+            &:hover
+                background: #0082c9
+                color: #fff
+    &__wrapper
+        transition: all .3s
+        margin: 34px 0 0
+        display: none
+        max-width: 858px
+        ul
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 48px
+            row-gap: 19px
+            p
+                font: 400 18px / 1.4 $font-family
+                color: #4686a8
+            li
+                display: grid
+                grid-template-columns: 23px 1fr
+                &::before
+                    content: ''
+                    display: block
+                    width: 8px
+                    height: 8px
+                    border-radius: 100%
+                    background: #0082c9
+                    margin: 9px 0 0
+        &.active
+            display: block
+    &__prev
+        margin: 38px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        img
+            width: 164px
+            height: 164px
+            border-radius: 100%
+            object-fit: cover   
+        span
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 164px
+            height: 164px
+            background: #0082c9
+            border-radius: 100%
+            margin: 0 0 0 -35px
+            z-index: -1
+    
+.principle
+    padding-bottom: 160px
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 10px
+        counter-reset: princ
+    &__item
+        display: flex
+        flex-direction: column
+        gap: 12px
+        min-height: 270px
+        border: 1px solid #bdd9e8
+        border-radius: 20px
+        padding: 22px 25px
+        box-shadow: 0 0 0 0 rgba(120, 120, 120, 0.02), 0 2px 5px 0 rgba(120, 120, 120, 0.02), 0 10px 10px 0 rgba(120, 120, 120, 0.02), 0 22px 13px 0 rgba(120, 120, 120, 0.01), 0 39px 16px 0 rgba(120, 120, 120, 0), 0 61px 17px 0 rgba(120, 120, 120, 0)
+        &::before
+            content: '0' counter(princ)
+            counter-increment: princ 1
+            font: 500 25px / 1.3 $font-family
+            color: #aac8d9
+            margin: 0 0 auto
+        p
+            font: 500 25px / 1.3 $font-family
+            color: #0082c9
+            &+p
+                font: 400 18px / 1.4 $font-family
+                color: #4686a8
+
+.quote
+    background: #0082c9
+    padding-top: 100px
+    padding-bottom: 97px
+    .container__title
+        color: #fff
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 233px
+        gap: 25px
+    &__name
+        font: 400 50px / 1 $third-family
+        text-transform: uppercase
+        color: #fff
+        margin: 0 0 auto
+    &__block
+        display: flex
+        flex-direction: column
+    &__info
+        p
+            font: 400 18px / 1.4 $font-family
+            color: #fff
+            &+p
+                font: 400 16px / 1.3 $font-family
+                color: rgba(255, 255, 255, 0.5)
+                margin: 2px 0 0
+    &__prev
+        position: relative
+        img
+            width: 233px
+            height: 233px
+            border-radius: 20px
+        svg
+            top: -19px
+            right: -31px
+            position: absolute
+
+.news__method
+    padding-top: 80px
+
+@media ( max-width: 1024px )
+    .about-page
+        padding: 43em 0 38em
+        &__content
+            h3
+                font-size: 19em
+                margin: 0 0 calc(var(--gum) * 15)
+                br
+                    display: none
+            p
+                font-size: 13em
+                margin: 0 0 calc(var(--gum) * 16)
+        &__slider
+            margin: 25em 0 0
+        &__slide
+            border-radius: 20em
+            img
+                height: 299em
+        .swiper-pagination
+            font-size: 19em
+            bottom: calc(var(--gum) * 15)
+            right: calc(var(--gum) * 20)
+        .swiper-button-prev,
+        .swiper-button-next
+            width: 30em
+            height: 36em
+            bottom: 20em
+            left: 20em
+        .swiper-button-next
+            left: 68em
+    .activity
+        &__tab
+            gap: 8em
+            &_point
+                font-size: 14em
+                padding: calc(var(--gum) * 6) calc(var(--gum) * 15)
+                min-width: auto
+                border-radius: calc(var(--gum) * 5)
+        &__wrapper
+            margin: 20em 0 0
+            ul
+                grid-template-columns: 1fr
+                gap: 11em
+                p
+                    font-size: 13em
+                li
+                    grid-template-columns: 15em 1fr
+                    &::before
+                        width: 5em
+                        height: 5em
+                        margin: 7em 0 0
+        &__prev
+            margin: 20em 0 0
+            img,
+            span
+                width: 108em
+                height: 108em
+            svg
+                width: 45em
+                height: 45em
+            span
+                margin: 0 0 0 -24em
+    .principle
+        padding-bottom: 80em
+        &__wrapper
+            gap: 10em
+            grid-template-columns: 1fr
+        &__item
+            min-height: 180em
+            padding: 15em
+            gap: 6em
+            border-radius: 15em
+            &::before
+                font-size: 19em
+            p
+                font-size: 19em
+                &+p
+                    font-size: 13em
+    .quote
+        padding-top: 50px
+        padding-bottom: 45px
+        &__wrapper
+            grid-template-columns: 1fr
+            gap: 14em
+        &__prev
+            order: -1
+            max-width: max-content
+            img
+                width: 55em
+                height: 55em
+                border-radius: 10em
+            svg
+                width: 29em
+                height: 18em
+                top: -8em
+                right: -14em
+        &__name
+            font-size: 32em
+        &__info
+            margin: 15em 0 0
+            p
+                font-size: 13px
+                &+p
+                    font-size: 11px
+                    margin: 0
+    .news__method
+        padding-top: 40px 
+
+@media ( max-width: 600px )
+    .about-page
+        padding: 64em 0 38em
+        .container__wrapper
+            gap: 23em
+        &__slide
+            img
+                height: 290em
+        .swiper-button-next,
+        .swiper-button-prev
+            width: 30em
+            height: 25em
+            left: 18em
+            bottom: 18em
+        .swiper-button-next
+            left: 58em
+        .swiper-pagination
+            font-size: 14em
+            right: calc(var(--gum) * 18)
+            bottom: calc(var(--gum) * 15)
+    .activity
+        &__tab
+            flex-wrap: nowrap   
+            width: 100vw
+            margin: 0 -10em
+            padding: 0 10em
+            overflow-x: scroll
+        &__prev
+            margin: 21em 0 0
+            img,
+            span
+                width: 81em
+                height: 81em
+            span
+                margin: 0 0 0 -17em
+                svg
+                    width: 34em
+                    height: 34em
+    .principle
+        &__item
+            min-height: 200em
+    .quote
+        padding-bottom: 50em
+        padding-top: 53em
+        &__wrapper
+            gap: 20em
+        &__prev
+            img
+                width: 45em
+                height: 45em
+                border-radius: 8em
+            svg
+                width: 21em
+                height: 14em
+                top: -5em
+                right: -10em
