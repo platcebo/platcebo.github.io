@@ -348,7 +348,8 @@ h1
             height: 405px
             object-fit: cover
             opacity: 0
-            transition: all 1s 1.5s
+            transition: all 3s .7s
+            transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
             transform: scale(1)
     &__slider
         margin: 29px 0 0
@@ -368,7 +369,8 @@ h1
             --dimension: attr(data-del s)
             display: inline-block
             opacity: 1
-            transition: all 1s
+            transition: all 2s 
+            transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
             transform: translateY(100%) !important
             transition-delay: var(--data-del) !important
     &__text
@@ -376,11 +378,13 @@ h1
         color: #4686a8
         max-width: 444px
         opacity: 0
-        transition: all 1s 1.5s
+        transition: all 3s .7s
+        transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
     .btn__trans
         margin: 28px 0 0
         opacity: 0
-        transition: all .3s, transform 0.5s 1s, opacity 0.5s 1s
+        transition: all .3s, transform 3s .7s, opacity 3s .7s
+        transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
     &__slide
         opacity: 0 !important
         transition: all 0.5s 0s !important
