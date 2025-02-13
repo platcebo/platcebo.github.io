@@ -1,18 +1,21 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', function() {
-    var swiper = new Swiper(".header__slider", {
+    var swiperHeader = new Swiper(".header__slider", {
         slidesPerView: 1,
         effect: "fade",
         navigation: {
           nextEl: ".header__slider .swiper-button-next",
           prevEl: ".header__slider .swiper-button-prev",
         },
-        pagination: {
-          el: ".header__slider .swiper-pagination",
-          type: "fraction",
-        },
     });
+
+    let headerPag = document.querySelector('.header__pag span');
+
+    swiperHeader.on('slideChange', function () {
+        console.log(swiperHeader.activeIndex)
+        headerPag.style.transform = 'translateY(-'+ swiperHeader.activeIndex * 100 +'%)'
+    });      
 
     var swiper = new Swiper(".about-page__slider", {
         slidesPerView: 1,
@@ -82,7 +85,11 @@ document.addEventListener('DOMContentLoaded', function() {
             a = 1;
             element.innerHTML = text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text
             setInterval(() => {
-                element.style.transform = 'translateY(-' + a +'px)'
+                if(element.classList.contains('parthner__col_rev')) {
+                    element.style.transform = 'translateY(' + a +'px)'
+                } else {
+                    element.style.transform = 'translateY(-' + a +'px)'
+                }
                 a += 0.3
                 if (a >= 5000) {
                     a = 1
@@ -113,6 +120,13 @@ document.addEventListener('DOMContentLoaded', function() {
         navOverflow.forEach((item,i)=>{
             item.addEventListener('click', ()=>{
                 nav[i].classList.toggle('active');
+                if(nav[i].classList.contains('active')) {
+                    document.body.style.overflow = "hidden"
+                    navCall[i].innerHTML = '<i link="Закрыть"><span>Закрыть</span></i>'
+                } else {
+                    document.body.style.overflow = "visible"
+                    navCall[i].innerHTML = '<i link="Меню"><span>Меню</span></i>'
+                }
             })
         })
         navBtn.forEach((item)=>{
@@ -148,6 +162,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         pageArrow.addEventListener("click", scrollToTop)
+
+        window.addEventListener('scroll',()=>{
+            if(window.scrollY > 1000) {
+                pageArrow.classList.add('vis')
+            } else {
+                pageArrow.classList.remove('vis')
+            }
+        })
     }
 
     let repBtn = document.querySelectorAll('.rep__btn');
@@ -160,8 +182,8 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
-    let tabPoint = document.querySelectorAll('.activity__tab_point'),
-        tabWrapper = document.querySelectorAll('.activity__wrapper');
+    let tabPoint = document.querySelectorAll('.tab-point'),
+        tabWrapper = document.querySelectorAll('.tab-wrapper');
 
     if(tabPoint !== null) {
         tabPoint.forEach((item,i)=>{
