@@ -2447,6 +2447,12 @@ h1
             &+p
                 font: 400 18px / 1.4 $font-family
                 color: #4686a8
+            a
+                color: #4686a8
+                text-decoration: underline
+                transition: all .3s
+                &:hover
+                    color: #0082c9
 
 .need
     padding-bottom: 160px
@@ -2573,3 +2579,226 @@ h1
                     grid-template-columns: 19em 1fr
                     &::before
                         padding: 7em auto
+
+.donate
+    &__tab
+        border-bottom: 1px solid #bdd9e8
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 35px
+        p
+            font: 500 20px / 1.2 $font-family
+            color: #82aec5
+            padding: 0 0 10px
+            position: relative
+            cursor: pointer
+            &::before
+                content: ''
+                display: block
+                width: 100%
+                height: 3px
+                bottom: -1px
+                background: #0082c9
+                opacity: 0
+                transition: all .3s
+                position: absolute
+            &.active
+                color: #0082c9
+                &::before
+                    opacity: 1
+    &__wrapper
+        margin: 40px 0 0
+        display: none
+        &.active
+            display: block
+    &__radio
+        border-radius: 12px
+        padding: 8px
+        width: max-content
+        background: #fff
+        gap: 8px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        div
+            position: relative
+        p
+            padding: 7px 16px
+            font: 500 20px / 1.2 $font-family
+            color: #82aec5
+            transition: all .3s
+            border-radius: 5px
+        input
+            position: absolute
+            width: 100%
+            height: 100%
+            opacity: 0
+            z-index: 2
+            cursor: pointer
+            &:checked,
+            &:hover
+                &+p
+                    background: #0082c9
+                    color: #fff
+    &__val
+        margin: 28px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 10px
+        &_radio
+            position: relative
+            p
+                padding: 12px
+                font: 500 23px / 1.2 $font-family
+                color: #0082c9
+                transition: all .3s
+                border-radius: 1000px
+                background: #fff
+                text-align: center
+            input
+                position: absolute
+                width: 100%
+                height: 100%
+                opacity: 0
+                z-index: 2
+                cursor: pointer
+                &:checked,
+                &:hover
+                    &+p
+                        background: #0082c9
+                        color: #fff
+        &_input
+            position: relative
+            grid-column: 2/4
+            // display: flex
+            // justify-content: center
+            // align-items: center
+            // gap: 5px
+            input
+                text-align: center
+                font: 500 25px / 1.2 $font-family
+                color: #fff
+                padding: 12px
+                border-radius: 1000px
+                background: #fff
+                border: none
+                width: 100%
+                transition: all .3s
+                box-sizing: border-box
+                &::placeholder
+                    color: #aac8d9
+                &:focus,
+                &:not(:placeholder-shown)
+                    background: #0082c9
+    &__input
+        margin: 28px 0 0
+        display: grid
+        grid-template-columns: 1fr
+        gap: 10px
+        input
+            font: 400 18px / 1.4 $font-family
+            color: #0082c9
+            padding: 14px 24px
+            width: 100%
+            border-radius: 40px
+            background: #fff
+            transition: all .3s
+            border: 1px solid #fff
+            box-sizing: border-box
+            &::placeholder
+                color: #89b0c5
+            &:focus,
+            &:hover
+                border: 1px solid #bdd9e8
+        &_select   
+            position: relative
+            z-index: 1
+            ul
+                max-height: 0
+                overflow: hidden
+                transition: all .3s
+                border-radius: 0 0 30px 30px
+                border: 1px solid #fff
+                border-top: none
+                border-bottom: none 
+                background: #fff
+                transition-delay: 0s
+                li
+                    padding: 14px 24px
+                    font: 400 18px / 1.4 $font-family
+                    color: #0082c9
+                    transition: all .3s
+                    background: #fff
+                    cursor: pointer
+                    &:hover
+                        background: #eff9ff
+            svg
+                position: absolute
+                top: 25px
+                right: 20px
+                position: absolute
+                transition: all .3s
+            input
+                cursor: pointer !important   
+                pointer-events: all     
+                z-index: 1
+                transition: all .3s .3s, border .3s 0s
+                border-radius: 30px
+                &.active
+                    border-radius: 30px 30px 0 0
+                    border: 1px solid #fff
+                    transition-delay: 0s
+                    &+ul
+                        max-height: 600px
+                        transition-delay: .3s
+                        border-bottom: 1px solid #fff
+                        &+svg
+                            transform: rotate(180deg)
+    &__policy
+        display: grid
+        grid-template-columns: 14px 1fr
+        gap: 20px
+        position: relative
+        margin: 20px 0 0
+        p
+            max-width: 505px
+            font: 400 14px / 1.4 $font-family
+            color: #77aecc
+            a
+                color: #77aecc
+                text-decoration: underline
+                text-decoration-skip-ink: none
+                transition: all .3s
+                &:hover
+                    color: #0082c9
+        span
+            width: 14px
+            height: 14px
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 2px
+            background: transparent
+            border: 1px solid #0082c9
+            transition: all .3s
+            svg
+                opacity: 0
+                transition: all .3s
+        input
+            position: absolute
+            width: 14px
+            height: 14px
+            top: 0
+            left: 0
+            z-index: 2
+            opacity: 0
+            &:checked
+                &+span
+                    background: #0082c9
+                    svg
+                        opacity: 1
+    .btn__red
+        margin: 20px 0 0
+        width: 100%
+        max-width: 291px

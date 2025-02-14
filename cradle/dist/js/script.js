@@ -201,4 +201,20 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    let donateInput = document.querySelector('.donate__input_select input'),
+        donateSelect = document.querySelector('.donate__input_select ul');
+
+    if(donateInput !== null) {
+        donateInput.addEventListener('click',()=>{
+            donateInput.classList.toggle('active')
+        })
+        donateSelect.addEventListener('click', (event)=>{
+            let target = event.target;
+            if(target == target && target.closest('li')) {
+                donateInput.classList.remove('active');
+                donateInput.value = target.innerHTML
+            }
+        })
+    }
+
 }, false);
