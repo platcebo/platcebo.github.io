@@ -109,10 +109,13 @@ document.addEventListener('DOMContentLoaded', function() {
             item.addEventListener('click', ()=>{
                 nav[i].classList.toggle('active');
                 if(nav[i].classList.contains('active')) {
+                    var widthBefore = document.body.offsetWidth;
                     document.body.style.overflow = "hidden"
+                    document.body.style.width = widthBefore + "px";
                     item.innerHTML = '<i link="Закрыть"><span>Закрыть</span></i>'
                 } else {
                     document.body.style.overflow = "visible"
+                    document.body.style.width = "";
                     item.innerHTML = '<i link="Меню"><span>Меню</span></i>'
                 }
             })
