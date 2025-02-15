@@ -996,6 +996,13 @@ h1
                 gap: 6em
                 a
                     font-size: 15em
+            &_icon
+                width: calc( var(--gum) * 16 )
+                height: calc( var(--gum) * 16 )
+                &::before
+                    height: calc( var(--gum) * 2 )
+                &::after
+                    width: calc( var(--gum) * 2 )
             &_btn
                 svg
                     font-size: var(--gum)
@@ -1787,16 +1794,15 @@ h1
         padding: 44em 0 77em
         .container
             &__wrapper
-                margin: 80em 0 0
+                margin: 76em 0 0
             &__pad
-                margin-bottom: -20em
+                margin-bottom: -7em
         &__wrapper
             grid-template-columns: 1fr
             gap: 8em
-        &__item
-            gap: 15em
         &__item,
         &__link
+            gap: 15em
             border-radius: 15em
             padding: 15em
             display: grid
@@ -1846,8 +1852,10 @@ h1
     .team
         padding: 60em 0 80em
         .container
+            &__pad
+                margin-bottom: 0
             &__wrapper
-                margin: 81em 0 0
+                margin: 60em 0 0
             &__title
                 br
                     display: none
