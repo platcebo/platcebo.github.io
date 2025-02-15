@@ -959,17 +959,17 @@ h1
             gap: 20em
         &__pad
             padding-left: 153em
-            margin-bottom: 60em
+            margin-bottom: 72em
     .btn
         &__red,
         &__trans
-            padding: 9em 13em 11em
+            padding: 9em 13em 10em
             font-size: var(--gum)
             span,
             i::before
                 font-size: 14em
         &__trans
-            padding: 8em 13em 10em
+            padding: 8em 13em 9em
     .nav    
         padding: 12em 0
         &__logo
@@ -1056,6 +1056,8 @@ h1
             span
                 max-height: calc( var(--gum) * 23 )
     .fees
+        .container__pad
+            padding-bottom: 69em
         &__item
             padding: 20em 0
             grid-template-columns: 142em 1fr 20em
@@ -1324,7 +1326,7 @@ h1
             gap: 27em
         &__pad
             padding-left: 0
-            margin-bottom: 63em
+            margin-bottom: 70em
     .nav
         padding: 11em 0
         &__btn
@@ -1501,9 +1503,13 @@ h1
             max-width: 100vw
             padding: 0 10em
             margin: 0 -10em
+            -ms-overflow-style: none
+            scrollbar-width: none
             p
                 padding: calc(var(--gum) * 6) calc(var(--gum) * 14)
                 white-space: nowrap
+            &::-webkit-scrollbar 
+                display: none
         &__block
             grid-template-columns: 1fr
             gap: 10em
