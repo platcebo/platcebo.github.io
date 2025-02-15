@@ -112,10 +112,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     var widthBefore = document.body.offsetWidth;
                     document.body.style.overflow = "hidden"
                     document.body.style.width = widthBefore + "px";
+                    nav[i].style.width = widthBefore + "px";
                     item.innerHTML = '<i link="Закрыть"><span>Закрыть</span></i>'
                 } else {
                     document.body.style.overflow = "visible"
                     document.body.style.width = "";
+                    nav[i].style.width = "";
                     item.innerHTML = '<i link="Меню"><span>Меню</span></i>'
                 }
             })
@@ -123,13 +125,9 @@ document.addEventListener('DOMContentLoaded', function() {
         navOverflow.forEach((item,i)=>{
             item.addEventListener('click', ()=>{
                 nav[i].classList.toggle('active');
-                if(nav[i].classList.contains('active')) {
-                    document.body.style.overflow = "hidden"
-                    navCall[i].innerHTML = '<i link="Закрыть"><span>Закрыть</span></i>'
-                } else {
-                    document.body.style.overflow = "visible"
-                    navCall[i].innerHTML = '<i link="Меню"><span>Меню</span></i>'
-                }
+                nav[i].style.width = "";
+                document.body.style.overflow = "visible"
+                navCall[i].innerHTML = '<i link="Меню"><span>Меню</span></i>'
             })
         })
         navBtn.forEach((item)=>{
