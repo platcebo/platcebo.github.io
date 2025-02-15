@@ -1481,6 +1481,10 @@ h1
             margin: 0 -10em
             padding: 0 10em
             grid-template-columns: 1fr 1fr 1fr
+            -ms-overflow-style: none
+            scrollbar-width: none
+            &::-webkit-scrollbar 
+                display: none
             .news__item
                 &:nth-child(3)
                     display: flex
@@ -1505,11 +1509,11 @@ h1
             margin: 0 -10em
             -ms-overflow-style: none
             scrollbar-width: none
+            &::-webkit-scrollbar 
+                display: none
             p
                 padding: calc(var(--gum) * 6) calc(var(--gum) * 14)
                 white-space: nowrap
-            &::-webkit-scrollbar 
-                display: none
         &__block
             grid-template-columns: 1fr
             gap: 10em
@@ -1596,8 +1600,6 @@ h1
     padding: 91px 0 120px
     .container__pad
         margin-bottom: 136px
-    h1
-        line-height: 0.9
     &__wrapper
         display: grid
         grid-template-columns: 1fr 1fr
@@ -1767,8 +1769,10 @@ h1
             &.active
                 &+.rep__wrapper
                     padding: 0 0 21em
+                    max-height: 500em
         &__wrapper
             gap: 10em
+            transition-timing-function: ease
             a
                 max-height: none
                 border-radius: 15em
@@ -2235,8 +2239,6 @@ h1
 .purpose
     padding-top: 91px 
     padding-bottom: 71px
-    h1
-        line-height: 0.9
     .container__pad
         margin-bottom: 135px
     &__item
@@ -2475,8 +2477,6 @@ h1
     padding-top: 93px
     .container__pad
         margin-bottom: 134px    
-    h1
-        line-height: 0.9
     &__wrapper
         display: grid
         grid-template-columns: 1fr 1fr
