@@ -215,4 +215,38 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    let modal = document.querySelector('.modal-thanks'),
+        modalClose = document.querySelector('.modal-thanks__close'),
+        modalNext = document.querySelector('.modal-thanks .btn__red'),
+        modalOverflow = document.querySelector('.modal-thanks__overflow'),
+        modalData = document.querySelector('.modal-data'),
+        modalDataClose = document.querySelector('.modal-data__close'),
+        modalDataOverflow = document.querySelector('.modal-data__overflow'),
+        modalCall = document.querySelectorAll('.modal-thanks__call');
+
+    if(modal !== null) {
+        modalCall.forEach((item)=>{
+            item.addEventListener('click', (event)=>{
+                event.preventDefault()
+                modal.classList.add('active')
+            })
+        })
+        modalClose.addEventListener('click', ()=>{
+            modal.classList.remove('active')
+        })
+        modalOverflow.addEventListener('click', ()=>{
+            modal.classList.remove('active')
+        })
+        modalNext.addEventListener('click', ()=>{
+            modal.classList.remove('active')
+            modalData.classList.add('active')
+        })
+        modalDataClose.addEventListener('click', ()=>{
+            modalData.classList.remove('active')
+        })
+        modalDataOverflow.addEventListener('click', ()=>{
+            modalData.classList.remove('active')
+        })
+    }
+
 }, false);
