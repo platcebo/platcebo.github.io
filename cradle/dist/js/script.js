@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
         slidesPerView: 1,
         effect: "fade",
         navigation: {
-          nextEl: ".header__slider .swiper-button-next",
-          prevEl: ".header__slider .swiper-button-prev",
+            nextEl: ".header__slider .swiper-button-next",
+            prevEl: ".header__slider .swiper-button-prev",
         },
     });
 
@@ -21,14 +21,20 @@ document.addEventListener('DOMContentLoaded', function() {
         slidesPerView: 1,
         spaceBetween: 30,
         navigation: {
-          nextEl: ".about-page__slider .swiper-button-next",
-          prevEl: ".about-page__slider .swiper-button-prev",
+            nextEl: ".about-page__slider .swiper-button-next",
+            prevEl: ".about-page__slider .swiper-button-prev",
         },
         pagination: {
-          el: ".about-page__slider .swiper-pagination",
-          type: "fraction",
-        },
+            el: ".about-page__slider .swiper-pagination",
+            type: "fraction",
+            formatFractionCurrent: addZero,
+            formatFractionTotal: addZero
+        }, 
     });
+
+    function addZero(num){
+        return (num > 9) ? num : '0' + num;
+    }     
 
     let statNum = document.querySelectorAll('.stat__val');
 
@@ -52,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         let options = { threshold: [0.5] };
         let observer = new IntersectionObserver(onEntry, options);
-        let elements = document.querySelectorAll('.stat');
+        let elements = document.querySelectorAll('.stat__val');
         for (let elm of elements) {
             observer.observe(elm);
         }

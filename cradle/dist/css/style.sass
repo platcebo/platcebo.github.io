@@ -19,6 +19,9 @@ h1
     text-transform: uppercase
     color: #0082c9
     letter-spacing: -.8px
+input
+    &.error
+        border: 1px solid #c34545 !important
 .element-animation
     i
         display: inline-block
@@ -1736,6 +1739,10 @@ h1
                             stroke: #EEEEEE
 
 .doc
+    padding: 86px 0 160px
+    .container
+        &__pad
+            margin: 0 0 -16px
     &__wrapper
         display: grid
         grid-template-columns: 1fr
@@ -1838,6 +1845,9 @@ h1
                 bottom: 14em
                 right: 15em
                 padding: 11em 15em 12em
+        .container
+            &__wrapper
+                margin: 79em 0 0
 
 @media ( max-width: 600px )
     .rep
@@ -1887,15 +1897,23 @@ h1
             padding: 12em 15em 9em
             .btn__trans
                 bottom: 17em
+        .container
+            &__wrapper
+                margin: 78em 0 0
+            &__pad
+                margin-bottom: -9em
 
 .about-page
-    padding: 90px 0 78px
+    padding: 83px 0 78px
+    .container
+        &__pad
+            margin-bottom: 138px
     &__content
         max-width: 750px
         h3
-            font: 500 25px / 1.2 $font-family
+            font: 500 25px / 1.3 $font-family
             color: #0082c9
-            margin: 0 0 30px
+            margin: 0 0 25px
         p
             font: 400 18px / 1.4 $font-family
             color: #4686a8
@@ -1904,6 +1922,7 @@ h1
                 margin: 0
     &__slider
         margin: 44px 0 0
+        border-radius: 30px
     &__slide
         position: relative
         overflow: hidden
@@ -1922,7 +1941,7 @@ h1
         top: auto
         transform: none
         left: 30px
-        bottom: 20px
+        bottom: 31px
         svg
             transition: all .3s
         &::after
@@ -1940,9 +1959,10 @@ h1
         transform: none
         right: 30px
         margin: 0
-        bottom: 30px
+        bottom: 22px
         font: 500 35px / 1.2 $font-family
         color: rgba(255, 255, 255, 0.5)
+        letter-spacing: -2px
         .swiper-pagination-current
             color: #fff
 
@@ -2085,7 +2105,10 @@ h1
 
 @media ( max-width: 1024px )
     .about-page
-        padding: 43em 0 38em
+        padding: 43em 0 40em
+        .container
+            &__pad
+                margin-bottom: 66em
         &__content
             h3
                 font-size: 19em
@@ -2094,9 +2117,10 @@ h1
                     display: none
             p
                 font-size: 13em
-                margin: 0 0 calc(var(--gum) * 16)
+                margin: 0 0 calc(var(--gum) * 15)
         &__slider
             margin: 25em 0 0
+            border-radius: 20em
         &__slide
             border-radius: 20em
             img
@@ -2105,10 +2129,11 @@ h1
             font-size: 19em
             bottom: calc(var(--gum) * 15)
             right: calc(var(--gum) * 20)
+            letter-spacing: -1px
         .swiper-button-prev,
         .swiper-button-next
-            width: 30em
-            height: 36em
+            width: 36em
+            height: 30em
             bottom: 20em
             left: 20em
         .swiper-button-next
@@ -2194,6 +2219,9 @@ h1
 @media ( max-width: 600px )
     .about-page
         padding: 64em 0 38em
+        &__content
+            h3
+                line-height: 1.2
         .container__wrapper
             gap: 23em
         &__slide
@@ -2218,6 +2246,10 @@ h1
             margin: 0 -10em
             padding: 0 10em
             overflow-x: scroll
+            -ms-overflow-style: none
+            scrollbar-width: none
+            &::-webkit-scrollbar 
+                display: none
         &__prev
             margin: 21em 0 0
             img,
@@ -2235,8 +2267,6 @@ h1
     .quote
         padding-bottom: 50em
         padding-top: 53em
-        &__wrapper
-            gap: 20em
         &__prev
             img
                 width: 45em
@@ -2249,10 +2279,12 @@ h1
                 right: -10em
 
 .purpose
-    padding-top: 91px 
+    padding-top: 86px 
     padding-bottom: 71px
+    h1
+        max-width: 600px
     .container__pad
-        margin-bottom: 135px
+        margin-bottom: 138px
     &__item
         border: 1px solid #bdd9e8
         border-radius: 20px
@@ -2269,10 +2301,18 @@ h1
         p
             font: 500 35px / 1.2 $font-family
             color: #0082c9
+            &::after
+                content: '₽'
+                display: inline
+                // font: 500 35px / 1.2 $font-family
+                color: #0082c9
+                margin: 0 0 0 5px
             &+p
                 margin: 5px 0 0
                 font: 400 18px / 1.4 $font-family
                 color: #82aec5
+                &::after
+                    content: none
     &__line
         margin: 15px 0 0
         border-radius: 4px
@@ -2362,8 +2402,18 @@ h1
         color: #0082c9
         grid-column: 2/3
         grid-row: 1/2
+        max-width: 350px
     .btn__trans
         margin: 35px 0 0
+    &-block
+        .help
+            &__item
+                min-height: 167px
+                padding: 0 0 14px
+                &:last-child
+                    padding: 0
+            &__wrapper
+                gap: 23px
 
 .method__about
     padding: 80px 0 160px
@@ -2372,9 +2422,10 @@ h1
     .purpose
         padding: 41em 0 33em
         h1
-            line-height: 1
+            line-height: .85
+            max-width: calc(var(--gum) * 310)
         .container__pad
-            margin-bottom: 60em
+            margin-bottom: 69em
         &__item
             padding: 15em
             grid-template-columns: 1fr
@@ -2384,7 +2435,7 @@ h1
             font-size: 19em
             line-height: 1.2
         &__info
-            gap: 55em
+            gap: 54em
             order: 2
             .btn__red
                 display: flex
@@ -2438,6 +2489,15 @@ h1
         .btn__trans
             margin: 20em 0 0
             padding: 12em 18em 13em
+        &-block
+            .help
+                &__item
+                    min-height: 124em
+                    padding: 0 0 10em
+                &__desc
+                    gap: 7em
+                &__wrapper
+                    gap: 16em
     .method__about
         padding: 75em 0 80px
 
@@ -2445,9 +2505,9 @@ h1
     .purpose
         padding: 64em 0 39em
         h1
-            line-height: 0.9
+            line-height: .75
         .container__pad
-            margin-bottom: 65em
+            margin-bottom: 70em
         &__prev
             img
                 height: 200em
@@ -2464,6 +2524,9 @@ h1
     .desc
         .container__wrapper
             gap: 24em
+        &__text
+            margin: 13em 0 0
+            gap: 13em
     .help
         &__wrapper
             border-radius: 15em
@@ -2484,6 +2547,14 @@ h1
             align-items: center
         .btn__trans
             padding: 12em 15em 13em
+        &-block
+            .help
+                &__item
+                    min-height: 170em
+                    padding: 0 0 9em
+                &__wrapper
+                    gap: 15em
+                    padding: 15em 15em 20em
 
 .transfer
     padding-top: 93px
@@ -2650,13 +2721,14 @@ h1
                         padding: 7em auto
 
 .donate
-    padding-top: 93px
+    padding-top: 82px
     padding-bottom: 67px
+    z-index: 5
     h1
         max-width: 800px
     .container
         &__pad
-            margin-bottom: 135px
+            margin-bottom: 137px
     &__tab
         border-bottom: 1px solid #bdd9e8
         display: flex
@@ -2791,8 +2863,12 @@ h1
                 border: 1px solid #bdd9e8
         &_select   
             position: relative
-            z-index: 1
+            z-index: 5
             ul
+                top: 100%
+                left: 0
+                width: 100%
+                position: absolute
                 max-height: 0
                 overflow: hidden
                 transition: all .3s
@@ -2802,6 +2878,7 @@ h1
                 border-bottom: none 
                 background: #fff
                 transition-delay: 0s
+                z-index: 5
                 li
                     padding: 14px 24px
                     font: 400 18px / 1.4 $font-family
@@ -2836,9 +2913,9 @@ h1
     &__policy
         display: grid
         grid-template-columns: 14px 1fr
-        gap: 20px
+        gap: 13px
         position: relative
-        margin: 20px 0 0
+        margin: 18px 0 0
         p
             max-width: 505px
             font: 400 14px / 1.4 $font-family
@@ -2851,6 +2928,7 @@ h1
                 &:hover
                     color: #0082c9
         span
+            margin: 2px 0 0
             width: 14px
             height: 14px
             display: flex
@@ -2858,7 +2936,7 @@ h1
             align-items: center
             border-radius: 2px
             background: transparent
-            border: 1px solid #0082c9
+            border: 1px solid #bdd9e8
             transition: all .3s
             svg
                 opacity: 0
@@ -2874,10 +2952,11 @@ h1
             &:checked
                 &+span
                     background: #0082c9
+                    border: 1px solid #0082c9
                     svg
                         opacity: 1
     .btn__red
-        margin: 22px 0 0
+        margin: 24px 0 0
         width: 100%
         max-width: 291px
         padding: 19px 23px
@@ -3054,12 +3133,12 @@ h1
         padding: 45em 0 15em
         .container
             &__pad
-                margin-bottom: 69em
+                margin-bottom: 70em
         &__tab
             gap: 25em
             p
                 font-size: 14em
-                padding: 0 0 calc(var(--gum) * 6)
+                padding: 0 0 calc(var(--gum) * 7)
                 &::before
                     height: calc(var(--gum) * 2)
         &__wrapper
@@ -3095,7 +3174,7 @@ h1
                 ul
                     border-radius: 0 0 calc(var(--gum) * 25) calc(var(--gum) * 25)
                     li
-                        font-size: 13px
+                        font-size: 13em
                         padding: calc(var(--gum) * 11) calc(var(--gum) * 20)
                 input
                     &.active
@@ -3112,11 +3191,12 @@ h1
             span
                 width: 10em
                 height: 10em
+                margin: 2em 0 0
             p
                 font-size: 11em
         .btn__red
             max-width: 143em
-            margin: 15em 0 0
+            margin: 17em 0 0
             padding: 12em 13em 13em
         &__req
             border-radius: 15em
@@ -3154,6 +3234,9 @@ h1
             .transfer
                 &__wrapper
                     grid-template-columns: 1fr
+                &__item
+                    padding: 15em 15em 14em
+                    gap: 7em
     .modal-thanks
         &__block
             max-width: 448em
@@ -3209,17 +3292,21 @@ h1
                 display: none
             &__pad
                 margin-bottom: 68em 
+        &__tab
+            p
+                padding: 0 0 calc(var(--gum) * 6)
         .btn__red
-            margin: 11em 0 0
+            margin: 15em 0 0
             max-width: 100%
         &__val
             grid-template-columns: 1fr 1fr
             &_input
                 grid-column: 1/3
         &__req
+            padding: 17em 15em 13em
             li
-                gap: 8em
-                padding: 0 0 12em
+                gap: 5em
+                padding: 0 0 14em
                 p
                     &:last-child
                         font-size: 11em
@@ -3236,6 +3323,7 @@ h1
         .transfer
             &__item
                 min-height: 201em
+                gap: 8em
     .modal-thanks
         padding: 10em
         &__block
