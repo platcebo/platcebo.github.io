@@ -2564,9 +2564,11 @@ input
                     padding: 15em 15px 4px
 
 .transfer
-    padding-top: 93px
+    padding-top: 82px
+    h1
+        max-width: 400px
     .container__pad
-        margin-bottom: 134px    
+        margin-bottom: 142px    
     &__wrapper
         display: grid
         grid-template-columns: 1fr 1fr
@@ -2631,6 +2633,7 @@ input
             p
                 font: 400 18px / 1.4 $font-family
                 color: #4686a8
+                max-width: 400px
         img
             width: 100%
             height: 266px
@@ -2640,19 +2643,21 @@ input
 
 @media ( max-width: 1024px )
     .transfer
-        padding-top: 65em
+        padding-top: 44em
+        h1
+            max-width: calc(var(--gum) * 300)
         .container
             &__title
                 max-width: calc(var(--gum) * 70)
             &__pad
-                margin-bottom: 67em
+                margin-bottom: 74em
         &__wrapper
             gap: 10em
         &__item
             min-height: 183em
             border-radius: 15em
-            padding: 15em 15em 15em
-            gap: 5em
+            padding: 15em 15em 14em
+            gap: 6em
             p
                 font-size: 19em
                 &+p
@@ -2679,6 +2684,7 @@ input
                 margin: 9em 0 0
                 p
                     font-size: 13em
+                    max-width: calc(var(--gum) * 176)
                 li
                     grid-template-columns: 10em 1fr
                     &::before
@@ -2693,18 +2699,19 @@ input
 
 @media ( max-width: 600px )
     .transfer
-        padding-top: 67em
+        padding-top: 60em
         .container
             &__pad
-                margin-bottom: 61em
+                margin-bottom: 67em
             &__title
                 max-width: 100%
         &__wrapper
             grid-template-columns: 1fr
             gap: 10em
         &__item
-            gap: 5em
+            gap: 8em
             min-height: 183em
+            padding: 15em 15em 13em
             img
                 margin: 0
                 order: -1
@@ -2712,6 +2719,7 @@ input
                 &+p
                     letter-spacing: normal
     .need
+        padding-bottom: 75em
         &__wrapper
             gap: 20em
         &__item
