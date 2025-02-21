@@ -2415,10 +2415,9 @@ input
                 padding: 0 0 14px
                 &:last-child
                     // padding: 0
-                    background: #000
             &__wrapper
                 gap: 23px
-                padding: 23px 25px 24px
+                padding: 23px 25px 10px
 
 .method__about
     padding: 80px 0 160px
@@ -2499,11 +2498,13 @@ input
                 &__item
                     min-height: 124em
                     padding: 0 0 10em
+                    &:last-child
+                        padding: 0 0 11px
                 &__desc
                     gap: 7em
                 &__wrapper
                     gap: 16em
-                    padding: 15em 15em 13em
+                    padding: 15em 15em 3em
     .method__about
         padding: 75em 0 80px
 
@@ -2560,7 +2561,7 @@ input
                     padding: 0 0 9em
                 &__wrapper
                     gap: 15em
-                    padding: 15em
+                    padding: 15em 15px 4px
 
 .transfer
     padding-top: 93px
@@ -3056,6 +3057,11 @@ input
         top: 20px
         right: 20px
         cursor: pointer
+        path
+            transition: all .3s
+        &:hover
+            path
+                stroke: #0082c9
     h3
         font: 400 50px / 1.1 $third-family
         text-transform: uppercase
@@ -3126,6 +3132,11 @@ input
         top: 20px
         right: 20px
         cursor: pointer
+        path
+            transition: all .3s
+        &:hover
+            path
+                stroke: #0082c9
     &__icon
         margin: 0 auto
         width: 65px
@@ -3261,7 +3272,7 @@ input
         p
             font-size: 13em
             max-width: calc(var(--gum) * 270)
-            margin: calc(var(--gum) * 13) 0 0
+            margin: calc(var(--gum) * 13) auto 0
         input
             font-size: 13em
             padding: calc(var(--gum) * 10) calc(var(--gum) * 20)
@@ -3297,6 +3308,7 @@ input
         p
             margin: calc(var(--gum) * 15) 0 0
             font-size: 19em
+            line-height: 1.2
 
 @media ( max-width: 600px )
     .donate
@@ -3342,6 +3354,8 @@ input
         padding: 10em
         &__block
             width: 100%
+        h3
+            line-height: 1
 
 .program
     padding-bottom: 160px

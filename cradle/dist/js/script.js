@@ -235,13 +235,24 @@ document.addEventListener('DOMContentLoaded', function() {
             item.addEventListener('click', (event)=>{
                 event.preventDefault()
                 modal.classList.add('active')
+                document.body.style.width = "";
+                var widthBefore = document.body.offsetWidth;
+                document.body.style.overflow = "hidden"
+                document.body.style.width = widthBefore + "px";
+                nav.forEach(item => item.style.width = widthBefore + "px")
             })
         })
         modalClose.addEventListener('click', ()=>{
             modal.classList.remove('active')
+            document.body.style.overflow = "visible"
+            document.body.style.width = "";
+            nav.forEach(item => item.style.width = "")
         })
         modalOverflow.addEventListener('click', ()=>{
             modal.classList.remove('active')
+            document.body.style.overflow = "visible"
+            document.body.style.width = "";
+            nav.forEach(item => item.style.width = "")
         })
         modalNext.addEventListener('click', ()=>{
             modal.classList.remove('active')
@@ -249,9 +260,15 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         modalDataClose.addEventListener('click', ()=>{
             modalData.classList.remove('active')
+            document.body.style.overflow = "visible"
+            document.body.style.width = "";
+            nav.forEach(item => item.style.width = "")
         })
         modalDataOverflow.addEventListener('click', ()=>{
             modalData.classList.remove('active')
+            document.body.style.overflow = "visible"
+            document.body.style.width = "";
+            nav.forEach(item => item.style.width = "")
         })
     }
 
