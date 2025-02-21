@@ -86,4 +86,20 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    let tab = document.querySelectorAll('.empl__tab p'),
+        tabWrapper = document.querySelectorAll('.empl__wrapper');
+
+    if(tab !== null) {
+        tab.forEach((item,i)=>{
+            item.addEventListener('click', ()=>{
+                for(let a = 0; a < tab.length; a++) {
+                    tab[a].classList.remove('active');
+                    tabWrapper[a].classList.remove('active');
+                }
+                item.classList.add('active')
+                tabWrapper[i].classList.add('active')
+            })
+        })
+    }
+
 }, false);

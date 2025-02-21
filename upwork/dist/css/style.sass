@@ -359,7 +359,7 @@ section
                     color: $white
                     margin: 0 0 0 15px
         &_place
-            display: flex
+            display: flex !important
             justify-content: flex-start
             align-items: center
             gap: 9px
@@ -376,7 +376,7 @@ section
             font: 500 18px / 1.4 $font-family
             color: $blue
         &_desc
-            margin: 13px 0 0
+            margin: 13px 0 auto
             p
                 font: 400 15px / 1.45 $font-family
                 color: $gray-dark
@@ -384,7 +384,7 @@ section
             margin: 11px 0 0
             padding: 11px 0 0
             border-top: 1px solid $gray-light
-            display: flex
+            display: flex !important
             justify-content: space-between
             align-items: center
             p
@@ -956,7 +956,8 @@ section
             padding: 0 0 8px
 
 .header-search
-    background: url('../img/header_search.svg') top center no-repeat
+    background-position: top center 
+    background-repeat: no-repeat
     background-size: cover
     padding: 0 0 30px
     .header
@@ -1114,7 +1115,9 @@ section
         display: grid
         grid-template-columns: 200px 1fr
         gap: 30px
-        align-items: start
+        // align-items: start
+        div
+            display: grid
         &_prev
             img
                 width: 100%
@@ -1417,6 +1420,7 @@ section
         p
             color: $main-dark
             font: 400 15px / 1.45 $font-family
+            margin: 8px 0 0
         h3
             margin: 20px 0 0
     &__footer
@@ -1453,6 +1457,8 @@ section
         padding: 20px
         &_logo
             width: 100%
+            max-height: 200px
+            object-fit: contain
         &_info
             margin: 11px 0 0
             padding: 0 0 13px
@@ -1589,6 +1595,13 @@ section
                 content: none
             &:hover
                 color: $blue-dark
+    .vacancy-page__hot_empl
+        padding-left: 6px
+        padding-right: 6px
+        max-width: 441px 
+        img
+            max-height: 107px
+            object-fit: cover
 
 .vacancy-form
     padding: 0 0 40px
@@ -2576,9 +2589,152 @@ section
             gap: 10px
 
 .empl
-    padding: 0 0 30px
+    padding: 0 0 50px
     &__container
         border-radius: 5px
         box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
         background: $white
         padding: 30px
+    &__tab
+        border-bottom: 1px solid $gray-light
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 73px
+        p
+            padding: 0 18px 7px
+            position: relative
+            cursor: pointer
+            font: 400 17px / 1.4 $font-family
+            color: $gray-dark
+            transition: all .3s
+            &::before
+                content: ''
+                display: block
+                width: 100%
+                bottom: -1px
+                left: 0
+                height: 1px
+                position: absolute
+                transition: all .3s
+                background: $gray-dark
+            &.active
+                color: $main-dark
+                &::before
+                    background: $blue
+    &__wrapper
+        display: none
+        margin: 50px 0 0
+        &.active
+            display: block
+    .category
+        &__list
+            margin: 0
+            max-width: 933px
+    &__map
+        display: grid
+        grid-template-columns: 508px 1fr
+        gap: 63px
+        align-items: end
+        img
+            width: 100%
+        .category
+            &__list
+                grid-template-columns: 1fr
+                gap:3px
+    &__more
+        display: block
+        font: 400 17px / 1.4 $font-family
+        color: $blue
+
+.resume
+    padding: 0 0 50px
+    &__item
+        padding: 24px 30px 17px
+        display: grid !important
+        p
+            &.resume__name
+                font: 500 18px / 1.4 $font-family
+                color: $blue
+            &.resume__pro
+                padding: 1px 10px
+                border-radius: 3px
+                background: $green
+                font: 400 12px / 1.4 $font-family
+                color: $white
+    &__text
+        margin: 6px 0 0
+        font: 400 17px / 1.4 $font-family
+        color: $gray-dark
+    &__desc
+        p
+            color: $main-dark   
+
+.sub__empl
+    .sub
+        &__container
+            z-index: 1
+            background: #1b101d
+        &__bg
+            width: 714px
+            height: 100%
+            left: 0
+            top: 0
+            bottom: 0
+            z-index: -1
+            object-fit: cover
+
+.vacancy-page__empl
+    &::before
+        background-image: url('../img/vacancy-page_empl.svg')
+    &_contact
+        max-width: 370px
+        margin: 0 auto 0 0
+        p
+            font: 400 15px / 1.45 $font-family
+            color: $main-dark
+            a
+                color: $blue
+
+@media ( max-width: 1024px )
+    .empl
+        &__map
+            grid-template-columns: 1fr 1fr
+            gap: 20px
+
+@media ( max-width: 768px )
+    .empl
+        &__tab
+            gap: 20px
+            p
+                padding: 0 0 5px  
+        &__map
+            grid-template-columns: 1fr  
+    .publish__employer img
+        margin: 0 -36px    
+        width: calc( 100% + 72px )  
+    .sub__empl .sub__bg
+        max-width: 100%
+        object-fit: contain
+        object-position: left bottom
+
+@media ( max-width: 600px )
+    .resume__item
+        padding: 10px
+        .vacancy__item_place
+            flex-wrap: wrap
+    .publish__employer img
+        margin: 0 -20px
+        width: calc( 100% + 40px )
+    .empl
+        &__container
+            padding: 10px
+        &__tab 
+            gap: 10px
+            overflow-x: auto
+            padding: 0 0 1px
+            p
+                white-space: nowrap
+                font-size: 14px
+        &__wrapper
+            margin: 20px 0 0
