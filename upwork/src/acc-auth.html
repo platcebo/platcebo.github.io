@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upwork</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <section class="vacancy-page company acc">
+        <nav class="nav">
+            <div class="container">
+                <a href="#" class="nav__logo">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <ul class="nav__list">
+                    <li><a href="#">Найти вакансии</a></li>
+                    <li><a href="#" class="active">Разместить резюме</a></li>
+                </ul>
+                <div class="nav__lang dropdown">
+                    <div class="nav__lang_row dropdown__btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_6555_243" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                <rect x="0.25" y="0.25" width="15.5" height="15.5" rx="7.75" fill="white" stroke="white" stroke-width="0.5" />
+                            </mask>
+                            <g mask="url(#mask0_6555_243)">
+                                <rect x="0.25" y="0.25" width="21.9" height="15.5" rx="1.75" fill="white" stroke="#F5F5F5" stroke-width="0.5" />
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10.6666H22.4V5.33325H0V10.6666Z" fill="#0C47B7" />
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 16.0001H22.4V10.6667H0V16.0001Z" fill="#E53B35" />
+                            </g>
+                        </svg>
+                        <p>RU</p>
+                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 5L0.535899 1.25L7.4641 1.25L4 5Z" fill="#969FA9" />
+                        </svg>
+                    </div>
+                    <ul class="dropdown__list">
+                        <li class="nav__lang_row">
+                            <a href="#">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_6555_243" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                        <rect x="0.25" y="0.25" width="15.5" height="15.5" rx="7.75" fill="white" stroke="white" stroke-width="0.5" />
+                                    </mask>
+                                    <g mask="url(#mask0_6555_243)">
+                                        <rect x="0.25" y="0.25" width="21.9" height="15.5" rx="1.75" fill="white" stroke="#F5F5F5" stroke-width="0.5" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10.6666H22.4V5.33325H0V10.6666Z" fill="#0C47B7" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 16.0001H22.4V10.6667H0V16.0001Z" fill="#E53B35" />
+                                    </g>
+                                </svg>
+                                <p>RU</p>
+                            </a>
+                        </li>
+                        <li class="nav__lang_row">
+                            <a href="#">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_292_479" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                    <rect x="0.25" y="0.25" width="15.5" height="15.5" rx="7.75" fill="white" stroke="white" stroke-width="0.5"/>
+                                    </mask>
+                                    <g mask="url(#mask0_292_479)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.33333H16V0H0V5.33333Z" fill="#04AAC8"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 16.0001H16V10.6667H0V16.0001Z" fill="#23C840"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6667 1.33338C14.6667 1.62793 14.3682 1.86672 14 1.86672C13.6318 1.86672 13.3333 1.62793 13.3333 1.33338C13.3333 1.03883 13.6318 0.800049 14 0.800049C14.3682 0.800049 14.6667 1.03883 14.6667 1.33338ZM6 4.80005C6.41129 4.80005 6.79358 4.70073 7.11144 4.53044C7.07461 4.53239 7.03745 4.53338 7 4.53338C6.07952 4.53338 5.33333 3.93642 5.33333 3.20004C5.33333 2.46366 6.07952 1.86671 7 1.86671C7.03744 1.86671 7.07459 1.8677 7.11141 1.86964C6.79355 1.69936 6.41127 1.60005 6 1.60005C4.89543 1.60005 4 2.31639 4 3.20005C4 4.0837 4.89543 4.80005 6 4.80005ZM8.5 3.55005C8.5 3.68812 8.38807 3.80005 8.25 3.80005C8.11193 3.80005 8 3.68812 8 3.55005C8 3.41198 8.11193 3.30005 8.25 3.30005C8.38807 3.30005 8.5 3.41198 8.5 3.55005ZM8.25 2.30005C8.38807 2.30005 8.5 2.18812 8.5 2.05005C8.5 1.91198 8.38807 1.80005 8.25 1.80005C8.11193 1.80005 8 1.91198 8 2.05005C8 2.18812 8.11193 2.30005 8.25 2.30005ZM11.25 3.80005C11.3881 3.80005 11.5 3.68812 11.5 3.55005C11.5 3.41198 11.3881 3.30005 11.25 3.30005C11.1119 3.30005 11 3.41198 11 3.55005C11 3.68812 11.1119 3.80005 11.25 3.80005ZM10 3.55005C10 3.68812 9.88807 3.80005 9.75 3.80005C9.61193 3.80005 9.5 3.68812 9.5 3.55005C9.5 3.41198 9.61193 3.30005 9.75 3.30005C9.88807 3.30005 10 3.41198 10 3.55005Z" fill="white"/>
+                                    </g>
+                                </svg>                            
+                                <p>UZ</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="nav__enter btn__transparent">Войти</button>
+                <a href="#" class="nav__for">
+                    <span>Работодателю</span> 
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5L1 3.5ZM8.35355 4.35355C8.54882 4.15829 8.54882 3.84171 8.35355 3.64645L5.17157 0.464466C4.97631 0.269204 4.65973 0.269204 4.46447 0.464466C4.2692 0.659729 4.2692 0.976311 4.46447 1.17157L7.29289 4L4.46447 6.82843C4.2692 7.02369 4.2692 7.34027 4.46447 7.53553C4.65973 7.7308 4.97631 7.7308 5.17157 7.53553L8.35355 4.35355ZM1 4.5L8 4.5L8 3.5L1 3.5L1 4.5Z" fill="white" />
+                    </svg>
+                </a>
+                <div class="nav__hum">
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <a href="#" class="back">
+                <svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.646447 4.35355C0.451184 4.15829 0.451184 3.84171 0.646447 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646447 4.35355ZM2 4.5H1V3.5H2V4.5Z" fill="#1D3B95" />
+                </svg>
+                <span>На главную</span>
+            </a>
+            <div class="contact-page__container acc-auth">
+                <div class="contact-page__block">
+                    <h1>Код ЄДРПОУ или ИНН</h1>
+                    <p class="contact-page__text">Введите код ЄДРПОУ или ИНН. Ваши данные не будут размещены и мы не передадим их кому-либо. Они нужны нам только для проверки подлинности вашей компании.</p>
+                    <div class="contact-page__row">
+                        <input type="text" placeholder="Введите тему своего сообщения">
+                    </div>
+                    <div class="contact-page__btn">
+                        <button class="btn__blue">Подтвердить</button>
+                        <a href="#">Очистить</a>
+                    </div>
+                </div>
+                <div class="acc__block acc-quest">
+                    <h3>Остались вопросы?</h3>
+                    <p>Если у вас возник вопрос или предложение, напишите нам.</p>
+                    <button class="btn__transparent btn__transparent_blue">Задать вопрос</button>
+                </div>
+                <div class="acc__block acc-conf">
+                    <h3>Как подтвердить подлинность компании?</h3>
+                    <p>Подтвердить подлинность вашей компании очень просто:</p>
+                    <ul>
+                        <li>
+                            <p><strong>1)</strong> Введите код ЄДРПОУ или ИНН</p>
+                        </li>
+                        <li>
+                            <p><strong>2)</strong> <a href="#">Проверьте ваши контакты</a> и будьте готовы принять звонок</p>
+                        </li>
+                        <li>
+                            <p><strong>3)</strong> Наш сотрудник проверит код и позвонит вам, чтобы сообщить результат.</p>
+                        </li>
+                    </ul>
+                    <p><strong>Ваши данные никому не покажем!</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__logo">
+                <a href="#">
+                    <img src="img/logo_footer.svg" alt="">
+                </a>
+                <p class="footer__desc">© 2020 Upwork.uz <br><span>Сервис для поиска работы.</span></p>
+            </div>
+            <div class="footer__menu">
+                <div class="footer__row">
+                    <a href="#">Найти вакансии</a>
+                    <a href="#">Разместить резюме</a>
+                </div>
+                <ul class="footer__list">
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Помощь</a></li>
+                    <li><a href="#">Условия использования</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="nav__lang dropdown">
+                    <div class="nav__lang_row dropdown__btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_6555_243" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                              <rect x="0.25" y="0.25" width="15.5" height="15.5" rx="7.75" fill="white" stroke="white" stroke-width="0.5" />
+                            </mask>
+                            <g mask="url(#mask0_6555_243)">
+                              <rect x="0.25" y="0.25" width="21.9" height="15.5" rx="1.75" fill="white" stroke="#F5F5F5" stroke-width="0.5" />
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10.6666H22.4V5.33325H0V10.6666Z" fill="#0C47B7" />
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 16.0001H22.4V10.6667H0V16.0001Z" fill="#E53B35" />
+                            </g>
+                        </svg>
+                        <p>RU</p>
+                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 5L0.535899 1.25L7.4641 1.25L4 5Z" fill="#383B49" />
+                        </svg>
+                    </div>
+                    <ul class="dropdown__list">
+                        <li class="nav__lang_row">
+                            <a href="#">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_6555_243" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                      <rect x="0.25" y="0.25" width="15.5" height="15.5" rx="7.75" fill="white" stroke="white" stroke-width="0.5" />
+                                    </mask>
+                                    <g mask="url(#mask0_6555_243)">
+                                      <rect x="0.25" y="0.25" width="21.9" height="15.5" rx="1.75" fill="white" stroke="#F5F5F5" stroke-width="0.5" />
+                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10.6666H22.4V5.33325H0V10.6666Z" fill="#0C47B7" />
+                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 16.0001H22.4V10.6667H0V16.0001Z" fill="#E53B35" />
+                                    </g>
+                                </svg>
+                                <p>RU</p>
+                            </a>
+                        </li>
+                        <li class="nav__lang_row">
+                            <a href="#">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_292_479" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                    <rect x="0.25" y="0.25" width="15.5" height="15.5" rx="7.75" fill="white" stroke="white" stroke-width="0.5"/>
+                                    </mask>
+                                    <g mask="url(#mask0_292_479)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.33333H16V0H0V5.33333Z" fill="#04AAC8"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 16.0001H16V10.6667H0V16.0001Z" fill="#23C840"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6667 1.33338C14.6667 1.62793 14.3682 1.86672 14 1.86672C13.6318 1.86672 13.3333 1.62793 13.3333 1.33338C13.3333 1.03883 13.6318 0.800049 14 0.800049C14.3682 0.800049 14.6667 1.03883 14.6667 1.33338ZM6 4.80005C6.41129 4.80005 6.79358 4.70073 7.11144 4.53044C7.07461 4.53239 7.03745 4.53338 7 4.53338C6.07952 4.53338 5.33333 3.93642 5.33333 3.20004C5.33333 2.46366 6.07952 1.86671 7 1.86671C7.03744 1.86671 7.07459 1.8677 7.11141 1.86964C6.79355 1.69936 6.41127 1.60005 6 1.60005C4.89543 1.60005 4 2.31639 4 3.20005C4 4.0837 4.89543 4.80005 6 4.80005ZM8.5 3.55005C8.5 3.68812 8.38807 3.80005 8.25 3.80005C8.11193 3.80005 8 3.68812 8 3.55005C8 3.41198 8.11193 3.30005 8.25 3.30005C8.38807 3.30005 8.5 3.41198 8.5 3.55005ZM8.25 2.30005C8.38807 2.30005 8.5 2.18812 8.5 2.05005C8.5 1.91198 8.38807 1.80005 8.25 1.80005C8.11193 1.80005 8 1.91198 8 2.05005C8 2.18812 8.11193 2.30005 8.25 2.30005ZM11.25 3.80005C11.3881 3.80005 11.5 3.68812 11.5 3.55005C11.5 3.41198 11.3881 3.30005 11.25 3.30005C11.1119 3.30005 11 3.41198 11 3.55005C11 3.68812 11.1119 3.80005 11.25 3.80005ZM10 3.55005C10 3.68812 9.88807 3.80005 9.75 3.80005C9.61193 3.80005 9.5 3.68812 9.5 3.55005C9.5 3.41198 9.61193 3.30005 9.75 3.30005C9.88807 3.30005 10 3.41198 10 3.55005Z" fill="white"/>
+                                    </g>
+                                </svg>                            
+                                <p>UZ</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="nav__for">
+                    <span>Работодателю</span> 
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5L1 3.5ZM8.35355 4.35355C8.54882 4.15829 8.54882 3.84171 8.35355 3.64645L5.17157 0.464466C4.97631 0.269204 4.65973 0.269204 4.46447 0.464466C4.2692 0.659729 4.2692 0.976311 4.46447 1.17157L7.29289 4L4.46447 6.82843C4.2692 7.02369 4.2692 7.34027 4.46447 7.53553C4.65973 7.7308 4.97631 7.7308 5.17157 7.53553L8.35355 4.35355ZM1 4.5L8 4.5L8 3.5L1 3.5L1 4.5Z" fill="white" />
+                    </svg>
+                </a>
+            </div>
+            <p class="footer__desc">© 2020 Upwork.uz <br><span>Сервис для поиска работы.</span></p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -102,4 +102,13 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    let accBtn = document.querySelector('.acc-recom__btn');
+
+    if(accBtn !== null) {
+        accBtn.addEventListener('click', (e)=>{
+            e.preventDefault();
+            accBtn.classList.toggle('active')
+        })
+    }
+
 }, false);
