@@ -44,7 +44,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (change.isIntersecting) {
                     function statVal(a) {
                         if(Number(a.innerHTML) < a.dataset.val) {
-                            a.innerHTML = Number(a.innerHTML) + 1;
+                            if(a.dataset.plus == null) {
+                                a.innerHTML = Number(a.innerHTML) + 1;
+                            } else {
+                                a.innerHTML = Number(a.innerHTML) + Number(a.dataset.plus);
+                                console.log(a.dataset.plus)
+                            }
                             setTimeout(()=>{statVal(a)}, 10);
                         } else {
                             return
