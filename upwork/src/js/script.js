@@ -86,8 +86,8 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
-    let tab = document.querySelectorAll('.empl__tab p'),
-        tabWrapper = document.querySelectorAll('.empl__wrapper');
+    let tab = document.querySelectorAll('.tab p'),
+        tabWrapper = document.querySelectorAll('.tab-wrapper');
 
     if(tab !== null) {
         tab.forEach((item,i)=>{
