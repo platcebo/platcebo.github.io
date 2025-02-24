@@ -1521,6 +1521,12 @@ document.addEventListener('DOMContentLoaded', function() {
         caseCheck = document.querySelector('.case-list__aside_link');
 
     if(CaseMore !== null) {
+        caseCheck.classList.add('active');
+        if(caseCheck.getBoundingClientRect().height < 200) {
+            return
+        } else {
+            caseCheck.classList.remove('active');
+        }
         CaseMore.addEventListener('click', (e)=>{
             e.preventDefault();
             caseCheck.classList.toggle('active');
