@@ -10,118 +10,6 @@
     <link rel="stylesheet" href="css/reset.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.min.css">
-    <style>
-        /* .acc-card {
-            width: 90%;
-            max-width: 973px;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 8px;
-        }
-        .header {
-            font-size: 25px;
-            font-weight: 500;
-            color: #383b49;
-            margin-bottom: 30px;
-        }
-        .content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
-        .left-column, .right-column {
-            flex: 1;
-            min-width: 300px;
-        }
-        .logo {
-            width: 100%;
-            height: auto;
-            border: 1px solid #e9e9e9;
-            margin-bottom: 15px;
-        }
-        .button {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 10px;
-            border-radius: 2px;
-            font-size: 12px;
-            cursor: pointer;
-            text-align: center;
-        }
-        .replace-photo {
-            background: linear-gradient(180deg, #fff 0%, #f6f6f6 52.6%, #fff 100%);
-            border: 1px solid #7d7aff;
-            color: #1d3b95;
-        }
-        .delete-photo {
-            border: 1px solid #d76060;
-            background: transparent;
-            color: #1d3b95;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-group label {
-            display: block;
-            color: #383b49;
-            font-size: 17px;
-            margin-bottom: 8px;
-        }
-        .form-group input {
-            width: 100%;
-            height: 40px;
-            padding: 0 15px;
-            border: 1px solid #282f3626;
-            border-radius: 5px;
-            font-size: 17px;
-        }
-        .form-group input[type="text"]:not([value=""]),
-        .form-group input[type="email"]:not([value=""]),
-        .form-group input[type="number"]:not([value=""]) {
-            color: #383b49;
-        }
-        .form-group input[type="text"][placeholder],
-        .form-group input[type="email"][placeholder],
-        .form-group input[type="number"][placeholder] {
-            color: #969fa9;
-        }
-        .checkbox-group {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .checkbox-group label {
-            display: flex;
-            align-items: center;
-            gap: 7px;
-            cursor: pointer;
-        }
-        .checkbox-group input {
-            width: 18px;
-            height: 18px;
-        }
-        .actions {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-        .save-button {
-            padding: 10px 16px;
-            background: #e9e9e9;
-            border: 1px solid #f5f5f5;
-            border-radius: 4px;
-            color: #969fa9;
-            font-weight: 600;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        .reset-link {
-            color: #969fa9;
-            text-decoration: underline;
-            font-size: 15px;
-        } */
-    </style>
 </head>
 <body>
     <section class="vacancy-page company">
@@ -220,32 +108,478 @@
                             <h1>Размещенные вакансии</h1>
                             <button class="btn__blue">+  Разместить вакансию</button>
                         </div>
-                        <div class="empl__tab tab">
+                        <div class="empl__tab tab acc__tab">
                             <p class="active">Опубликованные вакансии</p>
                             <p>Удаленные вакансии</p>
                         </div>
                         <div class="empl__wrapper tab-wrapper active">
                             <div class="acc-vacancy__wrapper">
                                 <div class="acc-vacancy__item">
-                                    <div></div>
+                                    <div class="acc-vacancy__col">
+                                        <div class="acc-vacancy__name">
+                                            <h3>Senior Front End Developer</h3>
+                                            <div class="dropdown">
+                                                <div class="dropdown__btn">
+                                                    <p>Вакансия активна</p>
+                                                    <svg width="7" height="5" viewBox="0 0 7 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 4.22266L0.468912 0.139323L6.53109 0.139324L3.5 4.22266Z" fill="white" />
+                                                    </svg>
+                                                </div>
+                                                <ul class="dropdown__list">
+                                                    <li class="nav__lang_row">
+                                                        <a href="#">
+                                                            <p>Вакансия активна</p>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav__lang_row">
+                                                        <a href="#">
+                                                            <p>Вакансия скрыта</p>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <p class="acc-vacancy__price">от 2 500 000 сум/мес</p>
+                                        <div class="acc-vacancy__map">
+                                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_209_9)">
+                                                  <path d="M5.4999 0.5C3.3714 0.5 1.6499 2.2215 1.6499 4.35C1.6499 7.2375 5.4999 11.5 5.4999 11.5C5.4999 11.5 9.3499 7.2375 9.3499 4.35C9.3499 2.2215 7.6284 0.5 5.4999 0.5ZM5.4999 5.725C5.13523 5.725 4.78549 5.58013 4.52763 5.32227C4.26977 5.06441 4.1249 4.71467 4.1249 4.35C4.1249 3.98533 4.26977 3.63559 4.52763 3.37773C4.78549 3.11987 5.13523 2.975 5.4999 2.975C5.86457 2.975 6.21431 3.11987 6.47217 3.37773C6.73004 3.63559 6.8749 3.98533 6.8749 4.35C6.8749 4.71467 6.73004 5.06441 6.47217 5.32227C6.21431 5.58013 5.86457 5.725 5.4999 5.725Z" fill="#969FA9" />
+                                                </g>
+                                                <defs>
+                                                  <clipPath id="clip0_209_9">
+                                                    <rect width="11" height="11" fill="white" transform="translate(0 0.5)" />
+                                                  </clipPath>
+                                                </defs>
+                                            </svg>
+                                            <p>Ташкент</p>
+                                        </div>
+                                        <a href="#" class="acc-vacancy__find">Подобрать резюме</a>
+                                    </div>
+                                    <div class="acc-vacancy__col">
+                                        <div class="acc-vacancy__val">
+                                            <p>7</p>
+                                            <p>откликов</p>
+                                        </div>
+                                        <div class="dropdown acc-vacancy__more">
+                                            <div class="dropdown__btn">
+                                                <p>Еще</p>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="10" cy="10" r="10" transform="rotate(-180 10 10)" fill="#F5F5F5" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3671 8.73478L10.3367 11.7652C10.1507 11.9512 9.84919 11.9512 9.66323 11.7652L6.63277 8.73478C6.4468 8.54882 6.4468 8.24731 6.63277 8.06135C6.81873 7.87538 7.12024 7.87538 7.3062 8.06135L9.99994 10.7551L12.6937 8.06135C12.8796 7.87538 13.1812 7.87538 13.3671 8.06135C13.5531 8.24731 13.5531 8.54882 13.3671 8.73478Z" fill="#969FA9" />
+                                                </svg>
+                                            </div>
+                                            <ul class="dropdown__list">
+                                                <li class="nav__lang_row">
+                                                    <a href="#">
+                                                        <p>Удалить</p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav__lang_row">
+                                                    <a href="#">
+                                                        <p>Копировать</p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav__lang_row">
+                                                    <a href="#">
+                                                        <p>Редактировать</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="acc-vacancy__item acc-vacancy__item_hide">
+                                    <div class="acc-vacancy__col">
+                                        <div class="acc-vacancy__name">
+                                            <h3>Senior Front End Developer</h3>
+                                            <div class="dropdown">
+                                                <div class="dropdown__btn">
+                                                    <p>Вакансия скрыта</p>
+                                                    <svg width="7" height="5" viewBox="0 0 7 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 4.22266L0.468912 0.139323L6.53109 0.139324L3.5 4.22266Z" fill="white" />
+                                                    </svg>
+                                                </div>
+                                                <ul class="dropdown__list">
+                                                    <li class="nav__lang_row">
+                                                        <a href="#">
+                                                            <p>Вакансия активна</p>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav__lang_row">
+                                                        <a href="#">
+                                                            <p>Вакансия скрыта</p>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <p class="acc-vacancy__price">от 2 500 000 сум/мес</p>
+                                        <div class="acc-vacancy__map">
+                                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_209_9)">
+                                                  <path d="M5.4999 0.5C3.3714 0.5 1.6499 2.2215 1.6499 4.35C1.6499 7.2375 5.4999 11.5 5.4999 11.5C5.4999 11.5 9.3499 7.2375 9.3499 4.35C9.3499 2.2215 7.6284 0.5 5.4999 0.5ZM5.4999 5.725C5.13523 5.725 4.78549 5.58013 4.52763 5.32227C4.26977 5.06441 4.1249 4.71467 4.1249 4.35C4.1249 3.98533 4.26977 3.63559 4.52763 3.37773C4.78549 3.11987 5.13523 2.975 5.4999 2.975C5.86457 2.975 6.21431 3.11987 6.47217 3.37773C6.73004 3.63559 6.8749 3.98533 6.8749 4.35C6.8749 4.71467 6.73004 5.06441 6.47217 5.32227C6.21431 5.58013 5.86457 5.725 5.4999 5.725Z" fill="#969FA9" />
+                                                </g>
+                                                <defs>
+                                                  <clipPath id="clip0_209_9">
+                                                    <rect width="11" height="11" fill="white" transform="translate(0 0.5)" />
+                                                  </clipPath>
+                                                </defs>
+                                            </svg>
+                                            <p>Ташкент</p>
+                                        </div>
+                                        <a href="#" class="acc-vacancy__find">Подобрать резюме</a>
+                                    </div>
+                                    <div class="acc-vacancy__col">
+                                        <div class="acc-vacancy__val">
+                                            <p>7</p>
+                                            <p>откликов</p>
+                                        </div>
+                                        <div class="dropdown acc-vacancy__more">
+                                            <div class="dropdown__btn">
+                                                <p>Еще</p>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="10" cy="10" r="10" transform="rotate(-180 10 10)" fill="#F5F5F5" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3671 8.73478L10.3367 11.7652C10.1507 11.9512 9.84919 11.9512 9.66323 11.7652L6.63277 8.73478C6.4468 8.54882 6.4468 8.24731 6.63277 8.06135C6.81873 7.87538 7.12024 7.87538 7.3062 8.06135L9.99994 10.7551L12.6937 8.06135C12.8796 7.87538 13.1812 7.87538 13.3671 8.06135C13.5531 8.24731 13.5531 8.54882 13.3671 8.73478Z" fill="#969FA9" />
+                                                </svg>
+                                            </div>
+                                            <ul class="dropdown__list">
+                                                <li class="nav__lang_row">
+                                                    <a href="#">
+                                                        <p>Удалить</p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav__lang_row">
+                                                    <a href="#">
+                                                        <p>Копировать</p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav__lang_row">
+                                                    <a href="#">
+                                                        <p>Редактировать</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="acc-vacancy__item">
+                                    <div class="acc-vacancy__col">
+                                        <div class="acc-vacancy__name">
+                                            <h3>Senior Front End Developer</h3>
+                                            <div class="dropdown">
+                                                <div class="dropdown__btn">
+                                                    <p>Вакансия активна</p>
+                                                    <svg width="7" height="5" viewBox="0 0 7 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 4.22266L0.468912 0.139323L6.53109 0.139324L3.5 4.22266Z" fill="white" />
+                                                    </svg>
+                                                </div>
+                                                <ul class="dropdown__list">
+                                                    <li class="nav__lang_row">
+                                                        <a href="#">
+                                                            <p>Вакансия активна</p>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav__lang_row">
+                                                        <a href="#">
+                                                            <p>Вакансия скрыта</p>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <p class="acc-vacancy__price">от 2 500 000 сум/мес</p>
+                                        <div class="acc-vacancy__map">
+                                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_209_9)">
+                                                  <path d="M5.4999 0.5C3.3714 0.5 1.6499 2.2215 1.6499 4.35C1.6499 7.2375 5.4999 11.5 5.4999 11.5C5.4999 11.5 9.3499 7.2375 9.3499 4.35C9.3499 2.2215 7.6284 0.5 5.4999 0.5ZM5.4999 5.725C5.13523 5.725 4.78549 5.58013 4.52763 5.32227C4.26977 5.06441 4.1249 4.71467 4.1249 4.35C4.1249 3.98533 4.26977 3.63559 4.52763 3.37773C4.78549 3.11987 5.13523 2.975 5.4999 2.975C5.86457 2.975 6.21431 3.11987 6.47217 3.37773C6.73004 3.63559 6.8749 3.98533 6.8749 4.35C6.8749 4.71467 6.73004 5.06441 6.47217 5.32227C6.21431 5.58013 5.86457 5.725 5.4999 5.725Z" fill="#969FA9" />
+                                                </g>
+                                                <defs>
+                                                  <clipPath id="clip0_209_9">
+                                                    <rect width="11" height="11" fill="white" transform="translate(0 0.5)" />
+                                                  </clipPath>
+                                                </defs>
+                                            </svg>
+                                            <p>Ташкент</p>
+                                        </div>
+                                        <a href="#" class="acc-vacancy__find">Подобрать резюме</a>
+                                    </div>
+                                    <div class="acc-vacancy__col">
+                                        <div class="acc-vacancy__val">
+                                            <p>7</p>
+                                            <p>откликов</p>
+                                        </div>
+                                        <div class="dropdown acc-vacancy__more">
+                                            <div class="dropdown__btn">
+                                                <p>Еще</p>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="10" cy="10" r="10" transform="rotate(-180 10 10)" fill="#F5F5F5" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3671 8.73478L10.3367 11.7652C10.1507 11.9512 9.84919 11.9512 9.66323 11.7652L6.63277 8.73478C6.4468 8.54882 6.4468 8.24731 6.63277 8.06135C6.81873 7.87538 7.12024 7.87538 7.3062 8.06135L9.99994 10.7551L12.6937 8.06135C12.8796 7.87538 13.1812 7.87538 13.3671 8.06135C13.5531 8.24731 13.5531 8.54882 13.3671 8.73478Z" fill="#969FA9" />
+                                                </svg>
+                                            </div>
+                                            <ul class="dropdown__list">
+                                                <li class="nav__lang_row">
+                                                    <a href="#">
+                                                        <p>Удалить</p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav__lang_row">
+                                                    <a href="#">
+                                                        <p>Копировать</p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav__lang_row">
+                                                    <a href="#">
+                                                        <p>Редактировать</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <ul class="pag">
+                                <li><a href="#">1</a></li>
+                                <li><a disabled href="#" class="active">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><p>...</p></li>
+                                <li><a href="#">133</a></li>
+                            </ul>
                         </div>
                         <div class="empl__wrapper tab-wrapper">
                             <div class="acc-vacancy__wrapper">
                                 <div class="acc-vacancy__item">
-                                    <div></div>
+                                    <div class="acc-vacancy__col">
+                                        <div class="acc-vacancy__name">
+                                            <h3>Senior Front End Developer</h3>
+                                            <div class="dropdown">
+                                                <div class="dropdown__btn">
+                                                    <p>Вакансия активна</p>
+                                                    <svg width="7" height="5" viewBox="0 0 7 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 4.22266L0.468912 0.139323L6.53109 0.139324L3.5 4.22266Z" fill="white" />
+                                                    </svg>
+                                                </div>
+                                                <ul class="dropdown__list">
+                                                    <li class="nav__lang_row">
+                                                        <a href="#">
+                                                            <p>Вакансия активна</p>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav__lang_row">
+                                                        <a href="#">
+                                                            <p>Вакансия скрыта</p>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <p class="acc-vacancy__price">от 2 500 000 сум/мес</p>
+                                        <div class="acc-vacancy__map">
+                                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_209_9)">
+                                                  <path d="M5.4999 0.5C3.3714 0.5 1.6499 2.2215 1.6499 4.35C1.6499 7.2375 5.4999 11.5 5.4999 11.5C5.4999 11.5 9.3499 7.2375 9.3499 4.35C9.3499 2.2215 7.6284 0.5 5.4999 0.5ZM5.4999 5.725C5.13523 5.725 4.78549 5.58013 4.52763 5.32227C4.26977 5.06441 4.1249 4.71467 4.1249 4.35C4.1249 3.98533 4.26977 3.63559 4.52763 3.37773C4.78549 3.11987 5.13523 2.975 5.4999 2.975C5.86457 2.975 6.21431 3.11987 6.47217 3.37773C6.73004 3.63559 6.8749 3.98533 6.8749 4.35C6.8749 4.71467 6.73004 5.06441 6.47217 5.32227C6.21431 5.58013 5.86457 5.725 5.4999 5.725Z" fill="#969FA9" />
+                                                </g>
+                                                <defs>
+                                                  <clipPath id="clip0_209_9">
+                                                    <rect width="11" height="11" fill="white" transform="translate(0 0.5)" />
+                                                  </clipPath>
+                                                </defs>
+                                            </svg>
+                                            <p>Ташкент</p>
+                                        </div>
+                                        <a href="#" class="acc-vacancy__find">Подобрать резюме</a>
+                                    </div>
+                                    <div class="acc-vacancy__col">
+                                        <div class="acc-vacancy__val">
+                                            <p>7</p>
+                                            <p>откликов</p>
+                                        </div>
+                                        <div class="dropdown acc-vacancy__more">
+                                            <div class="dropdown__btn">
+                                                <p>Еще</p>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="10" cy="10" r="10" transform="rotate(-180 10 10)" fill="#F5F5F5" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3671 8.73478L10.3367 11.7652C10.1507 11.9512 9.84919 11.9512 9.66323 11.7652L6.63277 8.73478C6.4468 8.54882 6.4468 8.24731 6.63277 8.06135C6.81873 7.87538 7.12024 7.87538 7.3062 8.06135L9.99994 10.7551L12.6937 8.06135C12.8796 7.87538 13.1812 7.87538 13.3671 8.06135C13.5531 8.24731 13.5531 8.54882 13.3671 8.73478Z" fill="#969FA9" />
+                                                </svg>
+                                            </div>
+                                            <ul class="dropdown__list">
+                                                <li class="nav__lang_row">
+                                                    <a href="#">
+                                                        <p>Удалить</p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav__lang_row">
+                                                    <a href="#">
+                                                        <p>Копировать</p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav__lang_row">
+                                                    <a href="#">
+                                                        <p>Редактировать</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="acc-vacancy__item acc-vacancy__item_hide">
+                                    <div class="acc-vacancy__col">
+                                        <div class="acc-vacancy__name">
+                                            <h3>Senior Front End Developer</h3>
+                                            <div class="dropdown">
+                                                <div class="dropdown__btn">
+                                                    <p>Вакансия скрыта</p>
+                                                    <svg width="7" height="5" viewBox="0 0 7 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 4.22266L0.468912 0.139323L6.53109 0.139324L3.5 4.22266Z" fill="white" />
+                                                    </svg>
+                                                </div>
+                                                <ul class="dropdown__list">
+                                                    <li class="nav__lang_row">
+                                                        <a href="#">
+                                                            <p>Вакансия активна</p>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav__lang_row">
+                                                        <a href="#">
+                                                            <p>Вакансия скрыта</p>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <p class="acc-vacancy__price">от 2 500 000 сум/мес</p>
+                                        <div class="acc-vacancy__map">
+                                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_209_9)">
+                                                  <path d="M5.4999 0.5C3.3714 0.5 1.6499 2.2215 1.6499 4.35C1.6499 7.2375 5.4999 11.5 5.4999 11.5C5.4999 11.5 9.3499 7.2375 9.3499 4.35C9.3499 2.2215 7.6284 0.5 5.4999 0.5ZM5.4999 5.725C5.13523 5.725 4.78549 5.58013 4.52763 5.32227C4.26977 5.06441 4.1249 4.71467 4.1249 4.35C4.1249 3.98533 4.26977 3.63559 4.52763 3.37773C4.78549 3.11987 5.13523 2.975 5.4999 2.975C5.86457 2.975 6.21431 3.11987 6.47217 3.37773C6.73004 3.63559 6.8749 3.98533 6.8749 4.35C6.8749 4.71467 6.73004 5.06441 6.47217 5.32227C6.21431 5.58013 5.86457 5.725 5.4999 5.725Z" fill="#969FA9" />
+                                                </g>
+                                                <defs>
+                                                  <clipPath id="clip0_209_9">
+                                                    <rect width="11" height="11" fill="white" transform="translate(0 0.5)" />
+                                                  </clipPath>
+                                                </defs>
+                                            </svg>
+                                            <p>Ташкент</p>
+                                        </div>
+                                        <a href="#" class="acc-vacancy__find">Подобрать резюме</a>
+                                    </div>
+                                    <div class="acc-vacancy__col">
+                                        <div class="acc-vacancy__val">
+                                            <p>7</p>
+                                            <p>откликов</p>
+                                        </div>
+                                        <div class="dropdown acc-vacancy__more">
+                                            <div class="dropdown__btn">
+                                                <p>Еще</p>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="10" cy="10" r="10" transform="rotate(-180 10 10)" fill="#F5F5F5" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3671 8.73478L10.3367 11.7652C10.1507 11.9512 9.84919 11.9512 9.66323 11.7652L6.63277 8.73478C6.4468 8.54882 6.4468 8.24731 6.63277 8.06135C6.81873 7.87538 7.12024 7.87538 7.3062 8.06135L9.99994 10.7551L12.6937 8.06135C12.8796 7.87538 13.1812 7.87538 13.3671 8.06135C13.5531 8.24731 13.5531 8.54882 13.3671 8.73478Z" fill="#969FA9" />
+                                                </svg>
+                                            </div>
+                                            <ul class="dropdown__list">
+                                                <li class="nav__lang_row">
+                                                    <a href="#">
+                                                        <p>Удалить</p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav__lang_row">
+                                                    <a href="#">
+                                                        <p>Копировать</p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav__lang_row">
+                                                    <a href="#">
+                                                        <p>Редактировать</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="acc-vacancy__item">
+                                    <div class="acc-vacancy__col">
+                                        <div class="acc-vacancy__name">
+                                            <h3>Senior Front End Developer</h3>
+                                            <div class="dropdown">
+                                                <div class="dropdown__btn">
+                                                    <p>Вакансия активна</p>
+                                                    <svg width="7" height="5" viewBox="0 0 7 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 4.22266L0.468912 0.139323L6.53109 0.139324L3.5 4.22266Z" fill="white" />
+                                                    </svg>
+                                                </div>
+                                                <ul class="dropdown__list">
+                                                    <li class="nav__lang_row">
+                                                        <a href="#">
+                                                            <p>Вакансия активна</p>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav__lang_row">
+                                                        <a href="#">
+                                                            <p>Вакансия скрыта</p>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <p class="acc-vacancy__price">от 2 500 000 сум/мес</p>
+                                        <div class="acc-vacancy__map">
+                                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_209_9)">
+                                                  <path d="M5.4999 0.5C3.3714 0.5 1.6499 2.2215 1.6499 4.35C1.6499 7.2375 5.4999 11.5 5.4999 11.5C5.4999 11.5 9.3499 7.2375 9.3499 4.35C9.3499 2.2215 7.6284 0.5 5.4999 0.5ZM5.4999 5.725C5.13523 5.725 4.78549 5.58013 4.52763 5.32227C4.26977 5.06441 4.1249 4.71467 4.1249 4.35C4.1249 3.98533 4.26977 3.63559 4.52763 3.37773C4.78549 3.11987 5.13523 2.975 5.4999 2.975C5.86457 2.975 6.21431 3.11987 6.47217 3.37773C6.73004 3.63559 6.8749 3.98533 6.8749 4.35C6.8749 4.71467 6.73004 5.06441 6.47217 5.32227C6.21431 5.58013 5.86457 5.725 5.4999 5.725Z" fill="#969FA9" />
+                                                </g>
+                                                <defs>
+                                                  <clipPath id="clip0_209_9">
+                                                    <rect width="11" height="11" fill="white" transform="translate(0 0.5)" />
+                                                  </clipPath>
+                                                </defs>
+                                            </svg>
+                                            <p>Ташкент</p>
+                                        </div>
+                                        <a href="#" class="acc-vacancy__find">Подобрать резюме</a>
+                                    </div>
+                                    <div class="acc-vacancy__col">
+                                        <div class="acc-vacancy__val">
+                                            <p>7</p>
+                                            <p>откликов</p>
+                                        </div>
+                                        <div class="dropdown acc-vacancy__more">
+                                            <div class="dropdown__btn">
+                                                <p>Еще</p>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="10" cy="10" r="10" transform="rotate(-180 10 10)" fill="#F5F5F5" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3671 8.73478L10.3367 11.7652C10.1507 11.9512 9.84919 11.9512 9.66323 11.7652L6.63277 8.73478C6.4468 8.54882 6.4468 8.24731 6.63277 8.06135C6.81873 7.87538 7.12024 7.87538 7.3062 8.06135L9.99994 10.7551L12.6937 8.06135C12.8796 7.87538 13.1812 7.87538 13.3671 8.06135C13.5531 8.24731 13.5531 8.54882 13.3671 8.73478Z" fill="#969FA9" />
+                                                </svg>
+                                            </div>
+                                            <ul class="dropdown__list">
+                                                <li class="nav__lang_row">
+                                                    <a href="#">
+                                                        <p>Удалить</p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav__lang_row">
+                                                    <a href="#">
+                                                        <p>Копировать</p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav__lang_row">
+                                                    <a href="#">
+                                                        <p>Редактировать</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <ul class="pag">
+                                <li><a href="#">1</a></li>
+                                <li><a disabled href="#" class="active">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><p>...</p></li>
+                                <li><a href="#">133</a></li>
+                            </ul>
                         </div>
-                        <ul class="pag">
-                            <li><a href="#">1</a></li>
-                            <li><a disabled href="#" class="active">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><p>...</p></li>
-                            <li><a href="#">133</a></li>
-                        </ul>
                     </div>
                 </div>
             </div>
