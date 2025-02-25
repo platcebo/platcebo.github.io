@@ -10,6 +10,118 @@
     <link rel="stylesheet" href="css/reset.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.min.css">
+    <style>
+        /* .acc-card {
+            width: 90%;
+            max-width: 973px;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .header {
+            font-size: 25px;
+            font-weight: 500;
+            color: #383b49;
+            margin-bottom: 30px;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .left-column, .right-column {
+            flex: 1;
+            min-width: 300px;
+        }
+        .logo {
+            width: 100%;
+            height: auto;
+            border: 1px solid #e9e9e9;
+            margin-bottom: 15px;
+        }
+        .button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 2px;
+            font-size: 12px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .replace-photo {
+            background: linear-gradient(180deg, #fff 0%, #f6f6f6 52.6%, #fff 100%);
+            border: 1px solid #7d7aff;
+            color: #1d3b95;
+        }
+        .delete-photo {
+            border: 1px solid #d76060;
+            background: transparent;
+            color: #1d3b95;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            color: #383b49;
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+        .form-group input {
+            width: 100%;
+            height: 40px;
+            padding: 0 15px;
+            border: 1px solid #282f3626;
+            border-radius: 5px;
+            font-size: 17px;
+        }
+        .form-group input[type="text"]:not([value=""]),
+        .form-group input[type="email"]:not([value=""]),
+        .form-group input[type="number"]:not([value=""]) {
+            color: #383b49;
+        }
+        .form-group input[type="text"][placeholder],
+        .form-group input[type="email"][placeholder],
+        .form-group input[type="number"][placeholder] {
+            color: #969fa9;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            cursor: pointer;
+        }
+        .checkbox-group input {
+            width: 18px;
+            height: 18px;
+        }
+        .actions {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .save-button {
+            padding: 10px 16px;
+            background: #e9e9e9;
+            border: 1px solid #f5f5f5;
+            border-radius: 4px;
+            color: #969fa9;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        .reset-link {
+            color: #969fa9;
+            text-decoration: underline;
+            font-size: 15px;
+        } */
+    </style>
 </head>
 <body>
     <section class="vacancy-page company">
@@ -93,9 +205,9 @@
             </a>
             <div class="about-us">
                 <ul class="about-us__aside">
-                    <li><a href="#">Карточка компании</a></li>
+                    <li><a href="#" class="active">Карточка компании</a></li>
                     <li><a href="#">Вакансии и отклики</a></li>
-                    <li><a href="#" class="active">Журнал событий</a></li>
+                    <li><a href="#">Журнал событий</a></li>
                     <li><a href="#">Услуги и счета</a></li>
                     <li><a href="#">Мои рассылки</a></li>
                     <li><a href="#">Пользователи</a></li>
@@ -103,81 +215,108 @@
                     <li><a href="#">Выход</a></li>
                 </ul>
                 <div>
-                    <div class="acc__block acc-event">
-                        <h1>Журнал событий</h1>
-                        <div class="acc-event__filter">
-                            <p class="acc-event__filter_name">Фильтр:</p>
-                            <div>
-                                <div class="acc-event__filter_row">
-                                    <div class="acc-event__filter_item">
-                                        <p>с</p>
-                                        <input type="text" placeholder="01.10.2020" onkeyup="var date = this.value; if (date.match(/^\d{2}$/) !== null) { this.value = date + '-'; } else if (date.match(/^\d{2}\-\d{2}$/) !== null) {this.value = date + '-';}" maxlength="10">    
+                    <div class="acc__block acc-card">
+                        <h1>Карточка компании</h1>
+                        <div class="acc-card__wrapper">
+                            <div class="acc-card__col">
+                                <div class="acc-card__prev">
+                                    <img src="img/acc-main.png" alt="">
+                                    <button class="btn__transparent btn__transparent_blue">Заменить фото</button>
+                                    <button class="btn__transparent btn__transparent_blue acc-card__prev_dev">Удалить фото</button>
+                                </div>
+                                <div class="acc-card__input">
+                                    <p class="acc-card__name">Полное название компании</p>
+                                    <input type="text" placeholder="Юридическое наименование">
+                                </div>
+                                <div class="acc-card__check">
+                                    <p class="acc-card__name">Тип</p>
+                                    <div>
+                                        <input type="checkbox">
+                                        <span>
+                                            <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.33891 3.83891C0.790791 3.38703 1.52343 3.38703 1.97531 3.83891L5.28609 7.14969C5.73797 7.60157 5.73797 8.33421 5.28609 8.78609C4.83421 9.23797 4.10157 9.23797 3.64969 8.78609L0.33891 5.47531C-0.11297 5.02343 -0.11297 4.29079 0.33891 3.83891Z" fill="#7D7AFF"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8452 0.385778C11.3225 0.783535 11.387 1.49292 10.9892 1.97022L5.36426 8.72018C4.96651 9.19749 4.25713 9.26198 3.77982 8.86422C3.30251 8.46646 3.23802 7.75708 3.63578 7.27978L9.26074 0.529818C9.65849 0.0525097 10.3679 -0.0119795 10.8452 0.385778Z" fill="#7D7AFF"/>
+                                            </svg>
+                                        </span>
+                                        <p>Прямой работодатель</p>
                                     </div>
-                                    <div class="acc-event__filter_item">
-                                        <p>до</p>
-                                        <input type="text" placeholder="01.10.2020" onkeyup="var date = this.value; if (date.match(/^\d{2}$/) !== null) { this.value = date + '-'; } else if (date.match(/^\d{2}\-\d{2}$/) !== null) {this.value = date + '-';}" maxlength="10">    
+                                    <div>
+                                        <input type="checkbox">
+                                        <span>
+                                            <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.33891 3.83891C0.790791 3.38703 1.52343 3.38703 1.97531 3.83891L5.28609 7.14969C5.73797 7.60157 5.73797 8.33421 5.28609 8.78609C4.83421 9.23797 4.10157 9.23797 3.64969 8.78609L0.33891 5.47531C-0.11297 5.02343 -0.11297 4.29079 0.33891 3.83891Z" fill="#7D7AFF"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8452 0.385778C11.3225 0.783535 11.387 1.49292 10.9892 1.97022L5.36426 8.72018C4.96651 9.19749 4.25713 9.26198 3.77982 8.86422C3.30251 8.46646 3.23802 7.75708 3.63578 7.27978L9.26074 0.529818C9.65849 0.0525097 10.3679 -0.0119795 10.8452 0.385778Z" fill="#7D7AFF"/>
+                                            </svg>
+                                        </span>
+                                        <p>Прямой работодатель</p>
                                     </div>
                                 </div>
-                                <div class="acc-event__filter_row">
-                                    <div class="acc-event__filter_item">
-                                        <p>Событие</p>
-                                        <div class="select">
-                                            <input type="text" readonly placeholder="Все">
-                                            <ul>
-                                                <li>Все</li>
-                                                <li>Выберите город2</li>
-                                                <li>Выберите город3</li>
-                                                <li>Выберите город4</li>
-                                            </ul>
-                                            <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M4 5L0.535899 1.25L7.4641 1.25L4 5Z" fill="#383B49" />
-                                            </svg>
-                                        </div>
+                                <div class="acc-card__input">
+                                    <p class="acc-card__name">Сфера деятельности</p>
+                                    <div class="select">
+                                        <input type="text" readonly placeholder="IT, компьютеры, интернет">
+                                        <ul>
+                                            <li>IT, компьютеры, интернет</li>
+                                            <li>Выберите город2</li>
+                                            <li>Выберите город3</li>
+                                            <li>Выберите город4</li>
+                                        </ul>
+                                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 5L0.535899 1.25L7.4641 1.25L4 5Z" fill="#383B49" />
+                                        </svg>
                                     </div>
-                                    <div class="acc-event__filter_item">
-                                        <p>Пользователь</p>
-                                        <div class="select">
-                                            <input type="text" readonly placeholder="Все пользователи">
-                                            <ul>
-                                                <li>Все пользователи</li>
-                                                <li>Выберите город2</li>
-                                                <li>Выберите город3</li>
-                                                <li>Выберите город4</li>
-                                            </ul>
-                                            <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M4 5L0.535899 1.25L7.4641 1.25L4 5Z" fill="#383B49" />
-                                            </svg>
-                                        </div>
+                                </div>
+                            </div>
+                            <div class="acc-card__col">
+                                <div class="acc-card__input">
+                                    <p class="acc-card__name">Количество сотрудников</p>
+                                    <div class="select">
+                                        <input type="text" readonly placeholder="11">
+                                        <ul>
+                                            <li>11</li>
+                                            <li>Выберите город2</li>
+                                            <li>Выберите город3</li>
+                                            <li>Выберите город4</li>
+                                        </ul>
+                                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 5L0.535899 1.25L7.4641 1.25L4 5Z" fill="#383B49" />
+                                        </svg>
                                     </div>
+                                </div>
+                                <div class="acc-card__input">
+                                    <p class="acc-card__name">Сайт</p>
+                                    <input type="text" placeholder="www.credo-studio.com">
+                                </div>
+                                <div class="acc-card__input">
+                                    <p class="acc-card__name">Контакты</p>
+                                    <input type="text" placeholder="Контактное лицо">
+                                    <input type="text" placeholder="Номер телефона">
+                                </div>
+                                <div class="acc-card__input">
+                                    <p class="acc-card__name">Email</p>
+                                    <input type="text" placeholder="mail@mail.ru">
+                                </div>
+                                <div class="acc-card__input">
+                                    <p class="acc-card__name">Адрес</p>
+                                    <input type="text" placeholder="Город">
+                                    <input type="text" placeholder="Район">
+                                    <input type="text" placeholder="Номера дома и офиса">
                                 </div>
                             </div>
                         </div>
-                        <div class="acc-event__wrapper">
-                            <div class="acc-event__item">
-                                <p>Вакансия <a href="#">«Wp разработчик, Киев»</a> отредактирована.</p>
-                                <p>25.03.2020  11:29</p>
-                            </div>
-                            <div class="acc-event__item">
-                                <p>Какое-то неважное действие</p>
-                                <p>25.03.2020  11:29</p>
-                            </div>
-                            <div class="acc-event__item">
-                                <p>Какое-то неважное действие</p>
-                                <p>25.03.2020  11:29</p>
-                            </div>
-                            <div class="acc-event__item">
-                                <p>Вакансия <a href="#">«Wp разработчик, Киев»</a> отредактировал <a href="#">Иван Иванович</a>.</p>
-                                <p>25.03.2020  11:29</p>
-                            </div>
+                        <div class="acc-card__footer">
+                            <button class="btn__blue">Сохранить настройки</button>
+                            <a href="#" class="acc-card__reset">Сбросить настройки</a>
                         </div>
-                        <ul class="pag">
-                            <li><a href="#">1</a></li>
-                            <li><a disabled href="#" class="active">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><p>...</p></li>
-                            <li><a href="#">133</a></li>
-                        </ul>
+                    </div>
+                    <div class="acc__block acc-about">
+                        <h3>О компании</h3>
+                        <p>Опишите вашу компанию подробнее для того, чтобы соискатели как можно подробнее узнали о компании, атмосфере, направлениях деятельности и т.д.</p>
+                        <img src="img/acc-about.jpg" alt="">
+                        <div class="acc-card__footer">
+                            <button class="btn__blue">Сохранить настройки</button>
+                            <a href="#" class="acc-card__reset">Сбросить настройки</a>
+                        </div>
                     </div>
                 </div>
             </div>

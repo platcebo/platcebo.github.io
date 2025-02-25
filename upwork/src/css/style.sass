@@ -23,6 +23,24 @@ body
     color: $main-dark
     &.fix
         overflow: hidden
+h1
+    font: 500 36px / 1.4 $font-family
+    color: $main-dark
+h2
+    font: 500 25px / 1.4 $font-family
+    color: $main-dark
+h3
+    font: 500 18px / 1.4 $font-family
+    color: $main-dark
+h4
+    font: 400 17px / 1.4 $font-family
+    color: $main-dark
+h5
+    font: 400 15px / 1.45 $font-family
+    color: $main-dark
+h6
+    font: 400 12px / 1.4 $font-family
+    color: $main-dark
 .container
     max-width: 1305px
     margin: 0 auto
@@ -60,6 +78,9 @@ button
         font: 600 15px $font-family
         text-align: center
         color: $white
+        &:hover
+            color: $gray-light
+            opacity: 1
 .dropdown
     position: relative
     &__btn
@@ -84,29 +105,86 @@ button
             color: $blue-dark !important
         li
             display: block
-.select
-    position: relative
-    z-index: 2
-    padding: 9px 18px
-    border: 1px solid $bg-color
-    border-radius: 4px
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.12), inset 0 4px 4px 0 rgba(0, 0, 0, 0.1)
-    background: $white
-    display: flex
-    justify-content: space-between
-    align-items: center
-    cursor: pointer
-    select
-        position: absolute
-        inset: 0
+input
+    &[type="text"],
+    &[type="password"]
         width: 100%
-        height: 100%
-        opacity: 0
-        z-index: 2
-        cursor: pointer
-    p
+        box-sizing: border-box
         font: 400 15px / 1.45 $font-family
         color: $main-dark
+        padding: 9px 15px
+        border-radius: 5px
+        background: $white
+        border: 1px solid rgba(40, 47, 54, 0.15)
+.input__password
+    position: relative
+    a
+        position: absolute
+        top: 50%
+        right: 15px
+        transform: translateY(-50%)
+        width: 22px
+        height: 20px
+        display: flex
+        justify-content: center
+        align-items: center
+        path
+            transition: all .3s
+        &:hover
+            path
+                fill: $blue
+                fill-opacity: 1
+.select
+    position: relative
+    cursor: pointer
+    svg
+        position: absolute
+        right: 12px
+        top: 20px
+        z-index: 2
+    ul
+        position: absolute
+        top: 100%
+        left: 0
+        width: 100%
+        border: 1px solid #3c81e8
+        border-radius: 0 0 5px 5px
+        border-top: none
+        background: $white
+        pointer-events: none
+        opacity: 0
+        z-index: 10
+        li
+            font: 400 15px / 1.45 $font-family
+            color: $gray-dark
+            cursor: pointer
+            padding: 14px
+            transition: all .3s
+            &:hover
+                background: $bg-color
+    input
+        font: 400 15px / 1.45 $font-family
+        color: $main-dark
+        padding: 9px 18px
+        border: 1px solid $bg-color
+        box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+        background: $white
+        border-radius: 4px
+        width: 100%
+        box-sizing: border-box
+        cursor: pointer
+        z-index: 1
+        position: relative
+        &.active
+            border: 1px solid #3c81e8
+            border-radius: 5px 5px 0 0
+            border-bottom: 1px solid #dce1e9
+            &+ul
+                opacity: 1
+                pointer-events: all
+                &+svg
+                    transform: rotate(180deg)
+
 .title
     padding: 0 38px 8px
     border-bottom: 1px solid $gray-light
@@ -164,7 +242,11 @@ button
                 height: 2px
                 background: linear-gradient( 90deg, transparent 0%, #fff 50%, transparent 100%)
                 opacity: 0
-            &.active
+                transition: all .3s
+                pointer-events: none
+            &.active,
+            &:hover
+                opacity: 1
                 &::before
                     opacity: 1
     &__lang
@@ -962,6 +1044,8 @@ section
     background-repeat: no-repeat
     background-size: cover
     padding: 0 0 30px
+    z-index: 20
+    position: relative
     .header
         &__row
             margin: 50px auto 0
@@ -1286,6 +1370,17 @@ section
                 grid-template-columns: 1fr
                 input
                     grid-column: auto
+        &__filter
+            grid-template-columns: 1fr
+            gap: 10px
+            width: 100%
+            .select
+                width: 100%
+                z-index: 3
+                input
+                    width: 100%
+                &+.select
+                    z-index: 2
 
 .vacancy-page
     position: relative
@@ -3132,14 +3227,9 @@ section
                 border: 1px solid rgba(40, 47, 54, 0.15)
                 padding: 9px 15px
             .select
-                box-shadow: none
                 margin: 7px 0 0
-                width: 100%
-                box-sizing: border-box
-                border-radius: 5px
-                background: $white
-                border: 1px solid rgba(40, 47, 54, 0.15)
-                padding: 9px 15px
+                input
+                    margin: 0
         &__check
             div
                 margin: 8px 0 0
@@ -3331,11 +3421,11 @@ section
             display: flex
             justify-content: flex-start
             align-items: center
+            z-index: 3
             p
                 font: 400 15px / 1.45 $font-family
                 color: $gray-fill
-            input,
-            .select
+            input
                 font: 400 15px / 1.45 $font-family
                 color: $main-dark
                 padding: 9px 15px
@@ -3346,6 +3436,8 @@ section
                 box-sizing: border-box
                 p
                     color: $main-dark
+            &+div
+                z-index: 2
     &__wrapper
         margin: 40px 0 0
         display: grid
@@ -3790,6 +3882,285 @@ section
             display: grid
             grid-template-columns: 1fr 1fr 100px 30px
             gap: 30px
+            align-items: center
+            border-bottom: 1px solid $gray-light
+            padding: 0 0 20px
             a
                 font: 400 17px / 1.4 $font-family
                 color: $blue
+                max-width: 271px
+            p
+                font: 400 17px / 1.4 $font-family
+                color: $main-dark
+                max-width: 271px
+        &__close
+            background: $gray-light
+            width: 30px
+            height: 30px
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 100%
+        .search__form
+            margin: 27px 0 0
+            border: 1px solid $bg-color
+            border-radius: 5px
+            box-shadow: none
+            padding: 30px
+    &-user
+        &__wrapper
+            margin: 30px 0 0
+            display: grid
+            grid-template-columns: 1fr
+            gap: 20px
+        &__title
+            display: grid
+            grid-template-columns: 280px 1fr
+            gap: 30px
+            p
+                font: 500 18px / 1.4 $font-family
+                color: $main-dark
+        &__item
+            padding: 0 0 20px
+            border-bottom: 1px solid $gray-light
+            display: grid
+            grid-template-columns: 280px 1fr 30px
+            gap: 30px
+            align-items: center
+            p
+                font: 400 17px / 1.4 $font-family
+                color: $blue
+            .select
+                max-width: 320px
+        &__add
+            margin: 40px 0 0
+            border: 1px solid $bg-color
+            border-radius: 5px
+            padding: 20px 50px 30px
+            display: grid
+            grid-template-columns: 1fr auto
+            gap: 30px
+            align-items: center
+            p
+                max-width: 477px
+                font: 400 15px / 1.45 $font-family
+                color: $gray-dark
+                margin: 7px 0 0
+    &-add
+        &__check
+            margin: 40px 0 0
+            display: flex
+            justify-content: flex-start
+            align-items: start
+            flex-wrap: wrap
+            gap: 25px
+            div
+                position: relative
+                display: grid
+                grid-template-columns: 18px 1fr
+                gap: 7px
+                align-items: center
+            span
+                width: 18px
+                height: 18px
+                border-radius: 2px
+                border: 1px solid #e4e4e4
+                border-radius: 100%
+                display: flex
+                justify-content: center
+                align-items: center
+                svg
+                    opacity: 0
+                    transition: all .3s
+            p
+                font: 400 15px / 1.45 $font-family
+                color: $main-dark
+            input
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                opacity: 0
+                z-index: 2
+                &:checked
+                    &+span
+                        svg
+                            opacity: 1
+        &__wrapper
+            margin: 25px 0 0
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 32px
+            row-gap: 18px
+        &__alert
+            position: relative
+            display: grid
+            grid-template-columns: 18px 1fr
+            gap: 7px
+            align-items: center
+            max-width: 215px
+            span
+                width: 18px
+                height: 18px
+                border-radius: 2px
+                border: 1px solid #e4e4e4
+                border-radius: 3px
+                display: flex
+                justify-content: center
+                align-items: center
+                svg
+                    opacity: 0
+                    transition: all .3s
+            p
+                font: 400 12px / 1.4 $font-family
+                color: $main-dark
+            input
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                opacity: 0
+                z-index: 2
+                &:checked
+                    &+span
+                        svg
+                            opacity: 1
+        &__footer
+            margin: 40px 0 0
+            display: flex
+            justify-content: flex-end
+            align-items: center
+            gap: 20px
+            a
+                font: 400 15px / 1.45 $font-family
+                text-decoration: underline
+                text-decoration-skip-ink: none
+                color: $gray-fill
+    &-set
+        &__input
+            margin: 30px 0 0
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 30px
+            &_col
+                grid-column: 2/3
+                grid-row: 1/3
+            p
+                font: 400 17px / 1.4 $font-family
+                color: $main-dark
+            input
+                margin: 7px 0 0
+            .input__password
+                margin: 7px 0 0
+                input
+                    margin: 0
+                &+.input__password
+                    margin: 15px 0 0
+        h4
+            margin: 70px 0 0
+            font-weight: 700
+            a
+                color: $blue
+    &-mail
+        margin: 30px 0 0
+        h3
+            font: 700 17px / 1.4 $font-family
+        &__block
+            margin: 24px 0 0
+        &__wrapper
+            margin: 20px 0 0
+            display: grid
+            grid-template-columns: 1fr
+            gap: 10px
+            div
+                position: relative
+                display: grid
+                grid-template-columns: 18px 1fr
+                gap: 7px
+                align-items: center
+            span
+                width: 18px
+                height: 18px
+                border-radius: 2px
+                border: 1px solid #e4e4e4
+                border-radius: 3px
+                display: flex
+                justify-content: center
+                align-items: center
+                svg
+                    opacity: 0
+                    transition: all .3s
+            p
+                font: 400 15px / 1.4 $font-family
+                color: $main-dark
+            input
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                opacity: 0
+                z-index: 2
+                &:checked
+                    &+span
+                        svg
+                            opacity: 1
+
+@media ( max-width: 768px )
+    .acc
+        &-send
+            &__title
+                display: none
+            &__item
+                grid-template-columns: 1fr 30px
+                gap: 10px
+                align-items: start
+                *
+                    grid-column: 1/2
+            &__close
+                grid-column: 2/3 !important
+                grid-row: 1/3
+            .search__form
+                padding: 10px
+        &-user
+            &__title
+                display: none
+            &__item
+                grid-template-columns: 1fr 30px
+                gap: 10px
+                align-items: start
+                *
+                    grid-column: 1/2
+            &__add
+                padding: 10px
+                gap: 15px
+        &-add
+            &__wrapper
+                grid-template-columns: 1fr
+                gap: 15px
+            &__check
+                row-gap: 10px
+        &-set
+            &__input
+                grid-template-columns: 1fr
+                gap: 15px
+                &_col
+                    grid-column: auto
+                    grid-row: auto
+
+@media ( max-width: 600px )
+    .acc
+        &-user
+            &__add
+                grid-template-columns: 1fr
+        &-add
+            &__footer
+                flex-direction: column
+                gap: 15px
+                align-items: flex-start
+                button
+                    width: 100%
+                a
+                    text-align: left

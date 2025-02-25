@@ -95,89 +95,75 @@
                 <ul class="about-us__aside">
                     <li><a href="#">Карточка компании</a></li>
                     <li><a href="#">Вакансии и отклики</a></li>
-                    <li><a href="#" class="active">Журнал событий</a></li>
+                    <li><a href="#">Журнал событий</a></li>
                     <li><a href="#">Услуги и счета</a></li>
                     <li><a href="#">Мои рассылки</a></li>
-                    <li><a href="#">Пользователи</a></li>
+                    <li><a href="#" class="active">Пользователи</a></li>
                     <li><a href="#">Настройки аккаунта</a></li>
                     <li><a href="#">Выход</a></li>
                 </ul>
                 <div>
-                    <div class="acc__block acc-event">
-                        <h1>Журнал событий</h1>
-                        <div class="acc-event__filter">
-                            <p class="acc-event__filter_name">Фильтр:</p>
+                    <div class="acc__block acc-add">
+                        <h1>Информация о пользователе</h1>
+                        <div class="acc-add__check">
                             <div>
-                                <div class="acc-event__filter_row">
-                                    <div class="acc-event__filter_item">
-                                        <p>с</p>
-                                        <input type="text" placeholder="01.10.2020" onkeyup="var date = this.value; if (date.match(/^\d{2}$/) !== null) { this.value = date + '-'; } else if (date.match(/^\d{2}\-\d{2}$/) !== null) {this.value = date + '-';}" maxlength="10">    
-                                    </div>
-                                    <div class="acc-event__filter_item">
-                                        <p>до</p>
-                                        <input type="text" placeholder="01.10.2020" onkeyup="var date = this.value; if (date.match(/^\d{2}$/) !== null) { this.value = date + '-'; } else if (date.match(/^\d{2}\-\d{2}$/) !== null) {this.value = date + '-';}" maxlength="10">    
-                                    </div>
-                                </div>
-                                <div class="acc-event__filter_row">
-                                    <div class="acc-event__filter_item">
-                                        <p>Событие</p>
-                                        <div class="select">
-                                            <input type="text" readonly placeholder="Все">
-                                            <ul>
-                                                <li>Все</li>
-                                                <li>Выберите город2</li>
-                                                <li>Выберите город3</li>
-                                                <li>Выберите город4</li>
-                                            </ul>
-                                            <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M4 5L0.535899 1.25L7.4641 1.25L4 5Z" fill="#383B49" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="acc-event__filter_item">
-                                        <p>Пользователь</p>
-                                        <div class="select">
-                                            <input type="text" readonly placeholder="Все пользователи">
-                                            <ul>
-                                                <li>Все пользователи</li>
-                                                <li>Выберите город2</li>
-                                                <li>Выберите город3</li>
-                                                <li>Выберите город4</li>
-                                            </ul>
-                                            <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M4 5L0.535899 1.25L7.4641 1.25L4 5Z" fill="#383B49" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
+                                <input type="radio" name="acc-add">
+                                <span>
+                                    <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.33891 3.83891C0.790791 3.38703 1.52343 3.38703 1.97531 3.83891L5.28609 7.14969C5.73797 7.60157 5.73797 8.33421 5.28609 8.78609C4.83421 9.23797 4.10157 9.23797 3.64969 8.78609L0.33891 5.47531C-0.11297 5.02343 -0.11297 4.29079 0.33891 3.83891Z" fill="#7D7AFF" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8452 0.385778C11.3225 0.783535 11.387 1.49292 10.9892 1.97022L5.36426 8.72018C4.96651 9.19749 4.25713 9.26198 3.77982 8.86422C3.30251 8.46646 3.23802 7.75708 3.63578 7.27978L9.26074 0.529818C9.65849 0.0525097 10.3679 -0.0119795 10.8452 0.385778Z" fill="#7D7AFF" />
+                                    </svg>
+                                </span>
+                                <p>Пользователь</p>
+                            </div>
+                            <div>
+                                <input type="radio" name="acc-add">
+                                <span>
+                                    <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.33891 3.83891C0.790791 3.38703 1.52343 3.38703 1.97531 3.83891L5.28609 7.14969C5.73797 7.60157 5.73797 8.33421 5.28609 8.78609C4.83421 9.23797 4.10157 9.23797 3.64969 8.78609L0.33891 5.47531C-0.11297 5.02343 -0.11297 4.29079 0.33891 3.83891Z" fill="#7D7AFF" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8452 0.385778C11.3225 0.783535 11.387 1.49292 10.9892 1.97022L5.36426 8.72018C4.96651 9.19749 4.25713 9.26198 3.77982 8.86422C3.30251 8.46646 3.23802 7.75708 3.63578 7.27978L9.26074 0.529818C9.65849 0.0525097 10.3679 -0.0119795 10.8452 0.385778Z" fill="#7D7AFF" />
+                                    </svg>
+                                </span>
+                                <p>Администратор</p>
                             </div>
                         </div>
-                        <div class="acc-event__wrapper">
-                            <div class="acc-event__item">
-                                <p>Вакансия <a href="#">«Wp разработчик, Киев»</a> отредактирована.</p>
-                                <p>25.03.2020  11:29</p>
+                        <div class="acc-add__wrapper">
+                            <input type="text" placeholder="Email">
+                            <input type="text" placeholder="Имя и фамилия">
+                            <input type="text" placeholder="Телефон" data-phone-pattern>
+                            <div class="input__password">
+                                <input type="password" placeholder="Пароль (не менее 8 символов)">
+                                <a href="#">
+                                    <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0525 5C15.5239 5 19.0394 9.35745 19.1878 9.54276L19.3559 9.75586L19.1878 9.96896C19.1821 9.97608 19.1714 9.99006 19.1559 10.0104C18.768 10.5192 15.3512 15 11.0525 15C6.75443 15 3.33662 10.5186 2.94894 10.0103C2.93349 9.99001 2.92286 9.97606 2.91717 9.96896L2.74902 9.75586L2.91717 9.54276C3.06559 9.35745 6.58314 5 11.0525 5ZM3.87654 9.8823C3.83563 9.8353 3.79879 9.79298 3.76618 9.75587C4.52179 8.89605 7.54113 5.73474 11.0525 5.73474C14.5638 5.73474 18.3387 9.75587 18.3387 9.75587C18.3052 9.79397 18.2673 9.83754 18.2251 9.88604C17.3152 10.932 14.4151 14.2653 11.0525 14.2662C7.69271 14.2662 4.78339 10.9241 3.87654 9.8823Z" fill="#282F36" fill-opacity="0.3" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.93848 10.0009C7.93848 8.34657 9.33574 7 11.0523 7C12.7688 7 14.1661 8.34657 14.1661 10.0009C14.1661 11.6544 12.7688 13 11.0523 13C9.33574 13 7.93848 11.6581 7.93848 10.0009ZM8.7189 9.99906C8.7189 11.2443 9.76537 12.2577 11.0523 12.2577C12.3411 12.2577 13.3856 11.2443 13.3856 10.0009C13.3856 8.75665 12.3402 7.7432 11.0523 7.7432C9.76537 7.7432 8.7189 8.75383 8.7189 9.99906Z" fill="#282F36" fill-opacity="0.3" />
+                                    </svg>
+                                </a>
                             </div>
-                            <div class="acc-event__item">
-                                <p>Какое-то неважное действие</p>
-                                <p>25.03.2020  11:29</p>
+                            <div class="input__password">
+                                <input type="password" placeholder="Подтвердите пароль">
+                                <a href="#">
+                                    <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0525 5C15.5239 5 19.0394 9.35745 19.1878 9.54276L19.3559 9.75586L19.1878 9.96896C19.1821 9.97608 19.1714 9.99006 19.1559 10.0104C18.768 10.5192 15.3512 15 11.0525 15C6.75443 15 3.33662 10.5186 2.94894 10.0103C2.93349 9.99001 2.92286 9.97606 2.91717 9.96896L2.74902 9.75586L2.91717 9.54276C3.06559 9.35745 6.58314 5 11.0525 5ZM3.87654 9.8823C3.83563 9.8353 3.79879 9.79298 3.76618 9.75587C4.52179 8.89605 7.54113 5.73474 11.0525 5.73474C14.5638 5.73474 18.3387 9.75587 18.3387 9.75587C18.3052 9.79397 18.2673 9.83754 18.2251 9.88604C17.3152 10.932 14.4151 14.2653 11.0525 14.2662C7.69271 14.2662 4.78339 10.9241 3.87654 9.8823Z" fill="#282F36" fill-opacity="0.3" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.93848 10.0009C7.93848 8.34657 9.33574 7 11.0523 7C12.7688 7 14.1661 8.34657 14.1661 10.0009C14.1661 11.6544 12.7688 13 11.0523 13C9.33574 13 7.93848 11.6581 7.93848 10.0009ZM8.7189 9.99906C8.7189 11.2443 9.76537 12.2577 11.0523 12.2577C12.3411 12.2577 13.3856 11.2443 13.3856 10.0009C13.3856 8.75665 12.3402 7.7432 11.0523 7.7432C9.76537 7.7432 8.7189 8.75383 8.7189 9.99906Z" fill="#282F36" fill-opacity="0.3" />
+                                    </svg>
+                                </a>
                             </div>
-                            <div class="acc-event__item">
-                                <p>Какое-то неважное действие</p>
-                                <p>25.03.2020  11:29</p>
-                            </div>
-                            <div class="acc-event__item">
-                                <p>Вакансия <a href="#">«Wp разработчик, Киев»</a> отредактировал <a href="#">Иван Иванович</a>.</p>
-                                <p>25.03.2020  11:29</p>
+                            <div class="acc-add__alert">
+                                <input type="checkbox">
+                                <span>
+                                    <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.33891 3.83891C0.790791 3.38703 1.52343 3.38703 1.97531 3.83891L5.28609 7.14969C5.73797 7.60157 5.73797 8.33421 5.28609 8.78609C4.83421 9.23797 4.10157 9.23797 3.64969 8.78609L0.33891 5.47531C-0.11297 5.02343 -0.11297 4.29079 0.33891 3.83891Z" fill="#7D7AFF" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8452 0.385778C11.3225 0.783535 11.387 1.49292 10.9892 1.97022L5.36426 8.72018C4.96651 9.19749 4.25713 9.26198 3.77982 8.86422C3.30251 8.46646 3.23802 7.75708 3.63578 7.27978L9.26074 0.529818C9.65849 0.0525097 10.3679 -0.0119795 10.8452 0.385778Z" fill="#7D7AFF" />
+                                    </svg>
+                                </span>
+                                <p>Получать все те же уведомления, что и у основного аккаунта</p>
                             </div>
                         </div>
-                        <ul class="pag">
-                            <li><a href="#">1</a></li>
-                            <li><a disabled href="#" class="active">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><p>...</p></li>
-                            <li><a href="#">133</a></li>
-                        </ul>
+                        <div class="acc-add__footer">
+                            <button class="btn__blue">Сохранить</button>
+                            <a href="#">Отмена</a>
+                        </div>
                     </div>
                 </div>
             </div>
