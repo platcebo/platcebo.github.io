@@ -184,5 +184,122 @@ document.addEventListener('DOMContentLoaded', function() {
             })
         })
     }
+let modalClose = document.querySelectorAll('.modal__close'),
+    modal = document.querySelectorAll('.modal'),
+    modalOverflow = document.querySelectorAll('.modal__overflow'),
+    modalEnter = document.querySelector('.modal-enter'),
+    modalEnterBtn = document.querySelectorAll('.modal-enter__call'),
+    modalReg = document.querySelector('.modal-reg'),
+    modalRegBtn = document.querySelectorAll('.modal-reg__call'),
+    modalPas = document.querySelector('.modal-pas'),
+    modalPasBtn = document.querySelectorAll('.modal-pas__call'),
+    modalMail = document.querySelector('.modal-mail'),
+    modalMailBtn = document.querySelectorAll('.modal-mail__call'),
+    modalNew = document.querySelector('.modal-new'),
+    modalNewBtn = document.querySelectorAll('.modal-new__call'),
+    modalConf = document.querySelector('.modal-conf'),
+    modalConfBtn = document.querySelectorAll('.modal-conf__call'),
+    modalAccept = document.querySelector('.modal-accept'),
+    modalAcceptBtn = document.querySelectorAll('.modal-accept__call'),
+    modalResume = document.querySelector('.modal-resume'),
+    modalResumeBtn = document.querySelectorAll('.modal-resume__call');
+
+if(modal !== null) {
+    modalClose.forEach((item)=>{
+        item.addEventListener('click',()=>{
+            for(let a = 0; a < modal.length; a++) {
+                modal[a].classList.remove('active')
+            }
+        })
+    })
+    modalOverflow.forEach((item)=>{
+        item.addEventListener('click',()=>{
+            for(let a = 0; a < modal.length; a++) {
+                modal[a].classList.remove('active')
+            }
+        })
+    })
+}
+if(modalEnter !== null) {
+    modalEnterBtn.forEach((item)=>{
+        item.addEventListener('click',()=>{
+            for(let a = 0; a < modal.length; a++) {
+                modal[a].classList.remove('active')
+            }
+            modalEnter.classList.add('active')
+        })
+    })
+}
+if(modalReg !== null) {
+    modalRegBtn.forEach((item)=>{
+        item.addEventListener('click',()=>{
+            for(let a = 0; a < modal.length; a++) {
+                modal[a].classList.remove('active')
+            }
+            modalReg.classList.add('active')
+        })
+    })
+}
+if(modalPas !== null) {
+    modalPasBtn.forEach((item)=>{
+        item.addEventListener('click',()=>{
+            for(let a = 0; a < modal.length; a++) {
+                modal[a].classList.remove('active')
+            }
+            modalPas.classList.add('active')
+        })
+    })
+}
+if(modalMail !== null) {
+    modalMailBtn.forEach((item)=>{
+        item.addEventListener('click',()=>{
+            for(let a = 0; a < modal.length; a++) {
+                modal[a].classList.remove('active')
+            }
+            modalMail.classList.add('active')
+        })
+    })
+}
+if(modalNew !== null) {
+    modalNewBtn.forEach((item)=>{
+        item.addEventListener('click',()=>{
+            for(let a = 0; a < modal.length; a++) {
+                modal[a].classList.remove('active')
+            }
+            modalNew.classList.add('active')
+        })
+    })
+}
+if(modalConf !== null) {
+    modalConfBtn.forEach((item)=>{
+        item.addEventListener('click',()=>{
+            for(let a = 0; a < modal.length; a++) {
+                modal[a].classList.remove('active')
+            }
+            modalConf.classList.add('active')
+        })
+    })
+}
+if(modalAccept !== null) {
+    modalAcceptBtn.forEach((item)=>{
+        item.addEventListener('click',()=>{
+            for(let a = 0; a < modal.length; a++) {
+                modal[a].classList.remove('active')
+            }
+            modalAccept.classList.add('active')
+        })
+    })
+}
+if(modalResume !== null) {
+    modalResumeBtn.forEach((item)=>{
+        item.addEventListener('click',()=>{
+            for(let a = 0; a < modal.length; a++) {
+                modal[a].classList.remove('active')
+            }
+            modalResume.classList.add('active')
+        })
+    })
+}
+
 
 }, false);

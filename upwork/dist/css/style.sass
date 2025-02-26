@@ -481,6 +481,8 @@ section
 .sub
     padding: 0 0 40px
     color: $white
+    h3
+        color: $white
     &__container
         padding: 28px 60px 44px 555px
         position: relative
@@ -4164,3 +4166,319 @@ section
                     width: 100%
                 a
                     text-align: left
+
+.modal
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 100
+    display: flex
+    justify-content: start
+    align-items: start
+    padding: 10px
+    overflow-y: auto
+    opacity: 0
+    pointer-events: none
+    transition: all .3s
+    &.active
+        opacity: 1
+        pointer-events: all
+    &__overflow
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: #000
+        opacity: .5
+        z-index: -1
+    &__block
+        max-width: 350px
+        width: 100%
+        padding: 47px 24px 30px
+        position: relative
+        margin: auto
+        border-radius: 10px
+        background: $white
+        box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+    &__close
+        position: absolute
+        top: 33px
+        right: 15px
+        cursor: pointer
+        path
+            transition: all .3s
+        &:hover
+            path
+                fill-opacity: 1
+    
+.modal-enter
+    &__link
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin: 20px 0 0
+        p
+            font: 400 15px / 1.45 $font-family
+            color: $main-dark
+        div
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 10px
+    &__input
+        margin: 25px 0 0
+        display: grid
+        grid-template-columns: 1fr
+        gap: 16px
+    &__btn
+        margin: 18px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 19px
+        a
+            font: 400 15px / 1.45 $font-family
+            text-decoration: underline
+            text-decoration-skip-ink: none
+            color: $gray-fill
+    &__footer
+        margin: 25px -24px -30px
+        border-top: 1px solid rgba(40, 47, 54, 0.15)
+        padding: 20px 24px 17px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 19px
+        p
+            font: 400 15px / 1.45 $font-family
+            color: rgba(40, 47, 54, 0.8)
+        a
+            font: 400 15px / 1.45 $font-family
+            color: $blue
+
+.modal-reg
+    &__radio
+        display: flex
+        justify-content: flex-start
+        flex-wrap: wrap
+        align-items: center
+        gap: 14px
+        row-gap: 8px
+        margin: 16px 0 0
+        div
+            position: relative
+            display: grid
+            grid-template-columns: 18px 1fr
+            gap: 7px
+            align-items: center
+        span
+            width: 18px
+            height: 18px
+            border-radius: 100%
+            border: 1px solid #e4e4e4
+            display: flex
+            justify-content: center
+            align-items: center
+            svg
+                opacity: 0
+                transition: all .3s
+        p
+            font: 400 15px / 1.4 $font-family
+            color: $main-dark
+        input
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            opacity: 0
+            z-index: 2
+            &:checked
+                &+span
+                    svg
+                        opacity: 1
+    &__check
+        position: relative
+        display: grid
+        grid-template-columns: 18px 1fr
+        gap: 7px
+        align-items: center
+        max-width: 225px
+        margin: 15px 0 0
+        span
+            width: 18px
+            height: 18px
+            border-radius: 2px
+            border: 1px solid #e4e4e4
+            border-radius: 3px
+            display: flex
+            justify-content: center
+            align-items: center
+            svg
+                opacity: 0
+                transition: all .3s
+        p
+            font: 400 12px / 1.4 $font-family
+            color: $main-dark
+            a
+                color: $blue
+        input
+            position: absolute
+            top: 0
+            left: 0
+            width: 20px
+            height: 100%
+            opacity: 0
+            z-index: 2
+            &:checked
+                &+span
+                    svg
+                        opacity: 1
+
+.modal-pas
+    &__subtitle
+        margin: 13px 0 0
+        font: 400 15px / 1.45 $font-family
+        color: $main-dark
+        strong
+            font-weight: 700
+    &__code
+        margin: 15px 0 0
+        font: 400 15px / 1.45 $font-family
+        color: $blue
+        display: block
+
+.modal-accept
+    .modal
+        &__block
+            padding-top: 15px
+            max-width: 434px
+    img
+        width: 100%
+    h3
+        text-align: center
+        font-size: 25px
+        margin: -20px 0 0
+
+.modal-resume
+    .modal
+        &__block
+            max-width: 732px
+            padding: 24px 55px 50px
+    &__wrapper
+        margin: 30px 0 0
+        display: grid
+        grid-template-columns: 1fr
+        gap: 20px
+    &__item
+        border-radius: 5px
+        box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+        background: $white
+        padding: 15px
+        position: relative
+    &__check
+        position: absolute
+        top: 24px
+        right: 39px
+        span
+            width: 18px
+            height: 18px
+            border-radius: 100%
+            border: 1px solid #e4e4e4
+            display: flex
+            justify-content: center
+            align-items: center
+            svg
+                opacity: 0
+                transition: all .3s
+        input
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            opacity: 0
+            z-index: 2
+            &:checked
+                &+span
+                    svg
+                        opacity: 1
+    &__row
+        margin: 9px 0 0
+        display: flex
+        justify-content: start
+        align-items: center
+        flex-wrap: wrap
+        gap: 9px
+        row-gap: 6px
+        p
+            font: 400 17px / 1.4 $font-family
+            color: $gray-dark
+            &.pro
+                border-radius: 3px
+                padding: 0px 10px
+                background: $green
+                font: 400 12px / 1.4 $font-family
+                color: $white
+            &.name
+                font: 500 18px / 1.4 $font-family
+                color: $blue
+            &.map
+                display: flex
+                justify-content: center
+                align-items: center
+                gap: 6px
+                &::before
+                    content: ''
+                    display: block
+                    width: 12px
+                    height: 12px
+                    background: url('../img/map.svg') center no-repeat
+                    background-size: contain
+    &__list
+        margin: 12px 0 0
+        li
+            font: 400 17px / 1.4 $font-family
+            color: $main-dark
+            &::before
+                content: '• '
+    &__mes
+        margin: 30px 0 0
+        border: 1px solid $bg-color
+        border-radius: 5px
+        box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+        background: $white
+        padding: 18px 45px 30px
+        p
+            margin: 12px 0 0
+            font: 400 15px / 1.45 $font-family
+            color: $gray-dark
+            max-width: 508px
+        textarea
+            resize: none
+            width: 100%
+            box-sizing: border-box
+            margin: 20px 0 0
+            border-radius: 5px
+            border: 1px solid rgba(40, 47, 54, 0.15)
+            height: 89px
+            padding: 10px 15px
+            font: 400 15px / 1.45 $font-family
+            color: $main-dark
+
+@media ( max-width: 600px )
+    .modal
+        &__block
+            padding: 47px 10px 30px
+    .modal-resume
+        .modal
+            &__block
+                padding: 47px 10px 30px
+        &__check
+            top: 10px
+            right: 10px
+        &__mes
+            padding: 10px
