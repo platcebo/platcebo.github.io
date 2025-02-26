@@ -95,19 +95,48 @@
             <div class="create-vacancy">
                 <div class="create-vacancy__step">
                     <p>1</p>
-                    <p>2</p>
-                    <p class="active">3</p>
+                    <p class="active">2</p>
+                    <p>3</p>
                     <p>4</p>
                 </div>
                 <div class="create-vacancy__wrapper">
-                    <h2>Требование к соискателю</h2>
-                    <div class="create-vacancy__row">
+                    <h2>Условия работы</h2>
+                    <div class="create-vacancy__block">
                         <div class="create-vacancy__input">
-                            <p>Опыт работы</p>
+                            <p>Город работы</p>
                             <div class="select">
-                                <input type="text" readonly placeholder="Готовы взять без опыта">
+                                <input type="text" readonly placeholder="Ташкент">
                                 <ul>
-                                    <li>Готовы взять без опыта</li>
+                                    <li>Ташкент</li>
+                                    <li>Выберите город2</li>
+                                    <li>Выберите город3</li>
+                                    <li>Выберите город4</li>
+                                </ul>
+                                <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 5L0.535899 1.25L7.4641 1.25L4 5Z" fill="#383B49" />
+                                </svg>
+                            </div>
+                            <div class="create-vacancy__row_check">
+                                <input type="checkbox" name="acc-add">
+                                <span>
+                                    <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.33891 3.83891C0.790791 3.38703 1.52343 3.38703 1.97531 3.83891L5.28609 7.14969C5.73797 7.60157 5.73797 8.33421 5.28609 8.78609C4.83421 9.23797 4.10157 9.23797 3.64969 8.78609L0.33891 5.47531C-0.11297 5.02343 -0.11297 4.29079 0.33891 3.83891Z" fill="#7D7AFF" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8452 0.385778C11.3225 0.783535 11.387 1.49292 10.9892 1.97022L5.36426 8.72018C4.96651 9.19749 4.25713 9.26198 3.77982 8.86422C3.30251 8.46646 3.23802 7.75708 3.63578 7.27978L9.26074 0.529818C9.65849 0.0525097 10.3679 -0.0119795 10.8452 0.385778Z" fill="#7D7AFF" />
+                                    </svg>
+                                </span>
+                                <p>Готовы взять студента</p>
+                            </div>
+                        </div>
+                        <div class="create-vacancy__input">
+                            <p>Адрес работы</p>
+                            <input type="text" placeholder="Ташкент">
+                        </div>
+                        <div class="create-vacancy__input">
+                            <p>Город для поиска</p>
+                            <div class="select">
+                                <input type="text" readonly placeholder="Ташкент">
+                                <ul>
+                                    <li>Ташкент</li>
                                     <li>Выберите город2</li>
                                     <li>Выберите город3</li>
                                     <li>Выберите город4</li>
@@ -117,12 +146,87 @@
                                 </svg>
                             </div>
                         </div>
+                        <div class="create-vacancy__check">
+                            <p class="create-vacancy__name">Вид занятости</p>
+                            <div class="create-vacancy__check_wrapper">
+                                <div>
+                                    <input type="checkbox" name="acc-add">
+                                    <span>
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.33891 3.83891C0.790791 3.38703 1.52343 3.38703 1.97531 3.83891L5.28609 7.14969C5.73797 7.60157 5.73797 8.33421 5.28609 8.78609C4.83421 9.23797 4.10157 9.23797 3.64969 8.78609L0.33891 5.47531C-0.11297 5.02343 -0.11297 4.29079 0.33891 3.83891Z" fill="#7D7AFF" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8452 0.385778C11.3225 0.783535 11.387 1.49292 10.9892 1.97022L5.36426 8.72018C4.96651 9.19749 4.25713 9.26198 3.77982 8.86422C3.30251 8.46646 3.23802 7.75708 3.63578 7.27978L9.26074 0.529818C9.65849 0.0525097 10.3679 -0.0119795 10.8452 0.385778Z" fill="#7D7AFF" />
+                                        </svg>
+                                    </span>
+                                    <p>Полная занятость</p>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="acc-add">
+                                    <span>
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.33891 3.83891C0.790791 3.38703 1.52343 3.38703 1.97531 3.83891L5.28609 7.14969C5.73797 7.60157 5.73797 8.33421 5.28609 8.78609C4.83421 9.23797 4.10157 9.23797 3.64969 8.78609L0.33891 5.47531C-0.11297 5.02343 -0.11297 4.29079 0.33891 3.83891Z" fill="#7D7AFF" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8452 0.385778C11.3225 0.783535 11.387 1.49292 10.9892 1.97022L5.36426 8.72018C4.96651 9.19749 4.25713 9.26198 3.77982 8.86422C3.30251 8.46646 3.23802 7.75708 3.63578 7.27978L9.26074 0.529818C9.65849 0.0525097 10.3679 -0.0119795 10.8452 0.385778Z" fill="#7D7AFF" />
+                                        </svg>
+                                    </span>
+                                    <p>Проектная работа</p>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="acc-add">
+                                    <span>
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.33891 3.83891C0.790791 3.38703 1.52343 3.38703 1.97531 3.83891L5.28609 7.14969C5.73797 7.60157 5.73797 8.33421 5.28609 8.78609C4.83421 9.23797 4.10157 9.23797 3.64969 8.78609L0.33891 5.47531C-0.11297 5.02343 -0.11297 4.29079 0.33891 3.83891Z" fill="#7D7AFF" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8452 0.385778C11.3225 0.783535 11.387 1.49292 10.9892 1.97022L5.36426 8.72018C4.96651 9.19749 4.25713 9.26198 3.77982 8.86422C3.30251 8.46646 3.23802 7.75708 3.63578 7.27978L9.26074 0.529818C9.65849 0.0525097 10.3679 -0.0119795 10.8452 0.385778Z" fill="#7D7AFF" />
+                                        </svg>
+                                    </span>
+                                    <p>Неполная занятость</p>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="acc-add">
+                                    <span>
+                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.33891 3.83891C0.790791 3.38703 1.52343 3.38703 1.97531 3.83891L5.28609 7.14969C5.73797 7.60157 5.73797 8.33421 5.28609 8.78609C4.83421 9.23797 4.10157 9.23797 3.64969 8.78609L0.33891 5.47531C-0.11297 5.02343 -0.11297 4.29079 0.33891 3.83891Z" fill="#7D7AFF" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8452 0.385778C11.3225 0.783535 11.387 1.49292 10.9892 1.97022L5.36426 8.72018C4.96651 9.19749 4.25713 9.26198 3.77982 8.86422C3.30251 8.46646 3.23802 7.75708 3.63578 7.27978L9.26074 0.529818C9.65849 0.0525097 10.3679 -0.0119795 10.8452 0.385778Z" fill="#7D7AFF" />
+                                        </svg>
+                                    </span>
+                                    <p>Удаленная работа</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="create-vacancy__range">
+                            <p class="create-vacancy__name">Время работы</p>
+                            <div class="create-vacancy__range_wrapper">
+                                <div class="select">
+                                    <input type="text" readonly placeholder="9:00">
+                                    <ul>
+                                        <li>9:00</li>
+                                        <li>Выберите город2</li>
+                                        <li>Выберите город3</li>
+                                        <li>Выберите город4</li>
+                                    </ul>
+                                    <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 5L0.535899 1.25L7.4641 1.25L4 5Z" fill="#383B49" />
+                                    </svg>
+                                </div>
+                                <span>—</span>
+                                <div class="select">
+                                    <input type="text" readonly placeholder="18:00">
+                                    <ul>
+                                        <li>18:00</li>
+                                        <li>Выберите город2</li>
+                                        <li>Выберите город3</li>
+                                        <li>Выберите город4</li>
+                                    </ul>
+                                    <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 5L0.535899 1.25L7.4641 1.25L4 5Z" fill="#383B49" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
                         <div class="create-vacancy__input">
-                            <p>Образование</p>
+                            <p>Рабочие дни</p>
                             <div class="select">
-                                <input type="text" readonly placeholder="Незаконченное высшее образование">
+                                <input type="text" readonly placeholder="Понедельник — Пятница">
                                 <ul>
-                                    <li>Незаконченное высшее образование</li>
+                                    <li>Понедельник — Пятница</li>
                                     <li>Выберите город2</li>
                                     <li>Выберите город3</li>
                                     <li>Выберите город4</li>
@@ -132,47 +236,51 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="create-vacancy__row_check">
-                            <input type="checkbox" name="acc-add">
-                            <span>
-                                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.33891 3.83891C0.790791 3.38703 1.52343 3.38703 1.97531 3.83891L5.28609 7.14969C5.73797 7.60157 5.73797 8.33421 5.28609 8.78609C4.83421 9.23797 4.10157 9.23797 3.64969 8.78609L0.33891 5.47531C-0.11297 5.02343 -0.11297 4.29079 0.33891 3.83891Z" fill="#7D7AFF" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8452 0.385778C11.3225 0.783535 11.387 1.49292 10.9892 1.97022L5.36426 8.72018C4.96651 9.19749 4.25713 9.26198 3.77982 8.86422C3.30251 8.46646 3.23802 7.75708 3.63578 7.27978L9.26074 0.529818C9.65849 0.0525097 10.3679 -0.0119795 10.8452 0.385778Z" fill="#7D7AFF" />
-                                </svg>
-                            </span>
-                            <p>Готовы взять студента</p>
+                        <div class="create-vacancy__range create-vacancy__range_full">
+                            <div>
+                                <p class="create-vacancy__name">Зарплата <span>в сумах/месяц</span></p>
+                                <div class="create-vacancy__range_wrapper">
+                                    <div class="select">
+                                        <input type="text" readonly placeholder="1 000 000">
+                                        <ul>
+                                            <li>1 000 000</li>
+                                            <li>Выберите город2</li>
+                                            <li>Выберите город3</li>
+                                            <li>Выберите город4</li>
+                                        </ul>
+                                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 5L0.535899 1.25L7.4641 1.25L4 5Z" fill="#383B49" />
+                                        </svg>
+                                    </div>
+                                    <span>—</span>
+                                    <div class="select">
+                                        <input type="text" readonly placeholder="100 000 000">
+                                        <ul>
+                                            <li>100 000 000</li>
+                                            <li>Выберите город2</li>
+                                            <li>Выберите город3</li>
+                                            <li>Выберите город4</li>
+                                        </ul>
+                                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 5L0.535899 1.25L7.4641 1.25L4 5Z" fill="#383B49" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="create-vacancy__row_check">
+                                <input type="checkbox" name="acc-add">
+                                <span>
+                                    <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.33891 3.83891C0.790791 3.38703 1.52343 3.38703 1.97531 3.83891L5.28609 7.14969C5.73797 7.60157 5.73797 8.33421 5.28609 8.78609C4.83421 9.23797 4.10157 9.23797 3.64969 8.78609L0.33891 5.47531C-0.11297 5.02343 -0.11297 4.29079 0.33891 3.83891Z" fill="#7D7AFF" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8452 0.385778C11.3225 0.783535 11.387 1.49292 10.9892 1.97022L5.36426 8.72018C4.96651 9.19749 4.25713 9.26198 3.77982 8.86422C3.30251 8.46646 3.23802 7.75708 3.63578 7.27978L9.26074 0.529818C9.65849 0.0525097 10.3679 -0.0119795 10.8452 0.385778Z" fill="#7D7AFF" />
+                                    </svg>
+                                </span>
+                                <p>По результатам собеседования</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="create-vacancy__skill">
-                        <p>Ключевые навыки</p>
-                        <div class="create-vacancy__skill_wrapper">
-                            <input type="text" placeholder="Английский — A1 — Начальный">
-                            <input type="text" placeholder="Анализ текущих финансовых показателей">
-                            <input type="text" placeholder="Финансовый анализ">
-                            <button class="btn__blue">+ Добавить ключевой навык</button>
-                        </div>
-                    </div>
-                    <div class="create-vacancy__answer">
-                        <p class="create-vacancy__name">Кто может откликаться?</p>
-                        <div class="create-vacancy__row_check">
-                            <input type="checkbox" name="acc-add">
-                            <span>
-                                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.33891 3.83891C0.790791 3.38703 1.52343 3.38703 1.97531 3.83891L5.28609 7.14969C5.73797 7.60157 5.73797 8.33421 5.28609 8.78609C4.83421 9.23797 4.10157 9.23797 3.64969 8.78609L0.33891 5.47531C-0.11297 5.02343 -0.11297 4.29079 0.33891 3.83891Z" fill="#7D7AFF" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8452 0.385778C11.3225 0.783535 11.387 1.49292 10.9892 1.97022L5.36426 8.72018C4.96651 9.19749 4.25713 9.26198 3.77982 8.86422C3.30251 8.46646 3.23802 7.75708 3.63578 7.27978L9.26074 0.529818C9.65849 0.0525097 10.3679 -0.0119795 10.8452 0.385778Z" fill="#7D7AFF" />
-                                </svg>
-                            </span>
-                            <p>Только соискатели резюме</p>
-                        </div>
-                        <div class="create-vacancy__row_check">
-                            <input type="checkbox" name="acc-add">
-                            <span>
-                                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.33891 3.83891C0.790791 3.38703 1.52343 3.38703 1.97531 3.83891L5.28609 7.14969C5.73797 7.60157 5.73797 8.33421 5.28609 8.78609C4.83421 9.23797 4.10157 9.23797 3.64969 8.78609L0.33891 5.47531C-0.11297 5.02343 -0.11297 4.29079 0.33891 3.83891Z" fill="#7D7AFF" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8452 0.385778C11.3225 0.783535 11.387 1.49292 10.9892 1.97022L5.36426 8.72018C4.96651 9.19749 4.25713 9.26198 3.77982 8.86422C3.30251 8.46646 3.23802 7.75708 3.63578 7.27978L9.26074 0.529818C9.65849 0.0525097 10.3679 -0.0119795 10.8452 0.385778Z" fill="#7D7AFF" />
-                                </svg>
-                            </span>
-                            <p>Только соискатели резюме</p>
+                        <div class="create-vacancy__input">
+                            <p>Комментарий к зарплате</p>
+                            <input type="text" placeholder="без учета бонусов ">
                         </div>
                     </div>
                     <div class="create-vacancy__btn">
