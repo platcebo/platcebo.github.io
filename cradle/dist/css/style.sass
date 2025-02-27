@@ -11,6 +11,7 @@ html
     -ms-text-size-adjust: 100%
     -moz-text-size-adjust: 100%
     -webkit-text-size-adjust: 100%
+    transition-delay: 1s
 header,
 section,
 footer
@@ -26,8 +27,9 @@ input
     &.error
         border: 1px solid #c34545 !important
 .element-animation
+    display: block
     i
-        display: inline-block
+        display: block
         position: relative
         overflow: hidden
     span
@@ -36,7 +38,7 @@ input
         opacity: 1
         transform: translateY(100%)
         transition-delay: inherit
-        display: inline-block
+        display: block
         padding: 13px 0 0 5px
     &.element-show
         span
@@ -950,7 +952,7 @@ input
         font-size: var(--gum)
     h1
         font-size: 50em
-    .element-animation.element-show span
+    .element-animation span
         padding: calc( var(--gum) * 7 ) 0 0 calc( var(--gum) * 3 )
     header,
     section,
@@ -1330,7 +1332,7 @@ input
         padding: 39em 0    
     h1
         font-size: 42em
-    .element-animation.element-show span
+    .element-animation span
         padding: calc( var(--gum) * 6 ) 0 0 calc( var(--gum) * 2 )
     .container
         padding: 0 10em
@@ -3935,3 +3937,17 @@ input
                 margin: 23em 0 0
                 height: 290em
                 object-fit: cover
+
+.curtain
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 100
+    background: #0082c9
+    transform: translatex(0%)
+    transition: transform 0.9s cubic-bezier(0.76, 0, 0.24, 1)  0.5s
+    will-change: transform
+    &.active
+        transform: translateX(100%)

@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 change.target.classList.add('element-show');
                 let index = 0;
                 for (let element of change.target.children) {
-                    element.style.transitionDelay = index * 0.1 + 's';
+                    element.style.transitionDelay = index * 0.1 + 1 + 's';
                     index++;
                 }
             }
@@ -276,5 +276,14 @@ document.addEventListener('DOMContentLoaded', function() {
             nav.forEach(item => item.style.width = "")
         })
     }
+
+    let curtain = document.querySelector('.curtain')
+
+    curtain.classList.add('active')
+    window.onload = function() { // можно также использовать window.addEventListener('load', (event) => {
+        console.log('12')
+        curtain.classList.add('active')
+    };
+    
 
 }, false);
