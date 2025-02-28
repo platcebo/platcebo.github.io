@@ -352,6 +352,11 @@ section
             font: 400 17px / 1.4 $font-family
             color: $main-dark
             max-width: 160px
+            transition: all .3s
+        &:hover
+            opacity: 1
+            p
+                color: $blue
 
 .publish
     padding: 0 0 30px
@@ -987,9 +992,14 @@ section
             grid-template-columns: 61px 1fr
             gap: 27px
             align-items: center
+            &:hover
+                opacity: 1
+                p
+                    color: $blue
         p
             font: 400 17px / 1.4 $font-family
             color: $main-dark
+            transition: all .3s
     &__city
         display: block
         margin: 14px 0 60px
