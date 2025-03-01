@@ -301,5 +301,14 @@ if(modalResume !== null) {
     })
 }
 
+let vacancyList = document.querySelectorAll('.category__list_script ul');
+
+if(vacancyList !== null) {
+    vacancyList.forEach((item)=>{
+        console.log('as')
+        item.style.maxHeight = item.getBoundingClientRect().height / 2 + 25 + 'px'
+    })
+}
+
 
 }, false);

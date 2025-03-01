@@ -892,6 +892,8 @@ section
 
 .category
     padding: 55px 0 105px
+    &__title
+        margin: 0 0 20px
     &__filter
         padding: 0 14px 8px
         border-bottom: 1px solid $gray-light
@@ -978,6 +980,14 @@ section
             font: 400 17px / 1.4 $font-family
             color: $gray-fill
             padding: 0 0 0 22px
+        &_script
+            display: block
+            ul
+                display: flex
+                flex-direction: column
+                flex-wrap: wrap
+                li
+                    width: calc( 50% - 4px )
     &__row
         margin: 30px 0 0
         display: grid
@@ -1012,6 +1022,7 @@ section
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
         &_block
             .title
+                padding-left: 13px
                 h1,
                 h2
                     font-size: 25px
@@ -1041,6 +1052,7 @@ section
                 grid-auto-flow: row
             &_block
                 .title
+                    padding-left: 0
                     h1,
                     h2
                         font-size: 18px
