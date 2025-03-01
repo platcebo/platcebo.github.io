@@ -8251,8 +8251,8 @@ textarea.input
                 span
                     color: $white
     &__wrapper
-        display: grid
-        grid-template-columns: 1fr 1fr 1fr
+        display: flex
+        flex-wrap: wrap
         gap: 40px
     &__item
         display: grid
@@ -8260,6 +8260,9 @@ textarea.input
         border-radius: 40px
         background: $light-gray
         overflow: hidden
+        width: calc( (100% - 80px) / 3 )
+        &_width
+            width: calc( (100% - 20px)/3*2 )
         &_info
             padding: 40px
             h3,
@@ -8353,10 +8356,8 @@ textarea.input
 
 @media ( max-width: 1320px )
     .case-list
-        &__wrapper
-            grid-template-columns: 1fr 1fr
         &__item
-            grid-column: auto !important
+            width: calc( (100% - 40px) / 2 )
 
 @media ( max-width: 1200px )
     .case-list
@@ -8381,6 +8382,7 @@ textarea.input
             span
                 font-size: 12px
         &__item
+            width: calc( (100% - 20px) / 2 )
             &_info
                 padding: 30px
         &__aside
@@ -8546,9 +8548,9 @@ textarea.input
             margin: 20px 0 0
         &__wrapper
             margin: 20px 0 0
-            grid-template-columns: 1fr 
         &__item
             border-radius: 30px
+            width: 100%
             &_info
                 padding: 20px
             h3,
