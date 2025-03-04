@@ -6,10 +6,27 @@
     <title>АВАЛ</title>
     <link rel="stylesheet" href="css/reset.min.css">
     <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
     <nav class="nav">
+        <div class="nav__mob_row">
+            <div class="nav__humburger">
+                <span></span>
+            </div>
+            <div class="nav__mob">
+                <a href="#">
+                    <img src="img/phone.svg" alt="">
+                </a>
+                <a href="#" class="modal-enter__call">
+                    <img src="img/pers.svg" alt="">
+                </a>
+            </div>
+            <a href="#" class="nav__mob_logo">
+                <img src="img/logo_mob.svg" alt="">
+            </a>
+        </div>
         <a href="#" class="nav__logo">
             <img src="img/logo.svg" alt="">
         </a>
@@ -24,13 +41,32 @@
                 <p>+7 (918) 664-75-46</p>
                 <a href="#" class="btn__trans">Позвонить</a>
             </div>
-            <a href="#" class="nav__enter">Вход в личный кабинет</a>
+            <a href="#" class="nav__enter modal-enter__call">Вход в личный кабинет</a>
+        </div>
+        <div class="nav__contact">
+            <p>Контакты:</p>
+            <ul>
+                <li>
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 5.32422C1.16709 6.42046 1.33424 7.51665 1.70402 8.66291C2.07379 9.80917 2.64619 11.0053 3.61333 12.424C4.58048 13.8427 5.94241 15.4838 7.07154 16.6124C8.20066 17.7409 9.09697 18.3569 9.99328 18.9729" stroke="#5FB528" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M3.55029 1.63202C3.95516 1.3792 4.36008 1.12633 4.81548 1.0345C5.27088 0.94267 5.77676 1.01183 6.40454 1.51718C7.03232 2.02252 7.782 2.96405 8.22473 3.62417C8.66747 4.28429 8.80326 4.66293 8.87276 5.05082C8.94226 5.43877 8.94547 5.83595 8.81908 6.17833C8.69262 6.52065 8.43644 6.80811 8.22082 7.06651C8.0052 7.32485 7.83008 7.55419 7.73928 7.80288C7.64848 8.05157 7.642 8.31962 7.796 8.80084C7.95006 9.28207 8.26459 9.97642 8.80449 10.7596C9.34438 11.5427 10.1096 12.4148 10.8425 13.0752C11.5753 13.7356 12.2758 14.1845 12.84 14.4397C13.4042 14.6948 13.8323 14.7562 14.2068 14.5882C14.5813 14.4203 14.9024 14.0231 15.2607 13.7163C15.619 13.4095 16.0146 13.1931 16.4362 13.1172C16.8577 13.0413 17.3052 13.1058 17.8321 13.3691C18.3591 13.6323 18.9654 14.0941 19.5491 14.5673C20.1328 15.0404 20.6938 15.5248 20.9029 16.1368C21.1121 16.7488 20.9694 17.4884 20.6062 18.2345C20.243 18.9805 19.6593 19.733 19.1026 20.2206C18.5459 20.7081 18.0163 20.9308 17.2218 20.9857C16.4274 21.0406 15.3681 20.9278 14.3088 20.8149" stroke="#5FB528" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>+7 (918) 664-75-46</span>
+                </li>
+                <li>
+                    <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.18088 21C8.52603 21 7.87113 20.6933 6.54487 19.3216C5.21855 17.9499 3.22083 15.5131 2.16391 13.5985C1.10704 11.684 0.990929 10.2916 1.00051 9.08022C1.01009 7.86892 1.14525 6.83869 1.69264 5.69062C2.23997 4.54262 3.19959 3.27679 4.53018 2.39111C5.86082 1.50548 7.56243 1 9.21776 1C10.8731 1 12.4821 1.50548 13.7667 2.36866C15.0511 3.2319 16.0112 4.45295 16.53 5.61048C17.0489 6.768 17.1265 7.86199 17.1089 9.09713C17.0912 10.3323 16.9783 11.7086 15.9685 13.6137C14.9587 15.5187 13.0521 17.9526 11.7714 19.3229C10.4906 20.6931 9.83573 20.9998 9.18088 20.9998V21Z" stroke="#5FB528" stroke-miterlimit="22.9256" />
+                        <path d="M4.88892 8.80538C4.98983 8.25979 5.09081 7.71421 5.38164 7.13509C5.67247 6.55603 6.15316 5.94344 6.8237 5.50795C7.49424 5.07245 8.35464 4.81399 9.16943 4.79725C9.98416 4.78052 10.7532 5.00545 11.4647 5.52711C12.1761 6.04878 12.8298 6.86713 13.1567 7.71421C13.4835 8.56128 13.4835 9.43708 13.1995 10.2974C12.9155 11.1576 12.3475 12.0024 11.6336 12.5432C10.9198 13.084 10.0602 13.3208 9.181 13.3148C8.30176 13.3088 7.40286 13.0599 6.81166 12.7273C6.2204 12.3947 5.93678 11.9783 5.65322 11.5619" stroke="#5FB528" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>г. Анапа, ул. Самбурова 50</span>
+                </li>
+            </ul>
         </div>
     </nav>
     <header class="header">
         <div class="container">
             <h1>Центр мануальной и ментальной <br> диагностики и коррекции "Авал" <br> Владимира Волгина</h1>
-            <button class="btn__green">Оставить заявку на консультацию</button>
+            <button class="btn__green modal-req__call">Оставить заявку на консультацию</button>
         </div>
     </header>
     <section class="about">
@@ -54,11 +90,494 @@
                 </div>
             </div>
             <div class="about__wrapper tab-wrapper active">
-
+                <div class="about__left">
+                    <img src="img/about_1.png" alt="">
+                    <div class="about__text">
+                        <h3>Практика 25 лет</h3>
+                        <p>За годы работы я помог более 1000 пациентам справиться с хроническими болями, стрессом и различными нарушениями в работе организма.</p>
+                        <h3>Автор уникального метода.</h3>
+                        <p>Разработал собственную методику Энерго-цвето-рефлексотерапии, которая помогает восстанавливать баланс тела и души через воздействие на рефлекторные зоны и энергию.</p>
+                        <h3>Обучение специалистов.</h3>
+                        <p>Провёл десятки обучающих курсов для специалистов, которые сегодня успешно применяют мои авторские методики и достигли нового профессионального уровня.</p>
+                        <h3>Комплексный подход.</h3>
+                        <p>Сочетание научных знаний, классических техник и инновационных методов позволяет находить решения даже для самых сложных случаев.</p>
+                        <button class="btn__green">Отзывы</button>
+                    </div>
+                </div>
+                <div class="about__right">
+                    <div class="about__list">
+                        <h3>Методика «Энерго-цвето-рефлексотерапия»</h3>
+                        <ul>
+                            <li><p>За годы работы я помог более 1000 пациентам справиться с хроническими болями, стрессом и различными нарушениями в работе организма.</p></li>
+                            <li><p>Моя работа включает в себя воздействие на физические и психические процессы организма. Результаты бесспорно впечатляют и радуют пациентов!</p></li>
+                        </ul>
+                        <div class="about__block">
+                            <p>Энерго-цвето-рефлексотерапия объединяет лучшее из самых популярных техник массажа, а также включает FDM-терапию, кинезиологию и метод P-DTR (проприоцептивный глубокий сухожильный рефлекс).</p>
+                            <p>Включает в себя диагностику при помощи ММТ тестов, диагностику по гидросопротивлению фасции, алгоритмы работы с оболочками и энергетическими центрами ментального тела человека, органами. Также включает работу с психосоматическими расстройствами, психологическими и физическими травмами и их компенсациями.</p>
+                        </div>
+                    </div>
+                    <img src="img/about_2.png" alt="">
+                </div>
             </div>
         </div>
     </section>
+    <section class="result">
+        <div class="container">
+            <h2 class="title">До/после</h2>
+            <div class="result__slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide result__slide">
+                        <div class="result__img">
+                            <img src="img/res.jpg" alt="">
+                            <svg width="47" height="34" viewBox="0 0 47 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 16.6279L45 16.6279M45 16.6279L28.7895 0.999999M45 16.6279L28.7895 33" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                            <img src="img/res.jpg" alt="">
+                        </div>
+                        <div class="result__descr">
+                            <p>Расписываем какая работа была проделана</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide result__slide">
+                        <div class="result__img">
+                            <img src="img/res.jpg" alt="">
+                            <svg width="47" height="34" viewBox="0 0 47 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 16.6279L45 16.6279M45 16.6279L28.7895 0.999999M45 16.6279L28.7895 33" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                            <img src="img/res.jpg" alt="">
+                        </div>
+                        <div class="result__descr">
+                            <p>Расписываем какая работа была проделана</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide result__slide">
+                        <div class="result__img">
+                            <img src="img/res.jpg" alt="">
+                            <svg width="47" height="34" viewBox="0 0 47 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 16.6279L45 16.6279M45 16.6279L28.7895 0.999999M45 16.6279L28.7895 33" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                            <img src="img/res.jpg" alt="">
+                        </div>
+                        <div class="result__descr">
+                            <p>Расписываем какая работа была проделана</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide result__slide">
+                        <div class="result__img">
+                            <img src="img/res.jpg" alt="">
+                            <svg width="47" height="34" viewBox="0 0 47 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 16.6279L45 16.6279M45 16.6279L28.7895 0.999999M45 16.6279L28.7895 33" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                            <img src="img/res.jpg" alt="">
+                        </div>
+                        <div class="result__descr">
+                            <p>Расписываем какая работа была проделана</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide result__slide">
+                        <div class="result__img">
+                            <img src="img/res.jpg" alt="">
+                            <svg width="47" height="34" viewBox="0 0 47 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 16.6279L45 16.6279M45 16.6279L28.7895 0.999999M45 16.6279L28.7895 33" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                            <img src="img/res.jpg" alt="">
+                        </div>
+                        <div class="result__descr">
+                            <p>Расписываем какая работа была проделана</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next btn__trans">
+                    <svg width="25" height="18" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 8.81395L23 8.81395M23 8.81395L14.8947 1M23 8.81395L14.8947 17" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="swiper-button-prev btn__trans">
+                    <svg width="25" height="18" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 8.81395L2 8.81395M2 8.81395L10.1053 1M2 8.81395L10.1053 17" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="event">
+        <div class="container">
+            <h2 class="title">Предстоящие обучающие события</h2>
+            <div class="swiper-button-next btn__trans event-next">
+                <svg width="25" height="18" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8.81395L23 8.81395M23 8.81395L14.8947 1M23 8.81395L14.8947 17" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div class="swiper-button-prev btn__trans event-prev">
+                <svg width="25" height="18" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 8.81395L2 8.81395M2 8.81395L10.1053 1M2 8.81395L10.1053 17" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div class="event__slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide event__slide">
+                        <div class="event__desc">
+                            <h3>Название</h3>
+                            <p>Краткое описание</p>
+                        </div>
+                        <p class="event__date">02.03.2025</p>
+                        <p class="event__price">5 000 ₽</p>
+                        <a href="#" class="btn__trans">
+                            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.35781 13.2857L12.9786 1.5" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                                <path d="M12.9786 1.49998L3.68196 3.07141" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                                <path d="M12.9785 1.50071L11.4292 10.9286" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </a>
+                        <button class="btn__green">Записаться</button>
+                    </div>
+                    <div class="swiper-slide event__slide">
+                        <div class="event__desc">
+                            <h3>Название</h3>
+                            <p>Краткое описание</p>
+                        </div>
+                        <p class="event__date">02.03.2025</p>
+                        <p class="event__price">5 000 ₽</p>
+                        <a href="#" class="btn__trans">
+                            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.35781 13.2857L12.9786 1.5" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                                <path d="M12.9786 1.49998L3.68196 3.07141" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                                <path d="M12.9785 1.50071L11.4292 10.9286" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </a>
+                        <button class="btn__green">Записаться</button>
+                    </div>
+                    <div class="swiper-slide event__slide">
+                        <div class="event__desc">
+                            <h3>Название</h3>
+                            <p>Краткое описание</p>
+                        </div>
+                        <p class="event__date">02.03.2025</p>
+                        <p class="event__price">5 000 ₽</p>
+                        <a href="#" class="btn__trans">
+                            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.35781 13.2857L12.9786 1.5" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                                <path d="M12.9786 1.49998L3.68196 3.07141" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                                <path d="M12.9785 1.50071L11.4292 10.9286" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </a>
+                        <button class="btn__green">Записаться</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="service">
+        <div class="container">
+            <h2 class="title">Наши услуги</h2>
+            <h3>Основные направления обучения</h3>
+            <div class="service__wrapper swiper">
+                <div class="swiper-wrapper">
+                    <div class="service__item swiper-slide">
+                        <img src="img/serv.png" alt="">
+                        <h4>Энерго-цвето-рефлексотерапия</h4>
+                        <p>Авторская методика</p>
+                        <div class="service__row">
+                            <button class="btn__green">Записаться</button>
+                            <a href="#" class="btn__trans">
+                                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 16L16 1" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M16 1L4 3" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M16 1L14 13" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="service__item swiper-slide">
+                        <img src="img/serv.png" alt="">
+                        <h4>Энерго-цвето-рефлексотерапия</h4>
+                        <p>Авторская методика</p>
+                        <button class="btn__green">Записаться</button>
+                    </div>
+                    <div class="service__item swiper-slide">
+                        <img src="img/serv.png" alt="">
+                        <h4>Энерго-цвето-рефлексотерапия</h4>
+                        <p>Авторская методика</p>
+                        <button class="btn__green">Записаться</button>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <h3>Коррекция и устранение посттравматических функциональных нарушений</h3>
+            <div class="service__wrapper swiper">
+                <div class="swiper-wrapper">
+                    <div class="service__item swiper-slide">
+                        <img src="img/serv.png" alt="">
+                        <h4>Название</h4>
+                        <p class="price">5 000 ₽</p>
+                        <div class="service__row">
+                            <button class="btn__green">Записаться</button>
+                            <a href="#" class="btn__trans">
+                                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 16L16 1" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M16 1L4 3" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M16 1L14 13" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="service__item swiper-slide">
+                        <img src="img/serv.png" alt="">
+                        <h4>Название</h4>
+                        <p class="price">5 000 ₽</p>
+                        <div class="service__row">
+                            <button class="btn__green">Записаться</button>
+                            <a href="#" class="btn__trans">
+                                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 16L16 1" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M16 1L4 3" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M16 1L14 13" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="service__item swiper-slide">
+                        <img src="img/serv.png" alt="">
+                        <h4>Название</h4>
+                        <p class="price">5 000 ₽</p>
+                        <div class="service__row">
+                            <button class="btn__green">Записаться</button>
+                            <a href="#" class="btn__trans">
+                                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 16L16 1" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M16 1L4 3" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M16 1L14 13" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <section class="comment">
+        <div class="container">
+            <h2 class="title">Отзывы</h2>
+            <div class="comment__wrapper">
+                <div class="comment__slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide comment__slide">
+                            <img src="img/comment.png" alt="">
+                        </div>
+                        <div class="swiper-slide comment__slide">
+                            <img src="img/comment.png" alt="">
+                        </div>
+                        <div class="swiper-slide comment__slide">
+                            <img src="img/comment.png" alt="">
+                        </div>
+                        <div class="swiper-slide comment__slide">
+                            <img src="img/comment.png" alt="">
+                        </div>
+                        <div class="swiper-slide comment__slide">
+                            <img src="img/comment.png" alt="">
+                        </div>
+                        <div class="swiper-slide comment__slide">
+                            <img src="img/comment.png" alt="">
+                        </div>
+                        <div class="swiper-slide comment__slide">
+                            <img src="img/comment.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="comment__descr">
+                    <p>Узнайте, как мои методики массажа и обучающие курсы помогли людям улучшить здоровье и повысить профессионализм.</p>
+                    <div class="comment__arrow">
+                        <div class="swiper-button-prev btn__trans">
+                            <svg width="25" height="18" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 8.81395L2 8.81395M2 8.81395L10.1053 1M2 8.81395L10.1053 17" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div class="swiper-button-next btn__trans">
+                            <svg width="25" height="18" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 8.81395L23 8.81395M23 8.81395L14.8947 1M23 8.81395L14.8947 17" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="quest">
+        <div class="container">
+            <div class="quest__wrapper">
+                <div class="quest__descr">
+                    <h2>Остались вопросы?</h2>
+                    <p>Смело звоните или пишите в мессенджеры — всегда рады помочь!</p>
+                </div>
+                <a href="#" class="quest__phone">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 6.32434C2.16709 7.42059 2.33424 8.51677 2.70402 9.66303C3.07379 10.8093 3.64619 12.0055 4.61333 13.4241C5.58048 14.8428 6.94241 16.4839 8.07154 17.6125C9.20066 18.741 10.097 19.357 10.9933 19.973M4.55035 2.63202C4.95522 2.3792 5.36014 2.12633 5.81554 2.0345C6.27094 1.94267 6.77682 2.01183 7.4046 2.51718C8.03238 3.02252 8.78206 3.96405 9.2248 4.62417C9.66753 5.28429 9.80332 5.66293 9.87282 6.05082C9.94232 6.43877 9.94553 6.83595 9.81914 7.17833C9.69268 7.52065 9.43651 7.80811 9.22089 8.06651C9.00526 8.32485 8.83014 8.55419 8.73934 8.80288C8.64854 9.05157 8.64207 9.31962 8.79606 9.80084C8.95012 10.2821 9.26465 10.9764 9.80455 11.7596C10.3444 12.5427 11.1097 13.4148 11.8426 14.0752C12.5754 14.7356 13.2758 15.1845 13.8401 15.4397C14.4043 15.6948 14.8323 15.7562 15.2068 15.5882C15.5814 15.4203 15.9024 15.0231 16.2607 14.7163C16.619 14.4095 17.0147 14.1931 17.4362 14.1172C17.8578 14.0413 18.3053 14.1058 18.8322 14.3691C19.3591 14.6323 19.9655 15.0941 20.5492 15.5673C21.1328 16.0404 21.6938 16.5248 21.903 17.1368C22.1121 17.7488 21.9695 18.4884 21.6063 19.2345C21.2431 19.9805 20.6594 20.733 20.1027 21.2206C19.546 21.7081 19.0164 21.9308 18.2219 21.9857C17.4274 22.0406 16.3682 21.9278 15.3089 21.8149" stroke="#2B7818" stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>+7 (918) 664-75-46</span>
+                </a>
+                <div class="quest__soc">
+                    <a href="" style="background-color: #44d124;">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_300_148)">
+                              <path d="M23.254 4.69268C20.9002 2.33893 17.6487 0.882935 14.0569 0.882935C6.87399 0.882935 1.04999 6.70606 1.04999 13.8898C1.04999 16.2803 1.69486 18.5194 2.81924 20.4444L2.78599 20.3832L0.940613 27.1224L7.83474 25.3138C9.62936 26.3104 11.7705 26.8967 14.049 26.8967H14.0542C21.2371 26.8941 27.0585 21.0701 27.0585 13.8872C27.0585 10.2971 25.6042 7.04731 23.2531 4.69356L23.254 4.69268ZM14.0542 24.6996H14.0499C12.0207 24.6996 10.1211 24.1396 8.49974 23.1657L8.54874 23.1928L8.15411 22.9592L4.06349 24.0328L5.15461 20.0437L4.89736 19.6351C3.86049 18.0058 3.24449 16.0204 3.24449 13.8907C3.24449 7.92143 8.08411 3.08181 14.0534 3.08181C20.0226 3.08181 24.8622 7.92143 24.8622 13.8907C24.8622 19.8599 20.0244 24.6996 14.0542 24.6996ZM19.9832 16.6049C19.6586 16.4422 18.0609 15.6573 17.7634 15.5479C17.465 15.4394 17.248 15.3861 17.031 15.7116C16.8157 16.0362 16.1927 16.7677 16.0029 16.9847C15.8139 17.2026 15.6231 17.2288 15.2985 17.0669C14.2922 16.6592 13.4277 16.1158 12.6761 15.4464L12.6849 15.4543C11.9857 14.8068 11.3864 14.0657 10.9025 13.2484L10.878 13.2029C10.689 12.8783 10.8579 12.7024 11.0197 12.5406C11.1659 12.3953 11.3452 12.1608 11.5071 11.9718C11.6349 11.8152 11.7442 11.6358 11.8274 11.4433L11.8326 11.4284C11.8702 11.3523 11.8921 11.2639 11.8921 11.1694C11.8921 11.0548 11.8597 10.9481 11.8037 10.8571L11.8055 10.8597C11.7232 10.6969 11.074 9.09743 10.8036 8.44643C10.5394 7.81293 10.2707 7.89956 10.0721 7.88906C9.88311 7.88031 9.66611 7.87856 9.44911 7.87856C9.10349 7.88731 8.79636 8.04306 8.58461 8.28368L8.58374 8.28543C7.88199 8.95131 7.44624 9.89018 7.44624 10.9306C7.44624 10.9533 7.44624 10.9769 7.44711 10.9997V10.9962C7.56174 12.2798 8.04299 13.4322 8.78324 14.3711L8.77274 14.3579C10.1762 16.4396 12.047 18.1047 14.2424 19.2264L14.3246 19.2641C14.8041 19.4811 15.4184 19.7129 16.0466 19.9116L16.177 19.9474C16.5637 20.0699 17.0091 20.1408 17.4711 20.1408C17.7362 20.1408 17.997 20.1172 18.249 20.0726L18.2219 20.0761C19.1572 19.8809 19.9334 19.3166 20.4067 18.5457L20.4146 18.5308C20.559 18.2106 20.643 17.8369 20.643 17.4441C20.643 17.2822 20.629 17.1238 20.6019 16.9698L20.6045 16.9864C20.524 16.8508 20.307 16.7703 19.9815 16.6067L19.9832 16.6049Z" fill="white" />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_300_148">
+                                <rect width="28" height="28" fill="white" />
+                              </clipPath>
+                            </defs>
+                        </svg>    
+                    </a>
+                    <a href="#" style="background-color: #039be5;">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24.1613 4.26362C24.1613 4.26362 26.4277 3.37987 26.2388 5.52612C26.1759 6.40988 25.6093 9.50301 25.1686 12.8487L23.6576 22.7593C23.6576 22.7593 23.5317 24.2112 22.3985 24.4637C21.2652 24.7162 19.5655 23.5799 19.2506 23.3274C18.9988 23.1381 14.529 20.2974 12.955 18.9087C12.5143 18.5299 12.0107 17.7724 13.018 16.8886L19.6284 10.5762C20.3839 9.81865 21.1394 8.05115 17.9915 10.1974L9.17764 16.1943C9.17764 16.1943 8.17034 16.8255 6.28168 16.2574L2.1895 14.9949C2.1895 14.9949 0.67854 14.048 3.25975 13.1011C9.55541 10.1342 17.299 7.10422 24.1613 4.26362Z" fill="white" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <a href="#" class="footer__logo">
+                    <img src="img/footer_logo.svg" alt="">
+                </a>
+                <ul class="footer__list">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Обо мне</a></li>
+                    <li><a href="#">Курсы</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                </ul>
+                <div class="footer__contact">
+                    <p>Контакты:</p>
+                    <ul>
+                        <li>
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 5.32434C1.16709 6.42059 1.33424 7.51677 1.70402 8.66303C2.07379 9.8093 2.64619 11.0055 3.61333 12.4241C4.58048 13.8428 5.94241 15.4839 7.07154 16.6125C8.20066 17.741 9.09697 18.357 9.99328 18.973" stroke="white" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M3.55035 1.63202C3.95522 1.3792 4.36014 1.12633 4.81554 1.0345C5.27094 0.94267 5.77682 1.01183 6.4046 1.51718C7.03238 2.02252 7.78206 2.96405 8.2248 3.62417C8.66753 4.28429 8.80332 4.66293 8.87282 5.05082C8.94232 5.43877 8.94553 5.83595 8.81914 6.17833C8.69268 6.52065 8.43651 6.80811 8.22089 7.06651C8.00526 7.32485 7.83014 7.55419 7.73934 7.80288C7.64854 8.05157 7.64207 8.31962 7.79606 8.80084C7.95012 9.28207 8.26465 9.97642 8.80455 10.7596C9.34445 11.5427 10.1097 12.4148 10.8426 13.0752C11.5754 13.7356 12.2758 14.1845 12.8401 14.4397C13.4043 14.6948 13.8323 14.7562 14.2068 14.5882C14.5814 14.4203 14.9024 14.0231 15.2607 13.7163C15.619 13.4095 16.0147 13.1931 16.4362 13.1172C16.8578 13.0413 17.3053 13.1058 17.8322 13.3691C18.3591 13.6323 18.9655 14.0941 19.5492 14.5673C20.1328 15.0404 20.6938 15.5248 20.903 16.1368C21.1121 16.7488 20.9695 17.4884 20.6063 18.2345C20.2431 18.9805 19.6594 19.733 19.1027 20.2206C18.546 20.7081 18.0164 20.9308 17.2219 20.9857C16.4274 21.0406 15.3682 20.9278 14.3089 20.8149" stroke="white" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <p>+7 (918) 664-75-46</p>
+                        </li>
+                        <li>
+                            <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16 17.962H6C3.00003 17.962 1 16.4654 1 12.9732V5.98882C1 2.49663 2.99995 1 6 1H16C19.0001 1 21 2.49663 21 5.98882V12.9732C21 16.4654 19.0001 17.962 16 17.962Z" stroke="white" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M17.7089 5.30371L12.16 9.57166C11.4395 10.1258 10.434 10.1258 9.71345 9.57166L4.16458 5.30371" stroke="white" stroke-miterlimit="22.9256" stroke-linecap="round" />
+                              </svg>
+                            <p>-</p>
+                        </li>
+                        <li>
+                            <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.18088 21C8.52603 21 7.87113 20.6933 6.54487 19.3216C5.21855 17.9499 3.22083 15.5131 2.16391 13.5985C1.10704 11.684 0.990929 10.2916 1.00051 9.08022C1.01009 7.86892 1.14525 6.83869 1.69264 5.69062C2.23997 4.54262 3.19959 3.27679 4.53018 2.39111C5.86082 1.50548 7.56243 1 9.21776 1C10.8731 1 12.4821 1.50548 13.7667 2.36866C15.0511 3.2319 16.0112 4.45295 16.53 5.61048C17.0489 6.768 17.1265 7.86199 17.1089 9.09713C17.0912 10.3323 16.9783 11.7086 15.9685 13.6137C14.9587 15.5187 13.0521 17.9526 11.7714 19.3229C10.4906 20.6931 9.83573 20.9998 9.18088 20.9998V21Z" stroke="white" stroke-miterlimit="22.9256" />
+                                <path d="M4.88892 8.80538C4.98983 8.25979 5.09081 7.71421 5.38164 7.13509C5.67247 6.55603 6.15316 5.94344 6.8237 5.50795C7.49424 5.07245 8.35464 4.81399 9.16943 4.79725C9.98416 4.78052 10.7532 5.00545 11.4647 5.52711C12.1761 6.04878 12.8298 6.86713 13.1567 7.71421C13.4835 8.56128 13.4835 9.43708 13.1995 10.2974C12.9155 11.1576 12.3475 12.0024 11.6336 12.5432C10.9198 13.084 10.0602 13.3208 9.181 13.3148C8.30176 13.3088 7.40286 13.0599 6.81166 12.7273C6.2204 12.3947 5.93678 11.9783 5.65322 11.5619" stroke="white" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <p>г. Анапа, ул. Самбурова 50</p>
+                        </li>
+                    </ul>
+                    <div class="footer__soc">
+                        <a href="#">
+                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.6693 3.08856C14.6693 3.08856 16.0454 2.552 15.9307 3.85508C15.8925 4.39165 15.5485 6.26962 15.2809 8.3009L14.3635 14.3181C14.3635 14.3181 14.2871 15.1996 13.5991 15.3529C12.911 15.5062 11.879 14.8163 11.6879 14.663C11.535 14.5481 8.82116 12.8234 7.86555 11.9802C7.59797 11.7502 7.29219 11.2903 7.90376 10.7538L11.9172 6.92118C12.3759 6.46126 12.8346 5.38813 10.9234 6.69122L5.57214 10.3322C5.57214 10.3322 4.96056 10.7154 3.81388 10.3705L1.32934 9.60399C1.32934 9.60399 0.41197 9.02911 1.97914 8.45419C5.8015 6.65286 10.503 4.81321 14.6693 3.08856Z" fill="white" />
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.592 4.33794C17.3895 4.97469 17.1165 5.52894 16.7745 6.03219L16.7888 6.00969C16.4528 6.56969 16.0515 7.21669 15.585 7.95069C15.185 8.53019 14.9733 8.83019 14.9498 8.85069C14.8463 8.98044 14.7743 9.13944 14.7495 9.31419L14.7488 9.31944C14.769 9.47844 14.8425 9.61719 14.9498 9.72069L15.2498 10.0552C16.8548 11.7047 17.7575 12.8417 17.958 13.4662C17.9843 13.5352 17.9993 13.6147 17.9993 13.6979C17.9993 13.8434 17.9528 13.9777 17.874 14.0879L17.8755 14.0857C17.7435 14.2214 17.559 14.3054 17.355 14.3054C17.3325 14.3054 17.3093 14.3047 17.2875 14.3024H17.2905H15.3173C15.3165 14.3024 15.315 14.3024 15.3135 14.3024C15.0608 14.3024 14.8283 14.2139 14.646 14.0669L14.6483 14.0684C14.3828 13.8502 14.1465 13.6139 13.935 13.3574L13.9283 13.3484C13.5828 12.9579 13.2763 12.6292 13.0088 12.3622C12.1178 11.5152 11.4603 11.0917 11.0363 11.0917C11.0205 11.0902 11.0025 11.0894 10.9838 11.0894C10.86 11.0894 10.7445 11.1277 10.6493 11.1929L10.6515 11.1914C10.5735 11.2889 10.5263 11.4149 10.5263 11.5507C10.5263 11.5777 10.5278 11.6032 10.5315 11.6294V11.6264C10.5113 11.8619 10.4993 12.1357 10.4993 12.4124C10.4993 12.5017 10.5008 12.5902 10.503 12.6787V12.6659V13.5352C10.5105 13.5704 10.515 13.6109 10.515 13.6522C10.515 13.8337 10.4325 13.9957 10.3035 14.1029L10.3028 14.1037C10.0125 14.2364 9.67351 14.3144 9.31576 14.3144C9.23926 14.3144 9.16426 14.3107 9.09001 14.3039L9.09976 14.3047C7.91926 14.2822 6.82426 13.9364 5.89351 13.3537L5.91976 13.3687C4.78651 12.6802 3.84751 11.7839 3.13201 10.7249L3.11176 10.6934C2.43226 9.79194 1.79851 8.77344 1.25851 7.69944L1.20601 7.58394C0.890258 6.98244 0.563258 6.24294 0.281258 5.48244L0.236258 5.34369C0.121508 5.00169 0.0382583 4.60419 0.0037583 4.19244L0.0022583 4.17369C0.0022583 3.79469 0.225258 3.60519 0.671258 3.60519H2.64376C2.66176 3.60369 2.68276 3.60294 2.70451 3.60294C2.89051 3.60294 3.06226 3.66669 3.19801 3.77394L3.19651 3.77244C3.34651 3.93669 3.45751 4.13844 3.51226 4.36344L3.51451 4.37244C3.87751 5.39769 4.26226 6.25869 4.70476 7.08369L4.65451 6.98094C5.01601 7.70844 5.41576 8.33469 5.87176 8.91294L5.85451 8.88969C6.25451 9.38069 6.56651 9.62619 6.79051 9.62619C6.79726 9.62694 6.80551 9.62694 6.81451 9.62694C6.92551 9.62694 7.02226 9.56694 7.07476 9.47694L7.07551 9.47544C7.13101 9.33294 7.16326 9.16719 7.16326 8.99469C7.16326 8.95794 7.16176 8.92119 7.15876 8.88519V8.88969V5.98044C7.14301 5.63769 7.05901 5.31744 6.91876 5.03019L6.92476 5.04444C6.83176 4.84644 6.72001 4.67544 6.58726 4.52319L6.58951 4.52619C6.46651 4.40319 6.38251 4.24194 6.35626 4.06194L6.35551 4.05744C6.35551 3.92994 6.41401 3.81519 6.50551 3.74019L6.50626 3.73944C6.59701 3.65619 6.71851 3.60594 6.85126 3.60594H6.85726H9.96676C9.98326 3.60369 10.002 3.60294 10.0215 3.60294C10.1678 3.60294 10.299 3.66894 10.386 3.77244L10.3868 3.77319C10.464 3.91419 10.5098 4.08294 10.5098 4.26144C10.5098 4.28994 10.5083 4.31769 10.506 4.34544V4.34169V8.22144C10.5045 8.23944 10.5038 8.26044 10.5038 8.28144C10.5038 8.41944 10.542 8.54919 10.608 8.65944L10.6065 8.65644C10.6613 8.73744 10.7528 8.78994 10.8563 8.78994C10.9883 8.78094 11.109 8.73744 11.2103 8.66844L11.208 8.66994C11.412 8.52969 11.5875 8.36994 11.7398 8.18919L11.7428 8.18544C12.198 7.67094 12.618 7.10244 12.984 6.49794L13.0133 6.44544C13.2713 6.01794 13.5503 5.49144 13.803 4.95069L13.8495 4.84044L14.184 4.17144C14.3003 3.83694 14.6123 3.60144 14.979 3.60144C14.9933 3.60144 15.0075 3.60144 15.0218 3.60219H15.0195H16.9928C17.5258 3.60219 17.7258 3.84744 17.5928 4.33794H17.592Z" fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__info">
+                    <p>ИНН: 45678903456789 <br>ОГРН: 23456789023456789</p>
+                    <a href="#">Договор оферты</a>
+                    <a href="#">Политика обработки персональных данных</a>
+                </div>
+            </div>
+            <div class="footer__descr">
+                <p>Разработка - ООО "ЛАБОРАТОРИЯ ДА" </p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal modal-req">
+        <div class="modal__overflow"></div>
+        <div class="modal__block">
+            <div class="modal__close">
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.2635 0.999973L1 17.2634" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                    <path d="M1.00022 0.999973L17.2637 17.2634" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
+            <h2>Оставьте заявку</h2>
+            <div class="modal__input">
+                <input type="text" placeholder="Имя">
+                <input type="text" placeholder="Телефон">
+            </div>
+            <div class="modal__check">
+                <input type="checkbox">
+                <span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.5875 1.53125L5.44375 9.67813L2.4 6.63438L0 9.0375L5.44063 14.4781L6.14375 13.7781L15.9906 3.93125L13.5875 1.53125Z" fill="white" />
+                    </svg>
+                </span>
+                <p>Я принимаю условия пользовательского соглашения Договора публичной оферты , политики обработки и защиты персональных данных и Условия возврата*</p>
+            </div>
+            <div class="modal__btn">
+                <button class="btn__green">Отправить</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-enter">
+        <div class="modal__overflow"></div>
+        <div class="modal__block">
+            <div class="modal__close">
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.2635 0.999973L1 17.2634" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                    <path d="M1.00022 0.999973L17.2637 17.2634" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
+            <h2>Вход</h2>
+            <div class="modal__input">
+                <input type="text" placeholder="Телефон">
+            </div>
+            <div class="modal__text">
+                <p>Нажимая на кнопку, я соглашаюсь с публичной офертой, правилами акции «Поможем найти работу или вернем деньги», политикой обработки персональных данных и с правилами пользования Платформой</p>
+            </div>
+            <div class="modal__btn">
+                <button class="btn__green">Войти</button>
+                <a href="#" class="btn__trans modal-reg__call">Создать профиль</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-reg active">
+        <div class="modal__overflow"></div>
+        <div class="modal__block">
+            <div class="modal__back modal-enter__call">
+                <svg width="25" height="18" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 8.81395L2 8.81395M2 8.81395L10.1053 1M2 8.81395L10.1053 17" stroke="#5FB528" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
+            <h2>Регистрация</h2>
+            <div class="modal__input">
+                <input type="text" placeholder="Телефон">
+            </div>
+            <div class="modal__text">
+                <p>Нажимая на кнопку, я соглашаюсь с публичной офертой, правилами акции «Поможем найти работу или вернем деньги», политикой обработки персональных данных и с правилами пользования Платформой</p>
+            </div>
+            <div class="modal__btn">
+                <button class="btn__green">Далее</button>
+            </div>
+            <a href="#" class="modal__link modal-enter__call">Уже есть аккаунт? <span>Войдите</span></a>
+        </div>
+    </div>
     
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
