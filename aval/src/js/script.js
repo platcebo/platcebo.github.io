@@ -11,6 +11,7 @@ var swiper = new Swiper(".result__slider", {
     },
     pagination: {
         el: ".result .swiper-pagination",
+        clickable: true,
     },
 });
 
@@ -29,27 +30,36 @@ var swiper = new Swiper(".event__slider", {
     }
 });
 
-var swiper = new Swiper(".massage__slider", {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    navigation: {
-        nextEl: ".massage-next",
-        prevEl: ".massage-prev",
-    },
-    pagination: {
-        el: ".massage__wrapper .swiper-pagination",
-    },
-    breakpoints: {
-        1201: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-        },
-        769: {
-            slidesPerView: 2,
+let massageSlider = document.querySelectorAll('.massage__slider'),
+    massageNext = document.querySelectorAll('.massage-next'),
+    massagePrev = document.querySelectorAll('.massage-prev');
+
+if(massageSlider !== null) {
+    massageSlider.forEach((item,i)=>{
+        var swiper = new Swiper(item, {
+            slidesPerView: 1,
             spaceBetween: 20,
-        }
-    }
-});
+            navigation: {
+                nextEl: massageNext[i],
+                prevEl: massagePrev[i],
+            },
+            pagination: {
+                el: ".massage__wrapper .swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                1201: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                769: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                }
+            }
+        });
+    })
+}
 
 var swiper = new Swiper(".comment__slider", {
     slidesPerView: 1,
@@ -60,6 +70,7 @@ var swiper = new Swiper(".comment__slider", {
     },
     pagination: {
         el: ".comment .swiper-pagination",
+        clickable: true,
     },
     breakpoints: {
         1301: {
@@ -73,20 +84,36 @@ var swiper = new Swiper(".comment__slider", {
     }
 });
 
+var swiper = new Swiper(".acc__cours_wrapper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+        nextEl: ".acc__cours .swiper-button-next",
+        prevEl: ".acc__cours .swiper-button-prev",
+    },
+    pagination: {
+        el: ".acc .swiper-pagination",
+        clickable: true,
+    },
+    grid: {
+        rows: 1,
+    },
+    breakpoints: {
+        1025: {
+            grid: {
+                rows: 2,
+            },
+        },
+    }
+});
+
 if (window.innerWidth < 1025) {
     var swiper = new Swiper(".service__wrapper", {
         slidesPerView: 1,
         spaceBetween: 30,
         pagination: {
             el: ".service__wrapper .swiper-pagination",
-        },
-    });
-
-    var swiper = new Swiper(".acc__cours_wrapper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        pagination: {
-            el: ".acc .swiper-pagination",
+            clickable: true,
         },
     });
 }

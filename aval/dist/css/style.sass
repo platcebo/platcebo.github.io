@@ -87,6 +87,8 @@ a
             a
                 font: 500 20px $font-family
                 color: $color-3
+                &:hover
+                    color: $color-8
     &__phone
         display: flex
         justify-content: center
@@ -170,6 +172,8 @@ a
                 color: $color-7
                 &::before
                     opacity: 1
+            &:hover
+                color: $color-7
     &__wrapper
         margin: 40px 0 0
         display: none
@@ -310,7 +314,6 @@ a
         justify-content: center
         align-items: center
         border-radius: 100%
-        opacity: 1
         right: auto
         top: auto
         margin: 0
@@ -365,7 +368,6 @@ a
         justify-content: center
         align-items: center
         border-radius: 100%
-        opacity: 1
         right: 89px
         top: 0
         margin: 0
@@ -509,7 +511,6 @@ a
         justify-content: center
         align-items: center
         border-radius: 100%
-        opacity: 1
         right: auto
         top: auto
         margin: 0
@@ -575,6 +576,8 @@ a
         gap: 9px
         font: 700 24px $font-family
         color: $color-8
+        &:hover
+            color: $color-7
     &__soc
         display: flex
         justify-content: center
@@ -587,6 +590,8 @@ a
             justify-content: center
             align-items: center
             border-radius: 100%
+            &:hover
+                opacity: .7
 
 .footer
     background: $color-3
@@ -644,6 +649,8 @@ a
             display: flex
             justify-content: center
             align-items: center
+            &:hover
+                opacity: .7
     &__info
         p
             font: 400 16px / 1.5 $font-family
@@ -1130,7 +1137,6 @@ a
             justify-content: center
             align-items: center
             border-radius: 100%
-            opacity: 1
             right: 74px
             top: 0
             margin: 0
@@ -1453,10 +1459,12 @@ a
 
 .acc
     padding: 60px 0 80px
+    .swiper-pagination
+        display: none
     &__wrapper
         margin: 80px 0 0
         display: grid
-        grid-template-columns: 336px 1fr
+        grid-template-columns: 336px calc( 100% - 416px )
         gap: 80px
     &__main
         background: $color-2
@@ -1509,13 +1517,22 @@ a
     &__arrow
         display: flex
         gap: 18px
-        a
+        .btn__trans
             padding: 0
             width: 56px
             height: 56px
             display: flex
             justify-content: center
             align-items: center
+            position: relative
+            transform: none
+            margin: 0
+            inset: auto
+            &::after
+                content: none
+            svg
+                width: 25px
+                height: 18px
     &__cours
         &_title
             display: flex
@@ -1526,9 +1543,9 @@ a
                 color: $color-8
         &_wrapper
             margin: 36px 0 0
+            width: 100%
             .swiper-wrapper
-                display: grid
-                gap: 38px
+                max-height: 500px
         &_item
             padding: 30px 30px 25px
             border-radius: 10px
