@@ -2535,7 +2535,7 @@ input
             gap: 24em
         &__text
             margin: 13em 0 0
-            gap: 13em
+            gap: 11em
     .help
         &__wrapper
             border-radius: 15em
@@ -3371,9 +3371,11 @@ input
 
 .program
     padding-bottom: 160px
-    padding-top: 87px
+    padding-top: 82px
+    h1
+        line-height: 0.85
     .container__pad
-        margin-bottom: 137px
+        margin-bottom: 150px
     &__prev
         width: 100%
         height: 420px
@@ -3418,15 +3420,15 @@ input
 .method__program
     padding-top: 160px
 .help-history
-    padding-top: 85px
+    padding-top: 82px
+    h1
+        line-height: 0.85
     .container__pad
-        margin-bottom: 142px
+        margin-bottom: 149px
     .help
         &__item
             min-height: 167px
             padding: 0 0 13px
-            &:last-child
-                padding: 0
         &__wrapper
             gap: 23px
 .transfer__history
@@ -3435,10 +3437,10 @@ input
 
 @media ( max-width: 1024px )
     .program
-        padding: 42em 0 80em
+        padding: 40em 0 80em
         h1
             max-width: calc(var(--gum) * 400)
-            line-height: 0.85
+            line-height: 0.95
         &__prev
             height: 250em
             border-radius: 12em
@@ -3455,7 +3457,7 @@ input
             padding: 12em
         .container
             &__pad
-                margin-bottom: 68em
+                margin-bottom: 71em
     .desc
         &__blue
             padding: 46em 0 44em
@@ -3467,12 +3469,14 @@ input
     .method__program
         padding: 80em 0
     .help-history
-        padding-top: 43em
+        padding-top: 39em
+        h1
+            line-height: .95
         .container__pad
-            margin-bottom: 75em
+            margin-bottom: 72em
         .help
             &__wrapper
-                padding: 12em 15em 18em
+                padding: 12em 15em 4em
                 gap: 14px
             &__item
                 min-height: 126em
@@ -3491,10 +3495,10 @@ input
         padding: 60em 0 80em
         h1
             letter-spacing: calc(var(--gum) * -2)
-            line-height: 0.8
+            line-height: 0.85
         .container
             &__pad
-                margin-bottom: 65em
+                margin-bottom: 73em
             &__title
                 br
                     display: none
@@ -3505,20 +3509,22 @@ input
             padding: 13em 15em 15em
     .desc
         &__blue
-            padding: 53px 0 47em
+            padding: 53px 0 49em
         &__progran
             padding: 77em 0 75em
     .help-history
         padding-top: 61em
+        h1
+            line-height: 0.85
         .container
             &__pad
-                margin-bottom: 67em
+                margin-bottom: 71em
         .help
             &__item
                 min-height: 172em
             &__wrapper
                 gap: 13em
-                padding: 12em 15em 19em
+                padding: 12em 15em 5em
     .transfer__history
         padding-top: 98em
         padding-bottom: 100em
@@ -3529,12 +3535,14 @@ input
                 min-height: 201em
 
 .volunteer
-    padding-top: 86px
+    padding-top: 82px
+    padding-bottom: 160px
     .container
         &__pad
-            margin-bottom: 134px
+            margin-bottom: 142px
     h1
         max-width: 500px
+        line-height: 0.85
     &__wrapper
         display: grid
         gap: 75px
@@ -3575,6 +3583,7 @@ input
             align-items: center
             justify-content: center
             transition: all .3s
+            margin: auto
             &::before
                 content: ''
                 display: block
@@ -3626,6 +3635,7 @@ input
             align-items: center
             justify-content: center
             transition: all .3s
+            margin: auto
             svg
                 width: 14px
                 height: 14px
@@ -3688,22 +3698,24 @@ input
         max-width: 291px
         padding: 18px 
     .donate__policy
-        align-items: center
+        align-items: start
         gap: 12px
         margin: 17px 0 0
         p
             max-width: 100%
+        span
+            margin: 3px 0 0
 
 @media ( max-width: 1024px )
     .volunteer
-        padding-top: 42em
+        padding-top: 39em
         padding-bottom: 80em
         h1
             max-width: calc(var(--gum) * 300)
-            line-height: 0.85
+            line-height: 0.95
         .container
             &__pad
-                margin-bottom: 63em
+                margin-bottom: 67em
             &__title
                 max-width: calc(var(--gum) * 100)
         h3
@@ -3731,6 +3743,9 @@ input
                 svg
                     width: 10em
                     height: 10em
+                &::before
+                    width: 5em
+                    height: 5em
         &__other
             grid-template-columns: 15em auto 1fr !important
             input
@@ -3761,9 +3776,11 @@ input
             &__title
                 display: none
             &__pad
-                margin-bottom: 64em
+                margin-bottom: 71em
         h1
-            line-height: 0.8
+            line-height: 0.85
+        h3
+            line-height: 1.2
         &__text
             p
                 line-height: 1.35
@@ -3775,22 +3792,29 @@ input
         .btn__red
             margin: 16em 0 0
             max-width: 100%
+        &__text
+            margin: 10em 0 21em
+            gap: 11em
+        &__wrapper
+            gap: 46em
 
 .contact
-    padding: 86px 0 160px
+    padding: 83px 0 160px
     .container
         &__pad
-            margin-bottom: 144px
+            margin-bottom: 153px
         &__wrapper
             &:last-child
                 margin: 156px 0 0
+    .donate__req li p
+        max-width: 400px
 
 @media ( max-width: 1024px )
     .contact
         padding: 42em 0 99em
         .container
             &__pad
-                margin-bottom: 73em 
+                margin-bottom: 76em 
             &__wrapper
                 &:last-child
                     margin: 99em 0 0
@@ -3798,18 +3822,27 @@ input
             p
                 br
                     display: none
+        .donate__req li p
+            max-width: 1000px
 
 @media ( max-width: 600px )
     .contact
         padding: 62em 0 80em
         .container
             &__pad
-                margin-bottom: 68em
+                margin-bottom: 72em
             &__wrapper
                 &:last-child
-                    margin: 74em 0 0
+                    margin: 77em 0 0
         .donate__req
+            gap: 17px
+            li
+                gap: 5em
+                padding: 0 0 15em
+                &:last-child
+                    padding: 0
             p
+                line-height: 1.2
                 br
                     display: block
 
@@ -3851,7 +3884,9 @@ input
             margin: calc(var(--gum) * 25) auto 0
 
 .article
-    padding: 87px 0 152px
+    padding: 82px 0 152px
+    h1
+        line-height: .85
     &__tag
         display: flex
         flex-wrap: wrap
@@ -3873,10 +3908,12 @@ input
             margin: 38px 0 0
             max-width: 745px
         p
-            margin: 22px 0 0
+            margin: 26px 0 0
             font: 400 18px / 1.4 $font-family
             color: #4686a8
             max-width: 745px
+            &+p
+                margin: 20px 0 0
         img
             width: 100%
             box-shadow: 0 0 0 0 rgba(120, 120, 120, 0.02), 0 2px 5px 0 rgba(120, 120, 120, 0.02), 0 10px 10px 0 rgba(120, 120, 120, 0.02), 0 22px 13px 0 rgba(120, 120, 120, 0.01), 0 39px 16px 0 rgba(120, 120, 120, 0), 0 61px 17px 0 rgba(120, 120, 120, 0)
@@ -3888,16 +3925,16 @@ input
                 margin: 15px 0 0
     .container
         &__pad
-            margin-bottom: 137px
+            margin-bottom: 150px
 
 @media ( max-width: 1024px )
     .article
-        padding: 43em 0 75em
+        padding: 40em 0 75em
         h1
-            line-height: 0.85
+            line-height: 0.95
         .container
             &__pad
-                margin-bottom: 67em
+                margin-bottom: 72em
         &__tag
             gap: 8em
             p
@@ -3912,7 +3949,9 @@ input
                 line-height: 1.2
             p
                 font-size: 13em
-                margin: calc(var(--gum) * 14) 0 0
+                margin: calc(var(--gum) * 15) 0 0
+                &+p
+                    margin: calc(var(--gum) * 14) 0 0
             img
                 margin: 25em 0 0
                 border-radius: 20em
@@ -3925,12 +3964,12 @@ input
         padding: 63em 0 74em
         h1
             letter-spacing: calc(var(--gum) * -3)
-            line-height: 0.8
+            line-height: 0.85
         .container
             &__title
                 display: none
             &__pad
-                margin-bottom: 70em
+                margin-bottom: 74em
         &__content
             margin: 20em 0 0
             img
