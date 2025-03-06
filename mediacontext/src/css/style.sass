@@ -8102,7 +8102,7 @@ textarea.input
         position: relative
     &__container
         display: grid
-        grid-template-columns: 410px 1fr
+        grid-template-columns: 41fr 131fr
         gap: 40px
         align-items: start
         position: relative
@@ -8116,7 +8116,6 @@ textarea.input
             border-radius: 40px
             padding: 40px
             background: $light-gray
-            width: 410px
             position: relative
             &.fix
                 top: 20px
@@ -8319,10 +8318,8 @@ textarea.input
         h1
             font-size: 90px
         &__container
-            grid-template-columns: 290px 1fr
+            grid-template-columns: 29fr 95fr
         &__aside
-            &_fix
-                width: 290px
             &_title
                 p
                     font-size: 20px
@@ -8343,6 +8340,7 @@ textarea.input
             &_enter,
             &_res
                 padding: 10px 10px 10px 20px
+                gap: 10px
         &__item
             &_banner
                 width: 60px
@@ -8358,6 +8356,8 @@ textarea.input
     .case-list
         &__item
             width: calc( (100% - 40px) / 2 )
+        &__container
+            grid-template-columns: 314fr 648fr
 
 @media ( max-width: 1200px )
     .case-list
@@ -8506,6 +8506,7 @@ textarea.input
         &__res_mob
             padding: 9px 10px
             gap: 4px
+            border: none
             p
                 font-size: 14px
         &__more

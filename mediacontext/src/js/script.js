@@ -1469,6 +1469,17 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    let caseArrow = document.querySelectorAll('.case-list__aside_arrow');
+
+    console.log('as')
+    if(caseArrow !== null) {
+        caseArrow.forEach((item)=>{
+            item.addEventListener('click', ()=>{
+                item.classList.toggle('active')
+            })
+        })
+    }
+
     let caseAside = document.querySelector('.case-list__aside_fix'),
         caseBlock = document.querySelector('.case-list__container'),
         caseBtn = document.querySelector('.case-list__aside_btn'),
@@ -1482,28 +1493,34 @@ document.addEventListener('DOMContentLoaded', function() {
                     caseAside.classList.add('fix')
                     caseAside.classList.remove('bottom')
                     caseAside.style.left = caseBlock.getBoundingClientRect().left + 'px'
+                    caseAside.style.width = caseMenu.getBoundingClientRect().width + 'px'
                 } else if (caseBlock.getBoundingClientRect().top >  -40) {
                     caseAside.classList.remove('fix')
                     caseAside.style.left = "auto"
                     caseAside.classList.remove('bottom')
+                    caseAside.style.width = "100%"
                 } else if (caseBlock.getBoundingClientRect().bottom - caseAside.getBoundingClientRect().height < 20 ) {
                     caseAside.classList.remove('fix')
                     caseAside.style.left = "auto"
                     caseAside.classList.add('bottom')
+                    caseAside.style.width = caseMenu.getBoundingClientRect().width + 'px'
                 }
             })
             if(caseBlock.getBoundingClientRect().top <=  20 && caseBlock.getBoundingClientRect().bottom - caseAside.getBoundingClientRect().height >=  20 ) {
                 caseAside.classList.add('fix')
                 caseAside.classList.remove('bottom')
                 caseAside.style.left = caseBlock.getBoundingClientRect().left + 'px'
+                caseAside.style.width = caseMenu.getBoundingClientRect().width + 'px'
             } else if (caseBlock.getBoundingClientRect().top >  -40) {
                 caseAside.classList.remove('fix')
                 caseAside.style.left = "auto"
                 caseAside.classList.remove('bottom')
+                caseAside.style.width = "100%"
             } else if (caseBlock.getBoundingClientRect().bottom - caseAside.getBoundingClientRect().height < 20 ) {
                 caseAside.classList.remove('fix')
                 caseAside.style.left = "auto"
                 caseAside.classList.add('bottom')
+                caseAside.style.width = caseMenu.getBoundingClientRect().width + 'px'
             }
         } else {
             caseBtn.addEventListener('click', ()=>{
@@ -1530,16 +1547,6 @@ document.addEventListener('DOMContentLoaded', function() {
         CaseMore.addEventListener('click', (e)=>{
             e.preventDefault();
             caseCheck.classList.toggle('active');
-        })
-    }
-
-    let caseArrow = document.querySelectorAll('.case-list__aside_arrow');
-
-    if(caseArrow !== null) {
-        caseArrow.forEach((item)=>{
-            item.addEventListener('click', ()=>{
-                item.classList.toggle('active')
-            })
         })
     }
 
