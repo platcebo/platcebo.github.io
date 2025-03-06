@@ -6915,6 +6915,8 @@ textarea.input
         display: grid
         grid-template-columns: 1fr 1fr 1fr 
         gap: 40px
+        .case-list__item
+            width: 100% !important
     &__item
         border-radius: 40px
         position: relative
@@ -7700,7 +7702,7 @@ textarea.input
         margin-top: 30px
     .article
         &__block
-            grid-template-columns: 1fr
+            grid-template-columns: 100%
             position: relative
             gap: 40px
         &__more
@@ -8804,6 +8806,8 @@ textarea.input
                 top: 20px
                 right: 20px
                 font-size: 12px
+            .article__banner
+                margin: 0 !important
         .article
             &__block
                 padding: 0
