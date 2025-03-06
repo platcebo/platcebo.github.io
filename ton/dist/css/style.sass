@@ -4,11 +4,31 @@ $text: #010101
 $grey: #efeff4
 $white: #fff
 
+@keyframes header 
+    0% 
+        opacity: 1
+    50%
+        opacity: 0
+    100% 
+        opacity: 1
+
+@keyframes rotate 
+  from 
+    transform: rotate(0deg)
+  to 
+    transform: rotate(360deg)
+
+
 body
     background: #f7f9fb
     padding: 0 0 94px
     max-width: 500px
     margin: 0 auto
+a,
+button
+    transition: all .3s
+    &:active
+        opacity: .8
 .container
     padding: 0 15px
 .nav
@@ -64,6 +84,13 @@ body
             background-clip: text
             -webkit-background-clip: text
             -webkit-text-fill-color: transparent
+        i
+            font: 400 32px / 1.59375 $font-family
+            letter-spacing: 0em
+            color: #78b6a0
+            animation-duration: 1s
+            animation-name: header
+            animation-iteration-count: infinite
     &__text
         margin: 20px 0 0
         font: 400 20px / 1.2 $font-family
@@ -71,7 +98,7 @@ body
         text-align: center
         color: #000
     &__btn
-        margin: 20px 0 0
+        margin: 20px 0 
         box-shadow: 0 4px 13px 0 rgba(110, 131, 253, 0.74)
         background: linear-gradient(90deg, #0098ea 0%, #a168ff 100%)
         width: 100%
@@ -82,7 +109,7 @@ body
         border: none  
         border-radius: 10px
     &__price
-        margin: 20px 0 0
+        margin: 0
         border-radius: 10px
         background: $white
         padding: 15px
@@ -215,6 +242,7 @@ body
         display: flex
         justify-content: center
         align-items: center
+        transition: all .3s
         path
             transition: all .3s
     &__text
@@ -268,3 +296,792 @@ body
             color: $additional
         path
             fill: $additional
+
+.balance
+    padding: 20px 0
+    .container
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 10px
+    &__item
+        border: 1px solid $grey
+        border-radius: 10px
+        padding: 15px
+        background: $white
+    &__logo
+        display: grid
+        grid-template-columns: 28px 1fr
+        gap: 5px
+        img
+            width: 100%
+        p
+            font: 600 14px / 1 $font-family
+            color: $text
+            &+p
+                margin: 3px 0 0
+                font: 400 12px / 1.16667 $font-family
+                color: rgba(112, 117, 121, 0.4)
+    &__val
+        margin: 2px 0 0
+        font: 500 12px / 2 $font-family
+        color: #707579
+        span
+            font: 500 18px / 1.33333 $font-family
+            letter-spacing: 0.01em
+            background: linear-gradient(90deg, #0098ea 0%, #a168ff 100%)
+            background-clip: text
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+    
+.swap
+    padding: 20px 0
+    background: $white
+    h1
+        font: 700 24px / 1.29167 $font-family
+        letter-spacing: 0.01em
+        text-align: center
+        color: #000
+    &__subtitle
+        margin: 15px 0 0
+        font: 400 16px / 1.5 $font-family
+        letter-spacing: 0.01em
+        text-align: center
+        color: $text
+    &__wrapper
+        margin: 15px 0 0
+        display: grid
+        grid-template-columns: 1fr
+        gap: 25px
+    &__item
+        position: relative
+    &__input
+        position: relative
+        input
+            border: 1px solid #d9d9d9
+            border-radius: 10px
+            padding: 17px 150px 17px 9px
+            background: $white
+            width: 100%
+            box-sizing: border-box  
+            font: 400 14px / 1 $font-family
+            color: $text
+    &__func
+        position: absolute
+        right: 10px
+        top: 50%
+        transform: translateY(-50%)
+        display: flex
+        justify-content: end
+        align-items: center
+        gap: 3px
+    &__ton
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 3px
+        p
+            font: 400 16px / 0.875 $font-family
+            color: $text
+        img
+            width: 20px
+    &__max
+        padding: 8px 12px
+        font: 400 12px / 1.16667 $font-family
+        text-align: right
+        color: $additional
+        border-radius: 8px
+        background: rgba(0, 152, 234, 0.1)
+    &__row
+        position: absolute
+        top: calc( 100% + 5px )
+        display: flex
+        justify-content: space-between
+        align-items: center 
+        left: 0
+        right: 0
+        p
+            font: 400 14px / 1 $font-family
+            color: #707579
+        div
+            display: flex
+            justify-content: space-between
+            align-items: center 
+            gap: 5px
+        img
+            width: 14px
+    &__btn
+        width: 32px
+        height: 32px
+        margin: 0 auto
+        display: block
+    &__enter
+        margin: 15px 0 0
+        width: 100%
+        border: none 
+        padding: 13px
+        border-radius: 10px
+        background: linear-gradient(90deg, #0098ea 0%, #a168ff 100%)
+        font: 600 16px / 1.5 $font-family
+        letter-spacing: 0.01em
+        color: $white
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 10px
+    &__name
+        position: absolute
+        bottom: calc( 100% + 5px )
+        left: 0
+        font: 400 14px / 1 $font-family
+        color: #707579
+        span
+            color: #fa8787
+
+.output
+    margin: 20px 0 0
+    padding: 20px 0
+    background: $white
+    h2
+        font: 700 24px / 1.29167 $font-family
+        letter-spacing: 0.01em
+        text-align: center
+        color: $text
+    &__wrapper
+        margin: 15px 0 0
+        display: grid
+        gap: 15px
+    .swap
+        &__name,
+        &__row
+            position: relative
+            inset: auto
+        &__input
+            margin: 5px 0 
+    &__btn
+        margin: 15px 0 0
+        width: 100%
+        border-radius: 10px
+        padding: 13px 
+        background: linear-gradient(90deg, #0098ea 0%, #a168ff 100%)
+        font: 600 16px / 1.5 $font-family
+        letter-spacing: 0.01em
+        color: $white
+        border: none
+
+.history
+    padding: 20px 0
+    h2
+        font: 700 24px / 1.29167 $font-family
+        letter-spacing: 0.01em
+        text-align: center
+        color: #000
+    &__wrapper
+        margin: 10px 0 0
+        display: grid
+        gap: 10px
+    &__item
+        border: 1px solid $grey
+        border-radius: 10px
+        padding: 15px
+        background: $white
+        display: grid
+        grid-template-columns: 32px 1fr auto
+        gap: 10px
+        align-items: center
+    &__done
+        width: 32px
+        height: 32px
+        background: rgba(2, 212, 149, 0.1)
+        border-radius: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        &.error
+            background: rgba(250, 135, 135, 0.1)
+    &__text
+        p
+            font: 500 16px / 1.5 $font-family
+            letter-spacing: 0.01em
+            color: $text
+            &+p
+                font: 500 14px / 1.71429 $font-family
+                letter-spacing: 0.01em
+                color: #707579
+                margin: -2px 0 0
+    &__val
+        font: 500 16px / 1.5 $font-family
+        letter-spacing: 0.01em
+        color: #000
+        &.green
+            color: #02d495
+        &.red
+            color: #fa8787
+
+.task
+    padding: 20px 0
+    &__block
+        background: url('../img/task_bg.jpg') center right no-repeat
+        background-size: cover
+        padding: 20px 100px 20px 20px
+        border-radius: 10px
+        h2
+            font: 600 24px / 1 $font-family
+            letter-spacing: 0.01em
+            color: $white
+        p
+            font: 400 16px / 1.5 $font-family
+            letter-spacing: 0.01em
+            color: $white
+    &__wrapper
+        margin: 20px -15px 0
+        padding: 20px 15px
+        background: $white
+        display: grid
+        gap: 15px
+    &__item
+        border: 1px solid #dde3e6
+        border-radius: 10px
+        padding: 15px
+        background: $white
+    &__row
+        display: grid
+        grid-template-columns: 78px 1fr
+        gap: 10px
+        img
+            width: 100%
+            border-radius: 8px
+        h3
+            font: 500 16px / 1.25 $font-family
+            letter-spacing: 0.01em
+            color: #000
+    &__val
+        margin: 5px 0 0
+        width: max-content
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 3px
+        padding: 5px 10px
+        border-radius: 10px
+        background: linear-gradient(90deg, rgba(0, 152, 234, 0.1) 0%, rgba(161, 104, 255, 0.1) 100%)
+        p
+            font: 600 12px / 2 $font-family
+            letter-spacing: 0.01em
+            background: linear-gradient(90deg, #0098ea 0%, #a168ff 100%)
+            background-clip: text
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent    
+        img
+            max-width: 20px
+    &__btn
+        margin: 10px 0 0
+        border-radius: 8px
+        padding: 10px
+        background: linear-gradient(90deg, #0098ea 0%, #a168ff 100%)
+        border: none 
+        font: 500 16px / 1.5 $font-family
+        letter-spacing: 0.01em
+        color: $white
+        width: 100%
+    &__done
+        margin: 10px 0 0
+        background: rgba(2, 212, 149, 0.1)
+        border-radius: 8px
+        padding: 10px
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 10px
+        font: 500 16px / 1.5 $font-family
+        letter-spacing: 0.01em
+        color: #02d495
+        border: none
+        width: 100%
+    &__error
+        margin: 10px 0 0
+        background: rgba(250, 135, 135, 0.1)
+        border-radius: 8px
+        padding: 10px
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 10px
+        font: 500 16px / 1.5 $font-family
+        letter-spacing: 0.01em
+        color: #fa8787
+        border: none
+        width: 100%
+    #rotating-part 
+        transform-origin: center
+        animation: rotate 2s linear infinite
+    &__check
+        margin: 10px 0 0
+        background: rgba(0, 152, 234, 0.1)
+        border-radius: 8px
+        padding: 10px
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 10px
+        font: 500 16px / 1.5 $font-family
+        letter-spacing: 0.01em
+        color: $additional
+        border: none
+        width: 100%
+
+.finance
+    padding: 20px 0 15px
+    &__block
+        background: url('../img/finance_bg.jpg') center no-repeat
+        background-size: cover
+        padding: 15px
+        border-radius: 10px
+    h2
+        font: 600 20px / 1.2 $font-family
+        letter-spacing: 0.01em
+        color: $white
+    &__text
+        margin: 10px 0 0
+        font: 400 16px / 1.5 $font-family
+        letter-spacing: 0.01em
+        color: $white
+    &__link
+        margin: 80px 0 0
+        border: 1px solid $grey
+        border-radius: 10px
+        padding: 15px
+        background: $white
+        h3
+            font: 600 20px / 1.2 $font-family
+            letter-spacing: 0.01em
+            color: #000
+            text-align: center
+        p
+            margin: 5px 0 0
+            font: 400 16px / 1.5 $font-family
+            letter-spacing: 0.01em
+            color: $text
+            text-align: center
+    &__row
+        display: grid
+        grid-template-columns: 1fr 50px
+        margin: 5px 0 0
+        gap: 15px
+        button
+            width: 100%
+            border: none
+            border-radius: 10px
+            padding: 13px 12px
+            background: linear-gradient(90deg, #0098ea 0%, #a168ff 100%)
+            font: 600 16px / 1.5 $font-family
+            letter-spacing: 0.01em
+            color: $white
+        a
+            width: 50px
+            height: 50px
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 1px solid $grey
+            border-radius: 10px
+
+.team
+    padding: 15px 0 5px
+    h2
+        font: 700 24px / 1.29167 $font-family
+        letter-spacing: 0.01em
+        text-align: center
+        color: #000
+    &__ref
+        margin: 15px 0 0
+        border-radius: 10px
+        padding: 15px
+        background: url('../img/team_bg.jpg') center no-repeat
+        background-size: cover
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 10px
+        &_item
+            border: 1px solid $grey
+            border-radius: 10px
+            padding: 15px
+            background: $white
+            p
+                font: 600 14px / 1 $font-family
+                color: $text
+                &+p
+                    margin: 5px 0 0
+                    font: 500 12px / 2 $font-family
+                    color: #707579
+                    span
+                        font: 500 18px / 1.33333 $font-family
+                        letter-spacing: 0.01em
+                        background: linear-gradient(90deg, #0098ea 0%, #a168ff 100%)
+                        background-clip: text
+                        -webkit-background-clip: text
+                        -webkit-text-fill-color: transparent
+    &__wrapper
+        margin: 15px 0 0
+        display: flex
+        flex-wrap: wrap
+        gap: 10px
+        align-items: center
+        justify-content: center
+    &__item
+        border: 1px solid #dde3e6
+        border-radius: 10px
+        padding: 10px 10px 0px 10px
+        background: $white
+        width: calc( 50% - 5px )
+        &_num
+            width: 100%
+            max-width: 70px
+            margin: 0 auto
+            display: block
+        h3
+            margin: 5px 0 0
+            font: 500 16px / 1.25 $font-family
+            letter-spacing: 0.01em
+            color: #000
+            text-align: center
+        &_proc
+            margin: 5px 0 0
+            border-radius: 10px
+            padding: 5px 10px
+            background: linear-gradient(90deg, rgba(0, 152, 234, 0.1) 0%, rgba(161, 104, 255, 0.1) 100%)
+            p
+                font: 600 20px / 1.2 $font-family
+                letter-spacing: 0.01em
+                text-align: center
+                background: linear-gradient(90deg, #0098ea 0%, #a168ff 100%)
+                background-clip: text
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+        &_text
+            margin: 5px 0 0
+            font: 500 12px / 1.16667 $font-family
+            text-align: center
+            color: $text
+        &_row
+            margin: 5px -10px 0
+            padding: 5px 10px
+            background: rgba(0, 152, 234, 0.05)
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 3px
+            p
+                font: 400 12px / 2 $font-family
+                letter-spacing: 0.01em
+                color: $additional
+            img
+                width: 15px
+
+.ref
+    padding: 20px 0 
+    background: $white
+    h2
+        font: 700 24px / 1.29167 $font-family
+        letter-spacing: 0.01em
+        text-align: center
+        color: #000
+    &__tab
+        margin: 20px -15px 0
+        display: flex
+        justify-content: start
+        align-items: center
+        overflow-x: scroll  
+        padding: 0 15px
+        gap: 10px
+        a
+            border: 1px solid #e4eaee
+            border-radius: 100px
+            padding: 10px 12px
+            background: $white
+            font: 600 14px / 1.71429 $font-family
+            letter-spacing: 0.01em
+            color: #06080b
+            white-space: nowrap
+            &.active
+                color: $white
+                background: #06080b
+                border: 1px solid #06080b
+    &__wrapper
+        margin: 20px 0 0
+        border: 1px solid $grey
+        border-radius: 8px
+        overflow: hidden
+    &__line
+        display: grid
+        grid-template-columns: 70fr 140fr 115fr
+        background: #f7f9fb
+        border-bottom: 1px solid $grey
+        &:nth-child(even)
+            background: $white
+        &:last-child
+            border-bottom: none 
+        p
+            font: 400 14px / 1.71429 $font-family
+            letter-spacing: 0.01em
+            color: $text
+            text-align: center
+            padding: 10px
+            border-right: 1px solid $grey
+            &:last-child
+                border-right: none
+        &.title
+            p
+                font: 600 12px / 2 $font-family
+        
+.pag
+    margin: 20px 0 0
+    display: grid
+    grid-template-columns: 44px 1fr 44px
+    align-items: center 
+    gap: 6px
+    &__link
+        margin: auto
+        display: block
+    ul
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 5px
+        a
+            width: 44px
+            height: 44px
+            border-radius: 100%
+            border: 1px solid #e4eaee
+            border-radius: 100px
+            display: flex
+            justify-content: center
+            align-items: center
+            font: 600 14px / 1.71429 $font-family
+            letter-spacing: 0.01em
+            color: #707579
+            &.active
+                background: $additional
+                border: 1px solid $additional
+                color: $white
+
+.alert
+    padding: 20px 0
+    &__tab
+        margin: 0 -15px
+        display: flex
+        justify-content: start
+        align-items: center
+        overflow-x: scroll  
+        padding: 0 15px
+        gap: 10px
+        a
+            border: 1px solid #e4eaee
+            border-radius: 100px
+            padding: 10px 12px
+            background: $white
+            font: 600 14px / 1.71429 $font-family
+            letter-spacing: 0.01em
+            color: #06080b
+            white-space: nowrap
+            min-width: 105px
+            text-align: center
+            &.active
+                color: $white
+                background: #06080b
+                border: 1px solid #06080b
+    &__wrapper
+        margin: 15px 0 0
+        display: grid
+        grid-template-columns: 1fr
+        gap: 15px
+    &__date
+        font: 500 14px / 1.71429 $font-family
+        letter-spacing: 0.01em
+        text-align: center
+        color: #707579
+    &__item
+        border: 1px solid $grey
+        border-radius: 10px
+        padding: 15px
+        background: $white
+        position: relative
+        h3
+            font: 600 20px / 1.2 $font-family
+            letter-spacing: 0.01em
+            color: #000
+        p
+            margin: 10px 0 0
+            font: 400 16px / 1.5 $font-family
+            letter-spacing: 0.01em
+            color: $text
+            &+p
+                font: 400 14px / 1 $font-family
+                color: #707579
+        &_new
+            &::before
+                content: ''
+                display: block
+                width: 10px
+                height: 10px
+                border-radius: 100%
+                background: #fa8787
+                right: 15px
+                top: 22px
+                position: absolute
+
+.coins
+    padding: 20px 0
+    h1
+        font: 700 24px / 1.29167 $font-family
+        letter-spacing: 0.01em
+        text-align: center
+        color: #000
+    &__val
+        background: url('../img/coins_bg.jpg') center no-repeat
+        background-size: cover
+        margin: 5px 0 0
+        border-radius: 10px
+        padding: 15px
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 6px
+        p
+            font: 600 32px / 0.75 $font-family
+            letter-spacing: 0em
+            text-align: center
+            color: $white
+        img
+            width: 32px
+    &__wrapper
+        margin: 20px 0 0
+        border: 1px solid $grey
+        border-radius: 10px
+        padding: 15px
+        background: $white
+        h3
+            font: 700 16px / 1.9375 $font-family
+            letter-spacing: 0.01em
+            text-align: center
+            color: #000
+    &__time
+        display: grid
+        grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr
+        gap: 5px
+        align-items: center
+        margin: 10px 0 0
+        span
+            font: 600 14px / 1.71429 $font-family
+            letter-spacing: 0.01em
+            color: #707579
+        p
+            border: 1px solid $grey
+            border-radius: 8px
+            padding: 10px 
+            background: #f7f9fb
+            font: 600 20px / 1.2 $font-family
+            letter-spacing: 0.01em
+            color: #06080b
+            text-align: center
+    &__text
+        margin: 10px 0 0
+        font: 500 14px / 1 $font-family
+        color: #707579
+    &__row
+        margin: 5px 0 0
+        width: max-content
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 3px
+        border-radius: 4px
+        padding: 5px 10px
+        background: rgba(0, 152, 234, 0.05)
+        p
+            font: 400 12px / 2 $font-family
+            letter-spacing: 0.01em
+            text-align: right
+            color: $additional
+        img
+            width: 15px
+
+.stak
+    padding: 15px 0
+    background: $white
+    h2
+        font: 700 24px / 1.29167 $font-family
+        letter-spacing: 0.01em
+        text-align: center
+        color: #000
+    &__tab
+        margin: 15px 0 0
+        gap: 15px
+        display: grid
+        grid-template-columns: 1fr 1fr
+        p
+            border: 1px solid #e4eaee
+            border-radius: 100px
+            padding: 10px 12px
+            background: $white
+            font: 600 14px / 1.71429 $font-family
+            letter-spacing: 0.01em
+            color: #06080b
+            white-space: nowrap
+            min-width: 105px
+            text-align: center
+            cursor: pointer
+            &.active
+                color: $white
+                background: #06080b
+                border: 1px solid #06080b
+    .swap
+        &__name,
+        &__row
+            position: relative
+            inset: auto
+        &__input
+            margin: 5px 0 
+    &__wrapper
+        margin: 15px 0 0
+        display: none
+        &.active
+            display: block
+    &__info
+        margin: 15px 0 0 
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 15px
+        &_item
+            border: 1px solid $grey
+            border-radius: 10px
+            padding: 15px
+            background: #f7f9fb
+        &_name
+            font: 400 14px / 1 $font-family
+            color: $text
+        &_row
+            margin: 5px 0 0
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            gap: 5px
+            p
+                font: 600 18px / 1.33333 $font-family
+                letter-spacing: 0.01em
+                color: $text
+            img
+                width: 19px
+        &_val
+            margin: 5px 0 0
+            font: 400 14px / 1 $font-family
+            color: #707579
+    &__btn
+        margin: 15px 0 0
+        width: 100%
+        border: none
+        border-radius: 10px
+        padding: 13px 12px
+        background: linear-gradient(90deg, #0098ea 0%, #a168ff 100%)
+        font: 600 16px / 1.5 $font-family
+        letter-spacing: 0.01em
+        color: $white

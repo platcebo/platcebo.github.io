@@ -30,7 +30,7 @@ const options = {
     aspectRatio: 1.3,
     layout: {
         padding: {
-            top: 50, 
+            top: 30, 
         }
     },
     plugins: {
@@ -82,5 +82,60 @@ new Chart(ctx, {
     options: options,
     plugins: [ChartDataLabels]
 });
+
+const textElement = document.getElementById('dynamic-text'); // Получаем элемент span
+if(textElement !== null) {
+    const words = ['creators', 'innovators', 'dreamers', 'developers']; // Список слов для анимации
+    let wordIndex = 0; // Индекс текущего слова
+    let charIndex = 0; // Индекс текущей буквы
+    let isDeleting = false; // Флаг для определения, удаляем ли мы текст
+
+    function typeText() {
+    const currentWord = words[wordIndex]; // Текущее слово
+    const speed = isDeleting ? 100 : 200; // Скорость печати или удаления
+
+    // Если текст удаляется
+    if (isDeleting) {
+        textElement.textContent = currentWord.substring(0, charIndex - 1); // Удаляем по одной букве
+        charIndex--;
+    } else {
+        textElement.textContent = currentWord.substring(0, charIndex + 1); // Добавляем по одной букве
+        charIndex++;
+    }
+
+    // Если слово полностью напечатано
+    if (!isDeleting && charIndex === currentWord.length) {
+        isDeleting = true; // Начинаем удаление
+        setTimeout(typeText, 1000); // Пауза перед удалением
+    }
+    // Если слово полностью удалено
+    else if (isDeleting && charIndex === 0) {
+        isDeleting = false; // Перестаём удалять
+        wordIndex = (wordIndex + 1) % words.length; // Переходим к следующему слову
+        setTimeout(typeText, 500); // Пауза перед печатью нового слова
+    } else {
+        setTimeout(typeText, speed); // Продолжаем печать или удаление
+    }
+    }
+
+    // Запускаем анимацию
+    typeText();
+}
+
+let tabPoint = document.querySelectorAll('.stak__tab p'),
+    tabWrapper = document.querySelectorAll('.stak__wrapper');
+
+if(tabPoint !== null) {
+    tabPoint.forEach((item,i)=>{
+        item.addEventListener('click', ()=>{
+            for(let a = 0; a < tabPoint.length; a++) {
+                tabPoint[a].classList.remove('active')
+                tabWrapper[a].classList.remove('active')
+            }
+            item.classList.add('active')
+            tabWrapper[i].classList.add('active')
+        })
+    })
+}
 
 }, false);
