@@ -138,4 +138,13 @@ if(tabPoint !== null) {
     })
 }
 
+let langBtn = document.querySelector('.nav__lang_btn'),
+    lang = document.querySelector('.nav__lang');
+
+if(lang !== null) {
+    langBtn.addEventListener('click', ()=>{
+        lang.classList.toggle('active');
+    })
+}
+
 }, false);

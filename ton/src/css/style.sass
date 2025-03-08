@@ -24,6 +24,7 @@ body
     padding: 0 0 94px
     max-width: 500px
     margin: 0 auto
+    position: relative
 a,
 button
     transition: all .3s
@@ -33,6 +34,13 @@ button
     padding: 0 15px
 .nav
     padding: 6px 0
+    position: sticky
+    top: 0
+    left: 0
+    width: 100%
+    backdrop-filter: blur(10px)
+    background: rgba(244, 244, 244, 0.75)
+    z-index: 50
     .container
         display: flex
         justify-content: flex-start
@@ -71,6 +79,43 @@ button
         gap: 8px
         background: url('../img/btn_blue.svg') center no-repeat
         background-size: contain
+    &__lang
+        position: relative
+        margin: 0 0 0 8px
+        &_btn
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 3px
+            border: 1px solid $grey
+            border-radius: 10px
+            padding: 10px 10px 10px 13px
+            cursor: pointer
+            background: $white
+        &_list
+            position: absolute
+            top: calc( 100% + 3px )
+            left: 0
+            width: 100%
+            border: 1px solid $grey
+            border-radius: 10px
+            background: $white
+            display: grid
+            transition: all .3s
+            opacity: 0
+            pointer-events: none
+            a
+                padding: 4px
+                display: flex
+                justify-content: center
+                align-items: center
+                border-bottom: 1px solid $grey
+                &:last-child
+                    border-bottom: none
+        &.active
+            .nav__lang_list
+                opacity: 1
+                pointer-events: all
 
 .header
     padding: 20px 0 

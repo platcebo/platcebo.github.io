@@ -222,7 +222,8 @@ if(modal !== null) {
 }
 if(modalEnter !== null) {
     modalEnterBtn.forEach((item)=>{
-        item.addEventListener('click',()=>{
+        item.addEventListener('click',(e)=>{
+            e.preventDefault()
             for(let a = 0; a < modal.length; a++) {
                 modal[a].classList.remove('active')
             }
@@ -232,7 +233,8 @@ if(modalEnter !== null) {
 }
 if(modalReg !== null) {
     modalRegBtn.forEach((item)=>{
-        item.addEventListener('click',()=>{
+        item.addEventListener('click',(e)=>{
+            e.preventDefault()
             for(let a = 0; a < modal.length; a++) {
                 modal[a].classList.remove('active')
             }
@@ -242,7 +244,8 @@ if(modalReg !== null) {
 }
 if(modalPas !== null) {
     modalPasBtn.forEach((item)=>{
-        item.addEventListener('click',()=>{
+        item.addEventListener('click',(e)=>{
+            e.preventDefault()
             for(let a = 0; a < modal.length; a++) {
                 modal[a].classList.remove('active')
             }
@@ -252,7 +255,8 @@ if(modalPas !== null) {
 }
 if(modalMail !== null) {
     modalMailBtn.forEach((item)=>{
-        item.addEventListener('click',()=>{
+        item.addEventListener('click',(e)=>{
+            e.preventDefault()
             for(let a = 0; a < modal.length; a++) {
                 modal[a].classList.remove('active')
             }
@@ -262,7 +266,8 @@ if(modalMail !== null) {
 }
 if(modalNew !== null) {
     modalNewBtn.forEach((item)=>{
-        item.addEventListener('click',()=>{
+        item.addEventListener('click',(e)=>{
+            e.preventDefault()
             for(let a = 0; a < modal.length; a++) {
                 modal[a].classList.remove('active')
             }
@@ -272,7 +277,8 @@ if(modalNew !== null) {
 }
 if(modalConf !== null) {
     modalConfBtn.forEach((item)=>{
-        item.addEventListener('click',()=>{
+        item.addEventListener('click',(e)=>{
+            e.preventDefault()
             for(let a = 0; a < modal.length; a++) {
                 modal[a].classList.remove('active')
             }
@@ -282,7 +288,8 @@ if(modalConf !== null) {
 }
 if(modalAccept !== null) {
     modalAcceptBtn.forEach((item)=>{
-        item.addEventListener('click',()=>{
+        item.addEventListener('click',(e)=>{
+            e.preventDefault()
             for(let a = 0; a < modal.length; a++) {
                 modal[a].classList.remove('active')
             }
@@ -292,7 +299,8 @@ if(modalAccept !== null) {
 }
 if(modalResume !== null) {
     modalResumeBtn.forEach((item)=>{
-        item.addEventListener('click',()=>{
+        item.addEventListener('click',(e)=>{
+            e.preventDefault()
             for(let a = 0; a < modal.length; a++) {
                 modal[a].classList.remove('active')
             }
@@ -310,5 +318,22 @@ if(vacancyList !== null) {
     })
 }
 
+
+let searchMore = document.querySelectorAll('.search__aside_more'),
+    searchList = document.querySelectorAll('.search__aside_down ul');
+
+if(searchMore !== null) {
+    searchMore.forEach((item,i)=>{
+        item.addEventListener('click', (e)=>{
+            e.preventDefault()
+            searchList[i].classList.toggle('active');
+            if(searchList[i].classList.contains('active')) {
+                item.innerHTML = "Скрыть »"
+            } else {
+                item.innerHTML = "Полный  список »"
+            }
+        })
+    })
+}
 
 }, false);
