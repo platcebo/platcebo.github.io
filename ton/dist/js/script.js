@@ -14,9 +14,9 @@ if(questItem !== null) {
 
 const ctx = document.getElementById('styledChart').getContext('2d');
 const data = {
-    labels: ['1 фев', '2 фев', '3 фев', '4 фев', '5 фев', '6 фев', '7 фев'],
+    labels: ['1 фев', '2 фев', '3 фев', '4 фев', '5 фев', '6 фев', '7 фев', '8 фев', '9 фев'],
     datasets: [{
-        data: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 1],
+        data: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 1, 1.2, 1.4],
         backgroundColor: '#2196f3',
         borderRadius: 3,
         barPercentage: 0.6,
@@ -24,10 +24,12 @@ const data = {
     }]
 };
 
+document.documentElement.style.setProperty('--bars-count', data.labels.length);
+
 const options = {
     responsive: true,
     maintainAspectRatio: false,
-    aspectRatio: 1.3,
+    // aspectRatio: 1,
     layout: {
         padding: {
             top: 30, 
