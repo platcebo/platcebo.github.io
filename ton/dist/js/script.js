@@ -13,6 +13,7 @@ if(questItem !== null) {
 }
 
 const ctx = document.getElementById('styledChart').getContext('2d');
+
 const data = {
     labels: ['1 фев', '2 фев', '3 фев', '4 фев', '5 фев', '6 фев', '7 фев', '8 фев', '9 фев'],
     datasets: [{
@@ -24,12 +25,10 @@ const data = {
     }]
 };
 
-document.documentElement.style.setProperty('--bars-count', data.labels.length);
-
 const options = {
     responsive: true,
     maintainAspectRatio: false,
-    // aspectRatio: 1,
+    aspectRatio: 2,
     layout: {
         padding: {
             top: 30, 
@@ -38,6 +37,9 @@ const options = {
     plugins: {
         tooltip: {
             enabled: false, // Отключаем стандартный tooltip
+        },
+        legend: {
+            display: false,
         },
         datalabels: {
             anchor: 'end',
@@ -52,9 +54,22 @@ const options = {
             },
             formatter: (value) => `${value}$`, // Форматирование значения
         },            
-        legend: {
-            display: false,
-        },
+        zoom: {
+            pan: {
+                enabled: true,
+                mode: 'x',
+                threshold: 10,
+                rangeMin: {
+                    x: 0,
+                },
+                rangeMax: {
+                    x: 6, // Граница скролла
+                }
+            },            
+            zoom: {
+                enabled: false // Отключаем зум, оставляем только скролл
+            }
+        }    
     },
     scales: {
         x: {
@@ -65,6 +80,7 @@ const options = {
                 color: '#666',
             },
             offset: true,
+            // max: 6, // Показываем только до 6 колонок (7-я с прокруткой)
         },
         y: {
             grid: {
@@ -77,6 +93,8 @@ const options = {
         },
     },     
 };
+
+Chart.register(ChartDataLabels, ChartZoom);
 
 new Chart(ctx, {
     type: 'bar',
