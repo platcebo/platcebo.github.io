@@ -117,9 +117,10 @@ input
         border-radius: 5px
         background: $white
         border: 1px solid rgba(40, 47, 54, 0.15)
-    &+.error
-        color: $red
-        font-size: 12px
+span.error
+    color: $red
+    font-size: 12px
+    margin: 3px 0 0
 .input__password
     position: relative
     a
@@ -199,6 +200,8 @@ input
 .filter_title
     padding: 0 38px 8px
     border-bottom: 1px solid $gray-light
+    font: 500 18px / 1.4 $font-family
+    color: $main-dark
     p,
     h4
         font: 500 18px / 1.4 $font-family
@@ -1104,12 +1107,29 @@ section
         grid-template-columns: 320px 1fr
         gap: 16px
     &__aside
+        &_list
+            margin: 35px 0 0
+            display: block
+        &_link
+            li
+                &.active
+                    &::before
+                        content: '—'
+                        display: inline
+                        font: 400 17px / 1.4 $font-family
+                        color: $gray-fill
         &_menu
             display: none
-        .title
+        .title,
+        .filter_title
             padding-left: 0
-        ul
             margin: 35px 0 0
+            &:nth-child(1)
+                margin: 0
+        fieldset
+            margin: 35px 0 0
+        ul
+            margin: 15px 0 0
             display: grid
             grid-template-columns: 1fr
             gap: 10px
@@ -1119,7 +1139,19 @@ section
                 max-height: 100%
             li
                 position: relative
-                display: block
+                display: flex
+                justify-content: flex-start
+                align-items: start
+                &.active
+                    &::before
+                        content: '—'
+                        display: inline
+                        font: 400 17px / 1.4 $font-family
+                        color: $gray-fill
+                &:hover,
+                &.active
+                    a
+                        color: #7d7aff
             a
                 margin: 0 7px
                 display: inline
@@ -3281,7 +3313,8 @@ section
                 height: 206px
                 border: 1px solid $gray-light
                 object-fit: cover
-            button
+            button,
+            a
                 padding: 11px
                 box-shadow: none
                 max-width: 100%
@@ -4306,7 +4339,9 @@ section
         margin: 25px 0 0
         display: grid
         grid-template-columns: 1fr
-        gap: 16px
+        gap: 0
+        .input__password
+            margin: 16px 0 0
     &__btn
         margin: 18px 0 0
         display: flex
