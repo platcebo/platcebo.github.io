@@ -393,13 +393,13 @@ input
             overflow: hidden                
         span
             padding: 13px 0 0 5px
-            --dimension: attr(data-del s)
+            // --dimension: attr(data-del s)
             display: inline-block
             opacity: 1
             transition: all 1.5s 
             transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
             transform: translateY(100%) !important
-            transition-delay: var(--data-del) !important
+            transition-delay: var(--data-del) 
     &__text
         font: 400 18px / 1.4 $font-family
         color: #4686a8
@@ -3580,8 +3580,8 @@ input
             width: 20px
             height: 20px
             display: flex
-            align-items: center
-            justify-content: center
+            align-items: flex-start
+            justify-content: flex-start
             transition: all .3s
             margin: auto
             &::before
@@ -3594,6 +3594,7 @@ input
                 border-radius: 100%
                 background: #f0f0f0
                 opacity: 0
+                margin: auto
         input
             position: absolute
             top: 0
@@ -3632,11 +3633,13 @@ input
             width: 20px
             height: 20px
             display: flex
-            align-items: center
-            justify-content: center
+            align-items: flex-start
+            justify-content: flex-start
             transition: all .3s
             margin: auto
             svg
+                display: block
+                margin: auto
                 width: 14px
                 height: 14px
         input
@@ -3749,7 +3752,7 @@ input
         &__other
             grid-template-columns: 15em auto 1fr !important
             input
-                font-size: 13px !important
+                font-size: 13em !important
         &__wrapper
             gap: 45em
         &__input

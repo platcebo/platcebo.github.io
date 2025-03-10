@@ -277,6 +277,20 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    let headerTrans = document.querySelectorAll('.header-trans');
+
+    if(headerTrans !== null) {
+        headerTrans.forEach((item)=>{
+            console.log(getComputedStyle(item).transitionDelay.substring(1))
+
+            let sec = getComputedStyle(item).transitionDelay.substring(1);
+
+            setInterval(() => {
+                item.style.transitionDelay = 0 + sec;
+            }, 3000);
+        })
+    }
+
     let curtain = document.querySelector('.curtain')
 
     curtain.classList.add('active')
@@ -284,6 +298,5 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('12')
         curtain.classList.add('active')
     };
-    
 
 }, false);
