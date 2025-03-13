@@ -65,7 +65,9 @@ document.addEventListener('DOMContentLoaded', function() {
         let observer = new IntersectionObserver(onEntry, options);
         let elements = document.querySelectorAll('.stat__val');
         for (let elm of elements) {
-            observer.observe(elm);
+            setInterval(() => {
+                observer.observe(elm);
+            }, 1200);
         }
     }
 
