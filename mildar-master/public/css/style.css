@@ -17805,6 +17805,7 @@ p.about-new__footer.h3 a:hover {
   .about-new h2 {
     margin: 50px 0 0;
     font-size: 48px;
+    line-height: 0.72;
   }
   .about-new .h3 {
     margin: 20px 0 0;
