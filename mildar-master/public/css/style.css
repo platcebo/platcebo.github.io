@@ -17742,7 +17742,7 @@ p.about-new__footer.h3 a:hover {
 
 @media (max-width: 1024px) {
   .showcase__item-picture--round:after {
-    top: 10%;
+    top: 7%;
   }
   .new-cheese .slick-initialized .slick-slide {
     overflow: visible;
