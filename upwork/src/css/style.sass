@@ -4645,7 +4645,8 @@ section
             font: 500 18px / 1.4 $font-family
             color: $main-dark
         input,
-        .select
+        .select,
+        .select2-container
             margin: 6px 0 0
             input
                 margin: 0
@@ -4985,3 +4986,59 @@ section
     margin: 15px 0 0
     .btn__blue
         width: 100%
+
+body
+    .select2-selection
+        color: #383b49 !important
+        padding: 9px 18px !important
+        box-shadow: 0 1px 2px 0 rgba(61,58,194,.12) !important
+        background: #fff !important
+        border-radius: 4px !important
+        width: 100% !important
+    .select2-container--default .select2-selection--single .select2-selection__arrow
+        top: 50%
+        transform: translateY(-50%)
+        right: -8px
+        inset-inline-end: none
+    .select2-container--default.select2-container--focus .select2-selection--single .select2-selection__rendered, .select2-container--default.select2-container--open .select2-selection--single .select2-selection__rendered
+        line-height: 1
+    .select2-dropdown
+        background: #fff
+    .select2-container--open
+        background: #fff
+        border: 1px solid #3c81e8
+        border-radius:  4px
+    .select2-container--open
+        border: 1px solid #3c81e8
+        border-radius: 4px
+        box-shadow: none !important
+    .select2-container--default .select2-search--dropdown .select2-search__field
+        font: 400 15px / 1.45 $font-family
+        color: $main-dark
+        padding: 9px 15px
+        border-radius: 5px
+        background: $white
+        border: 1px solid rgba(40, 47, 54, 0.15)
+    .select2-container--open .select2-dropdown
+        border: 1px solid #3c81e8
+        border-radius: 4px
+    .select2-container--default .select2-results__option
+        margin: 0
+        border-radius: 0
+        font: 400 15px / 1.45 "IBM Plex Sans", sans-serif
+        color: #686e7d
+        &:hover
+            background: #f5f5f5
+    .select2-dropdown--above
+        top: -5px
+    .select2-dropdown--below
+        top: 5px
+    .select2-selection--multiple
+        border: none  !important
+        padding: 4px 9px !important
+    .select2-container--default .select2-selection--multiple .select2-selection__rendered .select2-selection__choice
+        background: #f5f5f5
+        border: none 
+    .select2-selection__rendered
+        padding-left: 0 !important
+        font: 400 15px / 1.45 "IBM Plex Sans", sans-serif
