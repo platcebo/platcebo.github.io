@@ -182,7 +182,8 @@ span.error
         color: $main-dark
         padding: 9px 18px
         border: 1px solid $bg-color
-        box-shadow: 0 1px 2px 0 rgba(61, 58, 194, 0.12)
+        box-shadow: none
+        border: 1px solid rgba(40, 47, 54, 0.15)
         background: $white
         border-radius: 4px
         width: 100%
@@ -1143,16 +1144,24 @@ section
             display: grid
             grid-template-columns: 1fr
             gap: 10px
-            max-height: 193px
             overflow: hidden
+            li
+                display: none
+                &:nth-child(1),
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4)
+                    display: flex
             &.active
                 max-height: 100%
+                li
+                    display: flex
             li
                 position: relative
-                display: flex
                 justify-content: flex-start
                 align-items: start
                 &.active
+                    order: -2
                     &::before
                         content: '—'
                         display: inline
@@ -1240,6 +1249,8 @@ section
             color: $blue
             display: block
             width: max-content
+            &.del
+                display: none
         &_title
             padding: 0 0 16px
             border-bottom: 1px solid $gray-light
@@ -5009,7 +5020,7 @@ body
     .select2-selection
         color: #383b49 !important
         padding: 9px 18px !important
-        box-shadow: 0 1px 2px 0 rgba(61,58,194,.12) !important
+        box-shadow: none !important
         background: #fff !important
         border-radius: 4px !important
         width: 100% !important
@@ -5023,7 +5034,7 @@ body
     .select2-dropdown
         background: #fff
     .select2.select2-container
-        border: 1px solid transparent
+        border: 1px solid rgba(40, 47, 54, 0.15)
         border-radius: 4px
     .select2.select2-container--open
         border: 1px solid #3c81e8

@@ -320,19 +320,24 @@ if(vacancyList !== null) {
 
 
 let searchMore = document.querySelectorAll('.search__aside_more'),
-    searchList = document.querySelectorAll('.search__aside_down ul');
+    searchList = document.querySelectorAll('.search__aside_list ul');
 
 if(searchMore !== null) {
     searchMore.forEach((item,i)=>{
-        item.addEventListener('click', (e)=>{
-            e.preventDefault()
-            searchList[i].classList.toggle('active');
-            if(searchList[i].classList.contains('active')) {
-                item.innerHTML = "Скрыть »"
-            } else {
-                item.innerHTML = "Полный  список »"
-            }
-        })
+        console.log(searchList[i].childNodes.length)
+        if(searchList[i].childNodes.length < 5) {
+            item.classList.add('del')
+        } else {
+            item.addEventListener('click', (e)=>{
+                e.preventDefault()
+                searchList[i].classList.toggle('active');
+                if(searchList[i].classList.contains('active')) {
+                    item.innerHTML = "Скрыть »"
+                } else {
+                    item.innerHTML = "Полный  список »"
+                }
+            })
+        }
     })
 }
 
