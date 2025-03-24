@@ -107,6 +107,7 @@ button
             display: block
 input
     &[type="text"],
+    &[type="tel"],
     &[type="password"],
     &[type="email"]
         width: 100%
@@ -117,6 +118,15 @@ input
         border-radius: 5px
         background: $white
         border: 1px solid rgba(40, 47, 54, 0.15)
+textarea
+    width: 100%
+    box-sizing: border-box
+    font: 400 15px / 1.45 $font-family
+    color: $main-dark
+    padding: 9px 15px
+    border-radius: 5px
+    background: $white
+    border: 1px solid rgba(40, 47, 54, 0.15)
 span.error
     color: $red
     font-size: 12px
@@ -3062,6 +3072,10 @@ section
         img
             width: 100%
             margin: 25px 0 0
+        .comment-toolbar
+            margin: 20px 0 0
+        .comment-editor
+            margin: 0 0 20px
     &-recom
         margin: 30px 0 0
         &__btn
@@ -3327,7 +3341,8 @@ section
             font: 400 17px / 1.4 $font-family
             color: $main-dark
         &__input
-            input
+            input,
+            textarea
                 margin: 7px 0 0
                 width: 100%
                 box-sizing: border-box
@@ -3335,6 +3350,9 @@ section
                 background: $white
                 border: 1px solid rgba(40, 47, 54, 0.15)
                 padding: 9px 15px
+            textarea
+                height: 120px
+                resize: none
             .select
                 margin: 7px 0 0
                 input
@@ -5001,14 +5019,13 @@ body
         right: -8px
         inset-inline-end: none
     .select2-container--default.select2-container--focus .select2-selection--single .select2-selection__rendered, .select2-container--default.select2-container--open .select2-selection--single .select2-selection__rendered
-        line-height: 1
+        line-height: calc(var(--bs-select-height) - var(--bs-select-border-width) * 2)
     .select2-dropdown
         background: #fff
-    .select2-container--open
-        background: #fff
-        border: 1px solid #3c81e8
-        border-radius:  4px
-    .select2-container--open
+    .select2.select2-container
+        border: 1px solid transparent
+        border-radius: 4px
+    .select2.select2-container--open
         border: 1px solid #3c81e8
         border-radius: 4px
         box-shadow: none !important
@@ -5042,3 +5059,7 @@ body
     .select2-selection__rendered
         padding-left: 0 !important
         font: 400 15px / 1.45 "IBM Plex Sans", sans-serif
+    .select2-container--default.select2-container--focus .select2-selection--multiple .select2-selection__rendered, .select2-container--default.select2-container--open .select2-selection--multiple .select2-selection__rendered
+        padding-block: var(--bs-select-multiple-padding-y)
+    .select2-container--default .select2-search--inline .select2-search__field
+        height: 26px
