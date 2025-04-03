@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     let workPar = document.querySelectorAll('.par__layer'),
-        workWrapper = document.querySelector('.work__wrapper');
+        workWrapper = document.querySelector('.par');
 
     if(workPar.length > 0) {
         window.addEventListener('scroll', ()=>{
@@ -113,6 +113,32 @@ document.addEventListener('DOMContentLoaded', function() {
             if(sermPar.getBoundingClientRect().top <= window.innerHeight && addWrapper.getBoundingClientRect().bottom > 0) {
                 sermPar.style.transform = 'translateY(' + (sermPar.getBoundingClientRect().top/window.innerHeight)*10 + '%)'
             }
+        })
+    }
+
+    let olvPar = document.querySelectorAll('.olv-header__bg'),
+        olvWrapper = document.querySelector('.olv-header__block');
+
+    if(olvPar.length > 0) {
+        window.addEventListener('scroll', ()=>{
+            olvPar.forEach((item)=>{
+                if(item.getBoundingClientRect().top <= window.innerHeight && olvWrapper.getBoundingClientRect().bottom > 0) {
+                    item.style.transform = 'translateY(' + (item.getBoundingClientRect().top/olvWrapper.getBoundingClientRect().height) * 15 + '%)'
+                }
+            })
+        })
+    }
+
+    let priceOlvPar = document.querySelectorAll('.olv-price__bg'),
+        priceOlvWrapper = document.querySelector('.olv-price__block');
+
+    if(priceOlvPar.length > 0) {
+        window.addEventListener('scroll', ()=>{
+            priceOlvPar.forEach((item)=>{
+                if(item.getBoundingClientRect().top <= window.innerHeight && priceOlvWrapper.getBoundingClientRect().bottom > 0) {
+                    item.style.transform = 'translateY(' + (item.getBoundingClientRect().top/priceOlvWrapper.getBoundingClientRect().height) * 15 + '%)'
+                }
+            })
         })
     }
 
@@ -1321,7 +1347,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         articleAsideLink[a].classList.remove('active')
                     }
                     item.classList.add('active')
-                    // console.log('sd')
                 })
             })
         }
@@ -1379,7 +1404,6 @@ document.addEventListener('DOMContentLoaded', function() {
         function articleAsideCount() {
             for(let i = 0; i < articleAsideLink.length; i++) {
                 if(articleAsideLink[i].classList.contains('active')) {
-                    console.log(i)
                     return i + 1
                 }
             }
@@ -1471,7 +1495,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let caseArrow = document.querySelectorAll('.case-list__aside_arrow');
 
-    console.log('as')
     if(caseArrow !== null) {
         caseArrow.forEach((item)=>{
             item.addEventListener('click', ()=>{
@@ -1549,5 +1572,96 @@ document.addEventListener('DOMContentLoaded', function() {
             caseCheck.classList.toggle('active');
         })
     }
+
+    let olv = document.querySelector('.olv'),
+        olvSlide = document.querySelectorAll('.olv__slide'),
+        olvPag = document.querySelector('.olv__pag'),
+        olvBlock = document.querySelector('.olv__block');
+
+    if( olv !== null ) {
+        for(let a = 0; a < olvSlide.length; a++) {
+            let span = document.createElement('span');
+            olvPag.append(span);
+        }
+        let olvPagSpan = olvPag.childNodes;
+        olvPagSpan[0].classList.add('active');
+        olvSlide[0].classList.add('active');
+
+        olv.style.height = olv.getBoundingClientRect().height + (olvBlock.getBoundingClientRect().height * (olvSlide.length - 1)) + 'px';
+
+        olvBlock.style.width = olvBlock.getBoundingClientRect().width + "px"
+
+        window.addEventListener('scroll', ()=>{
+            if (olv.getBoundingClientRect().top <= 0 && olv.getBoundingClientRect().bottom > olvBlock.getBoundingClientRect().height + 80) {
+                olv.classList.add('fix')
+                olv.classList.remove('bottom')
+            } else if (olv.getBoundingClientRect().bottom <= olvBlock.getBoundingClientRect().height + 80) {
+                olv.classList.add('bottom')
+                olv.classList.remove('fix')
+            } else if (olv.getBoundingClientRect().top > 0 && olv.getBoundingClientRect().bottom > olvBlock.getBoundingClientRect().height + 80) {
+                olv.classList.remove('fix')
+                olv.classList.remove('bottom')
+            }
+
+            function changeSlide() {
+                let y = Math.round((olv.getBoundingClientRect().top * -1) / (olv.getBoundingClientRect().height / olvSlide.length));
+
+                if(y >= 0 && y < olvSlide.length) {
+                    for(let a = 0; a < olvSlide.length; a++) {
+                        olvSlide[a].classList.remove('active');
+                        olvPagSpan[a].classList.remove('active');
+                        olvSlide[y].classList.add('active');
+                        olvPagSpan[y].classList.add('active');
+                    }
+                }
+            }
+
+            changeSlide()
+        })
+    }
+
+    var swiper = new Swiper(".tool__slider", {
+        spaceBetween: 20,
+        slidesPerView: 'auto',
+        speed: 700,
+        loop: true,
+        navigation: {
+            nextEl: ".tool .swiper-button-next",
+            prevEl: ".tool .swiper-button-prev",
+        },
+        breakpoints: {
+            1201: {
+                spaceBetween: 40,
+                slidesPerView: 4
+            },
+        }
+    });
+
+    let settingTab = document.querySelectorAll('.setting__tab li'),
+        settingWrapper = document.querySelectorAll('.setting__wrapper');
+
+    if(settingTab !== null) {
+        settingTab.forEach((item,i)=>{
+            item.addEventListener('click', ()=>{
+                for(let a = 0; a < settingTab.length; a++) {
+                    settingTab[a].classList.remove('active');
+                    settingWrapper[a].classList.remove('active');
+                }
+                item.classList.add('active');
+                settingWrapper[i].classList.add('active');
+            })
+        })
+    }
+
+    var swiper = new Swiper(".setting__slider", {
+        spaceBetween: 40,
+        slidesPerView: 1,
+        speed: 700,
+        loop: true,
+        navigation: {
+            nextEl: ".setting .swiper-button-next",
+            prevEl: ".setting .swiper-button-prev",
+        },
+    });
 
 }, false);

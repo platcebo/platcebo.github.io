@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     let workPar = document.querySelectorAll('.par__layer'),
-        workWrapper = document.querySelector('.par');
+        workWrapper = document.querySelector('.work__wrapper');
 
     if(workPar.length > 0) {
         window.addEventListener('scroll', ()=>{
@@ -124,19 +124,6 @@ document.addEventListener('DOMContentLoaded', function() {
             olvPar.forEach((item)=>{
                 if(item.getBoundingClientRect().top <= window.innerHeight && olvWrapper.getBoundingClientRect().bottom > 0) {
                     item.style.transform = 'translateY(' + (item.getBoundingClientRect().top/olvWrapper.getBoundingClientRect().height) * 15 + '%)'
-                }
-            })
-        })
-    }
-
-    let priceOlvPar = document.querySelectorAll('.olv-price__bg'),
-        priceOlvWrapper = document.querySelector('.olv-price__block');
-
-    if(priceOlvPar.length > 0) {
-        window.addEventListener('scroll', ()=>{
-            priceOlvPar.forEach((item)=>{
-                if(item.getBoundingClientRect().top <= window.innerHeight && priceOlvWrapper.getBoundingClientRect().bottom > 0) {
-                    item.style.transform = 'translateY(' + (item.getBoundingClientRect().top/priceOlvWrapper.getBoundingClientRect().height) * 15 + '%)'
                 }
             })
         })
@@ -1619,49 +1606,5 @@ document.addEventListener('DOMContentLoaded', function() {
             changeSlide()
         })
     }
-
-    var swiper = new Swiper(".tool__slider", {
-        spaceBetween: 20,
-        slidesPerView: 'auto',
-        speed: 700,
-        loop: true,
-        navigation: {
-            nextEl: ".tool .swiper-button-next",
-            prevEl: ".tool .swiper-button-prev",
-        },
-        breakpoints: {
-            1201: {
-                spaceBetween: 40,
-                slidesPerView: 4
-            },
-        }
-    });
-
-    let settingTab = document.querySelectorAll('.setting__tab li'),
-        settingWrapper = document.querySelectorAll('.setting__wrapper');
-
-    if(settingTab !== null) {
-        settingTab.forEach((item,i)=>{
-            item.addEventListener('click', ()=>{
-                for(let a = 0; a < settingTab.length; a++) {
-                    settingTab[a].classList.remove('active');
-                    settingWrapper[a].classList.remove('active');
-                }
-                item.classList.add('active');
-                settingWrapper[i].classList.add('active');
-            })
-        })
-    }
-
-    var swiper = new Swiper(".setting__slider", {
-        spaceBetween: 40,
-        slidesPerView: 1,
-        speed: 700,
-        loop: true,
-        navigation: {
-            nextEl: ".setting .swiper-button-next",
-            prevEl: ".setting .swiper-button-prev",
-        },
-    });
 
 }, false);
