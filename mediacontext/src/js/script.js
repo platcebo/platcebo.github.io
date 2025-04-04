@@ -78,6 +78,45 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    let seoPar = document.querySelectorAll('.seo-par__layer'),
+        seoWrapper = document.querySelector('.seo-par');
+
+    if(seoPar.length > 0) {
+        window.addEventListener('scroll', ()=>{
+            seoPar.forEach((item)=>{
+                if(item.getBoundingClientRect().top <= window.innerHeight && seoWrapper.getBoundingClientRect().bottom > 0) {
+                    item.style.transform = 'translateY(' + (item.getBoundingClientRect().top/seoWrapper.getBoundingClientRect().height) * 20 + '%)'
+                }
+            })
+        })
+    }
+
+    let seoBg = document.querySelectorAll('.seo__bg'),
+        seoBlock = document.querySelector('.seo__block');
+
+    if(seoBg.length > 0) {
+        window.addEventListener('scroll', ()=>{
+            seoBg.forEach((item)=>{
+                if(item.getBoundingClientRect().top <= window.innerHeight && seoBlock.getBoundingClientRect().bottom > 0) {
+                    item.style.transform = 'translateY(' + (item.getBoundingClientRect().top/seoBlock.getBoundingClientRect().height) * 20 + '%)'
+                }
+            })
+        })
+    }
+
+    let saleBg = document.querySelectorAll('.seo-sale__bg'),
+        saleBlock = document.querySelector('.seo-sale__block');
+
+    if(saleBg.length > 0) {
+        window.addEventListener('scroll', ()=>{
+            saleBg.forEach((item)=>{
+                if(item.getBoundingClientRect().top <= window.innerHeight && saleBlock.getBoundingClientRect().bottom > 0) {
+                    item.style.transform = 'translateY(' + (item.getBoundingClientRect().top/saleBlock.getBoundingClientRect().height) * 10 + '%)'
+                }
+            })
+        })
+    }
+
     let checkPar = document.querySelector('.check__layer'),
         checkWrapper = document.querySelector('.check__block');
 
@@ -234,7 +273,12 @@ document.addEventListener('DOMContentLoaded', function() {
         serviceSlider = document.querySelector('.service__scroll');
 
     if(service !== null && window.innerWidth > 1200) {
-        service.style.height = serviceSlider.getBoundingClientRect().width - serviceWrapper.getBoundingClientRect().width + serviceBlock.getBoundingClientRect().height + 60 + 'px'
+        if (serviceBlock.classList.contains('achiev__block')) {
+            service.style.height = serviceBlock.getBoundingClientRect().height + (serviceSlider.getBoundingClientRect().width - serviceBlock.getBoundingClientRect().width + 100 ) + 'px'
+        } else {
+            service.style.height = serviceSlider.getBoundingClientRect().width - serviceWrapper.getBoundingClientRect().width + serviceBlock.getBoundingClientRect().height + 60 + 'px'
+        }
+        
 
         window.addEventListener('scroll', ()=>{
             if (service.getBoundingClientRect().top < 0 && serviceBlock.getBoundingClientRect().top > 20) {
