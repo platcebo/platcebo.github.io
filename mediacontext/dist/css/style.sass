@@ -7271,8 +7271,10 @@ textarea.input
             b
                 font-weight: 700
                 color: $black
+            strong
+                font-weight: 700
             a
-                color: $purple
+                color: $purple !important
                 text-decoration: underline
                 transition: all .3s
                 &:hover
@@ -10022,9 +10024,10 @@ textarea.input
             color: $purple
     &__wrapper
         margin: 40px 0 0 
-        display: grid
-        grid-template-columns: 1fr 1fr 1fr
-        gap: 40px
+        .swiper-wrapper
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+            gap: 40px
     &__item
         border-radius: 40px
         padding: 40px
@@ -10338,6 +10341,11 @@ textarea.input
         right: -345px
         z-index: -1
 
+.nav__wht
+    border-radius: 0 0 40px 40px
+    background: $white
+    margin: 0 0 20px
+
 @media ( max-width: 1700px )
     .seo-header
         h1
@@ -10513,9 +10521,10 @@ textarea.input
             h3
                 font-size: 24px
         &__wrapper
-            grid-template-columns: 1fr 1fr
             margin: 30px 0 0
-            gap: 20px
+            .swiper-wrapper
+                gap: 20px
+                grid-template-columns: 1fr 1fr
         &__bg
             &_left
                 display: none
@@ -10533,6 +10542,7 @@ textarea.input
         &__item
             color: $black
             background: $white
+            padding: 30px
             h3
                 font-size: 24px
             ul
@@ -10603,6 +10613,8 @@ textarea.input
             width: 808px
             right: -462px
             top: -364px
+        h2
+            max-width: 400px
 
 @media ( max-width: 600px )
     .seo-header
@@ -10614,14 +10626,15 @@ textarea.input
                 &+p
                     font-size: 14px
         &__bg
-            width: 436px
-            top: 212px
-            left: calc( 50% - 218px )
+            width: 560px
+            top: 180px
+            left: calc( 50% - 280px )
         &__row
             grid-template-columns: 1fr
             gap: 10px
             .btn__violet
                 grid-column: auto
+                gap: 0
         &__text
             grid-column: auto
     .benefit
@@ -10640,6 +10653,7 @@ textarea.input
             padding: 20px
             .btn__violet
                 margin: 110px 0 0
+                gap: 0
             &_bg
                 width: 417px
                 top: -123px
@@ -10649,9 +10663,21 @@ textarea.input
                 max-width: 140px
     .seo
         &__wrapper
-            grid-template-columns: 1fr
+            position: relative
+            overflow: hidden
+            margin: 20px -20px 0
+            width: calc(100% + 40px)
+            padding: 0 20px
+            .swiper-wrapper
+                position: relative
+                overflow: visible
+                display: flex
+                gap: 0
+                align-items: stretch
         &__item
             padding: 20px 
+            max-width: calc(100vw - 100px)
+            height: auto
             h3
                 font-size: 18px
                 margin: 30px 0 0
@@ -10661,6 +10687,30 @@ textarea.input
             p
                 margin: 20px 0 0
                 font-size: 16px
+        &__bg
+            &_right
+                inset: auto
+                width: 380px
+                left: -170px
+                bottom: -130px
+        .swiper-pagination
+            display: flex
+            justify-content: center
+            align-items: center
+            position: relative
+            transform: none
+            margin: 20px 0 0
+            inset: auto
+            gap: 10px
+            span
+                margin: 0 !important
+                background: $light-gray !important
+                transition: all .3s
+                width: 10px !important
+                height: 10px !important
+                opacity: 1
+                &.swiper-pagination-bullet-active
+                    background: $purple !important
     .seo-price
         &__block
             padding: 30px 20px 
@@ -10713,3 +10763,5 @@ textarea.input
         .btn__blc
             span
                 text-align: left
+    .nav__wht
+        padding: 10px 0

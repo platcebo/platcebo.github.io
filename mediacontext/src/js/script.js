@@ -1708,4 +1708,16 @@ document.addEventListener('DOMContentLoaded', function() {
         },
     });
 
+    if(window.innerWidth <= 600) {
+        var swiper = new Swiper(".seo__wrapper", {
+            spaceBetween: 20,
+            slidesPerView: 'auto',
+            speed: 700,
+            loop: false,
+            pagination: {
+                el: ".seo__wrapper .swiper-pagination",
+            },
+        });
+    }
+
 }, false);
