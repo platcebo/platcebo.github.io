@@ -7630,12 +7630,17 @@ textarea.input
                             fill: $white
 
 .modal-article
+    overflow-y: auto
+    z-index: 100
     img
         display: block
-        width: 100%
         max-width: 1442px
+        width: 100%
         margin: auto
-        border-radius: 40px
+        border-radius: 0
+        object-fit: contain
+        max-height: 100%
+
 
 @media ( max-width: 1700px )
     .modal-article
@@ -7827,9 +7832,6 @@ textarea.input
             padding: 30px
 
 @media ( max-width: 600px )
-    .modal-article
-        img
-            border-radius: 30px
     .mt40
         margin: 20px 0 0
     .article
