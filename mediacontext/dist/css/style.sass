@@ -8870,6 +8870,7 @@ textarea.input
 .olv-header
     position: relative
     z-index: 2
+    padding-top: 0
     &__block
         background: $black
         border-radius: 40px
@@ -8909,13 +8910,13 @@ textarea.input
             left: 334px
         &_sub
             position: absolute
-            width: 312px
-            height: 312px
+            width: 352px
+            height: 352px
             object-fit: contain
             display: block
             z-index: -1
-            top: 216px
-            left: 1316px
+            top: 160px
+            left: 1296px
 
 .features
     h2
@@ -8965,7 +8966,7 @@ textarea.input
         opacity: 0.7
 
 .olv
-    padding: 40px 0
+    padding: 40px 0 0
     &__block
         border-radius: 40px
         background: $white
@@ -8981,13 +8982,34 @@ textarea.input
         display: grid
         grid-template-columns: 1fr 1fr
         gap: 40px
-        opacity: 0
+        // opacity: 0
         pointer-events: none
         transition: all .4s
+        .olv
+            &__info
+                opacity: 0
+                transition: all .4s
+            &__img
+                opacity: 0
+                transition: all .4s
+                img
+                    opacity: 0
+                    transition: all .4s
+                    transform: translateY(50%)
         &.active
             transition: all .4s .2s
-            opacity: 1
             pointer-events: all
+            .olv
+                &__info
+                    transition: all .4s .2s
+                    opacity: 1
+                &__img
+                    transition: all .4s .2s
+                    opacity: 1
+                    img
+                        opacity: 1
+                        transition: all .4s .2s
+                        transform: translateY(0%)
     &__pag
         position: absolute
         bottom: 60px
@@ -9056,10 +9078,10 @@ textarea.input
         .olv
             &__block
                 position: absolute
-                bottom: 40px
+                bottom: 0
 
 .olv-give
-    padding: 0 0 40px
+    padding: 40px 0 
     &__block
         border-radius: 40px
         background: $purple
@@ -9627,15 +9649,6 @@ textarea.input
         &__block
             padding: 40px
             height: auto
-        &__slide
-            grid-template-columns: 1fr
-            gap: 30px
-            display: none
-            position: relative
-            inset: auto
-            margin: 20px 0 0
-            &.active
-                display: grid
         &__info
             padding: 0
         &__subtitle
@@ -9651,9 +9664,25 @@ textarea.input
                 position: absolute
                 width: 480px
                 height: 480px
-                top: 40px
+                top: 0
                 left: 50%
-                transform: translateX(-50%)
+        &__slide
+            grid-template-columns: 1fr
+            gap: 30px
+            display: none
+            position: relative
+            inset: auto
+            margin: 20px 0 0
+            .olv
+                &__img
+                    img
+                        transform: translate(-50%, 50%)
+            &.active
+                display: grid
+                .olv
+                    &__img
+                        img
+                            transform: translate(-50%, 0)
     .olv-give
         &__tag
             padding: 10px 20px
@@ -9697,7 +9726,9 @@ textarea.input
         &__slide
             grid-template-columns: 1fr
             height: auto
+            grid-template-rows: auto 1fr
         &__img
+            padding: 30px
             img
                 height: 270px
         &__info
@@ -9711,8 +9742,8 @@ textarea.input
             align-items: stretch
         .swiper-button-next, 
         .swiper-button-prev
-            top: 140px
-            transform: none
+            top: 165px
+            transform: translateY(-50%)
     .olv-price
         &__tag
             padding: 10px 20px
@@ -9728,6 +9759,12 @@ textarea.input
                     font-size: 36px
         .btn__blc
             margin: 60px 0 0
+        &__bg
+            width: 343px
+            left: auto
+            right: 0
+            top: -100px
+
 
 @media ( max-width: 600px )
     .olv-header
@@ -9742,10 +9779,23 @@ textarea.input
             p
                 font-size: 18px
         .add-header__text
-            margin: 127px 0 0
+            margin: 142px 0 0
             .btn__violet
                 padding: 15px 15px 15px 20px
+        &__bg
+            &_sub
+                width: 230px
+                height: 230px
+                inset: auto
+                top: 150px
+                left: -110px
+            &_main
+                width: 300px
+                height: 300px
+                top: 180px
+                right: -120px
     .features
+        margin-bottom: -20px
         &__wrapper
             margin: 20px 0 0
             grid-template-columns: 1fr
@@ -9762,6 +9812,7 @@ textarea.input
             margin: 20px 0 0
             font-size: 18px
     .olv
+        padding: 40px 0 0
         &__block
             padding: 30px 20px
         &__subtitle
@@ -9780,18 +9831,23 @@ textarea.input
                 padding: 5px 15px
                 font-size: 14px
                 width: max-content
+        &.fix
+            .olv__block
+                top: 40px
     .olv-give
+        padding-top: 20px
         &__block
             padding: 30px 20px
         &__wrapper
-            margin: 20px 0 0
+            margin: 20px -20px 0
+            padding: 0 20px
             display: flex
             overflow: auto
         &__bg
             display: none
         &__item
-            width: calc( 100vw - 80px )
-            min-width: calc( 100vw - 80px )
+            width: calc( 100vw - 100px )
+            min-width: calc( 100vw - 100px )
             padding: 20px
             h3
                 font-size: 18px
@@ -9814,8 +9870,8 @@ textarea.input
                 filter: invert(100%)
     .tool
         &__slide
-            max-width: calc( 100vw - 100px )
-            padding: 30px
+            max-width: calc( 100vw - 140px )
+            padding: 20px
             h3
                 font-size: 18px
             ul
@@ -9825,6 +9881,15 @@ textarea.input
                         width: 4px
                         height: 4px
                         left: -12px
+        .swiper-button-next,
+        .swiper-button-prev
+            width: 50px
+            height: 50px
+            svg
+                width: 15px
+                height: 15px
+        .swiper-button-next
+            left: 60px
     .setting
         &__tab
             margin: 20px 0 0
@@ -9883,6 +9948,7 @@ textarea.input
                 p
                     font-size: 26px
             .btn__blc
+                margin: 20px 0 0
                 padding: 10px 10px 10px 20px
 
 .seo-header

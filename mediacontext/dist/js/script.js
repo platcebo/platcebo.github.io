@@ -1636,13 +1636,13 @@ document.addEventListener('DOMContentLoaded', function() {
         olvBlock.style.width = olvBlock.getBoundingClientRect().width + "px"
 
         window.addEventListener('scroll', ()=>{
-            if (olv.getBoundingClientRect().top <= 0 && olv.getBoundingClientRect().bottom > olvBlock.getBoundingClientRect().height + 80) {
+            if (olv.getBoundingClientRect().top <= 0 && olv.getBoundingClientRect().bottom > olvBlock.getBoundingClientRect().height + 40) {
                 olv.classList.add('fix')
                 olv.classList.remove('bottom')
-            } else if (olv.getBoundingClientRect().bottom <= olvBlock.getBoundingClientRect().height + 80) {
+            } else if (olv.getBoundingClientRect().bottom <= olvBlock.getBoundingClientRect().height + 40) {
                 olv.classList.add('bottom')
                 olv.classList.remove('fix')
-            } else if (olv.getBoundingClientRect().top > 0 && olv.getBoundingClientRect().bottom > olvBlock.getBoundingClientRect().height + 80) {
+            } else if (olv.getBoundingClientRect().top > 0 && olv.getBoundingClientRect().bottom > olvBlock.getBoundingClientRect().height + 40) {
                 olv.classList.remove('fix')
                 olv.classList.remove('bottom')
             }
