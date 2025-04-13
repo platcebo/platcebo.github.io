@@ -10,6 +10,25 @@
     <link rel="stylesheet" href="css/reset.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+        ym(100953673, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/100953673" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
 </head>
 <body>
     <header class="header">
@@ -750,15 +769,15 @@
                         <p>Также вы можете связаться с&nbsp;нами самостоятельно</p>
                     </div>
                 </div>
-                <form action="#" class="form__form">
+                <form action="#" class="form__form amo-form">
                     <h3>Заполните форму, и мы свяжемся с вами в течение часа</h3>
                     <div class="input">
                         <p>Ваше имя</p>
-                        <input type="text" placeholder="Имя">
+                        <input type="text" name="name" placeholder="Имя" required>
                     </div>
                     <div class="input">
                         <p>Номер телефона</p>
-                        <input type="text" placeholder="+_(___)___-__-__">
+                        <input type="text" name="number" placeholder="+_(___)___-__-__" required>
                     </div>
                     <button class="btn__yellow">Отправить заявку</button>
                 </form>
@@ -794,7 +813,7 @@
 
     <div class="modal modal-call">
         <div class="modal__overflow"></div>
-        <div class="modal__block">
+        <form action="#" class="modal__block amo-form">
             <div class="modal__close">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.625 4.375L4.375 15.625" stroke="#565656" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
@@ -806,25 +825,25 @@
             <div class="modal__wrapper">
                 <div class="input">
                     <p>Ваше имя</p>
-                    <input type="text" placeholder="Имя">
+                    <input type="text" name="name" placeholder="Имя" required>
                 </div>
                 <div class="input">
                     <p>Номер телефона</p>
-                    <input type="text" placeholder="+_(___)___-__-__">
+                    <input type="text" name="number" placeholder="+_(___)___-__-__" required>
                 </div>
                 <div class="input">
                     <p>Ваш вопрос</p>
-                    <textarea name="" id="" placeholder="Что вас интересует?"></textarea>
+                    <textarea name="comment" required id="" placeholder="Что вас интересует?"></textarea>
                 </div>
             </div>
             <button class="btn__yellow">Отправить заявку</button>
             <p class="modal__link">Нажимая кнопку, вы подтверждаете согласие на обработку персональных данных</p>
-        </div>
+        </form>
     </div>
 
     <div class="modal modal-video">
         <div class="modal__overflow"></div>
-        <div class="modal__block">
+        <form action="#" class="modal__block amo-form">
             <div class="modal__close">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.625 4.375L4.375 15.625" stroke="#565656" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
@@ -836,21 +855,21 @@
             <div class="modal__wrapper">
                 <div class="input">
                     <p>Ваше имя</p>
-                    <input type="text" placeholder="Имя">
+                    <input type="text" name="name" placeholder="Имя" required>
                 </div>
                 <div class="input">
                     <p>Номер телефона</p>
-                    <input type="text" placeholder="+_(___)___-__-__">
+                    <input type="text" name="number" placeholder="+_(___)___-__-__" required>
                 </div>
             </div>
             <button class="btn__yellow">Отправить заявку</button>
             <p class="modal__link">Нажимая кнопку, вы подтверждаете согласие на обработку персональных данных</p>
-        </div>
+        </form>
     </div>
 
     <div class="modal modal-price">
         <div class="modal__overflow"></div>
-        <div class="modal__block">
+        <form action="#" class="modal__block amo-form">
             <div class="modal__close">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.625 4.375L4.375 15.625" stroke="#565656" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
@@ -862,21 +881,21 @@
             <div class="modal__wrapper">
                 <div class="input">
                     <p>Ваше имя</p>
-                    <input type="text" placeholder="Имя">
+                    <input type="text" name="name" placeholder="Имя" required>
                 </div>
                 <div class="input">
                     <p>Номер телефона</p>
-                    <input type="text" placeholder="+_(___)___-__-__">
+                    <input type="text" name="number" placeholder="+_(___)___-__-__" required>
                 </div>
             </div>
             <button class="btn__yellow">Отправить заявку</button>
             <p class="modal__link">Нажимая кнопку, вы подтверждаете согласие на обработку персональных данных</p>
-        </div>
+        </form>
     </div>
 
     <div class="modal modal-test">
         <div class="modal__overflow"></div>
-        <div class="modal__block">
+        <form action="#" class="modal__block amo-form">
             <div class="modal__close">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.625 4.375L4.375 15.625" stroke="#565656" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
@@ -888,25 +907,25 @@
             <div class="modal__wrapper">
                 <div class="input">
                     <p>Ваше имя</p>
-                    <input type="text" placeholder="Имя">
+                    <input type="text" name="name" placeholder="Имя" required>
                 </div>
                 <div class="input">
                     <p>Номер телефона</p>
-                    <input type="text" placeholder="+_(___)___-__-__">
+                    <input type="text" name="number" placeholder="+_(___)___-__-__" required>
                 </div>
                 <div class="input">
                     <p>Ваш вопрос</p>
-                    <textarea name="" id="" placeholder="Что вас интересует?"></textarea>
+                    <textarea name="comment" required name="" id="" placeholder="Что вас интересует?"></textarea>
                 </div>
             </div>
             <button class="btn__yellow">Отправить заявку</button>
             <p class="modal__link">Нажимая кнопку, вы подтверждаете согласие на обработку персональных данных</p>
-        </div>
+        </form>
     </div>
 
     <div class="modal modal-leas">
         <div class="modal__overflow"></div>
-        <div class="modal__block">
+        <form action="#" class="modal__block amo-form">
             <div class="modal__close">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.625 4.375L4.375 15.625" stroke="#565656" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
@@ -938,21 +957,21 @@
             <div class="modal__wrapper">
                 <div class="input">
                     <p>Ваше имя</p>
-                    <input type="text" placeholder="Имя">
+                    <input type="text" name="name" placeholder="Имя" required>
                 </div>
                 <div class="input">
                     <p>Номер телефона</p>
-                    <input type="text" placeholder="+_(___)___-__-__">
+                    <input type="text" name="number" placeholder="+_(___)___-__-__" required>
                 </div>
             </div>
             <button class="btn__yellow">Отправить заявку</button>
             <p class="modal__link">Нажимая кнопку, вы подтверждаете согласие на обработку персональных данных</p>
-        </div>
+        </form>
     </div>
 
     <div class="modal modal-cond">
         <div class="modal__overflow"></div>
-        <div class="modal__block">
+        <form action="#" class="modal__block amo-form">
             <div class="modal__close">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.625 4.375L4.375 15.625" stroke="#565656" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
@@ -984,21 +1003,21 @@
             <div class="modal__wrapper">
                 <div class="input">
                     <p>Ваше имя</p>
-                    <input type="text" placeholder="Имя">
+                    <input type="text" name="name" placeholder="Имя" required>
                 </div>
                 <div class="input">
                     <p>Номер телефона</p>
-                    <input type="text" placeholder="+_(___)___-__-__">
+                    <input type="text" name="number" placeholder="+_(___)___-__-__" required>
                 </div>
             </div>
             <button class="btn__yellow">Отправить заявку</button>
             <p class="modal__link">Нажимая кнопку, вы подтверждаете согласие на обработку персональных данных</p>
-        </div>
+        </form>
     </div>
 
     <div class="modal modal-equip">
         <div class="modal__overflow"></div>
-        <div class="modal__block">
+        <form action="#" class="modal__block amo-form">
             <div class="modal__close">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.625 4.375L4.375 15.625" stroke="#565656" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
@@ -1010,21 +1029,21 @@
             <div class="modal__wrapper">
                 <div class="input">
                     <p>Ваше имя</p>
-                    <input type="text" placeholder="Имя">
+                    <input type="text" name="name" placeholder="Имя" required>
                 </div>
                 <div class="input">
                     <p>Номер телефона</p>
-                    <input type="text" placeholder="+_(___)___-__-__">
+                    <input type="text" name="number" placeholder="+_(___)___-__-__" required>
                 </div>
             </div>
             <button class="btn__yellow">Отправить заявку</button>
             <p class="modal__link">Нажимая кнопку, вы подтверждаете согласие на обработку персональных данных</p>
-        </div>
+        </form>
     </div>
 
     <div class="modal modal-also">
         <div class="modal__overflow"></div>
-        <div class="modal__block">
+        <form action="#" class="modal__block amo-form">
             <div class="modal__close">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.625 4.375L4.375 15.625" stroke="#565656" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
@@ -1036,15 +1055,49 @@
             <div class="modal__wrapper">
                 <div class="input">
                     <p>Ваше имя</p>
-                    <input type="text" placeholder="Имя">
+                    <input type="text" name="name" placeholder="Имя" required>
                 </div>
                 <div class="input">
                     <p>Номер телефона</p>
-                    <input type="text" placeholder="+_(___)___-__-__">
+                    <input type="text" name="number" placeholder="+_(___)___-__-__" required>
                 </div>
             </div>
             <button class="btn__yellow">Отправить заявку</button>
             <p class="modal__link">Нажимая кнопку, вы подтверждаете согласие на обработку персональных данных</p>
+        </form>
+    </div>
+
+    <div class="modal modal-err">
+        <div class="modal__overflow"></div>
+        <div class="modal__block">
+            <div class="modal__close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.625 4.375L4.375 15.625" stroke="#565656" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M15.625 15.625L4.375 4.375" stroke="#565656" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 36.6667C10.7953 36.6667 3.33337 29.2047 3.33337 20C3.33337 10.7953 10.7953 3.33334 20 3.33334C29.2047 3.33334 36.6667 10.7953 36.6667 20C36.6667 29.2047 29.2047 36.6667 20 36.6667ZM20 33.3333C27.3639 33.3333 33.3334 27.3638 33.3334 20C33.3334 12.6362 27.3639 6.66667 20 6.66667C12.6362 6.66667 6.66671 12.6362 6.66671 20C6.66671 27.3638 12.6362 33.3333 20 33.3333ZM20 17.643L24.714 12.9289L27.071 15.286L22.357 20L27.071 24.714L24.714 27.071L20 22.357L15.286 27.071L12.929 24.714L17.643 20L12.929 15.286L15.286 12.9289L20 17.643Z" fill="#FF361B" />
+            </svg>
+            <h3>Ошибка</h3>
+            <p>Что-то пошло не так <br>Попробуйте еще раз</p>
+        </div>
+    </div>
+
+    <div class="modal modal-suc">
+        <div class="modal__overflow"></div>
+        <div class="modal__block">
+            <div class="modal__close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.625 4.375L4.375 15.625" stroke="#565656" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M15.625 15.625L4.375 4.375" stroke="#565656" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 40C31.0456 40 40 31.0456 40 20C40 8.9543 31.0456 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0456 8.9543 40 20 40ZM30.9142 14.9142L18 27.8284L9.58578 19.4142L12.4142 16.5858L18 22.1716L28.0858 12.0858L30.9142 14.9142Z" fill="#41D157" />
+            </svg>
+            <h3>Спасибо за заявку!</h3>
+            <p>Наш специалист свяжется с&nbsp;вами в течение часа для уточнения деталей</p>
         </div>
     </div>
     
