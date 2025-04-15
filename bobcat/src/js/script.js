@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	if( modalAlso !== null ) {
 		modalAlsoBtn.forEach((item, i)=>{
 			item.addEventListener('click', ()=>{
-				document.querySelector('.modal-also h3 span').innerHTML = document.querySelectorAll('.equip__slide p')[i].innerHTML
+				document.querySelector('.modal-also h3 span').innerHTML = document.querySelectorAll('.equip__also .equip__slide p')[i].innerHTML
 				modalAlso.classList.add('active')
 			})
 		})
@@ -208,6 +208,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		})
 	}
 
-	
+
 
 }, false);

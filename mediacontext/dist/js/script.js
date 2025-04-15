@@ -1717,6 +1717,26 @@ document.addEventListener('DOMContentLoaded', function() {
             pagination: {
                 el: ".seo__wrapper .swiper-pagination",
             },
+            navigation: {
+                nextEl: ".seo__wrapper .swiper-button-next",
+                prevEl: ".seo__wrapper .swiper-button-prev",
+            },
+            
+        });
+
+        var swiper = new Swiper(".up__list", {
+            spaceBetween: 20,
+            slidesPerView: 'auto',
+            speed: 700,
+            loop: false,
+            pagination: {
+                el: ".up__list .swiper-pagination",
+            },
+            navigation: {
+                nextEl: ".up__list .swiper-button-next",
+                prevEl: ".up__list .swiper-button-prev",
+            },
+            
         });
     }
 
