@@ -4204,7 +4204,6 @@ section
                 &+span
                     margin: 0 0 0 auto
                     background: #f6bebc
-
         p
             font-family: $font-family
             font-weight: 500
@@ -4360,3 +4359,463 @@ section
     .result
         &__wrapper
             grid-template-columns: 1fr
+
+.stop-body
+    background: #f2f4f7
+.nav-stop
+    .container__block
+        background: #fcfcfc
+        &::before,
+        &::after
+            content: none
+    .nav__list 
+        a
+            color: #252a2d
+            &:hover,
+            &.active
+                color: #e95e59
+.footer-stop
+    .container__block
+        background: url('../img/footer_stop.jpg') center no-repeat
+        background-size: cover
+    .footer
+        &__logo
+            p
+                color: #9da6b2
+        &__policy
+            color: #9da6b2
+            &:hover
+                color: #e95e59
+        &__list
+            a
+                color: #252a2d
+                &:hover
+                    color: #e95e59
+        &__link
+            a
+                color: #252a2d
+                &:hover
+                    color: #e95e59
+        &__soc
+            a
+                box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.48)
+                background: linear-gradient(310deg, #ec736f 0%, #e53f39 100%)
+                border: 0.89px solid #ec736f
+.practic-stop
+    .practic
+        &__title
+            &_text 
+                span
+                    box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.48)
+                    background: linear-gradient(310deg, #ec736f 0%, #e53f39 100%), url("path_to_image")
+                    border: 0.89px solid #ec736f
+        &__date_img
+            box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.48)
+            background: linear-gradient(310deg, #ec736f 0%, #e53f39 100%), url("path_to_image")
+            border: 0.89px solid #ec736f
+    .practic__item:hover .practic__link, .practic__item:hover .practic__name
+        color: #e95e59
+.spec-mom-stop
+    background: url('../img/spec-stop.jpg') center no-repeat
+    background-size: cover
+    max-width: 1392px
+    margin-left: auto
+    margin-right: auto
+
+.btn__red
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 10px
+    font-family: "Geologica", sans-serif
+    font-weight: 500
+    font-size: 16px
+    line-height: 1.5
+    color: #fff
+    padding: 32px 40px
+    border-radius: 20px
+    box-shadow: inset 0 0 32px 0 rgba(255, 255, 255, 0.36)
+    background: #e95e59
+    border: none 
+    transition: all .3s
+    &:hover
+        opacity: .8
+
+.stop-header
+    .container
+        &__block
+            padding: 48px 156px 129px
+            background: url('../img/stop-header_bg.jpg') center no-repeat
+            background-size: cover
+            border: 2px solid #fff
+    &__info
+        width: 100%
+        max-width: 570px
+        margin: 0 0 0 auto
+        display: flex
+        flex-direction: column
+        align-items: center
+    h1
+        font-family: "Geologica", sans-serif
+        font-weight: 600
+        font-size: 72px
+        line-height: 1.3
+        text-transform: uppercase
+        text-align: center
+        color: #394146
+        margin: 64px 0 0
+        span
+            color: #e95e59
+    &__date
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 40px
+        p
+            font-family: "Geologica", sans-serif
+            font-weight: 400
+            font-size: 24px
+            line-height: 0.9
+            color: #252a2d
+            &+p
+                font-family: "Geologica", sans-serif
+                font-weight: 300
+                font-size: 16px
+                line-height: 1.5
+                color: #9da6b2
+    &__subtitle
+        margin: 48px 0 0
+        font-family: "Geologica", sans-serif
+        font-weight: 300
+        font-size: 20px
+        line-height: 1.5
+        text-align: center
+        color: #252a2d
+        margin: 48px 0 0
+        max-width: 405px 
+        span
+            font-weight: 700
+    .btn__red
+        margin: 40px 0 0
+    &__bg
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 650px
+        z-index: -1
+
+.bound
+    padding: 120px 0 0
+    h2
+        font-family: "Geologica", sans-serif
+        font-weight: 500
+        font-size: 56px
+        line-height: 0.9
+        text-transform: uppercase
+        text-align: center
+        color: #394146
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 40px
+        row-gap: 56px
+        margin: 72px 0 0
+        z-index: 2
+    &__item
+        position: relative
+        border-radius: 24px
+        border: 2px solid #fff
+        box-shadow: 0 6px 24px 0 rgba(175, 214, 237, 0.12)
+        padding: 48px 43px
+        background: #fafcff
+        &::before
+            content: ''
+            left: 34px
+            right: 34px
+            top: -16px
+            height: 96px
+            border-radius: 24px
+            z-index: -1
+            background: #e95e59
+            position: absolute
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            width: 20px
+            height: 20px
+            border-radius: 0 0 10px 0
+            left: 50%
+            top: -12px
+            transform: translateX(-50%) rotate(45deg)
+            background: #e95e59
+        p
+            font-family: "Geologica", sans-serif
+            font-weight: 600
+            font-size: 20px
+            line-height: 1.5
+            text-align: center
+            color: #252a2d
+            span
+                font-weight: 600
+            &+p
+                margin: 24px 0 0
+                font-family: "Geologica", sans-serif
+                font-weight: 300
+                font-size: 16px
+                line-height: 1.5
+                text-align: center
+                color: #252a2d
+
+.result-stop
+    padding: 160px 0 0
+    h2
+        font-family: "Geologica", sans-serif
+        font-weight: 500
+        font-size: 56px
+        line-height: 0.9
+        text-transform: uppercase
+        text-align: center
+        color: #394146
+    &__img
+        width: 100%
+        max-width: 580px
+        margin: 0 auto
+        display: block
+    &__wrapper
+        margin: 40px 0 0
+        position: relative
+        ul
+            position: absolute
+            left: 0
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+            display: grid
+            grid-template-columns: 292px 292px
+            gap: 80px
+            justify-content: space-between
+        li
+            display: grid
+            grid-template-columns: 44px 1fr
+            gap: 16px
+        i
+            width: 44px
+            height: 44px
+            border: 1px solid #ec736f
+            border-radius: 14px
+            box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.48)
+            background: linear-gradient(310deg, #ec736f 0%, #e53f39 100%)
+            display: flex
+            justify-content: center
+            align-items: center
+        p
+            font-family: "Geologica", sans-serif
+            font-weight: 600
+            font-size: 20px
+            line-height: 1.4
+            color: #252a2d
+            margin: 0
+            &+p
+                font-family: "Geologica", sans-serif
+                font-weight: 300
+                font-size: 16px
+                line-height: 1.5
+                color: #252a2d
+                margin: 24px 0 0
+            span
+                font-weight: 600
+    
+.spec-mom-stop
+    .spec-mom__item ul li i
+        border: 1px solid #ec736f
+        box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.48)
+        background: linear-gradient(310deg, #ec736f 0%, #e53f39 100%)
+
+.stop-form
+    .mom-form
+        &__row
+            div
+                background: #fafcff
+            p
+                font-family: "Geologica", sans-serif
+                font-weight: 400
+                font-size: 16px
+                line-height: 1.5
+                color: #252a2d
+            i
+                border: 1px solid #ec736f
+                box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.48)
+                background: linear-gradient(310deg, #ec736f 0%, #e53f39 100%)
+        &__container
+            padding: 0
+            border: none
+            background: transparent
+            grid-template-columns: 1fr 456px
+            align-items: center
+        &__check
+            p
+                color: #9da6b2
+            div
+                position: relative
+                overflow: hidden
+                z-index: 1
+            span
+                background: #fff
+                &::before
+                    content: ''
+                    display: block
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    box-shadow: inset 0 2px 6px 0 rgba(218, 223, 230, 0.4)
+                    background: #e95e59
+                    transition: all .3s
+                    z-index: -1
+                    opacity: 0
+            input
+                &:checked
+                    &+span
+                        background: #fff
+                        &::before
+                            opacity: 1
+        &__info
+            align-items: center
+        &__block
+            max-width: 400px
+            div
+                background: #fafcff
+            p
+                color: #252a2d
+                &+p
+                    color: #9da6b2
+                    margin: 6px 0 0
+    .spec-form__form
+        padding: 48px
+        background: #fafcff
+        border: 2px solid #fff
+        box-shadow: 0 6px 24px 0 rgba(175, 214, 237, 0.12)
+        position: relative
+        border-radius: 24px
+        &::before
+            content: ''
+            left: 34px
+            right: 34px
+            top: -16px
+            height: 96px
+            border-radius: 24px
+            z-index: -1
+            background: #e95e59
+            position: absolute
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            width: 20px
+            height: 20px
+            border-radius: 0 0 10px 0
+            left: 50%
+            top: -12px
+            transform: translateX(-50%) rotate(45deg)
+            background: #e95e59
+        .btn__red
+            width: 100%
+            margin: 24px 0 0
+    .spec-form__link a:hover
+        color: #e95e59
+
+@media ( max-width: 1200px )
+    .stop-header .container__block
+        padding: 48px 30px 129px
+
+@media ( max-width: 1024px )
+    .nav-stop
+        margin: 10px 
+        padding: 0
+        border: 2px solid #fff
+        border-radius: 24px
+        &.active
+            margin: 0
+            border-radius: 0
+    .stop-header
+        margin: 0 10px
+        .container__block
+            padding: 40px 24px 394px
+        &__info
+            max-width: 100%
+        &__bg
+            left: 50%
+            bottom: 0
+            width: auto
+            height: 400px
+            transform: translateX(-50%)
+        &__date
+            p
+                text-align: center
+        h1
+            margin: 40px 0 0
+            font-size: 38px
+        &__subtitle
+            font-size: 16px
+            margin: 16px auto 0
+    .bound
+        padding: 100px 0 0
+        h2
+            font-size: 32px
+        &__wrapper
+            margin: 44px 0 0
+            grid-template-columns: 1fr 1fr
+        &__item
+            padding: 40px 24px
+    .result-stop
+        padding: 100px 0 0
+        h2
+            font-size: 32px
+        &__wrapper
+            margin: 32px 0 0
+            ul
+                position: relative
+                inset: auto
+                transform: none
+                grid-template-columns: 1fr 1fr
+                grid-template-rows: 1fr 1fr
+                gap: 64px
+                row-gap: 300px
+        &__img
+            position: absolute
+            width: 300px
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+    .spec-mom-stop
+        background: transparent
+        .spec-mom
+            &__item
+                background: url(../img/spec-stop.jpg) center no-repeat
+                background-size: cover
+    .stop-form .mom-form__container
+        grid-template-columns: 1fr
+
+@media ( max-width: 768px )
+    .stop-form .mom-form__container
+        margin: 0
+
+@media ( max-width: 600px )
+    .bound__wrapper
+        grid-template-columns: 1fr
+    .result-stop
+        &__wrapper ul
+            grid-template-columns: 1fr
+            row-gap: 64px
+            li
+                &:nth-child(3)
+                    margin: 300px 0 0
+        &__img
+            top: 53%
+    .stop-form .mom-form__container
+        .spec-form__form
+            padding: 48px 24px 40px
+        .btn__red
+            padding: 28px
