@@ -32,9 +32,11 @@ $third-family: "Alana Pro RUS", sans-serif
 html
     position: relative
     overflow-x: hidden
+    height: 100%
     &.fix
         overflow: hidden 
 body
+    // height: 100%
     position: relative
     overflow-x: hidden
     background: $background
@@ -3039,6 +3041,7 @@ section
             max-width: 300px
 
 .spec-header
+    position: relative
     .container
         &__block
             background: url('../img/spec-header_bg.jpg') center no-repeat
@@ -3134,3 +3137,1226 @@ section
         border-radius: 32px
         box-shadow: 0 6px 24px 0 rgba(175, 214, 237, 0.12)
         background: #fafcff
+        display: grid
+        grid-template-columns: 360fr 390fr 360fr
+    &__bg
+        position: relative
+        overflow: hidden
+        border-radius: 32px
+        img
+            object-fit: cover
+            height: 100%
+            min-height: 100%
+            width: 100%
+            animation: canAnim 5s 0s infinite
+    &__info
+        padding: 40px
+        display: flex
+        flex-direction: column
+        gap: 40px
+        justify-content: center
+        li
+            display: grid
+            grid-template-columns: 36px 1fr
+            gap: 16px
+        i
+            border: 1px solid #73bbe5
+            border-radius: 10px
+            box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.48)
+            background: linear-gradient(311deg, #75c0eb 0%, #1e86c2 100%), url("path_to_image")
+            width: 36px
+            height: 36px
+            display: flex
+            justify-content: center
+            align-items: center 
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.5
+            color: #283238
+            span
+                font-weight: 700
+
+.request
+    padding: 140px 0 0
+    h2
+        font-family: $second-family
+        font-weight: 500
+        font-size: 80px
+        line-height: 1
+        text-transform: uppercase
+        text-align: center
+        color: #283238
+        max-width: 610px
+        margin: 0 auto
+    .container
+        &__block
+            background: url('../img/req_bg.jpg') center no-repeat
+            background-size: cover
+            padding: 56px 0
+            position: relative
+            z-index: 2
+            margin: 48px auto 0
+            &::after
+                content: ''
+                width: 1105px
+                height: 620px
+                background: url('../img/nav_con.png') center no-repeat
+                background-size: cover
+                position: absolute
+                display: block
+                top: -230px
+                right: -400px
+                z-index: -1
+                mix-blend-mode: color-dodge
+                opacity: 0.8
+                transform: rotate(12deg)
+                animation: opacityAnim 3s 0s infinite
+                pointer-events: none    
+            &::before
+                content: ''
+                width: 1105px
+                height: 620px
+                background: url('../img/nav_con.png') center no-repeat
+                background-size: cover
+                position: absolute
+                display: block
+                top: -200px
+                left: -400px
+                z-index: -1
+                mix-blend-mode: color-dodge
+                opacity: 0.8
+                transform: rotate(-50deg)
+                animation: opacityAnim 3s 0s infinite
+                pointer-events: none    
+    &__container
+        max-width: 1200px
+        margin: 0 auto
+        z-index: 5
+        ul
+            display: grid
+            grid-template-columns: 309px 309px
+            justify-content: space-between
+            gap: 8px
+        li
+            display: block
+            position: relative
+            width: 309px
+            min-height: 124px
+            padding: 20px 30px 20px 15px
+            img
+                width: 100%
+                height: 100%
+                z-index: -1
+                position: absolute
+                top: 0
+                object-fit: contain
+                object-position: top
+                left: 0
+            span
+                display: block
+                top: 25px
+                right: -11px
+                position: absolute
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 24px
+                height: 24px
+                border: 1px solid #73bbe5
+                border-radius: 100px
+                box-shadow: inset 0 0 7px 0 rgba(255, 255, 255, 0.48)
+                background: linear-gradient(311deg, #75c0eb 0%, #1e86c2 100%)
+            h3
+                font-family: $font-family
+                font-weight: 600
+                font-size: 16px
+                line-height: 1.4
+                color: #fff
+            p
+                margin: 8px 0 0
+                font-family: $font-family
+                font-weight: 400
+                font-size: 14px
+                line-height: 1.32
+                color: #d1eefb
+            &:nth-child(even)
+                padding: 20px 15px 20px 30px
+                img
+                    transform: scaleX(-1)
+                span
+                    right: auto
+                    left: -11px
+    &__bg
+        background: url("path_to_image")
+        mix-blend-mode: plus-lighter
+        width: 670px
+        left: 50%
+        bottom: 0
+        transform: translateX(-50%)
+        position: absolute
+
+.spec-form
+    padding: 156px 0 0
+    &__container
+        border: 2px solid #fff
+        border-radius: 32px
+        background: #fafcff
+        padding: 60px
+        display: grid
+        grid-template-columns: 1fr 360px
+        gap: 32px
+        align-items: start
+    h2
+        font-family: $second-family
+        font-weight: 500
+        font-size: 80px
+        line-height: 1
+        text-transform: uppercase
+        color: #283238
+        span
+            color: #5daddc
+    &__info
+        margin: 36px 0 0
+        display: grid
+        grid-template-columns: 40px 1fr
+        max-width: 510px
+        gap: 24px
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.5
+            color: #283238
+            span
+                font-weight: 700
+        i
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 40px
+            height: 40px
+            border: 1.11px solid #73bbe5
+            border-radius: 12px
+            box-shadow: inset 0 0 9px 0 rgba(255, 255, 255, 0.48)
+            background: linear-gradient(311deg, #75c0eb 0%, #1e86c2 100%)
+    &__form
+        .input
+            margin: 16px 0 0
+            &:nth-child(1)
+                margin: 0
+        .btn__blue
+            margin: 24px 0 0
+            width: 100%
+            max-width: 100%
+            text-align: center
+    &__link
+        font-family: $font-family
+        font-weight: 400
+        font-size: 12px
+        line-height: 1.5
+        color: #9da6b2
+        margin: 28px 0 0
+        a
+            text-decoration: underline
+            text-decoration-skip-ink: none
+            color: #9da6b2
+            transition: all .3s
+            &:hover
+                color: #5daddc
+
+.spec
+    padding: 140px 0 0
+    .container
+        &__block
+            background: url('../img/spec_bg.jpg') center no-repeat
+            background-size: cover
+            padding: 56px 0
+            position: relative
+            z-index: 2
+            &::after
+                content: ''
+                width: 1105px
+                height: 620px
+                background: url('../img/nav_con.png') center no-repeat
+                background-size: cover
+                position: absolute
+                display: block
+                top: -230px
+                right: -400px
+                z-index: -1
+                mix-blend-mode: color-dodge
+                opacity: 0.8
+                transform: rotate(12deg)
+                animation: opacityAnim 3s 0s infinite
+                pointer-events: none    
+            &::before
+                content: ''
+                width: 1105px
+                height: 620px
+                background: url('../img/nav_con.png') center no-repeat
+                background-size: cover
+                position: absolute
+                display: block
+                top: -200px
+                left: -400px
+                z-index: -1
+                mix-blend-mode: color-dodge
+                opacity: 0.8
+                transform: rotate(-50deg)
+                animation: opacityAnim 3s 0s infinite
+                pointer-events: none  
+    h2
+        font-family: $second-family
+        font-weight: 500
+        font-size: 100px
+        line-height: 0.9
+        text-transform: uppercase
+        color: #fbfdfe
+    &__subtitle
+        font-family: $font-family
+        font-weight: 500
+        font-size: 16px
+        line-height: 1.5
+        letter-spacing: 0.06em
+        text-transform: uppercase
+        color: #69c5ec
+        mix-blend-mode: screen
+        margin: 16px 0 0
+        display: grid
+        grid-template-columns: 30px 1fr
+        gap: 9px
+        &::before
+            content: ''
+            width: 100%
+            height: 1px
+            mix-blend-mode: soft-light
+            background: #69c5ec
+            margin: 12px 0 0
+    ul
+        max-width: 568px
+        margin: 48px 0 0
+        display: grid
+        grid-template-columns: 1fr 
+        gap: 20px
+        li
+            display: grid
+            grid-template-columns: 24px 1fr
+            gap: 16px
+            align-items: start
+            i
+                width: 24px
+                height: 24px
+                border: 1px solid #73bbe5
+                border-radius: 100%
+                box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.48)
+                background: linear-gradient(311deg, #75c0eb 0%, #1e86c2 100%)
+                display: flex
+                justify-content: center
+                align-items: center
+            p
+                font-family: $font-family
+                font-weight: 400
+                font-size: 16px
+                line-height: 1.5
+                color: #fbfdfe
+                span
+                    font-weight: 700
+    &__row
+        margin: 48px 0 0
+        display: flex
+        justify-content: start
+        align-items: stretch
+    &__info
+        margin: 0 0 0 -50px
+        border-radius: 0 100px 100px 0
+        padding: 10px 24px 10px 67px
+        backdrop-filter: blur(20px)
+        background: linear-gradient(136deg, rgba(122, 191, 234, 0.18) 0%, rgba(121, 184, 222, 0.18) 2.5%, rgba(18, 63, 91, 0.18) 100%)
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.5
+            color: #fbfdfe
+            span
+                font-weight: 700
+    &__bg
+        right: 42px
+        bottom: 0
+        position: absolute
+        width: 942px
+        z-index: -1
+
+@media ( max-width: 1200px )
+    .spec-header
+        &__bg
+            width: 600px
+            top: auto
+            bottom: 0
+    .spec
+        &__bg
+            width: 600px
+    .request
+        &__container
+            padding: 0 30px
+            ul
+                grid-template-columns: 1fr 1fr
+                gap: 20px
+                li
+                    padding: 0 0 20px 32px !important
+                    border-bottom: 1px solid #5daddc
+                    width: 100%
+                    height: auto
+                    min-height: auto
+                    span
+                        left: 0 
+                        right: auto
+                        top: 0
+                    img
+                        display: none
+        .container__block
+            background: url('../img/req_mob.jpg') center no-repeat
+            background-size: cover
+            padding-bottom: 350px
+        &__bg
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+            width: 360px
+
+@media ( max-width: 1024px )
+    .spec-header
+        .container
+            position: relative
+            &__block
+                background: url('../img/spec-header_mob.jpg') center no-repeat
+                background-size: cover
+        h1
+            font-size: 50px
+        &__info
+            p
+                margin: 24px 0 0
+                font-size: 16px
+        &__bg
+            position: relative
+            width: 481px
+            margin: 30px 0 -30px 
+        .code-header__pers
+            position: absolute
+            bottom: 0
+            left: 30px
+        &__row
+            margin: 24px 0 0
+    .ind
+        padding: 100px 0 0
+        h2
+            font-size: 42px
+        &__wrapper
+            margin: 32px 0 0
+            grid-template-columns: 1fr
+    .request
+        padding: 100px 0 0
+        h2
+            font-size: 45px
+        .container
+            &__block
+                margin-top: 30px
+    .spec-form
+        padding: 100px 0 0
+        &__container
+            grid-template-columns: 1fr
+        h2
+            font-size: 45px
+    .spec
+        padding: 100px 0 0
+        h2
+            font-size: 45px
+        .container
+            &__block
+                background: url('../img/spec_bg_mob.jpg') center no-repeat
+                background-size: cover
+                padding-bottom: 430px
+        &__bg
+            left: 50%
+            transform: translateX(-50%)
+            width: 500px
+        .btn__blue
+            position: absolute
+            bottom: 40px
+            left: 50%
+            transform: translateX(-50%)
+        &__info
+            margin: 0
+            padding: 16px 32px 16px 66px
+            width: 100%
+            max-width: 300px
+            border-radius: 24px
+            position: relative
+            &::before
+                content: ''
+                display: block
+                width: 22px
+                height: 38px
+                left: 32px
+                top: 50%
+                transform: translateY(-50%)
+                position: absolute
+                background: url('../img/spec_info_bg.svg') center no-repeat
+                background-size: contain
+
+@media ( max-width: 600px )
+    .spec-header
+        .header__arrow
+            display: none
+        &__bg
+            margin: 0 -48px -30px -137px
+            width: calc( 100% + 185px )
+        .code-header__pers
+            background: url('../img/code_mob.svg') center no-repeat
+            background-size: contain
+            width: 227px
+            height: 101px
+            padding: 10px 10px 10px 30px
+            align-items: start !important   
+            span
+                display: flex
+            p
+                text-align: left !important
+                color: #fff !important
+    .ind
+        &__info
+            padding: 24px
+            gap: 24px
+    .request
+        &__container
+            ul
+                grid-template-columns: 1fr
+    .spec-form
+        &__container
+            padding: 40px 30px
+        h2
+            text-align: center
+        &__info
+            margin: 24px 0 0
+    .spec
+        &__bg
+            left: 40%
+
+.mom-body
+    .btn__blue
+        background: #f6bebc
+        &::before
+            content: none
+        span
+            background: linear-gradient(315deg, #f6bebc 0%, #ed7c78 100%), url("path_to_image")
+            border: none  
+.nav-mom
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 5
+    .container__block
+        background: #fff
+        &::before,
+        &::after
+            content: none
+    .nav__list 
+        a
+            color: #374248
+            &:hover,
+            &.active
+                color: #f6bebc
+.footer-mom
+    .container__block
+        background: url('../img/footer_mom.jpg') center no-repeat
+        background-size: cover
+    .footer
+        &__logo
+            p
+                color: #637782
+        &__policy
+            color: #637782
+            &:hover
+                color: #f6bebc
+        &__list
+            a
+                color: #374248
+                &:hover
+                    color: #f6bebc
+        &__link
+            a
+                color: #374248
+                &:hover
+                    color: #f6bebc
+        &__soc
+            a
+                box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.48)
+                background: linear-gradient(310deg, #f6bebc 0%, #ee8581 100%), url("path_to_image")
+                border: 0.89px solid #f6bebc
+.practic-mom
+    .practic
+        &__title
+            &_text 
+                span
+                    box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.48)
+                    background: linear-gradient(310deg, #f6bebc 0%, #ee8581 100%), url("path_to_image")
+                    border: 0.89px solid #f6bebc
+        &__date_img
+            box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.48)
+            background: linear-gradient(310deg, #f6bebc 0%, #ee8581 100%), url("path_to_image")
+            border: 0.89px solid #f6bebc
+    .practic__item:hover .practic__link, .practic__item:hover .practic__name
+        color: #f6bebc
+
+.mom-header
+    padding: 169px 0 111px
+    border-radius: 0 0 80px 80px
+    background: url('../img/mom-header_bg.jpg') center no-repeat
+    background-size: cover
+    z-index: 2
+    &__text
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        gap: 14px
+        &::before
+            content: ''
+            display: block
+            width: 36px
+            height: 1px
+            background: #6a7f8b
+            margin: 10px 0 0
+    h1
+        font-family: $second-family
+        font-weight: 500
+        font-size: 120px
+        line-height: 0.9
+        text-transform: uppercase
+        color: #374248
+        max-width: 520px
+    &__subtitle
+        margin: 32px 0 0
+        max-width: 445px
+        font-family: $font-family
+        font-weight: 400
+        font-size: 20px
+        line-height: 1.5
+        color: #374248
+        span
+            font-weight: 700
+    &__date
+        border-radius: 20px
+        background: #fff
+        display: grid
+        grid-template-columns: auto 1fr 1fr
+        gap: 20px
+        width: max-content
+        padding: 16px
+        margin: 32px 0 0
+        i
+            border: 0.89px solid #f6bebc
+            border-radius: 11px
+            width: 36px
+            height: 36px
+            box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.48)
+            background: linear-gradient(310deg, #f6bebc 0%, #ee8581 100%)
+            display: flex
+            justify-content: center
+            align-items: center
+        p
+            font-family: $second-family
+            font-weight: 400
+            font-size: 32px
+            line-height: 0.9
+            color: #374248
+            &+p
+                font-family: $font-family
+                font-weight: 400
+                font-size: 16px
+                line-height: 1.5
+                color: #6a7f8b
+    .btn__blue
+        margin: 32px 0 0
+    &__bg
+        position: absolute
+        bottom: 0
+        right: 0
+        z-index: -1
+
+.mom
+    padding: 120px 0 0
+    &__circle
+        position: relative
+        width: 100%
+        max-width: 660px
+        height: 660px
+        border-radius: 100%
+        margin: 0 auto
+        border: 20px solid #f9fafb
+        background: #fcfcfc
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        z-index: 2
+        padding: 40px
+        &::before
+            content: ''
+            inset: 20px
+            border-radius: 100%
+            display: block
+            background: #ffff
+            z-index: -1
+            position: absolute
+        h2
+            font-family: $second-family
+            font-weight: 500
+            font-size: 48px
+            line-height: 1
+            text-transform: uppercase
+            text-align: center
+            color: #374248
+            margin: 24px 0 32px
+            max-width: 470px
+            span
+                color: #f6bebc
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.5
+            text-align: center
+            color: #374248
+            max-width: 347px
+            span
+                font-weight: 700
+    ul
+        position: absolute
+        top: 50%
+        left: 50%
+        right: 0
+        transform: translate(-50%, -50%)
+        height: 250px
+        max-width: 1140px
+        width: 100%
+        z-index: 5
+        li
+            border-radius: 12px
+            padding: 12px 18px 11px 28px
+            background: #fff
+            position: relative
+            width: max-content  
+            position: absolute
+            p
+                font-family: $font-family
+                font-weight: 500
+                font-size: 16px
+                line-height: 1.5
+                color: #374248
+            i
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                left: -14px
+                width: 28px
+                height: 28px
+                display: flex
+                justify-content: center
+                align-items: center
+                border: 0.89px solid #f6bebc
+                border-radius: 8px
+                box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.48)
+                background: linear-gradient(310deg, #f6bebc 0%, #ee8581 100%), url("path_to_image")
+            &:nth-child(1)
+                left: 40px
+                top: 0
+                padding: 12px 28px 11px 18px
+                i
+                    left: auto
+                    right: -14px
+            &:nth-child(2)
+                left: 12px
+                top: 79px
+                padding: 12px 28px 11px 18px
+                i
+                    left: auto
+                    right: -14px
+            &:nth-child(3)
+                left: 0
+                top: 158px
+                padding: 12px 28px 11px 18px
+                i
+                    left: auto
+                    right: -14px
+            &:nth-child(4)
+                left: 12px
+                top: 237px
+                padding: 12px 28px 11px 18px
+                i
+                    left: auto
+                    right: -14px
+            &:nth-child(5)
+                left: 40px
+                top: 316px
+                padding: 12px 28px 11px 18px
+                i
+                    left: auto
+                    right: -14px
+            &:nth-child(6)
+                right: 40px
+                top: 0
+            &:nth-child(7)
+                right: 12px
+                top: 79px
+            &:nth-child(8)
+                right: 0
+                top: 158px
+            &:nth-child(9)
+                right: 12px
+                top: 237px
+            &:nth-child(10)
+                right: 40px
+                top: 316px
+
+.result
+    padding: 160px 0 0
+    h2
+        font-family: $second-family
+        font-weight: 500
+        font-size: 80px
+        line-height: 0.9
+        text-transform: uppercase
+        text-align: center
+        color: #374248
+    &__wrapper
+        margin: 48px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 32px
+    &__item
+        padding: 0 14px
+        img
+            display: block
+            margin: 0 -14px
+            border-radius: 32px
+            width: calc( 100% + 28px )
+        h3
+            font-family: $font-family
+            font-weight: 700
+            font-size: 18px
+            line-height: 1.4
+            text-align: center
+            color: #374248
+            margin: 20px 0
+    &__num
+        margin: 24px 0 0
+        font-family: $font-family
+        font-weight: 600
+        font-size: 20px
+        line-height: 1.5
+        text-align: center
+        color: #f3a8a5
+    &__text
+        font-family: $font-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.5
+        text-align: center
+        color: #374248
+        span
+            font-weight: 700
+
+.spec-mom
+    margin: 120px 0 0
+    background: url('../img/spec-mom_bg.jpg') center no-repeat
+    background-size: cover
+    padding: 90px 0 120px
+    border-radius: 80px
+    overflow: hidden
+    h2
+        font-family: $second-family
+        font-weight: 500
+        font-size: 80px
+        line-height: 0.9
+        text-transform: uppercase
+        color: #374248
+        text-align: center
+    &__wrapper
+        display: grid
+        grid-template-columns: 290px 290px
+        gap: 32px
+        justify-content: space-between
+        margin: 58px 0 0
+    &__pers
+        margin: 56px 0 0
+        width: 275px
+        height: 78px
+        position: relative
+        padding: 16px 30px 17px 23px
+        z-index: 2
+        img
+            inset: 0
+            display: block
+            position: absolute
+            object-position: center
+            object-fit: contain
+            z-index: -1
+        i
+            position: absolute
+            right: -14px
+            width: 26px
+            height: 26px
+            border-radius: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            top: 50%
+            transform: translateY(-50%)
+            background: #fff
+        p
+            font-family: $font-family
+            font-weight: 600
+            font-size: 16px
+            line-height: 1.5
+            text-align: right
+            color: #374248
+            &+p 
+                font-weight: 400
+                font-size: 14px
+                line-height: 1.45
+    &__bg
+        left: 16px
+        width: 680px
+        top: 0
+        position: absolute
+        z-index: -1
+    &__item
+        position: relative
+        z-index: 3
+        ul
+            display: grid
+            grid-template-columns: 1fr
+            gap: 20px
+            li
+                display: grid
+                grid-template-columns: 20px 1fr
+                gap: 16px
+                i
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    width: 20px
+                    height: 20px
+                    border-radius: 100%
+                    border: 0.89px solid #f6bebc
+                    box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.48)
+                    background: linear-gradient(310deg, #f6bebc 0%, #ee8581 100%), url("path_to_image")
+                p
+                    font-family: $font-family
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 1.5
+                    color: #374248
+                    span
+                        font-weight: 700
+        &_right
+            .spec-mom
+                &__pers
+                    padding: 16px 23px 17px 30px
+                    i
+                        right: auto
+                        left: -14px
+                    img
+                        transform: scaleX(-1)
+                    p
+                        text-align: left
+                &__bg
+                    right: 85px
+                    left: auto
+
+.mom-form
+    padding: 120px 0 0
+    &__container
+        border: 2px solid #fff
+        border-radius: 42px
+        box-shadow: 0 6px 24px 0 rgba(175, 214, 237, 0.12)
+        background: #fafcff
+        padding: 64px
+        display: grid
+        grid-template-columns: 1fr 356px
+        gap: 32px
+    h2
+        font-family: $second-family
+        font-weight: 500
+        font-size: 64px
+        line-height: 1
+        text-transform: uppercase
+        color: #374248
+        span
+            color: #f6bebc
+    &__row
+        margin: 24px 0 0
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        flex-wrap: wrap
+        gap: 16px
+        div
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 12px
+            padding: 12px
+            border-radius: 12px
+            background: #f2f5fa
+        i
+            border: 0.89px solid #f6bebc
+            border-radius: 8px
+            width: 28px
+            height: 28px
+            box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.48)
+            background: linear-gradient(310deg, #f6bebc 0%, #ee8581 100%), url("path_to_image")
+            display: flex
+            justify-content: center
+            align-items: center
+        p
+            font-family: $font-family
+            font-weight: 500
+            font-size: 16px
+            line-height: 1.5
+            color: #374248
+    &__info
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 1fr 200px
+        gap: 22px
+        width: max-content
+        max-width: 100%
+    &__block
+        display: grid
+        grid-template-columns: auto auto
+        border-radius: 20px
+        position: relative
+        overflow: hidden
+        div
+            padding: 22px 32px
+            background: #f2f5fa
+            p
+                font-family: $second-family
+                font-weight: 500
+                font-size: 48px
+                line-height: 1
+                text-transform: uppercase
+                color: #374248
+                &+p
+                    font-family: $font-family
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 1.5
+                    color: #9da6b2
+            &+div
+                box-shadow: inset 0 0 21px 0 rgba(255, 255, 255, 0.25)
+                background: #f6bebc
+                p
+                    color: #fff
+                    &+p
+                        color: #fef6f6
+    &__text
+        font-family: $font-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.5
+        color: #374248
+        span
+            font-weight: 700
+    &__check
+        margin: 16px 0 0
+        display: grid
+        grid-template-columns: 50px 1fr
+        gap: 16px
+        align-items: start
+        div
+            position: relative
+            width: 100%
+            display: flex
+            padding: 3px
+            border-radius: 100px
+            box-shadow: inset 0 2px 6px 0 rgba(218, 223, 230, 0.4)
+            background: #f2f5fa
+        span
+            width: 22px
+            height: 22px
+            background: #c8cfda
+            border-radius: 100%
+            display: block
+            transition: all .3s
+            margin: 0 auto 0 0
+        input
+            position: absolute
+            inset: 0
+            width: 100%
+            height: 100%
+            opacity: 0
+            &:checked
+                &+span
+                    margin: 0 0 0 auto
+                    background: #f6bebc
+
+        p
+            font-family: $font-family
+            font-weight: 500
+            font-size: 14px
+            line-height: 1.5
+            color: #374248
+
+@media ( max-width: 1200px )
+    .mom-header
+        &__bg
+            width: 700px
+    .spec-mom
+        &__bg
+            width: 500px
+            top: auto
+            bottom: -120px
+    .mom-form
+        &__info
+            grid-template-columns: 1fr
+            width: 100%
+
+@media ( max-width: 1024px )
+    .nav
+        &.active .container__block
+            background: #fff
+        .nav__hum span, .nav__hum::after, .nav__hum::before
+            background: #000
+    .mom-header
+        padding: 130px 0 364px
+        h1,
+        &__subtitle
+            max-width: 100%
+    .mom
+        padding: 100px 0 0
+        &__circle
+            border: none  
+            background: transparent
+            padding: 0
+            border-radius: 0
+            width: 100%
+            height: auto
+            &::before
+                content: none
+        ul
+            position: relative
+            transform: none
+            height: auto
+            margin: 32px 0 0
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 16px
+            inset: auto !important
+            column-gap: 36px
+            li
+                position: relative
+                inset: auto !important
+                padding: 12px 18px 11px 28px !important
+                width: 100%
+                i
+                    left: -14px !important
+                    right: auto
+    .result
+        padding: 120px 0 0
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+    .spec-mom
+        margin: 0
+        background: transparent
+        padding: 100px 0 0
+        border-radius: 0
+        &__wrapper
+            grid-template-columns: 1fr
+            gap: 32px
+        &__item
+            padding: 50px 30px 326px
+            background: url('../img/spec-mom_bg.jpg') center no-repeat
+            background-size: cover  
+            border-radius: 36px
+            margin: 0 -20px
+            display: flex
+            flex-direction: column
+        &__pers
+            order: -1
+            padding: 0 !important
+            width: 100%
+            height: auto
+            margin: 0 0 40px
+            img,
+            i
+                display: none
+            p
+                text-align: center !important
+                font-size: 22px
+                &+p
+                    font-size: 16px
+        &__bg
+            bottom: 0
+            right: 0
+            left: auto
+    .mom-form
+        &__container
+            grid-template-columns: 1fr
+
+@media ( max-width: 768px )
+    .mom-header
+        border-radius: 0 0 36px 36px
+        &__bg
+            width: 450px
+            left: 50%
+            right: auto
+            transform: translateX(-50%)
+        h1
+            font-size: 64px
+        &__subtitle
+            font-size: 16px
+            margin: 24px 0 0
+        &__date
+            p
+                font-size: 24px
+                &+p
+                    font-size: 12px
+    .result,
+    .spec-mom,
+    .mom-form,
+    .mom
+        h2
+            font-size: 50px
+    .spec-mom
+        &__bg
+            height: 300px
+            object-fit: contain
+            right: 50% !important
+            transform: translateX(50%)
+    .mom-form
+        &__container
+            padding: 36px
+            margin: 0 -30px
+        &__block
+            div
+                padding: 20px
+                p
+                    font-size: 36px
+                    &+p
+                        font-size: 14px
+    
+@media ( max-width: 600px )
+    .mom
+        ul
+            grid-template-columns: 1fr
+            padding: 0 0 0 15px
+            margin: 32px auto 0
+            max-width: 260px
+    .result
+        &__wrapper
+            grid-template-columns: 1fr
