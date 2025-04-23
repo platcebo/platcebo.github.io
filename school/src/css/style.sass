@@ -3042,10 +3042,15 @@ section
 
 .spec-header
     position: relative
+    .btn__blue
+        padding: 18px 26px 18px 48px
     .container
         &__block
+            padding: 110px 0
             background: url('../img/spec-header_bg.jpg') center no-repeat
             background-size: cover
+            overflow: hidden
+            border-radius: 32px
             &::after
                 content: ''
                 width: 1105px
@@ -3104,8 +3109,12 @@ section
         z-index: -1
         pointer-events: none
         right: 0
-        top: 8px
+        top: auto
+        bottom: 0
         width: 930px
+        max-height: 750px
+        object-fit: contain
+        object-position: bottom right
     .code-header__pers
         background: url('../img/spec-header_pers.svg') center no-repeat
         background-size: cover
@@ -3116,6 +3125,8 @@ section
         justify-content: flex-start
         align-items: center
         gap: 34px
+    .header__arrow
+        background: linear-gradient(180deg, #267abb 2.21%, #113755 100%)
 
 .ind
     padding: 170px 0 0
@@ -3169,6 +3180,20 @@ section
             display: flex
             justify-content: center
             align-items: center 
+            position: relative
+            z-index: 1
+            &::before
+                content: ''
+                display: block
+                border-radius: 100px
+                height: 26px
+                z-index: -1
+                filter: blur(10px)
+                background: radial-gradient(102.92% 371.47% at 50% 50%, #1e86c2 0%, rgba(30, 134, 194, 0.6) 64.48%, rgba(30, 134, 194, 0) 100%)
+                position: absolute
+                bottom: -3px
+                left: 3px
+                right: 3px
         p
             font-family: $font-family
             font-weight: 400
@@ -3198,6 +3223,7 @@ section
             position: relative
             z-index: 2
             margin: 48px auto 0
+            border-radius: 32px
             &::after
                 content: ''
                 width: 1105px
@@ -3244,8 +3270,8 @@ section
             position: relative
             width: 309px
             min-height: 124px
-            padding: 20px 30px 20px 15px
-            img
+            padding: 20px 29px 20px 20px
+            svg
                 width: 100%
                 height: 100%
                 z-index: -1
@@ -3268,6 +3294,12 @@ section
                 border-radius: 100px
                 box-shadow: inset 0 0 7px 0 rgba(255, 255, 255, 0.48)
                 background: linear-gradient(311deg, #75c0eb 0%, #1e86c2 100%)
+                svg
+                    position: relative !important
+                    z-index: 1
+                    inset: auto
+                    width: auto
+                    height: auto
             h3
                 font-family: $font-family
                 font-weight: 600
@@ -3283,11 +3315,15 @@ section
                 color: #d1eefb
             &:nth-child(even)
                 padding: 20px 15px 20px 30px
-                img
-                    transform: scaleX(-1)
                 span
                     right: auto
                     left: -11px
+            &:last-child
+                p
+                    max-width: 220px
+            &:nth-child(4)
+                p
+                    max-width: 220px
     &__bg
         background: url("path_to_image")
         mix-blend-mode: plus-lighter
@@ -3296,6 +3332,7 @@ section
         bottom: 0
         transform: translateX(-50%)
         position: absolute
+        z-index: -1
 
 .spec-form
     padding: 156px 0 0
@@ -3341,6 +3378,20 @@ section
             border-radius: 12px
             box-shadow: inset 0 0 9px 0 rgba(255, 255, 255, 0.48)
             background: linear-gradient(311deg, #75c0eb 0%, #1e86c2 100%)
+            position: relative
+            z-index: 1
+            &::before
+                content: ''
+                display: block
+                border-radius: 100px
+                height: 26px
+                z-index: -1
+                filter: blur(10px)
+                background: radial-gradient(102.92% 371.47% at 50% 50%, #1e86c2 0%, rgba(30, 134, 194, 0.6) 64.48%, rgba(30, 134, 194, 0) 100%)
+                position: absolute
+                bottom: -3px
+                left: 3px
+                right: 3px
     &__form
         .input
             margin: 16px 0 0
@@ -3372,9 +3423,10 @@ section
         &__block
             background: url('../img/spec_bg.jpg') center no-repeat
             background-size: cover
-            padding: 56px 0
+            padding: 80px 0 116px
             position: relative
             z-index: 2
+            border-radius: 32px
             &::after
                 content: ''
                 width: 1105px
@@ -3471,7 +3523,7 @@ section
     &__info
         margin: 0 0 0 -50px
         border-radius: 0 100px 100px 0
-        padding: 10px 24px 10px 67px
+        padding: 14px 24px 14px 67px
         backdrop-filter: blur(20px)
         background: linear-gradient(136deg, rgba(122, 191, 234, 0.18) 0%, rgba(121, 184, 222, 0.18) 2.5%, rgba(18, 63, 91, 0.18) 100%)
         p
@@ -3482,12 +3534,17 @@ section
             color: #fbfdfe
             span
                 font-weight: 700
+            &+p
+                margin: 4px 0 0
     &__bg
         right: 42px
         bottom: 0
         position: absolute
         width: 942px
         z-index: -1
+        max-height: 700px
+        object-fit: contain
+        object-position: bottom right
 
 @media ( max-width: 1200px )
     .spec-header
@@ -3495,9 +3552,11 @@ section
             width: 600px
             top: auto
             bottom: 0
+            max-height: 480px
     .spec
         &__bg
             width: 600px
+            max-height: 480px
     .request
         &__container
             padding: 0 30px
@@ -3511,10 +3570,12 @@ section
                     height: auto
                     min-height: auto
                     span
-                        left: 0 
-                        right: auto
+                        left: 0 !important
+                        right: auto !important
                         top: 0
-                    img
+                        svg
+                            display: block
+                    svg
                         display: none
         .container__block
             background: url('../img/req_mob.jpg') center no-repeat
@@ -3527,12 +3588,32 @@ section
             width: 360px
 
 @media ( max-width: 1024px )
+    .nav-spec
+        position: absolute
+        top: 0
+        left: 0
+        padding: 0
+        z-index: 5
+        width: 100%
+        .container
+            &__block
+                padding-top: 18px
+                background: transparent
+                &::before,
+                &::after
+                    content: none
+        &.active
+            .container__block
+                height: 100vh
+                border-radius: 0
     .spec-header
         .container
             position: relative
             &__block
                 background: url('../img/spec-header_mob.jpg') center no-repeat
                 background-size: cover
+                border-radius: 0 0 40px 40px
+                padding: 115px 0px 30px
         h1
             font-size: 50px
         &__info
@@ -3562,6 +3643,7 @@ section
             font-size: 45px
         .container
             &__block
+                border-radius: 40px
                 margin-top: 30px
     .spec-form
         padding: 100px 0 0
@@ -3572,12 +3654,16 @@ section
     .spec
         padding: 100px 0 0
         h2
-            font-size: 45px
+            font-size: 48px
+            text-align: center
         .container
+            padding: 0 30px
             &__block
                 background: url('../img/spec_bg_mob.jpg') center no-repeat
                 background-size: cover
                 padding-bottom: 430px
+                border-radius: 40px
+                padding-top: 48px
         &__bg
             left: 50%
             transform: translateX(-50%)
@@ -3605,14 +3691,28 @@ section
                 position: absolute
                 background: url('../img/spec_info_bg.svg') center no-repeat
                 background-size: contain
+    .spec-body
+        .article,
+        .practic
+            h2
+                text-align: center
+                font-size: 48px
+        .practic
+            &__title
+                justify-items: center
+        .article
+            &__prev
+                height: 250px
+            &__name p
+                font-size: 28px
 
 @media ( max-width: 600px )
     .spec-header
         .header__arrow
             display: none
         &__bg
-            margin: 0 -48px -30px -137px
-            width: calc( 100% + 185px )
+            margin: 0 -50px -30px -170px
+            width: calc( 100% + 220px )
         .code-header__pers
             background: url('../img/code_mob.svg') center no-repeat
             background-size: contain
@@ -3622,9 +3722,28 @@ section
             align-items: start !important   
             span
                 display: flex
+                backdrop-filter: blur(20px)
+                background: linear-gradient(136deg, rgba(122, 191, 234, 0.18) 0%, rgba(121, 184, 222, 0.18) 2.5%, rgba(18, 63, 91, 0.18) 100%), linear-gradient(136deg, rgba(192, 231, 255, 0.18) 0%, rgba(60, 123, 163, 0.18) 100%)
             p
                 text-align: left !important
                 color: #fff !important
+        &__info
+            display: flex
+            flex-direction: column
+            h1
+                order: -2
+            &::before
+                content: ''
+                display: block
+                width: 100%
+                max-width: 257px
+                height: 66px
+                background: url('../img/spec-header_text_mob.svg') center no-repeat
+                background-size: contain
+                order: -1
+                margin: 24px 0 0
+            img
+                display: none
     .ind
         &__info
             padding: 24px
@@ -3638,11 +3757,19 @@ section
             padding: 40px 30px
         h2
             text-align: center
+            max-width: 290px
+            margin: 0 auto
         &__info
             margin: 24px 0 0
+        .btn__blue
+            padding: 12px 16px
+            text-align: center
+            gap: 5px
+            font-size: 12px
     .spec
         &__bg
             left: 40%
+            transform: translateX(-55%)
 
 .mom-body
     .btn__blue
@@ -3669,6 +3796,10 @@ section
             &:hover,
             &.active
                 color: #f6bebc
+    &.active
+            .container__block
+                height: 100vh
+                border-radius: 0
 .footer-mom
     .container__block
         background: url('../img/footer_mom.jpg') center no-repeat
@@ -3778,6 +3909,18 @@ section
                 font-size: 16px
                 line-height: 1.5
                 color: #6a7f8b
+        div
+            position: relative
+            &:nth-child(3)
+                &::before
+                    position: absolute
+                    left: -20px
+                    content: ''
+                    display: block
+                    width: 2px
+                    top: -16px
+                    bottom: -16px
+                    background: #fbfbfb
     .btn__blue
         margin: 32px 0 0
     &__bg
@@ -4226,9 +4369,21 @@ section
             width: 100%
 
 @media ( max-width: 1024px )
-    .nav
-        &.active .container__block
-            background: #fff
+    .mom-body
+        .container
+            padding: 0 30px
+    .nav-mom,
+    .nav-stop
+        padding: 10px
+        .container
+            padding: 0 20px
+        .container__block
+            border-radius: 20px
+        &.active 
+            padding: 0
+            .container__block
+                background: #fff
+                border-radius: 0
         .nav__hum span, .nav__hum::after, .nav__hum::before
             background: #000
     .mom-header
@@ -4282,7 +4437,7 @@ section
             background: url('../img/spec-mom_bg.jpg') center no-repeat
             background-size: cover  
             border-radius: 36px
-            margin: 0 -20px
+            margin: 0 -30px
             display: flex
             flex-direction: column
         &__pers
@@ -4306,10 +4461,18 @@ section
     .mom-form
         &__container
             grid-template-columns: 1fr
+    .footer-mom,
+    .footer-stop
+        .footer__desc
+            color: #637782
+        .footer__list,
+        .footer__soc
+            border-color: #b8b8b8
 
 @media ( max-width: 768px )
     .mom-header
         border-radius: 0 0 36px 36px
+        overflow: hidden
         &__bg
             width: 450px
             left: 50%
@@ -4325,19 +4488,58 @@ section
                 font-size: 24px
                 &+p
                     font-size: 12px
+            div
+                &:nth-child(3)
+                    &::before
+                        left: -15px
+        &__text
+            gap: 10px
+            &::before
+                width: 24px
+                margin: 8px 0 0
+            img
+                max-width: 188px
     .result,
     .spec-mom,
     .mom-form,
     .mom
         h2
             font-size: 50px
+    .mom
+        h2
+            margin: 8px 0 24px
+            font-size: 32px
+        &__text
+            width: 180px
+        &__circle
+            p
+                font-size: 16px
+                max-width: 238px
+                margin: 0 auto
+    .result
+        &__num
+            margin: 12px 0 0
+        &__item
+            h3
+                margin: 12px 0
     .spec-mom
+        &__item
+            position: relative
+            overflow: hidden
         &__bg
             height: 300px
             object-fit: contain
             right: 50% !important
             transform: translateX(50%)
     .mom-form
+        &__row
+            gap: 8px
+            div
+                padding: 10px
+                p
+                    font-size: 14px
+        h2
+            font-size: 42px
         &__container
             padding: 36px
             margin: 0 -30px
@@ -4348,6 +4550,11 @@ section
                     font-size: 36px
                     &+p
                         font-size: 14px
+    .practic-stop
+        .container
+            padding: 0 30px
+        h2
+            text-align: center
     
 @media ( max-width: 600px )
     .mom
@@ -4762,6 +4969,8 @@ section
             margin: 16px auto 0
     .bound
         padding: 100px 0 0
+        .container
+            padding: 0 30px
         h2
             font-size: 32px
         &__wrapper
@@ -4771,6 +4980,8 @@ section
             padding: 40px 24px
     .result-stop
         padding: 100px 0 0
+        .container
+            padding: 0 30px
         h2
             font-size: 32px
         &__wrapper
@@ -4781,6 +4992,7 @@ section
                 transform: none
                 grid-template-columns: 1fr 1fr
                 grid-template-rows: 1fr 1fr
+                grid-template-rows: auto
                 gap: 64px
                 row-gap: 300px
         &__img
@@ -4791,12 +5003,21 @@ section
             transform: translate(-50%, -50%)
     .spec-mom-stop
         background: transparent
+        h2
+            text-transform: uppercase
+        .container
+            padding: 0 30px
         .spec-mom
             &__item
                 background: url(../img/spec-stop.jpg) center no-repeat
                 background-size: cover
-    .stop-form .mom-form__container
-        grid-template-columns: 1fr
+    .stop-form 
+        .mom-form__container
+            grid-template-columns: 1fr
+        h2
+            text-align: center
+            margin: 0 auto
+            max-width: 270px
 
 @media ( max-width: 768px )
     .stop-form .mom-form__container
@@ -4808,12 +5029,20 @@ section
     .result-stop
         &__wrapper ul
             grid-template-columns: 1fr
-            row-gap: 64px
+            row-gap: 32px
+            grid-template-rows: auto
             li
+                padding: 0 0 32px
+                border-bottom: 1px solid #e1e5ea
+                &:nth-child(2),
+                &:nth-child(4)
+                    border: none
                 &:nth-child(3)
                     margin: 300px 0 0
+                &:nth-child(4)
+                    padding: 0
         &__img
-            top: 53%
+            top: 50%
     .stop-form .mom-form__container
         .spec-form__form
             padding: 48px 24px 40px
