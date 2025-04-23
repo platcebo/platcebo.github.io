@@ -11331,6 +11331,14 @@ textarea.input
                 padding: 10px 13px 10px 20px
             a
                 font-size: 14px
+    .with
+        &__row
+            &+.with__row
+                margin: 20px 0 0
+    .cert
+        &__tab
+            li
+                background: $white
 
 @media ( max-width: 1200px )
     .proud-new
@@ -11485,3 +11493,19 @@ textarea.input
         &__wrapper
             gap: 20px
             margin: 20px 0 0
+    .with
+        &__row
+            margin: 20px 0 0
+            &+.with__row
+                margin: 10px 0 0
+    .comment
+        &__slider
+            margin: 20px 0 0
+        &__slide
+            padding: 30px
+        &__text
+            p
+                font-size: 14px
+            &.hide
+                p
+                    max-height: 250px
