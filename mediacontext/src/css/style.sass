@@ -11341,6 +11341,9 @@ textarea.input
         &__tab
             li
                 background: $white
+    .tool-ad
+        h2
+            max-width: 800px
 
 @media ( max-width: 1200px )
     .proud-new
@@ -11427,6 +11430,25 @@ textarea.input
                 height: 15px
         .swiper-button-next
             left: 60px
+        &__pers
+            p
+                &+p
+                    font-size: 14px
+        &__more
+            font-size: 14px
+
+    .tool-ad
+        h2
+            max-width: 600px
+    .work-ad
+        .work
+            &__item
+                &:nth-child(2)
+                    img
+                        transform: rotate(45deg)
+                &:nth-child(4)
+                    img
+                        transform: rotate(20deg)
 
 @media ( max-width: 600px )
     .proud-new
@@ -11511,3 +11533,6 @@ textarea.input
             &.hide
                 p
                     max-height: 250px
+    .tool-ad
+        h2
+            max-width: 330px
