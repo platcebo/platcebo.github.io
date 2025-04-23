@@ -1740,4 +1740,42 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    var swiper = new Swiper(".comment__slider", {
+        spaceBetween: 20,
+        slidesPerView: 1,
+        speed: 700,
+        loop: true,
+        navigation: {
+            nextEl: ".comment__slider .swiper-button-next",
+            prevEl: ".comment__slider .swiper-button-prev",
+        },
+        breakpoints: {
+            1201: {
+                spaceBetween: 40,
+                slidesPerView: 4
+            },
+            701: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+        }
+    });
+
+    let commentMore = document.querySelectorAll('.comment__more'),
+        commentText = document.querySelectorAll('.comment__text');
+
+    if(commentMore !== null) {
+        commentMore.forEach((item,i)=>{
+            item.addEventListener('click', (e)=>{
+                e.preventDefault()
+                commentText[i].classList.toggle('hide')
+                if(commentText[i].classList.contains('hide')) {
+                    item.innerHTML = 'Показать больше'
+                } else {
+                    item.innerHTML = 'Скрыть'
+                }
+            })
+        })
+    }
+
 }, false);
