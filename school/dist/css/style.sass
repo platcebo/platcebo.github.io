@@ -3717,7 +3717,7 @@ section
         .header__arrow
             display: none
         &__bg
-            margin: 0 -50px -30px -170px
+            margin: 30px -50px -30px -170px
             width: calc( 100% + 220px )
         .code-header__pers
             background: url('../img/code_mob.svg') center no-repeat
@@ -3726,6 +3726,7 @@ section
             height: 101px
             padding: 10px 10px 10px 30px
             align-items: start !important   
+            margin: 0 0 0 13px
             span
                 display: flex
                 backdrop-filter: blur(20px)
@@ -4393,6 +4394,9 @@ section
             font-size: 14px
             line-height: 1.5
             color: #374248
+    .input
+        input
+            border-radius: 100px
 
 @media ( max-width: 1200px )
     .mom-header
@@ -4472,6 +4476,7 @@ section
         &__wrapper
             grid-template-columns: 1fr
             gap: 32px
+            margin: 32px 0 0
         &__item
             padding: 50px 30px 326px
             background: url('../img/spec-mom_bg.jpg') center no-repeat
@@ -4508,6 +4513,12 @@ section
         .footer__list,
         .footer__soc
             border-color: #b8b8b8
+    .practic-mom
+        h2
+            font-size: 50px
+            line-height: 0.9
+            font-weight: 500
+            text-align: center !important
 
 @media ( max-width: 768px )
     .mom-header
@@ -4557,6 +4568,10 @@ section
                 max-width: 238px
                 margin: 0 auto
     .result
+        &__wrapper
+            margin: 32px 0 0
+        .container
+            padding: 0 48px
         &__num
             margin: 12px 0 0
         &__item
@@ -4590,11 +4605,6 @@ section
                     font-size: 36px
                     &+p
                         font-size: 14px
-    .practic-stop
-        .container
-            padding: 0 30px
-        h2
-            text-align: center
     
 @media ( max-width: 600px )
     .mom
@@ -4606,6 +4616,17 @@ section
     .result
         &__wrapper
             grid-template-columns: 1fr
+    .mom-form
+        &__row
+            display: grid
+            grid-template-columns: 127fr 147fr
+            gap: 14px
+            width: 100%
+            max-width: 100%
+            div
+                justify-content: flex-start
+                &:nth-child(3)
+                    grid-column: 1/3
 
 .stop-body
     background: #f2f4f7
@@ -4649,6 +4670,11 @@ section
                 background: linear-gradient(310deg, #ec736f 0%, #e53f39 100%)
                 border: 0.89px solid #ec736f
 .practic-stop
+    h2
+        text-align: left
+        font-family: $font-family
+        font-weight: 600
+        font-size: 48px
     .practic
         &__title
             &_text 
@@ -4668,6 +4694,11 @@ section
     max-width: 1392px
     margin-left: auto
     margin-right: auto
+    h2
+        font-family: $font-family
+        font-weight: 600
+        font-size: 56px
+
 
 .btn__red
     display: flex
@@ -4798,7 +4829,7 @@ section
             background: #e95e59
         p
             font-family: "Geologica", sans-serif
-            font-weight: 600
+            font-weight: 500
             font-size: 20px
             line-height: 1.5
             text-align: center
@@ -4818,7 +4849,7 @@ section
     padding: 160px 0 0
     h2
         font-family: "Geologica", sans-serif
-        font-weight: 500
+        font-weight: 400
         font-size: 56px
         line-height: 0.9
         text-transform: uppercase
@@ -4874,10 +4905,15 @@ section
                 font-weight: 600
     
 .spec-mom-stop
-    .spec-mom__item ul li i
-        border: 1px solid #ec736f
-        box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.48)
-        background: linear-gradient(310deg, #ec736f 0%, #e53f39 100%)
+    .spec-mom__item ul li 
+        p
+            font-weight: 300px
+            span
+                font-weight: 600
+        i
+            border: 1px solid #ec736f
+            box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.48)
+            background: linear-gradient(310deg, #ec736f 0%, #e53f39 100%)
 
 .stop-form
     h2
@@ -5002,6 +5038,12 @@ section
         padding: 48px 30px 129px
 
 @media ( max-width: 1024px )
+    .practic-stop
+        .container
+            padding: 0 30px
+        h2
+            text-align: center
+            font-size: 32px
     .nav-stop
         margin: 10px 
         padding: 0
@@ -5069,6 +5111,8 @@ section
         background: transparent
         h2
             text-transform: uppercase
+            font-size: 32px
+            line-height: 1.2
         .container
             padding: 0 30px
         .spec-mom
@@ -5083,6 +5127,10 @@ section
             margin: 0 auto
             max-width: 300px
             font-size: 32px
+    .spec-body
+        .practic
+            .container
+                padding: 0 30px
 
 @media ( max-width: 768px )
     .stop-form 
@@ -5093,6 +5141,8 @@ section
                 &:nth-child(2)
                     &::before
                         left: 0
+        .container
+            padding: 0 30px
 
 @media ( max-width: 600px )
     .bound__wrapper
