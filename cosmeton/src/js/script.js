@@ -37,6 +37,28 @@ if(drop !== null) {
     })
 }
 
+document.body.addEventListener('click', (event)=>{
+    let target = event.target;
+
+    if(target.closest('.nav__drop') || target.closest('.nav__drop_btn')) {
+        return
+    } else {
+        for(let a = 0; a < navDrop.length; a++) {
+            navDropBtn[a].classList.remove('active')
+            navDrop[a].classList.remove('active')
+        }
+    }
+
+    if(target.closest('.drop__btn') || target.closest('.drop')) {
+        return
+    } else {
+        for(let a = 0; a < drop.length; a++) {
+            drop[a].classList.remove('active')
+            dropBtn[a].classList.remove('active')
+        }
+    }
+})
+
 var swiper = new Swiper(".about__slider .swiper", {
     spaceBetween: 0,
     navigation: {
@@ -95,6 +117,17 @@ var swiper = new Swiper(".comment__slider", {
         },
     }
 });
+
+if(window.innerWidth <= 1300) {
+    var swiper = new Swiper(".stage__wrapper", {
+        spaceBetween: 30,
+        slidesPerView: 'auto',
+        navigation: {
+            nextEl: ".stage .swiper-button-next",
+            prevEl: ".stage .swiper-button-prev",
+        },
+    });
+}
 
 [].forEach.call( document.querySelectorAll('[data-phone-pattern]'), function(input) {
     var keyCode;
@@ -156,6 +189,25 @@ if(navAside !== null) {
             item.classList.toggle('active')
             navAside[i].classList.toggle('active')
         })
+    })
+}
+
+let modal = document.querySelector('.modal'),
+    modalCall = document.querySelectorAll('.modal__call'),
+    modalOverflow = document.querySelector('.modal__overflow'),
+    modalClose = document.querySelector('.modal__close');
+
+if(modal !== null) {
+    modalCall.forEach((item)=>{
+        item.addEventListener('click',()=>{
+            modal.classList.add('active');
+        })
+    })
+    modalClose.addEventListener('click', ()=>{
+        modal.classList.remove('active');
+    })
+    modalOverflow.addEventListener('click', ()=>{
+        modal.classList.remove('active');
     })
 }
 

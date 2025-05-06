@@ -15,7 +15,7 @@ body
     overflow-x: hidden
 
 .container
-    max-width: 1370px
+    max-width: 1300px
     padding: 0 20px 
     margin: 0 auto
     box-sizing: content-box
@@ -271,9 +271,17 @@ a
             color: $svetlo-korichnevyy-cvet
             display: block
             border-radius: 20px 
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            gap: 9px
+            path
+                transition: all .3s
             &:hover
                 background: $temno-korichneyy-shrift
                 color: $belyy
+                path
+                    stroke: $belyy
         li
             max-width: 738px
             &:hover
@@ -931,6 +939,13 @@ a
                 stroke: $temno-korichneyy-shrift
         &.swiper-button-prev
             right: 70px
+    &__page
+        padding: 55px 0 100px
+    &__wrapper
+        margin: 50px 0 0
+        display: grid
+        grid-template-columns: 1fr
+        gap: 40px
 
 .spec
     padding: 100px 0
@@ -1230,6 +1245,8 @@ a
         grid-row: 1/3
         height: 100%
         border-radius: 20px
+    &__page
+        padding: 55px 0 100px
 
 .form
     padding: 100px 0
@@ -1389,6 +1406,8 @@ a
             fill: $temno-korichneyy-shrift
 
 @media ( max-width: 1300px )
+    .title
+        font-size: 36px
     .nav
         padding: 30px 10px
         &__text,
@@ -1434,7 +1453,7 @@ a
             top: 0
             height: 100vh
             overflow-y: auto
-            border-radius: 0 20px 20px 20px
+            border-radius: 0 20px 20px 0
             background: $temno-korichneyy-shrift
             transition: all .3s
             transform: translateX(-100%)
@@ -1694,7 +1713,7 @@ a
             order: -1
     .work
         &__slide
-            grid-template-columns: 370px 1fr
+            grid-template-columns: 486fr 814fr
     .contact
         .nav__soc
             display: flex
@@ -1729,6 +1748,9 @@ a
                         border-radius: 0 0 0 20px
         &__block
             padding: 60px 50px 50px
+        &__wrapper
+            gap: 30px
+            margin: 40px 0 0
     .contact
         &__wrapper
             grid-template-columns: 1fr
@@ -1739,6 +1761,8 @@ a
             grid-column: auto
             grid-row: auto
             height: 654px
+        &__page
+            padding: 50px 0 100px
 
 @media ( max-width: 700px )
     .nav
@@ -2003,6 +2027,8 @@ a
             white-space: nowrap
             align-self: end
             margin: 0 0 0 auto
+        &__page
+            padding: 20px 0 70px
     .spec
         padding: 70px 0 
         &__info
@@ -2076,6 +2102,8 @@ a
                 height: 35px
         iframe
             height: 458px
+        &__page
+            padding: 20px 0 70px
     .input
         p
             font-size: 12px
@@ -2722,7 +2750,7 @@ a
         gap: 30px
         li
             border-radius: 20px
-            padding: 20px 50px 50px 20px
+            padding: 20px 20px 50px 20px
             background: $bledno-bezhevyy-fon-dlya-kartochek
             position: relative  
         h3
@@ -2744,3 +2772,1443 @@ a
             position: absolute
             bottom: 10px
             right: 10px
+
+.surgery
+    padding: 100px 0 0
+    &__wrapper
+        max-width: 767px
+        z-index: 4
+        position: relative
+        p
+            font-family: $font-family
+            font-weight: 500
+            font-size: 18px
+            line-height: 1.44444
+            letter-spacing: -0.04em
+            color: $temno-korichneyy-shrift
+            max-width: 642px
+            margin: 20px 0 0
+    h2
+        font-size: 36px
+        margin: 0 0 40px
+    &__row
+        margin: 30px 0 0
+        display: grid
+        grid-template-columns: 126px 240fr 173fr 130px
+        gap: 20px
+        p
+            text-align: center
+            margin: 15px 0 0
+        svg
+            display: block
+            margin: 0 auto
+    &__method
+        margin: 135px 0 0
+        position: relative
+        z-index: 2
+        &::before
+            content: ''
+            display: block
+            width: 591px
+            height: 887px
+            bottom: calc( 100% - 133px )
+            right: 0
+            background: url('../img/surgery.png') center no-repeat
+            background-size: contain    
+            position: absolute
+            z-index: -1
+        h3
+            max-width: 709px
+            font-family: $second-family
+            font-weight: 500
+            font-size: 24px
+            line-height: 1.25
+            text-transform: uppercase
+            color: $temno-korichneyy-shrift
+        &_row
+            margin: 40px 0 0
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 20px
+            div
+                border-radius: 20px
+                padding: 40px 33px
+                background: linear-gradient(270deg, #7c6c60 0%, #ab988d 100%)
+                min-height: 323px
+            h3
+                color: $belyy
+            p
+                margin: 10px 0 0
+                font-family: $font-family
+                font-weight: 400
+                font-size: 18px
+                line-height: 1.44444
+                letter-spacing: -0.04em
+                color: $belyy
+
+.step
+    padding: 100px 0 0
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 20px
+        row-gap: 30px
+        margin: 70px 0 0
+        div
+            border-radius: 20px
+            padding: 20px
+            position: relative
+            background: $bledno-bezhevyy-fon-dlya-kartochek
+            min-height: 258px
+        h3
+            font-family: $second-family
+            font-weight: 500
+            font-size: 24px
+            line-height: 1.25
+            text-transform: uppercase
+            color: $temno-korichneyy-shrift
+            width: calc( 100% - 50px )
+        img
+            width: 100%
+            height: 1px
+            min-height: 100%
+            object-fit: cover
+            border-radius: 20px
+    &__text
+        margin: 20px 0 0
+        font-family: $font-family
+        font-weight: 500
+        font-size: 16px
+        line-height: 1.625
+        letter-spacing: -0.04em
+        color: $temno-korichneyy-shrift
+    &__num
+        position: absolute
+        top: 20px
+        right: 20px
+        font-family: $second-family
+        font-weight: 500
+        font-size: 24px
+        line-height: 1.25
+        text-transform: uppercase
+        text-align: right
+        color: $temno-korichneyy-shrift
+    
+.price
+    padding: 100px 0 0
+    &__wrapper
+        margin: 70px 0 0
+        border-radius: 20px
+        padding: 30px 40px 70px 40px
+        background: $bledno-bezhevyy-fon-dlya-kartochek
+    &__title
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin: 0 0 29px
+        p
+            font-family: $second-family
+            font-weight: 500
+            font-size: 24px
+            line-height: 1.25
+            text-transform: uppercase
+            color: $temno-korichneyy-shrift
+    &__row
+        margin: 0 0 16px
+        display: flex
+        justify-content: space-between
+        align-items: end
+        padding: 0 0 16px
+        border-bottom: 1px solid $svetlo-korichnevyy-cvet
+        p
+            font-family: $font-family
+            font-weight: 500
+            font-size: 20px
+            line-height: 1.5
+            letter-spacing: -0.04em
+            color: $temno-korichneyy-shrift
+        &:last-child
+            margin: 0
+
+.advant
+    padding: 100px 0 
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 20px
+        counter-reset: advant
+        .title
+            grid-column: 1/3
+            max-width: 660px
+    &__item
+        min-height: 281px
+        background: $bledno-bezhevyy-fon-dlya-kartochek
+        padding: 60px 20px 20px
+        position: relative
+        border-radius: 20px
+        z-index: 2
+        h3
+            font-family: $second-family
+            font-weight: 500
+            font-size: 24px
+            line-height: 1.25
+            text-transform: uppercase
+            color: $temno-korichneyy-shrift
+        p
+            margin: 20px 0 0
+            font-family: $font-family
+            font-weight: 500
+            font-size: 16px
+            line-height: 1.625
+            letter-spacing: -0.04em
+            color: $temno-korichneyy-shrift
+        &::before
+            content: counter(advant)
+            counter-increment: advant 1
+            width: 48px
+            height: 48px
+            position: absolute
+            top: -6px
+            left: -6px
+            border-radius:  100%
+            border: 6px solid $belyy
+            background: $bledno-bezhevyy-fon-dlya-kartochek
+            font-family: $second-family
+            font-weight: 500
+            font-size: 24px
+            line-height: 1.25
+            text-transform: uppercase
+            color: $temno-korichneyy-shrift
+            display: flex
+            justify-content: center
+            align-items: center
+            box-sizing: border-box
+        &::after
+            content: ''
+            display: block
+            z-index: -1
+            width: 48px
+            height: 48px
+            position: absolute
+            top: -6px
+            left: -6px
+            background: $belyy
+            border-radius: 21px 0 21px 0
+    &__row
+        margin: 100px 0 0
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 100px
+        p
+            font-family: $second-family
+            font-weight: 800
+            font-size: 80px
+            text-transform: uppercase
+            text-align: center
+            color: $svetlo-korichnevyy-cvet
+            &+p
+                margin: 10px 0 0
+                font-family: $font-family
+                font-weight: 500
+                font-size: 32px
+                line-height: 1.25
+                letter-spacing: -0.04em
+                color: $temno-korichneyy-shrift
+                text-transform: none
+
+@media ( max-width: 1300px )
+    .stage
+        overflow: hidden
+        &__wrapper
+            overflow: visible
+            padding: 140px 0 0
+            margin: 0
+            .swiper-wrapper
+                gap: 0
+                display: flex
+        &__item
+            max-width: 310px
+        .swiper-button-next,
+        .swiper-button-prev
+            display: flex
+            z-index: 2
+            width: 50px
+            height: 50px
+            background:  $temno-korichneyy-shrift
+            border: 1px solid $temno-korichneyy-shrift
+            border-radius: 100%
+            transition: all .3s
+            transform: none
+            inset: auto
+            top: 50px
+            right: 70px
+            margin: 0 
+            &::after
+                content: none
+            svg
+                width: 9px
+                height: 14px
+                path
+                    stroke-width: 2px
+                    stroke: $belyy
+                    transition: all .3s
+            &.swiper-button-disabled
+                opacity: 1
+                background: rgba(131, 104, 81, 0.1)
+                backdrop-filter: blur(40px)
+                path
+                    stroke: $temno-korichneyy-shrift
+            &.swiper-button-next
+                right: 0
+    .surgery
+        .title
+            font-size: 24px
+        &__wrapper
+            p
+                font-size: 16px
+                max-width: 470px
+        &__row
+            max-width: 386px
+            grid-template-columns: 1fr 1fr
+            gap: 20px
+            row-gap: 10px
+        &__method
+            h3
+                font-size: 20px
+                max-width: 589px
+    .step
+        &__wrapper
+            grid-template-columns: 1fr 1fr 1fr
+            img
+                display: none            
+        &__item
+            &:nth-child(2),
+            &:nth-child(8)
+                grid-column: 2/4
+    .advant
+        &__row
+            gap: 40px
+            p
+                font-size: 48px
+                &+p
+                    font-size: 24px
+
+@media ( max-width: 1024px )
+    .service-header
+        &__info
+            max-width: 515px
+            padding: 12px 20px
+            left: -128px
+            h1
+                font-size: 36px
+            p
+                font-size: 20px
+                margin: 20px 0 0
+                &+p
+                    margin: 15px 0 0
+                    font-size: 16px
+        &__block
+            margin: 0 0 0 94px
+            padding: 0 34px 20px 34px
+            ul
+                margin: 132px 0 0
+                gap: 10px
+                max-width: 320px
+                p
+                    font-size: 16px
+                svg
+                    width: 20px
+                    height: 20px
+                li
+                    grid-template-columns: 20px 1fr
+                    gap: 6px
+            .btn__braun
+                max-width: 376px
+                margin: 30px 0 0
+            &::before
+                width: 270px
+            img
+                width: calc(50vw + 400px)
+        &__link
+            gap: 30px
+            a
+                font-size: 18px
+    .trouble
+        &__wrapper
+            grid-template-columns: 1fr
+            img
+                height: 391px
+    .surgery
+        &__method
+            h3
+                max-width: 425px
+            &::before
+                width: 546px
+                height: 819px
+                bottom: calc( 100% - 156px )
+                right: -91px
+            &_row
+                grid-template-columns: 1fr
+                div
+                    padding: 40px 30px 50px
+                    min-height: auto
+                p
+                    font-size: 16px
+    .step
+        &__wrapper
+            gap: 10px
+            row-gap: 30px
+            h3
+                font-size: 20px
+                width: calc(100% - 25px)
+        &__num
+            font-size: 20px
+    .advant
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+            gap: 20px
+            .title
+                margin: 0 0 30px
+
+@media ( max-width: 700px )
+    .service-header
+        &__info
+            left: -45px
+            padding: 14px 18px
+            max-width: 313px
+            width: calc(100% + 45px)
+            h1
+                font-size: 23px
+            p
+                font-size: 12px
+                margin: 10px 0 0
+                &+p
+                    font-size: 10px
+                    margin: 0
+        &__block
+            margin: 0 0 0 31px
+            padding: 0 0 11px 14px
+            max-width: 100%
+            ul
+                margin: 25px 0 0
+                gap: 6px
+                max-width: 188px
+                svg
+                    width: 9px
+                    height: 9px
+                li
+                    grid-template-columns: 9px 1fr
+                    gap: 3px
+                p
+                    font-size: 10px
+            .btn__braun
+                margin: 25px 0 0
+                max-width: 172px
+                font-size: 10px
+                padding: 10px
+                border-radius: 10px
+            &::before
+                width: 110px
+            img
+                width: calc(100vw - 40px)
+                object-position: right
+        &__link
+            margin: 70px 0 0
+            flex-wrap: wrap
+            gap: 20px
+            a
+                font-size: 14px
+    .stage
+        .swiper-button-prev
+            right: 60px
+        &__wrapper
+            padding: 125px 0 0
+        &__item
+            max-width: 250px
+            h3
+                font-size: 16px
+            p
+                font-size: 10px
+                margin: 10px 0 0
+            img
+                margin: 40px 0 0
+            &:nth-child(3)
+                width: 291px
+                img
+                    margin: 40px 0 0
+            &:nth-child(4)
+                img
+                    width: 297px
+                    margin: 74px 0 0
+    .trouble
+        &__wrapper
+            gap: 24px
+            margin: 50px 0 0
+            ul
+                gap: 24px
+                grid-template-columns: 1fr
+                li
+                    min-height: 212px
+                    padding: 20px 20px 40px
+                h3
+                    font-size: 16px
+                p
+                    font-size: 12px
+                    margin: 15px 0 0
+                svg
+                    width: 21px
+                    height: 21px
+                    bottom: 10px
+                    right: 10px
+            img
+                height: 212px
+    .surgery
+        padding: 70px 0 0
+        &__method
+            margin: 118px 0 0
+            h3
+                max-width: 188px
+                font-size: 14px
+            &::before
+                width: 280px
+                height: 423px
+                top: -176px
+                bottom: auto
+            &_row
+                margin: 20px 0 0
+                gap: 10px
+                p
+                    font-size: 12px
+                div
+                    padding: 20px
+        &__wrapper
+            .title
+                font-size: 16px
+                &+p
+                    font-size: 10px
+            p
+                font-size: 14px
+                margin: 20px 0 0
+        &__row
+            margin: 20px 0 0
+            p
+                font-size: 12px
+            svg
+                width: 40px
+                height: 40px
+    .step
+        padding: 70px 0 0
+        &__wrapper
+            margin: 50px 0 0
+            grid-template-columns: 1fr
+            gap: 16px
+            h3
+                font-size: 14px
+            div
+                min-height: 147px
+        &__item
+            grid-column: auto !important
+        &__text
+            margin: 20px 0 0
+            font-size: 12px
+        &__num
+            font-size: 14px
+    .price
+        padding: 70px 0 0
+        &__wrapper
+            margin: 50px 0 0
+        &__title
+            p
+                font-size: 20px
+        &__row
+            gap: 30px
+            p
+                font-size: 12px
+                &+p
+                    white-space: nowrap
+    .advant
+        padding: 100px 0 0
+        &__wrapper
+            grid-template-columns: 1fr
+            gap: 10px
+            .title
+                grid-column: auto
+                margin: 0 0 40px
+        &__item
+            padding: 60px 17px 20px
+            min-height: 248px
+            h3
+                font-size: 16px
+            p
+                font-size: 14px
+        &__row
+            margin: 70px 0 0
+            flex-direction: column
+            gap: 40px
+            p
+                font-size: 40px
+                &+p
+                    font-size: 16px
+                    margin: 3px 0 0
+
+.spec-header
+    padding: 55px 0 
+    &__info
+        max-width: 580px
+        ul
+            margin: 70px 0 0
+            display: grid
+            grid-template-columns: 1fr
+            gap: 20px
+            li
+                display: grid
+                grid-template-columns: 24px 1fr
+                &::before
+                    content: ''
+                    display: block
+                    width: 5px
+                    height: 5px
+                    border-radius: 100%
+                    margin: 13px auto 0
+                    background: $temno-korichneyy-shrift
+        p
+            font-family: $font-family
+            font-weight: 500
+            font-size: 20px
+            line-height: 1.5
+            letter-spacing: -0.04em
+            color: $temno-korichneyy-shrift
+        .btn__braun
+            margin: 80px 0 0
+            width: 100%
+            max-width: 440px
+    .container
+        position: relative
+        z-index: 2
+        height: 100%
+        min-height: 100%
+        min-height: 730px
+        &::before
+            content: ''
+            display: block
+            width: 770px
+            height: calc( 100% + 100px )
+            background: url('../img/spec_desc.png') right no-repeat
+            background-size: contain
+            position: absolute
+            bottom: -55px
+            right: 20px
+            max-height: calc( 100% + 100px )
+            z-index: -1
+
+.spec-har
+    padding: 100px 0 0
+    .title
+        padding: 0 0 37px
+        border-bottom: 1px solid $temno-korichneyy-shrift
+    &__list
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 20px
+        row-gap: 90px
+        margin: 28px 0 0
+        h3
+            padding: 0 0 0 21px
+            position: relative
+            font-family: $second-family
+            font-weight: 500
+            font-size: 24px
+            line-height: 1.25
+            text-transform: uppercase
+            color: $temno-korichneyy-shrift
+            &::before
+                content: ''
+                display: block
+                width: 11px
+                height: 11px
+                border-radius: 100%
+                background: $zheltyy
+                position: absolute
+                left: 0
+                top: 10px
+        p
+            font-family: $font-family
+            font-weight: 500
+            font-size: 18px
+            line-height: 1.44444
+            letter-spacing: -0.04em
+            color: $svetlo-korichnevyy-cvet
+            margin: 20px 0 0
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 20px
+        margin: 30px 0 0
+        p
+            font-family: $font-family
+            font-weight: 500
+            font-size: 20px
+            line-height: 1.5
+            letter-spacing: -0.04em
+            color: $temno-korichneyy-shrift
+            span
+                font-size: 30px
+                line-height: 1.26667
+    &__educ
+        margin: 30px 0 0
+        display: grid
+        grid-template-columns: 1fr
+        gap: 20px
+        &_row
+            padding: 0 0 0 23px
+            display: grid
+            grid-template-columns: 115px 1fr
+            position: relative
+            &::before
+                content: ''
+                display: block
+                width: 11px
+                height: 11px
+                border-radius: 100%
+                background: $zheltyy
+                position: absolute
+                left: 0
+                top: 14px
+            &::after
+                content: ''
+                display: block
+                width: 1px
+                height: calc( 100% + 20px )
+                top: 0
+                left: 5px
+                z-index: -2
+                position: absolute  
+                background: $temno-korichneyy-shrift
+            &:nth-child(1)
+                &::after
+                    top: 14px
+                    height: calc(100% + 6px)
+            &:last-child
+                &::after
+                    height: 15px
+
+@media ( max-width: 1024px )
+    .spec-header
+        padding: 50px 0
+        .container
+            min-height: 635px
+            &::before
+                height: calc( 100% + 100px )
+                background: url('../img/spec_table.png') right no-repeat
+                background-size: contain
+                right: 0
+                max-height: calc( 100% + 100px )
+        &__info
+            max-width: 360px
+            h1
+                font-size: 36px
+            ul
+                margin: 40px 0 0
+            .btn__braun
+                max-width: 288px
+                margin: 70px 0 0
+    .spec-har
+        &__list
+            grid-template-columns: 1fr
+            gap: 35px
+            margin: 40px 0 0
+        &__educ
+            p
+                font-size: 16px
+                span
+                    font-size: 20px
+            &_row
+                &::before
+                    top: 6px
+
+@media ( max-width: 700px )
+    .spec-header
+        padding: 20px 0 50px
+        .container
+            min-height: 370px
+            &::before
+                height: calc( 100% + 70px )
+                background: url('../img/spec_mob.png') right no-repeat
+                background-size: contain
+                bottom: auto
+                top: -20px
+        &__info
+            max-width: 320px
+            h1
+                font-size: 23px
+            ul
+                max-width: 170px
+                gap: 8px
+                li
+                    grid-template-columns: 18px 1fr
+                    &::before
+                        width: 4px
+                        height: 4px
+                        margin: 8px auto 0
+            p
+                font-size: 12px
+            .btn__braun
+                margin: 30px 0 0
+                font-size: 10px
+                padding: 10px
+                border-radius: 15px
+                max-width: 170px
+    .spec-har
+        padding: 70px 0 0
+        .title
+            padding: 0 0 50px
+        &__list
+            margin: 50px 0 0
+            gap: 30px
+            h3
+                font-size: 19px
+                &::before
+                    top: 50%
+                    transform: translateY(-50%)
+            p
+                font-size: 14px
+        &__wrapper
+            grid-template-columns: 1fr
+            gap: 40px
+            p
+                font-size: 16px
+        &__educ
+            margin: 14px 0 0
+            p
+                font-size: 14px
+                span
+                    font-size: 16px
+            &_row
+                grid-template-columns: 70px 1fr
+                padding: 0 0 0 15px
+                &::before
+                    width: 9px
+                    height: 9px
+                &::after
+                    left: 4px
+
+.blog
+    padding: 55px 0 100px
+    &__search
+        margin: 60px 0 0
+        display: grid
+        grid-template-columns: 1fr 220px
+        gap: 20px
+        input
+            width: 100%
+            border: 1px solid $temno-korichneyy-shrift
+            border-radius: 20px
+            background: $blednyy-belyy
+            box-sizing: border-box
+            font-family: $font-family
+            font-weight: 500
+            font-size: 20px
+            line-height: 1.5
+            letter-spacing: -0.04em
+            color: $temno-korichneyy-shrift
+            padding: 18px 30px
+            &::placeholder
+                color: $temno-korichneyy-shrift
+        .btn__braun
+            width: 100%
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr
+        margin: 50px 0 0
+        gap: 30px
+    &__item
+        position: relative
+        min-height: 300px
+        display: flex
+        flex-direction: column
+        gap: 4px
+        padding: 30px
+        border-radius: 20px
+        overflow: hidden
+        z-index: 3
+        img
+            position: absolute  
+            inset: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+            width: 100%
+            z-index: -1
+            transition: all .3s
+        &_big
+            grid-row: span 2
+        h3
+            font-family: $second-family
+            font-weight: 500
+            font-size: 24px
+            line-height: 1.25
+            text-transform: uppercase
+            color: $belyy
+        &:hover
+            img
+                transform: scale(1.1)
+    &__date
+        font-family: $second-family
+        font-weight: 500
+        font-size: 24px
+        line-height: 1.25
+        text-transform: uppercase
+        text-align: right
+        color: $belyy
+        margin: 0 0 auto
+    &__text
+        font-family: $font-family
+        font-weight: 500
+        font-size: 20px
+        line-height: 1.5
+        letter-spacing: -0.04em
+        color: $belyy
+
+@media ( max-width: 1024px )
+    .blog
+        &__search
+            margin: 50px 0 0
+        &__item
+            grid-row: auto
+            min-height: 352px
+            padding: 20px
+            h3
+                font-size: 20px
+        &__text
+            font-size: 16px
+        &__date
+            font-size: 20px
+        &__wrapper
+            gap: 20px
+
+@media ( max-width: 700px )
+    .blog
+        padding: 20px 0 70px
+        &__search
+            margin: 40px 0 0
+            grid-template-columns: 1fr 79px
+            gap: 6px
+            input
+                font-size: 10px
+                padding: 10px 13px 
+                border-radius: 10px
+            .btn__braun
+                font-size: 10px
+                padding: 10px
+                border-radius: 10px
+        &__wrapper
+            margin: 40px 0 0
+            grid-template-columns: 1fr
+            gap: 30px
+        &__item
+            min-height: 320px
+            h3
+                font-size: 16px
+        &__date
+            font-size: 16px
+        &__text
+            font-size: 14px
+
+.article
+    padding: 55px 0 0
+    .title
+        &+p
+            font-family: $font-family
+            font-weight: 500
+            font-size: 30px
+            line-height: 1.26667
+            letter-spacing: -0.04em
+            color: $svetlo-korichnevyy-cvet
+            margin: 10px 0 0
+    &__list
+        margin: 60px 0 0
+        border-radius: 20px
+        padding: 40px 
+        background: $bledno-bezhevyy-fon-dlya-kartochek
+        h3
+            font-family: $second-family
+            font-weight: 500
+            font-size: 32px
+            line-height: 1.1875
+            text-transform: uppercase
+            color: $temno-korichneyy-shrift
+        ul
+            margin: 14px 0 0
+            li
+                display: grid
+                grid-template-columns: 24px 1fr
+                &::before
+                    content: ''
+                    display: block
+                    width: 5px
+                    height: 5px
+                    border-radius: 100%
+                    margin: 13px auto 0
+                    background: $temno-korichneyy-shrift
+            a
+                font-family: $font-family
+                font-weight: 500
+                font-size: 24px
+                line-height: 1.33333
+                letter-spacing: -0.04em
+                color: $svetlo-korichnevyy-cvet
+                &:hover
+                    opacity: .7
+    &__wrapper
+        margin: 60px 0 0
+        *
+            &:nth-child(1)
+                margin: 0
+        h2,
+        h3
+            font-family: $second-family
+            font-weight: 500
+            font-size: 32px
+            line-height: 1.1875
+            text-transform: uppercase
+            color: $temno-korichneyy-shrift
+            margin: 70px 0 0
+        p
+            font-family: $font-family
+            font-weight: 500
+            font-size: 20px
+            line-height: 1.5
+            letter-spacing: -0.04em
+            color: $svetlo-korichnevyy-cvet
+            margin: 40px 0 0
+            strong
+                color: $temno-korichneyy-shrift
+        img
+            width: 100%
+            border-radius: 20px
+        ul
+            margin: 40px 0 0
+            li
+                display: grid
+                grid-template-columns: 24px 1fr
+                &::before
+                    content: ''
+                    display: block
+                    width: 5px
+                    height: 5px
+                    border-radius: 100%
+                    margin: 13px auto 0
+                    background: $temno-korichneyy-shrift
+            a
+                font-family: $font-family
+                font-weight: 500
+                font-size: 24px
+                line-height: 1.33333
+                letter-spacing: -0.04em
+                color: $svetlo-korichnevyy-cvet
+                &:hover
+                    opacity: .7
+
+@media ( max-width: 1024px )
+    .article
+        padding: 50px 0 0
+        .title
+            font-size: 36px
+            &+p
+                font-size: 24px
+                margin: 10px 0 0
+        &__list
+            margin: 50px 0 0
+            h3
+                font-size: 24px
+            ul
+                li
+                    &::before
+                        margin: 10px auto 0
+                a
+                    font-size: 20px
+        
+@media ( max-width: 700px )
+    .article
+        padding: 20px 0 0
+        .title
+            font-size: 23px
+            &+p
+                font-size: 16px
+        &__list
+            padding: 40px 20px
+            h3
+                font-size: 19px
+            ul
+                margin: 14px 0 0
+                li
+                    grid-template-columns: 20px 1fr
+                    &::before
+                        margin: 7px auto 0
+                a
+                    font-size: 14px
+        &__wrapper
+            margin: 40px 0 0
+            h2,
+            h3
+                margin: 40px 0 0
+                font-size: 19px
+            p
+                font-size: 14px
+                margin: 20px 0 0
+            ul
+                margin: 20px 0 0
+                li
+                    grid-template-columns: 20px 1fr
+                    &::before
+                        margin: 9px auto 0
+
+.policy
+    padding: 55px 0 100px
+    &__wrapper
+        margin: 70px 0 0
+        *
+            &:nth-child(1)
+                margin: 0
+        h2,
+        h3
+            font-family: $font-family
+            font-weight: 600
+            font-size: 24px
+            line-height: 1.20833
+            letter-spacing: -0.04em
+            color: $temno-korichneyy-shrift
+            margin: 40px 0 0
+        p
+            margin: 20px 0 0
+            font-family: $font-family
+            font-weight: 500
+            font-size: 20px
+            line-height: 1.5
+            letter-spacing: -0.04em
+            color: $svetlo-korichnevyy-cvet
+
+.doc
+    padding: 55px 0 100px
+    &__wrapper
+        margin: 70px 0 0
+        display: grid
+        grid-template-columns: 1fr
+        gap: 40px
+        p
+            font-family: $font-family
+            font-weight: 600
+            font-size: 24px
+            line-height: 1.20833
+            letter-spacing: -0.04em
+            color: $temno-korichneyy-shrift
+        img
+            width: 100%
+    &__row
+        display: grid
+        margin: 20px 0 0
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 20px
+
+.service-list
+    padding: 55px 0 100px
+    &__wrapper
+        margin: 70px 0 0
+        position: relative
+        padding: 0 440px 0 0
+        z-index: 3
+        img
+            position: absolute
+            top: 0
+            right: 0
+            width: 460px
+            border-radius: 0 20px 20px 0 
+            height: 1px
+            min-height: 100%
+            object-fit: cover
+            z-index: -1
+            object-position: top
+    ul
+        border-radius: 20px
+        padding: 70px 50px
+        background: $bledno-bezhevyy-fon-dlya-kartochek
+        display: grid
+        grid-template-columns: 1fr
+        gap: 50px
+        a
+            font-family: $second-family
+            font-weight: 500
+            font-size: 24px
+            line-height: 1.25
+            text-transform: uppercase
+            color: $temno-korichneyy-shrift
+            display: grid
+            grid-template-columns: 1fr 44px
+            gap: 20px
+            align-items: center
+            padding: 0 0 14px
+            border-bottom: 1px solid $temno-korichneyy-shrift
+            &:hover
+                opacity: .7
+
+@media ( max-width: 1024px )
+    .policy
+        padding: 50px 0 100px
+    .doc
+        padding: 50px 0 100px
+        &__row
+            grid-template-columns: 1fr 1fr
+    .service-list
+        padding: 50px 0 100px
+        &__wrapper
+            margin: 50px 0 0
+            padding: 0
+        img
+            margin: 20px 0 0
+            border-radius: 20px
+            position: relative
+            width: 100%
+            height: 500px
+    
+@media ( max-width: 700px )
+    .policy
+        padding: 20px 0 70px
+        .title
+            font-size: 22px
+        &__wrapper
+            margin: 40px 0 0
+            h2,
+            h3
+                font-size: 16px
+                margin: 20px 0 0
+            p
+                font-size: 12px
+                margin: 8px 0 0
+    .doc
+        padding: 20px 0 70px
+        &__wrapper
+            margin: 40px 0 0
+            gap: 20px
+            p
+                font-size: 16px 
+        &__row
+            margin: 8px 0 0
+    .service-list
+        padding: 20px 0 70px
+        &__wrapper
+            margin: 40px 0 0
+        img
+            height: 316px
+        ul
+            padding: 50px 20px
+            gap: 30px
+            a
+                padding: 0 0 8px
+                font-size: 12px
+                grid-template-columns: 1fr 25px
+                gap: 10px
+            svg
+                width: 25px
+                height: 8px
+
+.modal
+    inset: 0
+    width: 100vw
+    height: 100vh
+    z-index: 150
+    pointer-events: none
+    transition: all .3s
+    opacity: 0
+    position: fixed
+    display: flex
+    justify-content: start
+    align-items: start
+    overflow-y: auto
+    padding: 40px 20px
+    &.active
+        opacity: 1
+        pointer-events: all
+    &__container
+        margin: auto
+        width: 100%
+        max-width: 860px
+        border-radius: 20px
+        padding: 20px
+        background: $bledno-bezhevyy-fon-dlya-kartochek
+    &__overflow
+        background: rgba(27, 27, 27, 0.59)
+        position: fixed
+        top: 0
+        left: 0
+        width: 100vw
+        height: 100vh
+        z-index: -1
+    &__close
+        position: absolute
+        top: 41px
+        right: 70px
+        cursor: pointer
+    h2
+        font-family: $second-family
+        font-weight: 500
+        font-size: 36px
+        line-height: 1.27778
+        text-transform: uppercase
+        color: $temno-korichneyy-shrift
+        text-align: center
+        &+p
+            margin: 13px auto 0
+            font-family: $font-family
+            font-weight: 500
+            font-size: 20px
+            line-height: 1.5
+            letter-spacing: -0.04em
+            text-align: center
+            color: $svetlo-korichnevyy-cvet
+            max-width: 542px
+    &__wrapper
+        margin: 40px -20px 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 20px
+    &__item
+        padding: 20px 
+        z-index: 2
+        position: relative
+        overflow: hidden
+        &:nth-child(odd)
+            border-radius: 0 20px 20px 0
+        &:nth-child(even)
+            border-radius: 20px 0 0 20px
+        img
+            position: absolute
+            inset: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+            z-index: -1
+        h3
+            font-family: $second-family
+            font-weight: 500
+            font-size: 20px
+            line-height: 1.5
+            text-transform: uppercase
+            text-align: center
+            color: $belyy
+        a
+            font-family: $font-family
+            font-weight: 500
+            font-size: 16px
+            line-height: 1.625
+            letter-spacing: -0.04em
+            text-decoration: underline
+            text-decoration-skip-ink: none
+            text-align: center
+            color: $belyy
+            margin: 20px auto 0
+            display: block
+            width: max-content
+            &:hover
+                color: $svetlo-korichnevyy-cvet
+    &__row
+        margin: 28px 0 0
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 20px
+        p
+            font-family: $font-family
+            font-weight: 500
+            font-size: 20px
+            line-height: 1.5
+            letter-spacing: -0.04em
+            text-align: center
+            color: $belyy
+            &:nth-child(1)
+                border-radius: 20px
+                padding: 3px 10px
+                background: $temno-korichneyy-shrift
+                order: 2
+            &:nth-child(2)
+                text-decoration: line-through
+    .btn__braun
+        margin: 40px auto 0
+        width: 100%
+        max-width: 276px
+    &__soc
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 10px
+        margin: 20px 0 0
+        a
+            display: block
+
+@media ( max-width: 1024px )
+    .modal
+        padding: 70px 85px
+        &__close
+            top: 20px
+            right: 20px
+        h2
+            font-size: 24px
+            &+p
+                font-size: 16px
+        &__container
+            padding: 70px 20px
+        &__wrapper
+            margin: 50px -20px 0
+            column-gap: 10px
+        &__item
+            a
+                margin: 40px auto 0
+        &__row
+            margin: 20px 0 0
+            p
+                font-size: 16px
+
+@media ( max-width: 700px )
+    .modal
+        padding: 58px 40px
+        &__close
+            top: 20px
+            right: 20px
+            svg
+                width: 20px
+                height: 20px
+        &__container
+            padding: 30px 5px
+        &__wrapper
+            margin: 25px -5px 0
+            gap: 10px
+            grid-template-columns: 1fr
+        &__item
+            border-radius: 0 !important
+            padding: 10px 
+            h3
+                font-size: 16px
+            a
+                font-size: 12px
+                margin: 14px auto 0
+        &__row
+            gap: 7px
+            p
+                font-size: 12px
+        h2
+            font-size: 19px
+            &+p
+                font-size: 12px
+                margin: 4px 0 0
+        .btn__braun
+            margin: 25px auto 0
+            border-radius: 15px
+            padding: 10px 20px
+            width: auto
+            font-size: 10px
+        &__soc
+            margin: 9px 0 0
+            gap: 4px
+            svg
+                width: 30px
+                height: 30px
