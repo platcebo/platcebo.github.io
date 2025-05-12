@@ -31,12 +31,12 @@ document.addEventListener('DOMContentLoaded', function() {
         serviceRow.forEach((element, i) => {
             let text = element.innerHTML,
                 a = 1;
-            element.innerHTML = text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text + text
+            element.innerHTML = text + text + text + text + text + text + text + text + text 
             setInterval(() => {
                 element.style.transform = 'translateX(-' + a +'px)'
                 a += 0.3
                 // console.log(a)
-                if (a >= 4000) {
+                if (a >= 2000) {
                     a = 1
                 }
             }, 10);
@@ -99,19 +99,19 @@ window.addEventListener('load', () => {
       }, 500);
 })
 
-let serviceRow = document.querySelectorAll('.part__col');
+// let serviceRow = document.querySelectorAll('.part__col');
 
-if(serviceRow !== null) {
-    serviceRow.forEach((element, i) => {
-        let text = element.innerHTML,
-        a = 1;
-        element.innerHTML = text + text + text + text + text 
-        setInterval(() => {
-            element.style.transform = 'translateX(' + a +'px)'
-            a += 0.3
-            if (a >= 2000) {
-                a = 1
-            }
-        }, 30);
-    });
-}
+// if(serviceRow !== null) {
+//     serviceRow.forEach((element, i) => {
+//         let text = element.innerHTML,
+//         a = 1;
+//         element.innerHTML = text + text + text + text + text 
+//         setInterval(() => {
+//             element.style.transform = 'translateX(' + a +'px)'
+//             a += 0.3
+//             if (a >= 2000) {
+//                 a = 1
+//             }
+//         }, 30);
+//     });
+// }

@@ -58,8 +58,6 @@
 .part__item {
   border: 0.95px solid rgba(255, 255, 255, 0.1);
   border-radius: 9px;
-  -webkit-backdrop-filter: blur(18.9189167023px);
-          backdrop-filter: blur(18.9189167023px);
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
   display: flex;
   justify-content: center;
@@ -98,7 +96,4 @@
 }
 .part__col_wrapper:nth-child(odd) img {
   transform: scaleX(-1);
-}
-.part__col_wrapper:nth-child(odd) .part__col {
-  justify-content: flex-end;
 }/*# sourceMappingURL=new.css.map */
