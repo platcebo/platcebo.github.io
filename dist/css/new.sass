@@ -5,6 +5,8 @@
         border-radius: 20px
         background: linear-gradient(rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%)
         padding: 30px
+        position: relative
+        overflow: hidden
     &__overflow
         position: relative
         overflow: hidden
@@ -12,51 +14,35 @@
         border: 0.95px solid rgba(255, 255, 255, 0.1)
         border-radius: 14px
         display: block
-    &__col
-        display: grid
-        grid-template-columns: 1fr
-        gap: 5px
-        transform: scale(-1)
-        width: 132px
-        position: absolute
-        top: -100px
-        // &:nth-child(1)
-        //     right: calc( 100% - 11px )
-        // &:nth-child(2)
-        //     right: calc( 100% - 153px )
-        // &:nth-child(3)
-        //     right: calc( 100% - 295px )
-        // &:nth-child(4)
-        //     right: calc( 100% - 437px )
-        // &:nth-child(5)
-        //     right: calc( 100% - 579px )
-        // &:nth-child(6)
-        //     right: calc( 100% - 721px )
-        // &:nth-child(7)
-        //     right: calc( 100% - 863px )
-        // &:nth-child(8)
-        //     right: calc( 100% - 1005px )
-        &:nth-child(1)
-            right: calc( 100% - 91px )
-        &:nth-child(2)
-            right: calc( 100% - 228px )
-        &:nth-child(3)
-            right: calc( 100% - 365px )
-        &:nth-child(4)
-            right: calc( 100% - 502px )
-        &:nth-child(5)
-            right: calc( 100% - 639px )
-        &:nth-child(6)
-            right: calc( 100% - 776px )
-        &:nth-child(7)
-            right: calc( 100% - 913px )
-        &:nth-child(8)
-            right: calc( 100% - 1050px )
-        &_rev
-            top: auto
-            bottom: -100px
-            .part__item
-                transform: scale(-1)
+        .part__col
+            display: grid
+            grid-template-columns: 1fr
+            gap: 5px
+            transform: scale(-1)
+            width: 132px
+            position: absolute
+            top: -100px
+            &:nth-child(1)
+                right: calc( 100% - 91px )
+            &:nth-child(2)
+                right: calc( 100% - 228px )
+            &:nth-child(3)
+                right: calc( 100% - 365px )
+            &:nth-child(4)
+                right: calc( 100% - 502px )
+            &:nth-child(5)
+                right: calc( 100% - 639px )
+            &:nth-child(6)
+                right: calc( 100% - 776px )
+            &:nth-child(7)
+                right: calc( 100% - 913px )
+            &:nth-child(8)
+                right: calc( 100% - 1050px )
+            &_rev
+                top: auto
+                bottom: -100px
+                .part__item
+                    transform: scale(-1)
     &__item
         border: 0.95px solid rgba(255, 255, 255, 0.1)
         border-radius: 9px
@@ -66,6 +52,32 @@
         justify-content: center
         align-items: center
         width: 132px
+        min-width: 132px
         height: 82px
         img
             position: relative
+    &__block
+        position: relative
+        border: 0.95px solid rgba(255, 255, 255, 0.1)
+        border-radius: 14px
+        display: grid
+        grid-template-columns: 1fr
+        gap: 5px
+        overflow: hidden
+    &__col
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 5px
+        transition: all 10ms
+        &_wrapper
+            width: 100%
+            display: block
+            position: relative
+            overflow: hidden
+            &:nth-child(odd)
+                transform: scaleX(-1)
+                img
+                    transform: scaleX(-1)
+                .part__col
+                    justify-content: flex-end

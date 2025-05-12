@@ -4,6 +4,8 @@
   border-radius: 20px;
   background: linear-gradient(rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
   padding: 30px;
+  position: relative;
+  overflow: hidden;
 }
 .part__overflow {
   position: relative;
@@ -13,7 +15,7 @@
   border-radius: 14px;
   display: block;
 }
-.part__col {
+.part__overflow .part__col {
   display: grid;
   grid-template-columns: 1fr;
   gap: 5px;
@@ -22,35 +24,35 @@
   position: absolute;
   top: -100px;
 }
-.part__col:nth-child(1) {
+.part__overflow .part__col:nth-child(1) {
   right: calc(100% - 91px);
 }
-.part__col:nth-child(2) {
+.part__overflow .part__col:nth-child(2) {
   right: calc(100% - 228px);
 }
-.part__col:nth-child(3) {
+.part__overflow .part__col:nth-child(3) {
   right: calc(100% - 365px);
 }
-.part__col:nth-child(4) {
+.part__overflow .part__col:nth-child(4) {
   right: calc(100% - 502px);
 }
-.part__col:nth-child(5) {
+.part__overflow .part__col:nth-child(5) {
   right: calc(100% - 639px);
 }
-.part__col:nth-child(6) {
+.part__overflow .part__col:nth-child(6) {
   right: calc(100% - 776px);
 }
-.part__col:nth-child(7) {
+.part__overflow .part__col:nth-child(7) {
   right: calc(100% - 913px);
 }
-.part__col:nth-child(8) {
+.part__overflow .part__col:nth-child(8) {
   right: calc(100% - 1050px);
 }
-.part__col_rev {
+.part__overflow .part__col_rev {
   top: auto;
   bottom: -100px;
 }
-.part__col_rev .part__item {
+.part__overflow .part__col_rev .part__item {
   transform: scale(-1);
 }
 .part__item {
@@ -63,8 +65,40 @@
   justify-content: center;
   align-items: center;
   width: 132px;
+  min-width: 132px;
   height: 82px;
 }
 .part__item img {
   position: relative;
+}
+.part__block {
+  position: relative;
+  border: 0.95px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+  overflow: hidden;
+}
+.part__col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  transition: all 10ms;
+}
+.part__col_wrapper {
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.part__col_wrapper:nth-child(odd) {
+  transform: scaleX(-1);
+}
+.part__col_wrapper:nth-child(odd) img {
+  transform: scaleX(-1);
+}
+.part__col_wrapper:nth-child(odd) .part__col {
+  justify-content: flex-end;
 }/*# sourceMappingURL=new.css.map */

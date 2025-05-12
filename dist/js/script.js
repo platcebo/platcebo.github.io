@@ -103,23 +103,15 @@ let serviceRow = document.querySelectorAll('.part__col');
 
 if(serviceRow !== null) {
     serviceRow.forEach((element, i) => {
-        if  (element.classList.contains('cert__row') && window.innerWidth <= 600) {
-            return
-        } else {
-            let text = element.innerHTML,
-            a = 1;
-            element.innerHTML = text + text + text + text + text + text + text + text + text + text 
-            setInterval(() => {
-                if(element.classList.contains('part__col_rev')) {
-                    element.style.transform = 'scale(-1) translateY(-' + a +'px)'
-                } else {
-                    element.style.transform = 'rotate(0deg) translateY(-' + a +'px)'
-                }
-                a += 0.3
-                if (a >= 5000) {
-                    a = 1
-                }
-            }, 10);
-        }
+        let text = element.innerHTML,
+        a = 1;
+        element.innerHTML = text + text + text + text + text 
+        setInterval(() => {
+            element.style.transform = 'translateX(' + a +'px)'
+            a += 0.3
+            if (a >= 2000) {
+                a = 1
+            }
+        }, 30);
     });
 }
