@@ -129,7 +129,7 @@ if(window.innerWidth <= 1300) {
     });
 }
 
-[].forEach.call( document.querySelectorAll('[data-phone-pattern]'), function(input) {
+[].forEach.call( document.querySelectorAll('.data-phone-pattern'), function(input) {
     var keyCode;
     function mask(event) {
         event.keyCode && (keyCode = event.keyCode);

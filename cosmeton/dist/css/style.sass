@@ -30,6 +30,18 @@ a
     text-transform: uppercase
     color: $temno-korichneyy-shrift
 
+.wpcf7-response-output
+    margin: 20px 0 0
+    border: none
+    font-family: $font-family
+    font-weight: 400
+    font-size: 14px
+    letter-spacing: -0.04em
+    color: $krasnyy
+    padding: 0
+    border: none
+
+
 .input
     input
         width: 100%
@@ -46,6 +58,11 @@ a
         color: $svetlo-korichnevyy-cvet
         &:placeholder-shown
             color: $svetlo-korichnevyy-cvet
+        &+span
+            font-family: $font-family
+            font-weight: 400
+            font-size: 12px
+            color: $krasnyy
     p
         font-family: $font-family
         font-weight: 400
@@ -70,7 +87,7 @@ a
                 color: $belyy
                 &:hover
                     opacity: .7
-        span
+        i
             display: flex
             justify-content: center
             align-items: center
@@ -832,6 +849,12 @@ a
         li
             display: grid
             grid-template-columns: 30px 1fr
+            font-family: $font-family
+            font-weight: 500
+            font-size: 20px
+            line-height: 1.45
+            letter-spacing: -0.04em
+            color: $temno-korichneyy-shrift
             &::before
                 content: counter(work) "."
                 counter-increment: work 1
@@ -854,6 +877,10 @@ a
             gap: 10px
             align-items: center
             max-width: 200px
+        img
+            width: 45px
+            height: 45px
+            object-fit: contain
         span
             border-radius: 100%
             display: flex
@@ -967,7 +994,7 @@ a
         border-radius: 20px
         img
             width: 100%
-            height: 615px
+            height: 420px
             object-fit: cover
             object-position: top
     &__info
@@ -1049,7 +1076,7 @@ a
     .container
         position: relative
     &__price
-        margin: 20px 0
+        margin: auto 0 0
         p
             margin: 0
             font-family: $font-family
@@ -2004,11 +2031,13 @@ a
                 width: 60px
                 height: 60px
                 margin: 0 auto
-            svg
+            svg,
+            img
                 width: 40px
                 height: 40px
         &__info
-            p
+            p,
+            li
                 font-size: 16px
         &__autor
             grid-template-columns: 80px 1fr
@@ -2799,7 +2828,11 @@ a
         p
             text-align: center
             margin: 15px 0 0
-        svg
+        svg,
+        img
+            width: 60px
+            height: 60px
+            object-fit: contain
             display: block
             margin: 0 auto
     &__method
@@ -3294,7 +3327,8 @@ a
             margin: 20px 0 0
             p
                 font-size: 12px
-            svg
+            svg,
+            img
                 width: 40px
                 height: 40px
     .step
@@ -3389,18 +3423,23 @@ a
         height: 100%
         min-height: 100%
         min-height: 730px
-        &::before
-            content: ''
-            display: block
-            width: 770px
-            height: calc( 100% + 100px )
-            background: url('../img/spec_desc.png') right no-repeat
-            background-size: contain
-            position: absolute
-            bottom: -55px
-            right: 20px
-            max-height: calc( 100% + 100px )
-            z-index: -1
+    &__bg
+        display: block
+        width: 770px
+        height: calc( 100% + 100px )
+        background: url('../img/pattern.svg') right no-repeat
+        background-size: contain
+        position: absolute
+        bottom: -55px
+        right: 20px
+        max-height: calc( 100% + 100px )
+        z-index: -1
+        img
+            width: 100%
+            height: 1px
+            min-height: 100%
+            object-fit: cover
+            object-position: top center
 
 .spec-har
     padding: 100px 0 0
@@ -3498,12 +3537,19 @@ a
         padding: 50px 0
         .container
             min-height: 635px
-            &::before
-                height: calc( 100% + 100px )
-                background: url('../img/spec_table.png') right no-repeat
-                background-size: contain
-                right: 0
-                max-height: calc( 100% + 100px )
+        &__bg
+            width: 518px
+            height: calc( 100% + 100px )
+            background: url('../img/pattern_table.svg') right no-repeat
+            background-size: contain
+            right: 0
+            max-height: calc( 100% + 100px )
+            display: flex
+            align-items: end
+            img
+                height: 616px
+                max-width: 100%
+                min-height: auto
         &__info
             max-width: 360px
             h1
@@ -3532,12 +3578,16 @@ a
         padding: 20px 0 50px
         .container
             min-height: 370px
-            &::before
-                height: calc( 100% + 70px )
-                background: url('../img/spec_mob.png') right no-repeat
-                background-size: contain
-                bottom: auto
-                top: -20px
+        &__bg
+            height: calc( 100% + 70px )
+            background: url('../img/pattern_mob.svg') right no-repeat
+            background-size: contain
+            bottom: auto
+            top: -20px
+            width: 226px
+            img
+                height: 340px
+                max-height: 340px
         &__info
             max-width: 320px
             h1
@@ -4348,7 +4398,7 @@ a
                     color: $temno-korichneyy-shrift
                     a
                         color: $temno-korichneyy-shrift
-                span
+                i
                     border-color: $temno-korichneyy-shrift
         .btn__braun
             margin: 30px 0 0
