@@ -185,9 +185,16 @@ let navAside = document.querySelectorAll('.nav__aside'),
 
 if(navAside !== null) {
     navAsideBtn.forEach((item,i)=>{
-        item.addEventListener('click', ()=>{
-            item.classList.toggle('active')
-            navAside[i].classList.toggle('active')
+        item.addEventListener('click', (e)=>{
+            if(window.innerWidth > 1200) {
+                item.classList.toggle('active')
+                navAside[i].classList.toggle('active')
+            }
+            else {
+                e.preventDefault()
+                item.classList.toggle('active')
+                navAside[i].classList.toggle('active')
+            }
         })
     })
 }
@@ -208,6 +215,63 @@ if(modal !== null) {
     })
     modalOverflow.addEventListener('click', ()=>{
         modal.classList.remove('active');
+    })
+}
+
+let quiz = document.querySelector('.quiz'),
+    quizCall = document.querySelectorAll('.quiz__call'),
+    quizOverflow = document.querySelector('.quiz__overflow'),
+    quizClose = document.querySelector('.quiz__close');
+
+if(quiz !== null) {
+    quizCall.forEach((item)=>{
+        item.addEventListener('click',()=>{
+            quiz.classList.add('active');
+        })
+    })
+    quizClose.addEventListener('click', ()=>{
+        quiz.classList.remove('active');
+    })
+    quizOverflow.addEventListener('click', ()=>{
+        quiz.classList.remove('active');
+    })
+}
+
+let form = document.querySelector('.modal-form'),
+    formCall = document.querySelectorAll('.modal-form__call'),
+    formOverflow = document.querySelector('.modal-form__overflow'),
+    formClose = document.querySelector('.modal-form__close');
+
+if(formCall !== null) {
+    formCall.forEach((item)=>{
+        item.addEventListener('click',()=>{
+            form.classList.add('active');
+        })
+    })
+    formClose.addEventListener('click', ()=>{
+        form.classList.remove('active');
+    })
+    formOverflow.addEventListener('click', ()=>{
+        form.classList.remove('active');
+    })
+}
+
+let free = document.querySelector('.modal__free_consultation'),
+    freeCall = document.querySelectorAll('.modal__free__consultation__call'),
+    freeOverflow = document.querySelector('.modal__free__consultation__overflow'),
+    freeClose = document.querySelector('.modal__free__consultation__close');
+
+if(freeCall !== null) {
+    freeCall.forEach((item)=>{
+        item.addEventListener('click',()=>{
+            free.classList.add('active');
+        })
+    })
+    freeClose.addEventListener('click', ()=>{
+        free.classList.remove('active');
+    })
+    freeOverflow.addEventListener('click', ()=>{
+        free.classList.remove('active');
     })
 }
 
