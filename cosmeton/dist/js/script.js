@@ -267,9 +267,9 @@ if(freeCall !== null) {
             free.classList.add('active');
         })
     })
-    freeClose.addEventListener('click', ()=>{
-        free.classList.remove('active');
-    })
+    // freeClose.addEventListener('click', ()=>{
+    //     free.classList.remove('active');
+    // })
     freeOverflow.addEventListener('click', ()=>{
         free.classList.remove('active');
     })

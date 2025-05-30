@@ -218,7 +218,7 @@ a
     padding: 60px 0 30px
     background: linear-gradient(270deg, #7c6c60 0%, #ab988d 100%)
     border-radius: 0 0 30px 30px
-    z-index: 5
+    z-index: 10
     position: relative
     &__hum
         display: none
@@ -965,6 +965,7 @@ a
         justify-content: center
         align-items: center
         gap: 5px
+        z-index: 2
         span
             margin: 0 !important
             display: block
@@ -991,6 +992,7 @@ a
         inset: auto
         top: calc( 100% + 30px ) !important
         right: 0
+        z-index: 3
         &::after
             content: none
         svg
@@ -1458,8 +1460,8 @@ a
     bottom: 30px
     right: 30px
     border-radius: 59px
-    width: 119px
-    height: 119px
+    width: 95px
+    height: 95px
     border: 1px solid $temno-korichneyy-shrift
     background: $temno-korichneyy-shrift
     display: flex
@@ -1467,6 +1469,9 @@ a
     align-items: center
     transform: all .3s
     z-index: 4
+    svg
+        width: 30px
+        height: 50px
     path
         transition: all .3s
     &:hover
@@ -2717,9 +2722,10 @@ a
         h1
             font-family: $second-family
             font-weight: 500
-            font-size: 75px
+            font-size: 70px
             text-transform: uppercase
             color: $temno-korichneyy-shrift
+            line-height: 1.2
         p
             margin: 20px 0 0
             font-family: $font-family
@@ -4632,7 +4638,8 @@ a
     letter-spacing: -0.04em !important
 
 .modal-form,
-.modal__free_consultation
+.modal__free_consultation,
+.modal__free__consultation
     inset: 0
     width: 100vw
     height: 100vh
@@ -4745,3 +4752,41 @@ a
         .next
             a
                 width: auto
+
+.search_result_list
+    margin: 50px 0 0
+    display: grid
+    grid-template-columns: 1fr
+    gap: 15px
+    li
+        padding: 30px
+        border-radius: 20px
+        background: #f2efed
+    .search_title
+        font-family: $font-family
+        font-weight: 600
+        font-size: 20px
+        line-height: 1.45
+        letter-spacing: -0.04em
+        color: $temno-korichneyy-shrift
+    .search_result_link
+        margin: 20px 0 0
+        text-decoration: underline
+        a
+            font-family: $font-family
+            font-weight: 600
+            font-size: 14px
+            line-height: 1.45
+            letter-spacing: -0.04em
+            color: $temno-korichneyy-shrift
+
+@media ( max-width: 600px )
+    .search_result_list
+        gap: 10px
+        li
+            padding: 20px
+        .search_title
+            font-size: 18px
+        .search_result_link
+            a
+                font-size: 12px
