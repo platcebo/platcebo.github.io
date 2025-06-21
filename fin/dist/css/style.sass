@@ -34,6 +34,7 @@ body
         background: $white
         transition: all .3s
         display: block
+        text-align: center
         &:hover
             background: $accent
         &:active
@@ -54,6 +55,7 @@ body
         background: $dark
         transition: all .3s
         display: block
+        text-align: center
         &:hover
             background: $accent
             color: $dark
@@ -98,7 +100,8 @@ body
             &:nth-child(1),
             &:nth-child(2)
                 display: block
-        svg
+        svg,
+        img
             width: 40px
             height: 40px
 
@@ -196,51 +199,52 @@ body
             right: 0
             padding: 10px
             background: $accent
-            svg
+            svg,
+            img
                 width: 60px
                 height: 60px
+        li,
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.22222
+            color: $dark
+        p,
+        ul
+            margin: 16px 0 0
+            &:nth-child(1)
+                margin: 0
+        ul
+            display: grid
+            gap: 16px
+            li
+                position: relative
+                padding: 0 0 0 28px
+                &::before
+                    content: ''
+                    display: block
+                    width: 16px
+                    height: 16px
+                    border-radius: 2px
+                    background: $accent
+                    position: absolute
+                    left: 0
+                    top: 5px
         h3
             font-family: $second-family
             font-weight: 700
             font-size: 30px
             line-height: 1.2
             color: $dark
-        &_text
-            margin: 40px 0 0
-            li,
-            p
-                font-family: $font-family
-                font-weight: 400
-                font-size: 18px
-                line-height: 1.22222
-                color: $dark
-            p,
-            ul
-                margin: 16px 0 0
-                &:nth-child(1)
-                    margin: 0
-            ul
-                display: grid
-                gap: 16px
-                li
-                    position: relative
-                    padding: 0 0 0 28px
-                    &::before
-                        content: ''
-                        display: block
-                        width: 16px
-                        height: 16px
-                        border-radius: 2px
-                        background: $accent
-                        position: absolute
-                        left: 0
-                        top: 5px
+            &+*
+                margin: 40px 0 0
         &_width
             grid-column: 1/4
             padding: 15px
             ul
                 grid-template-columns: auto auto auto
-            div
+            h3+*
                 margin: 16px 0 0
     .btn__blc
         margin: 48px 122px 0 auto
@@ -317,6 +321,7 @@ body
         font-size: 40px
         line-height: 1.2
         color: $dark
+        text-align: center
     &__subtitle
         margin: 50px auto 0
         font-family: $font-family
@@ -365,7 +370,8 @@ body
                 justify-content: center
                 align-items: center
                 background: $accent
-                svg
+                svg,
+                img
                     width: 70px
                     height: 70px
         p
@@ -522,7 +528,8 @@ body
             right: 0
             padding: 10px
             background: $accent
-            svg
+            svg,
+            img
                 width: 60px
                 height: 60px
 
@@ -614,8 +621,12 @@ body
             font-size: 16px
             line-height: 1.25
             color: $dark
+    .wpcf7
+        p
+            margin: 0
 
 .plan
+    padding: 160px 0 0
     h2
         font-family: $second-family
         font-weight: 800
@@ -694,7 +705,8 @@ body
             right: 0
             padding: 10px
             background: $accent
-            svg
+            svg,
+            img
                 width: 60px
                 height: 60px
         p
@@ -781,7 +793,8 @@ body
             right: 0
             padding: 18px
             background: $accent
-            svg
+            svg,
+            img
                 width: 80px
     &__wrapper
         display: grid
@@ -899,7 +912,8 @@ body
             transition: all .3s
             background: $accent
             box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
-            svg
+            svg,
+            img
                 width: 26px
                 height: 16px
             &::after
@@ -921,7 +935,8 @@ body
         span
             padding: 11px
             background: $accent
-            svg
+            svg,
+            img
                 width: 87px
         &::before
             content: ''
@@ -1063,6 +1078,7 @@ body
                 color: $lg
         .btn__blc
             grid-column: 2/3
+            width: 100%
             &+p
                 grid-column: 1/2
                 font-size: 16px
@@ -1074,6 +1090,18 @@ body
             height: 100%
             min-height: 100%
             object-fit: cover
+    .wpcf7
+        grid-column: 1/3
+        form p
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 20px
+        &+p
+            grid-column: 1/2
+            font-size: 16px
+        br
+            display: none
+
 
 .footer
     padding: 56px 0 250px
@@ -1145,7 +1173,8 @@ body
             transition: all .3s
             &:hover
                 opacity: 0.8
-        svg
+        svg,
+        img
             width: 40px
 
 @media ( max-width: 1400px )
@@ -1520,24 +1549,25 @@ body
             min-width: calc( 100vw - 32px )
             padding: 45px 9px 10px
             height: auto
-            h3
-                font-size: 20px
             li
                 font-size: 16px
                 &::before
                     top: 0
             ul
                 gap: 11px
-            &_text
-                margin: 24px 0 0
-                p
-                    font-size: 16px
+            p
+                font-size: 16px
             &_img
                 padding: 15px
                 top: -35px
-                svg
+                svg,
+                img
                     width: 45px
                     height: 45px
+            h3
+                font-size: 20px
+                &+*
+                    margin: 24px 0 0
         .btn__blc
             max-width: 100%
             margin: 24px 0 0
@@ -1792,7 +1822,8 @@ body
                 right: 16px
                 bottom: -37px
                 padding: 14px
-                svg
+                svg,
+                img
                     width: 45px
                     height: 45px
     .rate
@@ -1850,10 +1881,7 @@ body
             .btn__blc
                 grid-column: auto
             input
-                margin: 32px 0 0
                 max-width: 100% 
-                &+input
-                    margin: 16px 0 0
             .btn__blc
                 margin: 32px 0 0
                 max-width: 100%
@@ -1862,6 +1890,15 @@ body
                 &+p
                     font-size: 14px
                     margin: 24px 0 0
+        .wpcf7
+            grid-column: auto
+            margin: 32px 0 0
+            form p
+                grid-template-columns: 1fr
+                gap: 16px
+            &+p
+                font-size: 14px
+                margin: 24px 0 0
     .footer
         &__logo
             gap: 4px
@@ -1878,3 +1915,115 @@ body
         &__info
             p
                 font-size: 14px
+
+.modal
+    position: fixed
+    left: 0
+    width: 100vw
+    height: 100vh
+    top: 0
+    opacity: 0
+    pointer-events: none
+    display: flex
+    justify-content: start
+    align-items: start
+    padding: 20px
+    overflow-y: auto
+    z-index: 100
+    &.active
+        opacity: 1
+        pointer-events: all
+    &__close
+        position: absolute
+        top: 40px
+        right: 40px
+        cursor: pointer
+        svg
+            width: 60px
+            height: 60px
+    &__overflow
+        background: rgba(28, 28, 28, 0.8)
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+
+.case-modal
+    &__wrapper
+        border: 2px solid $accent
+        border-radius: 4px
+        width: 1196px
+        box-shadow: 0 4px 4px -1px rgba(12, 12, 13, 0.05), 0 4px 4px -1px rgba(12, 12, 13, 0.1)
+        background: $white
+        position: relative  
+        padding: 64px 122px
+        margin: auto
+    .case__list
+        margin: 100px 0 0
+    &__title
+        font: 700 30px / 1.2 $second-family
+        color: $dark
+        max-width: calc( 100% - 100px )
+
+.modal-form
+    &__container
+        position: relative
+        padding: 90px 20px
+        border-radius: 4px
+        max-width: 954px
+        background: $white
+        margin: auto
+        width: 100%
+    &__wrapper
+        max-width: 467px
+        margin: 0 auto
+    &__name
+        font: 800 40px / 1.2 $second-family
+        color: $dark
+    input
+        display: block
+        width: 100%
+        box-sizing: border-box  
+        border: 1px solid $lg
+        padding: 18px 20px
+        background: $white
+        font-family: $font-family
+        font-weight: 400
+        font-size: 20px
+        line-height: 1.2
+        color: $dark
+        &::placeholder
+            color: $lg
+    .btn__blc
+        margin: 40px 0 0
+        width: 100%
+    &__text
+        margin: 34px 0 0
+        font: 400 16px / 1.25 $font-family
+        color: $dark
+        max-width: 390px
+    .wpcf7
+        margin: 40px 0 0
+        display: grid
+        grid-template-columns: 1fr
+        gap: 16px
+
+@media ( max-width: 1000px )
+    .case-modal__wrapper
+        padding: 64px 20px
+    .modal
+        &__close
+            top: 20px   
+            right: 20px
+            svg
+                width: 35px
+                height: 35px
+
+.wpcf7-response-output
+    display: none
+    margin: 32px 0 0
+    font-size: 16px
+    padding: 0
+    border: none
