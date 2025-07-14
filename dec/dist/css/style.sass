@@ -1,0 +1,1076 @@
+$textcolor: #bebec9
+$color: #fff
+$font-family: "Manrope", sans-serif
+$second-family: "Hauora", sans-serif
+$third-family: "Lato", sans-serif
+
+    
+body
+    background: #0e0e0e
+    position: relative
+    overflow-x: hidden
+    font: 400 16px / 1.4 "Manrope", sans-serif
+    color: #f7f7f7
+html
+    position: relative
+    overflow-x: hidden
+.container
+    max-width: 1160px
+    margin: 0 auto
+    box-sizing: content-box
+    padding: 0 15px
+
+.btn
+    &__blue
+        border: none
+        padding: 15px 22px
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 10px
+        font: 400 16px / 1.4 "Manrope", sans-serif
+        color: #fff
+        border-radius: 10px
+        background: #0d6af9
+        transition: all .3s
+        svg
+            width: 16px
+            height: 16px
+        &:hover
+            opacity: .7
+        
+
+.nav
+    padding: 20px 0 17px
+    background: #0e0e0e
+    &__overflow
+        position: fixed
+        top: 0
+        left: 0
+        width: 100vw
+        height: 100vh
+        z-index: 5
+        background: rgba(0, 0, 0, 0.6)
+        pointer-events: none
+        transition: all .3s
+        opacity: 0
+        &.active
+            opacity: 1
+            pointer-events: all
+    &__hum,
+    &__mob
+        display: none
+    .container
+        max-width: 1410px
+    &__row
+        display: grid
+        grid-template-columns: auto auto 1fr auto auto
+        gap: 30px
+        align-items: center
+    &__logo
+        width: 100%
+        max-width: 94px
+        img
+            width: 100%
+    .btn__blue
+        padding: 13px
+        gap: 48px
+        svg
+            width: 24px
+            height: 24px
+    &__search
+        position: relative
+        button
+            width: 50px
+            height: 50px
+            border-radius: 8px
+            display: flex
+            justify-content: center
+            align-items: center
+            background: #fff
+            transition: all .3s
+            position: absolute
+            top: 0
+            right: 0
+            border: none
+            svg
+                width: 24px
+                height: 24px
+            &:hover
+                opacity: .7
+        input
+            width: 100%
+            box-sizing: border-box  
+            font: 400 16px / 1.4 "Manrope", sans-serif
+            color: #fff
+            border-radius: 8px
+            background: #363636
+            border: 1px solid #000
+            padding: 13px
+            padding-right: 40px
+            &::placeholder
+                color: #a9a7a9
+    &__link
+        font: 400 16px / 1.4 "Manrope", sans-serif
+        color: #fff
+        transition: all .3s
+        &:hover
+            color: #0d6af9
+    &__list
+        margin: 15px 0 0
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 30px
+        a
+            opacity: 0.9
+            font: 400 16px / 1.4 "Manrope", sans-serif
+            color: #fff
+            transition: all .3s
+            &:hover
+                color: #0d6af9
+    &__drop
+        position: absolute
+        left: 0
+        width: 100%
+        top: 85px
+        display: grid 
+        grid-template-columns: 306px 1fr
+        background: #404040
+        pointer-events: none
+        opacity: 0
+        transition: all .3s
+        z-index: 50
+        &.active
+            opacity: 1
+            pointer-events: all
+        &_list
+            background: #1c1c1c
+            padding: 10px
+            display: grid
+            grid-template-columns: 1fr
+            gap: 3px
+            li
+                border-radius: 4px
+                padding: 5px 10px
+                display: grid
+                grid-template-columns: 18px 1fr
+                gap: 10px
+                align-items: center
+                font: 500 13px / 1.4 "Manrope", sans-serif
+                color: #fff
+                transition: all .3s
+                cursor: pointer
+                &.active,
+                &:hover
+                    background: #363636
+            svg,
+            img
+                width: 18px
+                height: 18px
+                object-fit: contain
+                display: block
+        &_block
+            padding: 20px
+            display: none
+            p
+                font: 500 24px / 1 "Hauora", sans-serif
+                letter-spacing: -0.04em
+                color: #fff
+            ul
+                grid-template-columns: auto auto
+                gap: 80px
+                row-gap: 10px
+                display: grid
+                justify-content: start
+                margin: 20px 0 0
+                a
+                    font: 400 16px / 1.4 "Manrope", sans-serif
+                    color: #fff
+                    transition: all .3s
+                    &:hover
+                        color: #0d6af9
+            &.active
+                display: block
+
+.header
+    min-height: 646px
+    position: relative
+    display: flex
+    flex-direction: column
+    &__bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        z-index: -1
+    h1
+        font: 500 75px / 1 "Hauora", sans-serif
+        letter-spacing: -0.04em
+        color: #f0f0f0
+        span
+            background: linear-gradient(49deg, #005ff9 0%, #97dbfc 100%)
+            background-clip: text
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+    .container
+        margin-top: auto
+    &__info
+        padding: 13px 0 40px
+        display: grid
+        grid-template-columns: 1fr auto
+        gap: 40px
+        align-items: end
+        position: relative
+        z-index: 2
+        row-gap: 0
+        &::before
+            content: ''
+            z-index: -2
+            background: linear-gradient(180deg, rgba(14, 14, 14, 0) 0%, #0e0e0e 100%)
+            position: absolute
+            top: 0
+            left: 50%
+            height: 100%
+            width: 100vw
+            transform: translateX(-50%)
+    &__text
+        margin: 10px 0 0
+    .btn__blue
+        grid-column: 2/3
+        grid-row: 1/3
+
+.title
+    font: 400 16px / 1.4 "Manrope", sans-serif
+    color: #fff
+    opacity: 0.7
+    &-main
+        font: 500 40px / 1 "Hauora", sans-serif
+        letter-spacing: -0.04em
+        color: #fff
+        span
+            letter-spacing: -0.04em
+            text-align: center
+            background: linear-gradient(49deg, #005ff9 0%, #97dbfc 100%)
+            background-clip: text
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+
+.brand
+    padding: 100px 0 50px
+    background: url('../img/brand_bg.svg') center no-repeat
+    background-size: cover
+    position: relative
+    z-index: 2
+    &::before
+        content: ''
+        display: block
+        position: absolute
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+        width: 1160px
+        height: 262px
+        border-radius: 100%
+        background: #0064ff
+        filter: blur(132.5px)
+        z-index: -1
+        opacity: .2
+    &__slider
+        margin: 30px 0 0
+        overflow: visible !important
+    &__title
+        display: flex
+        justify-content: space-between
+    &__more
+        font: 400 16px / 1.4 "Manrope", sans-serif
+        text-align: right
+        color: #fff
+        opacity: 0.7
+        transition: all .3s
+        &:hover
+            opacity: 1
+    .swiper-wrapper
+        z-index: 3
+        overflow: visible
+    .swiper-slide
+        border: 1px solid rgba(2, 97, 249, 0.1)
+        border-radius: 10px
+        background: linear-gradient(135deg, #093780 0%, #0e141d 49%, #0c1f3d 100%)
+        padding: 40px 20px
+        img
+            height: 85px
+            max-width: 240px
+            width: 100%
+            display: block
+            margin: 0 auto
+            object-fit: contain
+
+.purpose
+    padding: 50px 0 100px
+    position: relative
+    overflow: hidden
+    z-index: 2
+    &::before
+        content: ''
+        display: block
+        width: 100vw
+        height: 250px
+        position: absolute
+        left: 0
+        bottom: 0
+        background: url('../img/purpose_bg.png') top no-repeat
+        background-size: cover
+        z-index: -1
+    h2
+        margin: 30px 0 0
+    &__subtitle
+        margin: 10px 0 0
+        font: 400 16px / 1.4 "Manrope", sans-serif
+        color: #f7f7f7
+    &__img
+        width: 100%
+        margin: 30px 0 0
+        border-radius: 10px
+    &__har
+        margin: 30px auto 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        max-width: 600px
+        position: relative
+        p
+            font: 600 80px / 1 "Hauora", sans-serif
+            letter-spacing: -0.04em
+            text-align: center
+            background: linear-gradient(49deg, #005ff9 0%, #97dbfc 100%)
+            background-clip: text
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            &+p
+                margin: 10px 0 0
+                font: 600 16px / 1.4 "Manrope", sans-serif
+                color: #fff
+                -webkit-text-fill-color: #fff
+    
+.delivery
+    position: relative
+    background: url('../img/delivery_bg.svg') center no-repeat
+    background-size: cover
+    padding: 50px 0 100px
+    h2
+        margin: 10px 0 0
+    &__wrapper
+        margin: 30px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 5px
+    &__item
+        border-radius: 10px
+        background: #1a2333
+        padding: 20px
+        display: flex
+        flex-direction: column
+        p
+            font: 400 16px / 1.4 "Manrope", sans-serif
+            color: #fff
+            opacity: .7
+            &+p
+                font: 500 20px / 1.2 "Hauora", sans-serif
+                letter-spacing: -0.04em
+                opacity: 1
+                margin: 10px 0 auto
+        img
+            width: 100%
+            height: 181px
+            object-fit: cover   
+            border-radius: 10px
+            margin: 20px 0 0
+    .btn__blue
+        margin: 5px 0 0
+        width: 100%
+
+.choose
+    background: url('../img/choose_bg.png') center no-repeat
+    background-size: cover
+    position: relative
+    overflow: hidden
+    z-index: 2
+    padding: 100px 0
+    &::before
+        content: ''
+        display: block
+        position: absolute
+        border-radius: 100%
+        background: #0d6af9
+        filter: blur(60px)
+        top: -114px
+        left: 0
+        width: 100vw
+        height: 227px
+        opacity: .7
+        z-index: -1
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        border-radius: 100%
+        background: #0d6af9
+        filter: blur(60px)
+        bottom: -60px
+        left: 50%
+        transform: translateX(-50%)
+        width: 2000px
+        height: 144px
+        opacity: .7
+        z-index: -1
+    &__title
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 0
+        p
+            max-width: 513px
+            margin: 0 0 0 auto
+            font: 400 16px / 1.4 "Manrope", sans-serif
+            color: #f7f7f7
+    &__wrapper
+        margin: 50px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+    &__item
+        min-height: 235px
+        backdrop-filter: blur(10px)
+        background: rgba(113, 164, 254, 0.1)
+        padding: 30px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        p
+            font: 600 20px / 1.4 "Manrope", sans-serif
+            color: #fff
+            &+p
+                font: 400 14px / 1.4 "Manrope", sans-serif
+                opacity: 0.9
+        &:nth-child(3)
+            grid-column: 4 / 5
+        &:nth-child(6)
+            grid-column: 2 / 3
+        &:nth-child(7)
+            grid-column: 4 / 5
+    &__wht
+        grid-column: 3/4
+        background: #edf3fe
+        padding: 20px
+        display: flex
+        flex-direction: column
+        p
+            font: 600 20px / 1.4 "Manrope", sans-serif
+            color: #000
+            &+p
+                margin: 5px 0 auto
+                font: 400 14px / 1.4 "Manrope", sans-serif
+                opacity: 0.9
+        .btn__blue
+            width: 100%
+            margin: 30px 0 0
+
+.mediacenter
+    padding: 50px 0 90px
+    background: url('../img/mediacenter_bg.svg') center no-repeat
+    background-size: contain
+    &__title
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__link
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 13px
+        a
+            display: block
+            padding: 17px 32px
+            font: 700 12px / 1.05 "Manrope", sans-serif
+            letter-spacing: 0.05em
+            text-transform: uppercase
+            color: #fff
+            transition: all .3s
+            border: 1px solid #fff
+            border-radius: 30px
+            background: transparent
+            &:hover
+                color: #0d6af9
+                background: #fff
+    &__tab
+        display: flex
+        gap: 10px
+        align-items: center
+        justify-content: start
+        margin: 50px 0 0
+        a
+            font: 400 16px / 1.4 "Manrope", sans-serif
+            color: #fff
+            opacity: 0.5
+            transition: all .3s
+            &:hover,
+            &.active
+                opacity: 1
+    &__wrapper
+        margin: 10px 0 0
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 26px
+        display: none
+        &.active
+            display: grid
+    &__item
+        position: relative
+        img
+            width: 100%
+            height: 212px
+            border-radius: 15px
+            object-fit: cover
+        &_date
+            position: absolute
+            top: 10px
+            left: 10px
+            font: 700 12px / 1.05 "Manrope", sans-serif
+            letter-spacing: 0.05em
+            color: #fff
+            padding: 5px 10px
+            border: 1px solid #fff
+            border-radius: 300px
+        &_text
+            margin: 15px 0 0
+            font: 500 16px / 1.4 "Manrope", sans-serif
+            color: #fff
+        &_btn
+            margin: 20px 0 0
+            border: 1px solid #fff
+            border-radius: 9px
+            padding: 15px 30px
+            font: 500 16px / 1.05 "Manrope", sans-serif
+            letter-spacing: 0.05em
+            color: #fff
+            transition: all .3s
+            display: block
+            width: max-content
+            &:hover
+                color: #0d6af9
+                background: #fff
+
+.footer
+    position: relative
+    overflow: hidden
+    padding: 60px 0 40px
+    h2
+        font: 500 60px / 1 "Hauora", sans-serif
+        letter-spacing: -0.04em
+        color: #fff
+    &::before
+        content: ''
+        display: block
+        position: absolute
+        border-radius: 100%
+        background: #0d6af9
+        filter: blur(60px)
+        top: -114px
+        left: 0
+        width: 100vw
+        height: 227px
+        opacity: .7
+        z-index: -1
+    iframe
+        margin: 50px 0 0
+        border-radius: 15px
+    &__wrapper
+        margin: 20px 0 0
+        display: grid
+        grid-template-columns: 2fr 1fr
+        gap: 30px
+        align-items: start
+    &__har
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 30px
+        div
+            max-width: 400px
+        p
+            font: 400 16px / 1.4 "Manrope", sans-serif
+            text-transform: uppercase
+            color: #fff
+            opacity: 0.6
+            &+p
+                margin: 10px 0 0
+                opacity: 1
+                text-transform: none
+        a
+            display: block
+            font: 400 20px / 1.4 "Manrope", sans-serif
+            color: #fff
+            margin: 10px 0 0
+            transition: all .3s
+            &:hover
+                color: #0d6af9
+        .soc
+            div
+                display: flex
+                justify-content: start
+                align-items: center
+                margin: 10px 0 0
+                gap: 7px
+            a
+                margin: 0
+                width: 55px
+                height: 55px
+                border-radius: 100%
+                display: flex
+                justify-content: center
+                align-items: center
+                background: #f8f8f8
+                transition: all .3s
+                &:hover
+                    opacity: .7
+    &__list
+        display: grid
+        gap: 15px
+        a
+            font: 400 16px / 1.4 "Manrope", sans-serif
+            color: #fff
+            transition: all .3s
+            &:hover
+                color: #0d6af9
+        li
+            &:last-child
+                display: none
+    &__row
+        display: flex
+        align-items: end
+        justify-content: space-between
+        margin: 35px 0 0
+        padding: 13px 0 0
+        border-top: 2px solid #0d6bf954
+        p,
+        a
+            font: 400 16px / 1.4 "Manrope", sans-serif
+            color: #fff
+            transition: all .3s
+        a
+            &:hover
+                color: #0d6af9
+        p
+            margin: 12px 0 0
+        .btn__blue
+            align-self: start
+        img
+            width: 144px
+
+@media ( max-width: 1200px )
+    .nav
+        &__row
+            gap: 15px
+    .header
+        .btn__blue
+            grid-row: auto
+        h1
+            grid-column: 1/3
+        &__info
+            gap: 10px
+        &__text
+            margin: 0
+    .brand
+        .swiper
+            &-slide
+                width: 250px
+                img
+                    height: 85px
+    .choose
+        &__wrapper
+            grid-template-columns: 1fr 1fr 1fr
+        &__item
+            &:nth-child(3),
+            &:nth-child(7)
+                grid-column: auto
+            &:nth-child(6)
+                grid-column: 2/3
+        &__wht
+            grid-column: 3/4
+
+@media (max-width: 960px)
+    .nav
+        padding: 20px 0
+        &__row
+            gap: 10px
+            grid-template-columns: auto auto 1fr auto
+        &__link
+            display: none
+        &__list
+            display: none
+        &__hum
+            display: block
+            width: 50px
+            height: 50px
+            border-radius: 8px
+            background: #fff
+            display: flex
+            justify-content: center
+            align-items: center
+            cursor: pointer
+        .btn__blue
+            gap: 14px
+        &__mob
+            display: block
+            position: absolute
+            top: 0
+            right: 0
+            width: 328px
+            height: 100vh
+            background: #0e0e0e
+            z-index: 50
+            padding: 30px
+            display: flex
+            flex-direction: column
+            pointer-events: none
+            opacity: 0
+            transition: all .3s
+            &.active
+                opacity: 1
+                pointer-events: all
+            &_search
+                display: none
+            &_list
+                display: grid
+                grid-template-columns: 1fr
+                gap: 10px
+                margin: 0 0 auto
+            &_link
+                margin: 20px 0 0
+                display: grid
+                grid-template-columns: 1fr
+                gap: 10px
+                a
+                    font: 500 20px / 1.4 "Hauora", sans-serif
+                    letter-spacing: -0.04em
+                    color: #fff
+                    padding: 13px
+                    border: 1px solid #fff
+                    border-radius: 33px
+                    display: block
+                    text-align: center
+                    &+a
+                        color: #0e0e0e
+                        background: #fff
+            &_soc
+                margin: 20px 0 0
+                display: flex
+                justify-content: start
+                align-items: center
+                gap: 5px
+                a
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    width: 34px
+                    height: 34px
+                    border-radius: 100%
+                    background: #f8f8f8
+    .header
+        &__info
+            display: block
+            padding: 45px 0 15px
+        h1
+            font-size: 51px
+        &__text
+            margin: 10px 0 0
+            font-size: 16px
+        .btn__blue
+            margin: 10px 0 0
+    .brend
+        padding: 60px 0 50px
+    .title-main
+        font-size: 35px
+    .purpose
+        padding: 20px 0 40px
+        h2
+            margin: 10px 0 0
+        &__img
+            margin: 20px 0 0
+        &__har
+            p
+    .delivery
+        padding: 50px 0 40px
+        &__wrapper
+            margin: 20px 0 0
+            grid-template-columns: 1fr 1fr
+    .choose
+        padding: 70px 0 40px
+        &__title
+            gap: 12px
+            grid-template-columns: 1fr
+            p
+                margin: 0
+                max-width: 100%
+        &__wrapper
+            margin: 13px 0 0
+            grid-template-columns: 1fr 1fr
+        &__wht
+            grid-column: auto
+        &__item
+            &:nth-child(6),
+            &:nth-child(7)
+                order: 3
+                grid-column: auto
+            &:nth-child(3)
+                order: 2
+                grid-column: 2/3
+    .mediacenter
+        padding: 50px 0 
+        &__title
+            align-items: start
+        &__tab
+            margin: 40px 0 0
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+            gap: 10px
+            row-gap: 40px
+    .footer
+        padding: 60px 0 20px
+        h2
+            font-size: 35px
+        iframe
+            margin: 20px 0 0
+        &__wrapper
+            margin: 70px 0 0
+            grid-template-columns: 1fr
+            gap: 10px
+        &__list
+            width: calc( 50% - 15px )
+            margin: 0 0 0 auto
+        &__row
+            margin: 30px 0 0
+            padding: 13px 0 0
+            display: grid
+            grid-template-columns: 1fr auto
+            gap: 5px
+            div
+                grid-row: 1/3
+            a
+                order: 2
+            .btn__blue
+                width: max-content
+                margin: 0 0 0 auto
+
+@media ( max-width: 640px )
+    .nav
+        &__logo
+            max-width: 70px
+        &__row
+            gap: 7px
+        &__drop
+            grid-template-columns: 255px 1fr
+            &_block
+                ul
+                    grid-template-columns: 1fr
+    .header
+        h1
+            font-size: 38px
+        &__text
+            font-size: 14px
+        &__info
+            padding: 40px 0
+    .brand
+        padding: 60px 0 0
+        .swiper-slide
+            max-width: 200px
+            padding: 32px
+            img
+                height: 65px
+    .title-main
+        font-size: 30px
+    .purpose
+        padding: 100px 0 36px
+        &__subtitle
+            font-size: 14px
+        &::before
+            width: 800px
+            height: 183px
+            left: 50%
+            transform: translateX(-50%)
+        &__har
+            p
+                font-size: 60px
+                &+p
+                    margin: 20px 0 0
+    .delivery
+        &__item
+            padding: 20px 15px
+            p
+                &+p
+                    font-size: 17px
+            img
+                margin: 28px 0 0
+    .choose
+        &__item
+            padding: 15px
+            min-height: 218px
+            p
+                font-size: 17px
+        &__wht
+            padding: 15px
+            p
+                font-size: 17px
+            .btn__blue
+                padding: 15px 10px
+    .mediacenter
+        &__title
+            flex-direction: column
+            gap: 10px
+        &__tab
+            margin: 30px 0 0
+        &__wrapper
+            grid-template-columns: 1fr
+            gap: 25px
+    .footer
+        padding: 70px 0 30px
+        iframe
+            margin: 20px 0 0
+            height: 350px
+        h2
+            font-size: 30px
+        &__wrapper
+            margin: 20px 0 0
+            gap: 50px
+        &__har
+            gap: 20px
+            div
+                &:nth-child(3),
+                &:nth-child(1)
+                    order: 2
+                    grid-column: 1/3
+        &__list
+            width: 100%
+            grid-template-columns: 1fr 1fr
+            li
+                &:last-child
+                    display: block
+        &__row
+            a
+                display: none
+            div
+                grid-row: auto
+
+@media ( max-width: 480px )
+    .container
+        padding: 0 10px
+    .nav
+        &__search
+            display: none
+        &__row
+            grid-template-columns: auto 1fr auto
+            .btn__blue
+                width: 100%
+                justify-content: space-between
+        &__mob
+            width: 100vw
+            padding: 15px
+            &_list
+                margin: 30px 0 auto
+            &_search
+                display: block
+        &__drop
+            grid-template-columns: 58px 1fr
+            &_list
+                li
+                    display: block
+                p
+                    display: none
+            &_block
+                padding: 15px
+                a
+                    font-size: 14px
+                ul
+                    margin: 10px 0 0
+    .header
+        min-height: 540px
+        h1
+            font-size: 32px
+        &__text
+            font-size: 13px
+    .title
+        font-size: 13px
+        &-main
+            font-size: 23px
+    .brand
+        padding: 35px 0 40px
+        &__more
+            font-size: 13px
+        .swiper-slide
+            max-width: 143px
+            padding: 22px
+            img
+                height: 47px
+        &__slide
+            margin: 20px 0 0
+    .purpose
+        padding: 30px 0 50px
+        &__img
+            height: 380px
+            margin: 20px 0 0
+        &__har
+            margin: 20px 0 0
+            p
+                font-size: 36px
+                &+p
+                    font-size: 9px
+                    margin: 12px 0 0
+    .delivery
+        &__wrapper
+            grid-template-columns: 1fr
+        .btn__blue
+            margin: 10px 0 0
+    .choose
+        &__subtitle
+            font-size: 13px
+        &__wrapper
+            margin: 30px 0 0
+            grid-template-columns: 1fr
+        &__item
+            grid-column: auto !important
+    .mediacenter
+        padding: 50px 0 30px
+        &__link
+            a
+                text-align: center
+                font-size: 12px
+                padding: 17px 
+        &__title
+            gap: 20px
+        &__item
+            &_text
+                font-size: 14px
+        &__tab
+            a
+                font-size: 14px
+    .footer
+        padding: 50px 0 20px
+        h2
+            font-size: 23px
+        &__har
+            grid-template-columns: 1fr
+            gap: 10px
+            div
+                grid-column: auto !important
+            p,
+            p+p,
+            a
+                font-size: 14px
+            p+p
+                margin: 5px 0 0
+        &__wrapper
+            gap: 40px
+        &__list
+            grid-template-columns: 1fr
+            gap: 10px
+        &__row
+            .btn__blue
+                display: none
