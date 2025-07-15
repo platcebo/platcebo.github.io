@@ -257,124 +257,46 @@
         </div>
         <div class="nav__overflow"></div>
     </nav>
-    <section class="brand-page">
+    <section class="form">
         <div class="container">
             <div class="breadcrumbs">
                 <a href="#">Главная /</a>
-                <p>Бренды</p>
+                <p>Форма обратной связи</p>
             </div>
-            <h1>Бренды, официально представленные компанией <span>Диэлком-ЭК</span></h1>
-            <form action="#" class="brand-page__filter">
-                <div class="brand-page__filter_row">
-                    <div class="brand-page__filter_item">
-                        <p class="brand-page__filter_text">Страна производителя:</p>
-                        <div class="brand-page__filter_select">
-                            <p>Страна производитель</p>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19 9L12 16L5 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <select name="" id="">
-                                <option value="Страна производитель">Страна производитель</option>
-                                <option value="Не выбрано1">Не выбрано1</option>
-                                <option value="Не выбрано2">Не выбрано2</option>
-                                <option value="Не выбрано3">Не выбрано3</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="brand-page__filter_item">
-                        <p class="brand-page__filter_text">Категория:</p>
-                        <div class="brand-page__filter_select">
-                            <p>Категория</p>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19 9L12 16L5 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <select name="" id="">
-                                <option value="Категория">Категория</option>
-                                <option value="Не выбрано1">Не выбрано1</option>
-                                <option value="Не выбрано2">Не выбрано2</option>
-                                <option value="Не выбрано3">Не выбрано3</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="brand-page__filter_item">
-                        <p class="brand-page__filter_text">Сортировать по::</p>
-                        <div class="brand-page__filter_select">
-                            <p>Сортировать по:</p>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19 9L12 16L5 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <select name="" id="">
-                                <option value="Сортировать по:">Сортировать по:</option>
-                                <option value="Не выбрано1">Не выбрано1</option>
-                                <option value="Не выбрано2">Не выбрано2</option>
-                                <option value="Не выбрано3">Не выбрано3</option>
-                            </select>
-                        </div>
+            <h1>Рассчитаем стоимость и сроки доставки компонентов</h1>
+            <div class="form__wrapper">
+                <div class="form__input">
+                    <p>имя</p>
+                    <input type="text" placeholder="Введите ваше имя">
+                </div>
+                <div class="form__input">
+                    <p>Компания</p>
+                    <input type="text" placeholder="Название компании">
+                </div>
+                <div class="form__input">
+                    <p>Телефон</p>
+                    <input type="text" placeholder="+7 (900) 000-00-00">
+                </div>
+                <div class="form__input">
+                    <p>почта</p>
+                    <input type="text" placeholder="Введите вашу почту">
+                </div>
+                <div class="form__input form__width">
+                    <p>почта</p>
+                    <textarea name="" id="" placeholder="Компоненты и их количество"></textarea>
+                </div>
+                <div class="form__width form__file">
+                    <p class="form__file_text">Прикрепить файл</p>
+                    <div class="form__file_wrapper">
+                        <input type="file">
+                        <p>Переместите файл сюда или нажмите на кнопку</p>
+                        <a href="#" class="btn__blue">Загрузить файл</a>
                     </div>
                 </div>
-                <div action="" class="nav__search">
-                    <input type="text" placeholder="Найти товары">
-                    <button>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.7071 14.2929C15.3166 13.9024 14.6834 13.9024 14.2929 14.2929C13.9024 14.6834 13.9024 15.3166 14.2929 15.7071L15.7071 14.2929ZM20.2929 21.7071C20.6834 22.0976 21.3166 22.0976 21.7071 21.7071C22.0976 21.3166 22.0976 20.6834 21.7071 20.2929L20.2929 21.7071ZM10 16C6.68629 16 4 13.3137 4 10H2C2 14.4183 5.58172 18 10 18V16ZM4 10C4 6.68629 6.68629 4 10 4V2C5.58172 2 2 5.58172 2 10H4ZM10 4C13.3137 4 16 6.68629 16 10H18C18 5.58172 14.4183 2 10 2V4ZM16 10C16 13.3137 13.3137 16 10 16V18C14.4183 18 18 14.4183 18 10H16ZM14.2929 15.7071L20.2929 21.7071L21.7071 20.2929L15.7071 14.2929L14.2929 15.7071Z" fill="#4A4A4A" />
-                        </svg>
-                    </button>
+                <div class="form__width">
+                    <button class="btn__blue form__send">Отправить</button>
+                    <p class="form__text">Нажимая кнопку "Отправить", Вы даете согласие на <a href="#">обработку персональных данных</a></p>
                 </div>
-            </form>
-            <div class="brand-page__wrapper">
-                <div class="brand-page__item">
-                    <div class="brand-page__item_img">
-                        <img src="img/brande-page_1.png" alt="">
-                    </div>
-                    <div class="brand-page__item_info">
-                        <p class="brand-page__item_cat">Источники питания</p>
-                        <p class="brand-page__item_name">Pairui Group Fuan Electronics</p>
-                        <p class="brand-page__item_text">Группа компаний PaiRui — вертикально интегрированная холдинг, специализирующаяся на разработке и производстве источников питания, магнитных сердечников и пластиковых деталей с целью предложить конкурентоспособные цены и уникальные продукты высокого качества.</p>
-                        <button class="btn__blue">Подробнее</button>
-                        <button class="brand-page__item_btn">Товары производителя</button>
-                    </div>
-                </div>
-                <div class="brand-page__item">
-                    <div class="brand-page__item_img">
-                        <img src="img/brande-page_2.png" alt="">
-                    </div>
-                    <div class="brand-page__item_info">
-                        <p class="brand-page__item_cat">Источники питания</p>
-                        <p class="brand-page__item_name">Pairui Group Fuan Electronics</p>
-                        <p class="brand-page__item_text">Группа компаний PaiRui — вертикально интегрированная холдинг, специализирующаяся на разработке и производстве источников питания, магнитных сердечников и пластиковых деталей с целью предложить конкурентоспособные цены и уникальные продукты высокого качества.</p>
-                        <button class="btn__blue">Подробнее</button>
-                        <button class="brand-page__item_btn">Товары производителя</button>
-                    </div>
-                </div>
-                <div class="brand-page__item">
-                    <div class="brand-page__item_img">
-                        <img src="img/brande-page_3.png" alt="">
-                    </div>
-                    <div class="brand-page__item_info">
-                        <p class="brand-page__item_cat">Источники питания</p>
-                        <p class="brand-page__item_name">Pairui Group Fuan Electronics</p>
-                        <p class="brand-page__item_text">Группа компаний PaiRui — вертикально интегрированная холдинг, специализирующаяся на разработке и производстве источников питания, магнитных сердечников и пластиковых деталей с целью предложить конкурентоспособные цены и уникальные продукты высокого качества.</p>
-                        <button class="btn__blue">Подробнее</button>
-                        <button class="brand-page__item_btn">Товары производителя</button>
-                    </div>
-                </div>
-            </div>
-            <a href="#" class="brand-page__more btn__blue">Показать ещё</a>
-            <div class="pag">
-                <ul>
-                    <li><a href="#" class="active">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                </ul>
-                <a href="#" class="pag__next">
-                    Дальше
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 12H21M21 12L16 7M21 12L16 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </a>
-                <p>3 из 64 брендов</p>
             </div>
         </div>
     </section>

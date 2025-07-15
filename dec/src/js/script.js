@@ -66,6 +66,34 @@ if(mediacenterTab !== null) {
     })
 }
 
+let select = document.querySelectorAll('.brand-page__filter_select select'),
+	selectText = document.querySelectorAll('.brand-page__filter_select p');
+
+if(select !== null) {
+	select.forEach((item,i)=>{
+        item.addEventListener('change', ()=>{
+            selectText[i].innerHTML = item.options[item.selectedIndex].textContent;
+        })
+    })
+}
+
+let supplyBtn = document.querySelectorAll('.supply__filter_btn'),
+    supplyFilter = document.querySelector('.supply__filter_drop');
+
+if(supplyFilter !== null) {
+    supplyBtn.forEach((item)=>{
+        item.addEventListener('click', ()=>{
+            supplyFilter.classList.add('active')
+        })
+    })
+    document.body.addEventListener('click', (event)=>{
+        if(event.target.closest('div.supply__filter')) {
+            return
+        } else {
+            supplyFilter.classList.remove('active')
+        }
+    })
+}
 
 
 
