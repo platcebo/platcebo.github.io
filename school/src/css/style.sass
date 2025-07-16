@@ -201,7 +201,7 @@ section
                 display: block
                 top: -230px
                 right: -400px
-                z-index: -1
+                z-index: -5
                 mix-blend-mode: color-dodge
                 opacity: 0.8
                 transform: rotate(12deg)
@@ -216,7 +216,7 @@ section
                 display: block
                 top: -200px
                 left: -400px
-                z-index: -1
+                z-index: -5
                 mix-blend-mode: color-dodge
                 opacity: 0.8
                 transform: rotate(-50deg)
@@ -2143,6 +2143,18 @@ section
             margin: 25px 0 0
         &__logo
             font-size: 16px
+        .container__block
+            &::after
+                width: 350px
+                height: 350px
+                top: -100px
+                right: -100px
+                transform: rotate(45deg)
+            &::before
+                width: 350px
+                height: 350px
+                top: -100px
+                left: -100px
     .nav
         &__logo
             max-width: 150px
@@ -2867,6 +2879,19 @@ section
             &_item
                 a
                     margin: 10px 0 0
+        .container__block
+            background-position: right bottom
+            &::after
+                width: 350px
+                height: 350px
+                top: -100px
+                right: -100px
+                transform: rotate(45deg)
+            &::before
+                width: 350px
+                height: 350px
+                top: -100px
+                left: -100px
     .last
         padding: 60px 0 0
         &__row
@@ -3734,6 +3759,19 @@ section
             p
                 text-align: left !important
                 color: #fff !important
+        .container__block
+            background-position: right bottom
+            &::after
+                width: 350px
+                height: 350px
+                top: -100px
+                right: -100px
+                transform: rotate(45deg)
+            &::before
+                width: 350px
+                height: 350px
+                top: -100px
+                left: -100px
         &__info
             display: flex
             flex-direction: column
