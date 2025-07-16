@@ -61,7 +61,7 @@ html
     &__mob
         display: none
     .container
-        max-width: 1410px
+        max-width: 100%
     &__row
         display: grid
         grid-template-columns: auto auto 1fr auto auto
@@ -686,7 +686,7 @@ html
 
 .catalog-page
     padding: 30px 0 100px
-    background: url('../img/catalog-page_bg.svg') bottom no-repeat
+    background: url('../img/catalog-page_bg.svg') top no-repeat
     background-size: cover
     h1
         font: 500 60px / 1 "Hauora", sans-serif
@@ -1196,7 +1196,7 @@ html
         &_title
             background: rgba(13, 107, 249, 0.1)
             display: grid
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 200px
             // border-bottom: 1px solid #e9e9e7
             a,
             p
@@ -1217,7 +1217,7 @@ html
                     border: none
         &_row
             display: grid
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 200px
             border-top: 1px solid #e9e9e7
             p
                 font: 500 16px / 1.4 "Manrope", sans-serif
@@ -1234,10 +1234,31 @@ html
             align-items: center
             gap: 10px
             font: 500 15px / 1.4 "Manrope", sans-serif
-            color: #333
-            border: 1px solid #e9e9e7
             border-radius: 11px
-            margin: 10px 0 0
+            text-decoration: none
+    &__func
+        padding: 10px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        div
+            max-width: 60px
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+            border: none
+        input
+            font-size: 12px
+            border: none
+            width: 100%
+            text-align: center
+            box-sizing: border-box
+            background: #fff
+        p
+            font-size: 12px
+            background: #0d6af9
+            color: #fff
+            cursor: pointer
+
 
 @media ( max-width: 1200px )
     .nav

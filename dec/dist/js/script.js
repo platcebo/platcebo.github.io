@@ -28,7 +28,7 @@ if(catalog !== null) {
     })
 
     catalogLink.forEach((item,i)=>{
-        item.addEventListener('click', ()=>{
+        item.addEventListener('mouseover', ()=>{
             for(let a=0;a<catalogLink.length; a++) {
                 catalogLink[a].classList.remove('active')
                 catalogBlock[a].classList.remove('active')
@@ -95,6 +95,26 @@ if(supplyFilter !== null) {
     })
 }
 
+let plus = document.querySelectorAll('.supply__func .plus'),
+    min = document.querySelectorAll('.supply__func .min'),
+    input = document.querySelectorAll('.supply__func input');
+
+if(input !== null) {
+    input.forEach((item,i)=>{
+        plus[i].addEventListener('click', ()=>{
+            item.value = Number(item.value) + 1
+            console.log(item.value)
+        })
+        min[i].addEventListener('click', ()=>{
+            if(item.value < 1) {
+                return
+            } else {
+                item.value = Number(item.value) - 1
+                console.log(item.value)
+            }
+        })
+    })
+}
 
 
 }, false);
