@@ -103,14 +103,12 @@ if(input !== null) {
     input.forEach((item,i)=>{
         plus[i].addEventListener('click', ()=>{
             item.value = Number(item.value) + 1
-            console.log(item.value)
         })
         min[i].addEventListener('click', ()=>{
-            if(item.value < 1) {
+            if(item.value <= 1) {
                 return
             } else {
                 item.value = Number(item.value) - 1
-                console.log(item.value)
             }
         })
     })
