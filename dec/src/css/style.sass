@@ -641,7 +641,7 @@ html
             &:hover
                 color: #0d6af9
         li
-            &:last-child
+            &.footer_policy
                 display: none
     &__row
         display: flex
@@ -662,6 +662,7 @@ html
             margin: 12px 0 0
         .btn__blue
             align-self: start
+            color: #fff !important
         img
             width: 144px
     &__inner
@@ -1113,7 +1114,7 @@ html
         width: 100%
     &__text
         font: 400 14px / 1.4 "Manrope", sans-serif
-        text-align: center
+        text-align: left
         color: rgba(0, 0, 0, 0.6)
         margin: 10px 0 0
         a
@@ -1123,6 +1124,44 @@ html
             color: rgba(0, 0, 0, 0.6)
             &:hover
                 color: #000
+    &__check
+        position: relative
+        max-width: 700px
+        margin: 0 auto
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 10px
+        span
+            min-width: 20px
+            width: 20px
+            height: 20px
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 1px solid #0d6af9
+            background: #fff
+            border-radius: 5px
+        svg
+            width: 14px
+            height: 14px
+            opacity: 0
+            transition: all .3s
+            path
+                fill: #0d6af9
+        input
+            position: absolute
+            top: 0
+            left: 0
+            width: 30px
+            height: 100%
+            opacity: 0
+            z-index: 2
+            cursor: pointer
+            &:checked
+                &+span
+                    svg
+                        opacity: 1
 
 .body-wht
     background: #fafafa
@@ -1259,6 +1298,83 @@ html
             background: rgb(9, 76, 178)
             color: #fff
             cursor: pointer
+
+.content
+    padding: 30px 0 100px
+    &__wrapper
+        display: grid
+        grid-template-columns: 240px 1fr
+        gap: 20px
+    &__list
+        ul
+            padding: 20px 20px 20px 0
+            border-right: 1px solid rgb(221, 221, 221)
+            display: grid
+            grid-template-columns: 1fr
+            gap: 15px
+        li
+            font: 400 16px / 1.4 "Manrope", sans-serif
+            color: #fff
+            transition: all .3s
+            cursor: pointer
+            &:hover,
+            &.active
+                color: #0d6af9
+    &__block
+        display: none
+        margin: 0 !important
+        &.active
+            display: block
+    &__info
+        margin: 20px 0 0
+        *
+            margin: 20px 0 0
+            &:nth-child(1)
+                margin: 0
+        h1,
+        h2
+            font: 500 40px / 1 "Hauora", sans-serif
+            letter-spacing: -0.04em
+            color: #0d6af9
+        a,
+        p,
+        li
+            font: 400 16px / 1.4 "Manrope", sans-serif
+            color: #fff
+        ol
+            counter-reset: list-counter 0
+            li
+                position: relative
+                padding: 0 0 0 40px
+                &::before
+                    content: counter(list-counter)
+                    counter-increment: list-counter 1
+                    position: absolute
+                    top: 0
+                    left: 0
+                    display: flex
+                    justify-content: center
+                    font: 400 12px / 1.4 "Manrope", sans-serif
+                    color: #fff
+                    width: 20px
+                    height: 20px
+                    border-radius: 100%
+                    background: #0d6af9
+        ul
+            li
+                position: relative
+                padding: 0 0 0 40px
+                &::before
+                    content: ''
+                    display: block
+                    position: absolute
+                    width: 5px
+                    height: 5px
+                    top: 50%
+                    left: 0
+                    transform: translateY(-50%)
+                    border-radius: 100%
+                    background: #0d6af9
 
 
 @media ( max-width: 1200px )
@@ -1639,7 +1755,7 @@ html
             width: 100%
             grid-template-columns: 1fr 1fr
             li
-                &:last-child
+                &.footer_policy
                     display: block
         &__row
             a
@@ -1726,6 +1842,9 @@ html
             &_row
                 p
                     font-size: 14px
+    .content
+        &__wrapper
+            grid-template-columns: 1fr
 
 @media ( max-width: 480px )
     .container

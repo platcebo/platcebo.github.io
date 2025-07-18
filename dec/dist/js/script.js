@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 let catalog = document.querySelector('.nav__drop'),
     catalogBtn = document.querySelector('.nav__drop_call'),
-    catalogLink = document.querySelectorAll('.nav__drop_list li'),
+    catalogLink = document.querySelectorAll('.nav__drop_link'),
     catalogOverflow = document.querySelector('.nav__overflow'),
     catalogMob = document.querySelector('.nav__mob'),
     navHum = document.querySelector('.nav__hum'),
@@ -62,6 +62,23 @@ if(mediacenterTab !== null) {
             }
             mediacenterTab[i].classList.add('active')
             mediacenterWrapper[i].classList.add('active')
+        })
+    })
+}
+
+let contentTab = document.querySelectorAll('.content__list li'),
+    contentWrapper = document.querySelectorAll('.content__block');
+
+if(contentTab !== null) {
+    contentTab.forEach((item,i)=>{
+        item.addEventListener('click', (e)=>{
+            e.preventDefault()
+            for(let a=0;a<contentTab.length; a++) {
+                contentTab[a].classList.remove('active')
+                contentWrapper[a].classList.remove('active')
+            }
+            contentTab[i].classList.add('active')
+            contentWrapper[i].classList.add('active')
         })
     })
 }
