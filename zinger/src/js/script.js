@@ -162,4 +162,24 @@ if(navLink !== null) {
     })
 }
 
+let form = document.querySelector('.form__wrapper'),
+    modal = document.querySelector('.modal-thanks'),
+    modalClose = document.querySelector('.modal-thanks__close');
+
+if(modal !== null) {
+    form.addEventListener('submit', (e)=>{
+        e.preventDefault()
+        modal.classList.add('active');
+
+        setTimeout(() => {
+            modal.classList.remove('active');
+        }, 3000);
+
+    })
+
+    modalClose.addEventListener('click', ()=>{
+        modal.classList.remove('active');
+    })
+}
+
 }, false);

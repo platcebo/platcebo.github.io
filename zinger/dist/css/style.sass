@@ -456,6 +456,31 @@ html
                 letter-spacing: 0.02em
                 color: #fff
 
+.modal-thanks
+    position: fixed
+    top: 126px
+    right: 16px
+    border: 1px solid #ebebee
+    border-radius: 16px
+    padding: 20px 24px
+    display: flex
+    justify-content: center
+    align-items: center
+    background: #f8f8f8
+    z-index: 100
+    gap: 12px
+    transform: translateX(120%)
+    transition: all .3s
+    max-width: calc( 100% - 32px )
+    &__close
+        margin: 0 0 0 4px
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+    &.active
+        transform: none
+
 @media ( max-width: 1200px )
     .footer
         &__block
