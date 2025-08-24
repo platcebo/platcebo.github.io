@@ -518,4 +518,35 @@ document.addEventListener('DOMContentLoaded', function() {
     //     })
     // })
 
+    let adTab = document.querySelectorAll('.my-ad__tab li'),
+        adWrapper = document.querySelectorAll('.my-ad__wrapper');
+
+    if(adTab !== null) {
+        adTab.forEach((item,i)=>{
+            item.addEventListener('click', ()=>{
+                for(let a = 0; a < adTab.length; a++) {
+                    adTab[a].classList.remove('active');
+                    adWrapper[a].classList.remove('active');
+                }
+                item.classList.add('active');
+                adWrapper[i].classList.add('active');
+            })
+        })
+
+        adWrapper.forEach((item)=>{
+            let adCheck = item.querySelectorAll('.my-ad__item_check input'),
+                adCheckAll = item.querySelector('.my-ad__check-all input');
+
+            adCheckAll.addEventListener('click', ()=>{
+                for(let a = 0; a < adCheck.length; a++) {
+                    if(adCheckAll.checked) {
+                        adCheck[a].checked = true
+                    } else {
+                        adCheck[a].checked = false
+                    }
+                }
+            })
+        })
+    }
+
 }, false);

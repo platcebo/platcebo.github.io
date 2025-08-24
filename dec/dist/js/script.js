@@ -120,16 +120,45 @@ if(input !== null) {
     input.forEach((item,i)=>{
         plus[i].addEventListener('click', ()=>{
             item.value = Number(item.value) + 1
+            item.setAttribute('data-quantity', Number(item.value))
         })
         min[i].addEventListener('click', ()=>{
             if(item.value <= 1) {
                 return
             } else {
                 item.value = Number(item.value) - 1
+                item.setAttribute('data-quantity', Number(item.value))
             }
         })
     })
 }
+
+document.querySelectorAll('.form__file_wrapper input').forEach(function(input) {
+  input.addEventListener('change', function() {
+    let file = this.files[0];
+    if (file) {
+      let inputFile = this.closest('.form__file_wrapper');
+      let textElement = inputFile.querySelector('.input-file-text');
+      if (textElement) {
+        textElement.textContent = file.name;
+      }
+    }
+  });
+});
+
+let supplyHum = document.querySelector('.supply__hum'),
+    supplyBlock = document.querySelector('.supply__list'),
+    supplyClose = document.querySelector('.supply .widget_nav_menu .widget_title');
+
+if(supplyBlock !== null) {
+    supplyHum.addEventListener('click', ()=>{
+        supplyBlock.classList.add('active')
+    })
+    supplyClose.addEventListener('click', ()=>{
+        supplyBlock.classList.remove('active')
+    })
+}
+
 
 
 }, false);

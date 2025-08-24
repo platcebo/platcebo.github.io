@@ -1,5 +1,6 @@
 $font-family: "Roboto", sans-serif
 
+
 body
     background: #f9fafb
     font-family: $font-family
@@ -38,7 +39,10 @@ body
         font: 600 16px / 1.42857 $font-family
         color: #fff
         transition: all .3s
-        display: block
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 8px
         cursor: pointer
         &:hover
             background: #2b52b4
@@ -51,7 +55,10 @@ body
         font: 600 16px / 1.42857 $font-family
         color: #344054
         transition: all .3s
-        display: block
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 8px
         cursor: pointer
         &:hover
             background: #c3c4c5
@@ -4945,6 +4952,211 @@ select
             margin: 16px 0 0
             width: 100%
             text-align: center
+
+.my-ad
+    grid-column: 2/4
+    &__tab
+        border: 1px solid #f2f4f7
+        border-radius: 8px
+        padding: 4px
+        background: #fff
+        display: flex
+        justify-content: start
+        align-items: center
+        gap: 8px
+        li
+            cursor: pointer
+            border-radius: 6px
+            padding: 8px 12px
+            font: 600 14px / 1.42857 $font-family
+            color: #667085
+            transition: all .3s
+            &.active,
+            &:hover
+                color: #344054
+                background: #f9fafb
+    &__wrapper
+        margin: 24px 0 0
+        display: none
+        grid-template-columns: 1fr
+        gap: 12px
+        &.active
+            display: grid
+    &__check-all
+        display: grid
+        grid-template-columns: 20px 1fr
+        gap: 12px
+        align-items: center
+        position: relative
+        span
+            display: flex
+            justify-content: center
+            align-items: center
+            transition: all .3s
+            border-radius: 6px
+            background: #fff
+            border: 1px solid #d0d5dd
+            width: 20px
+            height: 20px
+            svg
+                opacity: 0
+                transition: all .3s
+        input
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 2
+            opacity: 0
+            cursor: pointer
+            &:checked+span
+                border: 1px solid #376df6
+                background: #e3ebfe
+                svg
+                    opacity: 1
+        p
+            font: 400 16px / 1.5 "Manrope", sans-serif
+            color: #667085
+    &__item
+        display: grid
+        grid-template-columns: 20px 1fr
+        gap: 12px
+        align-items: stretch
+        &_check
+            position: relative
+            height: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            span
+                display: flex
+                justify-content: center
+                align-items: center
+                transition: all .3s
+                border-radius: 6px
+                background: #fff
+                border: 1px solid #d0d5dd
+                width: 20px
+                height: 20px
+                svg
+                    opacity: 0
+                    transition: all .3s
+            input
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                z-index: 2
+                opacity: 0
+                cursor: pointer
+                &:checked+span
+                    border: 1px solid #376df6
+                    background: #e3ebfe
+                    svg
+                        opacity: 1
+        &_name
+            font: 500 14px / 1.42857 "Manrope", sans-serif
+            color: #101828
+        &_row
+            margin: 8px 0 0
+            padding: 8px 0 0
+            border-top: 1px solid #eaecf0
+            display: flex
+            justify-content: start
+            align-items: center
+            .recom__place
+                margin: 0
+        &_func
+            margin: 0 0 0 auto
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 8px
+            div
+                display: flex
+                justify-content: center
+                align-items: center
+                gap: 4px
+            p
+                font: 400 12px / 1.3 "Manrope", sans-serif
+                color: #344054
+        &_sms
+            border-radius: 16px
+            padding: 4px 4px 5px 6px
+            background: #e3ebfe
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 4px
+            margin: 0 0 0 16px
+            p
+                display: block
+                padding: 2px
+                min-width: 22px
+                border-radius: 16px
+                background: #fff
+                font: 500 12px / 1.5 "Manrope", sans-serif
+                text-align: center
+                color: #2963f5
+        &_move
+            display: flex
+            a
+                display: flex
+                justify-content: center
+                align-items: center
+                gap: 8px
+                margin: 0 0 0 24px
+                position: relative
+                font: 400 14px / 1.42857 "Manrope", sans-serif
+                color: #475467
+                transition: all .3s
+                &::before
+                    content: ''
+                    display: block
+                    position: absolute
+                    top: 50%
+                    transform: translateY(-50%)
+                    left: -13px
+                    width: 1px
+                    height: 24px
+                    background: #eaecf0
+                &:hover
+                    color: #376df6
+        .recom
+            &__item
+                display: grid
+                grid-template-columns: 159px 1fr
+                align-items: start
+                gap: 16px
+                border: 1px solid #eaecf0
+                border-radius: 8px
+                padding: 12px
+                box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.06), 0 1px 3px 0 rgba(16, 24, 40, 0.1)
+                background: #fff
+            &__prev
+                border-radius: 4px
+                img
+                    height: 98px
+            &__info
+                padding: 0
+            &__price_val
+                font: 600 16px / 1.5 "Manrope", sans-serif
+                color: #1d2939
+                margin: 4px 0 0
+
+@media ( max-width: 1200px )
+    .my-ad__item
+        &_row
+            flex-wrap: wrap
+            row-gap: 10px
+            .recom__place
+                width: 100%
+        &_func
+            margin: 0
+        &_move
+            margin-left: auto
 
 @media ( max-width: 768px )
     .blog-page
