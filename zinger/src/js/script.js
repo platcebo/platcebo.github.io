@@ -70,13 +70,14 @@ let nav = document.querySelector('.nav'),
     header = document.querySelector('.header');
 
 if(header !== null) {
-    if(header.getBoundingClientRect().bottom < nav.getBoundingClientRect().height) {
+    if(window.scrollY > 10) {
         nav.classList.add('nav__fix');
     } else {
         nav.classList.remove('nav__fix');
     }
     window.addEventListener('scroll', ()=>{
-        if(header.getBoundingClientRect().bottom < nav.getBoundingClientRect().height) {
+        console.log(window.scrollY)
+        if(window.scrollY > 10) {
             nav.classList.add('nav__fix');
         } else {
             nav.classList.remove('nav__fix');
