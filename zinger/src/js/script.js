@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 var swiper = new Swiper(".header__swiper", {
     pagination: {
         el: ".header__swiper .swiper-pagination",
+        clickable: true,
     },
 });
 
