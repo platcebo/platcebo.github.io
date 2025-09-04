@@ -1,0 +1,242 @@
+$wht: #fff
+$braun: #cec4bc
+$gray: #ece7e4
+$blc: #1b1a1a
+$braun-dark: #403e3b
+$violet: #6c63ff
+
+body
+    background: #fff    
+    font-family: "roboto"
+    
+.container
+    max-width: 1200px
+    margin: 0 auto
+    padding: 0 15px
+
+.btn
+    &__blc
+        border-radius: 10px
+        background: #1b1a1a
+        padding: 11px 22px
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.5
+        color: #fff
+        display: block
+        border: none
+        position: relative
+    &__wht
+        border-radius: 10px
+        background: #fff
+        padding: 11px 22px
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.5
+        color: #1b1a1a
+        display: block
+        border: none
+        position: relative
+    &__anim
+        display: block
+        position: relative
+        b
+            display: block
+            position: relative
+            overflow: hidden
+        i
+            display: block
+            width: 100%
+            position: relative
+            &+i
+                position: absolute
+                left: 0
+                top: 100%
+        span
+            display: inline-block
+            position: relative
+            transition: transform .6s cubic-bezier(.76,0,.24,1)
+        &:hover
+            span
+                transform: translateY(-100%)
+
+.input
+    position: relative
+    p
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.1
+        color: #fff
+        position: absolute
+        left: 0
+        top: 0
+        transition: all .3s
+        transform-origin: 0% 50%
+        pointer-events: none
+    input
+        background: transparent 
+        padding: 0 0 5px
+        border: none
+        border-bottom: 1px solid rgba(255, 255, 255, 0.7)
+        box-shadow: none
+        color: $wht 
+        width: 100%
+        box-sizing: border-box
+        transition: all .3s
+        &:focus,
+        &:active,
+        &:not(:placeholder-shown) 
+            border-bottom: 1px solid #fff
+            &+p
+                transform: translateY(-100%) scale(0.8)
+    &__check
+        position: relative
+        display: grid
+        grid-template-columns: 18px 1fr
+        gap: 10px
+        p
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.1
+            color: #fff
+            a
+                color: #6c63ff
+                position: relative
+                display: inline-block
+                &::before
+                    content: ''
+                    display: block
+                    position: absolute
+                    top: 100%
+                    width: 0
+                    right: 0
+                    height: 1px
+                    background: #6c63ff
+                    transition: all .3s
+                &::after
+                    content: ''
+                    display: block
+                    position: absolute
+                    top: 100%
+                    height: 1px
+                    background: #6c63ff
+                    transition: all .3s
+                    opacity: 1
+                    left: 0
+                    width: 100%
+                    transition-delay: .1s
+                &:hover
+                    &::after
+                        right: 0
+                        width: 0
+                        left: auto
+                        transition-delay: 0s
+                    &::before
+                        left: 0
+                        right: auto
+                        width: 100%
+                        transition-delay: .1s
+        span
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 18px
+            height: 18px
+            border-radius: 3px
+            border: 1px solid #fff
+            transition: all .3s
+            svg
+                opacity: 0
+                transition: all .3s
+        input
+            position: absolute
+            top: 0
+            left: 0
+            width: 20px
+            height: 100%
+            opacity: 0
+            cursor: pointer
+            z-index: 2
+            &:checked
+                &+span
+                    background: #fff
+                    svg
+                        opacity: 1
+
+
+.nav
+    padding: 20px 0
+    &__logo
+        max-width: 140px
+        img
+            width: 100%
+    .container
+        display: flex
+        justify-content: start
+        align-items: center
+    ul
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 32px
+        margin: 0 32px 0 auto
+        a
+            font-weight: 400
+            font-size: 15px
+            line-height: 1.6
+            color: $blc
+            transition: all .3s
+            position: relative
+            &::before
+                content: ''
+                display: block
+                position: absolute
+                top: 100%
+                width: 0
+                right: 0
+                height: 1px
+                background: $blc
+                transition: all .3s
+            &:hover
+                &::before
+                    left: 0
+                    right: auto
+                    width: 100%
+
+.header
+    padding: 120px 0 
+    background: $gray
+    h1
+        font-weight: 600
+        font-size: 64px
+        line-height: 1
+        color: #1b1a1a
+        span
+            color: $violet
+    &__subtitle
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.1
+        color: #403e3b
+        margin: 30px 0 0
+        max-width: 500px
+    .container
+        display: grid
+        grid-template-columns: 1fr 400px
+        gap: 30px
+    &__form
+        padding: 40px 20px
+        border-radius: 30px
+        background: $braun-dark
+        &_text
+            font-weight: 400
+            font-size: 20px
+            line-height: 1.1
+            color: $wht
+        .btn__wht
+            margin: 20px 0 0
+            width: 100%
+    .input
+        margin: 30px 0 0
+        &__check
+            margin: 15px 0 0
