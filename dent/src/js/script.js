@@ -256,5 +256,25 @@ if(vacancyBtn !== null) {
     })
 }
 
+let serviceMore = document.querySelectorAll('.price-service__more'),
+    serviceDrop = document.querySelectorAll('.price-service__drop');
+
+if(serviceMore !== null) {
+    serviceMore.forEach((item,i)=>{
+        if(serviceDrop[i].querySelectorAll('.price-service__row').length < 7) {
+            serviceDrop[i].classList.add('dis')
+        }
+        
+        item.addEventListener('click', ()=>{
+            serviceDrop[i].classList.toggle('drop')
+            if(serviceDrop[i].classList.contains('drop')) {
+                item.querySelector('p').innerHTML = "Скрыть"
+            } else {
+                item.querySelector('p').innerHTML = "Показать еще"
+            }
+        })
+    })
+}
+
 
 }, false);

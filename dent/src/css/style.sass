@@ -391,6 +391,13 @@ html
             background: $white-80
             &.active
                 display: grid
+        &_block
+            grid-template-columns: 1fr 1fr 1fr 1fr
+            gap: 20px
+            padding: 20px
+            border-radius: 30px
+            background: $white-80
+            display: grid
         .nav__service_item,
         &_item
             display: grid
@@ -596,6 +603,9 @@ html
                 gap: 10px
                 p
                     color: $white
+    &-service
+        h1
+            font-size: 96px
 
 .about-network
     padding: 60px 0 0
@@ -2306,6 +2316,37 @@ html
         gap: 20px
     &__info
         display: none
+        padding: 20px
+        border-radius: 0 0 30px 30px
+        background: $white
+        p
+            font-family: $font-family
+            font-weight: 700
+            font-size: 16px
+            line-height: 1.3
+            color: #222
+            max-width: 1155px
+        ul
+            margin: 20px 0
+            max-width: 1155px
+            li
+                padding: 0 0 0 24px
+                position: relative
+                font-family: $font-family
+                font-weight: 400
+                font-size: 16px
+                line-height: 1.3
+                color: #222
+                &::before
+                    content: ''
+                    display: block
+                    position: absolute
+                    top: 9px
+                    left: 9px
+                    width: 3px
+                    height: 3px
+                    border-radius: 100%
+                    background: #222
     &__btn
         border: 1px solid $stroke-green
         border-radius: 30px
@@ -2338,48 +2379,369 @@ html
                 &__btn
                     border-radius: 30px 30px 0 0
                     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05)
-                    background: $white
-                    border: 1px solid $white
+                    background: $white !important
+                    border: 1px solid $white !important
                     span
                         background: #f6f6f6
                     p
-                        color: $green-2
+                        color: $green-2 !important
                     path
-                        fill: $green-2
+                        fill: $green-2 !important
                 &__info
                     display: block
-                    padding: 20px
-                    border-radius: 0 0 30px 30px
-                    background: $white
-                    p
-                        font-family: $font-family
-                        font-weight: 700
-                        font-size: 16px
-                        line-height: 1.3
-                        color: #222
-                        max-width: 1155px
-                    ul
-                        margin: 20px 0
-                        max-width: 1155px
-                        li
-                            padding: 0 0 0 24px
-                            position: relative
-                            font-family: $font-family
-                            font-weight: 400
-                            font-size: 16px
-                            line-height: 1.3
-                            color: #222
-                            &::before
-                                content: ''
-                                display: block
-                                position: absolute
-                                top: 9px
-                                left: 9px
-                                width: 3px
-                                height: 3px
-                                border-radius: 100%
-                                background: #222
 
+.implant
+    &__block
+        margin: 60px 0 0
+        display: grid
+        grid-template-columns: 1fr 500px
+        gap: 20px
+    &__info
+        border-radius: 30px
+        padding: 20px
+        background: $white-50
+        display: flex
+        flex-direction: column
+        align-items: start
+        justify-content: center
+        p
+            font-family: $second-family
+            font-weight: 400
+            font-size: 24px
+            line-height: 1.3
+            color: $green-2
+            strong
+                font-weight: 700
+            &+p
+                margin: 20px 0 0
+                font-family: $font-family
+                font-size: 16px
+                color: $black
+    &__prev
+        border-radius: 30px
+        padding: 20px
+        background: $white-50
+        img
+            width: 100%
+            height: 215px
+            min-height: 100%
+            border-radius: 30px
+            object-fit: cover
+    &__gallery
+        margin: 60px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 20px
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius: 30px
+    &__mt
+        margin-top: 60px
+
+.price-service
+    padding: 60px 0 0
+    &__wrapper
+        display: grid
+        grid-template-columns: 385px 1fr
+        gap: 20px
+        align-items: start
+    &__tab
+        display: grid
+        grid-template-columns: 1fr
+        gap: 10px
+        li
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.3
+            color: $black
+            border-radius: 5px
+            padding: 10px 20px
+            background: $white
+            transition: all .3s
+            cursor: pointer
+            &.active,
+            &:hover
+                box-shadow: 0 0 20px 0 rgba(124, 197, 108, 0.3)
+                background: $green-1
+                color: $white
+    &__form
+        display: grid
+        grid-template-columns: 1fr 385px
+        gap: 20px
+        &_input
+            position: relative
+            input
+                width: 100%
+                box-sizing: border-box
+                border-radius: 5px
+                padding: 10px 20px 10px 50px
+                background: $white
+                font-family: $font-family
+                font-weight: 400
+                font-size: 16px
+                line-height: 1.3
+                color: $black
+                border: none
+                &::placeholder
+                    color: $grey
+            button
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                background: transparent
+                left: 20px
+                border: none
+                display: block
+                width: 20px
+                height: 20px
+                display: flex
+                justify-content: center
+                align-items: center
+                padding: 0
+                svg
+                    width: 20px
+                    height: 20px
+        &_select
+            p
+                font-size: 16px
+                line-height: 1.3
+                padding: 10px 15px
+                border-radius: 5px
+    &__block
+        display: none
+        &.active
+            display: grid
+    .all-vacancy
+        &__btn
+            background: $white
+            border: 1px solid $white
+            path
+                transition: all .3s
+            &:hover
+                background: $green-1
+                border: 1px solid $green-1
+                p
+                    color: $white
+                path
+                    fill: $white
+        &__item
+            .price-service__more
+                display: none
+            &.active
+                .price-service__more
+                    display: flex
+        &__block
+            margin: 30px 0 0
+    &__more
+        cursor: pointer
+        border: 1px solid $green-2
+        border-radius: 0 0 30px 30px
+        padding: 0px 25px 2px 30px
+        margin: 0 auto
+        gap: 5px
+        font-family: $second-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.3
+        color: $white
+        width: max-content
+        transition: all .3s
+        background: $green-2
+        path,
+        svg
+            transition: all .3s
+        &:hover
+            background: $green-1
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05)
+    &__row
+        display: none
+        grid-template-columns: 120px 1fr 100px
+        gap: 20px
+        align-items: center
+        padding: 10px 0
+        position: relative
+        &::before
+            content: ''
+            display: block
+            width: calc( 100% + 40px )
+            bottom: 0
+            left: -20px
+            height: 1px
+            background: #f7f7f7
+            position: absolute
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6)
+            display: grid
+        &:nth-child(6)
+            &::before
+                content: none
+        &:last-child
+            &::before
+                content: none
+        p.price-service__row
+            &_id
+                font-family: $font-family
+                font-weight: 400
+                font-size: 14px
+                line-height: 1.3
+                color: $grey
+            &_price
+                font-family: $font-family
+                font-weight: 500
+                font-size: 16px
+                line-height: 1.3
+                text-align: right
+                color: #222
+        &_name
+            p
+                font-family: $font-family
+                font-weight: 400
+                font-size: 16px
+                line-height: 1.3
+                color: #222
+                &+p
+                    font-family: $font-family
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 1.3
+                    color: $grey
+    &__drop
+        padding-top: 0
+        padding-bottom: 0
+        &.drop
+            .price-service
+                &__row
+                    display: grid !important
+                    &:nth-child(6)
+                        &::before
+                            content: ''
+                &__more
+                    svg
+                        transform: rotate(180deg)
+        &.dis
+            .price-service
+                &__more
+                    display: none !important
+
+.text-descr
+    margin: 60px 0 0
+    &__block
+        padding: 20px
+        border-radius: 30px
+        background: $white
+    p
+        font-family: $font-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.3
+        color: #858585
+
+.breadcrumbs
+    padding: 0 0 60px
+    display: block
+    position: relative
+    a,
+    span
+        display: inline
+        font-family: $font-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.3
+        color: $white
+        transition: all .3s
+    a
+        &:hover
+            color: $green-1
+    p
+        font-family: $font-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.3
+        color: $green-1
+        display: inline-block
+        span
+            color: $green-1
+    span
+        margin: 0 12px
+        display: inline-block
+
+.header-mini
+    padding: 0 0 60px
+    min-height: 600px
+    position: relative
+    .breadcrumbs
+        margin: 30px 0 0
+    h1
+        font-family: $second-family
+        font-weight: 400
+        font-size: 48px
+        line-height: 1.2
+        color: $green-1
+    &__subtitle
+        font-family: $font-family
+        font-weight: 400
+        font-size: 20px
+        line-height: 1.3
+        color: $white
+        margin: 40px 0 0
+
+.article
+    padding: 60px 0 0
+    &__block
+        display: grid
+        grid-template-columns: 385px 1fr
+        gap: 20px
+        align-items: start
+    &__autor
+        padding: 10px 
+        display: grid
+        grid-template-columns: 82px 1fr
+        gap: 10px
+        align-items: center
+        img
+            width: 100%
+            border-radius: 5px
+        p
+            font-family: $second-family
+            font-weight: 700
+            font-size: 16px
+            line-height: 1.3
+            color: $black
+            &+p
+                font-family: $font-family
+                font-weight: 400
+                font-size: 15px
+                line-height: 1.3
+                color: $dark-grey
+                margin: 10px 0 0
+    &__list
+        margin: 10px 0 0
+        display: grid
+        grid-template-columns: 1fr
+        gap: 10px
+        a
+            border-radius: 5px
+            padding: 10px 20px
+            background: $white
+            transition: all .3s
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.3
+            color: $black
+            display: block
+            &.active,
+            &:hover
+                color: $white
+                box-shadow: 0 0 20px 0 rgba(124, 197, 108, 0.3)
+                background: $green-1
 
 @media ( max-width: 1599px )
     .nav
@@ -2482,7 +2844,6 @@ html
     .advant
         &__wrapper
             grid-template-columns: 1fr 1fr 1fr 1fr
-
 
 @media ( max-width: 1359px )
     .nav
@@ -2698,8 +3059,10 @@ html
         &__bg
             height: auto
             min-height: auto
-    .nav__service_wrapper
-        grid-template-columns: 1fr 1fr 1fr
+    .nav__service
+        &_wrapper,
+        &_block
+            grid-template-columns: 1fr 1fr 1fr
     .title
         font-size: 24px
     .news
@@ -2721,6 +3084,9 @@ html
         &__video
             min-width: 250px
             height: 450px
+    .price-service__form
+        grid-template-columns: 1fr 310px
+
 
 @media ( max-width: 1023px )
     .title
@@ -2882,14 +3248,15 @@ html
                 height: 100%
                 padding: 80px 0
     .nav__service
-        &_wrapper
+        &_wrapper,
+        &_block
             grid-template-columns: 1fr 1fr
             display: grid
             padding: 0
             background: transparent
             gap: 15px
             &+p.service__title
-                margin: 40px 0 10px
+                margin: 40px 0 10px            
         &_tab
             display: none
     .service
@@ -3056,6 +3423,23 @@ html
                 width: 36px
                 height: 36px
                 min-width: 36px
+    .price-service
+        &__wrapper
+            grid-template-columns: 1fr
+            gap: 40px
+        &__tab
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 10px
+            flex-wrap: wrap
+            p
+                width: max-content
+    .implant
+        &__block
+            grid-template-columns: 1fr
+
+
 
 @media ( max-width: 800px )
     .about-network
@@ -3098,6 +3482,22 @@ html
             grid-template-columns: 1fr
         h2
             grid-row: auto
+    .price-service
+        &__wrapper
+            gap: 20px
+        &__tab
+            flex-wrap: nowrap
+            justify-content: start
+            padding: 0 20px
+            margin: 0 -20px
+            width: calc( 100% + 40px )
+            overflow-x: auto
+            position: relative
+            li
+                white-space: nowrap
+        &__form
+            grid-template-columns: 1fr
+            gap: 10px
 
 @media ( max-width: 600px )
     .consult
@@ -3144,6 +3544,11 @@ html
     .header
         &__stocks
             grid-template-columns: 1fr
-
+    .price-service
+        &__row
+            grid-template-columns: 1fr
+            gap: 0
+            p
+                text-align: left !important
 
 
