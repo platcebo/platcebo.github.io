@@ -261,8 +261,14 @@ let serviceMore = document.querySelectorAll('.price-service__more'),
 
 if(serviceMore !== null) {
     serviceMore.forEach((item,i)=>{
-        if(serviceDrop[i].querySelectorAll('.price-service__row').length < 7) {
-            serviceDrop[i].classList.add('dis')
+        if(serviceDrop[i].classList.contains('educ__drop')) {
+            if(serviceDrop[i].querySelectorAll('.price-service__row').length < 5) {
+                serviceDrop[i].classList.add('dis')
+            }
+        } else {
+            if(serviceDrop[i].querySelectorAll('.price-service__row').length < 7) {
+                serviceDrop[i].classList.add('dis')
+            }
         }
         
         item.addEventListener('click', ()=>{
@@ -275,6 +281,64 @@ if(serviceMore !== null) {
         })
     })
 }
+
+let btn = document.querySelectorAll('.header-doc__blockquote p');
+    // btnBox = document.querySelectorAll('.header-doc__blockquote p');
+
+if(btn !== null) {
+    function wrapChars(str, tmpl) {
+        return str.replace(/\S+/g, tmpl || "<span>$&</span>");
+    }
+
+    for(let a = 0; a < btn.length; a++) {
+        var btnText = wrapChars(String(btn[a].innerHTML));
+
+        btn[a].innerHTML = btnText; 
+
+        let spans = btn[a].querySelectorAll("span");
+
+        spans.forEach((span, i) => {
+            span.style.transitionDelay = `${(i+0.2) * 0.05 }s`;
+        });
+    }
+
+
+    if(document.querySelector('.header-doc__blockquote').getBoundingClientRect().top < 400) {
+        document.querySelector('.header-doc__blockquote').classList.add('active')
+    }
+    window.addEventListener('scroll', ()=>{
+        if(document.querySelector('.header-doc__blockquote').getBoundingClientRect().top < 400) {
+            document.querySelector('.header-doc__blockquote').classList.add('active')
+        }
+    })
+}
+
+let modal = document.querySelectorAll('.modal'),
+    modalOverflow = document.querySelectorAll('.modal__overflow');
+
+if(modal !== null) {
+    modalOverflow.forEach((item)=>{
+        item.addEventListener('click', ()=>{
+            for(let a = 0; a < modal.length; a++) {
+                modal[a].classList.remove('active');
+            }
+        })
+    })
+}
+
+let educGallery = document.querySelectorAll('.educ__gallery img'),
+    educModal = document.querySelector('.modal-educ'),
+    educWrapper = document.querySelector('.modal-educ__wrapper');
+
+if(educGallery !== null) {
+    educGallery.forEach((item)=>{
+        item.addEventListener('click', (event)=>{
+            educModal.classList.add('active');
+            educWrapper.innerHTML = item.outerHTML
+        })
+    })
+}
+
 
 
 }, false);
