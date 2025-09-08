@@ -285,7 +285,7 @@ if(serviceMore !== null) {
 let btn = document.querySelectorAll('.header-doc__blockquote p');
     // btnBox = document.querySelectorAll('.header-doc__blockquote p');
 
-if(btn !== null) {
+if(btn.length > 0) {
     function wrapChars(str, tmpl) {
         return str.replace(/\S+/g, tmpl || "<span>$&</span>");
     }
@@ -339,6 +339,79 @@ if(educGallery !== null) {
     })
 }
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+let articleAside = document.querySelector('.article__aside'),
+    articleLink = document.querySelectorAll('.article__list a'),
+    articleTitle = document.querySelectorAll('.article-title'),
+    articleBlock = document.querySelector('.article__block');
+
+if(articleBlock != null) {
+    if(window.innerWidth > 1359) {
+        let articleLeft = articleAside.getBoundingClientRect().left
+
+        window.addEventListener('scroll', ()=>{
+            if(articleBlock.getBoundingClientRect().top < 20 && articleBlock.getBoundingClientRect().bottom > articleAside.getBoundingClientRect().height + 20) {
+                articleAside.classList.remove('bottom')
+                articleAside.classList.add('fix')
+                articleAside.style.left = articleLeft + 'px'
+            } else if (articleBlock.getBoundingClientRect().top > 20) {
+                articleAside.classList.remove('fix')
+                articleAside.style.left = 'auto'
+            } else if (articleBlock.getBoundingClientRect().bottom < articleAside.getBoundingClientRect().height + 20) {
+                articleAside.classList.remove('fix')
+                articleAside.style.left = 'auto'
+                articleAside.classList.add('bottom')
+            }
+
+            articleTitle.forEach((item,i)=>{
+                if(item.getBoundingClientRect().top > 100 && item.getBoundingClientRect().top < 300) {
+                    for(let a = 0; a < articleTitle.length; a++) {
+                        articleLink[a].classList.remove('active')
+                    }
+                    articleLink[i].classList.add('active')
+                }
+            })
+        })
+
+        if(articleBlock.getBoundingClientRect().top < 20 && articleBlock.getBoundingClientRect().bottom > articleAside.getBoundingClientRect().height + 20) {
+            articleAside.classList.remove('bottom')
+            articleAside.classList.add('fix')
+            articleAside.style.left = articleLeft + 'px'
+        } else if (articleBlock.getBoundingClientRect().top > 20) {
+            articleAside.classList.remove('fix')
+            articleAside.style.left = 'auto'
+        } else if (articleBlock.getBoundingClientRect().bottom < articleAside.getBoundingClientRect().height + 20) {
+            articleAside.classList.remove('fix')
+            articleAside.style.left = 'auto'
+            articleAside.classList.add('bottom')
+        }
+
+        articleTitle.forEach((item,i)=>{
+            if(item.getBoundingClientRect().top > 100 && item.getBoundingClientRect().top < 300) {
+                for(let a = 0; a < articleTitle.length; a++) {
+                    articleLink[a].classList.remove('active')
+                }
+                articleLink[i].classList.add('active')
+            }
+        })
+    }
+
+    // articleLink.forEach((item,i)=>{
+    //     item.addEventListener('click', ()=>{
+
+    //     })
+    // })
+}
 
 
 }, false);
