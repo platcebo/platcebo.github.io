@@ -34,10 +34,10 @@ var swiper = new Swiper(".welcome__slider", {
 let navListBtn = document.querySelectorAll('.nav__list_btn'),
     navOverflow = document.querySelector('.nav__row_overflow'),
     navListLink = document.querySelectorAll('.nav__list_link'),
-    navSearchBtn = document.querySelector('.nav__search_btn'),
-    navSearchClear = document.querySelector('.nav__search_clear'),
+    navSearchBtn = document.querySelectorAll('.nav__search_btn'),
+    navSearchClear = document.querySelectorAll('.nav__search_clear'),
     nav = document.querySelector('.nav'),
-    navSearchInput = document.querySelector('.nav__search_input');
+    navSearchInput = document.querySelectorAll('.nav__search_input');
 
 if(navListBtn !== null) {
     navListLink.forEach((item,i)=>{
@@ -79,25 +79,31 @@ if(navListBtn !== null) {
                 navListBtn[a].classList.remove('active')
                 navListLink[a].classList.remove('active')
                 navOverflow.classList.remove('active')
-                navSearchInput.querySelector('input').value = ""
-                navSearchInput.classList.remove('active')
+                navSearchInput.forEach((item,i)=>{
+                    navSearchInput[i].querySelector('input').value = ""
+                    navSearchInput[i].classList.remove('active')
+                })
                 navOverflow.classList.remove('active')
                 document.body.classList.remove('fix')
             }
         }
     })
 
-    navSearchBtn.addEventListener('click', ()=>{
-        navSearchInput.classList.add('active')
-        navOverflow.classList.add('active')
-        document.body.classList.add('fix')
+    navSearchBtn.forEach((item,i)=>{
+        item.addEventListener('click', ()=>{
+            navSearchInput[i].classList.add('active')
+            // navOverflow.classList.add('active')
+            // document.body.classList.add('fix')
+        })
     })
-    navSearchClear.addEventListener('click', (e)=>{
-        e.preventDefault()
-        navSearchInput.querySelector('input').value = ""
-        navSearchInput.classList.remove('active')
-        navOverflow.classList.remove('active')
-        document.body.classList.remove('fix')
+    navSearchClear.forEach((item,i)=>{
+        item.addEventListener('click', (e)=>{
+            e.preventDefault()
+            navSearchInput[i].querySelector('input').value = ""
+            navSearchInput[i].classList.remove('active')
+            // navOverflow.classList.remove('active')
+            // document.body.classList.remove('fix')
+        })
     })
 }
 
