@@ -80,6 +80,11 @@ html
             font-size: 16px
             line-height: 1.3
             text-transform: none
+            svg
+                transition: all .3s
+            &:hover
+                svg
+                    transform: translateX(5px)
 .video-btn
     position: absolute
     top: 50%
@@ -98,9 +103,21 @@ html
     opacity: 0
     pointer-events: none
     z-index: 4
+    transition: all .3s
     &.active
         opacity: 1
         pointer-events: all
+    svg
+        transform: translateX(5px)
+    &:hover
+        background: rgba(97, 189, 86, 0.7)
+.section-anim
+    opacity: 0
+    transform: translateY(40px)
+    transition: all 1s
+    &.section-anim__active
+        opacity: 1
+        transform: translateY(0)
 
 .nav-menu
     display: none
@@ -165,8 +182,6 @@ html
     &__row
         border-radius: 30px
         margin: 5px 0 0
-        // backdrop-filter: blur(40px)
-        // background: rgba(255, 255, 255, 0.05)
         padding: 14px 15px
         margin: 5px 0 0
         display: flex
@@ -475,6 +490,45 @@ html
                 background: rgba(255, 255, 255, 0.7)
                 &::before
                     content: none
+    &__list_btn
+        &.active
+            .nav__list_drop,
+            .nav__service
+                pointer-events: all
+    &__fix
+        position: fixed
+        top: 5px
+        z-index: 5
+        width: 100vw
+        left: 0
+        transition: all .3s
+        pointer-events: none
+        opacity: 0
+        .nav
+            &__row
+                margin: 0
+                &::before
+                    content: ''
+                    backdrop-filter: blur(40px)
+            &__service
+                backdrop-filter: blur(40px)
+                background: rgba(188, 190, 192, 0.2)
+        &.fix
+            opacity: 1
+            pointer-events: all
+    &__sticky
+        &.fix
+            .nav__row
+                position: fixed
+                top: 5px
+                left: 50%
+                transform: translateX(-50%)
+                margin: 0
+                width: calc( 100vw - 40px )
+                max-width: 1600px
+                &::before
+                    content: ''
+                    backdrop-filter: blur(40px)
 
 .header
     position: relative
@@ -676,6 +730,7 @@ html
             display: flex
             justify-content: start
             align-items: center
+            gap: 20px
             img,
             svg
                 width: 70px
@@ -696,6 +751,13 @@ html
         display: grid
         grid-template-columns: 34fr 39fr
         gap: 20px
+        &_subtext
+            font-family: $font-family
+            font-weight: 400
+            font-size: 14px
+            line-height: 1.3
+            color: #858585
+            margin: 30px 0
         img
             width: 100%
             height: 1px
@@ -735,6 +797,17 @@ html
         .about-network__qoute_prev
             .about-network__quote_info
                 display: none
+    &__descr
+        margin: 20px 0 0
+        border-radius: 30px
+        padding: 20px
+        background: $white
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.3
+            color: #858585
 
 .about-vacancy
     .about-network__har
@@ -754,6 +827,7 @@ html
             box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05)
             background: $white
             border: none
+            min-height: 200px
             span
                 width: 30px
                 height: 30px
@@ -770,6 +844,9 @@ html
             p
                 &:nth-child(1)
                     max-width: calc( 100% - 35px )
+                &+p
+                    color: $grey
+                    margin: 14px 0 0
             img
                 transition: all .3s
             &:hover
@@ -782,6 +859,7 @@ html
                         color: $light-grey !important
                 span
                     background: $white
+                    transform: translateX(5px)
                     path
                         fill: $green-1
 
@@ -833,7 +911,7 @@ html
             right: 7px
             p
                 border-radius: 5px
-                padding: 3px 15px 5px
+                padding: 5px 15px 
                 backdrop-filter: blur(40px)
                 background: $white-50
                 font-family: $font-family
@@ -920,7 +998,7 @@ html
         flex-wrap: wrap
         p
             border-radius: 5px
-            padding: 3px 15px 5px
+            padding: 5px 15px
             background: $green-2
             font-family: $font-family
             font-weight: 400
@@ -968,29 +1046,31 @@ html
                 fill: $white
     &__video
         position: relative
-        border-radius: 30px
         overflow: hidden
         video
             width: 100%
             height: 100%
             object-fit: cover
-
+            border-radius: 30px
+            
 .select
     position: relative
-    z-index: 1
-    p
+    z-index: 2
+    input
         display: block
         width: 100%
         border: none
         box-sizing: border-box
         border-radius: 50px
-        padding: 20px
+        padding: 10px 20px
         background: $white
         color: $black
         font-family: $font-family
         font-weight: 400
         font-size: 16px
         line-height: 1.3
+        box-sizing: border-box
+        cursor: pointer
     svg
         right: 10px
         top: 50%
@@ -1003,6 +1083,35 @@ html
         height: 100%
         inset: 0
         opacity: 0
+    ul
+        position: absolute
+        width: 100%
+        left: 0
+        top: calc( 100% + 5px )
+        padding: 10px 0
+        border-radius: 5px
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1)
+        background: $white
+        z-index: 5
+        opacity: 0
+        transition: all .3s
+        pointer-events: none
+        li
+            padding: 10px 20px
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.3
+            color: $black
+            transition: all .3s
+            cursor: pointer
+            &:hover
+                background: $green-10
+    &.active
+        z-index: 3
+        ul
+            opacity: 1
+            pointer-events: all
 
 .consult
     padding: 60px 0 0
@@ -1013,8 +1122,11 @@ html
         display: grid
         grid-template-columns: 405px 1fr
         position: relative
-        overflow: hidden
+        overflow: visible
     &__prev
+        position: relative
+        overflow: hidden
+        border-radius: 30px 0 0 30px
         img,
         video
             width: 100%
@@ -1063,7 +1175,7 @@ html
             border: none
             box-sizing: border-box
             border-radius: 50px
-            padding: 20px
+            padding: 10px 20px
             background: $white
             color: $black
             font-family: $font-family
@@ -1186,6 +1298,11 @@ html
                 background: $green-1
                 path
                     fill: $white
+            .case__autor
+                p
+                    color: $black
+                    &+p
+                        color: $grey
     &__prev
         img
             width: 100%
@@ -1216,6 +1333,20 @@ html
         font-size: 15px
         line-height: 1.3
         color: $green-2
+        transition: all .3s
+        path
+            transition: all .3s
+        &::after
+            content: "   ➔"
+            opacity: 0
+            transition: all .3s
+            color: $green-1
+        &:hover
+            color: $green-1
+            path
+                fill: $green-1
+            &::after
+                opacity: 1
     &__autor
         margin: 30px 0 0
         display: grid
@@ -1232,6 +1363,7 @@ html
             font-size: 16px
             line-height: 1.3
             color: $dark-grey
+            transition: all .3s
             &+p
                 font-family: $font-family
                 font-weight: 400
@@ -1465,12 +1597,6 @@ html
         transform: scaleX(-1)
     &__swiper
         overflow: visible
-    &__slide
-        border-radius: 30px
-        padding: 20px
-        background: $white-50
-        min-height: 250px
-        width: 512px
     .case__autor
         margin: 16px 0 0
     &__name
@@ -1518,6 +1644,49 @@ html
         font-size: 14px
         line-height: 1.3
         color: $black
+        background: linear-gradient(180deg, #707070 35.35%, #fff 100%)
+        background-clip: text
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        margin: 0 0 auto
+        overflow: hidden
+        position: relative
+        text-overflow: ellipsis
+        display: block
+        word-break: break-all
+        display: -webkit-box
+        -webkit-box-orient: vertical
+        -moz-box-orient: vertical
+        -ms-box-orient: vertical
+        box-orient: vertical
+        -webkit-line-clamp: 4
+        -moz-line-clamp: 4
+        -ms-line-clamp: 4
+        line-clamp: 4
+    &__slide
+        border-radius: 30px
+        padding: 20px
+        background: $white-50
+        min-height: 250px
+        width: 512px
+        transition: all .3s
+        cursor: pointer
+        &:hover
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05)
+            background: $white
+        &.active
+            .comment__text
+                -webkit-text-fill-color: $black
+                -webkit-line-clamp: none
+                -moz-line-clamp: none
+                -ms-line-clamp: none
+                line-clamp: none
+                color: $black
+    .case__autor
+        p
+            color: $dark-grey
+            &+p
+                color: $grey
 
 .news
     padding: 60px 0 0
@@ -1579,7 +1748,7 @@ html
         background: rgba(255, 255, 255, 0.6)
         transition: all .3s
         display: grid
-        grid-template-columns: 150px 1fr
+        grid-template-columns: 190px 1fr
         &_prev
             position: relative
             overflow: hidden
@@ -1663,6 +1832,7 @@ html
         display: grid
         grid-template-columns: 79fr 250px 52fr
         gap: 20px
+        align-items: start
     &__info
         padding: 20px 20px 50px
         display: flex
@@ -1694,9 +1864,6 @@ html
             line-clamp: 5
         .case__autor
             margin: 20px 0 0
-            p
-                &:nth-child(1)
-                    color: $black
         .comf__link
             background: $white
     &__item
@@ -1732,7 +1899,7 @@ html
             flex-wrap: wrap
             p
                 border-radius: 5px
-                padding: 3px 15px 5px
+                padding: 5px 15px
                 backdrop-filter: blur(40px)
                 background: rgba(255, 255, 255, 0.2)
                 font-family: $font-family
@@ -1766,9 +1933,22 @@ html
             .article-doc__item_prev
                 img
                     transform: scale(1.1)
+            .case__autor
+                p
+                    color: $black
+                    &+p
+                        color: $grey
+        &:hover
+            .article-doc__info_text
+                -webkit-text-fill-color: $black
+                -webkit-line-clamp: none
+                -moz-line-clamp: none
+                -ms-line-clamp: none
+                line-clamp: none
+                color: $black
     &__video
         position: relative
-        height: 100%
+        height: 450px
         border-radius: 30px
         overflow: hidden
         video
@@ -1887,7 +2067,7 @@ html
         a
             display: grid
             grid-template-columns: auto 1fr
-            gap: 5px
+            gap: 20px
             align-items: center
             font-family: $font-family
             font-weight: 400
@@ -2970,7 +3150,7 @@ html
         width: 385px
         &.fix
             position: fixed
-            top: 20px
+            top: 100px
         &.bottom
             position: absolute
             left: 0
@@ -3480,7 +3660,53 @@ html
         grid-template-columns: 3fr 1fr 1fr 1fr
         gap: 20px
 
+.nav-mob
+    display: none
 
+.doc-page
+    padding: 30px 0 0
+    &__filter
+        display: grid
+        grid-template-columns: 2fr 1fr 1fr
+        gap: 20px
+        &_input
+            position: relative
+            input
+                position: relative
+                width: 100%
+                border-radius: 5px
+                padding: 11px 10px 11px 50px
+                background: $white
+                border: none
+                box-sizing: border-box  
+            button
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                left: 20px
+                background: transparent
+                border: none
+                padding: 0
+                width: auto
+                height: 20px
+                z-index: 2
+                svg
+                    path
+                        transition: all .3s
+                &:hover
+                    path
+                        fill: #109548
+        .select
+            input
+                border-radius: 5px
+                padding: 10px 15px
+    &__wrapper
+        margin: 40px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+        gap: 20px
+    .doctor-list__slide
+        width: 100%
 
     
 @media ( max-width: 1599px )
@@ -3517,6 +3743,10 @@ html
     .advant
         &__wrapper
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+    .doc-page
+        &__wrapper
+            grid-template-columns: 1fr 1fr 1fr 1fr
+
 
 @media ( max-width: 1400px )
     .nav
@@ -3586,7 +3816,10 @@ html
             grid-template-columns: 1fr 1fr 1fr 1fr
 
 @media ( max-width: 1359px )
+    body
+        overflow: visible
     .nav
+        padding: 5px 0 0
         &__info,
         &__list,
         &__search,
@@ -3601,6 +3834,20 @@ html
             svg
                 width: 28px
                 height: 20px
+        &__row
+            margin: 0
+        &__fix
+            &.fix
+                padding: 0
+        &__sticky
+            position: sticky
+            left: 0
+            top: 0
+            width: 100%
+            .nav__row
+                &::before
+                    content: ''
+                    backdrop-filter: blur(40px)
     .nav-menu
         display: block
         position: fixed
@@ -3890,6 +4137,8 @@ html
                     display: none
                 path
                     fill: $green-2
+                svg
+                    transform: none
     .footer
         &__head
             flex-direction: column
@@ -4032,18 +4281,21 @@ html
             &_col
                 height: 100%
                 padding: 80px 0
-    .nav__service
-        &_wrapper,
-        &_block
-            grid-template-columns: 1fr 1fr
-            display: grid
-            padding: 0
-            background: transparent
-            gap: 15px
-            &+p.service__title
-                margin: 40px 0 10px            
-        &_tab
-            display: none
+    .nav
+        &__service
+            &_wrapper,
+            &_block
+                grid-template-columns: 1fr 1fr
+                display: grid
+                padding: 0
+                background: transparent
+                gap: 15px
+                &+p.service__title
+                    margin: 40px 0 10px            
+            &_tab
+                display: none
+        &__logo
+            max-width: 120px
     .service
         h2
             display: none
@@ -4116,9 +4368,13 @@ html
         &__slide
             height: 340px
             width: 300px
-            background: #f4f4f4
+            background: $white-50
             .comf__link
                 display: none
+            &_info
+                &::after
+                    height: 50px
+                    background: linear-gradient(180deg,rgba(244,244,244,0) 0,rgba(244,244,244,.49) 18.75%,#fff 96.63%)
     .comment
         &__slide
             width: 300px
@@ -4129,7 +4385,9 @@ html
         &__item
             min-height: 104px
             &_info
-                padding: 10px 50px 10px 20px
+                padding: 10px 10px 45px 20px
+                .comf__link
+                    bottom: 10px
     .recom
         &__wrapper
             display: flex
@@ -4249,6 +4507,18 @@ html
     .header-doc
         &__wrapper
             grid-template-columns: 1fr
+        &__descr
+            h1
+                font-size: 36px
+    .breadcrumbs
+        padding: 0 0 20px
+    .doc-page
+        &__wrapper
+            grid-template-columns: 1fr 1fr 1fr
+        &__filter
+            grid-template-columns: 1fr 1fr
+            &_input
+                grid-column: 1/3
 
 
 @media ( max-width: 800px )
@@ -4257,6 +4527,11 @@ html
             grid-template-columns: 1fr 1fr
             &_col
                 padding: 0
+        &__har
+            &_item
+                display: grid
+                grid-template-columns: 70px 1fr
+                gap: 20px
     .comf__info h2
         font-size: 16px
     .article-doc
@@ -4308,6 +4583,36 @@ html
         &__form
             grid-template-columns: 1fr
             gap: 10px
+    .nav-mob
+        display: block
+        position: fixed
+        z-index: 10
+        left: 20px
+        right: 20px
+        bottom: 25px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border-radius: 30px
+        padding: 5px 20px
+        backdrop-filter: blur(40px)
+        background: $white-80
+        a
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 4px
+            p
+                font-family: $font-family
+                font-weight: 400
+                font-size: 12px
+                text-align: center
+                color: $black
+    .doc-page
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+
+
 
 @media ( max-width: 600px )
     .consult
@@ -4371,4 +4676,13 @@ html
             display: block
             svg
                 display: none
+    .doc-page
+        &__wrapper
+            grid-template-columns: 1fr
+        &__filter
+            grid-template-columns: 1fr
+            gap: 10px
+            &_input
+                grid-column: auto
+
 
