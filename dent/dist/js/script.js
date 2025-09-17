@@ -32,7 +32,7 @@ var swiper = new Swiper(".welcome__slider", {
 });
 
 let navListBtn = document.querySelectorAll('.nav__list_btn'),
-    navOverflow = document.querySelector('.nav__row_overflow'),
+    navOverflow = document.querySelectorAll('.nav__row_overflow'),
     navListLink = document.querySelectorAll('.nav__list_link'),
     navSearchBtn = document.querySelectorAll('.nav__search_btn'),
     navSearchClear = document.querySelectorAll('.nav__search_clear'),
@@ -45,18 +45,31 @@ if(navListBtn !== null) {
 
             if(e.target.closest('.nav__list_btn')) {
 
-                for(let a = 0; a < navListBtn.length; a++) {
-                    navListBtn[a].classList.remove('active')
-                    navListLink[a].classList.remove('active')
-                    navOverflow.classList.remove('active')
-                    document.body.classList.remove('fix')
+                if(navListBtn[i].classList.contains('nav__list_service')) {
+                    for(let a = 0; a < navListBtn.length; a++) {
+                        navListBtn[a].classList.remove('active')
+                        navListLink[a].classList.remove('active')
+                        navOverflow.forEach(item=>item.classList.remove('active'))
+                        document.querySelector('html').classList.remove('fix')
+                    }
+                    navListBtn[i].classList.add('active');
+                    item.classList.add('active');
+                    navOverflow.forEach(item=>item.classList.add('active'))
+                    document.querySelector('html').classList.add('fix')
+                } else {
+                    for(let a = 0; a < navListBtn.length; a++) {
+                        navListBtn[a].classList.remove('active')
+                        navListLink[a].classList.remove('active')
+                        navOverflow.forEach(item=>item.classList.remove('active'))
+                        document.querySelector('html').classList.remove('fix')
+                    }
+                    navListBtn[i].classList.add('active');
+                    item.classList.add('active');
                 }
-                navListBtn[i].classList.add('active');
-                item.classList.add('active');
-
             }
-
         })
+
+
 
         // nav.addEventListener('mouseout', (e)=>{
         //     if(e.target.closest('.nav')) {
@@ -78,13 +91,13 @@ if(navListBtn !== null) {
             for(let a = 0; a < navListBtn.length; a++) {
                 navListBtn[a].classList.remove('active')
                 navListLink[a].classList.remove('active')
-                navOverflow.classList.remove('active')
+                navOverflow.forEach(item=>item.classList.remove('active'))
                 navSearchInput.forEach((item,i)=>{
                     navSearchInput[i].querySelector('input').value = ""
                     navSearchInput[i].classList.remove('active')
                 })
-                navOverflow.classList.remove('active')
-                document.body.classList.remove('fix')
+                navOverflow.forEach(item=>item.classList.remove('active'))
+                document.querySelector('html').classList.remove('fix')
             }
         }
     })
@@ -92,8 +105,6 @@ if(navListBtn !== null) {
     navSearchBtn.forEach((item,i)=>{
         item.addEventListener('click', ()=>{
             navSearchInput[i].classList.add('active')
-            // navOverflow.classList.add('active')
-            // document.body.classList.add('fix')
         })
     })
     navSearchClear.forEach((item,i)=>{
@@ -101,8 +112,6 @@ if(navListBtn !== null) {
             e.preventDefault()
             navSearchInput[i].querySelector('input').value = ""
             navSearchInput[i].classList.remove('active')
-            // navOverflow.classList.remove('active')
-            // document.body.classList.remove('fix')
         })
     })
 }
@@ -271,6 +280,14 @@ if(vacancyBtn !== null) {
         item.addEventListener('click', ()=>{
             item.classList.toggle('active');
             vacancyItem[i].classList.toggle('active');
+            console.log(item.getBoundingClientRect().top - document.body.getBoundingClientRect().top)
+            if(item.classList.contains('active')) {
+                window.scrollTo({
+                    top: item.getBoundingClientRect().top - document.body.getBoundingClientRect().top - 200,
+                    left: 0,
+                    behavior: "smooth"
+                });
+            }
         })
     })
 }
@@ -291,6 +308,13 @@ if(serviceMore !== null) {
         }
         
         item.addEventListener('click', ()=>{
+            if(!serviceDrop[i].classList.contains('drop')) {
+                window.scrollTo({
+                    top: item.getBoundingClientRect().top - document.body.getBoundingClientRect().top - 200,
+                    left: 0,
+                    behavior: "smooth"
+                });
+            }
             serviceDrop[i].classList.toggle('drop')
             if(serviceDrop[i].classList.contains('drop')) {
                 item.querySelector('p').innerHTML = "Скрыть"
@@ -302,24 +326,46 @@ if(serviceMore !== null) {
 }
 
 let btn = document.querySelectorAll('.header-doc__blockquote p');
-    // btnBox = document.querySelectorAll('.header-doc__blockquote p');
 
 if(btn.length > 0) {
-    function wrapChars(str, tmpl) {
-        return str.replace(/\S+/g, tmpl || "<span>$&</span>");
-    }
+    // function wrapChars(str) {
+    //     // всё, кроме пробелов → оборачиваем в span
+    //     return str.replace(/(\S)/g, "<span style='opacity:0'>$1</span>");
+    // }
 
-    for(let a = 0; a < btn.length; a++) {
-        var btnText = wrapChars(String(btn[a].innerHTML));
 
-        btn[a].innerHTML = btnText; 
+    // btn.forEach((p, idx) => {
+    //     let btnText = wrapChars(p.innerHTML);
+    //     p.innerHTML = btnText;
 
-        let spans = btn[a].querySelectorAll("span");
+    //     let spans = p.querySelectorAll("span");
 
+    //     spans.forEach((span, i) => {
+    //         setTimeout(() => {
+    //             span.style.opacity = 1;
+    //         }, i * 20); // скорость печатания: 50 мс на букву
+    //     });
+    // });
+
+    btn.forEach((p) => {
+        let words = p.innerText.split(/(\s+)/); // сохраняем пробелы
+        let result = words.map(word => {
+            if (word.trim() === "") return word; // пробел оставляем как есть
+            let letters = word.split("").map(ch => `<span style="opacity:0">${ch}</span>`).join("");
+            return `<span class="word">${letters}</span>`;
+        }).join("");
+
+        p.innerHTML = result;
+
+        let spans = p.querySelectorAll("span span"); // только буквы
         spans.forEach((span, i) => {
-            span.style.transitionDelay = `${(i+0.2) * 0.05 }s`;
+            setTimeout(() => {
+                span.style.opacity = 1;
+            }, i * 50); // скорость печати
         });
-    }
+    });
+
+
 
 
     if(document.querySelector('.header-doc__blockquote').getBoundingClientRect().top < 400) {
@@ -427,11 +473,12 @@ if(articleBlock != null) {
 
 }
 
-let navFix = document.querySelector('.nav__fix');
+let navFix = document.querySelector('.nav__fix'),
+    headerFix = document.querySelector('.header-fix');
 
 if(navFix !== null) {
     window.addEventListener('scroll', ()=>{
-        if(window.scrollY > window.innerHeight ) {
+        if(window.scrollY > headerFix.getBoundingClientRect().height ) {
             navFix.classList.add('fix')
         } else {
             navFix.classList.remove('fix')
@@ -500,7 +547,16 @@ if(select !== null) {
     })
 }
 
+let serviceInput = document.querySelectorAll('.price-service__form_input input'),
+    serviceInputClear = document.querySelectorAll('.price-service__form_close');
 
+if(serviceInput !== null) {
+    serviceInputClear.forEach((item,i)=>{
+        item.addEventListener('click', ()=>{
+            serviceInput[i].value = ""
+        })
+    })
+}
 
 
 }, false);
