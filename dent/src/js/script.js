@@ -31,6 +31,29 @@ var swiper = new Swiper(".welcome__slider", {
     },
 });
 
+var swiper = new Swiper(".result-detail__slider", {
+    slidesPerView: 'auto',
+    slidesPerGroup: 1,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: ".result-detail__slider_func .swiper-button-next",
+        prevEl: ".result-detail__slider_func .swiper-button-prev",
+    },
+    pagination: {
+        el: ".result-detail__slider_func .swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+    },
+    breakpoints: {
+        1024: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+        },
+    },
+});
+
 let navListBtn = document.querySelectorAll('.nav__list_btn'),
     navOverflow = document.querySelectorAll('.nav__row_overflow'),
     navListLink = document.querySelectorAll('.nav__list_link'),
@@ -328,24 +351,6 @@ if(serviceMore !== null) {
 let btn = document.querySelectorAll('.header-doc__blockquote p');
 
 if(btn.length > 0) {
-    // function wrapChars(str) {
-    //     // всё, кроме пробелов → оборачиваем в span
-    //     return str.replace(/(\S)/g, "<span style='opacity:0'>$1</span>");
-    // }
-
-
-    // btn.forEach((p, idx) => {
-    //     let btnText = wrapChars(p.innerHTML);
-    //     p.innerHTML = btnText;
-
-    //     let spans = p.querySelectorAll("span");
-
-    //     spans.forEach((span, i) => {
-    //         setTimeout(() => {
-    //             span.style.opacity = 1;
-    //         }, i * 20); // скорость печатания: 50 мс на букву
-    //     });
-    // });
 
     btn.forEach((p) => {
         let words = p.innerText.split(/(\s+)/); // сохраняем пробелы
@@ -556,6 +561,62 @@ if(serviceInput !== null) {
             serviceInput[i].value = ""
         })
     })
+}
+
+let mediaAutor = document.querySelector('.media-detail__fix'),
+    mediaBlock = document.querySelector('.media-detail__block');
+
+if(mediaBlock != null) {
+    if(window.innerWidth > 1023) {
+        let articleLeft = mediaAutor.getBoundingClientRect().left
+
+        window.addEventListener('scroll', ()=>{
+            if(mediaBlock.getBoundingClientRect().top < 100 && mediaBlock.getBoundingClientRect().bottom > mediaAutor.getBoundingClientRect().height + 100) {
+                mediaAutor.classList.remove('bottom')
+                mediaAutor.classList.add('fix')
+                mediaAutor.style.left = articleLeft + 'px'
+            } else if (mediaBlock.getBoundingClientRect().top > 100) {
+                mediaAutor.classList.remove('fix')
+                mediaAutor.style.left = 'auto'
+            } else if (mediaBlock.getBoundingClientRect().bottom < mediaAutor.getBoundingClientRect().height + 100) {
+                mediaAutor.classList.remove('fix')
+                mediaAutor.style.left = 'auto'
+                mediaAutor.classList.add('bottom')
+            }
+
+            articleTitle.forEach((item,i)=>{
+                if(item.getBoundingClientRect().top > 100 && item.getBoundingClientRect().top < 300) {
+                    for(let a = 0; a < articleTitle.length; a++) {
+                        articleLink[a].classList.remove('active')
+                    }
+                    articleLink[i].classList.add('active')
+                }
+            })
+        })
+
+        if(mediaBlock.getBoundingClientRect().top < 100 && mediaBlock.getBoundingClientRect().bottom > mediaAutor.getBoundingClientRect().height + 100) {
+            mediaAutor.classList.remove('bottom')
+            mediaAutor.classList.add('fix')
+            mediaAutor.style.left = articleLeft + 'px'
+        } else if (mediaBlock.getBoundingClientRect().top > 100) {
+            mediaAutor.classList.remove('fix')
+            mediaAutor.style.left = 'auto'
+        } else if (mediaBlock.getBoundingClientRect().bottom < mediaAutor.getBoundingClientRect().height + 100) {
+            mediaAutor.classList.remove('fix')
+            mediaAutor.style.left = 'auto'
+            mediaAutor.classList.add('bottom')
+        }
+
+        articleTitle.forEach((item,i)=>{
+            if(item.getBoundingClientRect().top > 100 && item.getBoundingClientRect().top < 300) {
+                for(let a = 0; a < articleTitle.length; a++) {
+                    articleLink[a].classList.remove('active')
+                }
+                articleLink[i].classList.add('active')
+            }
+        })
+    }
+
 }
 
 
