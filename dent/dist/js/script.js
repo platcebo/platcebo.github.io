@@ -54,87 +54,85 @@ var swiper = new Swiper(".result-detail__slider", {
     },
 });
 
-let navListBtn = document.querySelectorAll('.nav__list_btn'),
-    navOverflow = document.querySelectorAll('.nav__row_overflow'),
-    navListLink = document.querySelectorAll('.nav__list_link'),
-    navSearchBtn = document.querySelectorAll('.nav__search_btn'),
-    navSearchClear = document.querySelectorAll('.nav__search_clear'),
-    nav = document.querySelector('.nav'),
-    navSearchInput = document.querySelectorAll('.nav__search_input');
+let nav = document.querySelectorAll('.nav');
 
-if(navListBtn !== null) {
-    navListLink.forEach((item,i)=>{
-        navListBtn[i].addEventListener('mouseover', (e)=>{
+if(nav !== null) {
+    nav.forEach((navitem)=>{
+        let navListBtn = navitem.querySelectorAll('.nav__list_btn'),
+            navOverflow = navitem.querySelector('.nav__row_overflow'),
+            navListLink = navitem.querySelectorAll('.nav__list_link'),
+            navSearchBtn = navitem.querySelectorAll('.nav__search_btn'),
+            navSearchClear = navitem.querySelectorAll('.nav__search_clear'),
+            navSearchInput = navitem.querySelectorAll('.nav__search_input');
 
-            if(e.target.closest('.nav__list_btn')) {
+        navListLink.forEach((item,i)=>{
+            navListBtn[i].addEventListener('mouseover', (e)=>{
 
-                if(navListBtn[i].classList.contains('nav__list_service')) {
+                if(e.target.closest('.nav__list_btn')) {
+
+                    // if(navListBtn[i].classList.contains('nav__list_service')) {
+                    //     for(let a = 0; a < navListBtn.length; a++) {
+                    //         navListBtn[a].classList.remove('active')
+                    //         navListLink[a].classList.remove('active')
+                    //         navOverflow.forEach(item=>item.classList.remove('active'))
+                    //         document.querySelector('html').classList.remove('fix')
+                    //     }
+                    //     navListBtn[i].classList.add('active');
+                    //     item.classList.add('active');
+                    //     navOverflow.forEach(item=>item.classList.add('active'))
+                    //     document.querySelector('html').classList.add('fix')
+                    // } else {
+                    //     for(let a = 0; a < navListBtn.length; a++) {
+                    //         navListBtn[a].classList.remove('active')
+                    //         navListLink[a].classList.remove('active')
+                    //         navOverflow.forEach(item=>item.classList.remove('active'))
+                    //         document.querySelector('html').classList.remove('fix')
+                    //     }
+                    //     navListBtn[i].classList.add('active');
+                    //     item.classList.add('active');
+                    // }
+
                     for(let a = 0; a < navListBtn.length; a++) {
                         navListBtn[a].classList.remove('active')
                         navListLink[a].classList.remove('active')
-                        navOverflow.forEach(item=>item.classList.remove('active'))
+                        navOverflow.classList.remove('active')
                         document.querySelector('html').classList.remove('fix')
                     }
                     navListBtn[i].classList.add('active');
                     item.classList.add('active');
-                    navOverflow.forEach(item=>item.classList.add('active'))
+                    navOverflow.classList.add('active')
                     document.querySelector('html').classList.add('fix')
-                } else {
-                    for(let a = 0; a < navListBtn.length; a++) {
-                        navListBtn[a].classList.remove('active')
-                        navListLink[a].classList.remove('active')
-                        navOverflow.forEach(item=>item.classList.remove('active'))
-                        document.querySelector('html').classList.remove('fix')
-                    }
-                    navListBtn[i].classList.add('active');
-                    item.classList.add('active');
+                }
+            })
+        })
+
+        document.body.addEventListener('click', (event)=>{
+            if(!event.target.closest('.nav__list_btn') && !event.target.closest('div.nav__search')) {
+                for(let a = 0; a < navListBtn.length; a++) {
+                    navListBtn[a].classList.remove('active')
+                    navListLink[a].classList.remove('active')
+                    navOverflow.classList.remove('active')
+                    navSearchInput.forEach((item,i)=>{
+                        navSearchInput[i].querySelector('input').value = ""
+                        navSearchInput[i].classList.remove('active')
+                    })
+                    navOverflow.classList.remove('active')
+                    document.querySelector('html').classList.remove('fix')
                 }
             }
         })
 
-
-
-        // nav.addEventListener('mouseout', (e)=>{
-        //     if(e.target.closest('.nav')) {
-
-        //         console.log('as')
-
-        //         for(let a = 0; a < navListBtn.length; a++) {
-        //             navListLink[a].classList.remove('active')
-        //             navListBtn[a].classList.remove('active')
-        //             setInterval
-        //         }
-
-        //     }
-        // })
-    })
-
-    document.body.addEventListener('click', (event)=>{
-        if(!event.target.closest('.nav__list_btn') && !event.target.closest('div.nav__search')) {
-            for(let a = 0; a < navListBtn.length; a++) {
-                navListBtn[a].classList.remove('active')
-                navListLink[a].classList.remove('active')
-                navOverflow.forEach(item=>item.classList.remove('active'))
-                navSearchInput.forEach((item,i)=>{
-                    navSearchInput[i].querySelector('input').value = ""
-                    navSearchInput[i].classList.remove('active')
-                })
-                navOverflow.forEach(item=>item.classList.remove('active'))
-                document.querySelector('html').classList.remove('fix')
-            }
-        }
-    })
-
-    navSearchBtn.forEach((item,i)=>{
-        item.addEventListener('click', ()=>{
-            navSearchInput[i].classList.add('active')
+        navSearchBtn.forEach((item,i)=>{
+            item.addEventListener('click', ()=>{
+                navSearchInput[i].classList.add('active')
+            })
         })
-    })
-    navSearchClear.forEach((item,i)=>{
-        item.addEventListener('click', (e)=>{
-            e.preventDefault()
-            navSearchInput[i].querySelector('input').value = ""
-            navSearchInput[i].classList.remove('active')
+        navSearchClear.forEach((item,i)=>{
+            item.addEventListener('click', (e)=>{
+                e.preventDefault()
+                navSearchInput[i].querySelector('input').value = ""
+                navSearchInput[i].classList.remove('active')
+            })
         })
     })
 }
@@ -494,7 +492,7 @@ if(navFix !== null) {
 let navSticky = document.querySelector('.nav__sticky');
 
 if(navSticky !== null) {
-    nav.style.height = nav.getBoundingClientRect().height + "px"
+    navSticky.style.height = navSticky.getBoundingClientRect().height + "px"
     window.addEventListener('scroll',()=>{
         if(navSticky.querySelector('.nav__info').getBoundingClientRect().bottom < 0) {
             navSticky.classList.add('fix')
@@ -606,17 +604,77 @@ if(mediaBlock != null) {
             mediaAutor.style.left = 'auto'
             mediaAutor.classList.add('bottom')
         }
-
-        articleTitle.forEach((item,i)=>{
-            if(item.getBoundingClientRect().top > 100 && item.getBoundingClientRect().top < 300) {
-                for(let a = 0; a < articleTitle.length; a++) {
-                    articleLink[a].classList.remove('active')
-                }
-                articleLink[i].classList.add('active')
-            }
-        })
     }
 
+}
+
+let legalAutor = document.querySelector('.legal-info__aside'),
+    legalBlock = document.querySelector('.legal-info__block'),
+    legalLink = document.querySelectorAll('.legal-info__aside li');
+
+if(legalBlock != null) {
+    if(window.innerWidth > 1023) {
+        let articleLeft = legalAutor.getBoundingClientRect().left
+
+        window.addEventListener('scroll', ()=>{
+            if(legalBlock.getBoundingClientRect().top < 100 && legalBlock.getBoundingClientRect().bottom > legalAutor.getBoundingClientRect().height + 100) {
+                legalAutor.classList.remove('bottom')
+                legalAutor.classList.add('fix')
+                legalAutor.style.left = articleLeft + 'px'
+            } else if (legalBlock.getBoundingClientRect().top > 100) {
+                legalAutor.classList.remove('fix')
+                legalAutor.style.left = 'auto'
+            } else if (legalBlock.getBoundingClientRect().bottom < legalAutor.getBoundingClientRect().height + 100) {
+                legalAutor.classList.remove('fix')
+                legalAutor.style.left = 'auto'
+                legalAutor.classList.add('bottom')
+            }
+
+            articleTitle.forEach((item,i)=>{
+                if(item.getBoundingClientRect().top > 100 && item.getBoundingClientRect().top < 300) {
+                    for(let a = 0; a < articleTitle.length; a++) {
+                        articleLink[a].classList.remove('active')
+                    }
+                    articleLink[i].classList.add('active')
+                }
+            })
+        })
+
+        if(legalBlock.getBoundingClientRect().top < 100 && legalBlock.getBoundingClientRect().bottom > legalAutor.getBoundingClientRect().height + 100) {
+            legalAutor.classList.remove('bottom')
+            legalAutor.classList.add('fix')
+            legalAutor.style.left = articleLeft + 'px'
+        } else if (legalBlock.getBoundingClientRect().top > 100) {
+            legalAutor.classList.remove('fix')
+            legalAutor.style.left = 'auto'
+        } else if (legalBlock.getBoundingClientRect().bottom < legalAutor.getBoundingClientRect().height + 100) {
+            legalAutor.classList.remove('fix')
+            legalAutor.style.left = 'auto'
+            legalAutor.classList.add('bottom')
+        }
+    }
+
+    legalLink.forEach((item)=>{
+        item.addEventListener('click', ()=>{
+            window.scrollTo({
+                top: legalBlock.getBoundingClientRect().top - document.body.getBoundingClientRect().top - 200,
+                left: 0,
+                behavior: "smooth"
+            });
+        })
+    })
+
+}
+
+let consultFile = document.querySelectorAll('.consult__file input'),
+    consultFileText = document.querySelectorAll('.consult__file p');
+
+if(consultFile !== null) {
+    consultFile.forEach((item,i)=>{
+        item.addEventListener('change', ()=>{
+            consultFileText[i].innerHTML = '<span>' + item.files[0].name + '</span>'
+        })
+    })
 }
 
 
