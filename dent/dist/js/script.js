@@ -677,5 +677,60 @@ if(consultFile !== null) {
     })
 }
 
+if(document.querySelector('.magazine') !== null) {
+    const pageFlip = new St.PageFlip(document.getElementById('book'),
+        {
+            width: 674, 
+            height: 827,  
+            showCover: true,
+            size: "stretch",
+            maxWidth: 674, 
+            maxHeight: 827,  
+            minWidth: 250,
+
+        }
+    );
+
+    pageFlip.loadFromHTML(document.querySelectorAll('.my-page'));
+
+    let magazinPage = document.querySelectorAll('.magazine__page');
+
+    magazinPage.forEach((item, i)=>{
+        let x = i+1;
+        document.querySelector(".magazine__func_pag").innerHTML = document.querySelector(".magazine__func_pag").innerHTML + '<span>'+ x +'</span>'
+    })
+
+    let magazineSpan = document.querySelectorAll('.magazine__func_pag span');
+
+    magazineSpan[pageFlip.getCurrentPageIndex()].classList.add('active');
+
+    magazineSpan.forEach((item,i)=>{
+        item.addEventListener('click', ()=>{
+            pageFlip.flip(i);
+            magazineSpan.forEach(span => span.classList.remove('active'))
+            item.classList.add('active')
+        })
+    })
+
+    document.querySelector(".btn-prev").addEventListener("click", () => {
+        pageFlip.flipPrev(); 
+        magazineSpan.forEach(span => span.classList.remove('active'))
+        magazineSpan[pageFlip.getCurrentPageIndex()].classList.add('active');
+    });
+
+    document.querySelector(".btn-next").addEventListener("click", () => {
+        pageFlip.flipNext(); 
+        magazineSpan.forEach(span => span.classList.remove('active'))
+        magazineSpan[pageFlip.getCurrentPageIndex()].classList.add('active');
+    });
+
+    pageFlip.on('flip', (e) => {
+        magazineSpan.forEach(span => span.classList.remove('active'))
+        magazineSpan[pageFlip.getCurrentPageIndex()].classList.add('active');
+    });
+
+    
+}
+
 
 }, false);
