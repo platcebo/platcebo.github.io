@@ -74,4 +74,96 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+const shapes = document.querySelectorAll('.body__bg');
+
+    // каждому элементу задаём "характер" движения
+    const configs = Array.from(shapes).map((_, i) => ({
+      intensityX: (i + 1) * 50, // разные смещения по X
+      intensityY: (i + 1) * 40, // разные смещения по Y
+      rotateFactor: (i % 2 === 0 ? 15 : -20), // разные углы вращения
+      scale: 1 + i * 0.03 // разный масштаб
+    }));
+
+    document.addEventListener('mousemove', (e) => {
+      const { innerWidth, innerHeight } = window;
+      const relX = (e.clientX / innerWidth - 0.5);
+      const relY = (e.clientY / innerHeight - 0.5);
+
+      shapes.forEach((shape, i) => {
+        const cfg = configs[i];
+        const x = relX * cfg.intensityX;
+        const y = relY * cfg.intensityY;
+        const rotate = relX * cfg.rotateFactor;
+
+        shape.style.transform =
+          `translate(${x}px, ${y}px) rotate(${rotate}deg) scale(${cfg.scale})`;
+      });
+});
+
+
+let sectionAnim = document.querySelectorAll('.section-anim');
+
+if(sectionAnim !== null) {
+    sectionAnim.forEach((item)=>{
+        if(item.getBoundingClientRect().top < window.innerHeight/1.5) {
+            item.classList.add('section-anim__active')
+        }
+        window.addEventListener('scroll', ()=>{
+            if(item.getBoundingClientRect().top < window.innerHeight/1.5) {
+                item.classList.add('section-anim__active')
+            }
+        })
+    })
+}
+
+let legalAutor = document.querySelector('.faq__title'),
+    legalBlock = document.querySelector('.faq__block');
+
+if(legalBlock != null) {
+    if(window.innerWidth > 1023) {
+        let articleLeft = legalAutor.getBoundingClientRect().left
+
+        window.addEventListener('scroll', ()=>{
+            if(legalBlock.getBoundingClientRect().top < 20 && legalBlock.getBoundingClientRect().bottom > legalAutor.getBoundingClientRect().height + 20) {
+                legalAutor.classList.remove('bottom')
+                legalAutor.classList.add('fix')
+                legalAutor.style.left = articleLeft + 'px'
+            } else if (legalBlock.getBoundingClientRect().top > 20) {
+                legalAutor.classList.remove('fix')
+                legalAutor.style.left = 'auto'
+            } else if (legalBlock.getBoundingClientRect().bottom < legalAutor.getBoundingClientRect().height + 20) {
+                legalAutor.classList.remove('fix')
+                legalAutor.style.left = 'auto'
+                legalAutor.classList.add('bottom')
+            }
+
+        })
+
+        if(legalBlock.getBoundingClientRect().top < 20 && legalBlock.getBoundingClientRect().bottom > legalAutor.getBoundingClientRect().height + 20) {
+            legalAutor.classList.remove('bottom')
+            legalAutor.classList.add('fix')
+            legalAutor.style.left = articleLeft + 'px'
+        } else if (legalBlock.getBoundingClientRect().top > 20) {
+            legalAutor.classList.remove('fix')
+            legalAutor.style.left = 'auto'
+        } else if (legalBlock.getBoundingClientRect().bottom < legalAutor.getBoundingClientRect().height + 20) {
+            legalAutor.classList.remove('fix')
+            legalAutor.style.left = 'auto'
+            legalAutor.classList.add('bottom')
+        }
+    }
+}
+
+let faqBtn = document.querySelectorAll('.faq__btn');
+
+if(faqBtn !== null) {
+    faqBtn.forEach((item)=>{
+        item.addEventListener('click', ()=>{
+            item.classList.toggle('active')
+        })
+    })
+}
+
+
+
 }, false);
