@@ -728,8 +728,22 @@ if(document.querySelector('.magazine') !== null) {
         magazineSpan.forEach(span => span.classList.remove('active'))
         magazineSpan[pageFlip.getCurrentPageIndex()].classList.add('active');
     });
+}
 
-    
+let articleText = document.querySelectorAll('.article-doc__info_text');
+
+if(articleText !== null) {
+    articleText.forEach((item)=>{
+        item.innerHTML = item.innerHTML + `<span>${item.innerHTML}</span>`
+    })
+}
+
+let newsText = document.querySelectorAll('.news-page__text');
+
+if(newsText !== null) {
+    newsText.forEach((item)=>{
+        item.innerHTML = item.innerHTML + `<span>${item.innerHTML}</span>`
+    })
 }
 
 

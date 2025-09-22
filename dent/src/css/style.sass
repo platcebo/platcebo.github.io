@@ -1215,7 +1215,6 @@ html
             resize: none
             height: 84px
             grid-column: 1/4
-
     &__flex
         display: flex
         justify-content: end
@@ -1293,7 +1292,7 @@ html
     &__soc
         margin: 0 0 60px
         &_name
-            font-family: $font-family
+            font-family: $second-family
             font-weight: 400
             font-size: 36px
             line-height: 1.2
@@ -1923,7 +1922,6 @@ html
             position: relative
             text-overflow: ellipsis
             display: block
-            word-break: break-all
             display: -webkit-box
             -webkit-box-orient: vertical
             -moz-box-orient: vertical
@@ -1933,6 +1931,20 @@ html
             -moz-line-clamp: 5
             -ms-line-clamp: 5
             line-clamp: 5
+            position: relative
+            span
+                transition: all .3s
+                opacity: 0
+                top: 0
+                left: 0
+                position: absolute
+                z-index: 2
+                -webkit-text-fill-color: $black
+                -webkit-line-clamp: none
+                -moz-line-clamp: none
+                -ms-line-clamp: none
+                line-clamp: none
+                color: $black
         .case__autor
             margin: 20px 0 0
         .comf__link
@@ -1945,6 +1957,8 @@ html
         transition: all .3s
         display: grid
         grid-template-rows: auto 1fr
+        &_name
+            transition: all .3s
         &_prev
             position: relative
             min-height: 230px
@@ -2002,22 +2016,22 @@ html
                 background: $green-1
                 path
                     fill: $white
-            .article-doc__item_prev
-                img
-                    transform: scale(1.1)
+            .article-doc__item
+                &_prev
+                    img
+                        transform: scale(1.1)
             .case__autor
                 p
                     color: $black
                     &+p
                         color: $grey
-        &:hover
             .article-doc__info_text
-                -webkit-text-fill-color: $black
                 -webkit-line-clamp: none
                 -moz-line-clamp: none
                 -ms-line-clamp: none
                 line-clamp: none
-                color: $black
+                span
+                    opacity: 1
     &__video
         position: relative
         height: 450px
@@ -2046,6 +2060,11 @@ html
                 &_name
                     color: $green-2
                     margin: 30px 0 0
+                    transition: all .3s
+            &:hover
+                .article-doc__item
+                    &_name
+                        color: $green-1
 
 .footer
     margin: 60px 0 0
@@ -4358,6 +4377,21 @@ html
         -ms-line-clamp: 4
         line-clamp: 4
         transition: all .3s
+        position: relative
+        z-index: 1
+        span
+            transition: all .3s
+            opacity: 0
+            top: 0
+            left: 0
+            position: absolute
+            z-index: 2
+            -webkit-text-fill-color: $black
+            -webkit-line-clamp: none
+            -moz-line-clamp: none
+            -ms-line-clamp: none
+            line-clamp: none
+            color: $black
     &__wrapper
         display: flex
         justify-content: start
@@ -4371,9 +4405,10 @@ html
         font-size: 16px
         line-height: 1.3
         color: $black
+        margin: 0 0 15px
     &__name
         margin: auto 0 0
-        font-family: $font-family
+        font-family: $second-family
         font-weight: 400
         font-size: 24px
         line-height: 1.3
@@ -4418,11 +4453,12 @@ html
                 &__name
                     color: $green-1
                 &__text
-                    background: none
-                    background-clip: none
-                    -webkit-background-clip: none
-                    -webkit-text-fill-color: $black
-                    color: $black
+                    -webkit-line-clamp: none
+                    -moz-line-clamp: none
+                    -ms-line-clamp: none
+                    line-clamp: none
+                    span
+                        opacity: 1
     &__main
         position: relative
         border-radius: 30px
@@ -4446,6 +4482,7 @@ html
         .news-page
             &__name
                 color: $light-grey
+                font-weight: 700
             &__text
                 background: none
                 background-clip: none
@@ -4476,6 +4513,12 @@ html
                     fill: $white
     &__more
         padding: 60px 0 0
+    .news
+        &__item
+            &_info
+                p+p
+                    font-weight: 400
+                    font-family: $second-family
 
 .news-detail
     padding: 30px 0 0
@@ -4637,7 +4680,7 @@ html
     padding: 30px 0 0
     &__title
         p
-            font-family: $font-family
+            font-family: $second-family
             font-weight: 400
             font-size: 36px
             line-height: 1.2
