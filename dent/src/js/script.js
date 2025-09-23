@@ -746,5 +746,13 @@ if(newsText !== null) {
     })
 }
 
+let commentText = document.querySelectorAll('.comment__text');
+
+if(commentText !== null) {
+    commentText.forEach((item)=>{
+        item.innerHTML = item.innerHTML + `<span>${item.innerHTML}</span>`
+    })
+}
+
 
 }, false);

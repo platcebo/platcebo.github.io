@@ -1733,6 +1733,20 @@ html
         line-clamp: 4
         transition: all .3s
         max-height: 73px
+        position: relative
+        span
+            transition: all .3s
+            opacity: 0
+            top: 0
+            left: 0
+            position: absolute
+            z-index: 2
+            -webkit-text-fill-color: $black
+            -webkit-line-clamp: none
+            -moz-line-clamp: none
+            -ms-line-clamp: none
+            line-clamp: none
+            color: $black
     &__slide
         border-radius: 30px
         padding: 20px
@@ -1757,6 +1771,8 @@ html
                 line-clamp: none
                 color: $black
                 max-height: 150px
+                span
+                    opacity: 1
 
 .news
     padding: 60px 0 0
