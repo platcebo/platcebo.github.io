@@ -582,12 +582,12 @@
                         <li>Выберите клинику3</li>
                     </ul>
                 </div>
-                <a href="#" class="comment-page__filter_add btn__green btn__green-arrow">
+                <div href="#" class="comment-page__filter_add btn__green btn__green-arrow modal-rate__call">
                     <span>Оставить отзыв</span>
                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.792 22.712L20.6 16.04H6.224V14.624H20.624L14.792 7.952H16.64L23.24 15.32L16.64 22.712H14.792Z" fill="white"/>
                     </svg>
-                </a>
+                </div>
             </form>
             <div class="comment-page__wrapper">
                 <div class="comment__slide">
@@ -1137,6 +1137,103 @@
         <div class="modal__overflow"></div>
         <div class="modal-educ__wrapper"></div>
     </modal>
+
+    <div class="modal modal-rate">
+        <div class="modal__overflow"></div>
+        <div class="modal-rate__container">
+            <div class="modal__close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.8323 10.0001L19.6199 2.21215C20.1267 1.70557 20.1267 0.88651 19.6199 0.379933C19.1133 -0.126644 18.2943 -0.126644 17.7877 0.379933L9.99988 8.16793L2.21228 0.379933C1.70548 -0.126644 0.886669 -0.126644 0.380103 0.379933C-0.126701 0.88651 -0.126701 1.70557 0.380103 2.21215L8.1677 10.0001L0.380103 17.7881C-0.126701 18.2947 -0.126701 19.1138 0.380103 19.6204C0.632555 19.8731 0.964493 20 1.29619 20C1.62789 20 1.95959 19.8731 2.21228 19.6204L9.99988 11.8324L17.7877 19.6204C18.0404 19.8731 18.3721 20 18.7038 20C19.0355 20 19.3672 19.8731 19.6199 19.6204C20.1267 19.1138 20.1267 18.2947 19.6199 17.7881L11.8323 10.0001Z" fill="#323232" />
+                </svg>
+            </div>
+            <div class="modal-rate__name">Спасибо, что Вы выбрали нашу клинику!</div>
+            <p class="modal-rate__text">Пожалуйста, оцените ваш визит по пятибалльной шкале</p>
+            <form action="#" class="modal-rate__form">
+                <div>
+                    <input type="checkbox">
+                    <p>★</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>★</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>★</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>★</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>★</p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal modal-bad">
+        <div class="modal__overflow"></div>
+        <div class="modal-rate__container">
+            <div class="modal__close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.8323 10.0001L19.6199 2.21215C20.1267 1.70557 20.1267 0.88651 19.6199 0.379933C19.1133 -0.126644 18.2943 -0.126644 17.7877 0.379933L9.99988 8.16793L2.21228 0.379933C1.70548 -0.126644 0.886669 -0.126644 0.380103 0.379933C-0.126701 0.88651 -0.126701 1.70557 0.380103 2.21215L8.1677 10.0001L0.380103 17.7881C-0.126701 18.2947 -0.126701 19.1138 0.380103 19.6204C0.632555 19.8731 0.964493 20 1.29619 20C1.62789 20 1.95959 19.8731 2.21228 19.6204L9.99988 11.8324L17.7877 19.6204C18.0404 19.8731 18.3721 20 18.7038 20C19.0355 20 19.3672 19.8731 19.6199 19.6204C20.1267 19.1138 20.1267 18.2947 19.6199 17.7881L11.8323 10.0001Z" fill="#323232" />
+                </svg>
+            </div>
+            <p class="modal-rate__name">Замечание о клинике</p>
+            <p class="modal-bad__text">Если после посещения клиники у вас остались замечания, напишите нам об этом. Обратная связь нам важна. Возможно, в своей работе мы упускаем что-то важное для вас. <br><br>Мы знаем, что можем работать лучше! Помогите нам в этом. </p>
+            <form action="#" class="modal-bad__form">
+                <input type="text" placeholder="Ваше имя">
+                <input type="text" placeholder="+7 (___) ___-__-__" data-phone-pattern>
+                <textarea name="" id="" placeholder="Текст замечания"></textarea>
+                <div class="consult__check">
+                    <input type="checkbox">
+                    <span>
+                        <svg width="8" height="8" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.75 4.75L4.25 8.25L11.25 0.75" stroke="#109548" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                    <p>Даю согласие на обработку персональных данных</p>
+                </div>
+                <button class="btn__green">отправить</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal modal-good">
+        <div class="modal__overflow"></div>
+        <div class="modal-rate__container">
+            <div class="modal__close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.8323 10.0001L19.6199 2.21215C20.1267 1.70557 20.1267 0.88651 19.6199 0.379933C19.1133 -0.126644 18.2943 -0.126644 17.7877 0.379933L9.99988 8.16793L2.21228 0.379933C1.70548 -0.126644 0.886669 -0.126644 0.380103 0.379933C-0.126701 0.88651 -0.126701 1.70557 0.380103 2.21215L8.1677 10.0001L0.380103 17.7881C-0.126701 18.2947 -0.126701 19.1138 0.380103 19.6204C0.632555 19.8731 0.964493 20 1.29619 20C1.62789 20 1.95959 19.8731 2.21228 19.6204L9.99988 11.8324L17.7877 19.6204C18.0404 19.8731 18.3721 20 18.7038 20C19.0355 20 19.3672 19.8731 19.6199 19.6204C20.1267 19.1138 20.1267 18.2947 19.6199 17.7881L11.8323 10.0001Z" fill="#323232" />
+                </svg>
+            </div>
+            <p class="modal-rate__name">Мы очень рады, что Вам всё понравилось!</p>
+            <p class="modal-bad__text">Пожалуйста, оставьте Ваш положительный отзыв на любой из этих площадок — это будет лучшая благодарность для клиники и врача</p>
+            <div class="modal-good__row">
+                <a href="#">
+                    <img src="img/modal_1.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="img/modal_2.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="img/modal_3.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="img/modal_4.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="img/modal_5.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="img/modal_6.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="img/modal_7.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
     
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>

@@ -382,10 +382,18 @@ if(btn.length > 0) {
 }
 
 let modal = document.querySelectorAll('.modal'),
-    modalOverflow = document.querySelectorAll('.modal__overflow');
+    modalOverflow = document.querySelectorAll('.modal__overflow'),
+    modalClose = document.querySelectorAll('.modal__close');
 
 if(modal !== null) {
     modalOverflow.forEach((item)=>{
+        item.addEventListener('click', ()=>{
+            for(let a = 0; a < modal.length; a++) {
+                modal[a].classList.remove('active');
+            }
+        })
+    })
+    modalClose.forEach((item)=>{
         item.addEventListener('click', ()=>{
             for(let a = 0; a < modal.length; a++) {
                 modal[a].classList.remove('active');
@@ -753,6 +761,47 @@ if(commentText !== null) {
         item.innerHTML = item.innerHTML + `<span>${item.innerHTML}</span>`
     })
 }
+
+let modalRate = document.querySelector('.modal-rate'),
+    modalRateBtn = document.querySelectorAll('.modal-rate__call'),
+    rateCheck = document.querySelectorAll('.modal-rate__form input'),
+    modalBad = document.querySelector('.modal-bad'),
+    modalGood = document.querySelector('.modal-good');
+
+if(modalRateBtn !== null) {
+    modalRateBtn.forEach((item)=>{
+        item.addEventListener('click',()=>{
+            modalRate.classList.add('active');
+        })
+    })
+
+    rateCheck.forEach((item, i)=>{
+        item.addEventListener('mouseover',(e)=>{
+            e.preventDefault()
+            for(let a = 0; a < i + 1; a++) {
+                rateCheck[a].checked = true
+            }
+        })
+        item.addEventListener('mouseout',()=>{
+            rateCheck.forEach((item)=>{
+                item.checked = false
+            })
+        })
+    })
+
+    rateCheck.forEach((item, i)=>{
+        item.addEventListener('click',()=>{
+            modalRate.classList.remove('active')
+            if(i < 3) {
+                modalBad.classList.add('active')
+            } else {
+                modalGood.classList.add('active')
+            }
+        })
+    })
+}
+
+
 
 
 }, false);

@@ -5481,6 +5481,151 @@ html
                     background: $green-1
                     color: $white
     
+.modal-rate
+    &__container
+        margin: auto
+        width: 100%
+        max-width: 720px
+        border-radius: 30px
+        padding: 40px
+        position: relative
+        background: $white
+    .modal__close
+        position: absolute
+        top: 20px
+        right: 20px
+        cursor: pointer
+        path
+            transition: all .3s
+        &:hover
+            path
+                fill: $green-1
+    &__name
+        font-family: $second-family
+        font-weight: 700
+        font-size: 36px
+        line-height: 1.3
+        text-align: center
+        color: $green-2
+        max-width: 520px
+        margin: 0 auto
+    &__text
+        margin: 40px auto 0
+        font-family: $font-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.3
+        text-align: center
+        color: $black
+        max-width: 330px
+    &__form
+        margin: 40px 0 0
+        display: flex
+        justify-content: center
+        align-items: center
+        div
+            position: relative
+        p
+            font-family: $second-family
+            font-weight: 400
+            font-size: 48px
+            line-height: 1.1
+            text-align: center
+            color: #cdcdcd
+            transition: all .3s
+        input
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 2
+            cursor: pointer
+            width: 100%
+            height: 100%
+            opacity: 0
+            &:hover,
+            &:checked
+                &+p
+                    color: #fbbc04
+    &__call
+        cursor: pointer
+
+.modal-bad
+    &__text
+        margin: 30px auto 0
+        max-width: 520px
+        font-family: $font-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.3
+        text-align: center
+        color: #616060
+    &__form
+        margin: 30px auto 0
+        max-width: 520px
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 20px
+        input,
+        textarea
+            width: 100%
+            box-sizing: border-box
+            border: 1px solid $grey
+            border-radius: 5px
+            padding: 10px 20px
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.3
+            color: $black
+            background: $white
+            &::placeholder
+                color: $grey
+        textarea
+            resize: none
+            grid-column: 1/3
+            height: 120px
+        .consult__check
+            grid-column: 1/3
+        .btn__green
+            grid-column: 1/3
+            margin: 0 auto
+    .modal__close
+        position: absolute
+        top: 20px
+        right: 20px
+        cursor: pointer
+        path
+            transition: all .3s
+        &:hover
+            path
+                fill: $green-1
+
+.modal-good
+    .modal__close
+        position: absolute
+        top: 20px
+        right: 20px
+        cursor: pointer
+        path
+            transition: all .3s
+        &:hover
+            path
+                fill: $green-1
+    &__row
+        margin: 40px auto 0
+        display: flex
+        justify-content: center
+        align-items: center
+        max-width: 520px
+        gap: 30px
+        row-gap: 20px
+        flex-wrap: wrap
+        img
+            width: auto
+            height: 25px
+
 @media ( max-width: 1599px )
     .nav
         &__list
@@ -6765,6 +6910,22 @@ html
         &__wrapper
             gap: 20px
             grid-template-columns: 1fr
+    .modal-rate
+        &__name
+            font-size: 24px
+        &__container
+            padding: 40px 20px
+        &__form
+            p
+                font-size: 32px
+    .modal-bad
+        &__form
+            grid-template-columns: 1fr
+            textarea,
+            .btn__green,
+            .consult__check
+                grid-column: auto
+
 
 
 
