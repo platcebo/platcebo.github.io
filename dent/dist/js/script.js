@@ -546,7 +546,12 @@ if(select !== null) {
             selectOption = item.querySelectorAll('li');
 
         selectInput.addEventListener('click', ()=>{
-            item.classList.toggle('active')
+            if(item.classList.contains('active')) {
+                item.classList.remove('active')
+            } else {
+                select.forEach(sl=>sl.classList.remove('active'))
+                item.classList.add('active')
+            }
         })
 
         selectOption.forEach((option)=>{
@@ -555,6 +560,14 @@ if(select !== null) {
                 item.classList.remove('active')
             })
         })
+    })
+
+    document.body.addEventListener('click', (event)=>{
+        if(!event.target.closest('.select')) {
+            select.forEach((option)=>{
+                option.classList.remove('active')
+            })
+        }
     })
 }
 
@@ -797,6 +810,57 @@ if(modalRateBtn !== null) {
             } else {
                 modalGood.classList.add('active')
             }
+        })
+    })
+}
+
+// let priceAutor = document.querySelectorAll('.price__doc_autor'),
+//     priceBlock = document.querySelectorAll('.price__doc');
+
+// if(priceBlock != null) {
+//     if(window.innerWidth > 1400) {
+//         priceAutor.forEach((item,i)=>{
+//             let articleLeft = item.getBoundingClientRect().left
+
+//             window.addEventListener('scroll', ()=>{
+//                 if(priceBlock[i].getBoundingClientRect().top < 100 && priceBlock[i].getBoundingClientRect().bottom > item.getBoundingClientRect().height + 100) {
+//                     item.classList.remove('bottom')
+//                     item.classList.add('fix')
+//                     item.style.left = articleLeft + 'px'
+//                 } else if (priceBlock[i].getBoundingClientRect().top > 100) {
+//                     item.classList.remove('fix')
+//                     item.style.left = 'auto'
+//                 } else if (priceBlock[i].getBoundingClientRect().bottom < item.getBoundingClientRect().height + 100) {
+//                     item.classList.remove('fix')
+//                     item.style.left = 'auto'
+//                     item.classList.add('bottom')
+//                 }
+//             })
+
+//             if(priceBlock[i].getBoundingClientRect().top < 100 && priceBlock[i].getBoundingClientRect().bottom > item.getBoundingClientRect().height + 100) {
+//                 item.classList.remove('bottom')
+//                 item.classList.add('fix')
+//                 item.style.left = articleLeft + 'px'
+//             } else if (priceBlock[i].getBoundingClientRect().top > 100) {
+//                 item.classList.remove('fix')
+//                 item.style.left = 'auto'
+//             } else if (priceBlock[i].getBoundingClientRect().bottom < item.getBoundingClientRect().height + 100) {
+//                 item.classList.remove('fix')
+//                 item.style.left = 'auto'
+//                 item.classList.add('bottom')
+//             }
+//         })
+//     }
+
+// }
+
+let modalForm = document.querySelector('.modal-form'),
+    modalFormCall =document.querySelectorAll('.modal__call');
+
+if(modalForm!==null) {
+    modalFormCall.forEach((item)=>{
+        item.addEventListener('click',()=>{
+            modalForm.classList.add('active')
         })
     })
 }
