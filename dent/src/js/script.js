@@ -206,24 +206,55 @@ if(selectInput !== null) {
     }
 }
 
+let educGallery = document.querySelectorAll('.educ__gallery img'),
+    educModal = document.querySelector('.modal-educ'),
+    educWrapper = document.querySelector('.modal-educ__wrapper');
+
+if(educGallery !== null) {
+    educGallery.forEach((item)=>{
+        item.addEventListener('click', (event)=>{
+            educModal.classList.add('active');
+            educWrapper.innerHTML = item.outerHTML
+        })
+    })
+}
+
+let legalImg = document.querySelectorAll('.legal-info .welcome__slider img');
+
+if(legalImg !== null) {
+    legalImg.forEach((item)=>{
+        item.addEventListener('click', (event)=>{
+            educModal.classList.add('active');
+            educWrapper.innerHTML = item.outerHTML
+        })
+    })
+}
+
 let video = document.querySelectorAll('.video-player'),
     videoPlay  = document.querySelectorAll('.video-btn');
 
 if(video !== null) {
+    // videoPlay.forEach((item,i)=>{
+    //     item.addEventListener('click', ()=>{
+    //         item.classList.remove('active')
+    //         video[i].play();
+    //     })
+    // })
+    // video.forEach((item,i)=>{
+    //     item.addEventListener('click',()=>{
+    //         if (!item.paused) {
+    //             videoPlay[i].classList.add('active')
+    //             item.pause();
+    //         } else {
+    //             return
+    //     }
+    //     })
+    // })
+
     videoPlay.forEach((item,i)=>{
-        item.addEventListener('click', ()=>{
-            item.classList.remove('active')
-            video[i].play();
-        })
-    })
-    video.forEach((item,i)=>{
         item.addEventListener('click',()=>{
-            if (!item.paused) {
-                videoPlay[i].classList.add('active')
-                item.pause();
-            } else {
-                return
-        }
+            educModal.classList.add('active');
+            educWrapper.innerHTML = video[i].getAttribute('data-iframe')
         })
     })
 }
@@ -398,19 +429,6 @@ if(modal !== null) {
             for(let a = 0; a < modal.length; a++) {
                 modal[a].classList.remove('active');
             }
-        })
-    })
-}
-
-let educGallery = document.querySelectorAll('.educ__gallery img'),
-    educModal = document.querySelector('.modal-educ'),
-    educWrapper = document.querySelector('.modal-educ__wrapper');
-
-if(educGallery !== null) {
-    educGallery.forEach((item)=>{
-        item.addEventListener('click', (event)=>{
-            educModal.classList.add('active');
-            educWrapper.innerHTML = item.outerHTML
         })
     })
 }
@@ -814,45 +832,6 @@ if(modalRateBtn !== null) {
     })
 }
 
-// let priceAutor = document.querySelectorAll('.price__doc_autor'),
-//     priceBlock = document.querySelectorAll('.price__doc');
-
-// if(priceBlock != null) {
-//     if(window.innerWidth > 1400) {
-//         priceAutor.forEach((item,i)=>{
-//             let articleLeft = item.getBoundingClientRect().left
-
-//             window.addEventListener('scroll', ()=>{
-//                 if(priceBlock[i].getBoundingClientRect().top < 100 && priceBlock[i].getBoundingClientRect().bottom > item.getBoundingClientRect().height + 100) {
-//                     item.classList.remove('bottom')
-//                     item.classList.add('fix')
-//                     item.style.left = articleLeft + 'px'
-//                 } else if (priceBlock[i].getBoundingClientRect().top > 100) {
-//                     item.classList.remove('fix')
-//                     item.style.left = 'auto'
-//                 } else if (priceBlock[i].getBoundingClientRect().bottom < item.getBoundingClientRect().height + 100) {
-//                     item.classList.remove('fix')
-//                     item.style.left = 'auto'
-//                     item.classList.add('bottom')
-//                 }
-//             })
-
-//             if(priceBlock[i].getBoundingClientRect().top < 100 && priceBlock[i].getBoundingClientRect().bottom > item.getBoundingClientRect().height + 100) {
-//                 item.classList.remove('bottom')
-//                 item.classList.add('fix')
-//                 item.style.left = articleLeft + 'px'
-//             } else if (priceBlock[i].getBoundingClientRect().top > 100) {
-//                 item.classList.remove('fix')
-//                 item.style.left = 'auto'
-//             } else if (priceBlock[i].getBoundingClientRect().bottom < item.getBoundingClientRect().height + 100) {
-//                 item.classList.remove('fix')
-//                 item.style.left = 'auto'
-//                 item.classList.add('bottom')
-//             }
-//         })
-//     }
-
-// }
 
 let modalForm = document.querySelector('.modal-form'),
     modalFormCall =document.querySelectorAll('.modal__call');

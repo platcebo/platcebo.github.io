@@ -1085,7 +1085,8 @@ html
         position: relative
         overflow: hidden
         video,
-        img
+        img,
+        iframe
             width: 100%
             height: 100%
             object-fit: cover
@@ -1169,7 +1170,8 @@ html
         overflow: hidden
         border-radius: 30px 0 0 30px
         img,
-        video
+        video,
+        iframe
             width: 100%
             height: 1px
             min-height: 100%
@@ -2078,7 +2080,8 @@ html
         border-radius: 30px
         overflow: hidden
         video,
-        img
+        img,
+        iframe
             height: 100%
             width: 100%
             object-fit: cover
@@ -3847,9 +3850,13 @@ html
     &__wrapper
         margin: auto
     img
-        width: 500px
-        height: 500px
+        width: 800px
+        height: 100vh
         object-fit: contain
+        max-width: 100%
+        max-height: calc( 100vh - 80px )
+    iframe,
+    video
         max-width: 100%
 
 .interview
@@ -5743,8 +5750,9 @@ html
             width: 100%
         &__prev
             border-radius: 0
+            video,
             img,
-            video
+            iframe
                 height: 250px
         &__info
             padding: 10px 20px 14px
@@ -5786,6 +5794,8 @@ html
         &__row
             grid-template-columns: 1fr !important
             gap: 20px
+
+
 
 @media ( max-width: 1599px )
     .nav
@@ -6396,8 +6406,9 @@ html
             grid-template-columns: 1fr
         &__prev
             border-radius: 30px
+            video,
             img,
-            video
+            iframe
                 height: 250px
         &__info
             padding: 10px 20px 14px
