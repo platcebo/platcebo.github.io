@@ -418,16 +418,30 @@ let modal = document.querySelectorAll('.modal'),
 
 if(modal !== null) {
     modalOverflow.forEach((item)=>{
-        item.addEventListener('click', ()=>{
-            for(let a = 0; a < modal.length; a++) {
-                modal[a].classList.remove('active');
+        item.addEventListener('click', (event)=>{
+            if(event.target.closest('.modal-educ')) {
+                educWrapper.innerHTML = "";
+                for(let a = 0; a < modal.length; a++) {
+                    modal[a].classList.remove('active');
+                }
+            } else {
+                for(let a = 0; a < modal.length; a++) {
+                    modal[a].classList.remove('active');
+                }
             }
         })
     })
     modalClose.forEach((item)=>{
-        item.addEventListener('click', ()=>{
-            for(let a = 0; a < modal.length; a++) {
-                modal[a].classList.remove('active');
+        item.addEventListener('click', (event)=>{
+            if(event.target.closest('.modal-educ')) {
+                educWrapper.innerHTML = "";
+                for(let a = 0; a < modal.length; a++) {
+                    modal[a].classList.remove('active');
+                }
+            } else {
+                for(let a = 0; a < modal.length; a++) {
+                    modal[a].classList.remove('active');
+                }
             }
         })
     })
