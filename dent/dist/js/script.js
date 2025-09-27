@@ -859,6 +859,44 @@ if(modalForm!==null) {
 }
 
 
+let priceAutor = document.querySelectorAll('.price__service .price__doc_autor'),
+    priceBlock = document.querySelectorAll('.price__service');
+
+if(priceBlock != null) {
+    if(window.innerWidth > 1400) {
+        let articleLeft = document.querySelectorAll('.price__doc_autor')[0].getBoundingClientRect().left - 20
+
+        window.addEventListener('scroll', ()=>{
+
+            priceAutor.forEach((item,i)=>{
+                if(priceBlock[i].getBoundingClientRect().top < 100 && priceBlock[i].getBoundingClientRect().bottom > item.getBoundingClientRect().height + 100) {
+                    item.classList.remove('bottom')
+                    item.classList.add('fix')
+                    item.style.left = articleLeft + 'px'
+                } else if (priceBlock[i].getBoundingClientRect().top > 100) {
+                    item.classList.remove('fix')
+                    item.style.left = 'auto'
+                } else if (priceBlock[i].getBoundingClientRect().bottom < item.getBoundingClientRect().height + 100) {
+                    item.classList.remove('fix')
+                    item.style.left = 'auto'
+                    item.classList.add('bottom')
+                }
+            })
+
+        })
+    }
+
+    document.querySelectorAll('.price-service__tab li').forEach((link, i)=>{
+        link.addEventListener('click',()=>{
+            priceAutor.forEach((item,i)=>{
+                item.classList.remove('fix')
+                item.style.left = 'auto'
+                item.classList.remove('bottom')
+            })
+        })
+    })
+}
+
 
 
 }, false);
