@@ -862,7 +862,7 @@ if(modalForm!==null) {
 let priceAutor = document.querySelectorAll('.price__service .price__doc_autor'),
     priceBlock = document.querySelectorAll('.price__service');
 
-if(priceBlock != null) {
+if(priceAutor != null) {
     if(window.innerWidth > 1400) {
         let articleLeft = document.querySelectorAll('.price__doc_autor')[0].getBoundingClientRect().left - 20
 
