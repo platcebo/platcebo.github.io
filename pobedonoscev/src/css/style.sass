@@ -646,7 +646,7 @@ body
     
 .about
     h1
-        font: 400 100px / 1.1 $second-family
+        font: 400 74px / 1.1 $second-family
         color: #000
         span
             // letter-spacing: 0.07em
@@ -669,9 +669,9 @@ body
         object-fit: cover
 
 .team
-    padding: 290px 0 0
+    padding: 149px 0 0
     h2
-        font: 400 100px / 1.29961 $second-family
+        font: 400 74px / 1.29961 $second-family
         letter-spacing: 0.07em
         color: #000
     &__subtitle
@@ -687,9 +687,9 @@ body
         border-radius: 9px
 
 .service
-    padding: 290px 0 0
+    padding: 149px 0 0
     h2
-        font: 400 100px / 1.29961 $second-family
+        font: 400 74px / 1.29961 $second-family
         letter-spacing: 0.07em
         color: #000
     &__subtitle
@@ -804,7 +804,8 @@ body
             font-size: 80px
             max-width: 800px
     .team,
-    .service
+    .service,
+    .group
         padding: 80px 0 0
         h2
             font-size: 70px
@@ -978,6 +979,490 @@ body
         display: block
         color: #000
 
+.news-new
+    h1
+        font-size: 64px
+    .news__subtitle
+        font-size: 15px
+        max-width: 697px
+    &__block
+        margin: 69px 0 0
+        position: relative
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+        border-radius: 13px
+        overflow: hidden
+        min-height: 630px
+        z-index: 2
+        padding: 60px 90px
+        display: flex
+        flex-direction: column
+        justify-content: end
+        &_bg
+            position: absolute
+            inset: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+            z-index: -1
+            pointer-events: none
+        &::before
+            content: ''
+            display: block
+            border: 1px solid #fff
+            border-radius: 5px
+            position: absolute
+            inset: 33px
+            pointer-events: none
+    &__span
+        width: 14px
+        height: 14px
+        border-radius: 100%
+        background: #d9d9d9
+        position: absolute
+        z-index: 1
+        display: block
+        &:nth-child(1)
+            top: 50px
+            left: 50px
+        &:nth-child(2)
+            top: 50px
+            right: 50px
+        &:nth-child(3)
+            bottom: 50px
+            left: 50px
+        &:nth-child(4)
+            bottom: 50px
+            right: 50px
+    &__row
+        display: flex
+        flex-wrap: wrap
+        gap: 14px
+        img
+            border: 2px solid #fff
+            border-radius: 13px
+            width: 273px
+            height: 170px
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+            object-fit: cover
+            max-width: 100%
+    &__info
+        margin: 0 0 37px
+        max-width: 430px
+        p
+            font-family: $third-family
+            font-weight: 400
+            font-size: 40px
+            line-height: 1.07293
+            letter-spacing: -0.03em
+            color: #fff
+            &+p
+                margin: 27px 0 0
+                font-family: $font-family
+                font-weight: 400
+                font-size: 20px
+                line-height: 1.17814
+                color: #fff
+    &__descr
+        margin: 63px 0 0 auto
+        max-width: 816px
+        padding: 0 0 36px
+        position: relative
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            width: 228px
+            right: 0
+            bottom: 0
+            height: 6px
+            border-radius: 10px
+            background: #cca178
+        &_date
+            font-family: $font-family
+            font-weight: 400
+            font-size: 20px
+            line-height: 1.29961
+            letter-spacing: 0.07em
+            text-align: right
+            color: #595959
+        &_text
+            margin: 27px 0 0
+            display: grid
+            grid-template-columns: 1fr
+            gap: 27px
+            p
+                font-family: $font-family
+                font-weight: 400
+                font-size: 16px
+                line-height: 1.29961
+                color: #494949
+
+.design-new
+    &__video
+        position: relative
+        overflow: hidden
+        border-radius: 13px
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+        margin: 0 0 60px 
+        display: block
+        video
+            width: 100%
+            object-fit: cover
+            display: block
+        &::before
+            content: ''
+            display: block
+            border: 1px solid #fff
+            border-radius: 5px
+            position: absolute
+            inset: 33px
+            pointer-events: none
+        &_btn
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 88px
+            height: 88px
+            border-radius: 100%
+            background: #d9d9d9
+            display: flex
+            justify-content: center
+            align-items: center
+            opacity: 0
+            pointer-events: none
+            transition: all .3s
+            cursor: pointer
+            transition: all .3s
+            svg
+                transform: translateX(8px)
+            &:hover
+                background: #cca178
+            &.active
+                opacity: 1
+                pointer-events: all
+    h1
+        font-size: 64px
+        font-weight: 400
+    &__subtitle
+        font-family: $font-family
+        font-weight: 400
+        font-size: 15px
+        line-height: 1.61
+        letter-spacing: 0.07em
+        color: #000
+        max-width: 907px
+        padding: 0 0 36px
+        position: relative
+        margin: 35px 0 0 auto
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            width: 228px
+            right: 0
+            bottom: 0
+            height: 6px
+            border-radius: 10px
+            background: #cca178
+    &__slider
+        margin: 95px 0 0
+        overflow: visible
+    &__slide
+        width: 568px
+        border-radius: 19px
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+        position: relative
+        overflow: hidden
+        padding: 30px
+        display: flex
+        flex-direction: column
+        min-height: 508px
+        z-index: 2
+        &_bg
+            position: absolute
+            inset: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+            z-index: -1
+            transition: all .3s
+        &_link
+            margin: 0 0 auto
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 3px solid #fff
+            border-radius: 6px
+            width: 48px
+            height: 48px
+            background: rgba(11, 11, 11, 0.5)
+            transition: all .3s
+            path
+                transition: all .3s
+        &_type
+            font-family: $second-family
+            font-weight: 400
+            font-size: 15px
+            line-height: 1.29961
+            letter-spacing: 0.07em
+            color: #e4ba92
+        &_name
+            font-family: $second-family
+            font-weight: 400
+            font-size: 20px
+            line-height: 1.29961
+            letter-spacing: 0.07em
+            color: #fff
+            transition: all .3s
+        &_text
+            margin: 18px 0 0
+            font-family: $font-family
+            font-weight: 400
+            font-size: 20px
+            line-height: 1.17814
+            color: rgba(255, 255, 255, 0.75)
+        &:hover
+            .design-new
+                &__slide
+                    &_bg
+                        transform: scale(1.1)
+                    &_link
+                        border-color: #cca178
+                        path
+                            fill: #cca178
+                    &_name
+                        color: #cca178
+    &__text
+        margin: 90px 0 0 auto
+        max-width: 793px
+        font-family: $third-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.29961
+        color: #494949
+
+.team-new
+    &__wrapper
+        margin: 56px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 32px
+    &__item
+        border-radius: 9px
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+        position: relative
+        overflow: hidden
+    &__pic
+        width: 100%
+        height: 365px
+        object-fit: cover
+    &__logo
+        position: absolute
+        left: 15px
+        bottom: 15px
+        width: 127px
+
+.group
+    padding: 157px 0 0
+    h2
+        font: 400 74px / 1.29961 $second-family
+        letter-spacing: 0.07em
+        color: #000
+    &__subtitle
+        font-family: $second-family
+        font-weight: 400
+        font-size: 20px
+        line-height: 1.61
+        letter-spacing: 0.07em
+        color: #000
+        margin: 20px 0 0 auto
+        max-width: 887px
+    &__wrapper
+        margin: 73px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 50px
+    &__item
+        width: 100%
+        position: relative
+        z-index: 2
+        padding: 35px 50px
+        border-radius: 19px
+        overflow: hidden
+        min-height: 347px
+        &_max
+            grid-column: 1/3
+            min-height: 443px
+    &__bg
+        position: absolute
+        inset: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        z-index: -1
+    &__type
+        font-family: $font-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.17814
+        color: #fff
+    &__name
+        font-family: $third-family
+        font-weight: 400
+        font-size: 40px
+        line-height: 1.07293
+        letter-spacing: -0.03em
+        color: #fff
+        max-width: 625px
+        margin: 30px 0 0
+    &__text
+        margin: 35px 0 0
+        font-family: $font-family
+        font-weight: 400
+        font-size: 20px
+        line-height: 1.17814
+        color: #fff
+        max-width: 463px
+
+.faq
+    display: grid
+    grid-template-columns: 7fr 6fr
+    gap: 70px
+    align-items: start
+    padding: 180px 0 0
+    &__info
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 32px
+            line-height: 1.1
+            letter-spacing: 0.07em
+            color: #000
+        h2
+            font-family: $second-family
+            font-weight: 400
+            font-size: 70px
+            line-height: 1.1
+            letter-spacing: 0.07em
+            color: #000
+            margin: 10px 0 0
+    &__form
+        max-width: 609px
+        input
+            width: 100%
+            border-radius: 16px
+            background: #eaeaea
+            margin: 14px 0 0
+            font-family: $font-family
+            font-weight: 400
+            font-size: 20px
+            line-height: 1.29961
+            letter-spacing: 0.07em
+            color: #000
+            box-sizing: border-box
+            padding: 25px 60px 30px
+            border: none
+            &:nth-child(1)
+                margin: 0
+            &::placeholder
+                color: #818181
+        p
+            margin: 26px auto 0
+            text-align: center
+            max-width: 600px
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.29961
+            letter-spacing: 0.07em
+            text-align: center
+            color: #818181
+        button
+            border-radius: 16px
+            background: #171717
+            font-family: $second-family
+            font-weight: 400
+            font-size: 20px
+            line-height: 1.29961
+            letter-spacing: 0.07em
+            text-align: center
+            color: #fff
+            border: none
+            transition: all .3s
+            padding: 14px 40px
+            margin: 40px auto 0
+            display: block
+            &:hover
+                background: #cca178
+
+.founder
+    min-height: calc( 100vh - 26px )
+    background: #fff
+    border-radius: 32px
+    overflow: hidden
+    position: relative
+    padding: 90px 20px 20px
+    color: #000
+    overflow: hidden
+    &__block
+        max-width: 1383px
+        margin: 0 auto
+        display: grid
+        grid-template-columns: 546px 1fr
+        gap: 125px
+        align-items: center
+    &__prev
+        img
+            width: 100%
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+            border-radius: 9px
+    &__name
+        position: relative
+        padding: 30px 0 0
+        &::before
+            content: ''
+            display: block
+            width: 112px
+            height: 3px
+            top: 0
+            position: absolute
+            left: 0
+            background: #cca178
+        p
+            font-family: $second-family
+            font-weight: 400
+            font-size: 15px
+            line-height: 1.29961
+            letter-spacing: 0.07em
+            color: #818181
+            margin: 11px 0 0
+        h1
+            font-family: $second-family
+            font-weight: 400
+            font-size: 48px
+            line-height: 1.3
+            letter-spacing: 0.07em
+            color: #000
+    &__text
+        margin: 90px 0 0
+        font-family: $second-family
+        font-weight: 400
+        font-size: 15px
+        line-height: 1.61
+        letter-spacing: 0.07em
+        color: #000
+        display: grid
+        grid-template-columns: 1fr
+        gap: 25px
+
+@media ( max-width: 1600px )
+    .founder
+        &__block
+            gap: 30px
+            grid-template-columns: 1fr 450px
+
+
 @media ( max-width: 1200px )
     .page-error
         padding: 20px
@@ -994,6 +1479,34 @@ body
         &__type
             font-size: 14px
             bottom: 20px
+    .news-new,
+    .design-new
+        h1
+            font-size: 50px
+    .team-new
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+    .faq,
+    .group
+        h2
+            font-size: 50px
+    .group
+        &__wrapper
+            grid-template-columns: 1fr
+        &__item
+            grid-column: auto
+            min-height: 347px
+    .faq
+        grid-template-columns: 1fr
+        &__form
+            max-width: 100%
+    .founder
+        &__block
+            grid-template-columns: 1fr
+        &__prev
+            order: 2
+        h1
+            font-size: 40px
 
 @media ( max-width: 1024px )
     .design
@@ -1005,6 +1518,9 @@ body
                 opacity: 1
             p
                 opacity: 1
+    .design-new
+        &__slide
+            width: 350px
             
 
 @media ( max-width: 600px )
@@ -1017,3 +1533,62 @@ body
         &__subtitle
             margin: 30px 0 0
             font-size: 16px
+    .news-new
+        h1
+            font-size: 35px
+        &__block
+            margin: 30px 0 0
+            padding: 30px
+            min-height: auto
+            &::before
+                inset: 10px
+        &__span
+            width: 10px
+            height: 10px
+            &:nth-child(1)
+                top: 15px
+                left: 15px
+            &:nth-child(2)
+                top: 15px
+                right: 15px
+            &:nth-child(3)
+                bottom: 15px
+                left: 15px
+            &:nth-child(4)
+                bottom: 15px
+                right: 15px
+    .design-new
+        &__slide
+            width: calc( 100vw - 66px )
+        &__video
+            &::before
+                inset: 10px
+    .team-new
+        &__wrapper
+            grid-template-columns: 1fr
+            margin: 30px 0 0
+        &__pic
+            height: auto
+    .faq,
+    .group
+        padding: 40px 0
+        h2
+            font-size: 35px
+    .group
+        &__item
+            padding: 30px 20px
+        &__wrapper
+            margin: 30px 0 0
+    .faq
+        gap: 30px
+        &__info
+            p
+                font-size: 20px
+        &__form
+            input
+                padding: 15px 20px
+    .founder
+        h1
+            font-size: 30px
+        &__text
+            margin: 40px 0 0

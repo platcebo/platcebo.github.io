@@ -42,6 +42,16 @@ document.addEventListener('DOMContentLoaded', function() {
         },
     });
 
+    var swiper = new Swiper(".design-new__slider", {
+        loop: false,
+        spaceBetween: 30,
+        slidesPerView: "auto",
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+    });
+
     let drop = document.querySelectorAll('.drop'),
         dropBtn = document.querySelectorAll('.drop__btn');
 
@@ -72,6 +82,28 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.documentElement.classList.add('fix');
             }
 
+        })
+    }
+
+    let video = document.querySelectorAll('.design-new__video video'),
+        videoPlay  = document.querySelectorAll('.design-new__video_btn');
+
+    if(video !== null) {
+        videoPlay.forEach((item,i)=>{
+            item.addEventListener('click', ()=>{
+                item.classList.remove('active')
+                video[i].play();
+            })
+        })
+        video.forEach((item,i)=>{
+            item.addEventListener('click',()=>{
+                if (!item.paused) {
+                    videoPlay[i].classList.add('active')
+                    item.pause();
+                } else {
+                    return
+            }
+            })
         })
     }
 
