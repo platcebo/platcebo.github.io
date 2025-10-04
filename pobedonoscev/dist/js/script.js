@@ -107,4 +107,20 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    let newsImg = document.querySelectorAll('.news-new__row img'),
+        newsBg = document.querySelector('.news-new__block_bg');
+
+
+    if(newsImg !== null) {
+        newsImg.forEach((item)=>{
+            item.addEventListener('click',()=>{
+                // newsImg.forEach(a=>a.classList.remove('fix'))
+                // item.classList.add('fix')
+
+                newsBg.src = item.src
+            })
+        })
+    }
+
+
 }, false);

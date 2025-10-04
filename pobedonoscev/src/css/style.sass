@@ -648,6 +648,8 @@ body
     h1
         font: 400 74px / 1.1 $second-family
         color: #000
+        font-family: "Europe", sans-serif
+        font-weight: 300
         span
             // letter-spacing: 0.07em
             color: #cca178
@@ -674,6 +676,8 @@ body
         font: 400 74px / 1.29961 $second-family
         letter-spacing: 0.07em
         color: #000
+        font-family: "Europe", sans-serif
+        font-weight: 300
     &__subtitle
         margin: 40px 0 0
         font: 400 20px / 1.61 $second-family
@@ -692,6 +696,8 @@ body
         font: 400 74px / 1.29961 $second-family
         letter-spacing: 0.07em
         color: #000
+        font-family: "Europe", sans-serif
+        font-weight: 300
     &__subtitle
         margin: 40px 0 0
         font: 400 20px / 1.61 $second-family
@@ -980,8 +986,11 @@ body
         color: #000
 
 .news-new
+    padding: 90px 20px
     h1
         font-size: 64px
+        font-family: "Europe", sans-serif
+        font-weight: 300
     .news__subtitle
         font-size: 15px
         max-width: 697px
@@ -1045,6 +1054,17 @@ body
             box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
             object-fit: cover
             max-width: 100%
+            cursor: pointer
+            &.fix
+                position: absolute
+                inset: 0
+                width: 100%
+                height: 100%
+                object-fit: cover
+                z-index: -1
+                pointer-events: none
+                border: none
+                border-radius: 0
     &__info
         margin: 0 0 37px
         max-width: 430px
@@ -1143,7 +1163,8 @@ body
                 pointer-events: all
     h1
         font-size: 64px
-        font-weight: 400
+        font-family: "Europe", sans-serif
+        font-weight: 300
     &__subtitle
         font-family: $font-family
         font-weight: 400
@@ -1269,6 +1290,8 @@ body
         font: 400 74px / 1.29961 $second-family
         letter-spacing: 0.07em
         color: #000
+        font-family: "Europe", sans-serif
+        font-weight: 300
     &__subtitle
         font-family: $second-family
         font-weight: 400
@@ -1340,8 +1363,8 @@ body
             letter-spacing: 0.07em
             color: #000
         h2
-            font-family: $second-family
-            font-weight: 400
+            font-family: "Europe", sans-serif
+            font-weight: 300
             font-size: 70px
             line-height: 1.1
             letter-spacing: 0.07em
@@ -1402,12 +1425,13 @@ body
     border-radius: 32px
     overflow: hidden
     position: relative
-    padding: 90px 20px 20px
+    padding: 90px 20px
+    display: flex
     color: #000
     overflow: hidden
     &__block
         max-width: 1383px
-        margin: 0 auto
+        margin: auto auto
         display: grid
         grid-template-columns: 546px 1fr
         gap: 125px
@@ -1438,14 +1462,15 @@ body
             color: #818181
             margin: 11px 0 0
         h1
-            font-family: $second-family
-            font-weight: 400
+            font-family: "Europe", sans-serif
+            font-weight: 300
             font-size: 48px
             line-height: 1.3
             letter-spacing: 0.07em
             color: #000
     &__text
         margin: 90px 0 0
+        max-width: 612px
         font-family: $second-family
         font-weight: 400
         font-size: 15px
