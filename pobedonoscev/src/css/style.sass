@@ -1481,11 +1481,188 @@ body
         grid-template-columns: 1fr
         gap: 25px
 
+.cottage
+    position: relative  
+    border-radius: 32px
+    overflow: hidden
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+    z-index: 2
+    .header
+        &__slider
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            position: absolute
+            z-index: -1
+            img
+                width: calc( 50% - 40px )
+                margin: 0 0 0 auto
+                display: block
+                transition: all .3s
+    &__info
+        padding: 140px 80px 90px
+        width: 100%
+        max-width: calc( 50% + 40px )
+        background: #fff
+        top: 0
+        left: 0
+        min-height: calc( 100vh - 26px )
+        transition: all .3s
+        &_type
+            font-family: "Europe", sans-serif
+            font-weight: 400
+            font-size: 15px
+            line-height: 1.29961
+            letter-spacing: 0.07em
+            color: #cca178
+        h1
+            margin: 5px 0 0
+            font-family: "Europe", sans-serif
+            font-weight: 400
+            font-size: 32px
+            line-height: 1.29961
+            letter-spacing: 0.07em
+            color: #000
+        &_text
+            margin: 30px 0 0
+            font-family: "Europe", sans-serif
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.29961
+            color: #494949
+        &_plan
+            display: grid
+            gap: 40px
+            margin: 47px 0 0
+            div
+                display: grid
+                grid-template-columns: 100px 1fr
+                row-gap: 40px
+            p
+                font-family: "Europe", sans-serif
+                font-weight: 400
+                font-size: 15px
+                line-height: 1.29961
+                letter-spacing: 0.07em
+                color: #000
+                &+p
+                    font-family: Europe", sans-serif"
+                    font-size: 15px
+                    line-height: 1.29961
+                    letter-spacing: 0.07em
+                    color: #000
+    &__num
+        left: calc( 50% + 140px )
+        font-family: $font-family
+        font-weight: 400
+        font-size: 20px
+        line-height: 1.29961
+        letter-spacing: 0.07em
+        color: #fff
+        position: absolute
+        bottom: 50px
+    &__zoom
+        right: 100px
+        bottom: 64px
+        border: 2px solid #fff
+        border-radius: 8px
+        width: 54px
+        height: 54px
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all .3s
+        position: absolute
+        cursor: pointer
+        path
+            transition: all .3s
+        &:hover
+            border-color: #cca178
+            path
+                fill: #cca178
+    .swiper-pagination
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 6px
+        inset: auto
+        left: calc( 50% + 140px )
+        right: 100px
+        bottom: 25px
+        width: auto
+        transform: none
+        margin: 0
+        opacity: !important
+        span
+            border-radius: 14px
+            width: 52px
+            height: 7px
+            background: rgba(255, 255, 255, 0.52)
+            transition: all .3s
+            margin: 0 !important
+            &.swiper-pagination-bullet-active
+                background: #fff
+    &__back
+        position: absolute
+        top: 46px
+        left: 80px
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 8px 16px
+        border: 0.50px solid #747474
+        border-radius: 10px
+        font-family: $second-family
+        font-weight: 400
+        font-size: 15px
+        line-height: 1.29961
+        letter-spacing: 0.07em
+        color: #747474
+        transition: all .3s
+        gap: 13px
+        cursor: pointer
+        p
+            transition: all .3s
+        path
+            transition: all .3s
+        &:hover
+            border-color: #cca178
+            p
+                color: #cca178
+            path
+                stroke: #cca178
+    &.zoom
+        .cottage
+            &__info
+                transform: translateX(-101%)
+            &__back
+                border-color: #fff
+                p
+                    color: #fff
+                path
+                    stroke: #fff
+        .header
+            &__slider
+                img
+                    width: 100%
+
+
+
+
+
+
 @media ( max-width: 1600px )
     .founder
         &__block
             gap: 30px
             grid-template-columns: 1fr 450px
+    .cottage
+        &__info
+            padding: 100px 40px 70px
+        &__back
+            left: 40px
+            top: 20px
 
 
 @media ( max-width: 1200px )
@@ -1532,6 +1709,38 @@ body
             order: 2
         h1
             font-size: 40px
+    .cottage
+        border-radius: 0
+        &__info
+            width: 100%
+            max-width: 100%
+            border-radius: 32px
+            position: relative
+            height: auto
+            min-height: auto
+            padding: 90px 20px 50px
+        .header__slider
+            position: relative
+            inset: auto
+            margin:  0 0 20px
+            border-radius: 32px
+            height: auto
+            min-height: auto
+            img
+                width: 100%
+                max-width: 100%
+                height: auto
+        &__num
+            left: 20px
+            bottom: calc( 100% + 50px )
+        &__back
+            left: 20px
+        &__zoom
+            display: none
+        .swiper-pagination
+            inset: auto
+            left: 20px
+            bottom: calc( 100% + 30px )
 
 @media ( max-width: 1024px )
     .design

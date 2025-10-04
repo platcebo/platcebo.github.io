@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    var swiper = new Swiper(".header__slider", {
+    var headerSwiper = new Swiper(".header__slider", {
         loop: true,
         spaceBetween: 30,
         autoplay: {
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
           disableOnInteraction: false,
         },
         pagination: {
-          el: ".header .swiper-pagination",
+          el: ".swiper-pagination",
           clickable: true,
         },
         navigation: {
@@ -120,6 +120,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 newsBg.src = item.src
             })
         })
+    }
+
+    let cottage = document.querySelector('.cottage'),
+        cottageZoom = document.querySelector('.cottage__zoom'),
+        cottagePag = document.querySelector('.cottage__num');
+
+    if(cottage !== null) {
+        cottageZoom.addEventListener('click',()=>{
+            cottage.classList.toggle('zoom');
+        })
+
+        headerSwiper.on('slideChange', function () {
+            cottagePag.innerHTML = String(headerSwiper.activeIndex).padStart(2, '0');
+        });
+
     }
 
 
