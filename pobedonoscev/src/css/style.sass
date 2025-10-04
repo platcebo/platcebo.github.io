@@ -1636,21 +1636,10 @@ body
         .cottage
             &__info
                 transform: translateX(-101%)
-            &__back
-                border-color: #fff
-                p
-                    color: #fff
-                path
-                    stroke: #fff
         .header
             &__slider
                 img
                     width: 100%
-
-
-
-
-
 
 @media ( max-width: 1600px )
     .founder
@@ -1711,6 +1700,7 @@ body
             font-size: 40px
     .cottage
         border-radius: 0
+        position: relative
         &__info
             width: 100%
             max-width: 100%
@@ -1729,10 +1719,11 @@ body
             img
                 width: 100%
                 max-width: 100%
-                height: auto
+                height: calc( 100vh - 26px )
         &__num
             left: 20px
-            bottom: calc( 100% + 50px )
+            bottom: auto
+            top: calc( 100vh - 76px )
         &__back
             left: 20px
         &__zoom
@@ -1740,7 +1731,8 @@ body
         .swiper-pagination
             inset: auto
             left: 20px
-            bottom: calc( 100% + 30px )
+            bottom: auto
+            top: calc( 100vh - 46px )
 
 @media ( max-width: 1024px )
     .design
@@ -1829,3 +1821,8 @@ body
     .cottage
         h1
             font-size: 28px
+        &__info
+            &_plan
+                div
+                    grid-template-columns: 1fr
+                    gap: 5px
