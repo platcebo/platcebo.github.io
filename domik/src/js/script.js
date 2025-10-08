@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let modalPlaceBtn = document.querySelectorAll('.modal-place__btn'),
         modalPlace = document.querySelector('.modal-place');
-    if(modalPlaceBtn !== null) {
+    if(modalPlace !== null) {
         modalPlaceBtn.forEach((item)=>{
             item.addEventListener('click', (e)=>{
                 e.preventDefault()
@@ -493,31 +493,6 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
-    // let sortVal = document.querySelectorAll('.search__sort_val');
-
-    // sortVal.forEach((item)=>{
-    //     item.addEventListener('click', ()=>{
-    //         if(item.classList.contains('active')) {
-    //             // клик по актив элементу, 
-    //             if(item.classList.contains('down')) {
-    //                 // стрелка вниз
-    //                 item.classList.remove('down');
-    //             } else {
-    //                 // стрелка вверх
-    //                 item.classList.add('down');
-    //             }
-    //         } else {
-    //             for(let a = 0; a < sortVal.length; a++) {
-    //                 sortVal[a].classList.remove('active')
-    //                 sortVal[a].classList.remove('down')
-    //             }
-    //             // клик по неактивному классу, стрелка вверх
-    //             item.classList.add('active');
-    //             item.classList.remove('down');
-    //         }
-    //     })
-    // })
-
     let adTab = document.querySelectorAll('.my-ad__tab li'),
         adWrapper = document.querySelectorAll('.my-ad__wrapper');
 
@@ -545,6 +520,37 @@ document.addEventListener('DOMContentLoaded', function() {
                         adCheck[a].checked = false
                     }
                 }
+            })
+        })
+    }
+
+    let selectNew = document.querySelectorAll('.select-new');
+
+    if(selectNew !== null) {
+        selectNew.forEach((item,i)=>{
+            let slItem = item.querySelector('input'),
+                slList = item.querySelectorAll('li');
+
+            item.addEventListener('click', ()=>{
+                if(item.classList.contains('active')) {
+                    selectNew.forEach(item=> item.classList.remove('active'))
+                } else {
+                    selectNew.forEach(item=> item.classList.remove('active'))
+                    item.classList.add('active');
+                }
+            })
+
+            document.body.addEventListener('click', (event)=>{
+                if(!event.target.closest('div.select-new')) {
+                    selectNew.forEach(item=> item.classList.remove('active'))
+                }
+            })
+
+            slList.forEach((i)=>{
+                i.addEventListener('click', ()=>{
+                    slItem.value = i.innerHTML
+                    item.classList.remove('active');
+                })
             })
         })
     }

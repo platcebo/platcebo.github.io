@@ -4964,6 +4964,7 @@ select
         justify-content: start
         align-items: center
         gap: 8px
+        overflow-x: auto
         li
             cursor: pointer
             border-radius: 6px
@@ -4971,6 +4972,8 @@ select
             font: 600 14px / 1.42857 $font-family
             color: #667085
             transition: all .3s
+            white-space: nowrap
+            min-width: max-content
             &.active,
             &:hover
                 color: #344054
@@ -5146,6 +5149,202 @@ select
                 color: #1d2939
                 margin: 4px 0 0
 
+.select-new
+    position: relative
+    cursor: pointer
+    z-index: 5
+    svg
+        transition: all .3s
+        position: absolute
+        top: 50%
+        right: 16px
+        width: 20px
+        transform: translateY(-50%)
+    input
+        position: relative
+        width: 100%
+        box-sizing: border-box
+        border: none
+        padding: 10px 16px
+        background: #fff
+        cursor: pointer
+        font-family: $font-family
+        font-weight: 600
+        font-size: 14px
+        line-height: 1.42857
+        color: #344054
+        &::placeholder
+            color: #667085
+    ul
+        position: absolute
+        min-width: max-content
+        width: 100%
+        top: calc( 100% + 4px )
+        right: 0
+        left: auto
+        box-shadow: 0 4px 6px -2px rgba(16, 24, 40, 0.03), 0 12px 16px -4px rgba(16, 24, 40, 0.08)
+        background: #fff
+        border: 1px solid #eaecf0
+        border-radius: 8px
+        padding: 6px
+        z-index: 2
+        display: grid
+        grid-template-columns: 100%
+        gap: 4px
+        opacity: 0
+        pointer-events: none
+        transition: all .3s
+        li
+            padding: 10px 38px 10px 8px
+            position: relative
+            transition: all .3s
+            font: 500 14px / 1.2 $font-family
+            color: #101828
+            display: block
+            border-radius: 6px
+            &::before
+                content: ''
+                display: block
+                width: 20px
+                height: 20px
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                right: 10px
+                opacity: 0
+                transition: all .3s
+                background: url('../img/blue_check.svg') center no-repeat
+                background-size: contain
+            &.active
+                background: #f9fafb
+                &::before
+                    opacity: 1
+            &:hover
+                background: #f9fafb
+    &.active
+        ul
+            opacity: 1
+            pointer-events: all
+        svg
+            transform: translateY(-50%) rotate(-180deg)
+    &+.select-new
+        z-index: 4
+        &+.select-new
+            z-index: 3
+
+.header-new
+    padding: 96px 0
+    background: url('../img/header-new.jpg') center no-repeat
+    background-size: cover
+    &__form
+        border-radius: 12px
+        padding: 8px 16px 16px
+        box-shadow: 0 4px 6px -2px rgba(16, 24, 40, 0.03), 0 12px 16px -4px rgba(16, 24, 40, 0.08)
+        background: #fff
+    &__check
+        display: flex
+        justify-content: start
+        overflow-x: auto
+        gap: 0
+        border-bottom: 1px solid #eaecf0
+        div
+            position: relative
+        p
+            padding: 12px 20px
+            font-family: $font-family
+            font-weight: 600
+            font-size: 16px
+            line-height: 1.5
+            color: #475467
+            position: relative
+            white-space: nowrap
+            &::before
+                content: ''
+                display: block
+                width: 100%
+                height: 2px
+                background: #376df6
+                opacity: 0
+                position: absolute
+                bottom: 0
+                left: 0
+                transition: all .3s
+        input
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 2
+            cursor: pointer
+            opacity: 0
+            &:checked,
+            &:hover
+                &+p
+                    &::before
+                        opacity: 1
+    &__row
+        display: grid
+        grid-template-columns: 1fr auto
+        gap: 12px
+        margin: 16px 0 0
+    &__filter
+        border: 1px solid #eaecf0
+        position: relative
+        border-radius: 4px
+        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+        display: grid
+        grid-template-columns: 220px 110px 100px 1fr
+        .select-new
+            border-right: 1px solid #eaecf0
+    &__input
+        position: relative
+        svg
+            transition: all .3s
+            position: absolute
+            top: 50%
+            left: 12px
+            width: 20px
+            transform: translateY(-50%)
+            z-index: 2
+        input
+            position: relative
+            width: 100%
+            box-sizing: border-box
+            border: none
+            padding: 10px 16px 10px 40px
+            background: #fff
+            font-family: $font-family
+            font-weight: 600
+            font-size: 14px
+            line-height: 1.42857
+            color: #344054
+            &::placeholder
+                color: #667085
+    &__btn
+        display: flex
+        gap: 12px
+        .btn__wht
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 8px
+        .btn__blue
+            padding: 10px 18px
+
+@media ( max-width: 1024px )
+    .header-new
+        &__row
+            grid-template-columns: 1fr
+        &__filter
+            grid-template-columns: 1fr 1fr 1fr
+            .select-new
+                &:nth-child(3)
+                    border-right: none
+        &__input
+            grid-column: 1/4
+            border-top: 1px solid #eaecf0
+
 @media ( max-width: 1200px )
     .my-ad__item
         &_row
@@ -5247,3 +5446,36 @@ select
             &_link
                 p
                     font-size: 14px
+    .profile
+        &__title
+            flex-direction: column
+            gap: 20px
+            align-items: start
+    .my-ad
+        &__item
+            .recom
+                &__item
+                    grid-template-columns: 1fr
+                &__prev
+                    img
+                        height: auto
+            &_move
+                margin: 0
+                width: 100%
+                a
+                    &:nth-child(1)
+                        margin: 0
+                        &::before
+                            content: none
+    .header-new
+        &__filter
+            grid-template-columns: 1fr
+            .select-new
+                border-right: none
+                border-bottom: 1px solid #eaecf0
+        &__input
+            grid-column: auto
+            border: none
+        &__check
+            margin: 0 -16px 0
+            padding: 0 16px
