@@ -116,6 +116,21 @@ html
         transition: all .3s
         &:hover
             color: #0d6af9
+        &_block
+            display: grid
+            gap: 5px
+        &_crate
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 10px
+            &::before
+                content: ''
+                display: block
+                background: url('../img/crate.svg') center no-repeat
+                background-size: contain
+                width: 25px
+                height: 25px
     &__list
         margin: 15px 0 0
         display: flex
@@ -1794,6 +1809,9 @@ html
                     height: 34px
                     border-radius: 100%
                     background: #f8f8f8
+            .nav__link_crate
+                display: flex
+                justify-content: start
     .header
         &__info
             display: block
