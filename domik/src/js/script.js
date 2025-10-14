@@ -103,7 +103,6 @@ document.addEventListener('DOMContentLoaded', function() {
             let selectInput = document.querySelectorAll('.select__input'),
                 selectVal = document.querySelectorAll('.select__val');
 
-            // console.log(target)
 
             for(let i = 0; i < selectInput.length; i++) {
                 if(target && target == selectInput[i]) {
@@ -155,7 +154,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         navLang[i].classList.toggle('nav__lang_open')
                     }
                 }
-                console.log('sd')
             } else {
                 navLang.forEach(item => item.classList.remove('nav__lang_open'))
             }
@@ -550,6 +548,82 @@ document.addEventListener('DOMContentLoaded', function() {
                 i.addEventListener('click', ()=>{
                     slItem.value = i.innerHTML
                     item.classList.remove('active');
+                })
+            })
+        })
+    }
+
+    let headerDrop = document.querySelectorAll('.header-new__drop'),
+        headerDropBtn = document.querySelectorAll('.header-new__drop_btn');
+
+    if(headerDropBtn !== null) {
+        headerDropBtn.forEach((item,i)=>{
+            item.addEventListener('click', ()=>{
+                if(headerDrop[i].classList.contains('active')) {
+                    headerDrop.forEach(item=> item.classList.remove('active'))
+                } else {
+                    headerDrop.forEach(item=> item.classList.remove('active'))
+                    headerDrop[i].classList.add('active');
+                }
+            })
+
+            document.body.addEventListener('click', (event)=>{
+                if(!event.target.closest('div.header-new__drop')) {
+                    headerDrop.forEach(item=> item.classList.remove('active'))
+                }
+            })
+        })
+    }
+
+    let headerSearch = document.querySelectorAll('.header-new__input input'),
+        headerSearchWrapper = document.querySelectorAll('.header-new__input');
+
+    if(headerSearch !== null) {
+        headerSearch.forEach((item,i)=>{
+            item.addEventListener('input', ()=>{
+                if(item.value == "") {
+                    headerSearchWrapper[i].classList.remove('active')
+                } else {
+                    headerSearchWrapper[i].classList.add('active')
+                }
+            })
+        })
+
+        document.body.addEventListener('click', (event)=>{
+            if(!event.target.closest('div.header-new__input')) {
+                headerSearchWrapper.forEach(item => item.classList.remove('active'))
+            }
+        })
+    }
+
+    let headerTab = document.querySelectorAll('.header-new__check p'),
+        headerTabWrapper = document.querySelectorAll('.header-new__row'),
+        headerTabClose = document.querySelectorAll('.header-new__row .modal__close');
+
+    if(headerTab !== null) {
+        headerTab.forEach((item, i)=>{
+            item.addEventListener('click', ()=>{
+                headerTab.forEach((a,b)=>{
+                    a.classList.remove('active');
+                    headerTabWrapper[b].classList.remove('active')
+                })
+                item.classList.add('active');
+                headerTabWrapper[i].classList.add('active')
+            })
+        })
+
+        if(window.innerWidth < 601) {
+            headerTab.forEach((a,b)=>{
+                a.classList.remove('active');
+                headerTabWrapper[b].classList.remove('active')
+            })
+        }
+
+        headerTabClose.forEach((item)=>{
+            item.addEventListener('click', ()=>{
+                headerTab.forEach((a,b)=>{
+                    a.classList.remove('active');
+                    headerTabWrapper[b].classList.remove('active')
                 })
             })
         })
