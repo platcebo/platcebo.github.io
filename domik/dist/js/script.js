@@ -597,34 +597,54 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     let headerTab = document.querySelectorAll('.header-new__check p'),
-        headerTabWrapper = document.querySelectorAll('.header-new__row'),
-        headerTabClose = document.querySelectorAll('.header-new__row .modal__close');
+        headerTabWrapper = document.querySelectorAll('.header-new__row');
 
     if(headerTab !== null) {
-        headerTab.forEach((item, i)=>{
-            item.addEventListener('click', ()=>{
-                headerTab.forEach((a,b)=>{
-                    a.classList.remove('active');
-                    headerTabWrapper[b].classList.remove('active')
-                })
-                item.classList.add('active');
-                headerTabWrapper[i].classList.add('active')
-            })
-        })
-
         if(window.innerWidth < 601) {
             headerTab.forEach((a,b)=>{
                 a.classList.remove('active');
                 headerTabWrapper[b].classList.remove('active')
             })
-        }
 
-        headerTabClose.forEach((item)=>{
-            item.addEventListener('click', ()=>{
-                headerTab.forEach((a,b)=>{
-                    a.classList.remove('active');
-                    headerTabWrapper[b].classList.remove('active')
+            headerTab.forEach((item)=>{
+                item.addEventListener('click', ()=>{
+                    nav.classList.toggle('active')
                 })
+            })
+        } else {
+            headerTab.forEach((item, i)=>{
+                item.addEventListener('click', ()=>{
+                    headerTab.forEach((a,b)=>{
+                        a.classList.remove('active');
+                        headerTabWrapper[b].classList.remove('active')
+                    })
+                    item.classList.add('active');
+                    headerTabWrapper[i].classList.add('active')
+                })
+            })
+        }
+    }
+
+    let navList = document.querySelectorAll('.nav__list_row a'),
+        navDrop = document.querySelectorAll('.nav__drop');
+
+    if(navDrop !== null) {
+        navList.forEach((item,i)=>{
+            item.addEventListener('mouseover', ()=>{
+                navList.forEach((item,b)=>{
+                    item.classList.remove('active');
+                    navDrop[b].classList.remove('active');
+                })
+                navDrop[i].classList.add('active');
+                item.classList.add('active');
+            })
+        })
+
+        document.querySelector('.nav').addEventListener('mouseleave', (event)=>{
+            console.log('as')
+            navList.forEach((item,b)=>{
+                item.classList.remove('active');
+                navDrop[b].classList.remove('active');
             })
         })
     }
