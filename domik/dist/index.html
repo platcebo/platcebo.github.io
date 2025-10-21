@@ -19,13 +19,19 @@
                 <a href="#" class="nav__logo">
                     <img src="img/logo.svg" alt="">
                 </a>
-                <div class="nav__place modal-place__btn">
+                <div class="nav__place modal-place__call">
                     <p class="">Ташкент</p>
                     <img src="img/arrow-grey-right.svg" alt="" class="svg">
                 </div>
                 <div class="nav__value">
-                    <div class="toggle-value">USD</div>
-                    <div class="toggle-value active">UZS</div>
+                    <div>
+                        <input type="radio" name="nav-value">
+                        <p class="toggle-value">USD</p>
+                    </div>
+                    <div>
+                        <input type="radio" name="nav-value" checked>
+                        <p class="toggle-value">UZS</p>
+                    </div>
                 </div>
                 <div class="nav__lang">
                     <img src="img/globe.svg" alt="" class="svg">
@@ -242,13 +248,13 @@
             <div action="#" class="header-new__form">
                 <div class="header-new__check">
                     <div>
-                        <p class="active">Купить</p>
+                        <a href="#" class="header-new__tab active">Купить</a>
                     </div>
                     <div>
-                        <p>Снять</p>
+                        <a href="#" class="header-new__tab">Снять</a>
                     </div>
                     <div>
-                        <p>Посуточно</p>
+                        <a href="#" class="header-new__tab">Посуточно</a>
                     </div>
                     <div>
                         <a href="#">
@@ -273,9 +279,6 @@
                     </div>
                 </div>
                 <form action="#" class="header-new__row active">
-                    <div class="modal__close">
-                        <img src="img/close.svg" class="svg" alt="">
-                    </div>
                     <div class="header-new__filter">
                         <div class="header-new__drop">
                             <div class="header-new__drop_btn">
@@ -518,9 +521,6 @@
                     </div>
                 </form>
                 <form action="#" class="header-new__row">
-                    <div class="modal__close">
-                        <img src="img/close.svg" class="svg" alt="">
-                    </div>
                     <div class="header-new__filter">
                         <div class="header-new__drop">
                             <div class="header-new__drop_btn">
@@ -763,9 +763,6 @@
                     </div>
                 </form>
                 <form action="#" class="header-new__row">
-                    <div class="modal__close">
-                        <img src="img/close.svg" class="svg" alt="">
-                    </div>
                     <div class="header-new__filter">
                         <div class="header-new__drop">
                             <div class="header-new__drop_btn">
@@ -1935,6 +1932,37 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal modal-place">
+        <div class="modal__overflow modal-place__overflow"></div>
+        <div class="modal-place__wrapper modal__wrapper">
+            <div class="modal__close">
+                <img src="img/close.svg" class="svg" alt="">
+            </div>
+            <p class="modal-place__name">Выберите регион</p>
+            <div class="modal-place__form">
+                <div class="modal-place__curent">
+                    <p>Текущий город: <span>Нукус</span></p>
+                </div>
+                <ul class="modal-place__list">
+                    <li><a href="#">Москва</a></li>
+                    <li><a href="#">Санкт-Петербург</a></li>
+                    <li><a href="#">Нижний Новгород</a></li>
+                    <li><a href="#">Казань</a></li>
+                    <li><a href="#">Москва</a></li>
+                    <li><a href="#">Санкт-Петербург</a></li>
+                    <li><a href="#">Нижний Новгород</a></li>
+                    <li><a href="#">Казань</a></li>
+                    <li><a href="#">Казань</a></li>
+                    <li><a href="#">Казань</a></li>
+                </ul>
+                <div class="modal-place__btn">
+                    <a href="#" class="modal-place__back">Назад</a>
+                    <a href="#" class="modal-place__next">Готово</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     
 

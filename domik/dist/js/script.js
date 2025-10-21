@@ -1,15 +1,6 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', function() {
-    if(document.querySelector('#modal-filter__select-1') !== null) {
-        const modalFilterSelect1 = new ItcCustomSelect('#modal-filter__select-1');
-    }
-    if(document.querySelector('#modal-filter__select-2') !== null) {
-        const modalFilterSelect1 = new ItcCustomSelect('#modal-filter__select-2');
-    }
-    if(document.querySelector('#modal-filter__select-3') !== null) {
-        const modalFilterSelect1 = new ItcCustomSelect('#modal-filter__select-3');
-    }
     if(document.querySelector('#nav__select-mob') !== null) {
         const navSelectMob = new ItcCustomSelect('#nav__select-mob');
     }
@@ -160,22 +151,6 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
-    let FilterPriceBtn = document.querySelectorAll('.modal-filter__price_btn'),
-        FilterPriceWrapper = document.querySelectorAll('.modal-filter__price_cur');
-
-    if(FilterPriceWrapper !== null) {
-        FilterPriceBtn.forEach((item,i)=>{
-            item.addEventListener('click', ()=>{
-                FilterPriceWrapper[i].classList.remove('active');
-                if (i % 2 == 0) {   
-                    FilterPriceWrapper[i+1].classList.add('active')
-                } else {
-                    FilterPriceWrapper[i-1].classList.add('active')
-                }
-            })
-        })
-    }
-
     let tabPoint = document.querySelectorAll('.tab-point'),
         tabBlock = document.querySelectorAll('.tab-wrapper');
 
@@ -199,32 +174,22 @@ document.addEventListener('DOMContentLoaded', function() {
     if(modal !== null) {
         for(let i = 0; i < modal.length; i++) {
             modalClose[i].addEventListener('click', ()=>{
-                modal[i].classList.remove('active');
+                modal.forEach(item => item.classList.remove('active'))
             })
             modalOverflow[i].addEventListener('click', ()=>{
-                modal[i].classList.remove('active');
+                modal.forEach(item => item.classList.remove('active'))
             })
         }
     }
 
-    let modalPlaceBtn = document.querySelectorAll('.modal-place__btn'),
+    let modalPlaceBtn = document.querySelectorAll('.modal-place__call'),
         modalPlace = document.querySelector('.modal-place');
+        
     if(modalPlace !== null) {
         modalPlaceBtn.forEach((item)=>{
             item.addEventListener('click', (e)=>{
                 e.preventDefault()
                 modalPlace.classList.add('active')
-            })
-        })
-    }
-
-    let modalFilterBtn = document.querySelectorAll('.modal-filter__btn'),
-        modalFilter = document.querySelector('.modal-filter');
-    if(modalFilterBtn !== null) {
-        modalFilterBtn.forEach((item)=>{
-            item.addEventListener('click', (e)=>{
-                e.preventDefault()
-                modalFilter.classList.add('active')
             })
         })
     }
@@ -293,36 +258,6 @@ document.addEventListener('DOMContentLoaded', function() {
             })
         })
     }
-
-    let modalPlaceClear = document.querySelector('.modal-place__input_clear'),
-        modalPlaceInput = document.querySelector('.modal-place__input input');
-
-    if(modalPlaceClear !== null) {
-        modalPlaceClear.addEventListener('click',()=>{
-            modalPlaceInput.value = ''
-        })
-    }
-
-    let modalPrice = document.querySelector('.modal-filter__price');
-    if(modalPrice !== null) {
-        // modalPrice.addEventListener('click',()=>{
-        //     modalPrice.classList.toggle('modal-filter__price_open');
-        // })
-        document.addEventListener('click', (event)=>{
-            let target = event.target;
-            if(target.closest('div.modal-filter__price')) {
-                modalPrice.classList.toggle('modal-filter__price_open')
-            } else {
-                modalPrice.classList.remove('modal-filter__price_open')
-            }
-        })
-    }
-
-    // let signIn = document.querySelector('.sign-in');
-
-    // if(signIn !== null) {
-    //     signIn.style.minHeight = window.innerHeight - nav.getBoundingClientRect().height + 'px'
-    // }
 
     let fieldset = document.querySelectorAll('fieldset'),
         fieldsetBtn = document.querySelectorAll('fieldset h4');
@@ -596,7 +531,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
-    let headerTab = document.querySelectorAll('.header-new__check p'),
+    let headerTab = document.querySelectorAll('.header-new__tab'),
         headerTabWrapper = document.querySelectorAll('.header-new__row');
 
     if(headerTab !== null) {
@@ -605,15 +540,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 a.classList.remove('active');
                 headerTabWrapper[b].classList.remove('active')
             })
-
-            headerTab.forEach((item)=>{
-                item.addEventListener('click', ()=>{
-                    nav.classList.toggle('active')
-                })
-            })
         } else {
             headerTab.forEach((item, i)=>{
-                item.addEventListener('click', ()=>{
+                item.addEventListener('click', (e)=>{
+                    e.preventDefault();
                     headerTab.forEach((a,b)=>{
                         a.classList.remove('active');
                         headerTabWrapper[b].classList.remove('active')
@@ -640,11 +570,22 @@ document.addEventListener('DOMContentLoaded', function() {
             })
         })
 
-        document.querySelector('.nav').addEventListener('mouseleave', (event)=>{
+        document.querySelector('.nav__list').addEventListener('mouseleave', (event)=>{
             console.log('as')
             navList.forEach((item,b)=>{
                 item.classList.remove('active');
                 navDrop[b].classList.remove('active');
+            })
+        })
+    }
+
+    let modalFilterCall = document.querySelectorAll('.modal-filter__call'),
+        modalFilter = document.querySelector('.modal-filter');
+
+    if(modalFilter !== null) {
+        modalFilterCall.forEach((item)=>{
+            item.addEventListener('click', ()=>{
+                modalFilter.classList.add('active')
             })
         })
     }
