@@ -69,5 +69,43 @@ if(mediaBlock != null) {
 
 }
 
+let mediaAuto = document.querySelector('.for__fix'),
+    mediaBloc = document.querySelector('.for__wrapper');
+
+if(mediaBloc != null) {
+    if(window.innerWidth > 100) {
+        let articleLef = mediaAuto.getBoundingClientRect().left
+
+        window.addEventListener('scroll', ()=>{
+            if(mediaBloc.getBoundingClientRect().top < 50 && mediaBloc.getBoundingClientRect().bottom > mediaAuto.getBoundingClientRect().height + 50) {
+                mediaAuto.classList.remove('bottom')
+                mediaAuto.classList.add('fix')
+                mediaAuto.style.left = articleLef + 'px'
+            } else if (mediaBloc.getBoundingClientRect().top > 50) {
+                mediaAuto.classList.remove('fix')
+                mediaAuto.style.left = 'auto'
+            } else if (mediaBloc.getBoundingClientRect().bottom < mediaAuto.getBoundingClientRect().height + 50) {
+                mediaAuto.classList.remove('fix')
+                mediaAuto.style.left = '30px'
+                mediaAuto.classList.add('bottom')
+            }
+        })
+
+        if(mediaBloc.getBoundingClientRect().top < 50 && mediaBloc.getBoundingClientRect().bottom > mediaAuto.getBoundingClientRect().height + 50) {
+            mediaAuto.classList.remove('bottom')
+            mediaAuto.classList.add('fix')
+            mediaAuto.style.left = articleLef + 'px'
+        } else if (mediaBloc.getBoundingClientRect().top > 50) {
+            mediaAuto.classList.remove('fix')
+            mediaAuto.style.left = 'auto'
+        } else if (mediaBloc.getBoundingClientRect().bottom < mediaAuto.getBoundingClientRect().height + 50) {
+            mediaAuto.classList.remove('fix')
+            mediaAuto.style.left = '30px'
+            mediaAuto.classList.add('bottom')
+        }
+    }
+
+}
+
 
 }, false);
