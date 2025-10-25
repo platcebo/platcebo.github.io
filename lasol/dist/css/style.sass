@@ -1,4 +1,4 @@
-$font-family: "Inter", sans-serif
+$font-family: 'Helvetica Neue', sans-serif
 
 body
     background: #dcdcdc
@@ -83,6 +83,8 @@ h2
 
 .header
     position: relative  
+    .container
+        position: relative
     &__slide
         min-height: 100vh
         position: relative
@@ -114,12 +116,21 @@ h2
                 line-height: 1
                 letter-spacing: -0.03em
                 color: #fff
+    &__logo
+        position: absolute
+        top: 41px
+        left: 15px
+        max-width: 78px
+        z-index: 2
+        img
+            width: 100%
 
 .about
     padding: 100px 0 0
     .container
         display: grid
-        grid-template-columns: 437fr 657fr
+        grid-template-columns: 90px 1fr
+        align-items: start
         gap: 15px
         font-family: $font-family
         font-weight: 400
@@ -127,6 +138,7 @@ h2
         line-height: 1.14286
         letter-spacing: -0.04em
         color: #323232
+        position: relative
         img
             width: 100%
             object-fit: cover
@@ -158,19 +170,35 @@ h2
         h2
             margin: 12px 0 0
     &__title
-        display: grid
-        grid-template-columns: 90px 1fr
-        gap: 12px
-        p
-            padding: 0 0 0 44px
         &+img
             height: 100%
+    &__container
+        display: grid
+        grid-template-columns: 437fr 657fr
+        grid-column: 2/3
+        gap: 15px
+        position: relative
+        img
+            width: 100%
     &__col
         height: 100%
         display: grid
         grid-template-columns: 1fr
         grid-template-rows: auto 1fr
         gap: 35px
+    &__fix
+        width: 90px
+        p
+            padding: 0 0 0 44px
+        &+img
+            height: 100%
+        &.fix
+            position: fixed
+            top: 50px
+        &.bottom
+            position: absolute
+            left: 0
+            bottom: 0
 
 .for
     padding: 32px 0 60px
@@ -397,8 +425,7 @@ h2
                         left: 0
                         width: 100%
     &__ask
-        width: max-content
-        margin: 0 0 0 auto
+        // margin: 0 0 0 auto
         p
             font-family: $font-family
             font-weight: 600
@@ -464,9 +491,23 @@ h2
                     left: 0
                     width: 100%
 
+@media ( max-width: 1024px )
+    .course
+        .container
+            display: grid
+            grid-template-columns: 366px 1fr
+            align-items: center
+            gap: 30px
+        &__bg
+            position: relative
+            inset: auto
+            width: 100%
+            order: 2
+        
+
 @media ( max-width: 768px )
     .about
-        .container
+        &__container
             grid-template-columns: 1fr
     .footer
         &__wrapper
@@ -485,6 +526,19 @@ h2
             flex-direction: column
             gap: 10px
             align-items: start
+    .course
+        .container
+            grid-template-columns: 1fr
+        &__bg
+            margin: 0 auto
+            display: block
+            max-width: 350px
+        .master
+            &__wrapper
+                margin: 0 auto
+    .master
+        &__wrapper
+            margin: 0 auto
         
 
 
@@ -562,12 +616,40 @@ h2
             grid-template-columns: 1fr
             p
                 padding: 0
+        .container
+            grid-template-columns: 70px 1fr
+            gap: 15px
+            p
+                font-size: 12px
+        &__col
+            gap: 20px
+        h2
+            font-size: 30px
+        &__fix
+            width: 70px
+            &.bottom
+                left: 15px !important
+        
     .for
         &__wrapper
             grid-template-columns: 1fr
+        h2
+            font-size: 30px
     .master
         &__wrapper
             margin: 0
+            padding: 30px 20px
     .course
         .master__wrapper
             margin: 0
+
+@media ( max-width: 320px )
+    .footer
+        &__wrapper
+            grid-template-columns: 1fr
+        &__ask
+            grid-column: auto
+        &__col
+            ul
+                margin: 15px 0 0
+                gap: 10px

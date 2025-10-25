@@ -31,5 +31,43 @@ if(nav !== null) {
     })
 }
 
+let mediaAutor = document.querySelector('.about__fix'),
+    mediaBlock = document.querySelector('.about__container');
+
+if(mediaBlock != null) {
+    if(window.innerWidth > 100) {
+        let articleLeft = mediaAutor.getBoundingClientRect().left
+
+        window.addEventListener('scroll', ()=>{
+            if(mediaBlock.getBoundingClientRect().top < 50 && mediaBlock.getBoundingClientRect().bottom > mediaAutor.getBoundingClientRect().height + 50) {
+                mediaAutor.classList.remove('bottom')
+                mediaAutor.classList.add('fix')
+                mediaAutor.style.left = articleLeft + 'px'
+            } else if (mediaBlock.getBoundingClientRect().top > 50) {
+                mediaAutor.classList.remove('fix')
+                mediaAutor.style.left = 'auto'
+            } else if (mediaBlock.getBoundingClientRect().bottom < mediaAutor.getBoundingClientRect().height + 50) {
+                mediaAutor.classList.remove('fix')
+                mediaAutor.style.left = '30px'
+                mediaAutor.classList.add('bottom')
+            }
+        })
+
+        if(mediaBlock.getBoundingClientRect().top < 50 && mediaBlock.getBoundingClientRect().bottom > mediaAutor.getBoundingClientRect().height + 50) {
+            mediaAutor.classList.remove('bottom')
+            mediaAutor.classList.add('fix')
+            mediaAutor.style.left = articleLeft + 'px'
+        } else if (mediaBlock.getBoundingClientRect().top > 50) {
+            mediaAutor.classList.remove('fix')
+            mediaAutor.style.left = 'auto'
+        } else if (mediaBlock.getBoundingClientRect().bottom < mediaAutor.getBoundingClientRect().height + 100) {
+            mediaAutor.classList.remove('fix')
+            mediaAutor.style.left = '30px'
+            mediaAutor.classList.add('bottom')
+        }
+    }
+
+}
+
 
 }, false);
