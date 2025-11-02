@@ -1,0 +1,1078 @@
+$font-family: "SF Compact Display", sans-serif
+$second-family: "Inter", sans-serif
+$third-family: "SF Pro Display", sans-serif
+    
+body
+    background: #fff
+.container
+    padding: 0 16px
+    margin: 0 auto
+    max-width: 1312px
+    box-sizing: content-box
+.title
+    font-family: $font-family
+    font-weight: 600
+    font-size: 18px
+    line-height: 1.55556
+    color: #ffb81c
+    &+.title__text
+        margin: 16px 0 0
+    &__text
+        font-family: $font-family
+        font-weight: 600
+        font-size: 36px
+        line-height: 1.22222
+        letter-spacing: -0.02em
+        color: #1f2a37
+        span
+            color: #9da4ae
+    &__subtitle
+        margin: 12px 0 0
+        font-family: $font-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.5
+        color: #6c737f
+
+
+.btn
+    &__yellow
+        border: 1px solid #ffb81c
+        border-radius: 24px
+        padding: 9px 12px
+        background: #ffb81c
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 8px
+        font-family: $font-family
+        font-weight: 400
+        font-size: 14px
+        line-height: 1.42857
+        color: #fff
+        transition: all .3s
+        &:hover
+            background: #FFC649
+
+.nav
+    border-bottom: 1px solid #f3f4f6
+    padding: 20px 0
+    background: rgba(17, 17, 31, 0)
+    z-index: 5
+    &__mob
+        display: none
+        padding: 0 16px
+    .container
+        display: flex
+        justify-content: start
+        position: relative
+    &__logo
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        max-width: 136px
+        img
+            width: 100%
+    &__list
+        display: flex
+        justify-content: start
+        align-items: center
+        gap: 36px
+        a
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 16px
+            font-family: $font-family
+            font-weight: 400
+            font-size: 14px
+            line-height: 1.42857
+            color: #11111f
+            transition: all .3s
+            path
+                transition: all .3s
+                stroke: #11111f
+            &:hover
+                color: #9da4ae
+                path
+                    stroke: #9da4ae
+    &__func
+        margin: 0 0 0 auto
+        display: flex
+        justify-content: center
+        align-items: center
+    &__lang
+        position: relative
+        margin: 0 16px 0 0
+        z-index: 10
+        ul
+            opacity: 0
+            pointer-events: none
+            display: grid
+            grid-template-columns: 1fr
+            gap: 10px
+            border-radius: 32px
+            padding: 8px 12px
+            position: absolute
+            top: calc( 100% + 5px )
+            right: 0
+            background: #fff
+            border: 1px solid #d2d6db
+            border-radius: 20px
+            z-index: 10
+            a
+                text-align: right
+                display: block
+                font-family: $font-family
+                font-weight: 400
+                font-size: 14px
+                line-height: 1.42857
+                color: #11111f
+                transition: all .3s
+                &:hover
+                    color: #ffb81c
+        &_btn
+            border: 1px solid #d2d6db
+            border-radius: 20px
+            padding: 9px 8px 9px 16px
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 8px
+            font-family: $font-family
+            font-weight: 400
+            font-size: 14px
+            line-height: 1.42857
+            color: #11111f
+            transition: all .3s
+            cursor: pointer
+            &:hover
+                color: #9da4ae
+        &.active
+            ul
+                opacity: 1
+                pointer-events: all
+    &__phone
+        width: 40px
+        height: 40px
+        border: 1.11px solid #d2d6db
+        border-radius: 22px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0 4px 0 0
+    &__hum
+        display: none
+    
+.header
+    padding: 32px 0 64px
+    .container
+        position: relative
+    &__block
+        position: relative
+        z-index: 2
+        mask-image: url('../img/patern.svg')
+        mask-size: cover
+        mask-position: left bottom
+        height: 646px
+        display: flex
+        flex-direction: column
+        justify-content: end
+        padding: 0 32px 96px
+        border-radius: 36px
+        overflow: hidden
+        &::before
+            content: ''
+            display: block
+            width: 2000px
+            height: 1500px
+            position: absolute
+            left: 0
+            bottom: 0
+            background: radial-gradient(ellipse farthest-corner at 50% 50%, rgba(17, 17, 31, 0.8) 0%, #11111f00 59.3%)
+            transform: translate(-50%, 50%)
+            z-index: -1
+            pointer-events: none
+        h1
+            font-family: $font-family
+            font-weight: 600
+            font-size: 60px
+            line-height: 1.2
+            letter-spacing: -0.02em
+            color: #fff
+            max-width: 630px
+        p
+            font-family: $font-family
+            font-weight: 500
+            font-size: 24px
+            line-height: 1.33333
+            color: #fcfcfd
+            max-width: 630px
+            margin: 24px 0 0
+    &__bg
+        position: absolute
+        inset: 0
+        object-fit: cover
+        z-index: -2
+        height: 100%
+        width: 100%
+        pointer-events: none
+    .btn__yellow
+        position: absolute
+        bottom: 0
+        left: 16px
+        padding: 16px 28px
+        border-radius: 32px
+        font-size: 18px
+        z-index: 3
+    
+.about
+    background: #f9fafb
+    &__wrapper
+        padding: 64px 0
+        .btn__yellow
+            margin: 24px 0 0
+    .container
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 64px
+    &__rows
+        p
+            font-family: $font-family
+            font-weight: 700
+            font-size: 60px
+            line-height: 1.2
+            letter-spacing: -0.02em
+            color: #111927
+            background-size: cover
+            &+p
+                font-weight: 600
+                font-size: 30px
+        &_wrapper
+            padding: 36px 32px
+            position: relative
+            z-index: 1
+            &::before
+                content: ''
+                display: block
+                position: absolute
+                background: var(--bg)
+                top: 0
+                left: 0
+                height: 100%
+                width: calc( 50vw - 32px )
+                z-index: -1
+                background-size: cover
+            &.blc
+                p
+                    color: #111927
+            &.wht
+                p
+                    color: #fff
+        &_icon
+            position: absolute
+            right: 0
+            bottom: 0
+            width: 160px
+            &_bt
+                top: 0
+
+.service
+    padding: 64px 0
+    position: relative
+    overflow: hidden
+    .btn__yellow
+        margin: 24px 0 0
+    &__slider
+        margin: 64px 0 0
+        overflow: visible
+    &__slide
+        border: 2px solid #e5e7eb
+        border-radius: 24px
+        padding: 24px
+        width: 384px
+        display: flex
+        flex-direction: column
+        &_title
+            display: flex
+            justify-content: start
+            align-items: center
+            gap: 12px
+            font-family: $font-family
+            font-weight: 600
+            font-size: 20px
+            line-height: 1.5
+            color: #9da4ae
+            margin: 0 0 auto
+        &_block
+            border: 1px solid rgba(17, 17, 31, 0.5)
+            border-radius: 20px
+            padding: 32px 24px
+            background: #11111f
+            margin: 94px 0 0
+            p
+                font-family: $font-family
+                font-weight: 700
+                font-size: 20px
+                line-height: 1.5
+                color: #fff
+                &+p
+                    font-weight: 500
+                    font-size: 18px
+                    margin: 16px 0 0
+                    color: #fff
+            a
+                display: flex
+                justify-content: start
+                align-items: center
+                gap: 8px
+                margin: 32px 0 0
+                width: max-content
+                font-family: $font-family
+                font-weight: 600
+                font-size: 16px
+                line-height: 1.5
+                color: #fff
+                transition: all .3s
+                path
+                    transition: all .3s
+                &:hover
+                    color: #ffb81c
+                    path
+                        stroke: #ffb81c
+    &__arrow
+        display: flex
+        justify-content: start
+        align-items: center
+        padding: 0 32px
+        margin: 32px 0 0
+        gap: 32px
+        .swiper-button-next,
+        .swiper-button-prev
+            position: relative
+            inset: auto
+            transform: none
+            opacity: 1
+            margin: 0
+            width: 56px
+            height: 56px
+            border-radius: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 1px solid #9da4ae
+            background: #f9fafb
+            svg
+                width: 24px
+                height: 24px
+
+.portfolio
+    padding: 64px 0
+    background: #f9fafb
+    .btn__yellow
+        margin: 24px 0 0
+    &__wrapper
+        margin: 64px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 24px
+    &__item
+        max-width: 400px
+        position: relative
+        &_prev
+            position: relative
+            mask-image: url('../img/portfolio_patern.svg')
+            mask-size: 400px
+            mask-position: right top
+            border-radius: 22px
+            img
+                width: 100%
+                height: 240px
+                object-fit: cover
+        &_info
+            padding: 20px 12px 0
+        &_type
+            font-family: $font-family
+            font-weight: 500
+            font-size: 16px
+            line-height: 1.5
+            color: #11111f
+        &_name
+            font-family: $font-family
+            font-weight: 500
+            font-size: 30px
+            line-height: 1.26667
+            color: #111927
+            margin: 4px 0 0
+        &_status
+            margin: 12px 0 0
+            width: max-content
+            display: flex
+            justify-content: start
+            align-items: center
+            gap: 4px
+            padding: 2px 8px 2px 6px
+            background: #f3f4f6
+            border-radius: 16px
+            font-family: $second-family
+            font-weight: 500
+            font-size: 12px
+            line-height: 1.5
+            text-align: center
+            color: #384250
+            &.green
+                background: #ecfdf3
+                color: #027a48
+        &_map
+            margin: 12px 0 0
+            display: flex
+            justify-content: start
+            align-items: center
+            gap: 8px
+            font-family: $font-family
+            font-weight: 500
+            font-size: 16px
+            line-height: 1.5
+            color: #4d5761
+        &:hover
+            .portfolio__link
+                background: #FFC649
+    &__link
+        position: absolute
+        top: 0
+        right: 0
+        width: 56px
+        height: 56px
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 100%
+        background: #ffb81c
+        transition: all .3s
+    &__wht
+        background: #fff
+    &__type
+        margin: 12px 0 0
+        border: 1px solid #4d5761
+        border-radius: 16px
+        padding: 2px 8px 2px 6px
+        width: max-content
+        font-family: $second-family
+        font-weight: 500
+        font-size: 12px
+        line-height: 1.5
+        text-align: center
+        color: #384250
+
+.offer
+    padding: 105px 0
+    background: linear-gradient(139deg, #11111f 20%, #7C5D12 100%)
+    text-align: center
+    .title__text
+        color: #fff
+    &__text
+        margin: 20px 0 0
+        font-family: $font-family
+        font-weight: 400
+        font-size: 20px
+        line-height: 1.5
+        text-align: center
+        color: #fff
+    &__func
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 20px 0 0
+        gap: 4px
+    &__phone
+        width: 40px
+        height: 40px
+        border: 1.11px solid #d2d6db
+        border-radius: 22px
+        display: flex
+        justify-content: center
+        align-items: center
+
+.footer
+    padding: 64px 0 48px
+    background: #11111f
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: start
+    &__logo
+        max-width: 148px
+        img
+            width: 100%
+    &__text
+        margin: 16px 0 0
+        font-family: $font-family
+        font-weight: 500
+        font-size: 20px
+        line-height: 1.5
+        color: #f3f4f6
+    &__soc
+        display: flex
+        justify-content: center
+        align-items: start
+        gap: 26px
+        svg
+            width: 22px
+            height: 22px
+        a
+            display: block
+    &__list
+        margin: 64px 0 0
+        border-top: 1px solid #f3f4f6
+        padding: 16px 0 0
+        display: flex
+        justify-content: center
+        align-items: center
+        a
+            display: block
+            padding: 0 56px 
+            position: relative
+            font-family: $font-family
+            font-weight: 400
+            font-size: 14px
+            line-height: 1.42857
+            color: #f3f4f6
+            transition: all .3s
+            &::before
+                content: ''
+                display: block
+                width: 1px
+                height: 100%
+                background: #f3f4f6
+                position: absolute
+                top: 0
+                right: 0
+            &:hover
+                color: #ffb81c
+        li
+            &:last-child a
+                &::before
+                    content: none
+    &__copy
+        font-family: $font-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.5
+        text-align: center
+        margin: 32px 0 0
+        color: #4d5761
+
+.about-header
+    padding: 96px 0 64px
+    .title
+        &__text,
+        &__subtitle
+            text-align: center
+            max-width: 800px
+            margin-left: auto
+            margin-right: auto
+    &__row
+        margin: 36px 0 0
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        gap: 32px
+    &__item
+        padding: 20px 36px
+        border-radius: 16px
+        background: #f9fafb
+        p
+            font-family: $font-family
+            font-weight: 700
+            font-size: 36px
+            line-height: 1.2
+            letter-spacing: -0.02em
+            text-align: center
+            color: #ffb81c
+            &+p
+                font-weight: 500
+                font-size: 18px
+                line-height: 1.5
+                color: #111927
+
+.doing
+    padding: 64px 0
+    position: relative
+    background: #f9fafb
+    overflow: hidden
+    &__wrapper
+        max-width: calc( 100% - 526px )
+    p
+        margin: 24px 0 0
+        font-family: $font-family
+        font-weight: 500
+        font-size: 30px
+        line-height: 1.26667
+        color: #11111f
+    ul
+        margin: 16px 0 0
+        li
+            position: relative
+            padding: 0 0 0 25px
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.5
+            color: #6c737f
+            &::before
+                content: ''
+                display: block
+                width: 5px
+                height: 5px
+                border-radius: 100%
+                background: #6c737f
+                left: 10px
+                top: 11px
+                position: absolute
+    &__bg
+        position: absolute
+        top: 0
+        right: 0
+        height: 100%
+        width: calc( 50vw - 130px )
+        border-radius: 48px 0 0 48px
+        object-fit: cover
+
+.goals
+    padding: 64px 0
+    &__wrapper
+        margin: 64px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 32px
+    &__item
+        transition: all .3s
+        border-radius: 16px
+        padding: 24px
+        box-shadow: 0 4px 6px -2px rgba(16, 24, 40, 0.03), 0 12px 16px -4px rgba(16, 24, 40, 0.08)
+        background: #f9fafb
+        span
+            border-radius: 32px
+            width: 48px
+            height: 48px
+            background: #ffb81c
+            transition: all .3s
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 100%
+        path
+            transition: all .3s
+            stroke: #fff
+        p
+            margin: 36px 0 0
+            font-family: $font-family
+            font-weight: 600
+            font-size: 20px
+            line-height: 1.5
+            color: #111927
+            &+p
+                margin: 8px 0 0
+                font-weight: 400
+                font-size: 16px
+                color: #1f2a37
+        &:hover
+            background: #ffb81c
+            span
+                background: #fff
+            path
+                stroke: #000
+
+.work
+    padding: 64px 0
+    background: #f9fafb
+    &__wrapper
+        margin: 64px 0 0
+        display: flex
+        gap: 30px
+        justify-content: center
+        align-items: center
+        img
+            height: 90px
+            width: 100%
+            object-fit: contain
+        div
+            position: relative
+            width: fit-content
+            &::before
+                content: ''
+                display: block
+                width: 2px
+                height: 80px
+                position: absolute
+                right: -15px
+                top: 50%
+                transform: translateY(-50%)
+                background: #e5e7eb
+            &:last-child
+                &::before
+                    content: none
+
+.team
+    background: #f9fafb
+    padding: 64px 0
+    &__wrapper
+        margin: 64px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 107px
+        padding: 0 36px
+    &__item
+        position: relative
+        &::before
+            content: ''
+            display: block
+            width: 2px
+            height: 220px
+            position: absolute
+            right: -54px
+            top: 50%
+            transform: translateY(-50%)
+            background: #e5e7eb
+        &_prev
+            position: relative
+            z-index: 2
+        &_logo
+            position: absolute
+            top: 0
+            left: 50%
+            transform: translateX(-50%)
+            width: 100px
+            z-index: -1
+        &_avatar
+            width: 120px
+            height: 120px
+            border-radius: 100%
+            border: 2px solid #000
+            display: block
+            margin: 0 auto
+            object-fit: cover
+        p
+            margin: 16px 0 0
+            font-family: $font-family
+            font-weight: 600
+            font-size: 20px
+            line-height: 1.5
+            text-align: center
+            color: #111927
+            &+p
+                margin: 4px 0 0
+                font-weight: 400
+                font-size: 16px
+                color: #9da4ae
+        &:last-child,
+        &:nth-child(4n)
+            &::before
+                content: none
+
+
+
+@media ( max-width: 1200px )
+    .nav
+        padding: 0 
+        border: none
+        .container
+            padding: 16px
+            border-bottom: 1px solid #f3f4f6
+        &__list
+            display: none
+            grid-template-columns: 1fr
+            gap: 8px
+            align-items: start
+            border-bottom: 1px solid #eaecf0
+            padding: 24px 16px
+            margin: 0 -16px
+            width: calc( 100% + 32px )
+            a
+                padding: 12px 0
+                justify-content: start
+            &_mob
+                display: grid
+        &__lang,
+        &__func
+            &_mob
+                display: none
+        &__logo
+            position: relative
+            inset: auto
+            transform: none
+        &__hum
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 40px
+            height: 40px
+            border-radius: 100%
+            border: 1px solid #d2d6db
+            gap: 4px
+            position: relative
+            flex-direction: column
+            cursor: pointer
+            margin: 0 0 0 4px
+            &::before,
+            span,
+            &::after
+                content: ''
+                display: block
+                width: 22px
+                height: 2px
+                background: #11111f
+                border-radius: 2px
+        &.active
+            .nav
+                &__hum
+                    span
+                        opacity: 0
+                    &::before,
+                    &::after
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%) rotate(45deg)
+                    &::after
+                        transform: translate(-50%, -50%) rotate(-45deg)
+                &__mob
+                    display: block
+
+@media ( max-width: 1024px )
+    .header
+        &__block
+            mask-size: 1312px
+            height: 500px
+            h1
+                font-size: 36px
+                max-width: 480px    
+            p
+                font-size: 18px
+                max-width: 480px    
+    .about
+        .container
+            grid-template-columns: 1fr
+        &__wrapper
+            padding-bottom: 0
+        &__rows
+            &_wrapper
+                padding: 36px 0
+                &::before
+                    width: calc( 100% + 32px )
+                    left: -16px
+    .about-header
+        &__row
+            display: grid
+            grid-template-columns: 1fr 1fr
+            align-items: stretch
+    .doing
+        .container
+            display: grid
+            grid-template-columns: 1fr
+            gap: 24px
+        &__wrapper
+            max-width: 100%
+        &__bg
+            position: relative
+            width: calc( 100% + 16px )
+            margin: 0 -16px 0 0
+    .goals,
+    .team
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+    .team
+        &__item
+            &:nth-child(2n)
+                &::before
+                    content: none
+
+@media ( max-width: 768px )
+    .title
+        &__text
+            font-size: 30px
+    .portfolio
+        &__wrapper
+            grid-template-columns: 1fr
+        &__item
+            max-width: 400px
+    .footer
+        &__list
+            a
+                padding: 0 40px
+    .work
+        &__wrapper
+            flex-direction: column
+        div
+            &::before
+                width: calc( 100vw - 32px )
+                inset: auto
+                transform: translateX(-50%)
+                left: 50%
+                height: 1px
+                bottom: -16px
+
+@media ( max-width: 500px )
+    .title
+        font-size: 14px
+        &__text
+            &+.btn__yellow
+                margin: 16px 0 0
+    .nav
+        &__func
+            display: none
+            &_mob
+                display: flex
+                margin: 32px 0 0
+                justify-content: start
+        &__lang
+            display: flex
+            justify-content: start
+            align-items: center
+            flex-wrap: wrap
+            gap: 12px
+            margin: 24px 0 0
+            a
+                font-family: $font-family
+                font-weight: 600
+                font-size: 14px
+                line-height: 1.42857
+                color: #6c737f
+                border-radius: 32px
+                padding: 7px 11px
+                background: #f9fafb
+                border: 1px solid #f9fafb
+                display: block
+                &.active
+                    border: 1px solid #9da4ae
+                    color: #384250
+        &__logo
+            margin: 0 auto 0 0
+        &.active
+            box-shadow: 0 4px 6px -2px rgba(16, 24, 40, 0.03), 0 12px 16px -4px rgba(16, 24, 40, 0.08)
+            padding-bottom: 24px
+    .header
+        position: relative
+        padding: 0
+        overflow: hidden
+        .container
+            min-height: 504px
+            padding-bottom: 64px
+        &__block
+            mask: none
+            border-radius: 0
+            overflow: visible
+            padding: 64px 0 0
+            justify-content: start
+            position: static
+            height: auto
+            p
+                margin: 16px 0 0
+                text-align: center
+            h1
+                text-align: center
+            &::before
+                top: 0
+                left: 50%
+                transform: translate(-50%, -50%)
+        .btn__yellow
+            position: relative
+            z-index: 1
+            margin: 40px auto 0
+            inset: auto
+        &__bg
+            left: -16px
+            right: -16px
+            width: calc( 100% + 32px )
+    .service
+        padding: 48px 0
+        &__slider
+            margin: 48px 0 0
+            gap: 24px
+            .swiper-wrapper
+                display: grid 
+                grid-template-columns: 1fr
+                gap: 24px
+        &__slide
+            width: 100%
+        &__arrow
+            display: none
+    .portfolio
+        padding: 48px 0
+    .offer
+        padding: 48px 0
+    .footer
+        padding: 48px 0 40px
+        &__row
+            flex-direction: column
+            gap: 28px
+        &__soc
+            margin: 0 auto
+        &__list
+            margin: 28px 0 0
+            a
+                padding: 0 34px
+            li
+                &:nth-child(1) a
+                    padding: 0 34px 0 0
+                &:last-child a
+                    padding: 0 0 0 34px
+        &__copy
+            margin: 80px 0 0
+            text-align: left
+    .about-header
+        padding: 48px 0
+        &__row
+            gap: 12px
+        &__item
+            padding: 12px
+            p
+                font-size: 24px
+                &+p
+                    font-size: 14px
+    .doing
+        padding: 48px 0 
+        p
+            font-size: 20px
+            margin: 16px 0 0
+        ul
+            li
+                font-size: 14px
+                padding: 0 0 0 20px
+                &::before
+                    width: 4px
+                    height: 4px
+                    left: 8px
+                    top: 8px
+    .work
+        padding: 48px 0 
+    .goals
+        padding: 48px 0 
+        &__wrapper
+            grid-template-columns: 1fr
+            gap: 32px
+            margin: 24px 0 0
+    .team
+        padding: 48px 0 
+        &__wrapper
+            grid-template-columns: 1fr
+            gap: 48px
+            margin: 48px 0 0
+        &__item
+            &::before
+                content: none
+            &::after
+                content: ''
+                display: block
+                background: #e5e7eb
+                bottom: -24px
+                left: 50%
+                transform: translateX(-50%)
+                position: absolute
+                width: 220px
+                height: 1px
+            &:last-child
+                &::after
+                    content: none

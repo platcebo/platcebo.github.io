@@ -107,5 +107,47 @@ if(mediaBloc != null) {
 
 }
 
+let modalCall = document.querySelectorAll('.modal__call'),
+    modal = document.querySelector('.modal-form'),
+    modalOverflow = document.querySelectorAll('.modal__overflow'),
+    modalClose = document.querySelectorAll('.modal__close'),
+    modalForm = document.querySelector('.modal form'),
+    modalAll = document.querySelectorAll('.modal');
+
+if(modal !== null) {
+    modalCall.forEach((item)=>{
+        item.addEventListener('click',()=>{
+            modal.classList.add('active')
+        })
+    })
+
+    modalOverflow.forEach((a)=>{
+        a.addEventListener('click',()=>{
+            modalAll.forEach(item=>item.classList.remove('active'))
+        })
+    })
+
+    modalClose.forEach((a)=>{
+        a.addEventListener('click',()=>{
+            modalAll.forEach(item=>item.classList.remove('active'))
+        })
+    })
+}
+
+let masterCall = document.querySelectorAll('.modal-master__call'),
+    master = document.querySelector('.modal-master'),
+    masterInfo = document.querySelector('.modal-master__info'),
+    masterDop = document.querySelectorAll('.master__dop');
+
+if(master !== null) {
+    masterCall.forEach((item,i)=>{
+        item.addEventListener('click', (e)=>{
+            e.preventDefault();
+            master.classList.add('active');
+            masterInfo.innerHTML = masterDop[i].innerHTML;
+        })
+    })
+}
+
 
 }, false);

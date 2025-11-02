@@ -22,6 +22,12 @@ var swiper = new Swiper(".comment__swiper", {
     spaceBetween: 20,
 });
 
+var swiper = new Swiper(".awards__scroll", {
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    // mousewheel: true,
+});
+
 var swiper = new Swiper(".welcome__slider", {
     slidesPerView: 1,
     spaceBetween: 0,

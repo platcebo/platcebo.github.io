@@ -811,13 +811,13 @@ html
                     svg
                         transform: rotate(180deg)
                 &:last-child
-                    width: 200px
+                    width: 210px
+                    min-width: 210px
             a
                 display: flex
                 justify-content: start
                 align-items: center
                 gap: 5px
-                max-width: 210px
                 p
                     min-width: auto
                     padding: 0
@@ -832,7 +832,6 @@ html
                 border-right: 1px solid #e9e9e7
                 min-width: 165px
                 width: -webkit-fill-available
-                max-width: 210px
                 span
                     width: auto
                     border-right: none
@@ -843,7 +842,6 @@ html
                 border-right: 1px solid #e9e9e7
                 min-width: 165px
                 width: -webkit-fill-available
-                max-width: 210px
                 span
                     width: auto
                     border-right: none
@@ -882,7 +880,8 @@ html
         justify-content: space-between
         flex-wrap: wrap
         align-items: center
-        min-width: 200px
+        min-width: 210px !important
+        width: 210px !important
         .added_to_cart
             width: 100%
         div
