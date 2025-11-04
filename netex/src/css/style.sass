@@ -1375,6 +1375,50 @@ body
             &.full
                 grid-row: span 2
 
+.error-page
+    padding: 248px 0
+    position: relative
+    overflow: hidden
+    h1
+        font-size: 60px
+    p
+        font-size: 20px
+    &__wrapper
+        width: 480px
+        max-width: calc( 50% - 32px )
+    &__bg
+        position: absolute
+        top: 0
+        height: 100%
+        right: 0
+        width: 50vw
+        object-fit: cover   
+    &__row
+        display: flex
+        justify-content: start
+        align-items: center
+        gap: 12px
+        flex-wrap: wrap
+        margin: 36px 0 0
+        .btn__yellow
+            font-size: 16px
+    &__link
+        display: flex
+        justify-content: start
+        align-items: center
+        gap: 12px
+        a
+            border: 1px solid #d2d6db
+            border-radius: 36px
+            padding: 11px 19px
+            box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+            background: #fff
+            font-family: $font-family
+            font-weight: 600
+            font-size: 16px
+            line-height: 1.5
+            color: #384250
+
 
 
 
@@ -1531,6 +1575,18 @@ body
                     width: calc( 50% + 20px )
             &_info
                 padding: 24px
+    .error-page
+        padding: 48px 0
+        &__bg
+            position: relative
+            inset: auto
+            width: calc( 100% - 32px )
+            margin: 36px auto 0
+            display: block
+            border-radius: 12px
+        &__wrapper
+            width: 100%
+            max-width: 100%
 
 @media ( max-width: 768px )
     .title
@@ -1619,6 +1675,9 @@ body
         &__wrapper
             grid-template-columns: 1fr
             margin: 24px 0 0
+    .error-page
+        h1
+            font-size: 36px
 
 @media ( max-width: 500px )
     .title
@@ -1876,3 +1935,9 @@ body
                     grid-row: auto
                     grid-column: span 2
                     height: 180px
+    .error-page
+        &__row
+            flex-direction: column
+            align-items: start
+        &__link
+            flex-wrap: wrap
