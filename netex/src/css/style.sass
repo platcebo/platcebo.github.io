@@ -93,10 +93,13 @@ body
             path
                 transition: all .3s
                 stroke: #11111f
-            &:hover
-                color: #9da4ae
+            &:hover,
+            &.active
+
+                color: #ffb81c
                 path
-                    stroke: #9da4ae
+                    stroke: #ffb81c
+
     &__func
         margin: 0 0 0 auto
         display: flex
@@ -253,6 +256,19 @@ body
             padding: 36px 32px
             position: relative
             z-index: 1
+            &::after
+                content: ''
+                display: block
+                position: absolute
+                background: var(--bg-hover)
+                top: 0
+                left: 0
+                height: 100%
+                width: calc( 50vw - 32px )
+                z-index: -1
+                background-size: cover
+                opacity: 0
+                transition: all .3s
             &::before
                 content: ''
                 display: block
@@ -262,7 +278,7 @@ body
                 left: 0
                 height: 100%
                 width: calc( 50vw - 32px )
-                z-index: -1
+                z-index: -2
                 background-size: cover
             &.blc
                 p
@@ -270,6 +286,9 @@ body
             &.wht
                 p
                     color: #fff
+            &:hover
+                &::after
+                    opacity: 1
         &_icon
             position: absolute
             right: 0
@@ -778,6 +797,8 @@ body
         div
             position: relative
             width: fit-content
+            transition: all .3s
+            filter: grayscale(1)
             &::before
                 content: ''
                 display: block
@@ -791,6 +812,8 @@ body
             &:last-child
                 &::before
                     content: none
+            &:hover
+                filter: grayscale(0)
     &__dark
         background: #f9fafb
 
@@ -825,6 +848,9 @@ body
             transform: translateX(-50%)
             width: 100px
             z-index: -1
+            transition: all .3s
+        &_hover
+            opacity: 0
         &_avatar
             width: 120px
             height: 120px
@@ -833,6 +859,7 @@ body
             display: block
             margin: 0 auto
             object-fit: cover
+            transition: all .3s
         p
             margin: 16px 0 0
             font-family: $font-family
@@ -850,6 +877,14 @@ body
         &:nth-child(4n)
             &::before
                 content: none
+        &:hover
+            .team__item
+                &_avatar
+                    border-color: #00000000
+                &_logo
+                    opacity: 0
+                &_hover
+                    opacity: 1
 
 .projects
     &__title
@@ -1034,10 +1069,11 @@ body
         position: absolute
         bottom: 50px
         width: calc( 62vw - 34px )
-        right: -12vw
+        left: calc( 50vw + 34px )  
         border: 5.00px solid #111927
         border-radius: 10px
         display: none
+        max-width: 854px    
         &.active
             display: block
 
