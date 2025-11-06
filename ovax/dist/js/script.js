@@ -25,6 +25,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    var swiper = new Swiper(".my-dep__slider", {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+
     let serviceRow = document.querySelectorAll('.run-line__wrapper');
 
     if(serviceRow !== null) {
