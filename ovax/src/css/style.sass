@@ -4867,14 +4867,17 @@ section
         
 .dep-wrapper
     display: grid
-    grid-template-columns: 280px 1fr
+    grid-template-columns: 250px 1fr
     gap: 20px
     max-width: 1880px
-    margin: 20px auto 
+    margin: 0 auto 20px
     width: calc( 100% - 40px )
+    height: calc( 100% - 20px )
     &__body
         position: relative
         overflow: hidden
+        display: grid
+        grid-template-rows: auto 1fr
         &::before
             content: ''
             display: block
@@ -5103,11 +5106,13 @@ section
         width: 100%
         border: 1px solid rgba(255, 255, 255, 0.1)
         border-radius: 16px
-        height: 100%
+        height: auto
+        align-self: start
         img
             width: 100%
             height: 100%
-            object-fit: cover
+            object-fit: contain
+            background: #000
         .swiper-pagination
             span
                 width: 6px
