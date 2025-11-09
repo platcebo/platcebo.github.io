@@ -4791,41 +4791,41 @@ section
 
 .new-nav
     max-width: 1880px
-    margin: 20px auto
+    margin: 20em auto
     padding: 18px 20px
-    border: 1.50px solid rgba(255, 255, 255, 0.1)
+    border: 1px solid rgba(255, 255, 255, 0.1)
     border-radius: 24px
     backdrop-filter: blur(20px)
     background: linear-gradient(17deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 50.5%, rgba(255, 255, 255, 0.05) 100%)
     display: flex
     justify-content: start
     align-items: center
-    width: calc( 100% - 40px )
+    width: calc( 100% - 40em )
     &__logo
         margin: 0 auto 0 0
-        max-width: 154px
+        max-width: 154em
         img
             width: 100%
     &__time
         p
             font-family: $font-family
             font-weight: 400
-            font-size: 14px
+            font-size: 14em
             line-height: 1.2
             color: rgba(255, 255, 255, 0.8)
             &+p
                 font-family: $font-family
                 font-weight: 500
-                font-size: 18px
+                font-size: 18em
                 line-height: 1.2
                 color: #fff
                 margin: 4px 0 0
             span
-                font-size: 16px
+                font-size: .88em
                 color: rgba(255, 255, 255, 0.5)
     &__func
-        margin: 0 20px
-        padding: 0 20px
+        margin: 0 20em
+        padding: 0 20em
         display: flex
         justify-content: center
         align-items: center
@@ -4836,48 +4836,52 @@ section
             display: flex
             justify-content: center
             align-items: center
-            width: 40px
-            height: 40px
+            width: 40em
+            height: 40em
             border: 1px solid rgba(255, 255, 255, 0.1)
             border-radius: 100%
+        svg
+            width: 24em
+            height: 24em
     &__pers
         display: grid
-        grid-template-columns: 40px 1fr
-        gap: 12px
+        grid-template-columns: 40em 1fr
+        gap: 12em
         align-items: center
         img
             width: 100%
             border-radius: 100%
-            height: 40px
+            height: 40em
             object-fit: cover
             border: 1px solid #87aedb
         p
             font-family: $font-family
             font-weight: 500
-            font-size: 15px
+            font-size: 15em
             line-height: 1.2
             color: #fff
             &+p
                 margin: 4px 0 0
                 font-family: $font-family
                 font-weight: 400
-                font-size: 15px
+                font-size: 15em
                 line-height: 1.2
                 color: rgba(255, 255, 255, 0.5)
         
 .dep-wrapper
     display: grid
-    grid-template-columns: 250px 1fr
-    gap: 20px
+    grid-template-columns: 250em 1fr
+    gap: 20em
     max-width: 1880px
-    margin: 0 auto 20px
-    width: calc( 100% - 40px )
+    margin: 0 auto 20em
+    width: calc( 100% - 40em )
     height: calc( 100% - 20px )
     &__body
         position: relative
         overflow: hidden
         display: grid
         grid-template-rows: auto 1fr
+        font-size: calc( 100vw / 1920 )
         &::before
             content: ''
             display: block
@@ -4905,7 +4909,7 @@ section
         gap: 8px
         font-family: $font-family
         font-weight: 500
-        font-size: 18px
+        font-size: 18em
         line-height: 1.2
         color: #fff
         a
@@ -4914,6 +4918,9 @@ section
             justify-content: center
             align-items: center
             gap: 8px
+        svg
+            width: 1.1em
+            height: 1.1em
     &__status
         display: flex
         justify-content: center
@@ -4927,11 +4934,11 @@ section
         p
             font-family: $font-family
             font-weight: 500
-            font-size: 18px
+            font-size: 18em
             line-height: 1.2
             color: #fff
             span
-                font-size: 16px
+                font-size: 0.88em
                 color: rgba(255, 255, 255, 0.5)
             &+p
                 display: flex
@@ -4939,7 +4946,7 @@ section
                 align-items: center
                 gap: 8px
                 font-weight: 700
-                font-size: 14px
+                font-size: 14em
                 span
                     color: inherit
                 &.red
@@ -4950,41 +4957,43 @@ section
 .dep-adise
     border: 1.50px solid rgba(255, 255, 255, 0.1)
     border-radius: 24px
-    padding: 24px 16px
+    padding: 24em 16em
     backdrop-filter: blur(20px)
     background: linear-gradient(17deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 50.5%, rgba(255, 255, 255, 0.05) 100%)
     &__title
-        padding: 0 0 0 12px
+        padding: 0 0 0  .75em
         font-family: $font-family
         font-weight: 400
-        font-size: 16px
+        font-size: 16em
         line-height: 1.2
         color: rgba(255, 255, 255, 0.8)
     ul
-        margin: 16px 0 0
+        margin: 16em 0 0
         display: grid
         grid-template-columns: 1fr
         gap: 4px
         a
-            padding: 12px
+            padding: 0.6em
             display: grid
-            grid-template-columns: 24px 1fr
+            grid-template-columns: 1.2em 1fr
             transition: all .3s
             font-family: $font-family
             font-weight: 400
-            font-size: 20px
+            font-size: 20em
             line-height: 1.2
             color: rgba(255, 255, 255, 0.6)
             transition: all .3s
             position: relative
             border: none
-            border-radius: 24px
+            border-radius: 1.5em
             overflow: hidden
             border: 1px solid rgba(255, 255, 255, 0)
             gap: 8px
             svg
                 opacity: .6
                 transition: all .3s
+                width: 1.2em
+                height: 1.2em
                 g
                     opacity: 1
             &::before
@@ -5012,15 +5021,15 @@ section
             a
                 color: #87aedb
         &+.dep-adise__title
-            margin: 20px 0 0
-            padding-top: 20px
+            margin: 1.25em 0 0
+            padding-top: 1.25em
             border-top: 1px solid #276192
 
 .my-dep
     height: 100%
     border: 1px solid rgba(255, 255, 255, 0.1)
     border-radius: 24px
-    padding: 20px
+    padding: 20em
     backdrop-filter: blur(20px)
     background: linear-gradient(17deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 50.5%, rgba(255, 255, 255, 0.05) 100%)
     display: grid
@@ -5029,9 +5038,9 @@ section
     align-items: start
     grid-template-rows: auto auto 1fr
     &__bal
-        border: 1.50px solid rgba(255, 255, 255, 0.1)
+        border: 1px solid rgba(255, 255, 255, 0.1)
         border-radius: 16px
-        padding: 24px
+        padding: 24em
         grid-column: 1/3
         height: 100%
         &_row
@@ -5055,28 +5064,28 @@ section
             gap: 8px
             font-family: $font-family
             font-weight: 400
-            font-size: 18px
+            font-size: 18em
             line-height: 1.2
             text-transform: uppercase
             color: rgba(255, 255, 255, 0.8)
             align-items: start
         &_title
-            margin: 28px 0 0
+            margin: .77em 0 0
             display: grid
             grid-template-columns: 1fr auto
             align-items: center
-            gap: 20px
+            gap: .55em
             max-width: max-content
             font-family: $font-family
             font-weight: 500
-            font-size: 36px
+            font-size: 36em
             line-height: 1.2
             color: #87aedb
             span
                 font-weight: 700
-                font-size: 52px
+                font-size: 1.44em
             a
-                height: 32px
+                height: .9em
                 display: block
                 margin: auto 0
         &_sub
@@ -5133,14 +5142,14 @@ section
         p
             font-family: $font-family
             font-weight: 700
-            font-size: 28px
+            font-size: 28em
             line-height: 1.2
             color: #fff
             &+p
                 margin: 16px 0 auto
                 font-family: $font-family
                 font-weight: 400
-                font-size: 18px
+                font-size: 18em
                 line-height: 1.3
                 color: rgba(255, 255, 255, 0.8)
         &_btn
@@ -5162,8 +5171,8 @@ section
     &__time
         height: 100%
         border: 1px solid rgba(255, 255, 255, 0.1)
-        border-radius: 16px
-        padding: 24px
+        border-radius: 16em
+        padding: 24em
         background: linear-gradient(315deg, rgba(13, 27, 41, 0.2) 0%, rgba(13, 27, 41, 0.2) 100%)
         display: flex
         flex-direction: column
@@ -5173,17 +5182,17 @@ section
             display: flex
             justify-content: space-between
             align-items: end
-            padding: 0 0 20px
+            padding: 0 0 20em
             border-bottom: 1px solid #276192
             p
                 font-family: $font-family
                 font-weight: 500
-                font-size: 16px
+                font-size: 16em
                 line-height: 1.2
                 color: rgba(255, 255, 255, 0.8)
                 &.blue
                     font-weight: 700
-                    font-size: 20px
+                    font-size: 20em
                     background: linear-gradient(0deg, #1db7fd 0%, #18f8ff 100%)
                     background-clip: text
                     -webkit-background-clip: text
@@ -5197,20 +5206,20 @@ section
             display: flex
             justify-content: center
             align-items: start
-            gap: 24px
-            margin: 36px 0 auto
+            gap: 24em
+            margin: 36em 0 auto
             position: relative
             span
                 display: block
-                margin: 26px 0 0
-                width: 6px
-                height: 6px
+                margin: 26em 0 0
+                width: 6em
+                height: 6em
                 border-radius: 100%
                 background: linear-gradient(0deg, #1db7fd 0%, #18f8ff 100%)
             p
                 font-family: $font-family
                 font-weight: 700
-                font-size: 44px
+                font-size: 44em
                 line-height: 1.2
                 background: linear-gradient(0deg, #1db7fd 0%, #18f8ff 100%)
                 background-clip: text
@@ -5218,7 +5227,7 @@ section
                 -webkit-text-fill-color: transparent
                 &+p
                     font-weight: 500
-                    font-size: 14px
+                    font-size: 14em
             &::before
                 content: ''
                 display: block
@@ -5239,7 +5248,7 @@ section
             p
                 font-family: $font-family
                 font-weight: 500
-                font-size: 14px
+                font-size: 14em
                 line-height: 1.2
                 color: rgba(255, 255, 255, 0.5)
                 &:nth-child(3)
@@ -5265,14 +5274,14 @@ section
                 box-shadow: 0 0 10px 0 #01499e, 0 0 20px 0 #01499e
                 background: linear-gradient(90deg, #1db7fd 0%, #18f8ff 100%)
         &_price
-            margin: 20px 0 0
+            margin: 20em 0 0
             display: grid
             grid-template-columns: 1fr 1fr 1fr
             p
                 margin: 8px 0 0
                 font-family: $font-family
                 font-weight: 700
-                font-size: 24px
+                font-size: 24em
                 line-height: 1.2
                 text-align: center
                 color: rgba(255, 255, 255, 0.8)
@@ -5285,12 +5294,12 @@ section
                 p
                     margin: 0
                     font-weight: 500
-                    font-size: 14px
+                    font-size: 14em
                     color: rgba(255, 255, 255, 0.5)
                     text-align: left
                     &+p
                         margin: 4px 0 0
-                        font-size: 16px
+                        font-size: 16em
                         color: #fff
                 &:nth-child(3)
                     border-radius: 20px 0 20px 20px
@@ -5301,7 +5310,7 @@ section
         height: 100%
         border: 1px solid rgba(255, 255, 255, 0.1)
         border-radius: 16px
-        padding: 24px
+        padding: 24em
         background: linear-gradient(315deg, rgba(13, 27, 41, 0.2) 0%, rgba(13, 27, 41, 0.2) 100%)
         display: flex
         flex-direction: column
@@ -5313,7 +5322,7 @@ section
             align-items: center
             font-family: $font-family
             font-weight: 400
-            font-size: 18px
+            font-size: 18em
             line-height: 1.2
             text-transform: uppercase
             color: rgba(255, 255, 255, 0.8)
@@ -5323,11 +5332,11 @@ section
             gap: 8px
             grid-template-rows: 1fr 1fr
             position: relative
-            margin: 24px 0 0
+            margin: 24em 0 0
         &_item
             border: 1.50px solid rgba(255, 255, 255, 0.1)
-            border-radius: 16px
-            padding: 16px
+            border-radius: 16em
+            padding: 16em
             background: linear-gradient(17deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 50.5%, rgba(255, 255, 255, 0.1) 100%)
         &_name
             display: flex
@@ -5336,7 +5345,7 @@ section
             p
                 font-family: $font-family
                 font-weight: 600
-                font-size: 14px
+                font-size: 14em
                 line-height: 1.2
                 color: #fff
                 &+p
@@ -5345,14 +5354,14 @@ section
                     span
                         color: #fff
         &_row
-            margin: 12px 0 0
+            margin: 12em 0 0
             display: flex
             justify-content: space-between
             align-items: end
         &_sum
             font-family: $font-family
             font-weight: 600
-            font-size: 28px
+            font-size: 28em
             line-height: 1.2
             color: #fff
         &_val
@@ -5364,7 +5373,7 @@ section
             align-items: center
             font-family: $font-family
             font-weight: 500
-            font-size: 16px
+            font-size: 16em
             line-height: 1.2
             color: #fff
             p
@@ -5386,7 +5395,7 @@ section
             margin: 8px 0 auto
             font-family: $font-family
             font-weight: 400
-            font-size: 14px
+            font-size: 14em
             line-height: 1.2
             color: rgba(255, 255, 255, 0.5)
             text-align: center
@@ -5398,13 +5407,6 @@ section
             &::after
                 content: none
 
-@media ( max-width: 1650px )
-    .dep-wrapper__line
-        flex-direction: column
-        gap: 15px
-        align-items: start
-    .my-dep
-        grid-template-columns: 1fr 1fr
 
 @media ( max-width: 1150px )
     .my-dep
@@ -5425,3 +5427,7 @@ section
         &__status
             flex-direction: column
             align-items: start
+
+@media  ( min-width: 1920px )
+    .dep-wrapper__body
+        font-size: 1px
