@@ -82,6 +82,23 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    let newNav = document.querySelector('.new-nav'),
+        navDrop = document.querySelector('.new-nav__drop'),
+        navDropCall = document.querySelector('.new-nav__drop_call'),
+        navDropClose = document.querySelector('.new-nav__drop_close');
+
+    if(newNav !== null) {
+        navDropCall.addEventListener('mouseover', ()=>{
+            navDrop.classList.add('active')
+        })
+        newNav.addEventListener('mouseleave', ()=>{
+            navDrop.classList.remove('active')
+        })
+        navDropClose.addEventListener('click', ()=>{
+            navDrop.classList.remove('active')
+        })
+    }
+
 }, false);
 
 window.addEventListener('load', () => {

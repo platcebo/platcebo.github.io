@@ -4801,6 +4801,7 @@ section
     justify-content: start
     align-items: center
     width: calc( 100% - 40em )
+    z-index: 10
     &__logo
         margin: 0 auto 0 0
         max-width: 154em
@@ -4848,6 +4849,7 @@ section
         grid-template-columns: 40em 1fr
         gap: 12em
         align-items: center
+        position: relative
         img
             width: 100%
             border-radius: 100%
@@ -4860,6 +4862,8 @@ section
             font-size: 15em
             line-height: 1.2
             color: #fff
+            &:nth-child(1)
+                padding-right: 26px
             &+p
                 margin: 4px 0 0
                 font-family: $font-family
@@ -4867,6 +4871,88 @@ section
                 font-size: 15em
                 line-height: 1.2
                 color: rgba(255, 255, 255, 0.5)
+    &__drop
+        position: absolute
+        top: 46px
+        right: 20px
+        border: 1px solid rgba(255, 255, 255, 0.1)
+        border-radius: 24px
+        padding: 20px
+        background: #0d1b29
+        opacity: 0
+        pointer-events: none
+        z-index: 5
+        &.active
+            opacity: 1
+            pointer-events: all
+        &_call
+            position: absolute
+            right: 0
+            top: 0
+        &_close
+            display: block
+            width: max-content
+            margin: 0 0 0 auto
+            cursor: pointer
+        .my-dep__bal_block
+            margin: 20px 0 0
+            padding: 20px
+            border: 1px solid rgba(255, 255, 255, 0.1)
+            border-radius: 20px
+            background: linear-gradient(17deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 50.5%, rgba(255, 255, 255, 0.1) 100%)
+        &_text
+            margin: 8px 0 0
+            font-family: $font-family
+            font-weight: 400
+            font-size: 14px
+            line-height: 1.2
+            color: rgba(255, 255, 255, 0.5)
+        &_btn
+            margin: 20px 0 0
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 16px
+            button
+                width: 100%
+                display: block
+                &::after
+                    content: none
+        &_list
+            margin: 24px 0 0
+            display: grid
+            grid-template-columns: 1fr
+            gap: 16px
+            border-bottom: 1px solid #276192
+            padding: 0 0 16px
+            a
+                font-family: $font-family
+                font-weight: 500
+                font-size: 20px
+                line-height: 1.2
+                color: rgba(255, 255, 255, 0.8)
+            &+ul
+                margin: 16px 0 0
+        &_out
+            margin: 16px 0 0
+            font-family: $font-family
+            font-weight: 400
+            font-size: 20px
+            line-height: 1.2
+            color: rgba(255, 255, 255, 0.6)
+            display: grid
+            grid-template-columns: auto 1fr
+            gap: 8px
+            align-items: center
+            transition: all .3s
+            svg
+                transition: all .3s
+                opacity: .6
+            &:hover
+                color: #fff
+                svg
+                    opacity: 1
+
+
         
 .dep-wrapper
     display: grid
