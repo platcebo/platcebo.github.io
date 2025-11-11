@@ -372,7 +372,8 @@ body
         .swiper-button-prev
             display: none
         &__info
-            bottom: 50px
+            bottom: 80px !important
+            left: 20px !important
             max-width: calc( 100% - 40px )
         h1
             font-size: 30px
@@ -1644,6 +1645,104 @@ body
                 img
                     width: 100%
 
+.body-block
+    display: block
+    position: relative
+    padding: 0
+
+.nav-new
+    position: absolute
+    top: 13px
+    left: 50%
+    transform: translateX(-50%)
+    width: 1587px
+    max-width: calc( 100% - 26px )
+    z-index: 5
+    height: auto
+    border-radius: 32px
+    padding: 18px 23px
+    display: flex
+    justify-content: start
+    align-items: center
+    gap: 0
+    flex-direction: row
+    overflow: visible
+    .nav
+        &__list
+            margin: 0 auto 0 50px
+            display: flex
+            justify-content: start
+            align-items: center
+            gap: 20px
+            li
+                position: relative
+            a,
+            p
+                font-size: 15px
+                color: #fff
+            .drop__btn
+                padding: 0 0 0 14px
+                &::before
+                    left: 0
+                    top: 4px
+            .drop
+                width: fit-content
+                max-height: none
+                margin: 0
+                position: absolute
+                left: 0
+                top: calc( 100% + 5px )
+                box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .25)
+                background: rgba(47, 47, 47, .76)
+                padding: 18px
+                border-radius: 32px
+                opacity: 0
+                &.active
+                    opacity: 1
+                a
+                    white-space: nowrap
+        &__logo
+            width: 200px
+            margin: 0
+        &__soc
+            margin: 0
+            display: grid
+            grid-template-columns: 30px 30px
+    .btn__gold
+        width: max-content
+        margin: 0 0 0 25px
+        padding: 6px 30px
+        background: linear-gradient(90deg, #dfdfdf 0%, #8f8f8f 100%)
+
+.header-new
+    border-radius: 0
+    &__wrapper
+        position: relative
+        width: 1587px
+        max-width: calc( 100% - 26px )
+        margin: 0 auto
+    .header__info
+        left: 50px
+    .header__slider img
+        height: 100vh
+    .swiper-pagination
+        bottom: 50px
+        span
+            width: 61px
+            height: 5px
+    .swiper-button-next
+        right: 50px
+        border-radius: 11px
+        font-size: 15px
+        bottom: 50px
+    .swiper-button-prev
+        left: 50px
+        border-radius: 11px
+        font-size: 15px
+        bottom: 50px
+
+
+
 @media ( max-width: 1600px )
     .founder
         &__block
@@ -1736,6 +1835,18 @@ body
             left: 20px
             bottom: auto
             top: calc( 100vh - 46px )
+    .nav-new
+        .nav
+            &__logo
+                width: 150px
+            &__list
+                a,
+                p
+                    font-size: 12px
+                .drop__btn
+                    &::before
+                        top: 0
+
 
 @media ( max-width: 1024px )
     .design
@@ -1750,6 +1861,8 @@ body
     .design-new
         &__slide
             width: 350px
+    .nav
+        background: rgba(47,47,47,.9)
             
 
 @media ( max-width: 600px )

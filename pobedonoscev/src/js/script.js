@@ -58,8 +58,17 @@ document.addEventListener('DOMContentLoaded', function() {
     if(drop !== null) {
         dropBtn.forEach((item, i) =>{
             item.addEventListener('click', ()=>{
-                drop[i].classList.toggle('active');
-                item.classList.toggle('active');
+                if(item.classList.contains('active')) {
+                    drop[i].classList.remove('active');
+                    item.classList.remove('active');
+                } else {
+                    dropBtn.forEach((a,b)=>{
+                        drop[b].classList.remove('active');
+                        a.classList.remove('active');
+                    })
+                    drop[i].classList.add('active');
+                    item.classList.add('active');
+                }
             })
         })
     }
@@ -135,6 +144,12 @@ document.addEventListener('DOMContentLoaded', function() {
             cottagePag.innerHTML = String(headerSwiper.activeIndex).padStart(2, '0');
         });
 
+    }
+
+    let navNew = document.querySelector('.nav-new');
+
+    if(window.innerWidth < 1025) {
+        navNew.classList.remove('nav-new')
     }
 
 
