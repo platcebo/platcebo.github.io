@@ -16,6 +16,8 @@ body
     min-height: 100vh
     align-items: start
     position: relative
+    background: url('../img/body_bg.jpg') center repeat
+    background-size: contain
     &.fix
         overflow: hidden
 .content
@@ -26,8 +28,8 @@ body
         width: 100%
         box-sizing: border-box
         padding: 6px
-        box-shadow: 0 0 13px 7px rgba(204, 161, 120, 0.46)
-        background: #cca178
+        box-shadow: 0 0 13px 7px rgba(255, 255, 255, 0.46)
+        background: #a4a4a4
         font: 400 15px $font-family
         color: #fff
         transition: all .3s
@@ -66,8 +68,6 @@ body
             transform: skewX(30deg)
 
 .nav
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
-    background: #171717
     height: calc( 100vh - 26px )
     position: relative
     overflow-y: auto
@@ -77,6 +77,8 @@ body
     border-radius: 32px
     display: flex
     flex-direction: column
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+    background: rgba(47, 47, 47, 0.76)
     &__logo
         max-width: 206px
         display: block
@@ -95,7 +97,7 @@ body
             transition: all .3s
             cursor: pointer
             &:hover
-                color: #cca178
+                color: #a4a4a4
     &__soc
         margin: 42px 0 0
         display: grid
@@ -111,7 +113,7 @@ body
     &__desc
         margin: 23px 0 0
         font: 400 13px / 1.37502 $font-family
-        color: #cca178
+        color: #a4a4a4
     &__link
         margin: 50px 0 0
     &__hum
@@ -164,7 +166,7 @@ body
             font: 400 64px / 1.1 $second-family
             color: #fff
             span
-                color: #cca178
+                color: #a4a4a4
         p
             font: 400 18px $font-family
             color: #fff
@@ -202,12 +204,12 @@ body
         &::after
             content: none
         &:hover
-            border-color: #cca178
+            border-color: #a4a4a4
             p
-                color: #cca178
+                color: #a4a4a4
             svg
                 path
-                    stroke: #cca178
+                    stroke: #a4a4a4
     .swiper-button-prev
         left: 80px
         bottom: 70px
@@ -233,12 +235,12 @@ body
         &::after
             content: none
         &:hover
-            border-color: #cca178
+            border-color: #a4a4a4
             p
-                color: #cca178
+                color: #a4a4a4
             svg
                 path
-                    stroke: #cca178
+                    stroke: #a4a4a4
     .swiper-pagination
         transform: none
         margin: 0
@@ -425,7 +427,7 @@ body
         font: 400 15px / 1.29961 $second-family
         letter-spacing: 0.07em
         text-align: center
-        color: #cca178
+        color: #a4a4a4
     h1
         margin: 6px 0 0
         font: 400 20px / 1.29961 $second-family
@@ -503,10 +505,10 @@ body
     &__phone
         font: 400 20px / 1.64 $second-family
         letter-spacing: 0.07em
-        color: #cca178
+        color: #a4a4a4
         display: block
         margin: 19px 0 0
-        color: #cca178
+        color: #a4a4a4
         transition: all .3s
         &:hover
             color: #000
@@ -607,7 +609,7 @@ body
             transition: all .3s
         &:hover
             p
-                color: #cca178
+                color: #a4a4a4
 
 @media ( max-width: 1200px )
     .news
@@ -652,7 +654,7 @@ body
         font-weight: 300
         span
             // letter-spacing: 0.07em
-            color: #cca178
+            color: #a4a4a4
     &__text
         font: 400 20px / 1.61 $font-family
         letter-spacing: 0.07em
@@ -744,13 +746,14 @@ body
         &:hover
             h3,
             p
-                color: #cca178
+                color: #a4a4a4
             img
                 filter: brightness(.4)
 
 .footer
     border-radius: 32px
-    background: #171717
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+    background: rgba(47, 47, 47, 0.76)
     margin: 23px 0 0
     padding: 50px 20px
     .content__container
@@ -802,7 +805,7 @@ body
         color: #707070
     &__address
         font: 400 16px / 1.69 $font-family
-        color: #cca178
+        color: #a4a4a4
 
 @media ( max-width: 1600px )
     .about
@@ -886,7 +889,7 @@ body
         font: 400 100px / 1.1 $second-family
         color: #000
         span
-            color: #cca178
+            color: #a4a4a4
     &__subtitle
         margin: 70px 0 0
         max-width: 910px
@@ -911,7 +914,7 @@ body
         font: 400 15px / 1.29961 $second-family
         letter-spacing: 0.07em
         text-align: center
-        color: #cca178
+        color: #a4a4a4
         left: 0
         right: 0
         bottom: 30px
@@ -1096,7 +1099,7 @@ body
             bottom: 0
             height: 6px
             border-radius: 10px
-            background: #cca178
+            background: #a4a4a4
         &_date
             font-family: $font-family
             font-weight: 400
@@ -1157,7 +1160,7 @@ body
             svg
                 transform: translateX(8px)
             &:hover
-                background: #cca178
+                background: #a4a4a4
             &.active
                 opacity: 1
                 pointer-events: all
@@ -1185,7 +1188,7 @@ body
             bottom: 0
             height: 6px
             border-radius: 10px
-            background: #cca178
+            background: #a4a4a4
     &__slider
         margin: 95px 0 0
         overflow: visible
@@ -1249,11 +1252,11 @@ body
                     &_bg
                         transform: scale(1.1)
                     &_link
-                        border-color: #cca178
+                        border-color: #a4a4a4
                         path
-                            fill: #cca178
+                            fill: #a4a4a4
                     &_name
-                        color: #cca178
+                        color: #a4a4a4
     &__text
         margin: 90px 0 0 auto
         max-width: 793px
@@ -1417,7 +1420,7 @@ body
             margin: 40px auto 0
             display: block
             &:hover
-                background: #cca178
+                background: #a4a4a4
 
 .founder
     min-height: calc( 100vh - 26px )
@@ -1452,7 +1455,7 @@ body
             top: 0
             position: absolute
             left: 0
-            background: #cca178
+            background: #a4a4a4
         p
             font-family: $second-family
             font-weight: 400
@@ -1515,7 +1518,7 @@ body
             font-size: 15px
             line-height: 1.29961
             letter-spacing: 0.07em
-            color: #cca178
+            color: #a4a4a4
         h1
             margin: 5px 0 0
             font-family: "Europe", sans-serif
@@ -1578,9 +1581,9 @@ body
         path
             transition: all .3s
         &:hover
-            border-color: #cca178
+            border-color: #a4a4a4
             path
-                fill: #cca178
+                fill: #a4a4a4
     .swiper-pagination
         display: flex
         justify-content: center
@@ -1627,11 +1630,11 @@ body
         path
             transition: all .3s
         &:hover
-            border-color: #cca178
+            border-color: #a4a4a4
             p
-                color: #cca178
+                color: #a4a4a4
             path
-                stroke: #cca178
+                stroke: #a4a4a4
     &.zoom
         .cottage
             &__info
