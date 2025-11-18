@@ -29,6 +29,20 @@ body
         left: 120%
     100%
         left: 120%
+
+@keyframes logo
+    0%
+        left: -50px
+        opacity: 0
+    35%
+        left: 53%
+        opacity: 1
+    50%
+        left: 53%
+        opacity: 0
+    100%
+        left: 53%
+        opacity: 0
 .btn
     &__gold
         border-radius: 11px
@@ -106,8 +120,24 @@ body
         max-width: 206px
         display: block
         margin: 0 auto 
+        position: relative
+        overflow: hidden
         img
             width: 100%
+        &::before
+            content: ''
+            display: block
+            width: 20px
+            height: 1px
+            border-radius: 2px
+            background: #fff
+            position: absolute
+            left: -50px
+            bottom: 0
+            animation: 5s logo 5s infinite ease-in-out 
+            filter: blur(1px)
+            // transform: rotate(45deg)
+            opacity: .9
     &__list
         margin: 50px 0 auto 33px
         display: grid
