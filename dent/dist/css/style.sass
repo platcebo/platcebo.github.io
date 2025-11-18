@@ -944,6 +944,7 @@ html
             width: 100%
             height: 350px
             object-fit: cover
+            object-position: top
             transition: all .3s
         &_text
             position: absolute
@@ -969,6 +970,13 @@ html
         height: 100%
         display: flex
         flex-direction: column
+        font-family: $font-family
+        font-weight: 400
+        font-size: 15px
+        line-height: 1.3
+        color: $dark-grey
+        b
+            font-weight: 600
         .btn__green
             margin: 10px 0 0
             width: 100%
@@ -1011,6 +1019,19 @@ html
         display: grid
         grid-template-rows: auto 1fr
         transition: all .3s
+        z-index: 2
+        pointer-events: none
+        &_bg
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: -1
+        .doctor-list__name,
+        .doctor-list__row a,
+        a
+            pointer-events: all
         &:hover
             background: $white
             .doctor-list
@@ -1730,6 +1751,26 @@ html
         transform: scaleX(-1)
     &__swiper
         overflow: visible
+        width: 100%
+        z-index: 1
+        position: relative
+        .swiper-wrapper
+            align-items: stretch
+        &_prev
+            width: 385px
+            border-radius: 30px
+            position: relative
+            overflow: hidden
+            height: auto
+            z-index: 2
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+        &_wrapper
+            display: grid
+            grid-template-columns: 385px calc( 100% - 405px )
+            gap: 20px
     .case__autor
         margin: 16px 0 0
     &__name
@@ -2326,11 +2367,28 @@ html
         max-width: 100%
         border-radius: 30px
         overflow: hidden
+        align-items: stretch
+        .swiper-slide
+            height: auto
+            position: relative
+            display: flex
+            justify-content: center
+            align-items: center
         img
             display: block
             width: 100%
-            object-fit: cover
+            object-fit: contain
             border-radius: 30px
+            height: 100%
+            &+img
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                object-fit: cover
+                filter: blur(40px)
+                z-index: -1
         .swiper-button-next,
         .swiper-button-prev
             width: 40px
@@ -3689,6 +3747,9 @@ html
         img
             width: 100%
             border-radius: 30px
+            max-height: 350px
+            object-fit: cover
+            object-position: top
         .btn__green
             margin: 12px 0 0
             width: 100%
@@ -3696,6 +3757,14 @@ html
         border-radius: 30px
         padding: 20px
         background: $white
+        min-height: 100%
+        font-family: $font-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.3
+        color: #858585
+        b
+            font-weight: 600
         h1
             font-family: $second-family
             font-weight: 400
@@ -3842,7 +3911,7 @@ html
             &__more
                 display: flex
     &__row
-        grid-template-columns: 70px 1fr
+        grid-template-columns: 100px 1fr
         align-items: center
         padding: 10px 20px
         background: $white
@@ -3873,9 +3942,9 @@ html
         overflow-x: auto
         gap: 20px
         img
-            width: 150px
+            height: 150px
             border: 1px solid $stroke-green
-            min-width: 150px
+            // min-width: 150px
             display: block
             cursor: pointer
             border-radius: 5px
@@ -6042,7 +6111,7 @@ html
             grid-column: auto
 
 
-@media ( max-width: 1359px )
+@media ( max-width: 1279px )
     body
         overflow: visible
     .nav
@@ -6082,6 +6151,13 @@ html
                 max-height: 0
                 overflow: hidden
                 display: block
+        &__list a,
+        &__list_drop a,
+        &__search_input ul a
+            font-size: 14px
+        &__map
+            p
+                font-size: 14px !important
     .nav-menu
         display: block
         position: fixed
@@ -6229,6 +6305,11 @@ html
                     height: 60px
                     bottom: 5px
                     left: 5px
+        &__list a,
+        &__list_drop a,
+        &__search_input ul a,
+        &__wrapper ul a
+            font-size: 14px
     .header
         gap: 49px
         padding: 0 0 49px
@@ -6343,6 +6424,8 @@ html
     .header-doc
         &__grid
             grid-template-columns: 1fr
+        &__blockquote p 
+            font-size: 22px
     .educ
         &__block
             display: grid
@@ -6684,7 +6767,8 @@ html
                     height: 50px
                     background: linear-gradient(180deg,rgba(244,244,244,0) 0,rgba(244,244,244,.49) 18.75%,#fff 96.63%)
     .comment
-        &__slide
+        &__slide,
+        &__swiper_prev
             width: 300px
     .news
         .about-network
@@ -7218,7 +7302,9 @@ html
             .btn__green,
             .consult__check
                 grid-column: auto
-
+    .header-doc
+        &__blockquote p 
+            font-size: 20px
 
 
 
@@ -7288,6 +7374,8 @@ html
             display: block
             svg
                 display: none
+            p
+                font-size: 18px
     .doc-page
         &__wrapper
             grid-template-columns: 1fr

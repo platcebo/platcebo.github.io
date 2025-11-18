@@ -22,6 +22,13 @@ body
         overflow: hidden
 .content
     position: relative
+@keyframes btn
+    0%
+        left: -50px
+    35%
+        left: 120%
+    100%
+        left: 120%
 .btn
     &__gold
         border-radius: 11px
@@ -34,8 +41,24 @@ body
         color: #fff
         transition: all .3s
         border: none
+        position: relative
+        overflow: hidden
         &:hover
             box-shadow: none
+        &::after
+            content: ''
+            display: block
+            width: 20px
+            height: 100%
+            border-radius: 2px
+            background: #fff
+            position: absolute
+            left: -50px
+            bottom: 0
+            animation: 5s btn 5s infinite ease-in-out 
+            filter: blur(15px)
+            transform: rotate(45deg)
+            opacity: .9
 .content
     position: relative
 .nav-lang
@@ -1650,6 +1673,55 @@ body
     position: relative
     padding: 0
 
+@keyframes nav-new-anim
+    0%
+        width: 64px
+        height: 76px
+        border-radius: 32px
+        transform: translate(-50%,-200%)
+    30%
+        width: 64px
+        height: 76px
+        border-radius: 32px
+        transform: translate(-50%, 0)
+    100%
+        width: 1587px
+        height: 76px
+        border-radius: 32px
+
+@keyframes elem-show
+    0%
+        transform: scale(0)
+        opacity: 0
+    100%
+        opacity: 1
+        transform: scale(1)
+
+@keyframes nav-anim
+    0%
+        width: 64px
+        height: 64px
+        border-radius: 32px
+        transform: translate(0%,-200%)
+    30%
+        width: 64px
+        height: 64px
+        border-radius: 32px
+        transform: translate(0%, 0)
+    100%
+        width: 100%
+        height: calc(100vh - 26px)
+        border-radius: 32px
+        
+.nav-anim
+    animation: 2s ease-in-out 0s nav-anim 
+
+.elem-show
+    transform: scale(0)
+    opacity: 0
+    animation: 1s ease-in-out 1.5s elem-show
+    animation-fill-mode: forwards
+
 .nav-new
     position: absolute
     top: 13px
@@ -1667,6 +1739,7 @@ body
     gap: 0
     flex-direction: row
     overflow: visible
+    animation: 2s ease-in-out 0s nav-new-anim 
     .nav
         &__list
             margin: 0 auto 0 50px
@@ -1680,6 +1753,7 @@ body
             p
                 font-size: 15px
                 color: #fff
+                white-space: nowrap
             .drop__btn
                 padding: 0 0 0 14px
                 &::before
@@ -1863,6 +1937,12 @@ body
             width: 350px
     .nav
         background: rgba(47,47,47,.9)
+    .nav,
+    .elem-show
+        animation: none !important
+        opacity: 1
+    .elem-show
+        transform: none
             
 
 @media ( max-width: 600px )
