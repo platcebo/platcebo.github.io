@@ -18,8 +18,8 @@ var swiper = new Swiper(".stocks__swiper", {
 });
 
 var swiper = new Swiper(".comment__swiper", {
-    slidesPerView: 'auto',
     spaceBetween: 20,
+    slidesPerView: 'auto',
 });
 
 var swiper = new Swiper(".awards__scroll", {
@@ -35,6 +35,12 @@ var swiper = new Swiper(".welcome__slider", {
         nextEl: ".welcome__slider .swiper-button-next",
         prevEl: ".welcome__slider .swiper-button-prev",
     },
+});
+
+var swiper = new Swiper(".interview__wrapper", {
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+
 });
 
 var swiper = new Swiper(".result-detail__slider", {

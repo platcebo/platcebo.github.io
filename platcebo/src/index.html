@@ -7,24 +7,26 @@
     <title>platcebo digital</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
     <nav class="nav">
         <div class="container">
-            <div class="nav__logo">
+            <a href="#" class="nav__logo">
                 <img src="img/logo.svg" alt="">
-            </div>
+            </a>
             <div class="nav__hum">
                 <span></span>
             </div>
             <ul>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Projects</a></li>
+                <li><a href="#service">услуги</a></li>
+                <li><a href="#work">портфолио</a></li>
+                <li><a href="#why">приемущества</a></li>
+                <li><a href="#price">калькулятор</a></li>
+                <li><a href="#form">контакты</a></li>
             </ul>
             <button class="btn__blc btn__anim"><i>Оставить заявку</i></button>
             <div class="nav__soc form__soc">
@@ -49,7 +51,197 @@
             </div>
         </div>
     </header>
-    <section class="why">
+    <section class="service" id="service">
+        <div class="container">
+            <h2 class="title section-anim">Наши услуги</h2>
+            <div class="service__wrapper section-anim">
+                <div class="why__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-40 728H184V184h656z"/></svg>
+                    <p>Банкротство физических лиц</p>
+                    <p>Процедуру банкротства физических лиц в России регулирует закон «О несостоятельности (банкротстве)». </p>
+                    <button class="btn__blc btn__anim"><i>Подробнее</i></button>
+                </div>
+                <div class="why__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-40 728H184V184h656z"/></svg>
+                    <p>Банкротство физических лиц</p>
+                    <p>Процедуру банкротства физических лиц в России регулирует закон «О несостоятельности (банкротстве)». </p>
+                    <button class="btn__blc btn__anim"><i>Подробнее</i></button>
+                </div>
+                <div class="why__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-40 728H184V184h656z"/></svg>
+                    <p>Банкротство физических лиц</p>
+                    <p>Процедуру банкротства физических лиц в России регулирует закон «О несостоятельности (банкротстве)». </p>
+                    <button class="btn__blc btn__anim"><i>Подробнее</i></button>
+                </div>
+                <div class="why__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-40 728H184V184h656z"/></svg>
+                    <p>Банкротство физических лиц</p>
+                    <p>Процедуру банкротства физических лиц в России регулирует закон «О несостоятельности (банкротстве)». </p>
+                    <button class="btn__blc btn__anim"><i>Подробнее</i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="work patern-bg" id="work">
+        <div class="container">
+            <h2 class="title section-anim">Примеры <span>наших работ</span></h2>
+            <div class="work__slider swiper section-anim">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide work__item">
+                        <div class="work__prev">
+                            <img src="img/work_2.png" alt="">
+                        </div>
+                        <div class="work__info">
+                            <p class="work__descr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum dicta neque ad odio esse harum enim libero quibusdam corrupti deleniti incidunt nobis eveniet obcaecati non, ex modi aliquam, expedita ratione.</p>
+                            <div class="work__tag">
+                                <p>lorem</p>
+                                <p>lorem</p>
+                                <p>lorem</p>
+                            </div>
+                            <div class="work__link">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6c63ff">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"></path>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6c63ff">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide work__item">
+                        <div class="work__prev">
+                            <img src="img/work_2.png" alt="">
+                        </div>
+                        <div class="work__info">
+                            <p class="work__descr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum dicta neque ad odio esse harum enim libero quibusdam corrupti deleniti incidunt nobis eveniet obcaecati non, ex modi aliquam, expedita ratione.</p>
+                            <div class="work__tag">
+                                <p>lorem</p>
+                                <p>lorem</p>
+                                <p>lorem</p>
+                            </div>
+                            <div class="work__link">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6c63ff">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"></path>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6c63ff">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide work__item">
+                        <div class="work__prev">
+                            <img src="img/work_2.png" alt="">
+                        </div>
+                        <div class="work__info">
+                            <p class="work__descr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum dicta neque ad odio esse harum enim libero quibusdam corrupti deleniti incidunt nobis eveniet obcaecati non, ex modi aliquam, expedita ratione.</p>
+                            <div class="work__tag">
+                                <p>lorem</p>
+                                <p>lorem</p>
+                                <p>lorem</p>
+                            </div>
+                            <div class="work__link">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6c63ff">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"></path>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6c63ff">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide work__item">
+                        <div class="work__prev">
+                            <img src="img/work_2.png" alt="">
+                        </div>
+                        <div class="work__info">
+                            <p class="work__descr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum dicta neque ad odio esse harum enim libero quibusdam corrupti deleniti incidunt nobis eveniet obcaecati non, ex modi aliquam, expedita ratione.</p>
+                            <div class="work__tag">
+                                <p>lorem</p>
+                                <p>lorem</p>
+                                <p>lorem</p>
+                            </div>
+                            <div class="work__link">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6c63ff">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"></path>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6c63ff">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide work__item">
+                        <div class="work__prev">
+                            <img src="img/work_2.png" alt="">
+                        </div>
+                        <div class="work__info">
+                            <p class="work__descr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum dicta neque ad odio esse harum enim libero quibusdam corrupti deleniti incidunt nobis eveniet obcaecati non, ex modi aliquam, expedita ratione.</p>
+                            <div class="work__tag">
+                                <p>lorem</p>
+                                <p>lorem</p>
+                                <p>lorem</p>
+                            </div>
+                            <div class="work__link">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6c63ff">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"></path>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6c63ff">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide work__item">
+                        <div class="work__prev">
+                            <img src="img/work_2.png" alt="">
+                        </div>
+                        <div class="work__info">
+                            <p class="work__descr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum dicta neque ad odio esse harum enim libero quibusdam corrupti deleniti incidunt nobis eveniet obcaecati non, ex modi aliquam, expedita ratione.</p>
+                            <div class="work__tag">
+                                <p>lorem</p>
+                                <p>lorem</p>
+                                <p>lorem</p>
+                            </div>
+                            <div class="work__link">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6c63ff">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"></path>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6c63ff">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="why" id="why">
         <div class="container">
             <h2 class="title section-anim">Почему <span>мы?</span></h2>
             <div class="why__wrapper section-anim">
@@ -86,34 +278,143 @@
             </div>
         </div>
     </section>
-    <section class="service">
+    <section class="price patern-bg" id="price">
         <div class="container">
-            <h2 class="title section-anim">Наши услуги</h2>
-            <div class="service__wrapper section-anim">
-                <div class="why__item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-40 728H184V184h656z"/></svg>
-                    <p>Банкротство физических лиц</p>
-                    <p>Процедуру банкротства физических лиц в России регулирует закон «О несостоятельности (банкротстве)». </p>
-                    <button class="btn__blc btn__anim"><i>Подробнее</i></button>
+            <div class="price__block section-anim">
+                <div class="price__title">
+                    <h2 class="title"><span>Рассчитайте стоимость</span> вашего сайта</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, consequuntur pariatur placeat aspernatur porro aut expedita id quaerat, dolorum deleniti blanditiis inventore, veniam ipsam. Eligendi provident non adipisci blanditiis cum!</p>
                 </div>
-                <div class="why__item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-40 728H184V184h656z"/></svg>
-                    <p>Банкротство физических лиц</p>
-                    <p>Процедуру банкротства физических лиц в России регулирует закон «О несостоятельности (банкротстве)». </p>
-                    <button class="btn__blc btn__anim"><i>Подробнее</i></button>
-                </div>
-                <div class="why__item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-40 728H184V184h656z"/></svg>
-                    <p>Банкротство физических лиц</p>
-                    <p>Процедуру банкротства физических лиц в России регулирует закон «О несостоятельности (банкротстве)». </p>
-                    <button class="btn__blc btn__anim"><i>Подробнее</i></button>
-                </div>
-                <div class="why__item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-40 728H184V184h656z"/></svg>
-                    <p>Банкротство физических лиц</p>
-                    <p>Процедуру банкротства физических лиц в России регулирует закон «О несостоятельности (банкротстве)». </p>
-                    <button class="btn__blc btn__anim"><i>Подробнее</i></button>
-                </div>
+                <form action="#" class="price__form">
+                    <div class="price__step req price__calc">
+                        <p class="price__step_title">Формат сайта</p>
+                        <div class="price__wrapper">
+                            <div class="input__check">
+                                <input type="radio" name="step-1" data-price="10000">
+                                <span class="price__step_bg"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-40 728H184V184h656z"/></svg>
+                                <p>Сайт-визитка</p>
+                            </div>
+                            <div class="input__check">
+                                <input type="radio" name="step-1" data-price="15000">
+                                <span class="price__step_bg"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-40 728H184V184h656z"/></svg>
+                                <p>Лендинг</p>
+                            </div>
+                            <div class="input__check">
+                                <input type="radio" name="step-1" data-price="50000">
+                                <span class="price__step_bg"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-40 728H184V184h656z"/></svg>
+                                <p>Интернет-магазин</p>
+                            </div>
+                            <div class="input__check">
+                                <input type="radio" name="step-1" data-price="35000">
+                                <span class="price__step_bg"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-40 728H184V184h656z"/></svg>
+                                <p>Корпоративный сайт</p>
+                            </div>
+                        </div>
+                        <div class="price__step_btn">
+                            <div class="btn__blc btn__anim price__step_next dis"><i>Вперед</i></div>
+                        </div>
+                    </div>
+                    <div class="price__step req price__calc">
+                        <p class="price__step_title">Дизайн</p>
+                        <div class="price__wrapper">
+                            <div class="input__check price__wdt">
+                                <input type="radio" name="step-2" data-design="1">
+                                <span class="price__step_bg"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-40 728H184V184h656z"/></svg>
+                                <p>Готовый шаблон (быстрее и дешевле)</p>
+                            </div>
+                            <div class="input__check price__wdt">
+                                <input type="radio" name="step-2" data-design="1.5">
+                                <span class="price__step_bg"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-40 728H184V184h656z"/></svg>
+                                <p>Индивидуальный дизайн-макет (уникальный внешний вид)</p>
+                            </div>
+                        </div>
+                        <div class="price__step_btn">
+                            <div class="btn__wht btn__anim price__step_prev"><i>Назад</i></div>
+                            <div class="btn__blc btn__anim price__step_next dis"><i>Вперед</i></div>
+                        </div>
+                    </div>
+                    <div class="price__step price__calc">
+                        <p class="price__step_title">функционал</p>
+                        <div class="price__wrapper">
+                            <div class="input__check">
+                                <input type="checkbox" name="" data-dop="5000">
+                                <span class="price__step_bg"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-40 728H184V184h656z"/></svg>
+                                <p>форма обратной связи</p>
+                            </div>
+                            <div class="input__check">
+                                <input type="checkbox" name="" data-dop="5000">
+                                <span class="price__step_bg"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-40 728H184V184h656z"/></svg>
+                                <p>Анимации / динамика</p>
+                            </div>
+                            <div class="input__check">
+                                <input type="checkbox" name="" data-dop="5000">
+                                <span class="price__step_bg"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-40 728H184V184h656z"/></svg>
+                                <p>Интеграция CRM</p>
+                            </div>
+                            <div class="input__check">
+                                <input type="checkbox" name="" data-dop="5000">
+                                <span class="price__step_bg"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-40 728H184V184h656z"/></svg>
+                                <p>Каталог товаров или услуг</p>
+                            </div>
+                            <div class="input__check">
+                                <input type="checkbox" name="" data-dop="5000">
+                                <span class="price__step_bg"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-40 728H184V184h656z"/></svg>
+                                <p>Корзина + оформление заказа</p>
+                            </div>
+                            <div class="input__check">
+                                <input type="checkbox" name="" data-dop="5000">
+                                <span class="price__step_bg"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-40 728H184V184h656z"/></svg>
+                                <p>Онлайн-оплата</p>
+                            </div>
+                        </div>
+                        <div class="price__step_btn">
+                            <div class="btn__wht btn__anim price__step_prev"><i>Назад</i></div>
+                            <div class="btn__blc btn__anim price__step_next price__btn_total"><i>Дальше</i></div>
+                        </div>
+                    </div>
+                    <div class="price__step price__final">
+                        <p class="price__sum price__step_title">Предварительная стоимость: <span><b>10000</b>₽</span></p>
+                        <p class="price__descr">Мы рассчитали примерную стоимость. Оставьте контакты для составления точной сметы</p>
+                        <div class="header__form_row">
+                            <div class="input">
+                                <input type="text" placeholder=" ">
+                                <p>Ваше имя*</p>
+                            </div>
+                            <div class="input">
+                                <input type="text" placeholder=" " data-phone-pattern>
+                                <p>Номер телефона*</p>
+                            </div>
+                            <div class="input">
+                                <input type="text" placeholder=" ">
+                                <p>E-mail</p>
+                            </div>
+                            <div class="input__check">
+                                <input type="checkbox">
+                                <span>
+                                    <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.75 4.75L4.25 8.25L11.25 0.75" stroke="#6c63ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <p>Я даю согласие на обработку моих персональных данных в соответствии с <a href="#">Политикой&nbsp;конфиденциальности</a></p>
+                            </div>
+                        </div>
+                        <div class="price__step_btn">
+                            <button class="btn__blc btn__anim price__wdt"><i>Отправить</i></button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
@@ -165,10 +466,14 @@
                     <p class="faq__title_text"><span>Не нашли ответ?</span> <br>Напишите нам, и мы ответим на все вопросы</p>
                     <button class="btn__blc btn__anim"><i>Оставить заявку</i></button>
                 </div>
+                <div class="faq__mob">
+                    <p class="faq__title_text"><span>Не нашли ответ?</span> <br>Напишите нам, и мы ответим <br> на все ваши вопросы</p>
+                    <button class="btn__blc btn__anim"><i>Оставить заявку</i></button>
+                </div>
             </div>
         </div>
     </section>
-    <section class="form">
+    <section class="form" id="form">
         <div class="container">
             <div class="form__descr section-anim"> 
                 <h2 class="title"><span>Оставьте заявку</span> и&nbsp;мы свяжемся с&nbsp;вами</h2>
@@ -198,7 +503,7 @@
                     </div>
                     <div class="input">
                         <input type="text" placeholder=" ">
-                        <p>E-mail*</p>
+                        <p>E-mail</p>
                     </div>
                     <div class="input__check">
                         <input type="checkbox">
@@ -221,10 +526,11 @@
                     <img src="img/logo.svg" alt="">
                 </a>
                 <ul class="footer__list">
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Projects</a></li>
+                    <li><a href="#service">услуги</a></li>
+                    <li><a href="#work">портфолио</a></li>
+                    <li><a href="#why">приемущества</a></li>
+                    <li><a href="#price">калькулятор</a></li>
+                    <li><a href="#form">контакты</a></li>
                 </ul>
                 <p class="footer__descr">Материалы и цены, размещенные на данной странице, носят информационный характер и предназначены для образовательных целей, а также не являются публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса РФ.</p>
                 <div class="footer__soc">
@@ -243,6 +549,8 @@
         </div>
     </footer>
     
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

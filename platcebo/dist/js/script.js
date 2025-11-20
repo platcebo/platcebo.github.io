@@ -78,11 +78,11 @@ let sectionAnim = document.querySelectorAll('.section-anim');
 
 if(sectionAnim !== null) {
     sectionAnim.forEach((item)=>{
-        if(item.getBoundingClientRect().top < window.innerHeight/1.5) {
+        if(item.getBoundingClientRect().top < window.innerHeight/1.2) {
             item.classList.add('section-anim__active')
         }
         window.addEventListener('scroll', ()=>{
-            if(item.getBoundingClientRect().top < window.innerHeight/1.5) {
+            if(item.getBoundingClientRect().top < window.innerHeight/1.2) {
                 item.classList.add('section-anim__active')
             }
         })
@@ -93,7 +93,7 @@ let legalAutor = document.querySelector('.faq__title'),
     legalBlock = document.querySelector('.faq__block');
 
 if(legalBlock != null) {
-    if(window.innerWidth > 1023) {
+    if(window.innerWidth > 1024) {
         let articleLeft = legalAutor.getBoundingClientRect().left
 
         window.addEventListener('scroll', ()=>{
@@ -135,6 +135,102 @@ if(faqBtn !== null) {
             item.classList.toggle('active')
         })
     })
+}
+
+var swiper = new Swiper(".work__slider", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: false,
+    speed: 2000,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        769: {
+            slidesPerView: 2,
+        }
+    },
+
+});
+
+let priceStep = document.querySelectorAll('.price__step'),
+    priceNext = document.querySelectorAll('.price__step_next'),
+    pricePrev = document.querySelectorAll('.price__step_prev'),
+    priceReq = document.querySelectorAll('.price__step.req'),
+    priceTotal = document.querySelector('.price__btn_total'),
+    priceTotalText = document.querySelector('.price__sum b');
+
+if(priceStep !== null) {
+    let step1Radios = document.querySelectorAll('input[name="step-1"]'),
+        step2Radios = document.querySelectorAll('input[name="step-2"]'),
+        dopCheckboxes = document.querySelectorAll('input[data-dop]');
+
+    function calculatePrice() {
+        let basePrice = 0,
+            designMultiplier = 1,
+            dopSum = 0;
+
+        step1Radios.forEach(radio => {
+            if (radio.checked) {
+                basePrice = Number(radio.dataset.price);
+            }
+        });
+
+        step2Radios.forEach(radio => {
+            if (radio.checked) {
+                designMultiplier = Number(radio.dataset.design) || 1;
+            }
+        });
+
+        dopCheckboxes.forEach(ch => {
+            if (ch.checked) {
+                dopSum += Number(ch.dataset.dop) || 0;
+            }
+        });
+
+        const total = (basePrice * designMultiplier) + dopSum;
+
+        priceTotalText.textContent = total;
+        console.log(total)
+        console.log(basePrice, designMultiplier, dopSum)
+    }
+
+
+
+
+    priceNext.forEach((btn, i)=>{
+        let a = i+1;
+
+        btn.addEventListener('click', ()=>{
+            priceStep.forEach((all)=> all.style.transform = 'translate(-'+ a + '00%, 0)')
+        });
+
+    })
+
+    pricePrev.forEach((btn, i)=>{
+        btn.addEventListener('click', ()=>{
+            priceStep.forEach((all)=> all.style.transform = 'translate(-'+ i + '00%, 0)')
+        });
+    })
+
+    priceReq.forEach((item, i)=>{
+        let priceInput = item.querySelectorAll('input');
+
+        priceInput.forEach((a)=>{
+            a.addEventListener('click', ()=>{
+                priceNext[i].classList.remove('dis')
+            })
+
+        })
+    })
+
+    priceTotal.addEventListener('click', ()=>{
+
+        calculatePrice()
+
+    })
+
 }
 
 
