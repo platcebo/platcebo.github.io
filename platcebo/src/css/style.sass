@@ -24,7 +24,7 @@ section
     position: relative
     z-index: 2
 .title
-    font-weight: 600
+    font-weight: 800
     font-size: 4.5em
     line-height: 1
     color: #1b1a1a
@@ -105,6 +105,7 @@ section
                 position: relative
                 display: inline-block
                 mix-blend-mode: lighten
+                white-space: nowrap
                 &::before
                     content: ''
                     display: block
@@ -267,7 +268,7 @@ section
     .btn__blc
         margin: 20px 0 0
     h1
-        font-weight: 600
+        font-weight: 800
         font-size: 8em
         line-height: 1
         color: #1b1a1a
@@ -285,7 +286,7 @@ section
         grid-template-columns: 1fr
         gap: 30px
     &__form
-        padding: 40px 20px
+        padding: 30px 20px
         border-radius: 30px
         background: $braun-dark
         max-width: 400px
@@ -431,7 +432,7 @@ section
             font-size: 16px
             color: $braun-dark
             margin: 0 0 20px
-            gw: 500px
+            font-weight: 500px
             span
                 color: $violet
     &__wrapper
@@ -644,7 +645,7 @@ section
             margin: 12px 0 0
             color: $braun-dark
     &__form
-        padding: 40px 20px
+        padding: 30px 20px 50px
         border-radius: 30px
         background: $braun-dark
         display: flex
@@ -736,12 +737,79 @@ section
         line-height: 1.1
         color: $wht
         margin: 20px 0 0
+    &__pag
+        position: absolute
+        bottom: 20px
+        left: 0
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 5px
+        span
+            display: block
+            opacity: .5
+            background: $wht
+            transition: all .3s
+            width: 10px
+            height: 10px
+            border-radius: 100%
+            transition: all .3s
+            &.active
+                opacity: 1
     
-
-
-        
-
-
+.modal
+    padding: 15px
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 50
+    pointer-events: none
+    opacity: 0
+    transition: all .3s
+    overflow-x: auto
+    display: flex
+    &.active
+        opacity: 1
+        pointer-events: all
+    &__overflow
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: #000
+        opacity: .5
+        display: block
+        z-index: -1
+    .header__form
+        margin: auto
+        padding-top: 50px
+        position: relative
+        max-width: 400px
+    &__close
+        width: 20px
+        height: 20px
+        position: absolute
+        top: 20px
+        right: 20px
+        cursor: pointer
+        &::before,
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            width: 100%
+            height: 1px
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%) rotate(45deg)
+            background: #fff
+        &::after
+            transform: translate(-50%, -50%) rotate(-45deg)
+    
 @media ( max-width: 1024px )
     .header
         h1
@@ -807,7 +875,6 @@ section
             display: block
             .container
                 height: 100%
-                align-items: start
                 display: grid
                 grid-template-columns: 1fr auto
                 grid-template-rows: auto 1fr auto auto
@@ -839,16 +906,22 @@ section
                         left: 0%
                         transform: rotate(-45deg)
 
-
-
 @media  ( max-width: 768px )
     body
-        font-size: 6px
+        font-size: 7px
     section
         padding: 40px 0 0
     .faq
         &__block
             grid-template-columns: 1fr
+        &__title
+            .faq__title_text,
+            .btn__blc
+                display: none
+        &__mob
+            display: block
+        .title
+            margin: 0
     .form
         .container
             grid-template-columns: 1fr
@@ -869,3 +942,73 @@ section
         &__soc
             p
                 font-size: 3em
+    .footer
+        &__block
+            grid-template-columns: 1fr
+            align-items: start
+            gap: 20px
+        &__logo
+            max-width: 140px
+        &__list
+            margin: 0
+        &__soc
+            flex-direction: row
+        &__row
+            flex-direction: column
+            gap: 15px
+
+@media ( max-width: 600px )
+    .input
+        &__check
+            p
+                a
+                    white-space: wrap
+                    &::before,
+                    &::after
+                        content: none
+    .title
+        margin: 0 0 20px
+        font-size: 4em
+    .btn
+        &__blc,
+        &__wht
+            width: 100%
+    .header
+        h1
+            font-size: 5em
+        &__subtitle
+            font-size: 2.5em
+            margin: 20px 0 0
+    .nav
+        padding: 10px 0
+    .service,
+    .why
+        &__wrapper
+            grid-template-columns: 1fr
+            gap: 15px
+    .work
+        &__link
+            svg
+                width: 24px
+                height: 24px
+    .price
+        &__wrapper
+            grid-template-columns: 1fr
+            gap: 15px
+        .price__wdt
+            grid-column: auto
+        &__step
+            &_btn
+                grid-template-columns: 1fr
+                gap: 10px
+                .btn__blc
+                    grid-column: auto
+                    order: -1
+    .form
+        &__soc
+            a
+                width: 35px
+                height: 35px
+                svg
+                    width: 24px
+                    height: 24px

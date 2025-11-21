@@ -141,7 +141,7 @@ var swiper = new Swiper(".work__slider", {
     slidesPerView: 1,
     spaceBetween: 20,
     loop: false,
-    speed: 2000,
+    speed: 700,
     autoplay: {
         delay: 3000,
         disableOnInteraction: false,
@@ -149,6 +149,7 @@ var swiper = new Swiper(".work__slider", {
     breakpoints: {
         769: {
             slidesPerView: 2,
+            speed: 2000,
         }
     },
 
@@ -159,7 +160,8 @@ let priceStep = document.querySelectorAll('.price__step'),
     pricePrev = document.querySelectorAll('.price__step_prev'),
     priceReq = document.querySelectorAll('.price__step.req'),
     priceTotal = document.querySelector('.price__btn_total'),
-    priceTotalText = document.querySelector('.price__sum b');
+    priceTotalText = document.querySelector('.price__sum b'),
+    pricePag = document.querySelectorAll('.price__pag span');
 
 if(priceStep !== null) {
     let step1Radios = document.querySelectorAll('input[name="step-1"]'),
@@ -204,6 +206,8 @@ if(priceStep !== null) {
 
         btn.addEventListener('click', ()=>{
             priceStep.forEach((all)=> all.style.transform = 'translate(-'+ a + '00%, 0)')
+            pricePag.forEach(item=>item.classList.remove('active'));
+            pricePag[a].classList.add('active')
         });
 
     })
@@ -211,6 +215,8 @@ if(priceStep !== null) {
     pricePrev.forEach((btn, i)=>{
         btn.addEventListener('click', ()=>{
             priceStep.forEach((all)=> all.style.transform = 'translate(-'+ i + '00%, 0)')
+            pricePag.forEach(item=>item.classList.remove('active'));
+            pricePag[i].classList.add('active')
         });
     })
 
@@ -244,6 +250,32 @@ if(nav !== null) {
     navList.forEach((item)=>{
         item.addEventListener('click',()=>{
             nav.classList.remove('active');
+        })
+    })
+}
+
+let modalForm = document.querySelector('.modal-form'),
+    modal = document.querySelectorAll('.modal'),
+    modalFormCall = document.querySelectorAll('.modal-form__call'),
+    modalClose = document.querySelectorAll('.modal__close'),
+    modalOverflow = document.querySelectorAll('.modal__overflow');
+
+if(modal !== null) {
+    modalOverflow.forEach(item=>{
+        item.addEventListener('click', ()=>{
+            modal.forEach(a=>a.classList.remove('active'))
+        })
+    })
+    modalClose.forEach(item=>{
+        item.addEventListener('click', ()=>{
+            modal.forEach(a=>a.classList.remove('active'))
+        })
+    })
+}
+if(modalForm !== null) {
+    modalFormCall.forEach(item=>{
+        item.addEventListener('click',()=>{
+            modalForm.classList.add('active')
         })
     })
 }
