@@ -233,6 +233,21 @@ if(priceStep !== null) {
 
 }
 
+let nav = document.querySelector('.nav'),
+    navList = document.querySelectorAll('.nav ul a'),
+    navHum = document.querySelector('.nav__hum');
+
+if(nav !== null) {
+    navHum.addEventListener('click',()=>{
+        nav.classList.toggle('active');
+    })
+    navList.forEach((item)=>{
+        item.addEventListener('click',()=>{
+            nav.classList.remove('active');
+        })
+    })
+}
+
 
 
 }, false);
