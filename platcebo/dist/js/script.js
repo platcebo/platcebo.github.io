@@ -156,6 +156,7 @@ var swiper = new Swiper(".work__slider", {
 });
 
 let priceStep = document.querySelectorAll('.price__step'),
+    priceblock = document.querySelectorAll('.price__step_req'),
     priceNext = document.querySelectorAll('.price__step_next'),
     pricePrev = document.querySelectorAll('.price__step_prev'),
     priceReq = document.querySelectorAll('.price__step.req'),
@@ -235,6 +236,20 @@ if(priceStep !== null) {
 
         calculatePrice()
 
+    })
+
+    priceblock.forEach((item, b)=>{
+        let input = item.querySelectorAll('input');
+
+        input.forEach((i)=>{
+            i.addEventListener('click',()=>{
+                let a = b+1;
+                
+                priceStep.forEach((all)=> all.style.transform = 'translate(-'+ a + '00%, 0)')
+                pricePag.forEach(item=>item.classList.remove('active'));
+                pricePag[a].classList.add('active')
+            })
+        })
     })
 
 }

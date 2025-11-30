@@ -58,42 +58,29 @@ if(howTab !== null) {
     })
 }
 
-[].forEach.call( document.querySelectorAll('[data-phone-pattern]'), function(input) {
-    var keyCode;
+[].forEach.call(document.querySelectorAll('[data-phone-pattern]'), function (input) {
+    let keyCode;
+
     function mask(event) {
-        event.keyCode && (keyCode = event.keyCode);
-        var pos = this.selectionStart;
-        if (pos < 3) event.preventDefault();
-        var matrix = "+7 (9__) ___-__-__",
+        if (event.keyCode) keyCode = event.keyCode;
+
+        let matrix = "+_____________", // 12 знаков "_" после +7
             i = 0,
-            def = matrix.replace(/\D/g, ""),
-            val = this.value.replace(/\D/g, ""),
-            new_value = matrix.replace(/[_\d]/g, function(a) {
-                return i < val.length ? val.charAt(i++) : a
-            });
-        i = new_value.indexOf("_");
-        if (i != -1) {
-            i < 5 && (i = 3);
-            new_value = new_value.slice(0, i)
+            val = input.value.replace(/\D/g, "").substring(0, 13), // максимум 13 цифр после 7
+            new_value = "+" + val;
+
+        if (event.type === "blur" && val.length < 13) {
+            input.value = "";
+            return;
         }
-        var reg = matrix.substr(0, this.value.length).replace(/_+/g,
-            function(a) {
-                return "\\d{1," + a.length + "}"
-            }).replace(/[+()]/g, "\\$&");
-        reg = new RegExp("^" + reg + "$");
-        if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) {
-        this.value = new_value;
-        }
-        if (event.type == "blur" && this.value.length < 5) {
-            this.value = "";
-        }
+
+        input.value = new_value;
     }
 
-    input.addEventListener("input", mask, false);
-    input.addEventListener("focus", mask, false);
-    input.addEventListener("blur", mask, false);
-    input.addEventListener("keydown", mask, false);
-
+    input.addEventListener("input", mask);
+    input.addEventListener("focus", mask);
+    input.addEventListener("blur", mask);
+    input.addEventListener("keydown", mask);
 });
 
 }, false);

@@ -292,7 +292,8 @@ let navMenuLink = document.querySelectorAll('.nav-menu__wrapper_btn'),
 
 if(navMenuLink !== null) {
     navMenuLink.forEach((item,i)=>{
-        item.addEventListener('click', ()=>{
+        item.addEventListener('click', (e)=>{
+            e.preventDefault()
             for(let a = 0; a < navMenuWrapper.length; a++) {
                 if(navMenuWrapper[a].getAttribute('data-name') == item.getAttribute('data-link')) {
                     navMenuWrapper[a].classList.add('active');

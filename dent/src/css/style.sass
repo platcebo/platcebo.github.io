@@ -3864,6 +3864,7 @@ html
                     &+p
                         font-weight: 500
                         text-align: right
+                        white-space: nowrap
     &__blockquote
         margin: 60px 0 0
         display: grid
@@ -5475,12 +5476,14 @@ html
         align-items: start
         .comment__slide
             width: 100%
+            max-width: 100%
     &__video
         position: relative
         overflow: hidden    
         border-radius: 30px
         height: 250px
-        width: 512px
+        width: 100%
+        max-width: 100%
         .video-player
             height: 100%
             object-fit: cover

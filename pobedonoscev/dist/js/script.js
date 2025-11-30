@@ -132,12 +132,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     let cottage = document.querySelector('.cottage'),
-        cottageZoom = document.querySelector('.cottage__zoom'),
+        cottageZoom = document.querySelectorAll('.cottage__zoom'),
         cottagePag = document.querySelector('.cottage__num');
 
     if(cottage !== null) {
-        cottageZoom.addEventListener('click',()=>{
-            cottage.classList.toggle('zoom');
+        cottageZoom.forEach((item)=>{
+            item.addEventListener('click',()=>{
+                cottage.classList.toggle('zoom');
+            })
         })
 
         headerSwiper.on('slideChange', function () {
