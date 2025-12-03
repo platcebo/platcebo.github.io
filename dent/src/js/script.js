@@ -320,6 +320,9 @@ let tab = document.querySelectorAll('.tab');
 
 if(tab !== null) {
     tab.forEach((item)=>{
+        if(item.parentElement.classList.contains('legal-info')) {
+            return
+        }
         let tabPoint = item.querySelectorAll('.tab-point'),
             tabWrapper = item.querySelectorAll('.tab-wrapper');
 
