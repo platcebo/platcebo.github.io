@@ -82,7 +82,7 @@
                 </svg>
             </a>
         </div>
-        <button class="btn__gold nav__link elem-show">СВЯЗАТЬСЯ С НАМИ</button>
+        <button class="btn__gold nav__link elem-show modal-form__call">СВЯЗАТЬСЯ С НАМИ</button>
     </aside>
     <div class="content">
         <div class="nav__hum"><span></span></div>
@@ -111,14 +111,27 @@
                     </svg>
                 </div>
                 <div class="swiper-pagination"></div>
-                <div class="header__info">
+                <div class="header__info section-anim">
                     <h1><span>POBEDONOSCEV</span> <br> ARCHITECTS</h1>
                     <p>СТРОИТЕЛЬСТВО ЭЛИТНОЙ НЕДВИЖИМОСТИ</p>
                 </div>
             </div>
         </header>
     </div>
-    
+
+    <div class="modal modal-form">
+        <div class="modal__overflow"></div>
+        <form action="#" class="modal__block">
+            <p class="modal__title">Оставьте заявку и наш менеджер свяжется с Вами!</p>
+            <div class="modal__form">
+                <input type="text" placeholder="Имя">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="+7 (000) 000-00-00" data-phone-pattern>
+            </div>
+            <button class="modal__btn">Оставить заявку</button>
+            <p class="modal__text">Нажимая кнопку «Оставить заявку», Вы подтверждаете свое <a href="#">согласие наработку персональных данных.</a> </p>
+        </form>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>

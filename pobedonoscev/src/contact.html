@@ -63,7 +63,7 @@
             <li><a href="contact.html">КОНТАКТЫ</a></li>
             <li><a href="founder.html" class="dis">ХОЛДИНГ</a></li>
         </ul>
-        <button class="btn__gold nav__link elem-show">СВЯЗАТЬСЯ С НАМИ</button>
+        <button class="btn__gold nav__link elem-show modal-form__call">СВЯЗАТЬСЯ С НАМИ</button>
         <div class="nav__soc elem-show">
             <a href="#">
                 <img src="img/yt.svg" alt="">
@@ -85,9 +85,9 @@
         
         <section class="contact">
             <div class="contact__block">
-                <h1>КОНТАКТЫ</h1>
-                <p class="contact__subtitle">Мы всегда открыты для общения и готовы ответить на все ваши вопросы. Свяжитесь с нами, чтобы обсудить ваш будущий проект или получить консультацию по услугам, которые мы предоставляем.</p>
-                <ul class="contact__list">
+                <h1 class="section-anim">КОНТАКТЫ</h1>
+                <p class="contact__subtitle section-anim">Мы всегда открыты для общения и готовы ответить на все ваши вопросы. Свяжитесь с нами, чтобы обсудить ваш будущий проект или получить консультацию по услугам, которые мы предоставляем.</p>
+                <ul class="contact__list section-anim">
                     <li>
                         <p class="contact__name">АДРЕС</p>
                         <p class="contact__text">РОССИЯ, МОСКВА.</p>
@@ -111,6 +111,20 @@
         </section>
     </div>
     
+
+    <div class="modal modal-form">
+        <div class="modal__overflow"></div>
+        <form action="#" class="modal__block">
+            <p class="modal__title">Оставьте заявку и наш менеджер свяжется с Вами!</p>
+            <div class="modal__form">
+                <input type="text" placeholder="Имя">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="+7 (000) 000-00-00" data-phone-pattern>
+            </div>
+            <button class="modal__btn">Оставить заявку</button>
+            <p class="modal__text">Нажимая кнопку «Оставить заявку», Вы подтверждаете свое <a href="#">согласие наработку персональных данных.</a> </p>
+        </form>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>

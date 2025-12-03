@@ -63,7 +63,7 @@
             <li><a href="contact.html">КОНТАКТЫ</a></li>
             <li><a href="founder.html" class="dis">ХОЛДИНГ</a></li>
         </ul>
-        <button class="btn__gold nav__link elem-show">СВЯЗАТЬСЯ С НАМИ</button>
+        <button class="btn__gold nav__link elem-show modal-form__call">СВЯЗАТЬСЯ С НАМИ</button>
         <div class="nav__soc elem-show">
             <a href="#">
                 <img src="img/yt.svg" alt="">
@@ -84,12 +84,12 @@
         <div class="nav__hum nav__hum_blc"><span></span></div>
         <section class="news news-new">
             <div class="news__block">
-                <h1>НОВОСТИ </h1>
-                <p class="news__subtitle">Следите за нашими новостями, чтобы первыми узнать о новых проектах, инновациях в области архитектуры и дизайна, а также о наших публикациях в СМИ и специализированных изданиях. Мы стремимся к постоянному развитию и всегда рады поделиться своими успехами с вами.</p>
+                <h1 class="section-anim">НОВОСТИ </h1>
+                <p class="news__subtitle section-anim">Следите за нашими новостями, чтобы первыми узнать о новых проектах, инновациях в области архитектуры и дизайна, а также о наших публикациях в СМИ и специализированных изданиях. Мы стремимся к постоянному развитию и всегда рады поделиться своими успехами с вами.</p>
                 <div class="news-new__block">
                     <span class="news-new__span"></span><span class="news-new__span"></span><span class="news-new__span"></span><span class="news-new__span"></span>
                     <img src="img/news_bg.png" alt="" class="news-new__block_bg">
-                    <div class="news-new__info">
+                    <div class="news-new__info section-anim">
                         <p>Новый элитный коттедж</p>
                         <p>Pobedonoscev Architects — это коллектив молодых талантливых экспертов, чья профессиональная деятельность </p>
                     </div>
@@ -99,14 +99,14 @@
                         <img src="img/news_3.jpg" alt="">
                     </div>
                 </div>
-                <div class="news-new__descr">
+                <div class="news-new__descr section-anim">
                     <p class="news-new__descr_date">15/09/2025</p>
                     <div class="news-new__descr_text">
                         <p>Планировка дома делиться на два крыла. На первом этаже выделяется главное пространство жилого дома, где собираются все члены семьи, можно организовать большие застолья для друзей и родственников — это кухня-гостиная. Соединяющим узлом всех помещений в доме является светлый холл. Для гостей предусмотрена спальня и просторный кабинет. На этаже размещены ванная комната, постирочная и котельная.</p>
                         <p>Планировка дома делиться на два крыла. На первом этаже выделяется главное пространство жилого дома, где собираются все члены семьи, можно организовать большие застолья для друзей и родственников — это кухня-гостиная. Соединяющим узлом всех помещений в доме является светлый холл. Для гостей предусмотрена спальня и просторный кабинет. На этаже размещены ванная комната, постирочная и котельная.</p>
                     </div>
                 </div>
-                <div class="news__slider swiper">
+                <div class="news__slider swiper section-anim">
                     <div class="swiper-wrapper">
                         <a href="#" class="swiper-slide news__slide">
                             <p class="news__type">НОВОСТИ</p>
@@ -156,6 +156,20 @@
         </section>
     </div>
     
+
+    <div class="modal modal-form">
+        <div class="modal__overflow"></div>
+        <form action="#" class="modal__block">
+            <p class="modal__title">Оставьте заявку и наш менеджер свяжется с Вами!</p>
+            <div class="modal__form">
+                <input type="text" placeholder="Имя">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="+7 (000) 000-00-00" data-phone-pattern>
+            </div>
+            <button class="modal__btn">Оставить заявку</button>
+            <p class="modal__text">Нажимая кнопку «Оставить заявку», Вы подтверждаете свое <a href="#">согласие наработку персональных данных.</a> </p>
+        </form>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>

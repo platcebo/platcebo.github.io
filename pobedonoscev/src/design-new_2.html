@@ -62,7 +62,7 @@
             <li><a href="contact.html">КОНТАКТЫ</a></li>
             <li><a href="founder.html" class="dis">ХОЛДИНГ</a></li>
         </ul>
-        <button class="btn__gold nav__link elem-show">СВЯЗАТЬСЯ С НАМИ</button>
+        <button class="btn__gold nav__link elem-show modal-form__call">СВЯЗАТЬСЯ С НАМИ</button>
         <div class="nav__soc elem-show">
             <a href="#">
                 <img src="img/yt.svg" alt="">
@@ -83,7 +83,7 @@
         <div class="nav__hum nav__hum_blc"><span></span></div>
         <section class="design-new design">
             <div class="content__container">
-                <div class="design-new__video">
+                <div class="design-new__video section-anim">
                     <video src="video/Mountains.mp4" playsinline muted></video>
                     <div class="design-new__video_btn active">
                         <svg width="35" height="37" viewBox="0 0 35 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -91,11 +91,11 @@
                         </svg>
                     </div>
                 </div>
-                <h1><span>ДИЗАЙН</span> ИНТЕРЬЕРОВ</h1>
-                <p class="design-new__subtitle">Мы разрабатываем интерьерные проекты, объединяющие тонкий вкус, функциональность и актуальные дизайнерские тенденции. <br><br> В работе уделяем внимание каждому элементу — от планировки до подбора отделочных материалов и мебели. Итогом становится цельное пространство, созданное на основе пожеланий клиента и концепции дома.</p>
+                <h1 class="section-anim"><span>ДИЗАЙН</span> ИНТЕРЬЕРОВ</h1>
+                <p class="design-new__subtitle section-anim">Мы разрабатываем интерьерные проекты, объединяющие тонкий вкус, функциональность и актуальные дизайнерские тенденции. <br><br> В работе уделяем внимание каждому элементу — от планировки до подбора отделочных материалов и мебели. Итогом становится цельное пространство, созданное на основе пожеланий клиента и концепции дома.</p>
 
                 <div class="design-new__wrapper">
-                    <a href="cottage_1.html" class="design-new__item">
+                    <a href="cottage_1.html" class="design-new__item section-anim">
                         <div class="design-new__item_prev">
                             <img src="img/des_1.png" alt="">
                         </div>
@@ -105,7 +105,7 @@
                             <p class="text">Pobedonoscev Architects — это коллектив молодых талантливых экспертов, чья профессиональная деятельность </p>
                         </div>
                     </a>
-                    <a href="cottage_2.html" class="design-new__item">
+                    <a href="cottage_2.html" class="design-new__item section-anim">
                         <div class="design-new__item_prev">
                             <img src="img/des_2.jpg" alt="">
                         </div>
@@ -115,7 +115,7 @@
                             <p class="text">Здание построено с упором на форму прямоугольника, доминирование горизонтальных линий, использование кровель в качестве террас и не воспринимается высоким несмотря на количество этажей. <br><br>Дом бережно интегрирован в ландшафт, на участке сохранены существующие деревья, благодаря чему из панорамного 7-ми метрового остекления открывается отличный вид. </p>
                         </div>
                     </a>
-                    <a href="cottage_8.html" class="design-new__item">
+                    <a href="cottage_8.html" class="design-new__item section-anim">
                         <div class="design-new__item_prev">
                             <img src="img/des_8.jpg" alt="">
                         </div>
@@ -125,7 +125,7 @@
                             <p class="text">Архитектурный облик фасада выполнен в белом дагестанском камне с металлическими вставками. <br><br> Панорамное остекление создает в интерьере максимально открытое и живописное пространство, наполняя светом и уютом дом. </p>
                         </div>
                     </a>
-                    <a href="cottage_4.html" class="design-new__item">
+                    <a href="cottage_4.html" class="design-new__item section-anim">
                         <div class="design-new__item_prev">
                             <img src="img/des_4.jpg" alt="">
                         </div>
@@ -135,7 +135,7 @@
                             <p class="text">Здание построено с упором на форму прямоугольника, доминирование горизонтальных линий, использование кровель в качестве террас и не воспринимается высоким несмотря на количество этажей. <br><br>Дом бережно интегрирован в ландшафт, на участке сохранены существующие деревья, благодаря чему из панорамного 7-ми метрового остекления открывается отличный вид. </p>
                         </div>
                     </a>
-                    <a href="cottage_9.html" class="design-new__item">
+                    <a href="cottage_9.html" class="design-new__item section-anim">
                         <div class="design-new__item_prev">
                             <img src="img/des_9.jpg" alt="">
                         </div>
@@ -289,6 +289,20 @@
         </footer>
     </div>
     
+
+    <div class="modal modal-form">
+        <div class="modal__overflow"></div>
+        <form action="#" class="modal__block">
+            <p class="modal__title">Оставьте заявку и наш менеджер свяжется с Вами!</p>
+            <div class="modal__form">
+                <input type="text" placeholder="Имя">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="+7 (000) 000-00-00" data-phone-pattern>
+            </div>
+            <button class="modal__btn">Оставить заявку</button>
+            <p class="modal__text">Нажимая кнопку «Оставить заявку», Вы подтверждаете свое <a href="#">согласие наработку персональных данных.</a> </p>
+        </form>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>

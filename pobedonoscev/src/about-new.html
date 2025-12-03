@@ -63,7 +63,7 @@
             <li><a href="contact.html">КОНТАКТЫ</a></li>
             <li><a href="founder.html" class="dis">ХОЛДИНГ</a></li>
         </ul>
-        <button class="btn__gold nav__link elem-show">СВЯЗАТЬСЯ С НАМИ</button>
+        <button class="btn__gold nav__link elem-show modal-form__call">СВЯЗАТЬСЯ С НАМИ</button>
         <div class="nav__soc elem-show">
             <a href="#">
                 <img src="img/yt.svg" alt="">
@@ -85,11 +85,11 @@
         <div class="content__block">
             <div class="content__container">
                 <section class="about" id="about">
-                    <h1><span>POBEDONOSCEV</span> <br> ARCHITECTS</h1>
-                    <p class="about__subtitle about__text">POBEDONOSCEV ARCHITECTS — это ведущая архитектурная и строительная компания с многолетним опытом проектирования и строительства элитной недвижимости. <br><br> Мы создаем уникальные пространства, которые отражают характер и стиль жизни наших клиентов, гармонично сочетая современную архитектуру с высочайшими стандартами качества. Наша команда — это эксперты с безупречной репутацией в реализации сложных проектов как в Москве, так и в Московской области.</p>
+                    <h1 class="section-anim"><span>POBEDONOSCEV</span> <br> ARCHITECTS</h1>
+                    <p class="about__subtitle about__text section-anim">POBEDONOSCEV ARCHITECTS — это ведущая архитектурная и строительная компания с многолетним опытом проектирования и строительства элитной недвижимости. <br><br> Мы создаем уникальные пространства, которые отражают характер и стиль жизни наших клиентов, гармонично сочетая современную архитектуру с высочайшими стандартами качества. Наша команда — это эксперты с безупречной репутацией в реализации сложных проектов как в Москве, так и в Московской области.</p>
                     <img src="img/about_bg.jpg" alt="" class="about__full">
-                    <p class="about__text about__info">Мы берем на себя полную ответственность за реализацию каждого этапа проекта — от создания концепции до сдачи объекта "под ключ". Все наши проекты отличаются вниманием к деталям и продуманным подходом, что позволяет достигать идеального баланса между эстетикой и функциональностью. Наша цель — создать объекты, которые подчеркивают статус и индивидуальность каждого клиента.</p>
-                    <div class="news__slider swiper">
+                    <p class="about__text about__info section-anim">«Красота и практичность— залог умной и счастливой жизни. Важен комплексный подход. Именно поэтому мы занимаемся разработкой экстерьеров и интерьеров для наших клиентов. Нам важно чтобы люди жили в красивых и качественных домах!» <br><br>”Алексей Николаевич Победоносцев”<br>Генеральный директор</p>
+                    <div class="news__slider swiper section-anim">
                         <div class="swiper-wrapper">
                             <a href="#" class="swiper-slide news__slide">
                                 <p class="news__type">НОВОСТИ</p>
@@ -157,7 +157,7 @@
                         </div>
                     </div>
                 </section> -->
-                <section class="team team-crop" id="team">
+                <section class="section-anim team team-crop" id="team">
                     <div class="team-crop__wrapper">
                         <a href="founder.html" class="team-crop__item team-crop__item_main">
                             <img src="img/team-crop_1.jpg" alt="">
@@ -176,9 +176,9 @@
                         </div>
                     </div>
                 </section>
-                <section class="service" id="service">
+                <section class="section-anim service" id="service">
                     <h2>НАШИ УСЛУГИ</h2>
-                    <p class="service__subtitle">Мы предоставляем полный спектр услуг по разработке, проектированию и строительству элитной недвижимости. В каждом проекте мы учитываем уникальные требования и пожелания клиентов, предлагая оптимальные решения, которые воплощают мечты в реальность.</p>
+                    <p class="service__subtitle">Мы предоставляем полный комплекс услуг в области проектирования и строительства элитной недвижимости. Каждый объект мы создаём с учётом особенностей участка, архитектурного замысла и индивидуальных пожеланий клиента. Наша команда сопровождает проект на всех этапах — от первых эскизов до сдачи объекта «под ключ», обеспечивая высокое качество, точность исполнения и безупречный результат.</p>
                     <div class="service__wrapper">
                         <a href="#" class="service__item">
                             <img src="img/service_1.jpg" alt="" class="service__bg">
@@ -206,9 +206,8 @@
                         </a>
                     </div>
                 </section>
-                <section class="group">
-                    <h2>Мы группа компаний</h2>
-                    <p class="group__subtitle">Pobedonoscev Architects — это часть крупного холдинга, который объединяет ведущие компании в сфере архитектуры, строительства и девелопмента. Синергия компаний в рамках холдинга позволяет нам предлагать нашим клиентам полный спектр услуг — от разработки концепции до финальной реализации проекта.</p>
+                <section class="section-anim group">
+                    <h2>НАША ДЕЯТЕЛЬНОСТЬ</h2>
                     <div class="group__wrapper">
                         <a href="index.html" class="group__item group__item_max">
                             <img src="img/group.jpg" alt="" class="group__bg">
@@ -230,7 +229,7 @@
                         </a>
                     </div>
                 </section>
-                <section class="faq">
+                <section class="section-anim faq">
                     <div class="faq__info">
                         <p>Если у вас остались вопросы</p>
                         <h2>Оставьте заявку и мы свяжемся с вами!</h2>
@@ -314,6 +313,20 @@
         </footer>
     </div>
     
+
+    <div class="modal modal-form">
+        <div class="modal__overflow"></div>
+        <form action="#" class="modal__block">
+            <p class="modal__title">Оставьте заявку и наш менеджер свяжется с Вами!</p>
+            <div class="modal__form">
+                <input type="text" placeholder="Имя">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="+7 (000) 000-00-00" data-phone-pattern>
+            </div>
+            <button class="modal__btn">Оставить заявку</button>
+            <p class="modal__text">Нажимая кнопку «Оставить заявку», Вы подтверждаете свое <a href="#">согласие наработку персональных данных.</a> </p>
+        </form>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>

@@ -1,6 +1,8 @@
 $font-family: "Roboto", sans-serif
+$four-family: "Europe", sans-serif
 $second-family: "Plus Jakarta Sans", sans-serif
 $third-family: "Roboto Condensed", sans-serif
+
 
 html
     position: relative
@@ -102,6 +104,13 @@ body
             color: #000
         span
             transform: skewX(30deg)
+.section-anim
+    opacity: 0
+    transform: translateY(40px)
+    transition: all 1s
+    &.section-anim__active
+        opacity: 1
+        transform: translateY(0)
 
 .nav
     height: calc( 100vh - 26px )
@@ -131,7 +140,7 @@ body
         gap: 27px
         a,
         p
-            font: 400 18px $font-family
+            font: 400 18px $four-family
             color: #fff
             transition: all .3s
             cursor: pointer
@@ -154,7 +163,7 @@ body
             width: 100%
     &__desc
         margin: 23px 0 0
-        font: 400 13px / 1.37502 $font-family
+        font: 400 13px / 1.37502 $four-family
         color: #a4a4a4
     &__link
         margin: 50px 0 0
@@ -205,12 +214,12 @@ body
         max-width: calc( 100% - 160px ) 
         z-index: 5
         h1
-            font: 400 64px / 1.1 $second-family
+            font: 400 64px / 1.1 $four-family
             color: #fff
             span
                 color: #a4a4a4
         p
-            font: 400 18px $font-family
+            font: 400 18px $four-family
             color: #fff
             margin: 7px 0 0
     &__slider
@@ -598,12 +607,12 @@ body
         display: flex
         flex-direction: column
     h1
-        font: 400 100px / 1.1 $second-family
+        font: 400 100px / 1.1 $four-family
         letter-spacing: 0.07em
         color: #000
     &__subtitle
         margin: 29px 0 0
-        font: 400 20px / 1.61 $second-family
+        font: 400 20px / 1.61 $four-family
         letter-spacing: 0.07em
         color: #000
         max-width: 1070px
@@ -691,7 +700,7 @@ body
     
 .about
     h1
-        font: 400 74px / 1.1 $second-family
+        font: 400 74px / 1.1 $four-family
         color: #000
         font-family: "Europe", sans-serif
         font-weight: 300
@@ -699,7 +708,7 @@ body
             // letter-spacing: 0.07em
             color: #a4a4a4
     &__text
-        font: 400 20px / 1.61 $font-family
+        font: 400 20px / 1.61 $four-family
         letter-spacing: 0.07em
         color: #000
         margin-top: 50px
@@ -745,7 +754,7 @@ body
         font-weight: 300
     &__subtitle
         margin: 40px 0 0
-        font: 400 20px / 1.61 $second-family
+        font: 400 20px / 1.61 $four-family
         letter-spacing: 0.07em
         color: #000
         max-width: 1060px
@@ -763,10 +772,10 @@ body
         z-index: -1
         transition: all .3s
     &__type
-        font: 400 16px / 1.17814 $font-family
+        font: 400 16px / 1.17814 $four-family
     &__text
         margin: 20px 0 0
-        font: 400 20px / 1.17814 $font-family
+        font: 400 20px / 1.17814 $four-family
     &__info
         max-width: 470px
     &__item
@@ -782,7 +791,7 @@ body
             transition: all .3s
         h3
             margin: 20px 0 0
-            font: 400 40px / 1.07293 $third-family
+            font: 400 40px / 1.07293 $four-family
             letter-spacing: -0.03em
             color: #fff
             transition: all .3s
@@ -1147,7 +1156,7 @@ body
             border-radius: 10px
             background: #a4a4a4
         &_date
-            font-family: $font-family
+            font-family: $four-family
             font-weight: 400
             font-size: 20px
             line-height: 1.29961
@@ -1160,7 +1169,7 @@ body
             grid-template-columns: 1fr
             gap: 27px
             p
-                font-family: $font-family
+                font-family: $four-family
                 font-weight: 400
                 font-size: 16px
                 line-height: 1.29961
@@ -1959,7 +1968,7 @@ body
             border-radius: 9px
         p
             margin: 15px 0 0 
-            font-family: $font-family
+            font-family: $four-family
             font-weight: 400
             font-size: 20px
             line-height: 1.3
@@ -1968,13 +1977,101 @@ body
             max-width: 300px
             &+p
                 margin: 9px 0 0
-                font-family: $font-family
+                font-family: $four-family
                 font-weight: 400
                 font-size: 15px
                 line-height: 1.29961
                 letter-spacing: 0.07em
                 color: #818181
                 min-height: 38px
+
+.modal
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    overflow-y: auto
+    z-index: 50
+    transition: all .3s
+    opacity: 0
+    pointer-events: none
+    display: flex
+    justify-content: start
+    align-items: start
+    padding: 20px
+    &.active
+        opacity: 1
+        pointer-events: all
+    &__overflow
+        position: fixed
+        top: 0
+        left: 0
+        width: 100vw
+        height: 100vh
+        z-index: -1
+        background: rgba(0, 0, 0, 0.5)
+    &__block
+        margin: auto
+        max-width: 832px
+        padding: 85px 60px 65px
+        background: #fff
+    &__title
+        text-align: center
+        font-family: $four-family
+        font-weight: 400
+        font-size: 32px
+        line-height: 1.3
+        letter-spacing: 0.07em
+        color: #000
+        max-width: 530px
+        margin: 0 auto
+    &__form
+        margin: 53px 0 0
+        display: grid
+        grid-template-columns: 1fr
+        gap: 17px
+        input
+            background: #fff
+            border: 1px solid #000
+            border-radius: 5px
+            width: 100%
+            max-width: 100%
+            box-sizing: border-box
+            padding: 30px 35px
+            font-family: $four-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.3
+            letter-spacing: 0.07em
+            color: #000
+    &__btn
+        margin: 47px 0 0
+        padding: 30px 35px
+        font-family: $four-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.3
+        letter-spacing: 0.07em
+        color: #fff
+        width: 100%
+        border: none
+        border-radius: 5px
+        background: #363636
+    &__text
+        margin: 50px 0 0
+        text-align: center
+        font-family: $four-family
+        font-weight: 400
+        font-size: 22px
+        line-height: 1.3
+        letter-spacing: 0.07em
+        color: #000
+        a
+            text-decoration: underline
+            color: #000
+            text-underline-position: under
+
 
 
 
@@ -1989,6 +2086,22 @@ body
         &__back
             left: 40px
             top: 20px
+    .modal
+        &__block
+            padding: 40px 30px 30px
+            max-width: 450px
+        &__title
+            font-size: 24px
+        &__form
+            margin: 30px 0 0
+            input
+                padding: 20px 25px
+        &__btn
+            padding: 20px 25px
+            margin: 30px 0 0
+        &__text
+            font-size: 18px
+            margin: 30px 0 0
 
 @media ( max-width: 1200px )
     .page-error
