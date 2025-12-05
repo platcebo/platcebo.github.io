@@ -418,8 +418,10 @@
             <p class="title__subtitle">Оставьте контакты — отправим ориентировочную смету в течение 1 рабочего дня.</p>
             <form action="#" class="offer__form">
                 <div class="offer__input">
-                    <input type="text" placeholder="Ваше имя">
-                    <input type="text" placeholder="Телефон" data-phone-pattern>
+                    <input type="text" name="offerName" placeholder="Ваше имя" value="" class="is-invalid" aria-invalid="true">
+                    <span data-error="offerName" style=""> <span class="error">Это поле обязательно для заполнения.</span></span>
+                    <input type="text" name="offerPhone" placeholder="Телефон" value="" data-phone-pattern="" class="is-invalid" aria-invalid="true">
+                    <span data-error="offerPhone" style=""> <span class="error">Это поле обязательно для заполнения.</span></span>
                 </div>
                 <button class="btn__yellow">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

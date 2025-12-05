@@ -87,7 +87,6 @@ body
             line-height: 1.5
             color: #6c737f
             margin: 12px 0 0
-            
 
 
 .btn
@@ -593,6 +592,8 @@ body
     padding: 105px 0
     background: linear-gradient(139deg, #11111f 20%, #7C5D12 100%)
     text-align: center
+    &__input
+        position: relative
     .title
         &__text,
         &__subtitle
@@ -664,7 +665,18 @@ body
         justify-content: center
         align-items: center
         gap: 12px
-
+    span.error
+        position: absolute
+        top: calc( 100% + 5px )
+        left: 0
+        color: #ff0000
+        font-family: $font-family
+        font-weight: 400
+        font-size: 14px
+    span
+        &:nth-child(4) span.error
+            left: calc( 50% + 6px )
+            
 .footer
     padding: 64px 0 16px
     background: #11111f
@@ -1965,10 +1977,18 @@ body
             width: 100%
             input
                 width: 100%
+            span
+                width: 100%
         &__form
             a,
             .btn__yellow
                 width: 100%
+        span.error
+            position: relative
+            inset: auto !important
+            display: block
+            width: 100%
+            text-align: left
     .footer
         padding: 48px 0 40px
         &__row

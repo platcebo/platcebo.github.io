@@ -523,11 +523,13 @@ html
             &__phone p,
             &__list a
                 color: $black
-
             &__row
                 background: rgba(255, 255, 255, 0.7)
                 &::before
                     content: none
+            &__soc
+                a
+                    filter: invert(1)
     &__list_btn
         &.active
             .nav__list_drop,
@@ -3823,12 +3825,13 @@ html
         img
             display: block
             margin: 0 auto
-            width: auto
+            // width: auto
             max-width: 100%
             border-radius: 30px
-            max-height: 350px
+            // max-height: 350px
             object-fit: cover
             object-position: top
+            height: auto !important
         .btn__green
             margin: 12px 0 0
             width: 100%
@@ -3969,10 +3972,12 @@ html
 
 .educ
     padding: 60px 0 0
+    &__drop
+        margin: 0 0 auto
     &__block
         display: flex
         gap: 20px
-        align-items: start
+        align-items: stretch
     &__slider
         width: 635px
         min-width: 635px
@@ -3983,6 +3988,9 @@ html
         padding: 20px
         background: $white
         max-width: calc( 100% - 655px )
+        min-height: 420px
+        display: flex
+        flex-direction: column
         .all-vacancy__info
             display: block
             padding: 0
@@ -4022,12 +4030,27 @@ html
         overflow-x: auto
         gap: 20px
         img
-            height: 150px
+            height: 100px
             border: 1px solid $stroke-green
             // min-width: 150px
             display: block
             cursor: pointer
             border-radius: 5px
+    .welcome__slider
+        min-height: 100%
+        .swiper-wrapper,
+        .swiper-slide
+            min-height: 100%
+        img
+            height: auto
+            width: auto
+            max-width: 100%
+            height: 420px
+            min-height: 100%
+            max-height: 100%
+            &+img
+                width: 100% !important
+                height: 100% !important
 
 .modal
     position: fixed
@@ -6251,6 +6274,14 @@ html
                     width: 647px
                 &_ver
                     width: 204px
+
+@media ( max-width: 1359px )
+    .educ
+        &__descr
+            min-height: 320px
+        .welcome__slider img
+            height: 320px
+
 
 @media ( max-width: 1345px )
     .nav
