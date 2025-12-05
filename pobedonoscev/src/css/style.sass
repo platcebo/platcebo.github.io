@@ -191,7 +191,7 @@ body
             height: 10px
             position: absolute
             left: -16px
-            top: 6px
+            top: 5px
             background: url('../img/gold-arrow.svg') center no-repeat
             transition: all .3s
         &.active
@@ -354,6 +354,9 @@ body
             font-size: 12px
         &.active
             margin: 10px 0 0
+        &__btn
+            &::before
+                top: 3px
 
 @media ( max-width: 1024px )
     body
@@ -524,38 +527,38 @@ body
         box-sizing: content-box 
         margin: 0 auto auto
     h1
-        font: 400 100px / 1.1 $second-family
+        font: 400 64px / 1.1 $four-family
         letter-spacing: 0.07em
         color: #000
     &__subtitle
         margin: 34px 0 0
         max-width: 612px
-        font: 400 15px / 1.61 $second-family
+        font: 400 15px / 1.61 $four-family
         letter-spacing: 0.07em
         color: #000
     &__list
-        margin: 130px 0 0
+        margin: 65px 0 0
         display: grid
         grid-template-columns: 1fr 1fr 1fr
         gap: 45px
         align-items: start
     &__name
-        font: 400 15px / 1.29961 $second-family
+        font: 400 15px / 1.29961 $four-family
         letter-spacing: 0.07em
         color: #818181
         margin: 0 0 19px
     &__text
-        font: 400 20px / 1.29961 $second-family
+        font: 400 20px / 1.29961 $four-family
         letter-spacing: 0.07em
         color: #000
     &__address
         margin: 19px 0 0
-        font: 400 20px / 1.64 $second-family
+        font: 400 20px / 1.64 $four-family
         letter-spacing: 0.07em
         color: #5e5e5e
         max-width: 225px
     &__phone
-        font: 400 20px / 1.64 $second-family
+        font: 400 20px / 1.64 $four-family
         letter-spacing: 0.07em
         color: #a4a4a4
         display: block
@@ -2013,9 +2016,10 @@ body
         background: rgba(0, 0, 0, 0.5)
     &__block
         margin: auto
-        max-width: 832px
-        padding: 85px 60px 65px
+        max-width: 600px
+        padding: 35px 30px 
         background: #fff
+        border-radius: 20px
     &__title
         text-align: center
         font-family: $four-family
@@ -2038,7 +2042,7 @@ body
             width: 100%
             max-width: 100%
             box-sizing: border-box
-            padding: 30px 35px
+            padding: 20px 25px
             font-family: $four-family
             font-weight: 400
             font-size: 16px
@@ -2047,7 +2051,7 @@ body
             color: #000
     &__btn
         margin: 47px 0 0
-        padding: 30px 35px
+        padding: 20px 25px
         font-family: $four-family
         font-weight: 400
         font-size: 16px
@@ -2063,7 +2067,7 @@ body
         text-align: center
         font-family: $four-family
         font-weight: 400
-        font-size: 22px
+        font-size: 20px
         line-height: 1.3
         letter-spacing: 0.07em
         color: #000

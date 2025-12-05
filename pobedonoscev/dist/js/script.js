@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var headerSwiper = new Swiper(".header__slider", {
         loop: true,
         spaceBetween: 30,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
+        // autoplay: {
+        //   delay: 5000,
+        //   disableOnInteraction: false,
+        // },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
