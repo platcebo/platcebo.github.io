@@ -18,6 +18,8 @@ $third-family: "Mulish", sans-serif
 
 .swiper
     cursor: grab
+    &-slide
+        transition: none !important
 body
     position: relative
     overflow-x: hidden
@@ -1018,14 +1020,13 @@ html
             align-items: center
     &__slide
         width: 304px
-        max-width: 304px
         border-radius: 30px
         background: $white-50
         position: relative
         overflow: hidden
-        display: grid
+        display: block
         grid-template-rows: auto 1fr
-        transition: all .3s
+        // transition: all .3s
         z-index: 2
         pointer-events: none
         &_bg
@@ -1422,6 +1423,7 @@ html
         gap: 15px
         transition: all .3s
         width: 790px
+        height: auto
         &:hover
             background: $white
             .comf__link
@@ -1472,7 +1474,7 @@ html
         font-size: 14px
         line-height: 1.3
         color: $black
-        margin: 20px 0 0
+        margin: 20px 0 auto
         overflow: hidden
         position: relative
         text-overflow: ellipsis
@@ -1563,6 +1565,8 @@ html
                 color: $grey
     &__swiper
         overflow: visible
+    .swiper-wrapper
+        align-items: stretch
 
 .stocks
     padding: 60px 0 0
@@ -1875,7 +1879,6 @@ html
         position: relative
         text-overflow: ellipsis
         display: block
-        word-break: break-all
         display: -webkit-box
         -webkit-box-orient: vertical
         -moz-box-orient: vertical
@@ -4247,6 +4250,7 @@ html
                 display: block
                 margin: 0 auto
                 height: 100px
+                width: auto
                 border-radius: 5px
             p
                 font-family: $second-family
@@ -4330,7 +4334,8 @@ html
             color: $grey
             font-size: 14px !important
         &_name
-            p
+            p,
+            a
                 color: #222
                 &+p
                     color: $grey
@@ -6136,6 +6141,28 @@ html
             grid-template-columns: 1fr !important
             gap: 20px
 
+/* Обёртка вокруг #book */
+.book-shell
+  position: relative
+  transform-origin: center center
+  transition: transform .22s ease, box-shadow .22s ease, filter .22s ease
+  will-change: transform
+
+
+/* Состояние увеличения */
+.book-shell.is-zoomed
+  transform: scale(1.22)
+  z-index: 10
+  box-shadow: 0 30px 100px rgba(0,0,0,0.55)
+  filter: saturate(1.03)
+
+
+/* Чтобы было ощущение "режима просмотра" */
+.book-shell.is-zoomed .page img
+  cursor: zoom-out
+
+.book-shell .page img
+  cursor: zoom-in
 
 
 @media ( max-width: 1599px )
@@ -6175,7 +6202,6 @@ html
     .doc-page
         &__wrapper
             grid-template-columns: 1fr 1fr 1fr 1fr
-
 
 @media ( max-width: 1400px )
     .nav
@@ -6255,6 +6281,7 @@ html
             &_autor
                 padding: 20px
                 align-items: start
+                width: 100%
             &_list
                 border-radius: 0
                 grid-column: auto
@@ -6262,6 +6289,10 @@ html
             &_list
                 border-radius: 0
                 padding: 0
+        .price__service_list,
+        .price__doc_list
+            grid-column: auto
+    .price-service
         .price__service_list,
         .price__doc_list
             grid-column: auto
@@ -6281,7 +6312,6 @@ html
             min-height: 320px
         .welcome__slider img
             height: 320px
-
 
 @media ( max-width: 1345px )
     .nav
@@ -6707,7 +6737,6 @@ html
                         width: 22px
                         height: 22px
 
-
 @media ( max-width: 1023px )
     .title
         margin: 0 0 20px
@@ -6813,6 +6842,7 @@ html
             grid-template-columns: 1fr
         &__prev
             border-radius: 30px
+            height: 250px
             video,
             img,
             iframe
@@ -6945,7 +6975,7 @@ html
             font-size: 16px
         &__text
             font-size: 14px
-            margin: 16px 0 0
+            margin: 16px 0 auto
         &__autor
             gap: 10px
             margin: 16px 0 0
@@ -7078,12 +7108,48 @@ html
         &__wrapper
             grid-template-columns: 1fr
             gap: 40px
+            position: relative
+            padding-top: 60px
         &__tab
             display: flex
             justify-content: center
             align-items: center
             gap: 10px
-            flex-wrap: wrap
+            flex-wrap: nowrap
+            justify-content: start
+            margin: 0 -20px
+            width: 100vw
+            overflow-x: auto
+            position: absolute
+            top: -20px
+            z-index: 2
+            padding: 20px 20px
+            &::before
+                content: ''
+                position: absolute
+                display: block
+                top: 0
+                left: 50%
+                height: 100%
+                z-index: -1
+                background: #f4f4f4
+                width: 100vw
+                transform: translateX(-50%)
+                pointer-events: none
+            &.fix
+                position: fixed
+                top: 0
+                padding-top: 80px
+            &.bottom
+                position: absolute
+                left: 0
+                bottom: 0
+                top: auto
+                padding-top: 80px
+            &:hover
+                background: $white
+            li
+                white-space: nowrap
             p
                 width: max-content
     .implant
@@ -7315,7 +7381,6 @@ html
                         width: 22px
                         height: 22px
 
-
 @media ( max-width: 800px )
     .about-network
         &__quote
@@ -7365,16 +7430,12 @@ html
     .price-service
         &__wrapper
             gap: 20px
-        &__tab
-            flex-wrap: nowrap
-            justify-content: start
-            padding: 0 20px
-            margin: 0 -20px
-            width: calc( 100% + 40px )
-            overflow-x: auto
-            position: relative
-            li
-                white-space: nowrap
+        // &__tab
+        //     flex-wrap: nowrap
+        //     justify-content: start
+        //     overflow-x: auto
+        //     li
+        //         white-space: nowrap
         &__form
             grid-template-columns: 1fr
             gap: 10px
@@ -7535,7 +7596,6 @@ html
         &__item
             width: calc( 50% - 10px )
 
-
 @media ( max-width: 600px )
     .consult
         &__flex
@@ -7643,6 +7703,8 @@ html
     .media
         &__item
             width: 100%
+    
+@media ( max-width: 460px )
     .price
         &__doc
             &_autor

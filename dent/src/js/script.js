@@ -3,29 +3,34 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 var swiper = new Swiper(".doctor-list__swiper", {
-    slidesPerView: "auto",
+    slidesPerView: 'auto',
     spaceBetween: 20,
+    centeredSlides: false,
 });
 
 var swiper = new Swiper(".case__swiper", {
     slidesPerView: 'auto',
     spaceBetween: 20,
+    centeredSlides: false,
 });
 
 var swiper = new Swiper(".stocks__swiper", {
     slidesPerView: 'auto',
     spaceBetween: 20,
+    centeredSlides: false,
 });
 
 var swiper = new Swiper(".comment__swiper", {
     spaceBetween: 20,
     slidesPerView: 'auto',
+    centeredSlides: false,
 });
 
 var swiper = new Swiper(".awards__scroll", {
     slidesPerView: 'auto',
     spaceBetween: 20,
     // mousewheel: true,
+    centeredSlides: false,
 });
 
 var swiper = new Swiper(".welcome__slider", {
@@ -40,13 +45,15 @@ var swiper = new Swiper(".welcome__slider", {
 var swiper = new Swiper(".interview__wrapper", {
     slidesPerView: 'auto',
     spaceBetween: 20,
-
+    centeredSlides: false,
+    centeredSlidesBounds: true,
 });
 
 var swiper = new Swiper(".result-detail__slider", {
     slidesPerView: 'auto',
     slidesPerGroup: 1,
     spaceBetween: 20,
+    centeredSlides: false,
     navigation: {
         nextEl: ".result-detail__slider_func .swiper-button-next",
         prevEl: ".result-detail__slider_func .swiper-button-prev",
@@ -747,20 +754,49 @@ if(consultFile !== null) {
 }
 
 if(document.querySelector('.magazine') !== null) {
-    const pageFlip = new St.PageFlip(document.getElementById('book'),
-        {
-            width: 674, 
-            height: 827,  
-            showCover: true,
-            size: "stretch",
-            maxWidth: 674, 
-            maxHeight: 827,  
-            minWidth: 250,
 
-        }
-    );
+    const pageFlip = new St.PageFlip(document.getElementById('book'), {
+        width: 520,
+        height: 700,
+        size: "stretch",
+        minWidth: 300,
+        maxWidth: 1000,
+        minHeight: 420,
+        maxHeight: 1350,
+        showCover: true,
+
+        // важно:
+        // useMouseEvents: true,
+        // disableFlipByClick: true, // клик не листает "везде"
+    });
 
     pageFlip.loadFromHTML(document.querySelectorAll('.my-page'));
+
+    // const shell = document.querySelector(".book-shell");
+    // let zoomed = false;
+
+    // let state = "read";
+    // pageFlip.on("changeState", (e) => { state = e.data; }); // событие есть в API  [oai_citation:2‡GitHub](https://github.com/Nodlik/StPageFlip)
+
+    // document.getElementById('book').addEventListener("click", (e) => {
+    //     // если хочется — разрешаем зум только когда спокойное состояние:
+    //     if (state !== "read") return;
+
+    //     // чтобы клик не уходил во внутренние обработчики
+    //     e.preventDefault();
+    //     e.stopPropagation();
+
+    //     zoomed = !zoomed;
+    //     shell.classList.toggle("is-zoomed", zoomed);
+    // }, true);
+
+    // window.addEventListener("keydown", (e) => {
+    //     if (e.key === "Escape" && zoomed) {
+    //         zoomed = false;
+    //         shell.classList.remove("is-zoomed");
+    //     }
+    // });
+
 
     let magazinPage = document.querySelectorAll('.magazine__page');
 
@@ -880,7 +916,7 @@ let priceAutor = document.querySelectorAll('.price__service .price__doc_autor'),
 
 if(priceAutor != null) {
     if(window.innerWidth > 1400) {
-        let articleLeft = document.querySelectorAll('.price__doc_autor')[0].getBoundingClientRect().left - 20
+        let articleLeft = document.querySelectorAll('.price-service__tab')[0].getBoundingClientRect().right + 20
 
         window.addEventListener('scroll', ()=>{
 
@@ -911,6 +947,25 @@ if(priceAutor != null) {
             })
         })
     })
+}
+
+let priceTag = document.querySelector('.price-service__tab'),
+    priceService = document.querySelector('.price-service__wrapper');
+
+if(priceTag != null) {
+    if(window.innerWidth < 1024) {
+        window.addEventListener('scroll', ()=>{
+            if(priceService.getBoundingClientRect().top < 80 && priceService.getBoundingClientRect().bottom > priceTag.getBoundingClientRect().height + 0) {
+                priceTag.classList.remove('bottom')
+                priceTag.classList.add('fix')
+            } else if (priceService.getBoundingClientRect().top > 80) {
+                priceTag.classList.remove('fix')
+            } else if (priceService.getBoundingClientRect().bottom < priceTag.getBoundingClientRect().height + 0) {
+                priceTag.classList.remove('fix')
+                priceTag.classList.add('bottom')
+            }
+        })
+    }
 }
 
 
