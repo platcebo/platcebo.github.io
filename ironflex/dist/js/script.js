@@ -1,5 +1,64 @@
 "use strict";
 
+var swiperHeader = new Swiper(".header__slider", {
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+});
+
+let headerItem = document.querySelectorAll('.header__item');
+
+if(headerItem !== null) {
+    swiperHeader.on('slideChange', function () {
+        headerItem.forEach(a=>a.classList.remove('active'))
+        headerItem[swiperHeader.activeIndex].classList.add('active')
+    });
+}
+
+var swiperthumb = new Swiper(".catalog-slider__thumb", {
+    spaceBetween: 20,
+    slidesPerView: 8,
+    watchSlidesProgress: true,
+    freeMode: true,
+});
+
+var swiper = new Swiper(".catalog-slider__wrapper", {
+    navigation: {
+        nextEl: ".catalog-slider .swiper-button-next",
+        prevEl: ".catalog-slider .swiper-button-prev",
+    },
+    thumbs: {
+        swiper: swiperthumb,
+    },
+});
+
+var swiper = new Swiper(".sport-slider__slider", {
+    spaceBetween: 32,
+    slidesPerView: 'auto',
+    navigation: {
+        nextEl: ".sport-slider__slider .swiper-button-next",
+        prevEl: ".sport-slider__slider .swiper-button-prev",
+    },
+});
+
+// var bikini = new Swiper(".bikini__thumb", {
+//     spaceBetween: 20,
+//     slidesPerView: 8,
+//     watchSlidesProgress: true,
+//     freeMode: true,
+// });
+
+var swiper = new Swiper(".bikini__slider", {
+    navigation: {
+        nextEl: ".bikini .swiper-button-next",
+        prevEl: ".bikini .swiper-button-prev",
+    },
+    thumbs: {
+        swiper: swiperthumb,
+    },
+});
+
 document.addEventListener('DOMContentLoaded', function() {
 
 let navDrop = document.querySelectorAll('.nav__drop'),
@@ -36,20 +95,68 @@ if(navDrop !== null) {
     })
 }
 
-var swiperHeader = new Swiper(".header__slider", {
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-});
+let nav = document.querySelector('.nav'),
+    navHum = document.querySelector('.nav__hum');
 
-let headerItem = document.querySelectorAll('.header__item');
+if(nav !== null) {
+    navHum.addEventListener('click',()=>{
+        nav.classList.toggle('active')
+    })
+}
 
-if(headerItem !== null) {
-    swiperHeader.on('slideChange', function () {
-        headerItem.forEach(a=>a.classList.remove('active'))
-        headerItem[swiperHeader.activeIndex].classList.add('active')
-    });
+let catalogDrop = document.querySelectorAll('.catalog__drop'),
+    catalogDropWrapper = document.querySelectorAll('.catalog__drop_wrapper');
+
+if(catalogDrop !== null) {
+    catalogDrop.forEach((item,i)=>{
+        item.addEventListener('click', ()=>{
+            item.classList.toggle('active')
+            catalogDropWrapper[i].classList.toggle('active')
+        })
+    })
+}
+
+document.body.addEventListener('click', (event)=>{
+    let target = event.target;
+
+    if(target.closest('.select')) {
+
+        let selectInput = document.querySelectorAll('.select select'),
+            selectVal = document.querySelectorAll('.select p');
+
+
+        for(let i = 0; i < selectInput.length; i++) {
+            if(target && target == selectInput[i]) {
+                selectInput[i].addEventListener('change', ()=>{
+                    selectVal[i].innerHTML = selectInput[i].options[selectInput[i].selectedIndex].text
+                })
+            } 
+        }
+    }
+})
+
+let drop = document.querySelectorAll('.drop'),
+    dropBlock = document.querySelectorAll('.drop-wrapper');
+
+if(drop !== null) {
+    drop.forEach((item,i)=>{
+        item.addEventListener('click', ()=>{
+            item.classList.toggle('active'),
+            dropBlock[i].classList.toggle('active')
+        })
+    })
+}
+
+let clubBtn = document.querySelectorAll('.catalog-club__name'),
+    clubList = document.querySelectorAll('.catalog-club__list');
+
+if(clubBtn !== null) {
+    clubBtn.forEach((item,i)=>{
+        item.addEventListener('click', ()=>{
+            item.classList.toggle('active'),
+            clubList[i].classList.toggle('active')
+        })
+    })
 }
 
 

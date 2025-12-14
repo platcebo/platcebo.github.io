@@ -11,7 +11,7 @@ body
     max-width: 1280px
     box-sizing: content-box
     margin: 0 auto 
-    padding: 0 24px
+    padding: 0 16px
 
 .section
     padding: 64px 0
@@ -22,6 +22,8 @@ body
         display: grid
         grid-template-columns: 1fr auto
         gap: 20px
+        align-items: start
+        margin: 0 0 48px
         h2,
         h1
             font-family: $font-family
@@ -44,6 +46,8 @@ body
         justify-content: center
         align-items: center
         gap: 8px
+        &__mob
+            display: none
 
 .nav
     &__hum
@@ -210,6 +214,8 @@ body
             width: 100%
             height: 100%
             object-fit: cover
+        .header__item
+            display: none
     &__row
         display: grid
         grid-template-columns: 1fr 1fr 1fr
@@ -375,7 +381,7 @@ body
         height: 1px
         background: #E4E4E7
         position: absolute
-        width: calc( 100% - 48px )
+        width: calc( 100% - 32px )
         max-width: 1280px
     &__last
         margin: 48px 0 0
@@ -506,24 +512,65 @@ body
         display: grid
         grid-template-columns: 1fr 1fr 1fr 1fr
         gap: 32px
+    img
+        width: 100%
+        min-height: 100%
+        object-fit: cover
 
 .content
-    h2
+    img
+        width: auto
+        height: auto
+        max-width: 100%
+        display: block
+        float: left
+        margin: 0 32px 32px 0
+    h2,
+    h1
         font-family: $font-family
         font-weight: 700
         font-size: 24px
         line-height: 1.33333
         color: #18181b
         margin: 0 0 48px
-    p
+    h3
+        font-family: $second-family
+        font-size: 20px
+        line-height: 1.5
+        margin: 0 0 32px
+        font-weight: 500
+    p,
+    li
         margin: 0 0 32px
         font-family: $font-family
         font-weight: 400
         font-size: 16px
         line-height: 1.5
         color: #51525c
-    &:last-child
-        margin: 0
+        strong,
+        b
+            font-weight: 500
+        &:last-child
+            margin: 0 !important
+    .container
+        *:last-child
+            margin: 0 !important
+    ul,
+    ol
+        margin: 0 0 32px
+        li
+            margin: 0
+            &::before
+                content: '- '
+                font-family: $font-family
+                font-weight: 400
+                font-size: 16px
+                line-height: 1.5
+                color: #51525c
+    a
+        text-decoration: underline
+        text-decoration-skip-ink: none
+        color: #2e90fa
 
 .catalog-cat
     font-family: $font-family
@@ -557,6 +604,13 @@ body
         transition: all .3s
         &:hover
             color: #18181b
+    p
+        font-family: $second-family
+        font-weight: 500
+        font-size: 18px
+        line-height: 1.55556
+        text-align: center
+        color: #a0a0ab
 
 .footer
     background: #18181b
@@ -600,6 +654,2004 @@ body
         line-height: 1.42857
         color: #a0a0ab
 
+.catalog-slider
+    padding-top: 24px
+    position: relative
+    overflow: hidden
+    &__tag
+        display: flex
+        justify-content: end
+        align-items: center
+        flex-wrap: wrap
+        gap: 12px
+        a
+            border: 1px solid #d1d1d6
+            border-radius: 24px
+            padding: 8px 14px 8px 12px
+            box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+            background: #fff
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 8px
+            font-family: $font-family
+            font-weight: 600
+            font-size: 14px
+            line-height: 1.42857
+            color: #3f3f46
+            transition: all .3s
+            &:hover
+                background: #f4f4f5
+    &__wrapper
+        position: relative
+        overflow: hidden    
+        .swiper-slide
+            position: relative
+            a
+                position: absolute
+                bottom: 32px
+                right: 32px
+            img
+                width: 100%
+                height: 640px
+                object-fit: cover
+        &_block
+            margin: 36px 0 0
+            position: relative
+            .swiper-button-next,
+            .swiper-button-prev
+                display: flex
+                justify-content: center
+                align-items: center
+                border-radius: 100%
+                width: 56px
+                height: 56px
+                box-shadow: 0 2px 4px -2px rgba(16, 24, 40, 0.06), 0 4px 8px -2px rgba(16, 24, 40, 0.1)
+                background: #d1d1d6
+                inset: auto
+                margin: 0
+                left: 0
+                top: 50%
+                transform: translate(-50%, -50%)
+                opacity: 1
+                svg
+                    width: 24px
+                    height: 24px
+            .swiper-button-next
+                left: auto
+                right: 0
+                top: 50%
+                transform: translate(50%, -50%)
+                background: #51525c
+    &__thumb
+        margin: 36px 0 0
+        .swiper-wrapper
+            align-items: stretch
+        img
+            width: 100%
+            height: 100%
+            opacity: .45
+            transition: all .3s
+        .swiper-slide
+            height: auto
+            cursor: pointer                                                                     
+            &.swiper-slide-thumb-active
+                img
+                    opacity: 1
+
+.lead
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 32px
+    &__item
+        img
+            width: 100%
+            height: 240px
+            object-fit: cover
+        p
+            margin: 24px 0 0
+            display: grid
+            grid-template-columns: auto 24px
+            gap: 16px
+            font-family: $font-family
+            font-weight: 600
+            font-size: 18px
+            line-height: 1.55556
+            text-decoration: underline
+            text-decoration-skip-ink: none
+            color: #18181b
+            max-width: max-content
+            width: 100%
+            align-content: center
+            svg
+                width: 24px
+                height: 24px
+    &__brand
+        .lead
+            &__item
+                img
+                    border: 2px solid #18181b
+                    object-fit: contain
+                    transition: all .3s
+                &:hover
+                    img
+                        border-color: #d1d1d6
+    &__library
+        .lead__item
+            img
+                height: 389px
+
+.breadcrumbs
+    padding: 48px 0 24px
+    background: #fafafa
+    &__wrapper
+        display: flex
+        justify-content: start
+        align-items: center
+        flex-wrap: wrap
+        gap: 8px
+        position: relative
+        overflow: hidden
+        a
+            display: block
+            padding: 4px
+            font-family: $second-family
+            font-weight: 500
+            font-size: 14px
+            line-height: 1.42857
+            color: #51525c
+            transition: all .3s
+            max-width: 100%
+            position: relative
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+            &:hover
+                color: #3f3f46
+        p
+            padding: 4px 8px
+            font-family: $font-family
+            font-weight: 600
+            font-size: 14px
+            line-height: 1.42857
+            color: #3f3f46
+            border-radius: 6px
+            padding: 4px 8px
+            background: #f4f4f5
+            max-width: 100%
+            position: relative
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+
+.pag
+    display: flex
+    justify-content: start
+    align-items: center
+    border: 1px solid #d1d1d6
+    background: #fff
+    border-radius: 8px
+    width: max-content
+    &__prev
+        border-right: 1px solid #d1d1d6
+    &__arrow
+        width: 40px
+        height: 40px
+        display: flex
+        justify-content: center
+        align-items: center
+    ul
+        display: flex
+        justify-content: center
+        align-items: center
+        a,
+        p
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 40px
+            height: 40px
+            border-right: 1px solid #d1d1d6
+            font-family: $font-family
+            font-weight: 600
+            font-size: 14px
+            line-height: 1.42857
+            color: #3f3f46
+        a
+            &:hover
+                background: #fafafa
+
+.catalog
+    &__row
+        display: flex
+        justify-content: start
+        align-items: start
+    &__tab
+        margin: 0 auto 0 0
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 8px
+        border: 1px solid #e4e4e7
+        border-radius: 36px
+        padding: 4px
+        background: #fafafa
+        a
+            font-family: $font-family
+            font-weight: 600
+            font-size: 14px
+            line-height: 1.42857
+            color: #70707b
+            transition: all .3s
+            display: block
+            padding: 8px 12px
+            border-radius: 36px
+            &.active
+                color: #3f3f46
+                box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.06), 0 1px 3px 0 rgba(16, 24, 40, 0.1)
+                background: #fff
+            &:hover
+                color: #3f3f46
+    &__title
+        margin: 48px 0 0
+        h1,h2
+            font-family: $font-family
+            font-weight: 700
+            font-size: 24px
+            line-height: 1.33333
+            text-transform: uppercase
+            color: #18181b
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.5
+            color: #51525c
+            margin: 16px 0 0
+            strong,
+            b
+                font-weight: 500
+    &__wrapper
+        margin: 48px 0 0
+        display: grid
+        grid-template-columns: 312px 1fr
+        gap: 32px
+        align-items: start
+        position: relative
+    &__aside
+        border: 1px solid #e4e4e7
+        border-radius: 24px
+        &_title
+            font-family: $font-family
+            font-weight: 600
+            font-size: 16px
+            line-height: 1.5
+            color: #18181b
+            padding: 12px 16px 8px
+            border-bottom: 1px solid #e4e4e7
+        &_link
+            display: grid
+            grid-template-columns: 1fr
+            gap: 4px
+            padding: 16px
+            a
+                display: block
+                padding: 7px 15px
+                border-radius: 32px
+                background: #fafafa
+                border: 1px solid #fafafa
+                transition: all .3s
+                font-family: $font-family
+                font-weight: 400
+                font-size: 16px
+                line-height: 1.5
+                color: #51525c
+                &:hover
+                    border: 1px solid #d1d1d6
+                    background: #f4f4f5
+                    color: #18181b
+    &__grid
+        display: grid
+        grid-template-columns: 1fr
+        gap: 16px
+        &_item
+            padding: 0 0 16px
+            border-bottom: 1px solid #e4e4e7
+            &:last-child
+                padding: 0
+                border: none
+        &_title
+            display: flex
+            justify-content: start
+            align-items: center
+            gap: 12px
+            p
+                font-family: $font-family
+                font-weight: 600
+                font-size: 18px
+                line-height: 1.55556
+                text-decoration: underline
+                text-decoration-skip-ink: none
+                color: #18181b
+                transition: all .3s
+            span
+                font-family: $font-family
+                font-weight: 400
+                font-size: 16px
+                line-height: 1.5
+                color: #a0a0ab
+            &:hover
+                p
+                    color: #51525c
+        &_link
+            margin: 16px 0 0
+            display: flex
+            flex-wrap: wrap
+            gap: 12px
+            a
+                border-radius: 7px
+                padding: 2px 8px
+                background: #f4f4f5
+                transition: all .3s
+                font-family: $second-family
+                font-weight: 500
+                font-size: 14px
+                line-height: 1.42857
+                text-align: center
+                color: #a0a0ab
+                display: block
+                &:hover
+                    background: #e4e4e7
+                    color: #51525c
+    &__filter
+        &_name
+            padding: 12px 16px
+            border-bottom: 1px solid #e4e4e7
+            p
+                font-family: $font-family
+                font-weight: 600
+                font-size: 16px
+                line-height: 1.5
+                color: #18181b
+        &_checked
+            margin: 10px 0 0
+            padding: 12px
+            border-radius: 8px
+            background: #fafafa
+            display: flex
+            justify-content: start
+            align-items: center
+            flex-wrap: wrap
+            gap: 6px
+            a
+                display: flex
+                justify-content: center
+                align-items: center
+                gap: 5px
+                border: 1px solid #d1d1d6
+                border-radius: 6px
+                padding: 1px 3px 1px 8px
+                background: #fff
+                transition: all .3s
+                font-family: $second-family
+                font-weight: 500
+                font-size: 14px
+                line-height: 1.42857
+                text-align: center
+                color: #3f3f46
+                &:hover
+                    background: #fafafa
+        &_check
+            padding: 16px
+            border-bottom: 1px solid #e4e4e7
+            display: grid
+            grid-template-columns: 1fr
+            gap: 4px
+            &:last-child
+                border: none
+            div
+                position: relative
+                padding: 6px 8px
+                display: grid
+                grid-template-columns: 20px 1fr
+                gap: 8px
+                z-index: 2
+            span
+                transition: all .3s
+                display: flex
+                justify-content: center
+                align-items: center
+                border-radius: 6px
+                border: 1px solid #d1d1d6
+                width: 20px
+                height: 20px
+                svg
+                    opacity: 0
+                    transition: all .3s
+                    width: 14px
+                    height: 14px
+            p
+                font-family: $font-family
+                font-weight: 500
+                font-size: 16px
+                line-height: 1.5
+                color: #18181b
+                &::before
+                    content: ''
+                    display: block
+                    position: absolute
+                    width: 100%
+                    height: 100%
+                    top: 0
+                    left: 0
+                    opacity: 0
+                    transition: all .3s
+                    border-radius: 8px
+                    background: #f4f4f5
+                    z-index: -1
+            input
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                z-index: 2
+                opacity: 0
+                &:checked
+                    &+span
+                        border-color: #51525c
+                        svg
+                            opacity: 1
+                        &+p
+                            &::before
+                                opacity: 1
+                &:hover
+                    &+span+p
+                        &::before
+                            opacity: 1
+    &__out
+        border-bottom: 1px solid #e4e4e7
+        padding: 0 0 16px
+        &_name
+            font-family: $second-family
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.55556
+            color: #51525c
+            margin: 12px 0
+        &_row
+            display: flex
+            justify-content: space-between
+            align-items: center
+            p
+                font-family: $font-family
+                font-weight: 400
+                font-size: 16px
+                line-height: 1.5
+                color: #a0a0ab
+                strong
+                    font-weight: 500
+                    color: #51525c
+        &_sort
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 12px
+            a
+                display: flex
+                justify-content: center
+                align-items: center
+                gap: 4px
+                border: 1px solid #e4e4e7
+                border-radius: 24px
+                padding: 12px 24px
+                background: #f4f4f5
+                font-family: $font-family
+                font-weight: 500
+                font-size: 12px
+                line-height: 1.5
+                color: #51525c
+    &__item
+        padding: 0 0 24px
+        border-bottom: 1px solid #e4e4e7
+        display: grid
+        grid-template-columns: 160px 1fr
+        gap: 20px
+        align-items: start
+        img
+            width: 100%
+            height: 160px
+            object-fit: cover
+        p
+            font-family: $second-family
+            font-weight: 500
+            font-size: 20px
+            line-height: 1.5
+            color: #18181b
+            max-width: 520px
+            &+p
+                margin: 8px 0 0
+                font-family: $font-family
+                font-weight: 400
+                font-size: 16px
+                color: #a0a0ab
+    &__drop
+        svg
+            display: none
+    &__select
+        padding: 16px
+        border-bottom: 1px solid #e4e4e7
+        display: grid
+        grid-template-columns: 1fr
+        gap: 12px
+    &__club
+        padding: 0 0 24px
+        border-bottom: 1px solid #e4e4e7
+        display: grid
+        grid-template-columns: 160px 1fr auto
+        gap: 20px
+        align-items: start
+        img
+            width: 160px
+            height: 160px
+            object-fit: cover
+        &_name
+            font-family: $second-family
+            font-weight: 500
+            font-size: 20px
+            line-height: 1.5
+            color: #18181b
+        &_info
+            max-width: 520px
+            ul
+                margin: 8px 0 0
+                display: grid
+                grid-template-columns: 1fr
+                gap: 4px
+                li
+                    display: grid
+                    grid-template-columns: 20px 1fr
+                    gap: 8px
+                    align-items: center
+                    font-family: $font-family
+                    font-weight: 500
+                    font-size: 16px
+                    line-height: 1.5
+                    color: #51525c
+        .comment__rate
+            justify-content: start
+            margin: 8px 0 0
+        .news-list__func
+            margin: 0
+
+.card
+    padding-top: 36px
+    .container
+        display: grid
+        grid-template-columns: 220px 1fr
+        gap: 32px
+        align-items: start
+    &__info
+        max-width: 520px
+    &__text
+        p
+            font-family: $second-family
+            font-weight: 500
+            font-size: 20px
+            line-height: 1.5
+            color: #18181b
+            &+p
+                margin: 8px 0 0
+                font-family: $font-family
+                font-weight: 400
+                font-size: 16px
+                line-height: 1.5
+                color: #a0a0ab
+    &__green
+        margin: 16px 0 0
+        border-radius: 7px
+        padding: 2px 8px
+        width: max-content
+        font-family: $second-family
+        font-weight: 500
+        font-size: 14px
+        line-height: 1.42857
+        text-align: center
+        color: #027a48
+        background: #ecfdf3
+    &__prev
+        width: 220px
+        height: 220px
+        object-fit: cover
+    &__shop
+        margin: 16px 0 0
+        border-radius: 16px
+        padding: 16px
+        background: #fafafa
+        display: grid
+        grid-template-columns: 70px 1fr
+        gap: 16px
+        img
+            width: 70px
+            height: 70px
+            object-fit: cover
+        p
+            font-family: $font-family
+            font-weight: 600
+            font-size: 14px
+            line-height: 1.42857
+            color: #18181b
+            margin: 12px 0 8px
+        a
+            display: flex
+            justify-content: start
+            align-items: center
+            gap: 8px
+            font-family: $font-family
+            font-weight: 600
+            font-size: 18px
+            line-height: 1.55556
+            text-decoration: underline
+            text-decoration-skip-ink: none
+            color: #1570ef
+
+.comment
+    &__block
+        display: grid
+        grid-template-columns: 65fr 60fr
+        gap: 32px
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr
+        gap: 24px
+    &__item
+        padding: 0 0 24px
+        border-bottom: 1px solid #e4e4e7
+        &:last-child
+            padding: 0
+            border: none
+    &__name
+        display: flex
+        justify-content: space-between
+        align-items: start
+        p
+            font-family: $font-family
+            font-weight: 500
+            font-size: 16px
+            line-height: 1.5
+            color: #18181b
+            &+p
+                margin: 4px 0 0
+                font-weight: 400
+                color: #51525c
+    &__rate
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 4px
+    &__text
+        margin: 16px 0 0
+        font-family: $second-family
+        font-weight: 500
+        font-size: 18px
+        line-height: 1.55556
+        color: #a0a0ab
+    &__form
+        padding: 0 0 0 32px
+        border-left: 1px solid #e4e4e7
+        &_wrapper
+            display: grid
+            grid-template-columns: 1fr
+            gap: 20px
+    &__input
+        position: relative
+        display: grid
+        grid-template-columns: 36px 1fr
+        align-items: start
+        gap: 8px
+        div
+            position: relative
+        input,
+        textarea
+            width: 100%
+            border: 1px solid #d1d1d6
+            border-radius: 8px
+            padding: 8px 12px
+            box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+            background: #fff
+            box-sizing: border-box  
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.5
+            color: #18181b
+            &::placeholder
+                color: #70707b
+        textarea
+            height: 180px
+            resize: none
+            &+p
+                grid-column: 2/3
+                font-family: $second-family
+                font-weight: 400
+                font-size: 14px
+                line-height: 1.42857
+                color: #51525c                    
+    &__file
+        position: absolute !important
+        bottom: 12px
+        right: 14px
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 8px
+        font-family: $font-family
+        font-weight: 600
+        font-size: 14px
+        line-height: 1.42857
+        color: #3f3f46
+        border: 1px solid #d1d1d6
+        border-radius: 24px
+        padding: 8px 14px
+        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+        background: #fff
+        max-width: max-content
+        input
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            opacity: 0
+    &__enter
+        margin: 24px 0 0
+        display: flex
+        justify-content: end
+        align-items: center
+        gap: 16px
+        a
+            font-family: $font-family
+            font-weight: 600
+            font-size: 14px
+            line-height: 1.42857
+            text-decoration: underline
+            text-decoration-skip-ink: none
+            color: #2e90fa
+
+.nav-tab
+    border-bottom: 1px solid #e4e4e7
+    padding: 16px 0
+    background: #fff
+    .container
+        display: flex
+        justify-content: start
+        align-items: center
+        gap: 12px
+        flex-wrap: wrap
+    a
+        border: 1px solid #d1d1d6
+        border-radius: 24px
+        padding: 8px 14px 8px 12px
+        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+        background: #fff
+        transition: all .3s
+        font-family: $font-family
+        font-weight: 600
+        font-size: 14px
+        line-height: 1.42857
+        color: #3f3f46
+        &:hover,
+        &.active
+            background: #f4f4f5
+            border-color: #f4f4f5
+
+.news-list
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 48px
+        row-gap: 24px
+        margin: 0 0 24px
+    &__item
+        position: relative
+        padding: 0 0 24px
+        border-bottom: 1px solid #e4e4e7
+        display: grid
+        grid-template-columns: 90px 1fr
+        gap: 20px
+        align-items: start
+        position: relative
+        img
+            width: 90px
+            height: 90px
+            object-fit: cover
+        &:nth-child(odd)
+            
+            &::before
+                content: ''
+                display: block
+                position: absolute
+                left: calc( 100% + 24px )
+                top: 0
+                height: 100%
+                width: 1px
+                background: #e4e4e7
+    &__text
+        margin: 0 0 auto
+        p
+            font-family: $font-family
+            font-weight: 500
+            font-size: 16px
+            line-height: 1.5
+            color: #18181b
+            display: -webkit-box
+            -webkit-box-orient: vertical
+            -moz-box-orient: vertical
+            -ms-box-orient: vertical
+            box-orient: vertical
+            -webkit-line-clamp: 2
+            -moz-line-clamp: 2
+            -ms-line-clamp: 2
+            line-clamp: 2
+            position: relative
+            overflow: hidden
+            &+p
+                font-family: $second-family
+                font-weight: 400
+                font-size: 12px
+                line-height: 1.5
+                color: #a0a0ab
+                margin: 8px 0 0
+                display: -webkit-box
+                -webkit-box-orient: vertical
+                -moz-box-orient: vertical
+                -ms-box-orient: vertical
+                box-orient: vertical
+                -webkit-line-clamp: 3
+                -moz-line-clamp: 3
+                -ms-line-clamp: 3
+                line-clamp: 3
+                position: relative
+                overflow: hidden
+    &__func
+        display: flex
+        justify-content: start
+        align-items: center
+        gap: 24px
+        margin: 16px 0 0
+        div
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 8px
+        p
+            font-family: $font-family
+            font-weight: 600
+            font-size: 14px
+            line-height: 1.42857
+            color: #a0a0ab
+
+.news-video
+    iframe
+        width: 100%
+        height: 720px
+    &__row
+        margin: 36px 0 0
+        display: flex
+        justify-content: start
+        align-items: center
+        gap: 24px
+    &__text
+        font-family: $font-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.5
+        color: #a0a0ab
+        a
+            text-decoration: underline
+            text-decoration-skip-ink: none
+            color: #2e90fa
+        &:nth-child(1)
+            margin: 0 auto 0 0
+    .news-list__func
+        margin: 0
+
+.news-com
+    &__wrapper
+        max-width: 564px
+        margin: 0 auto
+
+.select
+    position: relative
+    border: 1px solid #d1d1d6
+    border-radius: 24px
+    padding: 10px 16px
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+    background: #fff
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 8px
+    transition: all .3s
+    overflow: hidden
+    p
+        font-family: $font-family
+        font-weight: 600
+        font-size: 14px
+        line-height: 1.42857
+        color: #3f3f46
+        position: relative
+        overflow: hidden
+        text-overflow: ellipsis
+        width: 100%
+        white-space: nowrap
+    select
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        opacity: 0
+        z-index: 2
+        cursor: pointer
+    &:hover
+        background: #f4f4f5
+
+.sport-list
+    &__check
+        border-radius: 20px
+        padding: 16px
+        background: #f4f4f5
+        display: flex
+        justify-content: start
+        align-items: center
+        flex-wrap: wrap
+        gap: 8px
+        a
+            border: 1px solid #d1d1d6
+            border-radius: 24px
+            padding: 10px 18px
+            width: 44px
+            height: 44px
+            box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+            background: #fff
+            display: flex
+            justify-content: center
+            align-items: center
+            font-family: $font-family
+            font-weight: 600
+            font-size: 16px
+            line-height: 1.5
+            color: #3f3f46
+            transition: all .3s
+            &:hover
+                background: #f4f4f5
+    &__filter
+        margin: 36px 0 0
+        display: flex
+        justify-content: start
+        align-items: center
+        .select
+            &:nth-child(2)
+                margin: 0 auto 0 12px
+    &__wrapper
+        margin: 36px 0 48px
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+        gap: 32px
+        a
+            display: block
+        img
+            width: 100%
+            height: 98px
+            object-fit: cover
+            display: block
+        p
+            margin: 16px 0 0
+            gap: 8px
+            display: flex
+            justify-content: start
+            align-items: center
+            font-family: $font-family
+            font-weight: 500
+            font-size: 12px
+            line-height: 1.5
+            text-decoration: underline
+            text-decoration-skip-ink: none
+            color: #18181b
+
+.sport
+    padding-top: 36px
+    .section-title
+        margin: 0 0 24px
+    &__row
+        display: flex
+        justify-content: space-between
+        .select
+            margin: 0 16px 0 auto
+    &__link
+        width: max-content
+        display: flex
+        justify-content: start
+        align-items: center
+        border: 1px solid #d1d1d6
+        border-radius: 8px
+        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+        overflow-x: auto
+        max-width: 100%
+        a
+            display: block
+            transition: all .3s
+            border-right: 1px solid #d1d1d6
+            padding: 10px 16px
+            font-family: $font-family
+            font-weight: 600
+            font-size: 14px
+            line-height: 1.42857
+            color: #3f3f46
+            white-space: nowrap
+            &:last-child
+                border: none
+            &:hover,
+            &.active
+                background: #f4f4f5
+    &__soc
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 8px
+        path
+            fill: #A0A0AB
+            transition: all .3s
+        a
+            &:hover
+                path
+                    fill: #51525C
+    &__wrapper
+        margin: 48px 0 
+        display: grid
+        grid-template-columns: 285px 1fr
+        gap: 32px
+        align-items: start
+    &__prev
+        width: 100%
+    &__info
+        border-radius: 16px
+        padding: 16px
+        background: #fafafa
+        width: max-content
+        max-width: 100%
+        display: flex
+        justify-content: start
+        align-items: start
+        gap: 32px
+        &_name
+            font-family: $second-family
+            font-weight: 500
+            font-size: 14px
+            line-height: 1.42857
+            color: #a0a0ab
+        div
+            position: relative
+            padding: 0 32px 0 0
+            border-right: 1px solid #e4e4e7
+            &:last-child
+                padding: 0
+                border: none
+        ul
+            margin: 12px 0 0
+            display: grid
+            grid-template-columns: 1fr
+            gap: 6px
+        li
+            display: flex
+            justify-content: start
+            align-items: center
+            gap: 8px
+            font-family: $font-family
+            font-weight: 500
+            font-size: 16px
+            line-height: 1.5
+            color: #51525c
+    &__descr
+        margin: 24px 0 0 16px
+        font-family: $second-family
+        font-weight: 500
+        font-size: 14px
+        line-height: 1.42857
+        color: #a0a0ab
+    &__text
+        margin: 12px 0 0
+        font-family: $font-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.5
+        color: #51525c
+
+.history
+    &__table
+        position: relative
+        overflow-x: auto
+        border: 1px solid #e4e4e7
+        border-radius: 16px
+        position: relative  
+        table
+            background: #fff
+            width: 100%
+            min-width: 1080px
+            
+            overflow: hidden
+        tr
+            border-bottom: 1px solid #e4e4e7
+            &:last-child
+                border: none
+        td,
+        th
+            padding: 12px 24px
+            justify-content: center
+            align-items: center
+            vertical-align: middle
+            text-align: left
+            svg
+                vertical-align: middle
+                display: inline-block
+                margin: 0 0 0 29px
+        th
+            background: #fafafa
+            font-family: $font-family
+            font-weight: 500
+            font-size: 12px
+            line-height: 1.5
+            color: #51525c
+        td
+            font-family: $second-family
+            font-weight: 500
+            font-size: 14px
+            line-height: 1.42857
+            color: #18181b
+        a
+            font-family: $second-family
+            font-weight: 500
+            font-size: 14px
+            line-height: 1.42857
+            text-decoration: underline
+            text-decoration-skip-ink: none
+            color: #18181b
+
+.sport-slider
+    position: relative
+    overflow: hidden
+    .swiper-button-next,
+    .swiper-button-prev
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 100%
+        width: 56px
+        height: 56px
+        box-shadow: 0 2px 4px -2px rgba(16, 24, 40, 0.06), 0 4px 8px -2px rgba(16, 24, 40, 0.1)
+        background: #d1d1d6
+        inset: auto
+        margin: 0
+        left: 0
+        top: 50%
+        transform: translate(-50%, -50%)
+        opacity: 1
+        svg
+            width: 24px
+            height: 24px
+    .swiper-button-next
+        left: auto
+        right: 0
+        top: 50%
+        transform: translate(50%, -50%)
+        background: #51525c
+    &__slider
+        overflow: visible
+        align-items: stretch
+    .swiper-slide
+        width: 360px
+        height: auto
+        max-width: calc( 100vw - 36px )
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+.catalog-club
+    &__name
+        font-family: $font-family
+        font-weight: 600
+        font-size: 16px
+        line-height: 1.5
+        color: #18181b
+        padding: 12px 16px
+        border-bottom: 1px solid #e4e4e7
+        svg
+            display: none
+    &__list
+        padding: 16px
+    &__btn
+        display: grid
+        grid-template-columns: 1fr 24px
+        gap: 4px
+        align-items: center
+        font-family: $font-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.5
+        text-decoration-skip-ink: none
+        color: #18181b
+        cursor: pointer
+        padding: 6px 8px
+        svg
+            transition: all .3s
+        &.active
+            text-decoration: underline
+            svg
+                transform: rotate(180deg)
+        &:hover
+            text-decoration: underline
+    &__block
+        display: none
+        margin: 4px 8px 6px
+        border-radius: 12px
+        padding: 8px 12px
+        background: #fafafa
+        grid-template-columns: 1fr
+        gap: 8px
+        a
+            font-family: $font-family
+            font-weight: 600
+            font-size: 14px
+            line-height: 1.5
+            color: #70707b
+            &:hover
+                text-decoration: underline
+                text-decoration-skip-ink: none
+                color: #3f3f46
+        &.active
+            display: grid
+    &__wrapper
+        img
+            width: 100%
+
+.club
+    padding: 36px 0 64px
+    &__wrapper
+        display: grid
+        grid-template-columns: 285px 1fr
+        gap: 32px
+        align-items: start
+    &__prev
+        width: 100%
+    &__info
+        border-radius: 16px
+        padding: 16px
+        background: #fafafa
+        display: flex
+        justify-content: start
+        align-items: stretch
+        gap: 32px
+        ol
+            display: grid
+            grid-template-columns: 1fr
+            gap: 6px
+            padding: 0 32px 0 0
+            border-right: 1px solid #e4e4e7
+            height: auto
+            align-content: start
+            li
+                display: flex
+                justify-content: start
+                align-items: center
+                flex-wrap: wrap
+                gap: 4px
+            p
+                font-family: $second-family
+                font-weight: 500
+                font-size: 14px
+                line-height: 1.42857
+                color: #a0a0ab
+                &+p
+                    font-family: $font-family
+                    font-weight: 500
+                    font-size: 16px
+                    line-height: 1.5
+                    color: #51525c
+        ul
+            display: grid
+            grid-template-columns: 1fr
+            gap: 8px
+            li
+                display: grid
+                grid-template-columns: 20px 1fr
+                gap: 8px
+                align-items: center
+                font-family: $font-family
+                font-weight: 500
+                font-size: 16px
+                line-height: 1.5
+                color: #51525c
+                a
+                    text-decoration: underline
+                    text-decoration-skip-ink: none
+                    color: #51525c
+            .comment__rate
+                justify-content: start
+                margin: 0
+    &__descr
+        margin: 12px 0 0
+        &_text
+            margin: 32px 0 0 16px
+            font-family: $second-family
+            font-weight: 500
+            font-size: 14px
+            line-height: 1.42857
+            color: #a0a0ab
+
+.club-gal
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 32px
+        img
+            width: 100%
+            height: 100%
+            display: block
+            object-fit: cover
+
+.comp-list
+    padding: 36px 0 64px
+    .section-list
+        margin: 0 0 36px
+    &__filter
+        border-radius: 20px
+        padding: 16px
+        background: #f4f4f5
+        display: flex
+        justify-content: start
+        align-items: center
+        gap: 12px
+        flex-wrap: wrap
+    &__wrapper
+        margin: 36px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 32px
+        row-gap: 12px
+        a
+            border-radius: 32px
+            padding: 8px 16px
+            background: #fafafa
+            transition: all .3s
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.5
+            color: #51525c
+            &:hover
+                background: #f4f4f5
+        
+.comp-his
+    padding-top: 36px
+    .section-title
+        margin: 36px 0
+    &__banner
+        width: 100%
+    &__content
+        margin: 36px 0 0
+
+.comp
+    padding-top: 36px
+    .section-title
+        margin: 0 0 24px
+    &__link
+        margin: 36px 0 0
+        display: flex
+        justify-content: space-between
+        gap: 16px
+        position: relative
+        width: 100%
+        overflow: hidden
+        a
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 8px
+            font-family: $font-family
+            font-weight: 600
+            font-size: 14px
+            line-height: 1.42857
+            color: #51525c
+    &__banner
+        margin: 16px 0 36px
+        width: 100%
+    &__gal
+        margin: 36px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 32px
+        align-items: stretch
+        div
+            width: 100%
+            height: 292px
+            background: rgba(0, 0, 0, 0.02)
+            position: relative
+        svg
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+        img
+            display: block
+            width: 100%
+            height: 100%
+            display: block
+            min-height: 100%
+            object-fit: cover
+        a
+            position: relative
+            display: flex
+            height: auto
+            justify-content: end
+            flex-direction: column
+            p
+                font-family: $font-family
+                font-weight: 600
+                font-size: 24px
+                line-height: 1.33333
+                color: #18181b
+                margin: 0 0 24px
+
+.bikini
+    padding-top: 24px 0 
+    .section-title
+        margin: 0 0 24px
+    .sport__link a
+        &.active,
+        &:hover
+            background: #fff
+    &__slider
+        &_wrapper
+            position: relative
+            margin: 36px 0 0
+        .swiper-slide
+            align-items: stretch
+        .swiper-slide
+            position: relative
+            display: block
+            background: #CEC0A6
+            height: auto
+            max-height: 640px
+            img
+                width: 100%
+                height: 100%
+                display: block
+                min-height: 100%
+                object-fit: contain
+    .swiper-button-next,
+    .swiper-button-prev
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 100%
+        width: 56px
+        height: 56px
+        box-shadow: 0 2px 4px -2px rgba(16, 24, 40, 0.06), 0 4px 8px -2px rgba(16, 24, 40, 0.1)
+        background: #d1d1d6
+        inset: auto
+        margin: 0
+        left: 0
+        top: 50%
+        transform: translate(-50%, -50%)
+        opacity: 1
+        svg
+            width: 24px
+            height: 24px
+    .swiper-button-next
+        left: auto
+        right: 0
+        top: 50%
+        transform: translate(50%, -50%)
+        background: #51525c
+    .catalog-slider__thumb
+        img
+            height: 120px
+            object-fit: cover
+    &__info
+        display: grid
+        grid-template-columns: 1fr
+        gap: 6px
+        li
+            display: flex
+            justify-content: start
+            align-items: center
+            flex-wrap: wrap
+            gap: 4px
+        p
+            font-family: $second-family
+            font-weight: 500
+            font-size: 14px
+            line-height: 1.42857
+            color: #a0a0ab
+            &+p
+                font-family: $font-family
+                font-weight: 500
+                font-size: 16px
+                line-height: 1.5
+                color: #51525c
+            a
+                font-weight: 500
+                font-size: 16px
+                line-height: 1.5
+                text-decoration: underline
+                text-decoration-skip-ink: none
+                color: #2e90fa
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: start
+        margin: 36px 0 0
+        gap: 36px
+        flex-wrap: wrap
+        .news-list__func
+            margin: 0
+        
+.library-list
+    padding-top: 36px
+    .section-title
+        margin: 0 0 36px
+    &__wrapper
+        margin: 36px 0 0
+        display: flex
+        justify-content: start
+        align-items: center
+        gap: 12px
+        position: relative
+        overflow: hidden
+        a
+            border-radius: 32px
+            padding: 8px 16px
+            background: #fafafa
+            width: max-content
+            max-width: 100%
+            position: relative
+            overflow: hidden
+            text-overflow: ellipsis
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.5
+            color: #51525c
+            white-space: nowrap
+            display: block
+
+.library
+    padding-top: 36px 0 0
+    &__wrapper
+        display: grid
+        grid-template-columns: 285px 1fr
+        gap: 32px
+        align-items: start
+        margin: 0 0 16px
+    &__prev
+        width: 285px
+        height: 375px
+        object-fit: cover
+    &__info
+        border-radius: 16px
+        padding: 16px
+        background: #fafafa
+        display: flex
+        justify-content: space-between
+        align-items: start
+        ul
+            display: grid
+            grid-template-columns: 1fr
+            gap: 6px
+            li
+                display: flex
+                justify-content: start
+                align-items: center
+                flex-wrap: wrap
+                gap: 4px
+            p
+                font-family: $second-family
+                font-weight: 500
+                font-size: 14px
+                line-height: 1.42857
+                color: #a0a0ab
+                &+p
+                    font-family: $font-family
+                    font-weight: 500
+                    font-size: 16px
+                    line-height: 1.5
+                    color: #51525c
+                a
+                    font-weight: 500
+                    font-size: 16px
+                    line-height: 1.5
+                    text-decoration: underline
+                    text-decoration-skip-ink: none
+                    color: #2e90fa
+
+.friend
+    padding-top: 36px 
+    .section-title
+        margin: 0 0 36px
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr
+        gap: 16px
+        border-radius: 16px
+        padding: 16px
+        background: #fafafa
+    &__item
+        display: grid
+        grid-template-columns: 160px 1fr
+        gap: 20px
+        align-items: start
+        padding: 0 0 24px
+        border-bottom: 1px solid #e4e4e7
+        &:last-child
+            padding: 0
+            border: none
+        img
+            width: 100%
+            max-width: 160px
+        p
+            font-family: $font-family
+            font-weight: 600
+            font-size: 24px
+            line-height: 1.33333
+            text-decoration: underline
+            text-decoration-skip-ink: none
+            color: #1570ef
+            &+p
+                font-family: $second-family
+                font-weight: 500
+                font-size: 18px
+                line-height: 1.55556
+                color: #a0a0ab
+                margin: 8px 0 0
+                text-decoration: none
+
+.contact
+    padding-top: 36px 
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 32px
+        align-items: start
+    &__text
+        p
+            font-family: $font-family
+            font-weight: 500
+            font-size: 16px
+            line-height: 1.5
+            color: #18181b
+            &+p
+                margin: 8px 0 0
+                font-family: $second-family
+                font-weight: 400
+                font-size: 12px
+                line-height: 1.5
+                color: #a0a0ab
+    &__info
+        border-radius: 16px
+        padding: 16px
+        background: #fafafa
+        ul
+            margin: 32px 0 0
+            display: grid
+            grid-template-columns: 1fr
+            gap: 8px
+        li
+            display: grid
+            grid-template-columns: 20px 1fr
+            align-items: center
+            gap: 8px 
+            font-family: $font-family
+            font-weight: 500
+            font-size: 16px
+            line-height: 1.5
+            color: #51525c
+            a
+                text-decoration: underline
+                text-decoration-skip-ink: none
+                color: #51525c
+    &__map
+        margin: 24px 0 0
+        position: relative
+        iframe
+            width: 100%
+            height: 360px
+        a
+            position: absolute
+            bottom: 20px
+            left: 20px
+            display: flex
+            justify-content: start
+            align-items: center
+            gap: 8px
+            border: 1px solid #d1d1d6
+            border-radius: 24px
+            padding: 10px 16px
+            background: #fff
+            font-family: $font-family
+            font-weight: 600
+            font-size: 14px
+            line-height: 1.42857
+            color: #3f3f46
+    &__form
+        margin: 32px 0 0
+    &__row
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 20px
+    &__captcha
+        display: flex
+        justify-content: end
+        align-items: center
+        flex-wrap: wrap
+        row-gap: 8px
+        margin: 32px 0 0
+        p
+            font-family: $font-family
+            font-weight: 600
+            font-size: 16px
+            line-height: 1.5
+            color: #3f3f46
+        img
+            width: 102px
+            margin: 0 8px 0 12px
+            display: block
+        a
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 40px
+            height: 40px
+            border-radius: 100%
+            border: 1px solid #51525c
+            background: #51525c
+        input
+            width: 100%
+            max-width: 240px
+            border: 1px solid #d1d1d6
+            border-radius: 8px
+            padding: 8px 12px
+            box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+            background: #fff
+            box-sizing: border-box  
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.5
+            color: #18181b
+            margin: 0 0 0 16px
+            &::placeholder
+                color: #70707b
+        &_text
+            margin: 12px 0 0
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.5
+            color: #a0a0ab
+            text-align: right
+    &__btn
+        margin: 32px 0 0 auto
+        display: block !important
+
+.shop-list
+    padding-top: 36px
+    .catalog-slider__tag
+        margin: 0 0 36px
+
+.sign-in
+    padding-bottom: 200px
+    &__wrapper
+        margin: 186px auto 0
+        max-width: 628px
+    h1
+        font-family: $font-family
+        font-weight: 700
+        font-size: 24px
+        line-height: 1.33333
+        text-transform: uppercase
+        color: #18181b
+    &__block
+        margin: 24px 0 0
+        border-radius: 16px
+        padding: 32px
+        background: #fafafa
+    &__btn
+        padding: 0 0 0 44px
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 16px
+        margin: 24px 0 0
+        align-items: center
+        a
+            border: 1px solid #d0d5dd
+            border-radius: 24px
+            padding: 10px 16px
+            background: #fff
+            font-family: $font-family
+            font-weight: 600
+            font-size: 14px
+            line-height: 1.5
+            color: #344054
+            text-align: center
+    &__enter
+        display: block !important
+        font-size: 14px
+        padding-top: 9px
+        padding-bottom: 9px
+    &__form
+        display: grid
+        grid-template-columns: 1fr
+        gap: 20px
+        input
+            &.error
+                border-color: #fda29b
+        p
+            &.error
+                font-family: $second-family
+                font-weight: 400
+                font-size: 14px
+                line-height: 1.42857
+                color: #f04438
+                grid-column: 2/3
+    &__password
+        font-family: $font-family
+        font-weight: 600
+        font-size: 14px
+        line-height: 1.42857
+        text-decoration: underline
+        text-decoration-skip-ink: none
+        color: #2e90fa
+        margin: 8px 0 0 auto
+        text-align: right
+        display: block
+        width: max-content
+
+.shop
+    &__wrapper
+        display: grid
+        grid-template-columns: 180px 1fr
+        gap: 32px
+        align-items: start
+        margin: 0 0 32px
+    &__prev
+        width: 100%
+        max-width: 180px
+        display: block
+    &__info
+        border-radius: 16px
+        padding: 16px
+        background: #fafafa
+        display: flex
+        gap: 24px
+        justify-content: space-between
+        align-items: start
+        ul
+            display: grid
+            grid-template-columns: 1fr
+            gap: 12px
+        li
+            display: grid
+            grid-template-columns: 20px 1fr
+            gap: 8px
+            align-items: center
+            font-family: $font-family
+            font-weight: 500
+            font-size: 16px
+            line-height: 1.5
+            color: #51525c
+            a
+                font-family: $font-family
+                font-weight: 500
+                font-size: 16px
+                line-height: 1.5
+                text-decoration: underline
+                text-decoration-skip-ink: none
+                color: #51525c
+        .comment__rate
+            justify-content: start
+        .news-list__func
+            margin: 0
+    &__comment
+        margin: 12px 0 0
+        display: flex
+        justify-content: center
+        align-items: center
+        border: 1px solid #d0d5dd
+        border-radius: 24px
+        padding: 8px 14px
+        background: #fff
+        gap: 8px
+        font-family: $font-family
+        font-weight: 600
+        font-size: 14px
+        line-height: 1.42857
+        color: #344054
+        width: max-content
+        max-width: 100%
+    &__tab
+        display: flex
+        justify-content: start
+        align-items: center
+        border-bottom: 1px solid #eaecf0
+        gap: 16px
+        margin: 0 0 24px
+        a
+            transition: all .3s
+            font-family: $font-family
+            font-weight: 600
+            font-size: 14px
+            line-height: 1.42857
+            color: #667085
+            padding: 0 4px 10px
+            position: relative
+            display: block
+            &::before
+                content: ''
+                display: block
+                width: 100%
+                height: 2px
+                background:  #3f3f46
+                position: absolute
+                bottom: 0
+                left: 0
+                opacity: 0
+                transition: all .3s
+            &:hover
+                color: #3f3f46
+            &.active
+                color: #3f3f46
+                &::before
+                    opacity: 1
+    &__contact
+        margin: 24px 0 0
+        display: grid
+        grid-template-columns: 1fr
+        gap: 20px
+        p
+            padding-left: 16px
+            font-family: $second-family
+            font-weight: 500
+            font-size: 14px
+            line-height: 1.42857
+            color: #a0a0ab
+        ul
+            margin: 12px 0 0
+            display: block
+            li
+                padding-left: 24px
+                position: relative
+                font-family: $font-family
+                font-weight: 400
+                font-size: 16px
+                line-height: 1.5
+                color: #51525c
+                &::before
+                    content: ''
+                    display: block
+                    width: 4px
+                    height: 4px
+                    border-radius: 100%
+                    position: absolute
+                    top: 9px
+                    left: 10px
+                    background: #51525c
+
+
+
+
 @media ( max-width: 1200px )
     .nav
         &__block,
@@ -609,8 +2661,9 @@ body
         &__hum
             display: block
             width: 22px
-            height: 18px
+            height: 14px
             position: relative
+            cursor: pointer
             span,
             &::before,
             &::after
@@ -622,7 +2675,525 @@ body
                 left: 0
                 width: 100%
                 background: #51525c
+                transition: all .3s
             &::before
                 top: 50%
             &::after
                 top: 100%
+        &.active
+            .nav
+                &__hum
+                    &::before,
+                    &::after
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%) rotate(45deg)
+                    &::after
+                        transform: translate(-50%, -50%) rotate(-45deg)
+                    span
+                        opacity: 0
+                &__block
+                    display: block
+                &__list
+                    flex-direction: column
+                    align-items: start
+                    a
+                        display: flex
+                        padding: 12px 16px
+                &__drop
+                    display: none
+                    opacity: 1
+                    position: relative
+                    inset: auto
+                    box-shadow: none
+                    border: none
+                    &_btn
+                        width: max-content
+                    &.active
+                        display: block
+                    &_bg
+                        display: none
+                    ol
+                        padding: 0
+                        gap: 0
+                        a
+                            padding: 4px 32px
+                        svg,
+                        img
+                            display: none
+    .header
+        &__row
+            display: none
+        .swiper-slide
+            display: grid
+            grid-template-rows: 1fr auto
+            .header__item
+                display: block
+        &__item
+            &::before
+                content: none
+    .discus
+        &__wrapper
+            grid-template-columns: 1fr
+    .article
+        &__last
+            grid-template-columns: 1fr
+    .last-pic
+        &__wrapper
+            grid-template-columns: 1fr 1fr 1fr
+    .catalog-slider
+        &__tag
+            justify-content: start
+        &__wrapper
+            .swiper-slide
+                img
+                    height: 54vw
+            &_block
+                .swiper-button-next
+                    transform: translateY(-50%)
+                    right: -16px
+                .swiper-button-prev
+                    left: -16px
+                    transform: translateY(-50%)
+    .bikini
+        .swiper-button-next
+            transform: translateY(-50%)
+            right: -16px
+        .swiper-button-prev
+            left: -16px
+            transform: translateY(-50%)
+    .sport-list
+        &__wrapper
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+        .nav__search
+            display: block
+    .sport-slider
+        .swiper-button-next
+            transform: translateY(-50%)
+            right: -16px
+        .swiper-button-prev
+            left: -16px
+            transform: translateY(-50%)
+
+
+@media ( max-width: 1024px )
+    .lead
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+    .catalog
+        padding-top: 0    
+        &__row
+            padding: 24px 16px 36px
+            margin: 0 -16px
+            width: calc( 100% + 32px )
+            background: #f4f4f5
+            flex-direction: column
+            gap: 10px
+        &__wrapper
+            display: block
+        &__aside
+            display: none
+        &__filter
+            display: block
+            margin: 0 0 24px
+            &_name,
+            &_check
+                display: none
+                border: none
+            &_mob
+                display: block
+            &_check
+                border: none
+        &__drop
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding: 6px 10px
+            border-radius: 8px
+            background: #f4f4f5
+            cursor: pointer
+            svg
+                transition: all .3s
+                display: block
+            &.active
+                svg
+                    transform: rotate(-180deg)
+            &_wrapper
+                display: none
+                &.active
+                    display: grid
+                    border-top: 1px solid #e4e4e7
+    .comment
+        &__block
+            grid-template-columns: 1fr
+        &__form
+            border: none
+            border-top: 1px solid #e4e4e7
+            padding: 32px 0 0
+    .sport-list
+        &__wrapper
+            grid-template-columns: 1fr 1fr 1fr 1fr
+    .sport
+        &__wrapper
+            grid-template-columns: 1fr
+            gap: 24px
+            margin: 16px 0 36px
+        &__prev
+            max-width: 285px
+    .catalog-club
+        &__list
+            display: none
+            &.active
+                display: grid
+        &__name
+            border-bottom: none
+            display: flex
+            justify-content: space-between
+            align-items: center
+            gap: 4px
+            cursor: pointer
+            svg
+                display: block
+            &.active
+                border-bottom: 1px solid #e4e4e7
+                svg
+                    transform: rotate(180deg)
+    .club
+        &__wrapper
+            grid-template-columns: 1fr
+            gap: 16px
+        &__prev
+            max-width: 285px
+    .comp-list
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+    .comp
+        &__gal
+            grid-template-columns: 1fr 1fr
+    .library
+        padding-top: 32px
+        &__wrapper
+            grid-template-columns: 1fr
+        .section-title
+            margin: 0 0 16px
+    .contact
+        &__wrapper
+            grid-template-columns: 1fr
+
+
+@media ( max-width: 700px )
+    .section
+        &-title
+            display: block
+        &-link
+            display: none
+            &__mob
+                display: flex
+                width: max-content
+                margin: 36px auto 0
+    .footer
+        padding: 48px 0 
+        &__block
+            grid-template-columns: 1fr
+        &__logo
+            max-width: 153px
+        &__list
+            &_wrapper
+                grid-template-columns: 1fr
+    .catalog-slider
+        padding-bottom: 36px
+        &__thumb
+            display: none
+        &__wrapper
+            &_block
+                margin: 10px 0 0
+            a.section-link
+                display: flex
+                padding: 8px 14px
+                bottom: 16px
+                right: 16px
+    .catalog
+        .section-title
+            margin: 24px 0 0
+        &__wrapper
+            margin: 24px 0 0
+        &__out
+            border: none
+            &_row
+                gap: 4px
+                flex-direction: column
+                align-items: start
+        &__club
+            grid-template-columns: 1fr
+            gap: 0
+            &_info
+                margin: 20px 0 0
+            .news-list__func
+                margin: 8px 0 0
+    .pag
+        ul
+            li
+                &:nth-child(3),
+                &:nth-child(4),
+                &:nth-child(5),
+                &:nth-child(6),
+                &:nth-child(8),
+                &:nth-child(9),
+                &:nth-child(10),
+                &:nth-child(11)
+                    display: none
+    .card
+        .container
+            grid-template-columns: 1fr
+            gap: 32px
+    .comment
+        .section-link
+            display: block
+    .news-list
+        &__wrapper
+            grid-template-columns: 1fr
+            gap: 24px
+        &__item
+            padding: 0 0 20px
+            &::before
+                content: none !important
+    .sport-list
+        &__filter
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 12px
+            margin: 24px 0 0
+            .nav__search
+                grid-column: 1/3
+                max-width: 100%
+            .select
+                width: 100%
+                margin: 0 !important
+    .sport
+        &__row
+            flex-direction: column
+            gap: 24px
+            align-items: start
+            .select
+                width: 100%
+                margin: 0
+    .library
+        &__wrapper
+            gap: 24px
+        &__info
+            flex-direction: column
+            gap: 32px
+            .section-link
+                display: flex
+                margin: 0 0 0 auto
+    .friend
+        &__item
+            grid-template-columns: 1fr
+    .shop
+        &__wrapper
+            grid-template-columns: 1fr
+            gap: 16px
+
+
+@media ( max-width: 600px )
+    .section
+        padding: 48px 0
+        &-title
+            margin: 0 0 36px
+    .discus
+        &__wrapper
+            margin: 36px 0 0
+            gap: 24px
+        &__bg
+            display: none
+    .article
+        &__last
+            margin: 36px 0 0
+            gap: 24px
+            &_main
+                img
+                    height: 200px
+                    object-fit: cover
+                p
+                    font-size: 18px
+            &_item
+                img
+                    height: 200px
+                    object-fit: cover
+                grid-template-columns: 1fr
+        &::before
+            content: none
+    .last-pic
+        &__wrapper
+            margin: 36px 0 0
+            grid-template-columns: 1fr 1fr
+            gap: 12px
+    .content
+        h2
+            margin: 0 0 36px
+    .nav
+        &__logo
+            max-width: 153px
+        &__row
+            padding: 20px 0
+    .lead
+        &__wrapper
+            grid-template-columns: 1fr
+            gap: 24px
+    .catalog-slider
+        padding-top: 24px
+        padding-bottom: 36px
+        &__tag
+            gap: 8px
+    .catalog
+        padding-top: 0    
+        padding-bottom: 36px
+        &__out
+            &_sort
+                gap: 12px
+                flex-wrap: wrap
+                justify-content: start
+                p
+                    width: 100%
+        &__item
+            grid-template-columns: 1fr
+            img
+                width: 160px
+            p
+                &+p
+                    display: none
+        &__title
+            margin: 24px 0 0
+    .breadcrumbs
+        padding: 24px 0 16px
+    .card
+        padding: 24px 0 
+    .comment
+        padding: 36px 0 68px
+        .section-title
+            margin: 0 0 24px
+        &__form
+            padding: 0
+            border: none
+        &__input
+            grid-template-columns: 1fr
+        &__enter
+            flex-direction: column
+            align-items: end
+        &__name
+            flex-direction: column
+            gap: 4px
+    .nav-tab
+        display: none
+    .news-video
+        iframe
+            height: 350px
+    .sport-list
+        padding: 24px 0
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+        &__check
+            margin: 0 -16px
+            gap: 7px
+            padding: 16px
+            border-radius: 0
+            a
+                width: 36px
+                height: 36px
+                font-size: 14px
+        .section-title
+            margin: 0 0 16px
+    .sport
+        padding-top: 32px
+        &__info
+            flex-direction: column
+            gap: 12px
+            max-width: 100%
+            width: 100%
+            div
+                padding: 0 0 12px
+                border-right: none
+                border-bottom: 1px solid #e4e4e7
+                width: 100%
+    .club
+        .section-title
+            margin: 0 0 16px
+        &__info
+            flex-direction: column
+            gap: 16px
+            ol
+                padding: 0 0 16px
+                border: none
+                border-bottom: 1px solid #e4e4e7
+        &__descr
+            margin: 12px 0 0
+            &_text
+                margin: 16px 0 0 16px
+    .club-gal
+        &__wrapper
+            gap: 4px
+    .comp-list
+        .section-title
+            margin: 0 0 16px
+        &__wrapper
+            grid-template-columns: 1fr
+            gap: 12px
+            margin: 16px 0 0
+        &__filter
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 4px
+            row-gap: 12px
+            .select
+                &:nth-child(3)
+                    grid-column: 1/3
+    .comp-his
+        padding-top: 36px
+        .section-title
+            margin: 16px 0
+        &__content
+            margin: 16px 0 0
+    .comp
+        padding-top: 32px
+        &__link
+            margin: 16px 0 0
+            a
+                font-size: 12px
+                gap: 4px
+            svg
+                width: 15px
+                height: 15px
+        &__gal
+            div
+                height: 132px
+        &__video
+            grid-template-columns: 1fr
+            div
+                height: 240px
+    .bikini
+        padding-top: 24px
+        &__slider
+            .swiper-slide
+                max-height: 200px
+    .library
+        padding-top: 32px
+    .friend
+        padding: 48px 0 32px
+        .section-title
+            margin: 0 0 16px
+    .contact
+        &__row
+            grid-template-columns: 1fr
+        &__form
+            .comment__input
+                grid-template-columns: 36px 1fr
+    .shop-list
+        padding-top: 0
+        .catalog-slider__tag
+            padding: 24px 16px 36px
+            margin: 0 -16px 48px
+            background: #f4f4f5
+    .shop
+        &__info
+            flex-direction: column
+
