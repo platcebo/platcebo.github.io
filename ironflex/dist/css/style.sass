@@ -89,7 +89,7 @@ body
     &__list
         display: flex
         justify-content: start
-        align-items: center
+        align-items: stretch
         gap: 0
         a
             font-family: $font-family
@@ -100,7 +100,10 @@ body
             padding: 8px 12px
             border-radius: 32px
             transition: all .3s
-            &:hover
+            height: 100%
+            display: flex
+            &:hover,
+            &.active
                 background: #fafafa
         li
             position: relative
@@ -224,6 +227,7 @@ body
         padding: 24px
         display: block
         position: relative
+        background: #fff
         &::before
             content: ''
             display: block
@@ -277,6 +281,8 @@ body
                 border-color: #d1d1d6
                 path
                     stroke: #3f3f46
+    .swiper-pagination
+        display: none
 
 .discus
     position: relative
@@ -401,10 +407,12 @@ body
                 height: 100%
                 object-fit: cover
                 display: block
+                // max-height: calc( 100% - 164px )
             div
                 display: flex
                 flex-direction: column
-            p
+            p,
+            a:nth-child(1)
                 font-family: $font-family
                 font-weight: 600
                 font-size: 24px
@@ -421,6 +429,7 @@ body
                 line-clamp: 2
                 position: relative
                 overflow: hidden
+                margin: 0
                 &+p
                     margin: 8px 0 auto
                     font-family: $font-family
@@ -461,7 +470,9 @@ body
             div
                 display: flex
                 flex-direction: column
-            p
+            p,
+            a:nth-child(1)
+                margin: 0
                 font-family: $font-family
                 font-weight: 600
                 font-size: 18px
@@ -596,7 +607,7 @@ body
     a
         display: block
         font-family: $second-family
-        font-weight: 500
+        font-weight: 400
         font-size: 14px
         line-height: 1.42857
         color: #a0a0ab
@@ -606,7 +617,7 @@ body
             color: #18181b
     p
         font-family: $second-family
-        font-weight: 500
+        font-weight: 400
         font-size: 18px
         line-height: 1.55556
         text-align: center
@@ -707,22 +718,25 @@ body
                 width: 56px
                 height: 56px
                 box-shadow: 0 2px 4px -2px rgba(16, 24, 40, 0.06), 0 4px 8px -2px rgba(16, 24, 40, 0.1)
-                background: #d1d1d6
+                background: #51525c
                 inset: auto
                 margin: 0
                 left: 0
                 top: 50%
                 transform: translate(-50%, -50%)
                 opacity: 1
+                transition: all .3s
                 svg
                     width: 24px
                     height: 24px
+                &.swiper-button-disabled,
+                &:hover
+                    background: #d1d1d6
             .swiper-button-next
                 left: auto
                 right: 0
                 top: 50%
                 transform: translate(50%, -50%)
-                background: #51525c
     &__thumb
         margin: 36px 0 0
         .swiper-wrapper
@@ -1068,7 +1082,6 @@ body
                 height: 20px
                 svg
                     opacity: 0
-                    transition: all .3s
                     width: 14px
                     height: 14px
             p
@@ -1595,6 +1608,7 @@ body
         opacity: 0
         z-index: 2
         cursor: pointer
+        -webkit-appearance: none
     &:hover
         background: #f4f4f5
 
@@ -1809,7 +1823,7 @@ body
             font-weight: 500
             font-size: 14px
             line-height: 1.42857
-            color: #18181b
+            color: #51525c
         a
             font-family: $second-family
             font-weight: 500
@@ -1818,6 +1832,7 @@ body
             text-decoration: underline
             text-decoration-skip-ink: none
             color: #18181b
+            text-underline-offset: 3px
 
 .sport-slider
     position: relative
@@ -1831,22 +1846,25 @@ body
         width: 56px
         height: 56px
         box-shadow: 0 2px 4px -2px rgba(16, 24, 40, 0.06), 0 4px 8px -2px rgba(16, 24, 40, 0.1)
-        background: #d1d1d6
+        background: #51525c
         inset: auto
         margin: 0
         left: 0
         top: 50%
         transform: translate(-50%, -50%)
         opacity: 1
+        transition: all .3s
         svg
             width: 24px
             height: 24px
+        &.swiper-button-disabled,
+        &:hover
+            background: #d1d1d6
     .swiper-button-next
         left: auto
         right: 0
         top: 50%
         transform: translate(50%, -50%)
-        background: #51525c
     &__slider
         overflow: visible
         align-items: stretch
@@ -2140,22 +2158,25 @@ body
         width: 56px
         height: 56px
         box-shadow: 0 2px 4px -2px rgba(16, 24, 40, 0.06), 0 4px 8px -2px rgba(16, 24, 40, 0.1)
-        background: #d1d1d6
+        background: #51525c
         inset: auto
         margin: 0
         left: 0
         top: 50%
         transform: translate(-50%, -50%)
         opacity: 1
+        transition: all .3s
         svg
             width: 24px
             height: 24px
+        &.swiper-button-disabled,
+        &:hover
+            background: #d1d1d6
     .swiper-button-next
         left: auto
         right: 0
         top: 50%
         transform: translate(50%, -50%)
-        background: #51525c
     .catalog-slider__thumb
         img
             height: 120px
@@ -2726,12 +2747,35 @@ body
             display: none
         .swiper-slide
             display: grid
-            grid-template-rows: 1fr auto
+            grid-template-rows: 40vw auto
             .header__item
                 display: block
+            img
+                height: 40vw
         &__item
             &::before
                 content: none
+        .swiper-pagination
+            position: absolute
+            inset: auto
+            top: calc( 40vw - 26px )
+            left: 16px
+            justify-content: start
+            gap: 16px
+            transform: none
+            margin: 0
+            display: flex
+            width: calc( 100% - 32px )
+            span
+                display: block
+                width: 10px
+                height: 10px
+                background: #d1d1d6
+                position: relative
+                margin: 0 !important
+                opacity: 1
+                &.swiper-pagination-bullet-active
+                    background: #51525c
     .discus
         &__wrapper
             grid-template-columns: 1fr
@@ -2993,6 +3037,41 @@ body
         &__wrapper
             grid-template-columns: 1fr
             gap: 16px
+    .header
+        .swiper-slide
+            grid-template-rows: 117vw auto
+            img
+                height: 117vw
+        .swiper-pagination
+            top: calc( 117vw - 26px )
+    .nav
+        &__list
+            width: 100%
+            padding: 0 0 8px
+            position: relative
+            &::before
+                content: ''
+                display: block
+                position: absolute
+                bottom: 0
+                left: 50%
+                height: 1px
+                width: 100vw
+                background: #e4e4e7
+                transform: translateX(-50%)
+            li
+                width: 100%
+            a
+                width: 100% !important
+                justify-content: space-between
+                color: #18181b !important
+        &__block
+            .container
+                display: block
+            .nav__link
+                display: flex
+                margin: 16px 0 0 auto
+                width: max-content
 
 
 @media ( max-width: 600px )
@@ -3132,6 +3211,7 @@ body
     .club-gal
         &__wrapper
             gap: 4px
+            grid-template-columns: 1fr 1fr 1fr
     .comp-list
         .section-title
             margin: 0 0 16px

@@ -5,15 +5,24 @@ var swiperHeader = new Swiper(".header__slider", {
         delay: 2500,
         disableOnInteraction: false,
     },
+    pagination: {
+        el: ".header__slider .swiper-pagination",
+    },
 });
 
-let headerItem = document.querySelectorAll('.header__item');
+let headerItem = document.querySelectorAll('.header__row .header__item');
 
 if(headerItem !== null) {
     swiperHeader.on('slideChange', function () {
-        headerItem.forEach(a=>a.classList.remove('active'))
-        headerItem[swiperHeader.activeIndex].classList.add('active')
+        headerItem.forEach(a=>a.classList.remove('active'));
+        headerItem[swiperHeader.activeIndex].classList.add('active');
     });
+
+    headerItem.forEach((item,i)=>{
+        item.addEventListener('mouseover',()=>{
+            swiperHeader.slideTo(i)
+        })
+    })
 }
 
 var swiperthumb = new Swiper(".catalog-slider__thumb", {
@@ -76,22 +85,42 @@ if(navDrop !== null) {
                 })
             }
         })
-        item.addEventListener('click', (e)=>{
-            e.preventDefault()
-            if(item.classList.contains('active')) {
-                navDrop.forEach((a,b)=>{
-                    navDropBtn[b].classList.remove('active')
-                    navDrop[b].classList.remove('active')
-                })
-            } else {
+
+        if(window.innerWidth > 800) {
+            item.addEventListener('mouseover', (e)=>{
+
                 navDrop.forEach((a,b)=>{
                     navDropBtn[b].classList.remove('active')
                     navDrop[b].classList.remove('active')
                 })
                 navDropBtn[i].classList.add('active')
                 navDrop[i].classList.add('active')
-            }
-        })
+
+            })
+
+            item.addEventListener('click', (event)=>{
+                if(event.target.closest('svg')) {
+                    event.preventDefault()
+                }
+            })
+        } else {
+            item.addEventListener('click', (e)=>{
+                e.preventDefault()
+                if(item.classList.contains('active')) {
+                    navDrop.forEach((a,b)=>{
+                        navDropBtn[b].classList.remove('active')
+                        navDrop[b].classList.remove('active')
+                    })
+                } else {
+                    navDrop.forEach((a,b)=>{
+                        navDropBtn[b].classList.remove('active')
+                        navDrop[b].classList.remove('active')
+                    })
+                    navDropBtn[i].classList.add('active')
+                    navDrop[i].classList.add('active')
+                }
+            })
+        }
     })
 }
 
@@ -116,24 +145,22 @@ if(catalogDrop !== null) {
     })
 }
 
-document.body.addEventListener('click', (event)=>{
-    let target = event.target;
+const selects = document.querySelectorAll('.select');
+    
+if(selects !== null) {
+    selects.forEach(selectContainer => {
+        const selectInput = selectContainer.querySelector('select');
+        const selectVal = selectContainer.querySelector('p');
+        
+        if (!selectInput || !selectVal) return;
+        
+        // Подписываем на change при инициализации
+        selectInput.addEventListener('change', () => {
+            selectVal.innerHTML = selectInput.value;
+        });
+    });
+}
 
-    if(target.closest('.select')) {
-
-        let selectInput = document.querySelectorAll('.select select'),
-            selectVal = document.querySelectorAll('.select p');
-
-
-        for(let i = 0; i < selectInput.length; i++) {
-            if(target && target == selectInput[i]) {
-                selectInput[i].addEventListener('change', ()=>{
-                    selectVal[i].innerHTML = selectInput[i].options[selectInput[i].selectedIndex].text
-                })
-            } 
-        }
-    }
-})
 
 let drop = document.querySelectorAll('.drop'),
     dropBlock = document.querySelectorAll('.drop-wrapper');
