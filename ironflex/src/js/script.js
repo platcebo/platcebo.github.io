@@ -1,5 +1,7 @@
 "use strict";
 
+document.addEventListener('DOMContentLoaded', function() {
+
 var swiperHeader = new Swiper(".header__slider", {
     autoplay: {
         delay: 2500,
@@ -51,24 +53,30 @@ var swiper = new Swiper(".sport-slider__slider", {
     },
 });
 
-// var bikini = new Swiper(".bikini__thumb", {
-//     spaceBetween: 20,
-//     slidesPerView: 8,
-//     watchSlidesProgress: true,
-//     freeMode: true,
-// });
-
-var swiper = new Swiper(".bikini__slider", {
-    navigation: {
-        nextEl: ".bikini .swiper-button-next",
-        prevEl: ".bikini .swiper-button-prev",
+var modalSwiper = new Swiper(".modal-slider__wrapper", {
+    slidesPerView: 1,
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true,
     },
-    thumbs: {
-        swiper: swiperthumb,
+    navigation: {
+        nextEl: ".modal-slider__wrapper .swiper-button-next",
+        prevEl: ".modal-slider__wrapper .swiper-button-prev",
     },
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+let modalSlider = document.querySelector('.modal-slider'),
+    modalCall = document.querySelectorAll('.club-gal__wrapper img');
+
+if(modalSlider !== null) {
+    modalCall.forEach((item,i)=>{
+        item.addEventListener('click', ()=>{
+            modalSlider.classList.add('active');
+            modalSwiper.slideTo(i)
+        })
+    })
+}
+
 
 let navDrop = document.querySelectorAll('.nav__drop'),
     navDropBtn = document.querySelectorAll('.nav__drop_btn');
@@ -133,6 +141,7 @@ if(nav !== null) {
     })
 }
 
+
 let catalogDrop = document.querySelectorAll('.catalog__drop'),
     catalogDropWrapper = document.querySelectorAll('.catalog__drop_wrapper');
 
@@ -145,19 +154,25 @@ if(catalogDrop !== null) {
     })
 }
 
-const selects = document.querySelectorAll('.select');
+let select = document.querySelectorAll('.select'),
+    selectList = document.querySelectorAll('.select ul'),
+    selectInput = document.querySelectorAll('.select input');
     
-if(selects !== null) {
-    selects.forEach(selectContainer => {
-        const selectInput = selectContainer.querySelector('select');
-        const selectVal = selectContainer.querySelector('p');
-        
-        if (!selectInput || !selectVal) return;
-        
-        // Подписываем на change при инициализации
-        selectInput.addEventListener('change', () => {
-            selectVal.innerHTML = selectInput.value;
-        });
+if(select !== null) {
+    selectList.forEach((selectUl, num)=>{
+        let selectPoint = selectUl.querySelectorAll('li');
+
+        selectPoint.forEach((item)=>{
+            item.addEventListener('click', ()=>{
+                selectInput[num].value = item.innerHTML
+            })
+        })
+    })
+
+    select.forEach(selectItem => {
+        selectItem.addEventListener('click', ()=>{
+            selectItem.classList.toggle('active')
+        })
     });
 }
 
@@ -183,6 +198,55 @@ if(clubBtn !== null) {
             item.classList.toggle('active'),
             clubList[i].classList.toggle('active')
         })
+    })
+}
+
+let modal = document.querySelectorAll('.modal'),
+    modalOverflow = document.querySelectorAll('.modal__overflow'),
+    modalClose = document.querySelectorAll('.modal__close');
+
+if(modal !== null) {
+    modalOverflow.forEach((item)=>{
+        item.addEventListener('click', ()=>{
+            modal.forEach(a=>a.classList.remove('active'))
+        })
+    })
+    modalClose.forEach((item)=>{
+        item.addEventListener('click', ()=>{
+            modal.forEach(a=>a.classList.remove('active'))
+        })
+    })
+}
+
+let bikiniCall = document.querySelectorAll('.bikini__slider .swiper-slide img'),
+    bikiniModal = document.querySelector('.modal-photo'),
+    bikiniWrapper = document.querySelector('.modal-photo__img');
+
+if(bikiniCall !== null) {
+    bikiniCall.forEach((item)=>{
+        item.addEventListener('click', ()=>{
+            bikiniWrapper.innerHTML = item.outerHTML;
+
+            bikiniModal.classList.add('active');
+        })
+    })
+}
+
+let tabPoint = document.querySelectorAll('.shop__tab'),
+    tabWrapper = document.querySelectorAll('.tab-wrapper');
+
+if(tabPoint !== null) {
+    tabPoint.forEach((item)=>{
+        let tab = item.querySelectorAll('a');
+
+        tab.forEach((tabItem,i)=>[
+            tabItem.addEventListener('click', (e)=>{
+                e.preventDefault();
+
+                tabWrapper.forEach(a=>a.classList.remove('active'))
+                tabWrapper[i].classList.add('active')
+            })
+        ])
     })
 }
 

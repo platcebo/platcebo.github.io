@@ -1,6 +1,11 @@
 $font-family: "Roboto", sans-serif
 $second-family: "Inter", sans-serif
 
+.tab-wrapper
+    display: none
+    &.active
+        display: block
+
 body
     background: #fff
     font-family: $font-family
@@ -204,7 +209,7 @@ body
                 color: #a0a0ab
                 overflow: hidden
                 text-overflow: ellipsis
-
+            
 .header
     &__slider
         width: 100%
@@ -749,7 +754,8 @@ body
         .swiper-slide
             height: auto
             cursor: pointer                                                                     
-            &.swiper-slide-thumb-active
+            &.swiper-slide-thumb-active,
+            &.active
                 img
                     opacity: 1
 
@@ -1347,7 +1353,7 @@ body
         margin: 16px 0 0
         font-family: $second-family
         font-weight: 500
-        font-size: 18px
+        font-size: 14px
         line-height: 1.55556
         color: #a0a0ab
     &__form
@@ -1381,6 +1387,16 @@ body
             color: #18181b
             &::placeholder
                 color: #70707b
+            &.error
+                border-color: #fda29b
+        p
+            &.error
+                font-family: $second-family
+                font-weight: 400
+                font-size: 14px
+                line-height: 1.42857
+                color: #f04438
+                grid-column: 2/3
         textarea
             height: 180px
             resize: none
@@ -1431,6 +1447,25 @@ body
             text-decoration: underline
             text-decoration-skip-ink: none
             color: #2e90fa
+    &__avatar
+        img
+            width: 64px
+            height: 64px
+            border-radius: 8px
+        &+div
+            align-self: start           
+            margin: 0 auto 0 8px
+    &__answer
+        padding: 0 0 0 64px
+        &_text
+            margin: 12px 0 12px auto
+            width: max-content
+            display: block
+            font-family: $font-family
+            font-weight: 600
+            font-size: 14px                                 
+            line-height: 1.5
+            color: #51525c
 
 .nav-tab
     border-bottom: 1px solid #e4e4e7
@@ -1587,8 +1622,11 @@ body
     align-items: center
     gap: 8px
     transition: all .3s
-    overflow: hidden
-    p
+    cursor: pointer
+    z-index: 4
+    &+.select
+        z-index: 3
+    input
         font-family: $font-family
         font-weight: 600
         font-size: 14px
@@ -1599,18 +1637,45 @@ body
         text-overflow: ellipsis
         width: 100%
         white-space: nowrap
-    select
+        box-sizing: border-box
+        background: transparent
+        padding: 0
+        margin: 0
+        border: none
+        pointer-events: none
+        &::placeholder
+            color: #3f3f46
+    ul
         position: absolute
-        top: 0
+        top: calc( 100% + 5px )
         left: 0
         width: 100%
-        height: 100%
+        max-height: 200px
         opacity: 0
-        z-index: 2
-        cursor: pointer
-        -webkit-appearance: none
-    &:hover
-        background: #f4f4f5
+        z-index: 4
+        pointer-events: none
+        display: grid
+        grid-template-columns: 1fr
+        gap: 4px
+        overflow-y: auto
+        background: #fff
+        border: 1px solid #d1d1d6
+        border-radius: 24px
+        padding: 4px 0
+        transition: all .3s
+        li
+            cursor: pointer
+            font-weight: 500
+            font-size: 14px
+            color: #3f3f46
+            padding: 8px 12px
+            border-radius: 32px
+            transition: all .3s
+            height: 100%
+    &.active
+        ul
+            opacity: 1
+            pointer-events: all
 
 .sport-list
     &__check
@@ -1807,7 +1872,8 @@ body
             align-items: center
             vertical-align: middle
             text-align: left
-            svg
+            svg,
+            img
                 vertical-align: middle
                 display: inline-block
                 margin: 0 0 0 29px
@@ -1833,6 +1899,14 @@ body
             text-decoration-skip-ink: none
             color: #18181b
             text-underline-offset: 3px
+        span
+            font-family: $second-family
+            font-weight: 400
+            font-size: 14px
+            line-height: 1.42857
+            color: #16b364
+            margin: 0 0 0 24px
+            display: inline-block
 
 .sport-slider
     position: relative
@@ -1847,7 +1921,6 @@ body
         height: 56px
         box-shadow: 0 2px 4px -2px rgba(16, 24, 40, 0.06), 0 4px 8px -2px rgba(16, 24, 40, 0.1)
         background: #51525c
-        inset: auto
         margin: 0
         left: 0
         top: 50%
@@ -2147,8 +2220,8 @@ body
                 width: 100%
                 height: 100%
                 display: block
-                min-height: 100%
                 object-fit: contain
+                max-height: 640px
     .swiper-button-next,
     .swiper-button-prev
         display: flex
@@ -2229,6 +2302,7 @@ body
         display: flex
         justify-content: start
         align-items: center
+        flex-wrap: wrap
         gap: 12px
         position: relative
         overflow: hidden
@@ -2297,6 +2371,10 @@ body
                     text-decoration: underline
                     text-decoration-skip-ink: none
                     color: #2e90fa
+    &__descr
+        p
+            margin: 0
+            padding: 0 0 5px
 
 .friend
     padding-top: 36px 
@@ -2546,7 +2624,8 @@ body
         grid-template-columns: 180px 1fr
         gap: 32px
         align-items: start
-        margin: 0 0 32px
+    .tab-wrapper
+        margin: 32px 0 0
     &__prev
         width: 100%
         max-width: 180px
@@ -2670,6 +2749,95 @@ body
                     left: 10px
                     background: #51525c
 
+.modal
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: start
+    align-items: start
+    opacity: 0
+    pointer-events: none
+    transition: all .3s
+    padding: 20px 16px
+    z-index: 5
+    &.active
+        opacity: 1
+        pointer-events: all
+    &__close
+        position: absolute
+        top: 20px
+        right: 20px
+        cursor: pointer
+        svg
+            width: 30px
+            height: 30px
+    &__overflow
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: #000
+        opacity: 0.5
+        z-index: -1
+
+.modal-photo
+    &__img
+        width: 100%
+        height: 100%
+    img
+        width: 100%
+        height: 100%
+        display: block
+        margin: auto
+        object-fit: contain
+
+.modal-slider
+    .modal-close
+        z-index: 10
+        position: relative
+    .swiper-button-next,
+    .swiper-button-prev
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 100%
+        width: 56px
+        height: 56px
+        box-shadow: 0 2px 4px -2px rgba(16, 24, 40, 0.06), 0 4px 8px -2px rgba(16, 24, 40, 0.1)
+        background: #51525c
+        inset: auto
+        margin: 0
+        left: 16px
+        top: 50%
+        transform: translateY(-50%)
+        opacity: 1
+        transition: all .3s
+        svg
+            width: 24px
+            height: 24px
+        &.swiper-button-disabled,
+        &:hover
+            background: #d1d1d6
+    .swiper-button-next
+        left: auto
+        right: 16px
+    &__wrapper
+        position: relative
+        z-index: -1
+        .swiper-wrapper
+            pointer-events: none !important     
+        img
+            height: calc( 100vh - 40px )
+            width: 100%
+            display: block
+            object-fit: contain
+            pointer-events: none
+        .swiper-slide
+            pointer-events: none !important
 
 
 
@@ -3160,8 +3328,12 @@ body
             flex-direction: column
             align-items: end
         &__name
-            flex-direction: column
+            // flex-direction: column
             gap: 4px
+            flex-wrap: wrap
+        &__rate
+            width: 100%
+            justify-content: start
     .nav-tab
         display: none
     .news-video
@@ -3276,4 +3448,15 @@ body
     .shop
         &__info
             flex-direction: column
+    .sign-in
+        .comment__input
+            grid-template-columns: 36px 1fr
+        &__btn
+            grid-template-columns: 1fr
+            padding: 0
+            align-items: center
+        &__password
+            text-align: center
+            margin: 8px auto 0
 
+        
