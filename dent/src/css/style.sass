@@ -1035,7 +1035,7 @@ html
         background: $white-50
         position: relative
         overflow: hidden
-        display: block
+        display: grid
         grid-template-rows: auto 1fr
         // transition: all .3s
         z-index: 2
@@ -1284,6 +1284,8 @@ html
             &::placeholder
                 color: $grey
             &.error
+                border: 1px solid #ff3b30
+            &:user-invalid
                 border: 1px solid #ff3b30
         textarea
             resize: none
@@ -1550,6 +1552,7 @@ html
         grid-template-columns: auto 1fr
         gap: 20px
         align-items: center
+        padding-right: 45px
         div
             position: relative
             overflow: hidden
@@ -6106,11 +6109,13 @@ html
         &__block
             grid-template-columns: 1fr
             border-radius: 30px
-            overflow: hidden
+            overflow: visible
             position: relative  
             width: 100%
         &__prev
             border-radius: 0
+            height: 250px
+            border-radius: 30px 30px 0 0
             video,
             img,
             iframe
@@ -6119,6 +6124,7 @@ html
             padding: 10px 20px 14px
             background: url('../img/consult_bg.jpg') center no-repeat   
             background-size: cover
+            border-radius: 0 0 30px 30px
         &__title
             justify-content: center
             align-items: center
@@ -6719,8 +6725,6 @@ html
             .select,
             &_check
                 max-width: 100%
-        &__wrapper
-            grid-template-columns: 100%
     .legal-info
         &__license
             &_wrapper
@@ -6994,6 +6998,7 @@ html
         &__autor
             gap: 10px
             margin: 16px 0 0
+            padding: 0
         .comf__link
             display: none
     .stocks
@@ -7610,6 +7615,8 @@ html
     .media
         &__item
             width: calc( 50% - 10px )
+    .header
+        padding-bottom: 112px
 
 @media ( max-width: 600px )
     .consult
