@@ -911,43 +911,94 @@ if(modalForm!==null) {
 }
 
 
-let priceAutor = document.querySelectorAll('.price__service .price__doc_autor'),
-    priceBlock = document.querySelectorAll('.price__service');
+// let priceAutor = document.querySelectorAll('.price__service .price__doc_autor'),
+//     priceBlock = document.querySelectorAll('.price__service');
 
-if(priceAutor != null) {
-    if(window.innerWidth > 1400) {
-        let articleLeft = document.querySelectorAll('.price-service__tab')[0].getBoundingClientRect().right + 20
+// if(priceAutor != null) {
+//     if(window.innerWidth > 1400) {
+//         let articleLeft = document.querySelectorAll('.price-service__tab')[0].getBoundingClientRect().right + 20
 
-        window.addEventListener('scroll', ()=>{
+//         window.addEventListener('scroll', ()=>{
 
-            priceAutor.forEach((item,i)=>{
-                if(priceBlock[i].getBoundingClientRect().top < 100 && priceBlock[i].getBoundingClientRect().bottom > item.getBoundingClientRect().height + 100) {
-                    item.classList.remove('bottom')
-                    item.classList.add('fix')
-                    item.style.left = articleLeft + 'px'
-                } else if (priceBlock[i].getBoundingClientRect().top > 100) {
-                    item.classList.remove('fix')
-                    item.style.left = 'auto'
-                } else if (priceBlock[i].getBoundingClientRect().bottom < item.getBoundingClientRect().height + 100) {
-                    item.classList.remove('fix')
-                    item.style.left = 'auto'
-                    item.classList.add('bottom')
-                }
-            })
+//             priceAutor.forEach((item,i)=>{
+//                 if(priceBlock[i].getBoundingClientRect().top < 100 && priceBlock[i].getBoundingClientRect().bottom > item.getBoundingClientRect().height + 100) {
+//                     item.classList.remove('bottom')
+//                     item.classList.add('fix')
+//                     item.style.left = articleLeft + 'px'
+//                 } else if (priceBlock[i].getBoundingClientRect().top > 100) {
+//                     item.classList.remove('fix')
+//                     item.style.left = 'auto'
+//                 } else if (priceBlock[i].getBoundingClientRect().bottom < item.getBoundingClientRect().height + 100) {
+//                     item.classList.remove('fix')
+//                     item.style.left = 'auto'
+//                     item.classList.add('bottom')
+//                 }
+//             })
 
-        })
-    }
+//         })
+//     }
 
-    document.querySelectorAll('.price-service__tab li').forEach((link, i)=>{
-        link.addEventListener('click',()=>{
-            priceAutor.forEach((item,i)=>{
-                item.classList.remove('fix')
-                item.style.left = 'auto'
-                item.classList.remove('bottom')
-            })
-        })
-    })
+//     document.querySelectorAll('.price-service__tab li').forEach((link, i)=>{
+//         link.addEventListener('click',()=>{
+//             priceAutor.forEach((item,i)=>{
+//                 item.classList.remove('fix')
+//                 item.style.left = 'auto'
+//                 item.classList.remove('bottom')
+//             })
+//         })
+//     })
+// }
+
+
+const priceAutor = document.querySelectorAll('.price__service .price__doc_autor');
+const priceBlock = document.querySelectorAll('.price__service');
+
+if (!priceAutor.length) return;
+
+const Pricetab = document.querySelector('.price-service__tab');
+if (!Pricetab) return;
+
+if (window.innerWidth > 1400) {
+    let articleLeft = Pricetab.getBoundingClientRect().right + 20;
+
+    window.addEventListener('scroll', () => {
+        articleLeft = Pricetab.getBoundingClientRect().right + 20;
+        priceAutor.forEach((item, i) => {
+            if (!priceBlock[i]) return;
+
+            const blockRect = priceBlock[i].getBoundingClientRect();
+            const itemRect = item.getBoundingClientRect();
+
+            if (blockRect.top < 100 && blockRect.bottom > itemRect.height + 100) {
+                item.classList.add('fix');
+                item.classList.remove('bottom');
+                item.style.left = articleLeft + 'px';
+            } else if (blockRect.top > 100) {
+                item.classList.remove('fix');
+                item.classList.remove('bottom');
+                item.style.left = 'auto';
+            } else {
+                item.classList.remove('fix');
+                item.classList.add('bottom');
+                item.style.left = 'auto';
+            }
+        });
+    });
 }
+
+document.querySelectorAll('.price-service__tab li').forEach(link => {
+    link.addEventListener('click', () => {
+        priceAutor.forEach(item => {
+            item.classList.remove('fix', 'bottom');
+            item.style.left = 'auto';
+        });
+    });
+});
+
+
+
+
+// 
 
 let priceTag = document.querySelector('.price-service__tab'),
     priceService = document.querySelector('.price-service__wrapper');
