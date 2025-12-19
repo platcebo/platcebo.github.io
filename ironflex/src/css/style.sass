@@ -91,6 +91,8 @@ body
             display: flex
             justify-content: space-between
             align-items: center
+        .nav__lang
+            display: none
     &__list
         display: flex
         justify-content: start
@@ -209,7 +211,32 @@ body
                 color: #a0a0ab
                 overflow: hidden
                 text-overflow: ellipsis
-            
+    &__lang
+        border-radius: 48px
+        padding: 4px 4px 4px 8px
+        background: #26272B
+        margin: 0 16px 0 auto
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 8px
+        padding: 4px 4px 4px 8px
+        a
+            display: block
+            border-radius: 34px
+            padding: 2px 10px
+            transition: all .3s
+            font-family: $font-family
+            font-weight: 400
+            font-size: 14px
+            line-height: 1.42857
+            color: #EAECF0
+            &:hover,
+            &.active
+                box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+                background: #E4E4E7
+                color: #51525C
+        
 .header
     &__slider
         width: 100%
@@ -3243,6 +3270,19 @@ body
                 display: flex
                 margin: 16px 0 0 auto
                 width: max-content
+            .nav__lang
+                display: flex
+        &__lang
+            display: none
+            margin: 16px 0 0 auto
+            width: max-content
+            position: relative
+            background: #A0A0AB
+            border-radius: 8px
+            path
+                fill: #E4E4E7
+            a
+                border-radius: 4px
 
 
 @media ( max-width: 600px )
