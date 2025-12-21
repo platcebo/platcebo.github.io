@@ -90,9 +90,11 @@ if(sectionAnim !== null) {
 }
 
 let legalAutor = document.querySelector('.faq__title'),
-    legalBlock = document.querySelector('.faq__block');
+    legalBlock = document.querySelector('.faq__block'),
+    legalWrapper = document.querySelector('.faq__wrapper'),
+    legalTitle = document.querySelector('.faq__title');
 
-if(legalBlock != null) {
+if(legalBlock != null && legalWrapper.getBoundingClientRect().height > legalTitle.getBoundingClientRect().height) {
     if(window.innerWidth > 1024) {
         let articleLeft = legalAutor.getBoundingClientRect().left
 
@@ -159,7 +161,7 @@ let priceStep = document.querySelectorAll('.price__step'),
     priceblock = document.querySelectorAll('.price__step_req'),
     priceNext = document.querySelectorAll('.price__step_next'),
     pricePrev = document.querySelectorAll('.price__step_prev'),
-    priceReq = document.querySelectorAll('.price__step.req'),
+    priceReq = document.querySelectorAll('.price__step_req'),
     priceTotal = document.querySelector('.price__btn_total'),
     priceTotalText = document.querySelector('.price__sum b'),
     pricePag = document.querySelectorAll('.price__pag span');
@@ -251,7 +253,6 @@ if(priceStep !== null) {
             })
         })
     })
-
 }
 
 let nav = document.querySelector('.nav'),
