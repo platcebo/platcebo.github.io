@@ -1811,10 +1811,15 @@ body
         path
             fill: #A0A0AB
             transition: all .3s
+        img
+            width: 36px
+            height: 36px
+            object-fit: contain
+            filter: grayscale(1)
         a
             &:hover
                 path
-                    fill: #51525C
+                    fill: var(--path)
     &__wrapper
         margin: 48px 0 
         display: grid
