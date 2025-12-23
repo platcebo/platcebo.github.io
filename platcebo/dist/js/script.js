@@ -26,7 +26,7 @@ if(btn !== null) {
 
 }
 
-[].forEach.call( document.querySelectorAll('[data-phone-pattern]'), function(input) {
+[].forEach.call( document.querySelectorAll('.wpcf7-validates-as-tel'), function(input) {
     var keyCode;
     function mask(event) {
         event.keyCode && (keyCode = event.keyCode);

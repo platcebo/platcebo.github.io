@@ -59,7 +59,7 @@ section
         pointer-events: none
 .input
     position: relative
-    p
+    p.input-text
         font-weight: 400
         font-size: 16px
         line-height: 1.1
@@ -84,12 +84,16 @@ section
         font-size: 16px
         line-height: 1.1
         color: #fff
+        &.wpcf7-not-valid
+            border-color: #dc3232
         &:focus,
         &:active,
         &:not(:placeholder-shown) 
             border-bottom: 1px solid #fff
             &+p
                 transform: translateY(-100%) scale(0.8)
+    span.wpcf7-form-control-wrap
+        position: static !important
     &__check
         position: relative
         display: grid
@@ -139,7 +143,7 @@ section
                         right: auto
                         width: 100%
                         transition-delay: .1s
-        span
+        span.input-check
             display: flex
             justify-content: center
             align-items: center
@@ -151,6 +155,11 @@ section
             svg
                 opacity: 0
                 transition: all .3s
+        .wpcf7-not-valid
+            span.input-check
+                border-color: #dc3232
+        br
+            display: none
         input
             position: absolute
             top: 0
@@ -170,6 +179,39 @@ section
                     background: #fff
                     svg
                         opacity: 1
+    span.wpcf7-not-valid-tip,
+    &__check span.wpcf7-not-valid-tip
+        font-size: 12px
+        margin: 5px 0 0
+    &__check 
+        position: relative
+        .wpcf7-form-control-wrap
+            position: static
+        span.wpcf7-not-valid-tip
+            position: absolute
+            top: calc( 100% + 5px )
+            left: 0
+.wpcf7-response-output
+    margin: 20px 0 0
+    border: none
+    padding: 0
+    font-size: 12px
+
+.wpcf7 form.invalid .wpcf7-response-output
+    margin: 20px 0 0
+    border: none
+    padding: 0
+    font-size: 12px
+    color: #dc3232
+
+.wpcf7 form.sent .wpcf7-response-output
+    color: #fff
+    margin: 20px 0 0
+    border: none
+    padding: 0
+    font-size: 12px
+
+
 .btn
     &__blc
         border-radius: 10px
