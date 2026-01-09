@@ -164,6 +164,7 @@ let priceStep = document.querySelectorAll('.price__step'),
     priceReq = document.querySelectorAll('.price__step_req'),
     priceTotal = document.querySelector('.price__btn_total'),
     priceTotalText = document.querySelector('.price__sum b'),
+    priceInputTotal = document.querySelector('.price-form__hide_total'),
     pricePag = document.querySelectorAll('.price__pag span');
 
 if(priceStep !== null) {
@@ -197,8 +198,23 @@ if(priceStep !== null) {
         const total = (basePrice * designMultiplier) + dopSum;
 
         priceTotalText.textContent = total;
+        priceInputTotal.value = total;
+
         console.log(total)
         console.log(basePrice, designMultiplier, dopSum)
+    }
+
+    function calculateValue() {
+        let inputCalc = document.querySelectorAll('.price__calc .input__check input'),
+            inputCalcText = document.querySelector('.price-form__hide_har');
+
+        inputCalc.forEach(item=>{
+            if(item.checked) {
+                inputCalcText.innerHTML = inputCalcText.innerHTML + item.dataset.name + ". "
+            } else {
+                return
+            }
+        })
     }
 
 
@@ -237,6 +253,7 @@ if(priceStep !== null) {
     priceTotal.addEventListener('click', ()=>{
 
         calculatePrice()
+        calculateValue()
 
     })
 
