@@ -247,7 +247,8 @@ body
             height: auto
         img
             width: 100%
-            height: 100%
+            max-height: 614px
+            height: 33vw
             object-fit: cover
         .header__item
             display: none
@@ -595,6 +596,9 @@ body
             font-weight: 500
         &:last-child
             margin: 0 !important
+        &:nth-child(1)
+            img
+                width: 100%
     .container
         *:last-child
             margin: 0 !important
@@ -614,6 +618,9 @@ body
         text-decoration: underline
         text-decoration-skip-ink: none
         color: #2e90fa
+    iframe
+        width: 100%
+        height: 720px
 
 .catalog-cat
     font-family: $font-family
@@ -3247,6 +3254,7 @@ body
             grid-template-rows: 117vw auto
             img
                 height: 117vw
+                max-height: none
         .swiper-pagination
             top: calc( 117vw - 26px )
     .nav
@@ -3343,6 +3351,8 @@ body
     .content
         h2
             margin: 0 0 36px
+        iframe
+            height: 350px
     .nav
         &__logo
             max-width: 153px
