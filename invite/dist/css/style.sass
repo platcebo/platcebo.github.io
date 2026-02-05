@@ -1,0 +1,183 @@
+body
+    position: relative
+    z-index: 2
+    font-family:  "Brusnika", sans-serif
+    font-size: 42px
+    color: #303030
+    text-align: center
+    &::before
+        content: ''
+        display: block
+        width: 100vw
+        height: 100vh
+        position: fixed
+        z-index: -1
+        background: url('../img/Childhood-bg-pc.jpg') center no-repeat
+        background-size: cover
+    img
+        width: 100%
+    
+.container
+    max-width: 600px
+    margin: 0 auto
+    padding: 0 15px
+    box-sizing: content-box
+
+.header
+    padding: 80px 0 50px
+    p
+        margin: 0 0 20px
+        &:last-child
+            margin: 0
+    
+.time
+    padding: 0 0 100px
+    p,
+    th,
+    td
+        font-size: 32px
+    h2
+        font-size: 64px
+        margin: 0 0 8px
+    p+h2
+        margin: 50px auto 25px
+        padding: 0 20px
+        border-bottom: 1px solid #303030
+        line-height: .8
+        width: max-content
+    h3
+        font-size: 35px
+    &__table
+        max-width: 500px
+        margin: 0 auto
+        padding: 20px 5px
+        background: #fff
+        border: 1px solid #303030
+        hr
+            margin: 10px 20px 20px
+            background: #303030
+        table
+            width: 100%
+            max-width: 300px
+            margin: 0 auto
+            td,
+            th
+                padding: 4px 8px
+            td
+                &.hurt
+                    background: url('../img/heart.svg') center no-repeat
+                    background-size: contain
+
+.where
+    padding: 0 0 100px
+    h2
+        margin: 0 auto 25px
+        padding: 0 20px
+        border-bottom: 1px solid #303030
+        line-height: .8
+        width: max-content
+        font-size: 64px
+    &__wrapper
+        border-radius: 20px
+        padding: 20px
+        background: #fff
+        border: 1px solid #303030
+        p
+            font-size: 32px
+            &:nth-child(1)
+                color: #a1b087
+                margin: 0 0 16px
+                text-transform: uppercase
+    &__map
+        margin: 20px 0 0
+        border: 1px solid #303030
+        padding: 10px
+        height: 330px
+        iframe
+            border: 1px solid #303030
+
+.form
+    padding: 0 0 100px
+    &__wrapper
+        padding: 40px 20px
+        border-radius: 20px
+        background: #fff
+        border: 1px solid #303030
+        position: relative
+    h2
+        margin: 0 auto 25px
+        padding: 0 20px
+        border-bottom: 1px solid #303030
+        line-height: .8
+        width: max-content
+        font-size: 64px
+    p
+        font-size: 32px
+    &__text
+        margin: 30px 0 0
+        font-size: 32px
+        text-align: left
+        font-weight: 800
+        max-width: 400px
+    input
+        border: none
+        border-bottom: 1px solid #303030
+        width: 100%
+        box-sizing: border-box
+        font-size: 24px
+        color: #495057
+        font-family:  "Brusnika", sans-serif
+        &::placeholder
+            color: #303030
+    label
+        display: flex
+        justify-content: start
+        align-items: center
+        margin: 10px 0 0
+        position: relative
+        z-index: 1
+        gap: 10px
+        input
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            opacity: 0  
+            cursor: pointer 
+            z-index: 2
+            &:checked+span
+                &::before
+                    opacity: 1
+        span
+            width: 18px
+            height: 18px
+            border-radius: 100px
+            border: 2px solid #303030
+            position: relative
+            &::before
+                content: ''
+                display: block
+                position: absolute
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                background: #303030
+                transition: all .3s
+                width: 10px
+                height: 10px
+                border-radius: 100%
+                opacity: 0
+    button
+        position: absolute
+        bottom: 0
+        left: 50%
+        transform: translate(-50%, 50%)
+        border: none
+        font-family:  "Brusnika", sans-serif
+        font-size: 32px
+        color: #303030
+        background: #f1d089
+        padding: 10px 15px
+        border-radius: 3px
