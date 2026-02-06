@@ -160,11 +160,15 @@ let serviceTab = document.querySelectorAll('.service-block');
 
 if(serviceTab !== null) {
     serviceTab.forEach((item)=>{
-        let navServiceTab = item.querySelectorAll('.nav__service_tab li'),
+        let navServiceTab = item.querySelectorAll('.nav__service_tab a'),
             navServiceWrapper = item.querySelectorAll('.nav__service_wrapper');
 
         navServiceTab.forEach((item,i)=>{
-            item.addEventListener('click', ()=>{
+            item.addEventListener('click', (e)=>{
+                if( !item.classList.contains('active')) {
+                    e.preventDefault()
+                    console.log('as')
+                } 
                 for(let a = 0; a < navServiceTab.length; a++) {
                     navServiceTab[a].classList.remove('active')
                     navServiceWrapper[a].classList.remove('active')
@@ -753,86 +757,84 @@ if(consultFile !== null) {
     })
 }
 
-if(document.querySelector('.magazine') !== null) {
+if (document.querySelector('.magazine') !== null) {
 
-    const pageFlip = new St.PageFlip(document.getElementById('book'), {
-        width: 520,
-        height: 700,
-        size: "stretch",
-        minWidth: 300,
-        maxWidth: 1000,
-        minHeight: 420,
-        maxHeight: 1350,
-        showCover: true,
+  const bookEl = document.getElementById('book');
+  const firstImg = bookEl ? bookEl.querySelector('.my-page img') : null;
 
-        // важно:
-        // useMouseEvents: true,
-        // disableFlipByClick: true, // клик не листает "везде"
+  const initFlip = (ratio) => {
+    // базовая ширина страницы (как было)
+    const baseW = 520;
+    const baseH = Math.round(baseW * ratio);
+
+    const pageFlip = new St.PageFlip(bookEl, {
+      width: baseW,
+      height: baseH,
+      size: "stretch",
+      minWidth: 300,
+      maxWidth: 1000,
+      minHeight: Math.round(300 * ratio),
+      maxHeight: Math.round(1000 * ratio),
+      showCover: true,
     });
 
-    pageFlip.loadFromHTML(document.querySelectorAll('.my-page'));
-
-    // const shell = document.querySelector(".book-shell");
-    // let zoomed = false;
-
-    // let state = "read";
-    // pageFlip.on("changeState", (e) => { state = e.data; }); // событие есть в API  [oai_citation:2‡GitHub](https://github.com/Nodlik/StPageFlip)
-
-    // document.getElementById('book').addEventListener("click", (e) => {
-    //     // если хочется — разрешаем зум только когда спокойное состояние:
-    //     if (state !== "read") return;
-
-    //     // чтобы клик не уходил во внутренние обработчики
-    //     e.preventDefault();
-    //     e.stopPropagation();
-
-    //     zoomed = !zoomed;
-    //     shell.classList.toggle("is-zoomed", zoomed);
-    // }, true);
-
-    // window.addEventListener("keydown", (e) => {
-    //     if (e.key === "Escape" && zoomed) {
-    //         zoomed = false;
-    //         shell.classList.remove("is-zoomed");
-    //     }
-    // });
-
+    pageFlip.loadFromHTML(bookEl.querySelectorAll('.my-page'));
 
     let magazinPage = document.querySelectorAll('.magazine__page');
 
-    magazinPage.forEach((item, i)=>{
-        let x = i+1;
-        document.querySelector(".magazine__func_pag").innerHTML = document.querySelector(".magazine__func_pag").innerHTML + '<span>'+ x +'</span>'
-    })
+    magazinPage.forEach((item, i) => {
+      let x = i + 1;
+      document.querySelector(".magazine__func_pag").innerHTML =
+        document.querySelector(".magazine__func_pag").innerHTML + '<span>' + x + '</span>';
+    });
 
     let magazineSpan = document.querySelectorAll('.magazine__func_pag span');
 
     magazineSpan[pageFlip.getCurrentPageIndex()].classList.add('active');
 
-    magazineSpan.forEach((item,i)=>{
-        item.addEventListener('click', ()=>{
-            pageFlip.flip(i);
-            magazineSpan.forEach(span => span.classList.remove('active'))
-            item.classList.add('active')
-        })
-    })
+    magazineSpan.forEach((item, i) => {
+      item.addEventListener('click', () => {
+        pageFlip.flip(i);
+        magazineSpan.forEach(span => span.classList.remove('active'));
+        item.classList.add('active');
+      });
+    });
 
     document.querySelector(".btn-prev").addEventListener("click", () => {
-        pageFlip.flipPrev(); 
-        magazineSpan.forEach(span => span.classList.remove('active'))
-        magazineSpan[pageFlip.getCurrentPageIndex()].classList.add('active');
+      pageFlip.flipPrev();
+      magazineSpan.forEach(span => span.classList.remove('active'));
+      magazineSpan[pageFlip.getCurrentPageIndex()].classList.add('active');
     });
 
     document.querySelector(".btn-next").addEventListener("click", () => {
-        pageFlip.flipNext(); 
-        magazineSpan.forEach(span => span.classList.remove('active'))
-        magazineSpan[pageFlip.getCurrentPageIndex()].classList.add('active');
+      pageFlip.flipNext();
+      magazineSpan.forEach(span => span.classList.remove('active'));
+      magazineSpan[pageFlip.getCurrentPageIndex()].classList.add('active');
     });
 
-    pageFlip.on('flip', (e) => {
-        magazineSpan.forEach(span => span.classList.remove('active'))
-        magazineSpan[pageFlip.getCurrentPageIndex()].classList.add('active');
+    pageFlip.on('flip', () => {
+      magazineSpan.forEach(span => span.classList.remove('active'));
+      magazineSpan[pageFlip.getCurrentPageIndex()].classList.add('active');
     });
+  };
+
+  // фолбэк-коэффициент (если картинка не прочиталась)
+  const fallbackRatio = 700 / 520;
+
+  if (!firstImg) {
+    initFlip(fallbackRatio);
+  } else {
+    const run = () => {
+      const ratio = (firstImg.naturalWidth && firstImg.naturalHeight)
+        ? (firstImg.naturalHeight / firstImg.naturalWidth)
+        : fallbackRatio;
+
+      initFlip(ratio);
+    };
+
+    if (firstImg.complete) run();
+    else firstImg.addEventListener('load', run, { once: true });
+  }
 }
 
 let articleText = document.querySelectorAll('.article-doc__info_text');
@@ -910,44 +912,13 @@ if(modalForm!==null) {
     })
 }
 
+let educSlider = document.querySelectorAll('.educ__slider');
 
-// let priceAutor = document.querySelectorAll('.price__service .price__doc_autor'),
-//     priceBlock = document.querySelectorAll('.price__service');
-
-// if(priceAutor != null) {
-//     if(window.innerWidth > 1400) {
-//         let articleLeft = document.querySelectorAll('.price-service__tab')[0].getBoundingClientRect().right + 20
-
-//         window.addEventListener('scroll', ()=>{
-
-//             priceAutor.forEach((item,i)=>{
-//                 if(priceBlock[i].getBoundingClientRect().top < 100 && priceBlock[i].getBoundingClientRect().bottom > item.getBoundingClientRect().height + 100) {
-//                     item.classList.remove('bottom')
-//                     item.classList.add('fix')
-//                     item.style.left = articleLeft + 'px'
-//                 } else if (priceBlock[i].getBoundingClientRect().top > 100) {
-//                     item.classList.remove('fix')
-//                     item.style.left = 'auto'
-//                 } else if (priceBlock[i].getBoundingClientRect().bottom < item.getBoundingClientRect().height + 100) {
-//                     item.classList.remove('fix')
-//                     item.style.left = 'auto'
-//                     item.classList.add('bottom')
-//                 }
-//             })
-
-//         })
-//     }
-
-//     document.querySelectorAll('.price-service__tab li').forEach((link, i)=>{
-//         link.addEventListener('click',()=>{
-//             priceAutor.forEach((item,i)=>{
-//                 item.classList.remove('fix')
-//                 item.style.left = 'auto'
-//                 item.classList.remove('bottom')
-//             })
-//         })
-//     })
-// }
+if(educSlider.length >= 1) {
+    educSlider.forEach((item)=>{
+        item.style.maxHeight = item.getBoundingClientRect().height + "px"
+    })
+}
 
 
 const priceAutor = document.querySelectorAll('.price__service .price__doc_autor');
@@ -996,9 +967,6 @@ document.querySelectorAll('.price-service__tab li').forEach(link => {
 });
 
 
-
-
-// 
 
 let priceTag = document.querySelector('.price-service__tab'),
     priceService = document.querySelector('.price-service__wrapper');

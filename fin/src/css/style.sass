@@ -104,6 +104,12 @@ body
         img
             width: 40px
             height: 40px
+    .btn__wht
+        padding: 10px 20px
+        font-size: 18px
+    a.btn__wht
+        display: block
+        margin: 10px 0 0
 
 .header
     padding: 40px 0 160px
@@ -2532,9 +2538,9 @@ body
             flex-wrap: wrap
             row-gap: 0
         &__list,
-        .btn__wht,
+        &__btn,
         &__soc
-            display: none
+            display: none 
         &__hum
             margin: 0 0 0 auto
             display: block
@@ -2577,6 +2583,9 @@ body
                 background: transparent
                 color: $white
             .nav
+                &__btn
+                    display: block
+                    width: 100%
                 &__hum
                     span
                         display: none
@@ -3333,6 +3342,9 @@ body
             font-size: 28px
         &__wrapper
             grid-template-columns: 1fr
+        &__banner
+            p
+                font-size: 28px
     .autor
         h2
             font-size: 28px
