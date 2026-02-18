@@ -99,24 +99,25 @@
 	</section>
 	<section class="form">
 		<div class="container">
-			<div class="form__wrapper">
+			<form action="https://api.web3forms.com/submit" method="POST" class="form__wrapper">
+  <input type="hidden" name="access_key" value="ef045ea4-f14f-4313-b07c-fcac5c443c85">
 				<h2>Анкета</h2>
 				<p>Чтобы все прошло идеально и этот день запомнился надолго, пожалуйста, ответьте на несколько вопросов</p>
 				<p class="form__text">Укажите вашу фамилию и перечислите всех членов вашей семьи</p>
-				<input type="text" placeholder="Имя и фамилия">
+				<input name="Имена" type="text" placeholder="Имя и фамилия" required>
 				<p class="form__text">Сможете ли присутствовать на нашем торжестве</p>
 				<label>
-					<input type="radio" name="form">
+					<input value="no" type="radio" name="Сможете ли присутствовать" required>
 					<span></span>
 					<p>Да</p>
 				</label>
 				<label>
-					<input type="radio" name="form">
+					<input value="yes" type="radio" name="Сможете ли присутствовать" required>
 					<span></span>
 					<p>Нет</p>
 				</label>
 				<button>Подтвердить</button>
-			</div>
+			</form>
 		</div>
 	</section>
 </body>

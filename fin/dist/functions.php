@@ -203,6 +203,7 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
 add_action( 'carbon_fields_register_fields', 'page_option' );
+add_action( 'carbon_fields_register_fields', 'rate_option' );
 
 
 function crb_attach_theme_options() {
@@ -219,6 +220,9 @@ function crb_attach_theme_options() {
             field::make( 'text', 'short_ready', 'форма из блока "Готовы улучшить финансовое состояние вашего бизнеса?" ' ),
 			field::make( 'text', 'short_modal', 'форма из всплывающего окна ' ),
 			field::make( 'text', 'short_popup', 'попап ' ),
+			field::make( 'text', 'short_rate', 'rate ' ),
+			field::make( 'text', 'short_choose', 'choose ' ),
+			field::make( 'text', 'short_focus', 'focus ' ),
 		]);
 }
 
@@ -338,4 +342,18 @@ function page_option() {
 		->add_fields( [
 			field::make( 'rich_text', 'rate_list', '' ),
 		]);
+}
+
+function rate_option() {
+
+	Container::make( 'post_meta', 'доп поля' )
+		->show_on_page(153)
+		->add_tab( 'проблемы', [
+			Field::make( 'complex', 'trouble-type', __( 'слайд' ) ) 
+			->add_fields( array( 
+				Field::make( 'text', 'trouble-name', __( 'название' ) ),
+				Field::make( 'rich_text', 'trouble-list', __( 'список' ) ),
+				Field::make( 'image', 'trouble-img', __( 'картинка' ) ),
+			) ),
+		] );
 }

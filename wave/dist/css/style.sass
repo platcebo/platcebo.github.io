@@ -1,0 +1,229 @@
+$font-family: "SF Compact Display", sans-serif
+$second-family: "Inter", sans-serif
+$third-family: "SF Pro Display", sans-serif
+
+body
+    background: #fff
+    font-family: $font-family
+.container
+    padding: 0 16px
+    margin: 0 auto
+    max-width: 1312px
+    box-sizing: border-box
+    width: 100%
+.title
+    font-family: $font-family
+    font-weight: 600
+    font-size: 18px
+    line-height: 1.55556
+    color: #ffb81c
+    &+.title__text
+        margin: 16px 0 0
+    &__text
+        font-family: $font-family
+        font-weight: 600
+        font-size: 36px
+        line-height: 1.22222
+        letter-spacing: -0.02em
+        color: #1f2a37
+        span
+            color: #9da4ae
+    &__subtitle
+        margin: 12px 0 0
+        font-family: $font-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.5
+        color: #6c737f
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.5
+            color: #6c737f
+            margin: 12px 0 0
+
+.nav
+    padding: 15px 0
+    &__logo
+        max-width: 200px
+        img
+            width: 100%
+    .container
+        display: flex
+        justify-self: start
+        align-items: center
+        gap: 50px
+    p
+        font-family: $font-family
+        font-size: 20px
+        font-weight: 600
+        text-transform: uppercase
+
+.header
+    &__info
+        position: absolute
+        position: absolute
+        bottom: 32px
+        left: 32px
+        right: 32px
+        z-index: 5
+        max-width: 800px
+        h1,
+        p
+            color: #fff
+            text-shadow: #000 0px 0px 10px
+            font-size: 60px
+    &__wrapper
+        margin: 50px 0 0
+        border-radius: 40px
+        position: relative
+        overflow: hidden
+        align-items: stretch
+    &__slide
+        border-radius: 40px
+        position: relative
+        overflow: hidden
+        height: auto
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            max-height: 720px 
+
+.about
+    padding: 50px 0 0
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 32px
+        margin: 30px 0 0
+    &__item
+        padding: 24px
+        border-radius: 24px
+        border: 2px solid #e5e7eb
+        display: grid
+        grid-template-rows: auto 1fr
+        gap: 32px
+        p
+            font-size: 18px
+            color: #1f2a37
+            line-height: 1.5
+            font-weight: 600
+            &+p
+                border-radius: 24px
+                padding: 32px 24px
+                background: #11111f
+                font-size: 20px
+                font-weight: 700
+                color: #fff
+
+.catalog
+    padding: 50px 0 0
+    &__title
+        p
+            margin: 15px 0 0
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 
+        gap: 24px
+        margin: 30px 0 0
+        span
+            display: block
+            border-radius: 22px
+            position: relative
+            overflow: hidden
+            height: 200px
+            background: rgba(0, 0, 0, 0.2)
+        img
+            width: 100%
+            height: 100%
+            min-height: 100%
+            object-fit: cover
+            transition: all .3s
+        p
+            font-weight: 500
+            font-size: 16px
+            line-height: 1.5
+            color: #11111f
+            padding: 20px 12px 0
+        a
+            &:hover
+                img
+                    transform: scale(1.1)
+    &__info
+        margin: 35px 0 0
+        font-weight: 500
+        font-size: 16px
+        line-height: 1.5
+        color: #11111f
+        padding: 20px 12px 0
+
+.content
+    padding: 50px 0 25px
+    &__wrapper
+        margin: 30px 0 0
+        // border-radius: 40px
+        position: relative
+        overflow: hidden
+        align-items: stretch
+    &__slide
+        border-radius: 40px
+        position: relative
+        overflow: hidden
+        height: auto
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            max-height: 720px 
+    .swiper-pagination
+        position: relative !important
+        inset: auto !important
+        // bottom: -25px !important
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100% !important
+        transform: none !important
+        margin: 20px 0 0
+        gap: 5px
+        span
+            width: 8px
+            height: 8px
+            display: block
+            background: #0F70B7
+            margin: 0 !important
+            border-radius: 100%
+            transform: none !important
+
+@media ( max-width: 1200px )
+    .about
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+    .catalog
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+    .content,
+    .header
+        &__slide
+            img
+                height: calc( (100vw / 16) * 9 )
+
+@media ( max-width: 768px )
+    .title
+        &__text
+            font-size: 24px
+    .header
+        &__info
+            h1
+                font-size: 32px
+    .about
+        &__wrapper
+            grid-template-columns: 1fr
+
+@media ( max-width: 600px )
+    .catalog
+        &__wrapper
+            grid-template-columns: 1fr
+        

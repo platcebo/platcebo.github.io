@@ -1440,6 +1440,8 @@ body
     &__wrapper
         margin: 70px 0 0
         overflow: visible
+        .swiper-wrapper
+            align-items: stretch
     &__slide
         padding: 20px
         border-radius: 8px
@@ -1448,11 +1450,15 @@ body
         max-width: 710px
         width: 710px
         border: 2px solid $accent
+        height: auto
+        display: grid
+        grid-template-rows: auto 1fr
         h3
             font-family: $second-family
             font-weight: 800
             font-size: 28px
             line-height: 1.21429
+            margin: 0 0 auto
         &_wrapper
             margin: 24px 0 0
             display: grid
@@ -2210,6 +2216,14 @@ body
         border-radius: 4px
         &::placeholder
             color: $lg
+    .wpcf7
+        grid-column: 1/3
+        p
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 20px
+        br
+            display: none
 
 .bonus
     padding: 200px 0 0
@@ -2510,6 +2524,10 @@ body
             grid-template-columns: 1fr
             *
                 grid-column: auto !important
+        .wpcf7
+            grid-column: auto
+            p
+                grid-template-columns: 1fr
     .bonus
         &__wrapper
             grid-template-columns: 1fr 1fr
@@ -3326,6 +3344,8 @@ body
         &__slide
             max-width: calc( 100vw - 32px )
             width: calc( 100vw - 32px )
+            &_wrapper
+                grid-template-columns: 1fr
     .auto
         h2
             font-size: 28px
