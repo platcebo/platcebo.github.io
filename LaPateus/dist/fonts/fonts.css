@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Franklin Gothic Medium';
+	src: url('../fonts/franklin_gothic_medium.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/franklin_gothic_medium.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/franklin_gothic_medium.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/franklin_gothic_medium.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/franklin_gothic_medium.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/franklin_gothic_medium.svg#franklin_gothic_medium') format('svg'); /* Chrome < 4, Legacy iOS */
+}
