@@ -22,27 +22,15 @@ var swiper = new Swiper(".content__wrapper", {
     },
 });
 
-document.querySelectorAll('a[href^="/#"]').forEach(link => {
-  link.addEventListener('click', function (e) {
-    if (window.location.pathname === '/' || window.location.pathname === '') {
-      e.preventDefault()
-      const target = document.querySelector(this.getAttribute('href').replace('/', ''))
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' })
-      }
-    }
-  })
-})
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
-if(document.querySelector('.footer__row a') !== null ) {
-    let policyLink = document.querySelector('.footer__row a').getAttribute('href');
-
-    let InputLink = document.querySelectorAll('.input__check p a');
-
-    InputLink.forEach((item)=>{
-        item.href = policyLink;
-    })
-}
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
 
 
