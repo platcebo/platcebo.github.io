@@ -5,18 +5,29 @@ body
     font-family: 'Franklin Gothic Medium'
     font-weight: 400
     color: #f1cb90
+    // &::before
+    //     content: ''
+    //     position: absolute
+    //     z-index: -1
+    //     top: 0
+    //     left: 0
+    //     width: 100vw
+    //     display: block
+    //     height: 100vw
+    //     background: url('../img/bg_dark.png') bottom no-repeat
+    //     background-size: cover
+    // &::after
+    //     content: ''
+    //     position: absolute
+    //     z-index: -2
+    //     top: 0
+    //     left: 0
+    //     width: 100vw
+    //     display: block
+    //     height: 50vw
+    //     background: url('../img/bg_blue.png') bottom no-repeat
+    //     background-size: cover
     &::before
-        content: ''
-        position: absolute
-        z-index: -1
-        top: 0
-        left: 0
-        width: 100vw
-        display: block
-        height: 100vw
-        background: url('../img/bg_dark.png') bottom no-repeat
-        background-size: cover
-    &::after
         content: ''
         position: absolute
         z-index: -2
@@ -24,9 +35,11 @@ body
         left: 0
         width: 100vw
         display: block
-        height: 50vw
-        background: url('../img/bg_blue.png') bottom no-repeat
+        height: 1000px
+        max-height: 100%
+        background: url('../img/main_bg.png') top no-repeat
         background-size: cover
+
 *
     font-family: 'Franklin Gothic Medium'
     font-weight: 400
@@ -36,15 +49,15 @@ body
     position: relative
     margin: 0 auto
     padding: 0 20px
-    max-width: 1580px
+    max-width: 1700px
 
 .nav
-    padding: 76px 0 0
+    padding: 70px 0 0
     position: relative
     overflow: hidden
     &__logo
-        max-width: 657px
-        margin: 0 -35px 0 auto
+        max-width: 442px
+        margin: 0 -25px 0 auto
         img
             width: 100%
     .container
@@ -56,20 +69,23 @@ body
 .catalog
     padding: 9px 0 0
     h1
-        font-size: 104px
+        font-size: 80px
         color: #f1cb90
         text-align: right
         line-height: 93%
         letter-spacing: .35rem
-        margin: 63px 0 0
-        span
-            font-size: 73px
-            letter-spacing: .06em
-    &__title
-        font-size: 46.5px
+        margin: 29px 0 0
+    &__subtitle
         color: #f1cb90
         text-align: right
-        letter-spacing: 0.18rem
+        line-height: 93%
+        font-size: 58px
+        letter-spacing: .06em
+    &__title
+        font-size: 36px
+        color: #f1cb90
+        text-align: right
+        letter-spacing: 0.17rem
     &__wrapper
         margin: 107px 0 0
         display: grid
@@ -77,7 +93,7 @@ body
         gap: 50px
     &__item
         padding: 20px
-        background: #afaa9c
+        background: #aaa9a0
         display: flex
         flex-direction: column
         img
@@ -127,11 +143,11 @@ body
     .catalog
         h1
             font-size: 60px
-            margin: 45px 0 0
+            margin: 35px 0 0
             letter-spacing: .33rem
-            span
-                font-size: 42px
-                letter-spacing: .26rem
+        &__subtitle
+            font-size: 42px
+            letter-spacing: .26rem
         &__title
             font-size: 26.8px
             letter-spacing: .17rem
@@ -155,10 +171,10 @@ body
         h1
             font-size: 42px
             letter-spacing: .23rem
-            margin: 30px 0 0
-            span
-                font-size: 30px
-                letter-spacing: .16rem
+            margin: 25px 0 0
+        &__subtitle
+            font-size: 30px
+            letter-spacing: .16rem
         &__title
             font-size: 18px
             letter-spacing: .14rem
@@ -194,10 +210,10 @@ body
         h1
             font-size: 20px
             letter-spacing: 0.108rem
-            margin: 13px 0 0
-            span
-                font-size: 15px
-                letter-spacing: .05rem
+            margin: 10px 0 0
+        &__subtitle
+            font-size: 15px
+            letter-spacing: .05rem
         &__title
             font-size: 10px
             letter-spacing: .019rem
