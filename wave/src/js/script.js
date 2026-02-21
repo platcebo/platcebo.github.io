@@ -20,6 +20,10 @@ var swiper = new Swiper(".content__wrapper", {
         el: ".content__wrapper .swiper-pagination",
         // dynamicBullets: true,
     },
+    navigation: {
+        nextEl: ".content__wrapper .swiper-button-next",
+        prevEl: ".content__wrapper .swiper-button-prev",
+    },
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

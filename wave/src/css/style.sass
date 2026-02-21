@@ -15,8 +15,8 @@ body
     font-family: $font-family
     font-weight: 600
     font-size: 18px
-    line-height: 1.55556
-    color: #ffb81c
+    line-height: 1.5
+    color: #1f2a37
     &+.title__text
         margin: 16px 0 0
     &__text
@@ -26,8 +26,6 @@ body
         line-height: 1.22222
         letter-spacing: -0.02em
         color: #1f2a37
-        span
-            color: #9da4ae
     &__subtitle
         margin: 12px 0 0
         font-family: $font-family
@@ -90,12 +88,21 @@ body
             height: 100%
             object-fit: cover
             max-height: 720px 
+    &__bg
+        margin: 50px 0 0
+        border-radius: 40px
+        position: relative
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            max-height: 720px 
 
 .about
     padding: 50px 0 0
     &__wrapper
         display: grid
-        grid-template-columns: 1fr 1fr 1fr 1fr
+        grid-template-columns: 1fr 1fr
         gap: 32px
         margin: 30px 0 0
     &__item
@@ -159,6 +166,13 @@ body
         color: #11111f
         padding: 20px 12px 0
 
+.info
+    padding: 50px 0 0
+    h2
+        font-weight: 300
+        span
+            font-weight: 500
+
 .content
     padding: 50px 0 25px
     &__wrapper
@@ -196,6 +210,51 @@ body
             margin: 0 !important
             border-radius: 100%
             transform: none !important
+    .swiper-button-prev,
+    .swiper-button-next
+        padding: 10px
+        border-radius: 100%
+        background: rgba(255, 255, 255, 1)
+        transition: all .3s
+        right: 15px
+        .swiper-button-disabled
+            opacity: 0 !important
+        svg
+            margin: 0 -5px 0 0
+            path
+                fill: #0F70B7
+                stroke: #0F70B7
+    .swiper-button-prev
+        left: 15px
+        svg
+            margin: 0 0 0 -5px
+
+
+.footer
+    padding: 50px 0
+    .container
+        display: grid
+        grid-template-columns: 1fr auto
+        gap: 30px
+    &__info
+        display: grid
+        grid-template-columns: 1fr
+        gap: 10px
+        padding: 15px 0 0
+        max-width: 300px
+        p,
+        a
+            font-family: $font-family
+            font-weight: 600
+            font-size: 18px
+            line-height: 1.5
+            color: #1f2a37
+            display: block
+            text-align: right
+        a
+            transition: all .3s
+            &:hover
+                color: #0F70B7
 
 @media ( max-width: 1200px )
     .about
@@ -206,7 +265,8 @@ body
             grid-template-columns: 1fr 1fr
     .content,
     .header
-        &__slide
+        &__slide,
+        &__bg
             img
                 height: calc( (100vw / 16) * 9 )
 
