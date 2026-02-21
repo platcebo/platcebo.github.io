@@ -39,11 +39,11 @@ body
     max-width: 1580px
 
 .nav
-    padding: 90px 0 0
+    padding: 76px 0 0
     position: relative
     overflow: hidden
     &__logo
-        max-width: 576px
+        max-width: 657px
         margin: 0 -35px 0 auto
         img
             width: 100%
@@ -54,23 +54,27 @@ body
         gap: 20px
 
 .catalog
-    padding: 20px 0 0
+    padding: 9px 0 0
     h1
         font-size: 104px
         color: #f1cb90
         text-align: right
+        line-height: 93%
+        letter-spacing: .35rem
         span
             font-size: 73px
+            letter-spacing: .06em
     &__title
         font-size: 46.5px
         color: #f1cb90
         text-align: right
-        margin: 85px 0 0
+        margin: 63px 0 0
+        letter-spacing: 0.18rem
     &__wrapper
-        margin: 172px 0 0
+        margin: 107px 0 0
         display: grid
-        grid-template-columns: 1fr 1fr
-        gap: 120px
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 50px
     &__item
         padding: 20px
         background: #afaa9c
@@ -80,12 +84,21 @@ body
             width: 100%
             object-fit: cover
             display: block
-            margin: auto 0 0
+            transition: all .3s
         p
             color: #285066
-            font-size: 35px
+            font-size: 24px
             text-align: center
             padding: 0 0 20px
+        span
+            margin: auto 0 0
+            display: block
+            position: relative
+            overflow: hidden
+        &:hover
+            img
+                transform: scale(1.15)
+
 
 .footer
     padding: 200px 0 50px
