@@ -129,9 +129,11 @@ body
             font-size: 60px
             span
                 font-size: 42px
+                letter-spacing: .26rem
         &__title
             margin: 45px 0 0
             font-size: 26.8px
+            letter-spacing: .16rem
         &__wrapper
             gap: 60px
             margin: 90px 0 0
@@ -143,21 +145,29 @@ body
     .catalog
         &__wrapper
             gap: 20px
+            grid-template-columns: 1fr 1fr
     
 @media ( max-width: 768px )
     .nav
         padding: 30px 0 0
     .catalog
         h1
-            font-size: 32px
+            font-size: 42px
+            letter-spacing: .23rem
             span
-                font-size: 32px
+                font-size: 30px
+                letter-spacing: .16rem
         &__title
-            font-size: 24px
+            font-size: 18px
             margin: 30px 0 0
+            letter-spacing: .14rem
         &__wrapper
-            grid-template-columns: 1fr
             margin: 50px 0 0
+        &__item
+            padding: 10px 
+            p
+                font-size: 16px
+                padding: 0 0 10px
     .footer
         padding: 50px 0
         &__list
@@ -172,3 +182,32 @@ body
             font-size: 23px
             margin: 30px 0 0
 
+@media ( max-width: 600px )
+    .nav
+        padding: 16px 0 0
+        &__logo
+            max-width: 133px
+            margin-right: -8px
+    .catalog
+        padding: 3px 0 0
+        h1
+            font-size: 20px
+            letter-spacing: 0.108rem
+            span
+                font-size: 15px
+                letter-spacing: .05rem
+        &__title
+            margin: 13px 0 0
+            font-size: 10px
+            letter-spacing: .019rem
+        &__item
+            p
+                font-size: 12px
+    .footer
+        &__list
+            gap: 10px
+            a
+                font-size: 16px
+        &__copy
+            font-size: 16px
+            margin: 10px 0 0
