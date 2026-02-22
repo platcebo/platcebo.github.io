@@ -1,6 +1,6 @@
 body
     position: relative  
-    background: #193741
+    background: #01343f
     z-index: 3
     font-family: 'Franklin Gothic Medium'
     font-weight: 400
@@ -68,6 +68,20 @@ body
 
 .catalog
     padding: 9px 0 0
+    &__info
+        width: max-content
+        margin: 0 0 0 auto
+        position: relative
+        img
+            position: absolute
+            top: 0
+            right: 0
+            width: 100%
+            object-fit: contain
+            z-index: 2
+            height: 100%
+            object-position: right
+            pointer-events: none
     h1
         font-size: 80px
         color: #f1cb90
@@ -75,17 +89,20 @@ body
         line-height: 93%
         letter-spacing: .35rem
         margin: 29px 0 0
+        opacity: 0
     &__subtitle
         color: #f1cb90
         text-align: right
         line-height: 93%
         font-size: 58px
         letter-spacing: .06em
+        opacity: 0
     &__title
         font-size: 36px
         color: #f1cb90
         text-align: right
         letter-spacing: 0.17rem
+        opacity: 0
     &__wrapper
         margin: 107px 0 0
         display: grid
