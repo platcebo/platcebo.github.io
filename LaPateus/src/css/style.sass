@@ -131,7 +131,6 @@ body
             img
                 transform: scale(1.15)
 
-
 .footer
     padding: 200px 0 50px
     &__list
@@ -150,6 +149,67 @@ body
         text-align: right
         font-size: 26px
         color: #f1cb90
+
+.card
+    padding: 150px 0 0
+    position: relative
+    overflow: hidden
+    &__wrapper
+        background: #aaa9a0
+        padding: 20px
+        // max-width: 800px
+        margin: 0 auto
+        img
+            width: 100%
+            // max-width: 700px
+            display: block
+            // margin: 0 auto
+        h1
+            font-size: 60px 
+            color: #193741
+            text-align: center
+            margin: 20px 0 0
+    &__thumb
+        margin: 50px 0 0
+        .swiper-slide
+            padding: 20px
+            background: #aaa9a0
+        img
+            width: 100%
+    &__descr
+        padding: 20px 
+        margin: 50px 0 0
+        background: #aaa9a0
+        p,
+        li
+            font-size: 35px 
+            color: #193741
+        ul
+            margin: 10px 0 0
+            li
+                &::before
+                    content: '- '
+                    display: inline
+        &_size
+            margin: 10px 0 0
+        &_dop
+            margin: 20px 0 0
+    &__price
+        margin: 50px 0 0
+        background: #d8ccab
+        padding: 20px
+        p
+            font-size: 45px
+            color: #193f66
+            text-align: right
+        li
+            display: grid
+            grid-template-columns: 1fr 300px
+            gap: 20px
+
+
+
+
 
 @media ( max-width: 1500px )
     .nav
@@ -179,21 +239,45 @@ body
         &__wrapper
             gap: 20px
             grid-template-columns: 1fr 1fr
+    .card
+        padding: 50px 0 0
+        &__wrapper
+            h1
+                font-size: 35px
+        &__thumb
+            margin: 20px 0 0
+            .swiper-slide
+                padding: 5px
+        &__descr
+            p,
+            li
+                font-size: 20px
+        &__price
+            p
+                font-size: 24px
+            li
+                grid-template-columns: 1fr 150px
+
     
 @media ( max-width: 768px )
     .nav
         padding: 30px 0 0
     .catalog
+        &__info img
+            opacity: 0
         h1
             font-size: 42px
             letter-spacing: .23rem
             margin: 25px 0 0
+            opacity: 1
         &__subtitle
             font-size: 30px
             letter-spacing: .16rem
+            opacity: 1
         &__title
             font-size: 18px
             letter-spacing: .14rem
+            opacity: 1
         &__wrapper
             margin: 50px 0 0
         &__item
@@ -244,3 +328,18 @@ body
         &__copy
             font-size: 16px
             margin: 10px 0 0
+    .card
+        &__price
+            ul
+                display: grid
+                grid-template-columns: 1fr
+                gap: 5px
+            li
+                grid-template-columns: 1fr
+                gap: 0
+            p
+                text-align: left
+        &__wrapper
+            h1
+                font-size: 28px
+

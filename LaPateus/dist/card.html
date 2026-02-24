@@ -7,6 +7,7 @@
     <title>LaPateus</title>
     <link rel="stylesheet" href="css/reset.min.css">
     <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -19,8 +20,74 @@
     </nav>
     <section class="catalog">
         <div class="container">
-            <h1>добрая сказка в стекле <br><span>лучшие в мире ёлочные игрушки</span></h1>
-            <p class="catalog__title">выдуто и расписано  вручную  ведущими  мастерами</p>
+            <div class="catalog__info">
+                <p class="catalog__subtitle">лучшие в мире ёлочные игрушки</p>
+                <h1>добрая сказка в стекле</h1>
+                <p class="catalog__title">выдуто и расписано  вручную  ведущими  мастерами</p>
+                <img src="img/catalog_info.svg" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="card">
+        <div class="container">
+            <div class="card__wrapper">
+                <div class="card__slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide card__slide">
+                            <img src="img/catalog_2.png" alt="">
+                        </div>
+                        <div class="swiper-slide card__slide">
+                            <img src="img/catalog_2.png" alt="">
+                        </div>
+                        <div class="swiper-slide card__slide">
+                            <img src="img/catalog_2.png" alt="">
+                        </div>
+                        <div class="swiper-slide card__slide">
+                            <img src="img/catalog_2.png" alt="">
+                        </div>
+                        <div class="swiper-slide card__slide">
+                            <img src="img/catalog_2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <h1>Дед Пихто (Етить-колотить)</h1>
+            </div>
+            <div class="card__thumb swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide card__slide">
+                        <img src="img/catalog_2.png" alt="">
+                    </div>
+                    <div class="swiper-slide card__slide">
+                        <img src="img/catalog_2.png" alt="">
+                    </div>
+                    <div class="swiper-slide card__slide">
+                        <img src="img/catalog_2.png" alt="">
+                    </div>
+                    <div class="swiper-slide card__slide">
+                        <img src="img/catalog_2.png" alt="">
+                    </div>
+                    <div class="swiper-slide card__slide">
+                        <img src="img/catalog_2.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="card__descr">
+                <p>Ёлочное украшение «Дед Пихто» создано в 2025 г. мастерской LaPateus, произведено из тонкого стекла по уникальной технологии полностью в России.</p>
+                <ul>
+                    <li>Авторы идеи, проекта  Т. Алиханов-Фальковский</li>
+                    <li>Автор рабочего эскиза  А.Эльзер.</li>
+                    <li>Модельщики  А. Козырев, Т. Алиханов-Фальковский.</li>
+                    <li>Мастера по росписи  А.Герасимова,  Д.Комарова,  М.Алиханова.</li>
+                </ul>
+                <p class="card__descr_size">Высота украшения 90 мм,  вес 25 - 30 гр.</p>
+                <p class="card__descr_dop">Если вы уже приобрели игрушку «Жили у бабуси два весёлых гуся», не оставьте бабушку в одночестве, подарите ей дедушку!</p>
+            </div>
+            <div class="card__price">
+                <ul>
+                    <li><p>Стоимость дедушки в рубашке с росписью </p> <p>- 10 000 руб.</p></li>
+                    <li><p>- в рубашке без росписи </p> <p>- 9 000 руб.</p></li>
+                </ul>
+            </div>
         </div>
     </section>
     <footer class="footer">
@@ -37,6 +104,7 @@
     </footer>
     
     
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
