@@ -4082,12 +4082,13 @@ html
             height: auto
             width: 100%
             max-width: 100%
-            height: 420px
-            min-height: 100%
+            height: 500px
+            min-height: 500px
             max-height: 100%
             &+img
                 width: 100% !important
                 height: 100% !important
+                display: none
 
 .modal
     position: fixed
@@ -6799,6 +6800,12 @@ html
             width: 100%
             min-width: 100%
             order: 2
+        .welcome__slider
+            max-width: 666px !important
+            margin: 0 auto
+            min-width: auto
+            height: 500px
+            max-height: calc( 100vw / 4 * 3 )
     .interview
         &__wrapper
             grid-template-columns: 1fr

@@ -914,7 +914,7 @@ if(modalForm!==null) {
 
 let educSlider = document.querySelectorAll('.educ__slider');
 
-if(educSlider.length >= 1) {
+if(educSlider.length >= 1 && window.innerWidth > 1279) {
     educSlider.forEach((item)=>{
         item.style.maxHeight = item.getBoundingClientRect().height + "px"
     })
