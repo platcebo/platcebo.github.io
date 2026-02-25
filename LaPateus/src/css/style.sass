@@ -81,27 +81,25 @@ body
             height: 100%
             object-position: top right
             pointer-events: none
+            opacity: 0
     h1
         font-size: 80px
         color: #f1cb90
         text-align: right
         line-height: 93%
-        letter-spacing: .35rem
+        letter-spacing: .11rem
         margin: 29px 0 0
-        opacity: 0
     &__subtitle
         color: #f1cb90
         text-align: right
         line-height: 93%
         font-size: 58px
-        letter-spacing: .06em
-        opacity: 0
+        letter-spacing: .02rem
     &__title
         font-size: 36px
         color: #f1cb90
         text-align: right
-        letter-spacing: 0.17rem
-        opacity: 0
+        letter-spacing: 0.05rem
     &__wrapper
         margin: 107px 0 0
         display: grid
@@ -164,21 +162,20 @@ body
             // max-width: 700px
             display: block
             // margin: 0 auto
-        h1
-            font-size: 60px 
+        h2
+            font-size: 40px 
             color: #193741
             text-align: center
             margin: 20px 0 0
     &__thumb
-        margin: 50px 0 0
+        margin: 20px 0 0
         .swiper-slide
             padding: 20px
             background: #aaa9a0
         img
             width: 100%
     &__descr
-        padding: 20px 
-        margin: 50px 0 0
+        padding: 10px 
         background: #aaa9a0
         p,
         li
@@ -206,7 +203,42 @@ body
             display: grid
             grid-template-columns: 1fr 300px
             gap: 20px
+    &__container
+        display: grid
+        grid-template-columns: 800px 1fr
+        gap: 30px
+        align-items: start
 
+.contact
+    padding: 100px 0 0
+    h2
+        text-align: right
+        font-size: 50px
+    &__descr
+        font-size: 24px
+        color: #f1cb90
+        text-align: right
+        margin: 50px 0 0 auto
+        max-width: 1000px
+    &__soc
+        margin: 50px 0 0
+        display: flex
+        justify-content: end
+        align-items: center
+        a
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 45px
+            height: 45px
+            border-radius: 100%
+            background: #f1cb90
+            transition: all .3s
+            &:hover
+                opacity: .7
+        svg
+            width: 24px
+            height: 24px
 
 
 
@@ -220,19 +252,22 @@ body
         h1
             font-size: 60px
             margin: 35px 0 0
-            letter-spacing: .33rem
+            letter-spacing: .23rem
         &__subtitle
             font-size: 42px
-            letter-spacing: .26rem
+            letter-spacing: .18rem
         &__title
             font-size: 26.8px
-            letter-spacing: .17rem
+            letter-spacing: .115rem
         &__wrapper
             gap: 60px
             margin: 90px 0 0
         &__item
             p
                 font-size: 25px
+    .card
+        &__container
+            grid-template-columns: 600px 1fr
 
 @media ( max-width: 1024px )
     .catalog
@@ -242,7 +277,7 @@ body
     .card
         padding: 50px 0 0
         &__wrapper
-            h1
+            h2
                 font-size: 35px
         &__thumb
             margin: 20px 0 0
@@ -257,26 +292,28 @@ body
                 font-size: 24px
             li
                 grid-template-columns: 1fr 150px
+        &__container
+            grid-template-columns: 400px 1fr
 
     
 @media ( max-width: 768px )
     .nav
         padding: 30px 0 0
     .catalog
-        &__info img
-            opacity: 0
+        // &__info img
+        //     opacity: 0
         h1
             font-size: 42px
-            letter-spacing: .23rem
+            letter-spacing: .16rem
             margin: 25px 0 0
             opacity: 1
         &__subtitle
             font-size: 30px
-            letter-spacing: .16rem
+            letter-spacing: .11rem
             opacity: 1
         &__title
             font-size: 18px
-            letter-spacing: .14rem
+            letter-spacing: .104rem
             opacity: 1
         &__wrapper
             margin: 50px 0 0
@@ -298,6 +335,16 @@ body
         &__copy
             font-size: 23px
             margin: 30px 0 0
+    .card
+        &__container
+            grid-template-columns: 100%
+    .contact
+        padding: 50px 0 0
+        h2
+            font-size: 35px
+        &__descr
+            margin: 30px 0 0
+            font-size: 20px
 
 @media ( max-width: 600px )
     .nav

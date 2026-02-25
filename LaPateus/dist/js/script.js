@@ -10,12 +10,12 @@ var swiper = new Swiper(".card__thumb", {
     breakpoints: {
         1025: {
             // slidesPerView: 2,
-            spaceBetween: 50
+            spaceBetween: 20
         },
-        601: {
-            // slidesPerView: 2,
-            spaceBetween: 4
-        },
+        // 601: {
+        //     // slidesPerView: 2,
+        //     spaceBetween: 4
+        // },
     }
 });
 var swiper2 = new Swiper(".card__slider", {
