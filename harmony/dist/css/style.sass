@@ -679,6 +679,21 @@ h2
             line-height: 1.2
             color: #fff
             text-align: center
+        ul
+            display: grid
+            grid-template-columns: 1fr
+            gap: 30px
+        li
+            display: grid
+            grid-template-columns: 24px 1fr
+            align-items: center
+            gap: 10px
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.25
+            color: $on-surface-100
     &__item
         position: relative
         padding: 78px 40px
@@ -731,21 +746,6 @@ h2
                 &__dop
                     margin: 78px auto 0
                     max-height: 600px
-                    ul
-                        display: grid
-                        grid-template-columns: 1fr
-                        gap: 30px
-                    li
-                        display: grid
-                        grid-template-columns: 24px 1fr
-                        align-items: center
-                        gap: 10px
-                    p
-                        font-family: $font-family
-                        font-weight: 400
-                        font-size: 16px
-                        line-height: 1.25
-                        color: $on-surface-100
     &__descr
         padding: 64px 0
         position: relative
@@ -1465,6 +1465,7 @@ h2
                 font-size: 16px
                 line-height: 1.1875
                 color: $accent-500
+                padding: 0 25px 0 0
                 &:nth-child(1)
                     max-width: calc( 100% - 50px )
                 &+p
@@ -1500,10 +1501,274 @@ h2
         .container
             grid-template-columns: 1fr
     .practic
+        &__wrapper
+            overflow: auto
+            padding: 0 20px
+            margin: 40px -20px 0
         &__item
+            min-width: 250px
             &_footer
                 a
                     display: none
+    .map
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+            counter-reset: item
+        &__item
+            display: block
+            background: linear-gradient(130deg, #002235 0%, rgba(0, 99, 155, 0.6) 100%)
+            border-radius: 16px
+            padding: 20px
+            counter-increment: item
+            position: relative  
+            img
+                display: none
+            &::before
+                content: counter(item)
+                font-family: $second-family
+                font-weight: 600
+                font-size: 18px
+                line-height: 1.22222
+                color: $primary-buttons-active
+                width: 40px
+                height: 40px
+                border-radius: 100%
+                background: $background-color-base
+                top: 13px
+                right: 13px
+                z-index: 1
+                position: absolute
+                display: flex
+                justify-content: center
+                align-items: center
+        &__num
+            display: block
+            p
+                max-width: calc( 100% - 50px ) !important
+                margin: 0
+                padding: 0 !important
+                background: 0 0
+                font-family: $second-family
+                font-weight: 600
+                font-size: 18px
+                line-height: 1.22222
+                color: $on-surface-100
+                text-align: left
+                margin: 0 !important
+                display: block
+        &__text
+            margin: 10px 0 0
+            font-family: $font-family
+            font-weight: 400
+            font-size: 14px
+            line-height: 1.14286
+            color: $on-surface-100
+            padding: 0
+            background:  0 0
+    .form
+        &__wrapper
+            grid-template-columns: 1fr
+    .footer
+        &__container
+            grid-template-columns: 1fr
+            gap: 60px
+        &__form
+            order: -2
+        &__list
+            max-width: 100%
+            width: 100%
+            order: -1
+            border-top: 1px solid $neutral-300-dividers
+            padding: 20px 0 0
+            ul
+                display: flex
+                justify-content: start
+            p
+                margin: 30px 0
+        &__prev
+            display: grid
+            grid-template-columns: 75px 1fr
+            align-items: start
+        &__logo
+            max-width: 75px
+            grid-row: 1/3
+        &__soc
+            grid-row: 2/3
+            grid-column: 2/3
+            justify-content: end
+        &__phone
+            margin: 0
+            text-align: right
+
+@media ( max-width: 700px )
+    h2
+        font-size: 24px
+    section
+        padding: 60px 0
+        &.dark
+            padding: 35px 0
+            h2
+                font-size: 18px
+    .header
+        &__info
+            display: none
+        h1
+            font-size: 32px
+        &__text
+            margin: 16px 0 0
+            font-size: 16px
+            p+p
+                margin: 16px 0 0
+        &__btn
+            grid-template-columns: 1fr
+        &__wrapper
+            max-width: 500px
+    .signs
+        &__wrapper
+            margin: 20px 0 0
+            grid-template-columns: 1fr
+            gap: 20px
+        &__item
+            border: none
+            padding: 0
+            span
+                right: auto
+                left: 0
+                top: 0
+            p
+                min-height: 46px
+                padding: 0 0 0 60px
+                display: flex
+                align-items: center
+                &+p
+                    display: none
+        .btn__blue
+            margin: 30px 0 0
+    .which
+        &__subtitle
+            font-size: 16px
+        &__item
+            grid-template-columns: 1fr
+        &__info
+            padding: 24px
+    .concept
+        padding: 20px 0 40px
+        &__list
+            display: none
+    .pillars
+        &__wrapper
+            margin: 26px 0 0
+    .result
+        padding: 40px 0 0
+        &__wrapper
+            margin: 24px 0 0
+            gap: 8px
+            p
+                font-size: 16px
+                padding: 10px 22px
+                text-align: left
+    .founder
+        &__quote
+            padding: 108px 0px 48px
+            &_icon
+                top: 8px
+                left: -16px
+            &_text
+                font-size: 16px
+            &_har
+                margin: 30px 0 0
+                gap: 12px
+                p
+                    font-size: 24px
+                    &+p
+                        font-size: 16px
+                        margin: 0
+                        &+p
+                            font-size: 16px
+                            margin: 16px 0 0
+                            font-weight: 400
+            &_title
+                p
+                    font-size: 24px
+                    &+p
+                        margin: 16px 0 0
+            .btn__wht
+                margin: 50px 0 0
+    .level
+        &__item
+            padding: 38px 17px 43px
+            background: $accent-500 !important
+            &::before
+                content: none
+            &_bg
+                display: none
+        &__btn
+            padding: 0
+            p
+                text-align: center
+                font-family: $second-family
+                font-weight: 500
+                font-size: 24px
+                line-height: 1.25
+                color: $on-surface-100
+            span
+                display: none
+        &__dop
+            max-height: none !important
+            margin: 17px 0 0 !important
+            ul
+                font-size: 16px
+                gap: 12px
+            &_text
+                display: none
+        &__descr
+            padding: 30px 0
+            p
+                font-size: 24px
+    .format
+        &__item
+            &_title
+                p
+                    font-size: 24px
+            &_wrapper
+                margin: 30px 0 0
+    .map
+        &__wrapper
+            display: flex
+            justify-content: start
+            align-items: stretch
+            overflow: auto
+            margin: 24px -20px 0
+            padding: 0 20px
+        &__item
+            width: 250px
+            min-width: 250px
+    .footer
+        padding: 24px 0 10px
+        &__list
+            p
+                display: none
+                &+ul
+                    display: none
+        &__form
+            padding: 0
+            border: none
+            &_title
+                p
+                    font-size: 24px
+
+@media ( max-width: 500px )
+    .footer
+        &__list
+            ul
+                flex-direction: column
+                gap: 15px
+    .format
+        &__item
+            padding: 20px
+        
+        
+            
 
 
             
