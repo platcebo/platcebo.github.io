@@ -1,0 +1,1523 @@
+$background-color-base: #f5f5f5
+$neutral-900-primary-text: #1e1f22
+$neutral-600-secondary-text: #4a4b4f
+$neutral-300-dividers: #d6d8d4
+$primary-buttons-active: #033c5c
+$primary-buttons-hover: #172c49
+$primary-buttons-disabled: #c9d2de
+$accent-500: #00639b
+$surface-dark: #162336
+$on-surface-100: #f2f3f1
+$on-surface-80: rgba(217, 217, 217, 0.8)
+$on-surface-button-active: #f2f3f1
+$on-surface-button-hover: #f2f3f1
+$color: rgba(74, 75, 79, 0.2)
+$font-family: "Inter", sans-serif
+$second-family: "Noto Serif", sans-serif
+$third-family: "IBM Plex Sans", sans-serif
+
+body
+    background: #fff
+    position: relative  
+    font-family: $font-family
+    font-weight: 400
+    font-size: 18px
+    line-height: 1.3
+    color: $primary-buttons-active
+section
+    padding: 90px 0 90px
+    position: relative  
+    overflow: hidden
+    &.dark
+        background: linear-gradient(160deg, #002235 0%, #00639b 100%)
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: 0
+            right: 0
+            height: 100%
+            width: 100%
+            background: url('../img/dark_bg.png') right no-repeat
+            background-size: contain
+            pointer-events: none
+        h2
+            color: $on-surface-100
+h2
+    font-family: $second-family
+    font-weight: 500
+    font-size: 40px
+    line-height: 1.1
+    color: $primary-buttons-active
+.btn
+    &__blue
+        border: 2px solid $on-surface-100
+        border-radius: 8px
+        padding: 14px 36px
+        background: $primary-buttons-active
+        transition: all .3s
+        font-family: $font-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.625
+        color: $on-surface-100
+        display: block
+        text-align: center
+        width: 100%
+        &:hover
+            background: $primary-buttons-hover
+    &__wht
+        border: 2px solid $on-surface-100
+        border-radius: 8px
+        padding: 14px 36px
+        background: $on-surface-100
+        transition: all .3s
+        font-family: $font-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.625
+        color: $primary-buttons-active
+        display: block
+        text-align: center
+        width: 100%
+        &:hover
+            background: #D5D6D4
+
+.container
+    padding: 0 20px
+    margin: 0 auto
+    max-width: 1200px
+    box-sizing: content-box
+
+.nav
+    padding: 12px 0 8px
+    &__hum
+        display: none
+    &__logo
+        max-width: 77px
+        img
+            width: 100%
+        &_mob
+            display: none
+    .container
+        display: flex
+        justify-content: start
+        align-items: center
+        gap: 30px
+    ul
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 24px
+        a
+            min-width: 78px
+            font-family: $third-family
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.4
+            text-transform: capitalize
+            color: $primary-buttons-active
+            transition: all .3s
+            text-align: center
+            display: block
+            white-space: nowrap
+            &:hover
+                color: $accent-500
+    .btn__blue
+        width: 100%
+        max-width: 384px
+
+.header
+    padding: 50px 0 
+    position: relative
+    background: linear-gradient(177deg, #002235 0%, #00639b 100%)
+    color: $on-surface-100
+    &__wrapper
+        max-width: calc( 100% - 400px )
+    h1
+        font-family: $second-family
+        font-weight: 600
+        font-size: 52px
+        line-height: 1.2
+    &__text
+        margin: 40px 0 0
+        max-width: 440px
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 18px
+            line-height: 1.3
+            &+p
+                font-family: $third-family
+                margin: 30px 0 0
+    &__btn
+        margin: 56px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 25px
+        max-width: 588px
+    &__bg
+        position: absolute
+        top: 0
+        right: 0
+        height: 100%
+        width: calc( 50vw - 216px )
+        object-fit: cover
+    &__info
+        margin: 70px 0 0
+        display: grid
+        grid-template-columns: 1fr 210px 210px
+        gap: 15px
+        p
+            font-family: $second-family
+            font-weight: 600
+            font-size: 20px
+            line-height: 1.2
+            color: $on-surface-100
+            &+p
+                margin: 19px 0 0
+                font-family: $font-family
+                font-weight: 400
+                font-size: 14px
+                line-height: 1.14286
+                color: $on-surface-100
+        &_item
+            padding: 15px 0 0 23px
+            border-left: 1px solid $neutral-300-dividers
+            position: relative
+            &::before
+                content: ''
+                display: block
+                width: 10px
+                height: 10px
+                border-radius: 100%
+                background: $neutral-300-dividers
+                position: absolute
+                left: 0
+                top: 27px
+                transform: translateX(-50%)
+            p
+                max-width: 140px
+    &__autor
+        padding: 15px 0 0
+        display: grid
+        grid-template-columns: 78px 1fr
+        gap: 23px
+        img
+            width: 100%
+            border-radius: 100%
+        p
+            max-width: 190px
+
+.signs
+    &__wrapper
+        margin: 58px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 24px
+        align-items: stretch
+    &__item
+        padding: 34px 24px 24px
+        position: relative
+        border: 1px solid $neutral-300-dividers
+        p
+            font-family: $second-family
+            font-weight: 600
+            font-size: 20px
+            line-height: 1.2
+            color: $primary-buttons-active
+            max-width: calc( 100% - 56px )
+            min-height: 72px
+            &+p
+                margin: 40px 0 0
+                font-family: $font-family
+                font-weight: 400
+                font-size: 16px
+                color: $neutral-900-primary-text
+        span
+            position: absolute
+            top: 35px
+            right: 25px
+            width: 46px
+            height: 46px
+            border-radius: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            background: $accent-500
+    .btn__blue
+        margin: 48px 0 0
+
+.concept
+    padding: 70px 0 40px
+    .container
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 10px
+        align-items: center
+    &__info
+        border: 1px solid $neutral-300-dividers
+        padding: 45px 20px
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.25
+            color: $on-surface-100
+    &__list
+        margin: 40px 0 0
+        display: grid
+        grid-template-columns: 1fr
+        gap: 40px
+        li
+            position: relative
+            display: grid
+            grid-template-columns: 46px 1fr
+            gap: 16px
+            align-items: start
+            padding: 21px 17px
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.25
+            color: $on-surface-100
+            max-width: 350px
+        span
+            border-radius: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 46px
+            height: 46px
+            background: $accent-500
+
+.pillars
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        gap: 22px
+        margin: 55px 0 0
+    &__item
+        position: relative  
+        &:nth-child(odd)
+            margin: 69px 0 0
+        &::before
+            content: ''
+            display: block
+            z-index: -1
+            position: absolute
+            right: 0
+            top: 162px
+            background: $primary-buttons-active
+            height: 365px
+            width: 1px
+        &::after
+            content: ''
+            display: block
+            width: 10px
+            height: 10px
+            border-radius: 100%
+            right: 0
+            background: $accent-500
+            transform: translateX(50%)
+            top: 522px
+            position: absolute
+        img
+            width: 100%
+            max-width: 203px
+            display: block
+            margin: 0 0 0 auto
+        p
+            font-family: $second-family
+            font-weight: 600
+            font-size: 20px
+            line-height: 1.2
+            color: $accent-500
+            margin: 42px 0 0
+            padding: 0 10px 0 0
+            &+p
+                margin: 30px 0 0
+                font-family: $font-family
+                font-weight: 400
+                font-size: 16px
+                line-height: 1.25
+                color: $neutral-900-primary-text
+
+.result
+    padding: 143px 0 0
+    &__wrapper
+        margin: 52px 0 0
+        display: flex
+        flex-wrap: wrap
+        gap: 24px
+        p
+            border: 1px solid $neutral-300-dividers
+            border-radius: 45px
+            padding: 16px 40px
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.25
+            text-align: center
+            color: $on-surface-100
+            background: $primary-buttons-active
+
+.form
+    background: linear-gradient(160deg, #002235 0%, #00639b 100%)
+    h2
+        font-size: 32px
+    .container
+        max-width: 792px
+    &__wrapper
+        margin: 25px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 24px
+        align-items: start
+        &_text
+            margin: 25px 0 0
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.25
+            color: $on-surface-100
+    &__list
+        display: grid
+        grid-template-columns: 1fr
+        gap: 16px
+        padding: 13px 0 0
+        li
+            display: grid
+            grid-template-columns: 24px 1fr
+            gap: 10px
+            align-items: center
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.25
+            color: $on-surface-100
+    &__block
+        position: relative 
+        .btn__wht
+            margin: 40px 0 0
+    
+.input
+    &__text
+        display: block
+        width: 100%
+        box-sizing: border-box
+        border: 1px solid $on-surface-100
+        border-radius: 8px
+        padding: 13px 36px
+        background: $primary-buttons-active
+        font-family: $font-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.6
+        color: $on-surface-100
+        transition: all .3s
+        &::placeholder
+            color: $on-surface-80
+        &.error
+            color: #ff383c
+            border: 2px solid #ff383c
+        &+.input__text
+            margin: 24px 0 0
+    &__check
+        margin: 50px 0 0
+        display: grid
+        grid-template-columns: 32px 1fr
+        gap: 16px
+        align-items: center
+        position: relative
+        b
+            // background: $on-surface-100
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 2px solid $on-surface-100
+            transition: all .3s
+            width: 32px
+            height: 32px
+            svg
+                opacity: 0
+                transition: all .3s
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 14px
+            line-height: 1.14286
+            color: $on-surface-100
+        input
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            opacity: 0
+            z-index: 2
+            cursor: pointer
+            &:checked
+                &+b
+                    background: $on-surface-100
+                    svg
+                        opacity: 1
+
+.founder
+    position: relative  
+    padding-bottom: 0
+    &__mob
+        display: none
+    &__bg
+        display: block
+        width: 100%
+        max-width: 486px
+    .container
+        display: grid
+        grid-template-columns: 1fr 484px
+        gap: 10px
+        align-items: start
+    &__list
+        display: grid
+        grid-template-columns: 1fr
+        gap: 16px
+        margin: 40px 0 0
+        li
+            position: relative
+            display: grid
+            grid-template-columns: 46px 1fr
+            gap: 16px
+            align-items: center
+            padding: 21px 17px
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.25
+            color: $neutral-900-primary-text
+            max-width: 460px
+            b
+                font-family: $second-family
+                font-weight: 600
+                font-size: 20px
+                color: $primary-buttons-active
+        span
+            border-radius: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 46px
+            height: 46px
+            background: $accent-500
+    &__title
+        padding: 0 0 0 10px
+        p
+            margin: 42px 0 0
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.25
+            color: $neutral-900-primary-text
+    &__mob
+        display: none
+    &__quote
+        position: relative
+        z-index: 2
+        padding: 44px 0 126px 112px
+        margin: 40px 0 0
+        &::before
+            content: ''
+            display: block
+            width: calc( 50vw - 116px )
+            min-width: 504px
+            height: 100%
+            position: absolute
+            left: 54px
+            top: 0
+            z-index: -1
+            background: url('../img/quote.png') right no-repeat
+            background-size: contain
+        &::after
+            content: ''
+            display: block
+            height: 100%
+            z-index: -2
+            background: linear-gradient(169deg, #002235 0%, #00639b 100%)
+            left: 0
+            top: 0
+            position: absolute
+            width: calc( 50vw - 116px )
+            min-width: 504px
+        &_icon
+            position: absolute
+            top: 15px
+            left: 10px
+            svg
+                width: 102px
+                height: 102px
+        &_text
+            font-family: $second-family
+            font-weight: 600
+            font-size: 20px
+            line-height: 1.2
+            color: $on-surface-100
+            p+p
+                margin: 22px 0 0
+        &_har
+            margin: 65px 0 0
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 24px
+            div
+                position: relative
+                border: 1px solid $neutral-300-dividers
+                padding: 10px
+            p
+                font-family: $second-family
+                font-weight: 500
+                font-size: 40px
+                line-height: 1.2
+                color: $on-surface-100
+                &+p
+                    font-weight: 600
+                    font-size: 20px
+                    margin: 8px 0 0
+                    &+p
+                        margin: 16px 0 0
+                        font-family: $font-family
+                        font-size: 16px
+        &_title
+            margin: 33px 0 0
+            p
+                font-family: $second-family
+                font-weight: 500
+                font-size: 40px
+                line-height: 1.1
+                color: $on-surface-100
+                &+p
+                    font-family: $font-family
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 1.25
+        .btn__wht
+            margin: 60px 0 0
+
+.level
+    position: relative
+    overflow: hidden
+    padding-bottom: 0
+    &::before
+        content: ''
+        display: block
+        width: 100%
+        height: 100%
+        background: url('../img/lvl.png') bottom no-repeat
+        background-size: cover
+        position: absolute
+        bottom: 0
+        left: 0
+        pointer-events: none
+    &__subtitle
+        font-family: $font-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.25
+        color: $neutral-900-primary-text
+        margin: 42px 0 0
+        max-width: 798px
+    &__wrapper
+        margin: 64px auto 0
+        position: relative
+        display: grid
+        grid-template-columns: 1fr
+        gap: 24px
+        max-width: 588px
+    &__btn
+        gap: 25px
+        align-items: center
+        padding: 0 100px
+        position: relative
+        p
+            font-family: $second-family
+            font-weight: 500
+            font-size: 40px
+            line-height: 1.1
+            color: $on-surface-100
+            text-align: center
+        span
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 78px
+            height: 78px
+            border-radius: 100%
+            background: $on-surface-100
+            opacity: 0
+            transition: all .3s
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+    &__dop
+        max-height: 0
+        overflow: hidden
+        margin: 0
+        transition: all .3s
+        max-width: 384px
+        margin: 0 auto
+        &_text
+            width: 100%
+            margin: 80px 0 0
+            border: 1px solid $on-surface-100
+            border-radius: 90px
+            padding: 10px
+            font-family: $second-family
+            font-weight: 600
+            font-size: 20px
+            line-height: 1.2
+            color: #fff
+            text-align: center
+    &__item
+        position: relative
+        padding: 78px 40px
+        background: $accent-500
+        border-radius: 24px
+        overflow: hidden
+        z-index: 2
+        cursor: pointer
+        transition-delay: 0s
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            z-index: -1
+            background: linear-gradient(177deg, #002235 0%, #00639b 100%)
+            opacity: 0
+            transition: all .3s
+        &_bg
+            position: absolute
+            top: 17px
+            right: 15px
+            width: 44px
+            height: 44px
+            border-radius: 100%
+            background: $on-surface-100
+            display: flex
+            justify-content: center
+            align-items: center
+            transition: all .3s
+            svg
+                width: 34px
+                height: 34px
+        &:hover
+            &::before
+                opacity: 1
+        &.active
+            &::before
+                opacity: 1
+            .level
+                &__item
+                    &_bg
+                        opacity: 0
+                &__btn
+                    span
+                        opacity: 1
+                &__dop
+                    margin: 78px auto 0
+                    max-height: 600px
+                    ul
+                        display: grid
+                        grid-template-columns: 1fr
+                        gap: 30px
+                    li
+                        display: grid
+                        grid-template-columns: 24px 1fr
+                        align-items: center
+                        gap: 10px
+                    p
+                        font-family: $font-family
+                        font-weight: 400
+                        font-size: 16px
+                        line-height: 1.25
+                        color: $on-surface-100
+    &__descr
+        padding: 64px 0
+        position: relative
+        z-index: 3
+        margin: 64px 0 0
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            width: 100vw
+            height: 100%
+            left: 50%
+            top: 0
+            transform: translateX(-50%)
+            background: linear-gradient(160deg, #002235 0%, #00639b 100%)
+            z-index: -1
+        p
+            font-family: $second-family
+            font-weight: 500
+            font-size: 32px
+            line-height: 1.125
+            color: $on-surface-100
+            max-width: 930px
+
+.format
+    padding-bottom: 0
+    &__wrapper
+        margin: 40px 0 0
+        display: grid
+        grid-template-columns: 1fr
+        gap: 40px
+    &__item
+        border-radius: 24px
+        padding: 34px
+        box-shadow: 4px 4px 4px 0 #c8cbce
+        background: $background-color-base
+        &_title
+            display: grid
+            grid-template-columns: 1fr 46px
+            gap: 20px
+            align-items: start
+            p
+                font-family: $second-family
+                font-weight: 500
+                font-size: 32px
+                line-height: 1.125
+                color: $primary-buttons-active
+            span
+                width: 46px
+                height: 46px
+                border-radius: 100%
+                background: $accent-500
+                display: flex
+                justify-content: center
+                align-items: center
+        &_wrapper
+            margin: 50px 0 0
+            display: grid
+            grid-template-columns: 26fr 38fr 44fr
+            gap: 24px
+            align-items: start
+            div
+                max-width: 390px
+            ul
+                margin: 30px 0 0
+                display: grid
+                grid-template-columns: 1fr
+                gap: 10px
+                max-width: 340px
+                li
+                    display: grid
+                    grid-template-columns: 24px 1fr
+                    gap: 10px
+                    align-items: center
+                p
+                    font-family: $font-family
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 1.25
+            .btn__blue,
+            .btn__wht
+                margin: 60px 0 0
+        &_name
+            font-family: $second-family
+            font-weight: 600
+            font-size: 20px
+            line-height: 1.2
+            color: $primary-buttons-active
+        &_text
+            margin: 30px 0 0
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.25
+            color: $neutral-900-primary-text
+    &__blue
+        color: $on-surface-100 !important
+        background: $primary-buttons-active
+        &_har
+            div+div
+                margin: 20px 0 0
+        .format__item
+            &_title 
+                span
+                    background: $on-surface-100
+                p
+                    color: $on-surface-100
+            &_name,
+            &_text
+                color: $on-surface-100
+        &_descr
+            margin: 56px 0 0
+            padding: 24px
+            border: 1px solid $neutral-300-dividers
+            border-radius: 8px
+            font-family: $second-family
+            font-weight: 600
+            font-size: 20px
+            line-height: 1.2
+            color: $on-surface-100
+    &__stage
+        p
+            padding: 0 0 0 14px
+            font-size: 20px
+            font-family: $second-family
+            &:nth-child(1)
+                padding: 0
+        p+p,
+        div+p
+            margin: 30px 0 0
+        div
+            display: grid
+            grid-template-columns: 24px 1fr
+            gap: 10px
+            align-items: start
+            margin: 26px 0 0
+            p
+                font-size: 16px
+                font-weight: 400
+                padding: 0
+                font-family: $font-family
+
+.which
+    position: relative
+    overflow: hidden
+    z-index: 2
+    &::before
+        content: ''
+        display: block
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        right: 0
+        background: url('../img/which_bg.png') right no-repeat
+        background-size: cover
+        z-index: -1
+        pointer-events: none
+    &__subtitle
+        margin: 40px 0 0
+        font-family: $font-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.25
+        color: #1e1f22
+    &__wrapper
+        margin: 40px 0 0
+        display: grid
+        grid-template-columns: 1fr
+        gap: 40px
+    &__item
+        display: grid
+        grid-template-columns: 1fr 400px
+        background: $background-color-base
+    &__info
+        padding: 34px 
+        &_title
+            display: grid
+            grid-template-columns: 46px 1fr
+            gap: 10px
+            align-items: center
+            p
+                font-family: $second-family
+                font-weight: 600
+                font-size: 20px
+                line-height: 1.2
+                color: $primary-buttons-active
+            span
+                width: 46px
+                height: 46px
+                border-radius: 100%
+                display: flex
+                justify-content: center
+                align-items: center
+                background: $accent-500
+        ul
+            margin: 50px 0 0
+            display: grid
+            grid-template-columns: 1fr
+            gap: 15px
+            max-width: 400px
+            li
+                display: grid
+                grid-template-columns: 24px 1fr
+                gap: 10px
+                align-items: center
+            p
+                font-family: $font-family
+                font-weight: 400
+                font-size: 16px
+                line-height: 1.25
+                color: $neutral-900-primary-text
+    &__more
+        height: 100%
+        background: $primary-buttons-active
+        padding: 24px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        gap: 40px
+        p
+            font-family: $second-family
+            font-weight: 600
+            font-size: 20px
+            line-height: 1.2
+            color: $on-surface-100
+        a
+            display: grid
+            grid-template-columns: 44px 1fr
+            gap: 10px
+            align-items: center
+        b
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.25
+            text-decoration: underline
+            text-decoration-skip-ink: none
+            color: $on-surface-100
+        span
+            width: 44px
+            height: 44px
+            background: $background-color-base
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 100%
+
+.form-full
+    .container
+        display: grid
+        grid-template-columns: 1fr 400px
+        gap: 30px
+        align-items: center
+    h2
+        max-width: 430px
+        font-size: 32px
+
+.practic
+    padding-bottom: 0
+    &__wrapper
+        margin: 40px 0 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 24px
+    &__item
+        background: $background-color-base
+        border: 1px solid $neutral-300-dividers
+        display: grid
+        grid-template-rows: auto 1fr auto
+        &_title
+            padding: 24px
+            font-family: $second-family
+            font-weight: 600
+            font-size: 20px
+            line-height: 1.2
+            color: $on-surface-100
+            background: $primary-buttons-active
+        &_wrapper
+            padding: 24px
+            display: flex
+            flex-direction: column
+            p
+                font-family: $font-family
+                font-weight: 400
+                font-size: 14px
+                line-height: 1.5
+                color: $primary-buttons-active
+                &+p
+                    margin: 8px 0 0
+                    font-size: 16px
+                    line-height: 1.25
+                    color: $neutral-900-primary-text
+            h3
+                font-family: $second-family
+                font-weight: 600
+                font-size: 20px
+                line-height: 1.2
+                color: $primary-buttons-active
+                &+p
+                    color: $neutral-600-secondary-text
+            div
+                margin: 24px 0 0
+                &:nth-child(1)
+                    margin: 0 0 auto
+        &_footer
+            padding: 24px
+            background: $primary-buttons-active
+            p
+                font-family: $font-family
+                font-weight: 400
+                font-size: 14px
+                line-height: 1.5
+                color: $on-surface-100
+                &+p
+                    margin: 8px 0 0
+                    font-size: 16px
+                    line-height: 1.25
+            a
+                display: grid
+                grid-template-columns: 44px 1fr
+                gap: 10px
+                align-items: center
+                margin: 30px 0 0
+            b
+                font-family: $font-family
+                font-weight: 400
+                font-size: 16px
+                line-height: 1.25
+                text-decoration: underline
+                text-decoration-skip-ink: none
+                color: $on-surface-100
+            span
+                width: 44px
+                height: 44px
+                background: $background-color-base
+                display: flex
+                justify-content: center
+                align-items: center
+                border-radius: 100%
+    .btn__blue
+        margin: 40px 0 0
+
+.map
+    position: relative
+    overflow: hidden
+    z-index: 2
+    &::before
+        content: ''
+        display: block
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        right: 0
+        background: url('../img/which_bg.png') right no-repeat
+        background-size: cover
+        z-index: -1
+        pointer-events: none
+    &__wrapper
+        margin: 32px 0 0
+        display: grid
+        grid-template-columns: 1fr
+        gap: 20px
+    &__item
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 20px
+        &:nth-child(1)
+            .map__num
+                p
+                    max-width: 260px
+        &:nth-child(2)
+            .map__num
+                p
+                    max-width: 300px
+                    padding: 30px 60px
+                img
+                    margin-right: -40px
+        &:nth-child(3)
+            .map__num
+                p
+                    max-width: 350px
+        &:nth-child(4)
+            .map__num
+                p
+                    max-width: 390px
+        &:nth-child(5)
+            .map__num
+                p
+                    max-width: 430px
+    &__text
+        font-family: $font-family
+        font-weight: 400
+        font-size: 16px
+        line-height: 1.25
+        color: $neutral-900-primary-text
+        border-radius: 12px
+        padding: 23px
+        background: $background-color-base
+        display: flex
+        align-items: center
+    &__num
+        display: flex
+        justify-content: end
+        align-items: stretch
+        padding: 6px 0 6px 0
+        img
+            height: 136px
+            display: block
+            margin: -5px -30px -5px 0
+            width: auto
+            z-index: 2
+        p
+            height: 100%
+            background: $primary-buttons-active
+            display: flex
+            align-items: center
+            justify-content: center
+            padding: 30px 50px
+            font-family: $second-family
+            font-weight: 600
+            font-size: 20px
+            line-height: 1.2
+            color: $on-surface-100
+            width: 100%
+        
+.form-cons
+    h2
+        max-width: 1000px
+    .container
+        max-width: 1200px
+    .form__block
+        max-width: 400px
+    &__info
+        max-width: 360px
+
+.faq
+    &__wrapper
+        margin: 40px 0 0
+        display: grid
+        grid-template-columns: 1fr
+        gap: 20px
+    &__btn
+        display: grid
+        grid-template-columns: 1fr 46px
+        gap: 20px
+        align-items: center
+        cursor: pointer
+        p
+            font-family: $second-family
+            font-weight: 600
+            font-size: 20px
+            line-height: 1.2
+            color: $primary-buttons-active
+        span
+            width: 44px
+            height: 44px
+            background: $accent-500
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 100%
+            transition: all .3s
+            transform: rotate(-45deg)
+    &__text
+        display: none
+        p,
+        li
+            font-family: $font-family
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.25
+            color: $neutral-900-primary-text
+        *
+            &:nth-child(1)
+                margin: 0
+        p,
+        ul
+            margin: 18px 0 0
+    &__item
+        padding: 0 0 24px
+        border-bottom: 1px solid $neutral-300-dividers
+        &.active
+            .faq
+                &__btn
+                    span
+                        transform: none
+                &__text
+                    display: block
+                    margin: 24px 0 0
+
+.footer
+    padding: 60px 0 20px
+    background: linear-gradient(142deg, #002235 0%, #00639b 100%)
+    &__container
+        display: grid
+        grid-template-columns: 180px 1fr 380px
+        gap: 20px
+    &__col
+        display: flex
+        flex-direction: column
+    &__logo
+        margin: 0 0 auto
+        img
+            width: 100%
+    &__phone
+        text-align: center
+        font-family: $second-family
+        font-weight: 600
+        font-size: 20px
+        line-height: 1.2
+        color: $on-surface-100
+        text-align: center
+        display: block
+        margin: 50px 0 0
+    &__soc
+        margin: 20px 0 0
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 24px
+        a
+            display: block
+    &__list
+        max-width: 290px
+        margin: 0 auto
+        p
+            margin: 60px 0 30px
+            font-family: $second-family
+            font-weight: 600
+            font-size: 20px
+            line-height: 1.2
+            color: $on-surface-100
+        ul
+            display: grid
+            grid-template-columns: 1fr
+            gap: 30px
+            a
+                font-family: $font-family
+                font-weight: 400
+                font-size: 16px
+                line-height: 1.625
+                color: $on-surface-100
+    &__form
+        border: 1px solid $neutral-300-dividers
+        padding: 24px
+        &_title
+            margin: 0 0 30px
+            p
+                font-family: $second-family
+                font-weight: 500
+                font-size: 32px
+                line-height: 1.125
+                color: $on-surface-100
+                &+p
+                    margin: 25px 0 0
+                    font-family: $font-family
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 1.25
+                    color: $on-surface-100
+    &__copy
+        margin: 50px 0 0
+        font-family: $font-family
+        font-weight: 400
+        font-size: 14px
+        line-height: 1.14286
+        text-align: right
+        color: $on-surface-100
+
+@media ( max-width: 1200px )
+    .nav
+        ul
+            a
+                min-width: auto
+        .btn__blue
+            margin: 0 0 0 auto
+            max-width: max-content
+    .signs
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+
+@media ( max-width: 950px )
+    .nav
+        background: transparent
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 100
+        padding: 5px 0
+        ul
+            display: none
+        .btn__blue
+            display: none
+        &__hum
+            display: flex
+            flex-direction: column
+            height: 32px
+            width: 40px
+            justify-content: space-between
+            margin: 0 0 0 auto
+            cursor: pointer
+            span,
+            &::before,
+            &::after
+                content: ''
+                display: block
+                position: relative
+                width: 100%
+                height: 4px
+                background: $on-surface-100
+        &__logo
+            display: none
+            &_mob
+                max-width: 76px
+                display: block
+                img
+                    width: 100%
+        &.active
+            position: fixed
+            top: 0
+            left: 0
+            width: 100%
+            height: 100vh
+            overflow: auto
+            padding: 32px 0
+            background: #fff
+            .container
+                display: block
+            .nav
+                &__logo
+                    display: block
+                    max-width: 160px
+                    &_mob
+                        display: none
+                &__hum
+                    position: absolute
+                    top: 24px
+                    right: 20px
+                    &::before
+                        display: none
+                    &::after,
+                    span
+                        background: #00639B
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%) rotate(45deg)
+                    span
+                        transform: translate(-50%, -50%) rotate(-45deg)
+            ul
+                margin: 40px 0 0
+                display: grid
+                grid-template-columns: 1fr
+                gap: 35px
+                a
+                    font-family: $second-family
+                    font-weight: 500
+                    font-size: 24px
+                    line-height: 1.25
+                    color: $accent-500
+                    text-align: left
+            .btn__blue
+                margin: 32px 0 0
+                width: 100%
+                max-width: 100%
+                display: block
+    .header
+        padding: 380px 0 65px
+        background: linear-gradient(177deg, #002235 0%, #00639b 100%)
+        &__bg
+            position: absolute
+            width: 100vw
+            height: 365px
+            top: 0
+            left: 0
+        &__wrapper
+            max-width: 100%
+    .concept
+        .container
+            grid-template-columns: 1fr
+            gap: 40px
+    .pillars
+        &__wrapper
+            grid-template-columns: 1fr
+            counter-reset: item
+            gap: 24px
+        &__item
+            counter-increment: item
+            margin: 0 !important
+            border: 1px solid $accent-500
+            padding: 20px 10px
+            background: $background-color-base
+            img
+                display: none
+            &::before
+                content: counter(item)
+                background: transparent
+                font-family: $second-family
+                font-weight: 600
+                font-size: 32px
+                line-height: 1.1875
+                color: $accent-500
+                width: auto
+                height: auto
+                top: 13px
+                right: 10px
+                z-index: 1
+            &::after
+                content: none
+            p
+                margin: 0
+                font-family: $second-family
+                font-weight: 600
+                font-size: 16px
+                line-height: 1.1875
+                color: $accent-500
+                &:nth-child(1)
+                    max-width: calc( 100% - 50px )
+                &+p
+                    margin: 16px 0 0
+                    font-family: $font-family
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 1.14286
+                    color: $neutral-900-primary-text
+    .founder
+        &__desctop
+            display: none
+        .container
+            display: block
+        &__mob
+            display: block
+            max-width: 500px
+            margin: 26px 0 0
+        &__quote
+            &::after,
+            &::before
+                width: 100vw
+                left: -20px
+                pointer-events: none
+    .format
+        &__item
+            &_wrapper
+                grid-template-columns: 1fr
+    .which
+        &__item
+            grid-template-columns: 1fr 1fr
+    .form-full
+        .container
+            grid-template-columns: 1fr
+    .practic
+        &__item
+            &_footer
+                a
+                    display: none
+
+
+            
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
