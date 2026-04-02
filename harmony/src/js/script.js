@@ -38,7 +38,7 @@ for (let smoothLink of smoothLinks) {
     });
 };
 
-[].forEach.call( document.querySelectorAll('[data-phone-pattern]'), function(input) {
+[].forEach.call( document.querySelectorAll('input.wpcf7-tel'), function(input) {
     var keyCode;
     function mask(event) {
         event.keyCode && (keyCode = event.keyCode);
@@ -84,6 +84,48 @@ if(faqBtn !== null) {
         item.addEventListener('click',()=>{
             faqItem[i].classList.toggle('active')
         })
+    })
+}
+
+let modal = document.querySelector('.modal-form'),
+    modalAll = document.querySelectorAll('.modal'),
+    modalCall = document.querySelectorAll('.modal__call'),
+    modalClose = document.querySelectorAll('.modal__close'),
+    modalOverflow = document.querySelectorAll('.modal__overflow'),
+    modalCase1 = document.querySelector('.modal-case-1'),
+    modalCase1Call = document.querySelector('.modal-case-1__call'),
+    modalCase2 = document.querySelector('.modal-case-2'),
+    modalCase2Call = document.querySelector('.modal-case-2__call'),
+    modalCase3 = document.querySelector('.modal-case-3'),
+    modalCase3Call = document.querySelector('.modal-case-3__call');
+
+if(modalCall !== null) {
+    modalCall.forEach((item)=>{
+        item.addEventListener('click', (e)=>{
+            e.preventDefault()
+            modalAll.forEach(a=>a.classList.remove('active'))
+            modal.classList.add('active');
+        })
+    })
+    modalClose.forEach((item)=>{
+        item.addEventListener('click', ()=>{
+            modalAll.forEach(a=>a.classList.remove('active'))
+        })
+    })
+    modalOverflow.forEach((item)=>{
+        item.addEventListener('click', ()=>{
+            modalAll.forEach(a=>a.classList.remove('active'))
+        })
+    })
+
+    modalCase1Call.addEventListener('click', ()=>{
+        modalCase1.classList.add('active');
+    })
+    modalCase2Call.addEventListener('click', ()=>{
+        modalCase2.classList.add('active');
+    })
+    modalCase3Call.addEventListener('click', ()=>{
+        modalCase3.classList.add('active');
     })
 }
 

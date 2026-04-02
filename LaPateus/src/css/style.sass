@@ -152,6 +152,20 @@ body
     padding: 150px 0 0
     position: relative
     overflow: hidden
+    .swiper-button-next,
+    .swiper-button-prev
+        width: 44px
+        height: 44px
+        border-radius: 100%
+        background: #01343f
+        padding: 10px
+        svg
+            width: 100%
+            height: 100%
+        path
+            fill: #f1cb90
+    .swiper-wrapper
+        position: relative
     &__wrapper
         background: #aaa9a0
         padding: 20px
@@ -162,6 +176,8 @@ body
             // max-width: 700px
             display: block
             // margin: 0 auto
+            height: auto
+            pointer-events: none
         h2
             font-size: 40px 
             color: #193741
@@ -174,6 +190,8 @@ body
             background: #aaa9a0
         img
             width: 100%
+            height: auto
+            pointer-events: none
     &__descr
         padding: 10px 
         background: #aaa9a0
@@ -181,33 +199,71 @@ body
         li
             font-size: 35px 
             color: #193741
-        ul
+        ul,
+        ol
             margin: 10px 0 0
             li
                 &::before
                     content: '- '
                     display: inline
+            p
+                display: inline
         &_size
             margin: 10px 0 0
         &_dop
             margin: 20px 0 0
     &__price
         margin: 50px 0 0
-        background: #d8ccab
+        background: #aaa9a0
         padding: 20px
+        font-size: 45px
+        color: #193f66
+        text-align: right
         p
             font-size: 45px
             color: #193f66
             text-align: right
         li
-            display: grid
-            grid-template-columns: 1fr 300px
-            gap: 20px
+            color: #193f66
+    &__video
+        margin: 50px 0 0
+        background: #aaa9a0
+        padding: 20px
+        video
+            width: 100%
+            height: auto
+            max-height: 100vh
+            object-fit: contain
     &__container
         display: grid
         grid-template-columns: 800px 1fr
-        gap: 30px
+        gap: 60px
         align-items: start
+    &__story
+        margin: 50px 0 0
+        padding: 20px
+        font-size: 30px
+        background: #aaa9a0
+        color: #193741
+        p
+            margin: 30px 0 0
+            color: #193741
+            em
+                color: #193741
+                display: block
+                text-align: right
+            &:nth-child(1)
+                margin: 0
+        ul,
+        ol
+            margin: 10px 0 0
+            li
+                color: #193741
+                &::before
+                    content: '- '
+                    display: inline
+            p
+                display: inline
 
 .contact
     padding: 100px 0 0
@@ -225,6 +281,8 @@ body
         display: flex
         justify-content: end
         align-items: center
+        gap: 15px
+        flex-wrap: wrap
         a
             display: flex
             justify-content: center
@@ -236,9 +294,112 @@ body
             transition: all .3s
             &:hover
                 opacity: .7
-        svg
+        svg,
+        img
             width: 24px
             height: 24px
+        img
+            object-fit: contain
+
+.comment
+    padding: 100px 0 0
+    h2
+        text-align: right
+        font-size: 45px
+    &__wrapper
+        margin: 50px 0 0
+        display: grid
+        grid-template-columns: 1fr 500px
+        gap: 50px
+    &__form
+        input,
+        textarea
+            position: relative
+            width: 100%
+            margin: 0
+            font-size: 25px
+            padding: 10px 15px
+            background: #aaa9a0
+            color: #193741
+            border: none
+            box-sizing: border-box
+            &::placeholder
+                color: rgba(25, 55, 65, 0.5)
+        textarea
+            margin: 20px 0 0
+            resize: none
+            height: 120px
+    &__list
+        display: grid
+        grid-template-columns: 1fr
+        gap: 25px
+        background: #aaa9a0
+        padding: 10px
+        p
+            color: #193741
+    &__name
+        font-size: 25px
+    &__text
+        margin: 10px 0 0
+        font-size: 20px
+    &__submit
+        position: relative
+        width: 100%
+        margin: 0
+        font-size: 25px
+        padding: 10px 15px
+        background: #aaa9a0
+        color: #193741
+        border: none
+        box-sizing: border-box
+        margin: 20px 0 0
+        transition: all .3s
+        &:hover
+            background: #8d8c83
+
+.modal
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    padding: 20px
+    z-index: 100
+    display: flex
+    justify-content: center
+    align-items: center
+    // display: none
+    // &.active
+    //     display: block
+    &__overflow
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+        background: #000
+        opacity: .7
+    &__close
+        position: absolute
+        top: 50px
+        right: 50px
+        width: 44px
+        height: 44px
+        border-radius: 100%
+        background: #f1cb90
+        padding: 5px
+        cursor: pointer
+        svg
+            width: 100%
+            height: 100%
+        path
+            fill: #01343f
+    img
+        width: 100%
+        height: 100%
+        object-fit: contain
+        pointer-events: none
 
 
 
@@ -288,12 +449,21 @@ body
             li
                 font-size: 20px
         &__price
+            font-size: 24px
             p
                 font-size: 24px
             li
-                grid-template-columns: 1fr 150px
+                font-size: 24px
         &__container
             grid-template-columns: 400px 1fr
+            gap: 40px
+        &__story
+            font-size: 20px
+    .comment
+        &__wrapper
+            grid-template-columns: 100%
+        &__form
+            order: -1
 
     
 @media ( max-width: 768px )
@@ -338,6 +508,7 @@ body
     .card
         &__container
             grid-template-columns: 100%
+            gap: 30px
     .contact
         padding: 50px 0 0
         h2
@@ -376,14 +547,18 @@ body
             font-size: 16px
             margin: 10px 0 0
     .card
+        .swiper-button-next,
+        .swiper-button-prev
+            width: 33px
+            height: 33px
         &__price
+            text-align: left
             ul
                 display: grid
                 grid-template-columns: 1fr
                 gap: 5px
             li
-                grid-template-columns: 1fr
-                gap: 0
+                text-align: left
             p
                 text-align: left
         &__wrapper

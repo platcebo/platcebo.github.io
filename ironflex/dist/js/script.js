@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 var swiperHeader = new Swiper(".header__slider", {
     autoplay: {
-        delay: 2500,
+        delay: 5000,
         disableOnInteraction: false,
     },
     pagination: {
