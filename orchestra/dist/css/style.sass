@@ -110,6 +110,7 @@ section
             mix-blend-mode: lighten
             display: block
             max-width: 440px
+            width: 100%
             margin: 0 auto 30px
     &__text
         font-size: 18px
@@ -274,3 +275,96 @@ section
             path
                 fill: #fff
 
+@media ( max-width: 1500px )
+    .container
+        padding: 0 50px
+    .header
+        h1
+            font-size: 40px
+
+@media ( max-width: 1024px )
+    .container
+        padding: 0 20px
+    .nav
+        img
+            max-width: 320px
+    .header
+        &__container
+            grid-template-columns: 1fr
+            gap: 30px
+        &__bg
+            margin: 0 -20px
+            width: calc( 100% + 40px )
+            order: -1
+    .pop
+        &__container
+            grid-template-columns: 1fr
+            gap: 30px
+    .gal
+        padding-bottom: 50px
+    .program
+        padding: 50px 0
+        h2
+            font-size: 35px
+        &__tab
+            li
+                font-size: 18px
+                padding: 15px 20px
+        &__instrumet
+            p
+                width: 100%
+                text-align: center
+            img
+                width: 90px
+                height: 90px
+    .guests,
+    .map
+        h2
+            font-size: 35px
+    
+@media ( max-width: 600px )
+    .nav
+        img
+            max-width: 200px
+        &__lang
+            div,
+            ul
+                padding: 5px
+                width: 70px
+            p
+                font-size: 17px
+    .header
+        h1
+            font-size: 28px
+    .pop
+        padding-bottom: 50px
+        &__info
+            img
+                max-width: 220px
+    .gal
+        &__wrapper
+            grid-template-columns: 1fr 1fr
+    .program
+        h2
+            font-size: 28px
+        &__tab
+            display: grid
+            grid-template-columns: 1fr 1fr
+            li
+                white-space: nowrap
+                overflow: hidden
+                text-overflow: ellipsis
+                display: block
+                position: relative
+        &__instrumet
+            column-gap: 10px
+            img
+                width: 50px
+                height: 50px
+    .guests,
+    .map
+        h2
+            font-size: 28px
+    .guests
+        &__wrapper
+            margin: 28px 0 0
