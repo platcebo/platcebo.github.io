@@ -275,10 +275,47 @@ section
             path
                 fill: #fff
 
+.ticket
+    padding: 60px 0 0
+    &__wrapper
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 30px
+        flex-wrap: wrap
+    &__item
+        max-width: 580px
+        padding: 20px 
+        display: block
+        border: 1px solid #fff
+        .map__btn
+            margin: 20px 0 0
+            width: 100%
+            padding: 15px
+            max-width: 250px
+            text-align: center
+    &__date
+        font-size: 18px
+        color: #fff
+    &__name
+        margin: 15px 0 0
+        p
+            font-size: 24px
+            color: #FFBB57
+            font-weight: 600
+            &+p
+                font-weight: 300
+                font-size: 20px
+                color: #fff
+                margin: 5px 0 0
+
+
 @media ( max-width: 1500px )
     .container
         padding: 0 50px
     .header
+        &__bg
+            width: calc( 100% + 50px )
         h1
             font-size: 40px
 
