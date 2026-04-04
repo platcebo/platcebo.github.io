@@ -8,12 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
     <header class="header" style="background-image: url('img/bg_1.jpg');">
         <div class="nav container">
-            <img src="img/logo.png" alt="">
+            <a href="#" class="nav__img">
+                <img src="img/logo.png" alt="">
+            </a>
             <div class="nav__lang">
                 <div>
                     <img src="img/en.svg" alt="">
@@ -33,8 +36,10 @@
         </div>
         <div class="container header__container">
             <div class="header__info">
+                <p class="header__date"><span>May 9</span> | 7:00 PM</p>
                 <h1>ANIME X K-POP ORCHESTRA EXPERIENCE <br><span>MUSE CANDLELIGHT ORCHESTRA IN BALI</span></h1>
                 <p class="header__text">First time in Bali on a world tour - favorite anime and K-POP hits rearranged by Muse's virtuoso Symphony Orchestra.</p>
+                <a href="#" class="map__btn">Buy tickets</a>
             </div>
             <img src="img/header_bg.jpg" alt="" class="header__bg">
         </div>
@@ -142,10 +147,25 @@
                     <svg aria-hidden="true" class="e-font-icon-svg e-fab-facebook" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg>
                 </a>
             </div>
+            <ul class="footer__lang">
+                <a href="#">
+                    <img src="img/en.svg" alt="">
+                    <p>en</p>
+                </a>
+                <a href="#">
+                    <img src="img/id.svg" alt="">
+                    <p>id</p>
+                </a>
+                <a href="#">
+                    <img src="img/ru.svg" alt="">
+                    <p>ru</p>
+                </a>
+            </ul>
         </div>
     </footer>
     
     
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

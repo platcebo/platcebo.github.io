@@ -8,12 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
     <header class="header" style="background-image: url('img/bg_1.jpg');">
         <div class="nav container">
-            <img src="img/logo.png" alt="">
+            <a href="#">
+                <img src="img/logo.png" alt="">
+            </a>
             <div class="nav__lang">
                 <div>
                     <img src="img/en.svg" alt="">
@@ -131,6 +134,54 @@
             </div>
         </div>
     </section>
+    <section class="comment" style="background-image: url('img/bg_5.jpg');">
+        <div class="container">
+            <div class="comment__wrapper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/com_1.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/com_2.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/com_3.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/com_4.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/com_5.png" alt=""></div>
+                    <div class="swiper-slide"><img src="img/com_6.png" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <section class="form" style="background-image: url('img/bg_5.jpg');">
+        <div class="container">
+            <h2>Contact form</h2>
+            <div class="form__wrapper">
+                <div class="form__select">
+                    <p>Licensing</p>
+                    <svg aria-hidden="true" class="e-font-icon-svg e-eicon-caret-down" viewBox="0 0 571.4 571.4" xmlns="http://www.w3.org/2000/svg"><path d="M571 393Q571 407 561 418L311 668Q300 679 286 679T261 668L11 418Q0 407 0 393T11 368 36 357H536Q550 357 561 368T571 393Z" fill="#FFBB57"></path></svg>
+                    <select name="" id="" class="">
+                        <option value="Request for a speech">Request for a speech</option>
+                        <option value="Partners and sponsors">Partners and sponsors</option>
+                        <option value="The press">The press</option>
+                        <option value="Orchestra recruitment">Orchestra recruitment</option>
+                        <option value="Licensing" selected>Licensing</option>
+                        <option value="Music creation and sound recording">Music creation and sound recording</option>
+                    </select>
+                </div>
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Phone">
+                <input type="text" placeholder="Email">
+                <textarea name="" id="" placeholder="Message"></textarea>
+                <label for="form__checkbox" class="form__check">
+                    <input type="checkbox" id="form__checkbox">
+                    <b>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.9647 14.9617L17.4693 7.44735L18.5307 8.50732L9.96538 17.0837L5.46967 12.588L6.53033 11.5273L9.9647 14.9617Z" fill="#FFBB57"/>
+                        </svg>
+                    </b>
+                    <p>By clicking the "Submit" button, I give my <a href="#">consent to the processing of my personal data</a></p>
+                </label>
+                <button class="map__btn">Submit</button>
+            </div>
+        </div>
+    </section>
     <footer class="footer" style="background-image: url('img/footer.jpg');">
         <div class="container">
             <img src="img/logo.png" alt="" class="footer__logo">
@@ -142,10 +193,25 @@
                     <svg aria-hidden="true" class="e-font-icon-svg e-fab-facebook" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg>
                 </a>
             </div>
+            <ul class="footer__lang">
+                <a href="#">
+                    <img src="img/en.svg" alt="">
+                    <p>en</p>
+                </a>
+                <a href="#">
+                    <img src="img/id.svg" alt="">
+                    <p>id</p>
+                </a>
+                <a href="#">
+                    <img src="img/ru.svg" alt="">
+                    <p>ru</p>
+                </a>
+            </ul>
         </div>
     </footer>
     
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

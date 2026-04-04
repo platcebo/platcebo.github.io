@@ -16,4 +16,25 @@ if(tabPoint !== null) {
     })
 }
 
+var swiper = new Swiper(".comment__wrapper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+        el: ".swiper-pagination",
+    },
+    breakpoints: {
+        601:{
+            slidesPerView: 3,
+        }
+    }
+});
+
+const select = document.querySelector('.form__select select');
+    const text = document.querySelector('.form__select p');
+
+    select.addEventListener('change', function () {
+        text.textContent = this.value;
+    });
+
+
 }, false);
