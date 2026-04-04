@@ -348,6 +348,8 @@ section
             margin: 0
 
 .form
+    .wpcf7-form-control-wrap
+        position: static !important
     h2
         font-size: 60px
         text-align: center
@@ -365,6 +367,8 @@ section
             color: #fff
             font-size: 18px
             background: transparent
+            width: 100%
+            box-sizing: border-box
         textarea
             grid-column: 1/4
             border: 1px solid #FFBB57
@@ -375,6 +379,11 @@ section
             background: transparent
             resize: none
             height: 120px
+            width: 100%
+            box-sizing: border-box
+    .wpcf7-form-control-wrap
+        &:nth-child(5)
+            grid-column: 1/4
     &__select
         position: relative
         grid-column: 1/4
@@ -404,6 +413,9 @@ section
         grid-template-columns: 18px 1fr
         gap: 15px
         align-items: center
+        position: relative
+        span.wpcf7-form-control-wrap
+            position: absolute !important
         b
             width: 18px
             height: 18px
@@ -430,8 +442,23 @@ section
                 &+b
                     svg
                         opacity: 1
-    .map__btn
+        &:has(input:checked)
+            b
+                svg
+                    opacity: 1
+    input.map__btn
         margin: 0
+        max-width: max-content
+        padding: 15px 70px
+        font-size: 18px
+        color: #000
+        background: #FFBB57
+        transition: all .3s
+        border: none
+        display: block
+        &:hover
+            background: #ffbc57ab
+
 
 
 
@@ -495,6 +522,9 @@ section
         &__select,
         &__check
             grid-column: auto
+        .wpcf7-form-control-wrap
+            &:nth-child(5)
+                grid-column: auto   
     
 @media ( max-width: 600px )
     .nav
