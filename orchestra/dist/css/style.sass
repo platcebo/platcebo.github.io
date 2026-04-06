@@ -305,12 +305,13 @@ section
         gap: 30px
         flex-wrap: wrap
     &__item
-        max-width: 580px
+        max-width: 500px
+        width: 100%
         padding: 20px 
         display: block
         border: 1px solid #fff
         .map__btn
-            margin: 20px 0 0
+            margin: 0 0 0
             width: 100%
             padding: 15px
             max-width: 250px
@@ -329,6 +330,26 @@ section
                 font-size: 20px
                 color: #fff
                 margin: 5px 0 0
+    &__row
+        display: grid
+        grid-template-columns: 1fr 1fr
+        margin: 20px 0 0
+        gap: 20px
+    &__btn
+        max-width: max-content
+        padding: 15px
+        max-width: 250px
+        text-align: center
+        font-size: 18px
+        color: #FFBB57
+        background: transparent
+        transition: all .3s
+        border: none
+        display: block
+        border: 1px solid #FFBB57
+        &:hover
+            color: #fff
+            border-color: #fff
 
 .comment
     padding: 40px 0
@@ -572,3 +593,7 @@ section
     .guests
         &__wrapper
             margin: 28px 0 0
+    .ticket
+        &__row
+            display: grid
+            grid-template-columns: 1fr
