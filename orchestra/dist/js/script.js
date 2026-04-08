@@ -29,6 +29,19 @@ var swiper = new Swiper(".comment__wrapper", {
     }
 });
 
+var swiper = new Swiper(".gal__wrapper", {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    pagination: {
+        el: ".swiper-pagination",
+    },
+    breakpoints: {
+        601:{
+            slidesPerView: 3,
+        }
+    }
+});
+
 const select = document.querySelector('.form__select select');
     const text = document.querySelector('.form__select p');
 

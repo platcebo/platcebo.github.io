@@ -90,7 +90,7 @@ section
     h1
         font-size: 60px
         font-weight: 600
-        color: #FFBB57
+        color: #DB319E
         margin: 30px 0
         span
             color: #fff
@@ -99,6 +99,11 @@ section
 
 .pop
     padding: 40px 0 100px
+    h2
+        font-size: 60px
+        text-align: center
+        margin: 0 0 30px
+        color: #DB319E
     &__container
         margin: 40px 0 0
         display: grid
@@ -131,7 +136,7 @@ section
             align-items: center
             flex-direction: column
             border-radius: 100%
-            border: 3px solid #FFBB57
+            border: 3px solid #DB319E
             gap: 5px
         p
             font-size: 24px
@@ -141,15 +146,25 @@ section
                 font-weight: 300
 
 .gal
-    padding: 40px 0 0
+    padding: 40px 0
+    h2
+        font-size: 60px
+        text-align: center
+        margin: 0 0 30px
+        color: #DB319E
     &__wrapper
-        display: grid
-        grid-template-columns: 1fr 1fr 1fr
-        gap: 10px
+        padding-bottom: 40px
         img
             width: 100%
             height: 100%
             object-fit: cover
+    .swiper-pagination
+        span
+            background: #DB319E
+            bottom: -40px
+            top: auto
+            transform: none
+            margin: 0
 
 .program
     padding: 100px 0 
@@ -157,6 +172,7 @@ section
         font-size: 60px
         text-align: center
         margin: 0 0 30px
+        color: #DB319E
     &__tab
         display: flex
         justify-content: start
@@ -201,10 +217,10 @@ section
     h2
         font-size: 60px
         text-align: center
-        color: #FFBB57
+        color: #DB319E
     &__wrapper
         display: grid
-        grid-template-columns: 1fr 1fr 1fr
+        grid-template-columns: 1fr 1fr
         gap: 20px
         margin: 40px auto 0
         max-width: 960px
@@ -220,7 +236,7 @@ section
     h2
         font-size: 60px
         text-align: center
-        color: #FFBB57
+        color: #DB319E
     &__place
         margin: 30px 0 0
         p
@@ -248,12 +264,12 @@ section
         padding: 15px 70px
         font-size: 18px
         color: #000
-        background: #FFBB57
+        background: #DB319E
         transition: all .3s
         border: none
         display: block
         &:hover
-            background: #ffbc57ab
+            background: #DB319Eab
 
 .footer
     padding: 50px 0
@@ -323,7 +339,7 @@ section
         margin: 15px 0 0
         p
             font-size: 24px
-            color: #FFBB57
+            color: #DB319E
             font-weight: 600
             &+p
                 font-weight: 300
@@ -341,12 +357,12 @@ section
         max-width: 250px
         text-align: center
         font-size: 18px
-        color: #FFBB57
+        color: #fff
         background: transparent
         transition: all .3s
         border: none
         display: block
-        border: 1px solid #FFBB57
+        border: 1px solid #DB319E
         &:hover
             color: #fff
             border-color: #fff
@@ -362,7 +378,7 @@ section
             height: 100%
     .swiper-pagination
         span
-            background: #FFBB57
+            background: #DB319E
             bottom: -40px
             top: auto
             transform: none
@@ -374,7 +390,7 @@ section
     h2
         font-size: 60px
         text-align: center
-        color: #FFBB57
+        color: #DB319E
     &__wrapper
         margin: 30px auto 0
         display: grid
@@ -382,7 +398,7 @@ section
         max-width: 1200px
         gap: 30px
         input
-            border: 1px solid #FFBB57
+            border: 1px solid #DB319E
             padding: 10px 15px
             font-size: 20px
             color: #fff
@@ -392,7 +408,7 @@ section
             box-sizing: border-box
         textarea
             grid-column: 1/4
-            border: 1px solid #FFBB57
+            border: 1px solid #DB319E
             padding: 10px 15px
             font-size: 20px
             color: #fff
@@ -410,7 +426,7 @@ section
         grid-column: 1/4
         z-index: 1
         p
-            border: 1px solid #FFBB57
+            border: 1px solid #DB319E
             padding: 10px 15px
             font-size: 18px
         svg
@@ -442,7 +458,7 @@ section
             height: 18px
             display: flex
             justify-content: center
-            border: 1px solid #FFBB57
+            border: 1px solid #DB319E
             svg
                 opacity: 0
                 transition: all .3s
@@ -473,7 +489,7 @@ section
         padding: 15px 70px
         font-size: 18px
         color: #000
-        background: #FFBB57
+        background: #DB319E
         transition: all .3s
         border: none
         display: block
@@ -508,11 +524,15 @@ section
             width: calc( 100% + 40px )
             order: -1
     .pop
+        h2
+            font-size: 35px
         &__container
             grid-template-columns: 1fr
             gap: 30px
     .gal
         padding-bottom: 50px
+        h2
+            font-size: 35px
     .program
         padding: 50px 0
         h2
@@ -563,10 +583,14 @@ section
             font-size: 28px
     .pop
         padding-bottom: 50px
+        h2
+            font-size: 28px
         &__info
             img
                 max-width: 220px
     .gal
+        h2
+            font-size: 28px
         &__wrapper
             grid-template-columns: 1fr 1fr
     .program
