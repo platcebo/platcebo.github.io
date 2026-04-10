@@ -2,8 +2,8 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
-let navDop = document.querySelectorAll('.nav-dop'),
-    navDopBtn = document.querySelectorAll('.nav-dop__btn');
+let navDop = document.querySelectorAll('.nav-dop-js'),
+    navDopBtn = document.querySelectorAll('.nav-dop-js__btn');
 
 if(navDop !== null) {
     navDopBtn.forEach((item,i)=>{
@@ -141,6 +141,59 @@ if(footerDrop !== null) {
                 item.classList.add('active');
             }
         })
+    })
+}
+
+let navFix = document.querySelector('.nav-fix'),
+    sectionFirst = document.querySelector('.section-first');
+
+if(navFix !== null) {
+    if(sectionFirst.getBoundingClientRect().bottom < 0) {
+        navFix.classList.add('active')
+    } else {
+        navFix.classList.remove('active')
+    }
+    window.addEventListener('scroll', ()=>{
+        if(sectionFirst.getBoundingClientRect().bottom < 0) {
+            navFix.classList.add('active')
+        } else {
+            navFix.classList.remove('active')
+        }
+    })
+}
+
+let lastScrollTop = 0,
+    nav = document.querySelector('.nav'),
+    navContainer = document.querySelector('.nav-info');
+
+if(nav !== null) {
+    window.addEventListener('scroll', () => {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll < lastScrollTop) {
+            // скролл вверх
+            nav.classList.add('active');
+            nav.style.top = - navContainer.getBoundingClientRect().height + "px"
+        } else {
+            // скролл вниз
+            nav.classList.remove('active');
+            nav.style.top = "-100%"
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // защита от отрицательных значений
+    });
+}
+
+let navHum = document.querySelector ('.nav .nav__hum'),
+    navMenu = document.querySelector('.nav-menu'),
+    navClose = document.querySelector('.nav-menu .nav__hum');
+
+if(navMenu !== null) {
+    navHum.addEventListener('click', ()=>{
+        navMenu.classList.add('active')
+    })
+    navClose.addEventListener('click', ()=>{
+        navMenu.classList.remove('active')
     })
 }
 

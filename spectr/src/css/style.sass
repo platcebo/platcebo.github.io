@@ -166,6 +166,14 @@ body
             transform: translateY(0)
     
 .nav
+    position: sticky
+    top: -100%
+    z-index: 5
+    transition: all .4s
+    &.active
+        top: 0
+    &__hum
+        display: none
     &-info
         background: $new-bg---header-up
         padding: 17px 0
@@ -709,6 +717,8 @@ body
     &__logo
         max-width: 120px
         display: block
+        &_mob
+            display: none
         img
             width: 100%
         svg
@@ -777,7 +787,7 @@ body
             border-radius: 5px
             box-shadow: 0 9px 30px 0 rgba(0, 0, 0, 0.2)
             background: $new-bg---main
-            z-index: 2
+            z-index: 10
             grid-template-columns: 1fr 1fr
             gap: 15px
             width: 540px
@@ -820,7 +830,36 @@ body
     align-items: center
     bottom: 15px
     left: 15px
+    cursor: pointer
     
+.nav-fix
+    position: fixed
+    top: 50%
+    right: 10px
+    transform: translateY(-50%)
+    z-index: 5
+    padding: 0
+    display: grid
+    grid-template-columns: 1fr
+    gap: 10px
+    a
+        width: 65px
+        height: 65px
+        border-radius: 5px
+        background: $new-color---main
+        transition: all .3s
+        display: flex
+        justify-content: center
+        align-items: center
+        &:hover
+            background: $button---hover
+    .btn__brown
+        display: none
+
+.nav-menu
+    display: none
+
+
 @media ( max-width: 1024px )
     .btn
         &__brown,
@@ -847,6 +886,9 @@ body
                 gap: 20em
         &__logo
             max-width: 178em
+            svg
+                width: 100%
+                height: 45em
         &__list
             gap: 30em
             a
@@ -860,7 +902,8 @@ body
             &__wrapper
                 padding: 30em 0 60em
                 gap: 35em
-                grid-template-columns: 1fr 1fr 292em
+                .container
+                    grid-template-columns: 1fr 1fr 292em
                 img
                     width: 100%
                 a
@@ -963,6 +1006,11 @@ body
             width: 250em
             bottom: 25em
             left: 25em
+            padding: 20em
+            &_city
+                bottom: 1.1em
+                left: 1.1em
+                right: 1.1em
             p
                 font-size: 50em
                 &+p
@@ -999,7 +1047,7 @@ body
                 &+p
                     font-size: 20em
     .footer
-        padding: 50em 0 30em
+        padding: 50em 0 10em
         &__container
             gap: 20em
         &__logo
@@ -1028,9 +1076,6 @@ body
                 gap: 15em
                 width: 540em
                 font-size: 1em !important
-            &.active
-                ol
-                    display: grid
         &__descr
             margin: 87em 0 0
             padding: 25em 0 0
@@ -1042,6 +1087,500 @@ body
                 a
                     display: inline
                     font-size: 1em
+    .nav-fix
+        position: sticky
+        bottom: 0
+        left: 0
+        width: 100%
+        transform: none
+        background: $new-bg---card
+        padding: 20em
+        display: grid
+        grid-template-columns: 1fr 60em 60em 60em
+        align-items: stretch
+        gap: 5em
+        transform: translateY(100%)
+        transition: all .5s
+        &.active
+            transform: translate(0)
+        a
+            width: 60em
+            height: 60em
+            svg
+                width: 23em
+                height: 23em
+        .btn__brown
+            padding: 1em
+            display: block
+            width: 100%
+            height: auto
+    .modal-b1
+        display: none
+
+
+@media ( max-width: 768px )
+    body
+        font-size: calc( 100vw / 768 )
+    .btn
+        &__brown,
+        &__gray
+            min-width: 14em
+            padding: 1.4em 1.4em
+            font-size: 17em
+    .container
+        padding: 0 10em
+    .nav
+        &-info
+            display: none
+        &__list
+            display: none
+        &__logo
+            width: 105em
+            margin: 0 auto 0 0
+            svg
+                height: 26em
+        &__container
+            padding: 15em 0
+        &__phone
+            grid-template-columns: 1fr 5em
+            gap: 8em
+            p
+                font-size: 13em
+            span
+                width: 5em
+                height: 5em
+        &__hum
+            width: 35em
+            height: 18em
+            cursor: pointer
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            span,
+            &::before,
+            &::after
+                content: ''
+                display: block
+                width: 100%
+                height: 2px
+                background: $new-color---main
+    .header
+        padding: 60em 0 116em
+        &__bg
+            max-width: 669em
+            right: -27em
+            bottom: -116em
+            div
+                right: 37em
+                padding: 12em
+                p
+                    font-size: 13em
+                    &+p
+                        font-size: 13em
+                        margin: .38em 0 0
+        &__info
+            h1
+                font-size: 34em
+            p
+                font-size: 15em
+                margin: 1em 0 2em
+            .btn__brown
+                margin: 0
+    .title
+        h2
+            font-size: 34em
+        p
+            font-size: 15em
+            margin: 1em 0 0
+    .service
+        padding: 100em 0 0
+        &__wrapper
+            margin: 30em 0 0
+            grid-template-columns: 1fr 1fr
+            gap: 10em
+        &__item
+            grid-template-columns: 1fr 16em
+            padding: 15em
+            min-height: 150em
+            p
+                font-size: 22em
+                max-width: 11em
+            svg
+                width: 16em
+                height: 16em
+    .consult
+        padding: 100em 0 0
+        .container
+            padding: 40em 10em
+            gap: 10em
+    .input
+        &__text
+            padding: 1.4em 1.4em
+            font-size: 17em
+        &__select
+            input
+                padding: 1.4em 1.4em
+                font-size: 17em
+            ul
+                li
+                    padding: 1.4em 1.4em
+                    font-size: 17em
+        &__check
+            grid-template-columns: 16em 1fr
+            gap: 8em
+            b
+                width: 16em
+                height: 16em
+                &::before
+                    width: 8em
+                    height: 8em
+            p
+                font-size: 12em
+    .map
+        padding: 100em 0 0
+        &__wrapper
+            margin: 30em 0 0
+        &__icon
+            span
+                width: 39em
+                height: 39em
+            svg
+                width: 10em
+                height: 10em
+        &__info
+            width: 226em
+            bottom: 10em
+            left: 10em
+            padding: 15em
+            &_city
+                bottom: 1.15em
+                left: 1.15em
+                right: 1.15em
+            p
+                font-size: 36em
+                &+p
+                    font-size: 13em
+                    margin: 0.5em 0 0
+            &_num
+                height: 1em
+    .about
+        padding: 100em 0 0
+        .container
+            gap: 10em
+        &__bg
+            &.is-visible
+                height: 368em
+            img
+                height: 368em
+        .btn__gray
+            margin: 2em 0 0
+    .stat
+        padding: 100em 0
+        &__wrapper
+            margin: 30em 0 0
+            gap: 10em
+        &__item
+            padding: 15em
+            height: 242em !important
+            min-height: 100% !important
+            p
+                font-size: 36em
+                &+p
+                    font-size: 16em    
+    .footer
+        padding: 40em 0 10em
+        &__logo
+            display: none
+            max-width: 125em
+            &_mob
+                display: block
+        &__container
+            gap: 10em
+        &__list
+            p
+                font-size: 14em
+                margin: 0 0 1em
+            ul
+                gap: 8em
+                margin: 16em 0 0
+                li
+                    font-size: 15em
+                    p
+                        margin: 0
+                .modal__call
+                    margin: 0em 0 0
+        &__drop
+            gap: 7em
+            font-size: 1em !important
+            p
+                font-size: 15em !important
+            ol
+                left: -15em
+                top: calc( 100% + 8em )
+                padding: 15em
+                gap: 12em
+                width: 383em
+                font-size: 1em !important
+        &__descr
+            margin: 70em 0 0
+            padding: 20em 0 0
+            p,
+            a
+                font-size: 12em
+                max-width: 15em
+            p
+                a
+                    display: inline
+                    font-size: 1em
+    .nav-fix
+        padding: 10em
+        gap: 5em
+        grid-template-columns: 1fr 50em 50em 50em
+        a
+            width: 50em
+            height: 50em
+            svg
+                width: 20em
+                height: 20em
+        .btn__brown
+            font-size: 15em
+    .nav-menu
+        display: flex
+        flex-direction: column
+        pointer-events: none
+        opacity: 0
+        z-index: 100
+        width: 100%
+        height: 100vh
+        overflow: auto
+        padding: 15em 10em
+        position: fixed
+        top: 0
+        left: 0
+        background: $new-bg---main
+        &__row
+            display: flex
+            justify-content: start
+            align-items: center
+            padding: 0
+            gap: 20em
+        &.active
+            opacity: 1
+            pointer-events: auto
+        .nav__hum
+            position: relative
+            span
+                display: none
+            &::before,
+            &::after
+                width: 25em
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%) rotate(45deg)
+            &::after
+                transform: translate(-50%, -50%) rotate(-45deg)
+        &__list
+            margin: 70em 0 auto
+            display: grid
+            grid-template-columns: 1fr
+            gap: 5px
+            svg
+                position: absolute
+                top: 23em
+                transform: translateY(-50%)
+                right: 15em
+            li
+                position: relative
+                background: $new-bg---card
+                border-radius: 5px
+                &.nav-dop-js.active
+                    ol
+                        display: grid
+            a
+                display: block
+                width: 100%
+                padding: .68em
+                font-family: $second-family
+                font-weight: 500
+                font-size: 22em
+                line-height: 1.2
+                color: #000
+                text-align: center
+            p
+                display: block
+                width: 100%
+                padding: .68em
+                font-family: $second-family
+                font-weight: 500
+                font-size: 22em
+                line-height: 1.2
+                color: #000
+                text-align: center
+                cursor: pointer
+            ol
+                padding: 5em 20em 20em
+                grid-template-columns: 1fr
+                gap: 17em
+                display: none
+                a
+                    padding: 0
+                    font-family: $font-family
+                    font-weight: 400
+                    font-size: 15em
+                    line-height: 1.4
+                    text-align: center
+                    color: $new-color---text
+        &__descr
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 10em
+            row-gap: 25em
+            margin: 70em 0 0
+            .btn__brown
+                grid-column: 1/3
+                width: 100%
+                max-width: none
+                font-size: 15em
+                padding: 1.5em
+            p
+                font-family: $font-family
+                font-weight: 400
+                font-size: 12em
+                line-height: 1.4
+                color: $new-color---policy
+                &+p
+                    font-family: $font-family
+                    font-weight: 400
+                    font-size: 15em
+                    line-height: 1.2
+                    color: #000
+                    margin: .8em 0 0
+
+
+
+
+
+@media ( max-width: 500px )
+    body
+        font-size: calc( 100vw / 360 )
+    .nav
+        &__container
+            padding: 15em 0
+    .header
+        padding: 30em 0 357em
+        &__bg
+            bottom: -357em
+            right: -52em
+            width: 591em
+            div
+                right: 62em
+                bottom: 10em
+        .btn__brown
+            width: 100%
+    .service
+        &__wrapper
+            grid-template-columns: 1fr
+    .consult
+        .container
+            padding: 40em 10em
+            grid-template-columns: 1fr
+            gap: 30em
+        &__form
+            padding: 0
+    .map
+        &__wrapper
+            padding-bottom: 100em
+            background: $new-bg---card
+            border-radius: 5px
+            position: relative
+            overflow: hidden
+        &__info
+            left: 10em
+            bottom: 10em
+            right: 10em
+            width: auto
+            position: absolute
+            p
+                max-width: 100% !important
+            &_city
+                bottom: 1.15em
+                left: 1.15em
+                right: 1.15em
+        &__map
+            position: relative
+            width: fit-content
+            margin: 0 0 0 -230em
+            img
+                height: 330em
+                object-fit: container
+                width: auto
+        &__icon
+            span
+                width: 34em
+                height: 34em
+            &:nth-child(6)
+                left: 86% !important
+                top: 20% !important
+            &:nth-child(7)
+                left: 39% !important
+                top: 32% !important
+    .about
+        .container
+            grid-template-columns: 1fr
+            gap: 30em
+            position: relative
+            padding-bottom: 82em
+        &__bg
+            img,
+            &.is-visible
+                height: 400em
+        .btn__gray
+            position: absolute
+            bottom: 0
+            left: .6em
+            right: .6em
+            margin: 0
+    .stat
+        &__wrapper
+            grid-template-columns: 1fr
+        &__item
+            height: 210em !important
+    .footer
+        &__container
+            grid-template-columns: 1fr 1fr
+            gap: 10em
+            row-gap: 35em
+        &__logo
+            grid-column: 1/3
+            margin: 0 0 15em
+        &__descr
+            row-gap: 0
+            p
+                &:last-child
+                    align-self: end
+        &__drop
+            ol
+                grid-template-columns: 1fr
+                width: 180em
+    .nav-fix
+        gap: 5em
+        .btn__brown
+            padding: 1em 0
+            min-width: auto
+    .nav-menu
+        &__list
+            margin: 45em 0 auto
+        &__descr
+            margin: 45em 0 0
+            .btn__brown
+                width: 100%
+                max-width: none
+                font-size: 15em
+                padding: 1.5em
+        
+
+
 
                         
             
