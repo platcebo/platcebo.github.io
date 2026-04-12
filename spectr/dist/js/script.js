@@ -2,6 +2,30 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
+var swiper = new Swiper(".step__slider", {
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    pagination: {
+        el: ".step .swiper-pagination",
+    },
+    navigation: {
+        nextEl: ".step .swiper-button-next",
+        prevEl: ".step .swiper-button-prev",
+    },
+});
+
+var swiper = new Swiper(".practic__slider", {
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    pagination: {
+        el: ".practic .swiper-pagination",
+    },
+    navigation: {
+        nextEl: ".practic .swiper-button-next",
+        prevEl: ".practic .swiper-button-prev",
+    },
+});
+
 let navDop = document.querySelectorAll('.nav-dop-js'),
     navDopBtn = document.querySelectorAll('.nav-dop-js__btn');
 
@@ -194,6 +218,43 @@ if(navMenu !== null) {
     })
     navClose.addEventListener('click', ()=>{
         navMenu.classList.remove('active')
+    })
+}
+
+let service = document.querySelector('.service-list'),
+    serviceItem = document.querySelectorAll('.service-list__item'),
+    serviceMore = document.querySelector('.service-list__more');
+
+if(service !== null) {
+    if(serviceItem.length <= 8) {
+        service.classList.add('active')
+    } 
+
+    serviceMore.addEventListener('click', ()=>{
+        service.classList.add('active')
+    })    
+}
+
+let tab = document.querySelectorAll('.service-table__tab li'),
+    serviceTabItem = document.querySelectorAll('.service-table__item'),
+    serviceTabTitle = document.querySelectorAll('.service-table__tab_title');
+
+if(tab !== null) {
+    tab.forEach((item,i)=>{
+        item.addEventListener('click', ()=>{
+            document.querySelectorAll('.service-table__tab_title').forEach((a)=>a.classList.remove('active'))
+            document.querySelectorAll('.service-table__item_info').forEach((a)=>a.classList.remove('active'))
+            tab.forEach((a)=>a.classList.remove('active'))
+
+            serviceTabTitle[i].classList.add('active')
+            item.classList.add('active')
+            
+            serviceTabItem.forEach((block)=>{
+                // console.log(block.querySelectorAll('.service-table__item_info')[i])
+                block.querySelectorAll('.service-table__item_info')[i].classList.add('active')
+            })
+
+        })
     })
 }
 
