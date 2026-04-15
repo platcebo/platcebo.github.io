@@ -27,6 +27,7 @@ var swiper = new Swiper(".practic__slider", {
 });
 
 let navDop = document.querySelectorAll('.nav-dop-js'),
+    navOverflow = document.querySelector('.nav__overflow'),
     navDopBtn = document.querySelectorAll('.nav-dop-js__btn');
 
 if(navDop !== null) {
@@ -34,11 +35,21 @@ if(navDop !== null) {
         item.addEventListener('click', ()=>{
             if(navDop[i].classList.contains('active')) {
                 navDop.forEach(a=>a.classList.remove('active'))
+                document.body.classList.remove('fix')
+                nav.classList.remove('drop')
             } else {
                 navDop.forEach(a=>a.classList.remove('active'))
                 navDop[i].classList.add('active')
+                document.body.classList.add('fix')
+                nav.classList.add('drop')
             }
         })
+    })
+
+    navOverflow.addEventListener('click',()=>{
+        navDop.forEach(a=>a.classList.remove('active'))
+        document.body.classList.remove('fix')
+        nav.classList.remove('drop')
     })
 }
 
@@ -72,7 +83,7 @@ mapItem.forEach(block => observer.observe(block));
         event.keyCode && (keyCode = event.keyCode);
         var pos = this.selectionStart;
         if (pos < 3) event.preventDefault();
-        var matrix = "+7 (9__) ___-__-__",
+        var matrix = "+7 (___) ___-__-__",
             i = 0,
             def = matrix.replace(/\D/g, ""),
             val = this.value.replace(/\D/g, ""),
@@ -106,28 +117,30 @@ mapItem.forEach(block => observer.observe(block));
 
 const selects = document.querySelectorAll(".input__select");
 
-    selects.forEach(select => {
-        const input = select.querySelector("input");
-        const list = select.querySelector("ul");
-        const items = select.querySelectorAll("li");
+selects.forEach(select => {
+    const input = select.querySelector("input");
+    const list = select.querySelector("ul");
+    const items = select.querySelectorAll("li");
 
-        // открыть / закрыть список
-        input.addEventListener("click", () => {
+    // открыть / закрыть список
+    input.addEventListener("click", () => {
         select.classList.toggle("active");
-        });
-
-        // выбор элемента
-        items.forEach(item => {
-        item.addEventListener("click", () => {
-            input.value = item.textContent;
-            select.classList.remove("active");
-        });
-        });
     });
 
-    // закрытие при клике вне
-    document.addEventListener("click", (e) => {
-        document.querySelectorAll(".input__select").forEach(select => {
+    // выбор элемента
+    items.forEach(item => {
+        item.addEventListener("click", () => {
+            input.value = item.textContent;
+            items.forEach(a=>a.classList.remove("active"))
+            item.classList.add("active");
+            select.classList.remove("active");
+        });
+    });
+});
+
+// закрытие при клике вне
+document.addEventListener("click", (e) => {
+    document.querySelectorAll(".input__select").forEach(select => {
         if (!select.contains(e.target)) {
             select.classList.remove("active");
         }
@@ -256,6 +269,13 @@ if(tab !== null) {
 
         })
     })
+}
+
+let about = document.querySelector('.about .container'),
+    aboutBg = document.querySelector('.about__bg img');
+
+if(aboutBg !== null && window.innerWidth > 500) {
+    aboutBg.style.minHeight = about.getBoundingClientRect().height +'px'
 }
 
 
