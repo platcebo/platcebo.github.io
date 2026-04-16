@@ -934,8 +934,9 @@ section
 
 .header-section
     padding: 133px 0 60px
-    background: $new-bg---header-down
     position: relative
+    background: url('../img/header.png') top no-repeat
+    background-size: cover
     h1
         font-family: $font3
         font-weight: 400
@@ -1020,8 +1021,8 @@ section
             list-style: disc
         ol,
         ul
-            padding: 0 0 0 25px
-            margin: 25px 0 0
+            padding: 0 0 0 25em
+            margin: 25em 0 0
             li
                 margin: 0
             &:nth-child(1)
@@ -1156,7 +1157,8 @@ section
         &:nth-child(5),
         &:nth-child(6),
         &:nth-child(7),
-        &:nth-child(8)
+        &:nth-child(8),
+        &:nth-child(9)
             display: grid
         &:last-child
             border-bottom: none
@@ -1174,7 +1176,10 @@ section
             line-height: 1.5
             color: $new-color---text
         .btn__brown
-            min-width: auto
+            font-size: 1em
+            min-width: 258em
+            span
+                font-size: 20em
     &__descr
         position: relative
         span
@@ -1328,6 +1333,11 @@ section
         grid-template-columns: 1fr 1fr
         gap: 20em
         margin: 40em 0 0
+        align-items: start
+        div
+            display: grid
+            grid-template-columns: 1fr
+            gap: 20em
         p
             font-family: $font-family
             font-weight: 400
@@ -1478,6 +1488,17 @@ section
     &__bg
         width: 100%
         cursor: pointer
+
+.header-service
+    padding: 62em 0 129em
+    .header__bg
+        bottom: -128em
+    &__info 
+        max-width: 810em
+        h1
+            max-width: 100%
+
+
 
 
 
@@ -1813,7 +1834,15 @@ section
                 font-size: 25em
             .btn__brown
                 margin: 1em 0 0
-    
+    .header-service
+        padding: 70em 0 118em
+        .header__bg
+            bottom: -118em
+    .service-list
+        &__item
+            .btn__brown
+                padding: 23em 0
+                min-width: 258em
 
 
 
@@ -2279,9 +2308,20 @@ section
                 padding: 15em
                 p
                     font-size: 15em
+        &__item
+            .btn__brown
+                font-size: 1em
+                padding: 15em 0
+                min-width: 180em
+                span
+                    font-size: 15em
+        .btn__gray
+            margin: 0.8em 0 0
     .practic
         position: relative  
         overflow: hidden
+        .btn__gray
+            display: none
         &__slider
             overflow: visible   
             margin: 30em 0 0
@@ -2330,9 +2370,11 @@ section
             margin: 30em 0 0
     .about-service
         &__info
-            margin: 30em 0 0
+            margin: 25em 0 0
             grid-template-columns: 1fr
             gap: 15em
+            div
+                gap: 15em
             p
                 font-size: 15em
     .service-table
@@ -2403,7 +2445,16 @@ section
                     color: $new-color---white
                 span
                     font-size: 13em
-
+    .header-service
+        padding: 25em 0 85em
+        .breadcrumbs
+            margin: 0 0 14em
+        .header__bg
+            bottom: -90em
+        &__info
+            max-width: 430em
+            h1
+                max-width: 100%
 
 
 
@@ -2559,6 +2610,8 @@ section
             div
                 bottom: calc( 100% + 7px )
                 width: 280em
+        .btn__brown
+            min-width: 100%
     .practic
         .swiper-slide
             width: calc( 100vw - 40px )
@@ -2570,8 +2623,21 @@ section
         &__title,
         &__item
             grid-template-columns: 220em 1fr
-
-
+    .direct
+        .container
+            gap: 26em
+        &__wrapper
+            ol,
+            ul
+                margin: 15em 0 0
+            p
+                margin: 1em 0 0
+            p,
+            li
+                line-height: 1.4
+    .header-service
+        .header__bg
+            bottom: -357em
 
 
 
