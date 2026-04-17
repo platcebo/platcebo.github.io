@@ -2,6 +2,9 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
+document.body.style.width = document.body.getBoundingClientRect().width + 'px';
+document.documentElement.style.width = document.documentElement.getBoundingClientRect().width + 'px';
+
 var swiper = new Swiper(".step__slider", {
     slidesPerView: 'auto',
     spaceBetween: 10,
@@ -180,6 +183,14 @@ if(footerDrop !== null) {
         })
     })
 }
+
+document.addEventListener("click", (e) => {
+    document.querySelectorAll(".footer__drop").forEach(select => {
+        if (!select.contains(e.target)) {
+            select.classList.remove("active");
+        }
+    });
+});
 
 let navFix = document.querySelector('.nav-fix'),
     sectionFirst = document.querySelector('.section-first');
