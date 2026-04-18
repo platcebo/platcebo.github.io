@@ -2,8 +2,8 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
-document.body.style.width = document.body.getBoundingClientRect().width + 'px';
-document.documentElement.style.width = document.documentElement.getBoundingClientRect().width + 'px';
+// document.body.style.width = document.body.getBoundingClientRect().width + 'px';
+// document.documentElement.style.width = document.documentElement.getBoundingClientRect().width + 'px';
 
 var swiper = new Swiper(".step__slider", {
     slidesPerView: 'auto',
