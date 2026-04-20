@@ -52,10 +52,61 @@ $font6: "Arial", sans-serif
 @keyframes navHumS
     0%
         opacity: 1
+    40%
+        opacity: 1
     50%
-        opacity: 0
+        width: 0
+        opacity: 1
     100%
         opacity: 0
+        width: 0
+
+@keyframes navHumB
+    0%
+        top: 0
+        left: 0
+        position: absolute
+    40%
+        top: 50%
+        left: 50%
+        position: absolute
+        transform: translate(-50%, -50%)
+    60%
+        top: 50%
+        left: 50%
+        position: absolute
+        width: 25px
+        transform: translate(-50%, -50%)
+    100%
+        top: 50%
+        left: 50%
+        position: absolute
+        width: 25px
+        transform: translate(-50%, -50%) rotate(45deg)
+
+@keyframes navHumA
+    0%
+        top: calc( 100% - 2px )
+        left: 0
+        position: absolute
+    40%
+        top: 50%
+        left: 50%
+        position: absolute
+        transform: translate(-50%, -50%)
+    60%
+        top: 50%
+        left: 50%
+        position: absolute
+        width: 25px
+        transform: translate(-50%, -50%)
+    100%
+        top: 50%
+        left: 50%
+        position: absolute
+        width: 25px
+        transform: translate(-50%, -50%) rotate(-45deg)
+        
         
 
 h1,
@@ -2001,6 +2052,7 @@ h1.title__anim
             display: flex
             flex-direction: column
             justify-content: space-between
+            position: relative
             span,
             &::before,
             &::after
@@ -2014,7 +2066,15 @@ h1.title__anim
             .nav
                 &__container
                     background: #f2f0ea
-                // &__hum
+                &__hum
+                    justify-content: center
+                    align-items: center
+                    span
+                        animation: navHumS 1s forwards
+                    &::before
+                        animation: navHumB 1s forwards
+                    &::after
+                        animation: navHumA 1s forwards
 
     .header
         padding: 60em 0 116em
