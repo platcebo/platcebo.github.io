@@ -233,16 +233,17 @@ if(nav !== null) {
 }
 
 let navHum = document.querySelector ('.nav .nav__hum'),
-    navMenu = document.querySelector('.nav-menu'),
-    navClose = document.querySelector('.nav-menu .nav__hum');
+    navMenu = document.querySelector('.nav-menu');
+    // navClose = document.querySelector('.nav-menu .nav__hum');
 
 if(navMenu !== null) {
     navHum.addEventListener('click', ()=>{
-        navMenu.classList.add('active')
+        navMenu.classList.toggle('active')
+        nav.classList.toggle('open')
     })
-    navClose.addEventListener('click', ()=>{
-        navMenu.classList.remove('active')
-    })
+    // navClose.addEventListener('click', ()=>{
+    //     navMenu.classList.remove('active')
+    // })
 }
 
 let service = document.querySelector('.service-list'),

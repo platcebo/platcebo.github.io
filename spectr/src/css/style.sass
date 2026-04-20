@@ -49,6 +49,15 @@ $font6: "Arial", sans-serif
     100%
         opacity: 1
 
+@keyframes navHumS
+    0%
+        opacity: 1
+    50%
+        opacity: 0
+    100%
+        opacity: 0
+        
+
 h1,
 h2
     text-stroke: .75px #000
@@ -396,9 +405,11 @@ h1.title__anim
             width: 100%
             top: calc( 100% - 1px )
             background: $new-bg---header-down
-            display: none
+            // display: none
             padding: 30px 0 60px
             z-index: 5
+            transform: translateY(-150%)
+            transition: all .3s
             .container
                 display: grid
                 grid-template-columns: 337px 337px 1fr
@@ -426,7 +437,7 @@ h1.title__anim
         &.active
             .nav-dop
                 &__wrapper
-                    display: block
+                    transform: translateY(0%)
                 &__btn
                     p
                         color: $new-color---main
@@ -506,6 +517,7 @@ h1.title__anim
         gap: 10px
         background: $new-bg---card
         padding: 25px
+        align-items: start
         p
             font-family: $second-family
             font-weight: 500
@@ -517,14 +529,14 @@ h1.title__anim
             margin: 6px 0 0
             display: block
             position: relative
+            overflow: hidden
         svg
             transition: all .3s
-            transform-origin: 0 100%
             &:nth-child(2)
                 position: absolute
                 top: 0
                 right: 0
-                transform: scale(0)
+                transform: translate(-100%, 100%)
         path
             transition: all .3s
         &:hover
@@ -532,9 +544,9 @@ h1.title__anim
             p
                 color: $new-color---white
             svg
-                transform: scale(0)
+                transform: translate(100%, -100%)
                 &:nth-child(2)
-                    transform: scale(1)
+                    transform: translate(0%, 0%)
 
 .input
     &__text
@@ -1364,14 +1376,14 @@ h1.title__anim
             margin: 6px 0 0
             display: block
             position: relative
+            overflow: hidden
         svg
             transition: all .3s
-            transform-origin: 0 100%
             &:nth-child(2)
                 position: absolute
                 top: 0
                 right: 0
-                transform: scale(0)
+                transform: translate(-100%, 100%)
     &__footer
         margin: 30em 0 0
         border-top: 1px solid $new-footer---separator
@@ -1404,9 +1416,9 @@ h1.title__anim
                     p
                         color: $new-color---white
                     svg
-                        transform: scale(0)
+                        transform: translate(100%, -100%)
                         &:nth-child(2)
-                            transform: scale(1)
+                            transform: translate(0%, 0%)
                 &__footer
                     border-color: #b59e87
                     p
@@ -1997,6 +2009,13 @@ h1.title__anim
                 width: 100%
                 height: 2px
                 background: $new-color---main
+        &.open
+            z-index: 150
+            .nav
+                &__container
+                    background: #f2f0ea
+                &__hum
+
     .header
         padding: 60em 0 116em
         &__bg
@@ -2210,7 +2229,7 @@ h1.title__anim
         display: flex
         flex-direction: column
         pointer-events: none
-        opacity: 0
+        // opacity: 0
         z-index: 100
         width: 100%
         height: 100vh
@@ -2220,6 +2239,8 @@ h1.title__anim
         top: 0
         left: 0
         background: $new-bg---main
+        transform: translateY(-100%)
+        transition: all .3s
         &__row
             display: flex
             justify-content: start
@@ -2227,7 +2248,7 @@ h1.title__anim
             padding: 0 5em 0 0
             gap: 20em
         &.active
-            opacity: 1
+            transform: translate(0)
             pointer-events: auto
         .nav__hum
             position: relative
