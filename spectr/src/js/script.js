@@ -239,6 +239,12 @@ let navHum = document.querySelector ('.nav .nav__hum'),
 if(navMenu !== null) {
     navHum.addEventListener('click', ()=>{
         navMenu.classList.toggle('active')
+        // if(nav.classList.contains('open')) {
+        //     nav.classList.add('close')
+        //     setTimeout(() => {
+        //         nav.classList.remove('close')
+        //     }, 2000);
+        // }
         nav.classList.toggle('open')
     })
     // navClose.addEventListener('click', ()=>{
