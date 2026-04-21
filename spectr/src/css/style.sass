@@ -140,9 +140,17 @@ body
     background: $new-bg---main
     font-family: $font-family
     font-size: 1px
+    scrollbar-width: none
     &.fix
         position: relative
         overflow: hidden
+    &::-webkit-scrollbar
+        display: none
+
+html
+    scrollbar-width: none
+    &::-webkit-scrollbar
+        display: none
 
 section
     padding: 180px 0 0
@@ -1126,12 +1134,16 @@ h1.title__anim
             font-size: 18em
             line-height: 1.3
             color: rgba(46, 46, 46, 0.5)
+            span
+                transition-delay: 1s !important
             &+p
                 font-family: $second-family
                 font-weight: 500
                 font-size: 28em
                 line-height: 1.2
                 color: #000
+                span
+                    transition-delay: 1.2s !important
 
 .breadcrumbs
     display: block
@@ -1650,7 +1662,7 @@ h1.title__anim
         p
             font-family: $font-family
             font-weight: 400
-            font-size: 20px
+            font-size: 20em
             line-height: 1.5
             color: $new-color---text
     &__btn
@@ -1663,6 +1675,8 @@ h1.title__anim
             padding-left: 0
             padding-right: 0
             width: 100%
+        &_mob
+            display: none
     &__bg
         width: 100%
         cursor: pointer
@@ -1676,6 +1690,74 @@ h1.title__anim
         h1
             max-width: 100%
 
+.page-error
+    padding: 113em 0 170em
+    background: url('../img/header.png') top no-repeat
+    background-size: cover
+    h1
+        font-family: $second-family
+        font-weight: 500
+        font-size: 200em
+        line-height: 1.1
+        color: #000
+        text-align: center
+        &+p 
+            margin: 0
+            text-align: center
+            max-width: 100%
+            b:nth-child(1) span
+                transition-delay: .4s
+    .btn__brown
+        margin: 45em auto 0
+        width: 100%
+        max-width: 325em
+        font-size: 1em
+        span
+            font-size: 20em
+    &+.footer
+        margin: 0
+
+.page-thanks
+    .title__anim
+        max-width: 750em
+        h1
+            max-width: 100%
+        p
+            max-width: 100%
+    &+.footer
+        margin: 0
+    &__btn
+        margin: 35em 0 0
+        display: grid
+        grid-template-columns: 250em 1fr
+        gap: 10em
+        .btn__brown
+            width: 100%
+            margin: 0
+            min-width: auto
+    &__soc
+        display: grid
+        grid-template-columns: 70em 70em 70em
+        gap: 10em
+        a
+            border: 1px solid $new-stroke---icon
+            border-radius: 3px
+            width: 70em
+            height: 70em
+            display: flex
+            justify-content: center
+            align-items: center
+            transition: all .3s
+            svg
+                width: 24em
+                height: 24em
+            path
+                transition: all .3s
+            &:hover
+                border-color: $button---hover
+                path
+                    fill: $button---hover
+
 
 
 
@@ -1683,6 +1765,16 @@ h1.title__anim
 @media ( max-width: 1250px )
     .service-table__title p
         font-size: 20em
+    .page-thanks
+        .title__anim_more
+            b
+                display: block
+                &:nth-child(2)
+                    span
+                        transition-delay: .6s !important
+                &:nth-child(3)
+                    span
+                        transition-delay: .8s !important
 
 @media ( max-width: 1024px )
     .btn
@@ -1970,6 +2062,9 @@ h1.title__anim
         padding: 133em 0 60em
         h1
             font-size: 105em
+        &__har
+            div
+                max-width: 239em
     .breadcrumbs
         margin: 0 0 15em
         p
@@ -2027,7 +2122,28 @@ h1.title__anim
             .btn__brown
                 padding: 23em 0
                 min-width: 258em
-
+    .header-practic
+        padding: 63em 0 50em
+        h1
+            font-size: 65em
+    .result
+        .container
+            grid-template-columns: 1fr 389em
+        &__text
+            max-width: 482em
+    .page-error
+        .btn__brown
+            padding: 25em
+    .page-thanks
+        padding: 70em 0 120em
+        .header__bg
+            bottom: -120em
+        .btn__brown
+            font-size: 1em
+            padding: 25em
+            span
+                font-size: 20em
+                line-height: 1
 
 
 
@@ -2439,6 +2555,16 @@ h1.title__anim
         padding: 58em 0 30em
         h1
             font-size: 48em
+        &__har
+            margin: 100em 0 0
+            gap: 10em
+            div
+                max-width: 188em
+                gap: 5em
+            p
+                font-size: 13em
+                &+p
+                    font-size: 22em
     .breadcrumbs
         margin: 0 0 10em
         p
@@ -2683,6 +2809,72 @@ h1.title__anim
             max-width: 430em
             h1
                 max-width: 100%
+    .header-practic
+        padding: 30em 0 20em
+        h1
+            font-size: 35em
+    .result
+        .container
+            grid-template-columns: 369em 267em
+            justify-content: space-between
+        &__bg
+            height: 100%
+            width: 100%
+            display: block
+            margin: 0 0 0 auto
+            object-fit: contain
+            object-position: bottom right
+        &__text
+            margin: 25em 0 0
+            p
+                font-size: 15em
+        &__btn
+            max-width: 100%
+            margin: 30em 0 0
+            gap: 10em
+            .btn__gray
+                width: 100%
+    .page-error
+        padding: 159em 0 214em
+        h1
+            font-size: 140em
+        .btn__brown
+            max-width: 340em
+            margin: 30em auto 0
+            span
+                font-size: 17em
+                line-height: 1
+    .page-thanks
+        padding: 49em 0 102em
+        .title__anim
+            max-width: 390em
+        h1.title__anim_more
+            b
+                display: inline-block
+                &:nth-child(2)
+                    span
+                        transition-delay: .6s !important
+                &:nth-child(3)
+                    span
+                        transition-delay: .6s !important
+        &__btn
+            margin: 30em 0 0
+            grid-template-columns: 174em 1fr
+            gap: 5em
+            .btn__brown
+                span
+                    font-size: 17em
+        &__soc
+            grid-template-columns: 67em 67em 67em
+            gap: 5em
+            a
+                width: 67em
+                height: 67em
+            svg
+                width: 22em
+                height: 22em
+        .header__bg
+            bottom: -102em
 
 
 
@@ -2899,7 +3091,59 @@ h1.title__anim
     .header-service
         .header__bg
             bottom: -357em
-
+    .header-practic
+        h1
+            font-size: 34em
+            b:nth-child(4) span
+                transition-delay: .8s !important
+            b:nth-child(5) span
+                transition-delay: 1s !important
+    .header-section
+        &__har
+            row-gap: 25em
+            display: grid
+            grid-template-columns: 1fr 1fr
+            div
+                max-width: 165em
+                &:nth-child(3)
+                    order: -1
+                    grid-column: 1/3
+    .result
+        .container
+            grid-template-columns: 1fr
+            gap: 15em
+        &__bg
+            width: 100%
+            margin: 15em 0 0
+        &__btn
+            display: none
+            margin: 0
+            &_mob
+                display: grid
+    .page-thanks
+        padding: 30em 0 365em
+        .header__bg
+            bottom: -365em
+        h1.title__anim_more
+            b
+                display: block
+                &:nth-child(2)
+                    span
+                        transition-delay: .6s !important
+                &:nth-child(3)
+                    span
+                        transition-delay: .8s !important
+        &__btn
+            grid-template-columns: 1fr
+            gap: 10em
+            .btn__brown
+                width: 100%
+        &__soc
+            grid-template-columns: 1fr 1fr 1fr
+            gap: 5em
+            a
+                width: 110em
+                height: 67em
 
 
 
