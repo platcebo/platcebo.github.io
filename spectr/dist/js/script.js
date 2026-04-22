@@ -46,6 +46,23 @@ var swiper2 = new Swiper(".contact__slider", {
     },
 });
 
+var modal = new Swiper(".modal-gal__thumb", {
+    spaceBetween: 20,
+    slidesPerView: 4,
+    // freeMode: true,
+    watchSlidesProgress: true,
+});
+var swiper2 = new Swiper(".modal-gal__slider", {
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".modal-gal .swiper-button-next",
+        prevEl: ".modal-gal .swiper-button-prev",
+    },
+    thumbs: {
+        swiper: modal,
+    },
+});
+
 
 let navDop = document.querySelectorAll('.nav-dop-js'),
     navOverflow = document.querySelector('.nav__overflow'),
