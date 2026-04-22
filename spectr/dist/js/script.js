@@ -376,6 +376,18 @@ if(modalGalBtn !== null) {
     })
 }
 
+let modalCons = document.querySelector('.modal-consult'),
+    modalConsBtn = document.querySelectorAll('.modal-consult__call');
+
+if(modalConsBtn !== null) {
+    modalConsBtn.forEach((item)=>{
+        item.addEventListener('click', ()=>{
+            modalCons.classList.add('active')
+            document.body.classList.add('fix')
+        })
+    })
+}
+
 
 
 const slider = document.querySelector(".modal-gal__slider");
