@@ -1758,6 +1758,116 @@ h1.title__anim
                 path
                     fill: $button---hover
 
+.contact
+    .container
+        display: grid
+        grid-template-columns: 1fr calc( 50% - 10em )
+        gap: 20em
+        align-items: stretch
+    &__info
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+        gap: 30em
+        max-width: 505em
+        div
+            display: grid
+            grid-template-columns: 1fr
+            gap: 12em
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 20px
+            line-height: 1.5
+            color: $new-color---text
+            &+p
+                font-family: $second-family
+                font-weight: 500
+                font-size: 28px
+                line-height: 1.2
+                color: #000
+        a
+            display: block
+            color: #000
+            text-decoration: underline
+            text-decoration-skip-ink: none
+            &+a
+                margin: .35em 0 0
+    &__thumb
+        margin: 10em 0 0
+        .swiper-slide
+            transition: all .3s
+            z-index: 2
+            position: relative
+            overflow: hidden
+            border-radius: 5px    
+            cursor: pointer
+            &::before
+                content: ''
+                display: block
+                width: 100%
+                height: 100%
+                position: absolute
+                z-index: 1
+                border: 5px solid transparent
+                border-radius: 5px    
+                box-sizing: border-box
+                transition: all .3s
+            &.swiper-slide-thumb-active
+                &::before
+                    border-color: $new-color---main     
+        img
+            width: 100%
+            height: 123em
+            object-fit: cover
+            border-radius: 5px    
+            display: block
+            width: 100%
+            z-index: -1
+            position: relative
+    &__slider
+        img
+            width: 100%
+            height: 552em
+            border-radius: 5px
+        .swiper-button-next,
+        .swiper-button-prev
+            width: 40em
+            height: 40em
+            opacity: 1 !important
+            border-radius: 100%
+            background: $new-bg---map
+            transition: all .3s
+            svg
+                width: 9em
+                height: 14em
+            path
+                transition: all .3s
+                stroke: $new-color---text
+                fill: transparent   
+            &:hover
+                background: $new-color---main
+                path
+                    stroke: $new-color---white
+            &.swiper-button-disabled
+                path
+                    stroke: $new-input---inactive
+        .swiper-button-next
+            right: 10em
+            svg
+                transform: translateX(2em)
+        .swiper-button-prev
+            left: 10em
+            svg
+                transform: translateX(-2em)
+
+.map
+    iframe
+        height: 640em
+        position: relative
+        overflow: hidden
+        border-radius: 5px
+
 
 
 
@@ -2144,7 +2254,13 @@ h1.title__anim
             span
                 font-size: 20em
                 line-height: 1
-
+    .contact
+        &__slider
+            img
+                height: 576em
+        &__thumb
+            img
+                height: 100em
 
 
 
@@ -2875,7 +2991,35 @@ h1.title__anim
                 height: 22em
         .header__bg
             bottom: -102em
-
+    .contact
+        .container
+            gap: 10em
+            grid-template-columns: 1fr calc( 50% - 5em )
+        &__info
+            p
+                font-size: 13px
+                line-height: 1.4
+                &+p
+                    font-size: 22px
+        &__slider
+            img
+                height: 402em
+            .swiper-button-next,
+            .swiper-button-prev
+                width: 35em
+                height: 35em
+                svg
+                    width: 8em
+                    height: 12em
+        &__thumb
+            img
+                height: 87em
+            .swiper-slide
+                &::before
+                    border-width: 3px
+    .map
+        iframe
+            height: 520em
 
 
 @media ( max-width: 500px )
@@ -3144,7 +3288,10 @@ h1.title__anim
             a
                 width: 110em
                 height: 67em
-
+    .contact
+        .container
+            grid-template-columns: 100%
+            gap: 50em
 
 
                         

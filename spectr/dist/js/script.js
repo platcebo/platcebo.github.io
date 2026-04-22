@@ -29,6 +29,24 @@ var swiper = new Swiper(".practic__slider", {
     },
 });
 
+var contact = new Swiper(".contact__thumb", {
+    spaceBetween: 5,
+    slidesPerView: 3,
+    // freeMode: true,
+    watchSlidesProgress: true,
+});
+var swiper2 = new Swiper(".contact__slider", {
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+        swiper: contact,
+    },
+});
+
+
 let navDop = document.querySelectorAll('.nav-dop-js'),
     navOverflow = document.querySelector('.nav__overflow'),
     navDopBtn = document.querySelectorAll('.nav-dop-js__btn');
