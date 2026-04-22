@@ -35,7 +35,7 @@ var contact = new Swiper(".contact__thumb", {
     // freeMode: true,
     watchSlidesProgress: true,
 });
-var swiper2 = new Swiper(".contact__slider", {
+var swiper3 = new Swiper(".contact__slider", {
     spaceBetween: 10,
     navigation: {
         nextEl: ".swiper-button-next",
@@ -46,22 +46,39 @@ var swiper2 = new Swiper(".contact__slider", {
     },
 });
 
-var modal = new Swiper(".modal-gal__thumb", {
+var modalSwiper = new Swiper(".modal-gal__thumb", {
     spaceBetween: 20,
     slidesPerView: 4,
     // freeMode: true,
     watchSlidesProgress: true,
 });
 var swiper2 = new Swiper(".modal-gal__slider", {
-    spaceBetween: 10,
+    spaceBetween: 40,
+    
     navigation: {
         nextEl: ".modal-gal .swiper-button-next",
         prevEl: ".modal-gal .swiper-button-prev",
     },
+
     thumbs: {
-        swiper: modal,
+        swiper: modalSwiper,
     },
+
+    autoplay: {
+        delay: 2700,
+        disableOnInteraction: false,
+    },
+
 });
+swiper2.autoplay.stop();
+swiper2.on('slideChangeTransitionStart', ()=>{
+    autoProgres.classList.remove('active');
+    if (isAutoPlaying) {
+        setTimeout(() => {
+            autoProgres.classList.add('active');
+        }, 300);
+    }
+})
 
 
 let navDop = document.querySelectorAll('.nav-dop-js'),
@@ -327,6 +344,230 @@ let about = document.querySelector('.about .container'),
 if(aboutBg !== null && window.innerWidth > 500) {
     aboutBg.style.minHeight = about.getBoundingClientRect().height +'px'
 }
+
+let modal = document.querySelectorAll('.modal'),
+    modalClose = document.querySelectorAll('.modal__close'),
+    modalOverflow = document.querySelectorAll('.modal__overflow');
+
+if(modal !== null) {
+    modalClose.forEach((item)=>{
+        item.addEventListener('click', ()=>{
+            modal.forEach(i=>i.classList.remove('active'))
+            document.body.classList.remove('fix')
+        })
+    })
+    modalOverflow.forEach((item)=>{
+        item.addEventListener('click', ()=>{
+            modal.forEach(i=>i.classList.remove('active'))
+            document.body.classList.remove('fix')
+        })
+    })
+}
+
+let modalGal = document.querySelector('.modal-gal'),
+    modalGalBtn = document.querySelectorAll('.modal-gal__call');
+
+if(modalGalBtn !== null) {
+    modalGalBtn.forEach((item)=>{
+        item.addEventListener('click', ()=>{
+            modalGal.classList.add('active')
+            document.body.classList.add('fix')
+        })
+    })
+}
+
+
+
+const slider = document.querySelector(".modal-gal__slider");
+const zoomBtn = document.querySelector(".modal-gal__zoom");
+
+let isZoomed = false;
+let scale = 2.5;
+let currentImg = null;
+
+let pos = { x: 0, y: 0 };
+let start = { x: 0, y: 0 };
+let isDragging = false;
+
+function getActiveImage() {
+    const activeSlide = slider.querySelector(".swiper-slide-active");
+    return activeSlide ? activeSlide.querySelector("img") : null;
+}
+
+function getBounds() {
+const containerRect = slider.getBoundingClientRect();
+
+const imgWidth = currentImg.naturalWidth;
+const imgHeight = currentImg.naturalHeight;
+
+const scaledWidth = imgWidth * scale;
+const scaledHeight = imgHeight * scale;
+
+const maxX = Math.max(100, (scaledWidth - containerRect.width) / 0.7);
+const maxY = Math.max(100, (scaledHeight - containerRect.height) / 0.7);
+
+return {
+    minX: -maxX,
+    maxX: maxX,
+    minY: -maxY,
+    maxY: maxY
+};
+}
+
+function clamp(val, min, max) {
+    return Math.max(min, Math.min(max, val));
+}
+
+function applyTransform() {
+    if (!currentImg) return;
+
+    const bounds = getBounds();
+
+    pos.x = clamp(pos.x, bounds.minX, bounds.maxX);
+    pos.y = clamp(pos.y, bounds.minY, bounds.maxY);
+
+    currentImg.style.transform =
+    `translate(${pos.x}px, ${pos.y}px) scale(${scale})`;
+}
+
+function resetTransform() {
+    if (currentImg) currentImg.style.transform = "";
+    pos = { x: 0, y: 0 };
+}
+
+if(zoomBtn !== null) {
+    zoomBtn.addEventListener("click", () => {
+        currentImg = getActiveImage();
+        if (!currentImg) return;
+
+        isZoomed = !isZoomed;
+
+        if (isZoomed) {
+        currentImg.style.transition = "transform 0s ease";
+        applyTransform();
+        } else {
+        resetTransform();
+        }
+    });
+
+    // --- MOUSE ---
+    slider.addEventListener("mousedown", (e) => {
+        if (!isZoomed || !currentImg) return;
+
+        isDragging = true;
+        start.x = e.clientX - pos.x;
+        start.y = e.clientY - pos.y;
+        currentImg.style.cursor = "grabbing";
+    });
+
+    window.addEventListener("mousemove", (e) => {
+        if (!isDragging) return;
+
+        pos.x = e.clientX - start.x;
+        pos.y = e.clientY - start.y;
+        applyTransform();
+    });
+
+    window.addEventListener("mouseup", () => {
+        isDragging = false;
+        if (currentImg) currentImg.style.cursor = "grab";
+    });
+
+    // --- TOUCH ---
+    slider.addEventListener("touchstart", (e) => {
+        if (!isZoomed || !currentImg) return;
+
+        const touch = e.touches[0];
+        isDragging = true;
+        start.x = touch.clientX - pos.x;
+        start.y = touch.clientY - pos.y;
+    });
+
+    slider.addEventListener("touchmove", (e) => {
+        if (!isDragging) return;
+
+        const touch = e.touches[0];
+        pos.x = touch.clientX - start.x;
+        pos.y = touch.clientY - start.y;
+        applyTransform();
+    });
+
+    slider.addEventListener("touchend", () => {
+        isDragging = false;
+    });
+}
+
+
+const autoBtn = document.querySelector(".modal-gal__auto"),
+    autoProgres = document.querySelector('.modal-gal__progress');
+
+let isAutoPlaying = false;
+
+if(autoBtn !== null) {
+    autoBtn.addEventListener("click", () => {
+        if (isAutoPlaying) {
+            swiper2.autoplay.stop();
+            autoBtn.classList.remove("active");
+            autoProgres.classList.remove('active');
+        } else {
+            swiper2.autoplay.start();
+            autoBtn.classList.add("active");
+            autoProgres.classList.add('active');
+        }
+
+        isAutoPlaying = !isAutoPlaying;
+    });
+}
+
+const fullscreenBtn = document.querySelector(".modal-gal__fullscreen");
+
+if(fullscreenBtn !== null) {
+    fullscreenBtn.addEventListener("click", () => {
+        if (!document.fullscreenElement) {
+            openFullscreen(document.body);
+        } else {
+            closeFullscreen();
+        }
+    });
+
+    function openFullscreen(elem) {
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) { // Safari
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { // IE11
+            elem.msRequestFullscreen();
+        }
+    }
+
+    function closeFullscreen() {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
+}
+
+let cookie = document.querySelector('.cookie'),
+    cookieBtn = document.querySelector('.cookie .btn__brown');
+    
+if(cookie !== null) {
+    if (!localStorage.getItem("cookieAccepted")) {
+        cookie.classList.add("active");
+    } else {
+        cookie.classList.remove("active");
+    }
+
+    cookieBtn.addEventListener('click', ()=>{
+        cookie.classList.remove('active');
+        localStorage.setItem("cookieAccepted", "true");
+    })
+}
+
+
 
 
 

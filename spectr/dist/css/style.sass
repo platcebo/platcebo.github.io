@@ -128,7 +128,14 @@ $font6: "Arial", sans-serif
         position: absolute
         width: 25px
         transform: translate(-50%, -50%) rotate(-45deg)
-        
+
+@keyframes progres
+    0%
+        width: 0
+    90% 
+        width: 100%
+    100%
+        width: 100%        
         
 
 h1,
@@ -154,6 +161,7 @@ html
 
 section
     padding: 180px 0 0
+    background: $new-bg---main
 
 .container
     max-width: 1200px
@@ -628,6 +636,10 @@ h1.title__anim
                 transform: translate(100%, -100%)
                 &:nth-child(2)
                     transform: translate(0%, 0%)
+
+textarea.input__text
+    resize: none
+    height: 7em
 
 .input
     &__text
@@ -1896,23 +1908,96 @@ h1.title__anim
     &.active
         opacity: 1
         pointer-events: auto
+    &__close
+        cursor: pointer
+        transition: all .3s
+        path
+            transition: all .3s
+            fill: $new-color---white
+        &:hover
+            opacity: .5
+        &_style
+            position: absolute
+            top: 20em
+            right: 20em
+            svg
+                width: 50em
+                height: 50em
+    &__wrapper
+        margin: auto
+        border-radius: 5px
+        padding: 50em
+        width: 690em
+        background: $new-bg---card
+    &__form
+        display: grid
+        grid-template-columns: 1fr
+        margin: 35em 0 0
+        gap: 10em
+        .input__check
+            margin: 5em 0 0
+        .btn__brown
+            margin: 15em 0 0
+            font-size: 1em
+            padding: 25em 0
+            width: 100%
+            span
+                font-size: 20em
+                line-height: 1
+    &__text
+        margin: 45em 0 0
+        p
+            font-family: $font-family
+            font-weight: 400
+            font-size: 20em
+            line-height: 1.5
+            color: $new-color---policy
+            text-align: center
+    &__soc
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 10em
+        margin: 18em 0 0
+        a
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 65em
+            height: 65em
+            border: 1px solid $new-stroke---icon
+            border-radius: 3px
+        svg
+            width: 26em
+            height: 26em
 
 .modal-gal
     padding: 200em 20em 30em
+    overflow: hidden
     &__slider
         width: 100%
         max-width: 100%
+        overflow: visible
+        position: relative
         img
             width: 100%
             object-fit: contain
             height: calc( 100vh - 400em )
+            transition: transform 0.3s ease
+            cursor: grab
+            user-select: none
+            touch-action: none
+            max-width: 800em
+            margin: auto
+            display: block
+            z-index: 2
     &__wrapper
         display: grid
         grid-template-columns: 100%
         gap: 90em
-        max-width: 800em
         margin: auto
         grid-template-rows: 1fr 80em
+        width: 100%
     .swiper-button-next,
     .swiper-button-prev
         width: 16em
@@ -1921,6 +2006,7 @@ h1.title__anim
         border-radius: 100%
         background: transparent
         transition: all .3s
+        z-index: 100
         svg
             width: 100%
             height: 100%
@@ -1971,6 +2057,68 @@ h1.title__anim
             &.swiper-slide-thumb-active
                 &::before
                     border-color: $new-stroke---point     
+    &__func
+        position: absolute
+        top: 20em
+        right: 20em
+        display: flex
+        justify-content: end
+        align-items: center
+        gap: 25em
+        z-index: 100
+        a
+            transition: all .3s
+            &:hover
+                opacity: .5
+        path
+            transition: all .3s
+            fill: $new-color---white
+    &__progress
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 5em
+        &::before
+            content: ''
+            display: block
+            height: 100%
+            width: 0
+            background: $new-color---white
+        &.active
+            &::before
+                animation: progres 3s linear infinite
+
+.cookie
+    position: fixed
+    z-index: 150
+    right: 20em
+    bottom: 20em
+    transition: all .3s
+    width: 725em
+    padding: 25em
+    display: grid
+    grid-template-columns: 1fr
+    gap: 25em
+    border-radius: 5px
+    background: $new-bg---card
+    transform: translateX(calc( 100% + 50em ))
+    &.active
+        transform: translateX(0)
+    p
+        font-family: $font-family
+        font-weight: 400
+        font-size: 20em
+        line-height: 1.5
+        color: $new-color---text
+        a
+            color: $new-color---text
+            text-decoration: underline
+            text-decoration-skip-ink: none
+    .btn__brown
+        width: 100%
+
+
     
 
 
@@ -2368,10 +2516,33 @@ h1.title__anim
         &__thumb
             img
                 height: 100em
+    .cookie
+        width: calc( 100% - 40em )
+    .modal-gal
+        padding: 100em 20em 20em
+        &__slider
+            img
+                height: calc( 100vh - 290em )
+        .swiper-button-next
+            right: 10em
+        .swiper-button-prev
+            left: 10em
+        .swiper-button-next,
+        .swiper-button-prev
+            svg
+                width: 9em
+                height: 14em
+        &__func
+            gap: 20em
+            svg
+                width: 25em
+                height: 25em
 
 
 
 @media ( max-width: 768px )
+    textarea.input__text
+        height: 6.3em
     h1,
     h2
         text-stroke: .5px #000
@@ -3127,6 +3298,64 @@ h1.title__anim
     .map
         iframe
             height: 520em
+    .cookie
+        width: 360em
+        gap: 15em
+        padding: 15em
+        right: 10em
+        bottom: 10em
+        p
+            font-size: 12px
+            line-height: 1.2
+        .btn__brown
+            font-size: 1em
+            padding: 17em 0
+            span
+                font-size: 15em
+                line-height: 1
+    .modal
+        padding: 60em 10em
+        &__close
+            &_style
+                top: 15em
+                right: 15em
+                svg
+                    width: 30em
+                    height: 30em
+        &__wrapper
+            width: 450em
+            padding: 30em 20em
+        &__form
+            margin: 30em 0 0
+            .btn__brown
+                margin: 10em 0 0
+                span
+                    font-size: 17px
+        &__text
+            margin: 30em 0 0
+            p
+                font-size: 14px
+        &__soc
+            margin: 15em 0 0
+            a
+                width: 50em
+                height: 50em
+            svg
+                width: 18em
+                height: 18em
+    .modal-gal
+        padding: 80em 20em 20em
+        &__wrapper
+            gap: 30em
+        &__slider
+            img
+                height: calc( 100vh - 210em )
+        .swiper-button-next,
+        .swiper-button-prev
+            display: none
+
+
+
 
 
 @media ( max-width: 500px )
@@ -3399,7 +3628,10 @@ h1.title__anim
         .container
             grid-template-columns: 100%
             gap: 50em
-
+    .cookie
+        width: 100%
+        right: 0
+        bottom: 0
 
                         
             
