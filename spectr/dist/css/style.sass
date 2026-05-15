@@ -1099,6 +1099,8 @@ textarea.input__text
     display: grid
     grid-template-columns: 1fr
     gap: 10px
+    a.nav-fix__mob
+        display: none
     a
         width: 65px
         height: 65px
@@ -1334,7 +1336,6 @@ textarea.input__text
             line-height: 1.2
             color: #000
     &__item
-        display: grid
         grid-template-columns: 1fr 1fr
         border-bottom: 1px solid $new-bg---main
         display: none
@@ -1405,6 +1406,7 @@ textarea.input__text
 
 .practic
     position: relative
+    z-index: 1
     .container
         position: relative
     &__slider
@@ -1459,7 +1461,6 @@ textarea.input__text
         svg
             width: 20em
             height: 20em
-            padding: 6em 0 0
             path
                 transition: all .3s
         p
@@ -1470,7 +1471,7 @@ textarea.input__text
             color: #000
             transition: all .3s
         span
-            margin: 6px 0 0
+            margin: 6em 0 0
             display: block
             position: relative
             overflow: hidden
@@ -1550,14 +1551,23 @@ textarea.input__text
         line-height: calc( 1.2em - 8px )
 
 .service-table
+    &.active
+        .service-table__item
+            display: grid
+        .service-table__more
+            display: none
     .title
         max-width: 722em
+        &__anim
+            h2
+                b
+                    display: inline-flex
     &__wrapper
         margin: 50em 0 0
         border-radius: 5px
         background: $new-bg---map
     &.active
-        .service-list__item
+        .service-table__item
             display: grid
         .service-list__more
             display: none
@@ -1582,6 +1592,17 @@ textarea.input__text
         grid-template-columns: 330em 1fr 1fr 1fr 1fr
         border-bottom: 1px solid $new-bg---main
         align-items: stretch
+        display: none
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-child(7),
+        &:nth-child(8),
+        &:nth-child(9)
+            display: grid
         &:last-child
             border-bottom: none
         &_block
@@ -1659,6 +1680,7 @@ textarea.input__text
         display: none
 
 .header-practic
+    padding-top: 63px
     h1
         font-size: 65em
         max-width: 14em
@@ -1723,7 +1745,7 @@ textarea.input__text
             text-align: center
             max-width: 100%
             b:nth-child(1) span
-                transition-delay: .4s
+                transition-delay: .2s
     .btn__brown
         margin: 45em auto 0
         width: 100%
@@ -1739,8 +1761,10 @@ textarea.input__text
         max-width: 750em
         h1
             max-width: 100%
+            line-height: calc( 120% - 9px )
         p
             max-width: 100%
+            margin: 25px 0 0
     &+.footer
         margin: 0
     &__btn
@@ -1771,9 +1795,9 @@ textarea.input__text
             path
                 transition: all .3s
             &:hover
-                border-color: $button---hover
+                background: $button---hover
                 path
-                    fill: $button---hover
+                    fill: #FFFFFF
 
 .contact
     .container
@@ -1796,7 +1820,7 @@ textarea.input__text
             font-weight: 400
             font-size: 20px
             line-height: 1.5
-            color: $new-color---text
+            color: #918E85
             &+p
                 font-family: $second-family
                 font-weight: 500
@@ -1872,11 +1896,11 @@ textarea.input__text
         .swiper-button-next
             right: 10em
             svg
-                transform: translateX(2em)
+                transform: translateX(1em)
         .swiper-button-prev
             left: 10em
             svg
-                transform: translateX(-2em)
+                transform: translateX(-1em)
 
 .map
     iframe
@@ -1972,6 +1996,13 @@ textarea.input__text
             height: 65em
             border: 1px solid $new-stroke---icon
             border-radius: 3px
+            transition: all .3s
+            path
+                transition: all .3s
+            &:hover
+                background: $button---hover
+                path
+                    fill: #FFFFFF
         svg
             width: 26em
             height: 26em
@@ -2061,7 +2092,7 @@ textarea.input__text
                 transition: all .3s
             &.swiper-slide-thumb-active
                 &::before
-                    border-color: $new-stroke---point     
+                    border-color: #9D8975
     &__func
         position: absolute
         top: 20em
@@ -2123,10 +2154,65 @@ textarea.input__text
     .btn__brown
         width: 100%
 
+.consult-practic
+    .title__anim
+        h2
+            b
+                display: inline-flex
+                &:nth-child(1)  span
+                    transition-delay: 0.4s !important
+                &:nth-child(2)  span
+                    transition-delay: 0.4s !important
+                &:nth-child(3)  span
+                    transition-delay: 0.6s !important
+        p
+            b
+                &:nth-child(1)  span
+                    transition-delay: 0.8s !important
+                &:nth-child(2)  span
+                    transition-delay: 1s !important
+                &:nth-child(3)  span
+                    transition-delay: 1.2s !important
 
-    
+.consult-answer
+    .title__anim
+        h2
+            b
+                display: inline-flex
+                &:nth-child(1)  span
+                    transition-delay: 0.4s !important
+                &:nth-child(2)  span
+                    transition-delay: 0.4s !important
+                &:nth-child(3)  span
+                    transition-delay: 0.6s !important
+        p
+            b
+                &:nth-child(1)  span
+                    transition-delay: 0.8s !important
+                &:nth-child(2)  span
+                    transition-delay: 1s !important
+                &:nth-child(3)  span
+                    transition-delay: 1.2s !important
 
-
+.practic-list-header
+    .title__anim
+        b
+            display: inline-flex
+            &:nth-child(1)  span
+                transition-delay: 0.4s !important
+            &:nth-child(2)  span
+                transition-delay: 0.4s !important
+    &+.practic
+        .title__anim
+            h2
+                span
+                    transition-delay: 0.6s !important
+            p
+                b
+                    &:nth-child(1)  span
+                        transition-delay: 0.8s !important
+                    &:nth-child(2)  span
+                        transition-delay: 1s !important
 
 
 
@@ -2411,16 +2497,26 @@ textarea.input__text
         background: $new-bg---card
         padding: 20em
         display: grid
-        grid-template-columns: 1fr 60em 60em 60em
+        grid-template-columns: 1fr 60em 60em 60em 60em
         align-items: stretch
         gap: 5em
         transform: translateY(100%)
         transition: all .5s
+        a.nav-fix__mob
+            display: flex
         &.active
             transform: translate(0)
         a
             width: 60em
             height: 60em
+            display: flex
+            justify-content: center
+            align-items: center
+            font-family: $font-family
+            font-weight: 400
+            color: $new-color---white
+            span
+                font-size: 22px
             svg
                 width: 23em
                 height: 23em
@@ -2429,6 +2525,8 @@ textarea.input__text
             display: block
             width: 100%
             height: auto
+            padding-top: 0
+            padding-bottom: 0
     .modal-b1
         display: none
     .header-section
@@ -2437,7 +2535,9 @@ textarea.input__text
             font-size: 105em
         &__har
             div
-                max-width: 239em
+                max-width: 231em
+            p+p
+                letter-spacing: -.02em
     .breadcrumbs
         margin: 0 0 10em
         p
@@ -2490,6 +2590,23 @@ textarea.input__text
         padding: 70em 0 118em
         .header__bg
             bottom: -118em
+        .title__anim
+            h1
+                b
+                    &:nth-child(1)  span
+                        transition-delay: 0.4s !important
+                    &:nth-child(2)  span
+                        transition-delay: 0.6s !important
+                    &:nth-child(3)  span
+                        transition-delay: 0.8s !important
+                    &:nth-child(4)  span
+                        transition-delay: 1s !important
+                    &:nth-child(5)  span
+                        transition-delay: 1.2s !important
+                    &:nth-child(6)  span
+                        transition-delay: 1.4s !important
+                    &:nth-child(7)  span
+                        transition-delay: 1.6s !important
     .service-list
         &__item
             .btn__brown
@@ -2545,7 +2662,25 @@ textarea.input__text
             svg
                 width: 25em
                 height: 25em
-
+    .consult-answer
+        .title__anim
+            h2
+                b
+                    display: inline-flex
+                    &:nth-child(1)  span
+                        transition-delay: 0.4s !important
+                    &:nth-child(2)  span
+                        transition-delay: 0.6s !important
+                    &:nth-child(3)  span
+                        transition-delay: 0.8s !important
+    .practic-list-header
+        .title__anim
+            b
+                display: block
+                &:nth-child(1)  span
+                    transition-delay: 0.4s !important
+                &:nth-child(2)  span
+                    transition-delay: 0.6s !important
 
 
 @media ( max-width: 768px )
@@ -2829,7 +2964,7 @@ textarea.input__text
     .nav-fix
         padding: 10em
         gap: 5em
-        grid-template-columns: 1fr 50em 50em 50em
+        grid-template-columns: 1fr 50em 50em 50em 50em
         a
             width: 50em
             height: 50em
@@ -2970,12 +3105,13 @@ textarea.input__text
             margin: 100em 0 0
             gap: 10em
             div
-                max-width: 188em
+                max-width: 180em
                 gap: 5em
             p
                 font-size: 13em
                 &+p
                     font-size: 22em
+                    letter-spacing: -.03em
     .breadcrumbs
         margin: 0 0 7em
         p
@@ -3119,10 +3255,11 @@ textarea.input__text
             padding: 15em 15em 12em
         &__body
             grid-template-columns: 1fr 17em
+            span
+                margin: 5em 0 0
             svg
                 width: 17em
                 height: 17em
-                padding: 5em 0 0
             p
                 font-size: 22em
                 max-width: 240em
@@ -3154,6 +3291,9 @@ textarea.input__text
             p
                 font-size: 15em
         &__tab
+            scrollbar-width: none
+            &::-webkit-scrollbar
+                display: none
             &_title
                 display: none
                 &.active
@@ -3212,6 +3352,14 @@ textarea.input__text
                     color: $new-color---white
                 span
                     font-size: 13em
+        .title__anim
+            b
+                &:nth-child(1)  span
+                    transition-delay: 0.4s !important
+                &:nth-child(2)  span
+                    transition-delay: 0.4s !important
+                &:nth-child(3)  span
+                    transition-delay: 0.4s !important
     .header-service
         padding: 25em 0 80em
         .breadcrumbs
@@ -3219,7 +3367,7 @@ textarea.input__text
         .header__bg
             bottom: -80em
         &__info
-            max-width: 430em
+            max-width: 420em
             h1
                 max-width: 100%
     .header-practic
@@ -3230,8 +3378,10 @@ textarea.input__text
         .container
             grid-template-columns: 369em 267em
             justify-content: space-between
+            align-items: start
         &__bg
-            height: 100%
+            height: 1px
+            min-height: 100%
             width: 100%
             display: block
             margin: 0 0 0 auto
@@ -3298,6 +3448,7 @@ textarea.input__text
                 line-height: 1.4
                 &+p
                     font-size: 22px
+                    letter-spacing: -0.02em
         &__slider
             img
                 height: 402em
@@ -3372,8 +3523,24 @@ textarea.input__text
         .swiper-button-next,
         .swiper-button-prev
             display: none
-
-
+    .consult-answer
+        .title__anim
+            h2
+                b
+                    &:nth-child(1)  span
+                        transition-delay: 0.4s !important
+                    &:nth-child(2)  span
+                        transition-delay: 0.4s !important
+                    &:nth-child(3)  span
+                        transition-delay: 0.6s !important
+    .practic-list-header
+        .title__anim
+            b
+                display: inline-flex
+                &:nth-child(1)  span
+                    transition-delay: 0.4s !important
+                &:nth-child(2)  span
+                    transition-delay: 0.4s !important
 
 
 
@@ -3527,6 +3694,9 @@ textarea.input__text
                 grid-template-columns: 1fr
                 width: 180em
                 max-height: none
+        &__list
+            &:nth-child(5)
+                grid-column: 1/3
     .nav-fix
         gap: 5em
         .btn__brown
@@ -3576,6 +3746,14 @@ textarea.input__text
         &__title,
         &__item
             grid-template-columns: 220em 1fr
+        .title__anim
+            b
+                &:nth-child(1)  span
+                    transition-delay: 0.4s !important
+                &:nth-child(2)  span
+                    transition-delay: 0.6s !important
+                &:nth-child(3)  span
+                    transition-delay: 0.8s !important
     .direct
         .container
             gap: 26em
@@ -3598,6 +3776,16 @@ textarea.input__text
                 transition-delay: .8s !important
             b:nth-child(5) span
                 transition-delay: 1s !important
+        .header-section__har p
+            span
+                transition-delay: 1s!important
+            &+p span
+                transition-delay: 1.2s!important
+
+        &+.about-service
+            .title__anim
+                span
+                    transition-delay: 1.4s
     .header-section
         &__har
             row-gap: 25em
@@ -3609,12 +3797,14 @@ textarea.input__text
                     order: -1
                     grid-column: 1/3
     .result
+        &__text
+            margin: 25em 0 15em
         .container
             grid-template-columns: 1fr
             gap: 15em
         &__bg
             width: 100%
-            margin: 15em 0 0
+            height: auto
         &__btn
             display: none
             margin: 0
@@ -3652,7 +3842,14 @@ textarea.input__text
         width: 100%
         right: 0
         bottom: 0
-
+    .practic-list-header
+        .title__anim
+            b
+                display: block
+                &:nth-child(1)  span
+                    transition-delay: 0.4s !important
+                &:nth-child(2)  span
+                    transition-delay: 0.6s !important
                         
             
 

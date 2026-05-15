@@ -303,6 +303,8 @@ if(navMenu !== null) {
 
 let service = document.querySelector('.service-list'),
     serviceItem = document.querySelectorAll('.service-list__item'),
+    serviceTable = document.querySelector('.service-table'),
+    serviceTableItem = document.querySelectorAll('.service-table__item'),
     serviceMore = document.querySelector('.service-list__more');
 
 if(service !== null) {
@@ -312,6 +314,16 @@ if(service !== null) {
 
     serviceMore.addEventListener('click', ()=>{
         service.classList.add('active')
+    })    
+}
+
+if(serviceTable !== null) {
+    if(serviceTableItem.length <= 8) {
+        serviceTable.classList.add('active')
+    } 
+
+    serviceMore.addEventListener('click', ()=>{
+        serviceTable.classList.add('active')
     })    
 }
 
@@ -365,11 +377,13 @@ if(modal !== null) {
 }
 
 let modalGal = document.querySelector('.modal-gal'),
-    modalGalBtn = document.querySelectorAll('.modal-gal__call');
+    modalGalBtn = document.querySelectorAll('.modal-gal__call'),
+    modalGalScroll = 0;
 
 if(modalGalBtn !== null) {
     modalGalBtn.forEach((item)=>{
         item.addEventListener('click', ()=>{
+            modalGalScroll = document.documentElement.scrollTop;
             modalGal.classList.add('active')
             document.body.classList.add('fix')
         })
