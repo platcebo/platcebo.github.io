@@ -1,0 +1,20 @@
+.nav__link.current-menu-item a,
+.nav__link a.current-menu-item,
+.nav-dop.current-menu-ancestor .nav-dop__btn p,
+.nav-dop__wrapper li.current-menu-item a,
+.nav-dop__wrapper a.current-menu-item,
+.footer__drop.current-menu-ancestor > p,
+.footer__drop ol li.current-menu-item a,
+.footer__drop ol a.current-menu-item,
+.nav-menu__list > li.current-menu-item > a,
+.nav-menu__list > li.current-menu-ancestor > .nav-dop-js__btn p,
+.nav-menu__list ol li.current-menu-item a,
+.nav-menu__list ol a.current-menu-item {
+	color: #8d765f;
+}
+
+.footer__drop.current-menu-ancestor > svg path,
+.nav-dop.current-menu-ancestor .nav-dop__btn svg path,
+.nav-menu__list > li.current-menu-ancestor .nav-dop-js__btn svg path {
+	fill: #8d765f;
+}

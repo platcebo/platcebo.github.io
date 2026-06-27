@@ -241,6 +241,7 @@ section
                 top: 50%
                 left: 50%
                 transform: translate(-50%,70px)
+                color: $new-color---white
         &:hover
             background: $button---hover
             border: 1px solid $button---hover
@@ -356,7 +357,7 @@ h1.title__anim
 .nav
     position: sticky
     top: -100%
-    z-index: 6
+    z-index: 7
     transition: all .4s
     margin: 0 0 -1px
     &__overflow
@@ -402,10 +403,10 @@ h1.title__anim
         path
             transition: all .3s
             fill: $color---text-header
-        .modal-consult__call
+        .modal-phone__call
             margin: 0 0 0 auto
             cursor: pointer
-        .modal-consult__call,
+        .modal-phone__call,
         a
             &:hover
                 path,
@@ -522,6 +523,8 @@ h1.title__anim
                 margin: 0 0 0 auto
                 display: block
                 border-radius: 5px
+                object-fit: contain
+                object-position: right
         &.active
             .nav-dop
                 &__wrapper
@@ -640,11 +643,12 @@ h1.title__anim
 textarea.input__text
     resize: none
     height: 7em
+    line-height: 1.5
 
 .input
     &__text
         border-radius: 5px
-        padding: 23px 25px
+        padding: 19px 21px
         width: 100%
         box-sizing: border-box
         background: $new-color---white
@@ -654,22 +658,23 @@ textarea.input__text
         line-height: 1
         color: #000
         border: none
+        transition: all .3s
+        border: solid 2px $new-color---white
         &::placeholder
             color: $new-input---inactive
+        &.wpcf7-not-valid
+            border: solid 2px #FF0000
     &__select
         position: relative
         input
             border-radius: 5px
-            padding: 23px 25px
             width: 100%
             box-sizing: border-box
             background: $new-color---white
             font-family: $font-family
             font-weight: 500
-            font-size: 20px
             line-height: 1
             color: #000
-            border: none
             cursor: pointer
             &::placeholder
                 color: $new-input---inactive
@@ -678,6 +683,8 @@ textarea.input__text
             top: 50%
             transform: translateY(-50%)
             position: absolute
+            width: 13px
+            height: 13px
         ul
             position: absolute
             z-index: 2
@@ -721,6 +728,7 @@ textarea.input__text
             justify-content: center
             align-items: center
             cursor: pointer
+            transition: all .3s
             &::before
                 content: ''
                 display: block
@@ -736,6 +744,7 @@ textarea.input__text
             font-size: 16px
             line-height: 1.3
             color: $new-color---policy
+            transition: all .3s
         a
             text-decoration: underline
             text-decoration-skip-ink: none
@@ -751,6 +760,12 @@ textarea.input__text
                 &+b
                     &::before
                         opacity: 1
+        &.input__check_error
+            p,
+            a
+                color: #FF0000
+            b
+                border-color: #FF0000
         &:has(input:checked)
             b
                 &::before
@@ -775,6 +790,9 @@ textarea.input__text
                 margin: 10px 0 0
             &__check
                 margin: 15px 0 0
+            &__select
+                input
+                    margin: 0
         .btn__brown
             margin: 25px 0 0
             width: 100%
@@ -902,7 +920,7 @@ textarea.input__text
             transform-origin: 50% 0 
             transform: scale(1.5)
             object-fit: cover
-            transition-delay: .5s
+            transition-delay: .2s
         &.is-visible
             height: 100%
             img
@@ -1001,7 +1019,7 @@ textarea.input__text
             .un
                 text-decoration: underline
                 text-decoration-skip-ink: none
-            .modal-consult__call
+            .modal-phone__call
                 margin: 18px 0 0
                 transition: all .3s
                 cursor: pointer
@@ -1074,20 +1092,10 @@ textarea.input__text
             a
                 display: inline
 
-.modal-b1
-    width: 66px
-    height: 66px
-    position: fixed
-    z-index: 5
-    border: 6px solid #D9CFBF
-    background: #a18161
-    border-radius: 100%
-    display: flex
-    justify-content: center
-    align-items: center
-    bottom: 15px
-    left: 15px
-    cursor: pointer
+.b24-widget-button-position-bottom-left
+    bottom: 15px !important
+    left: 15px !important
+    z-index: 6 !important
     
 .nav-fix
     position: fixed
@@ -1110,6 +1118,13 @@ textarea.input__text
         display: flex
         justify-content: center
         align-items: center
+        span
+            font-size: 24em
+            line-height: 1
+            color: #fff
+        svg
+            width: 26em
+            height: 26em
         &:hover
             background: $button---hover
     .btn__brown
@@ -1165,7 +1180,7 @@ textarea.input__text
     font-weight: 400
     line-height: 1.3
     color: $color---text-header
-    margin: 0 0 10px
+    margin: 0 0 13px
     position: relative
     overflow: hidden
     text-overflow: ellipsis
@@ -1192,6 +1207,7 @@ textarea.input__text
         display: grid
         grid-template-columns: 1fr 1fr
         gap: 20px
+        align-items: start
     &__wrapper
         padding: 15px 0 0
         p,
@@ -1240,6 +1256,7 @@ textarea.input__text
         display: grid
         grid-template-columns: 1fr 1fr
         gap: 0
+        z-index: 2
         .swiper-button-next,
         .swiper-button-prev
             position: relative
@@ -1295,7 +1312,7 @@ textarea.input__text
             font-size: 28px
             line-height: 1.2
             color: #000
-            max-width: calc( 100% - 35px )
+            max-width: calc( 100% - 55px )
             margin: 0 0 auto
             &+p
                 font-family: $font-family
@@ -1356,6 +1373,7 @@ textarea.input__text
             display: flex
             justify-content: space-between
             align-items: center
+            gap: 10px
             &+.service-list__item_block
                 border-left: 1px solid $new-bg---main
         p
@@ -1455,7 +1473,7 @@ textarea.input__text
     &__body
         display: grid
         grid-template-columns: 1fr 20em
-        gap: 10em
+        gap: 30em
         align-items: start
         margin: 0 0 auto
         svg
@@ -1506,9 +1524,24 @@ textarea.input__text
         display: flex
         flex-direction: column
         padding: 25em
-        transition: all .3s
+        z-index: 2
+        position: relative
+        overflow: hidden
+        // transition: all .3s
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            z-index: -1
+            width: 100%
+            height: 100%
+            background: $new-bg---card
+            transition: all .3s
         &:hover
-            background: $new-color---main
+            &::before
+                background: $new-color---main
             .practic
                 &__body
                     p
@@ -1541,12 +1574,23 @@ textarea.input__text
             display: grid
             grid-template-columns: 1fr
             gap: 18em
-        p
+        p,
+        ol,
+        ul
             font-family: $font-family
             font-weight: 400
             font-size: 20em
             line-height: 1.5
             color: $new-color---text
+            strong
+                font-weight: 700
+        ol
+            list-style: decimal
+            padding: 0 0 0 1.5em
+        ul
+            list-style: disc
+            padding: 0 0 0 1.5em
+
     h2
         line-height: calc( 1.2em - 8px )
 
@@ -1664,10 +1708,10 @@ textarea.input__text
             div
                 opacity: 1
     .btn__brown
-        margin: 1.2em 0 0
+        margin: .8em 0 0
         width: 100%
     &__text
-        max-width: 402em
+        max-width: 385em
         margin: 15em auto 0
         p
             font-family: $font-family
@@ -1693,14 +1737,25 @@ textarea.input__text
         align-items: end
     &__info
         max-width: 590em
+        align-self: start
     &__text
         margin: 40em 0 0
-        p
+        p,
+        ol,
+        ul
             font-family: $font-family
             font-weight: 400
             font-size: 20em
             line-height: 1.5
             color: $new-color---text
+            strong
+                font-weight: 700
+        ol
+            list-style: decimal
+            padding: 0 0 0 1.5em
+        ul
+            list-style: disc
+            padding: 0 0 0 1.5em
     &__btn
         margin: 50em 0 0
         max-width: 310em
@@ -1716,6 +1771,7 @@ textarea.input__text
     &__bg
         width: 100%
         cursor: pointer
+        align-self: start
 
 .header-service
     padding: 62em 0 129em
@@ -1764,7 +1820,7 @@ textarea.input__text
             line-height: calc( 120% - 9px )
         p
             max-width: 100%
-            margin: 25px 0 0
+            margin: 18px 0 0
     &+.footer
         margin: 0
     &__btn
@@ -1832,8 +1888,33 @@ textarea.input__text
             color: #000
             text-decoration: underline
             text-decoration-skip-ink: none
-            &+a
+            transition: all .3s ease
+            display: block
+            transition-delay: 0s !important
+            &:hover
+                color: #8d765f
+            span
+                transition-delay: 0s !important
+                transition: all .3s !important
+        b
+            i
+                opacity: 0
+                transform: translateY(20px)
+                transition: all .6s ease
+                display: block
+                transition-delay: .6s
+            &+b
                 margin: .35em 0 0
+                i
+                    transition-delay: .8s
+                &+b
+                    i
+                        transition-delay: 1s
+        .title__anim.is-visible
+            b
+                i
+                    opacity: 1
+                    transform: translate(0)
     &__thumb
         margin: 10em 0 0
         .swiper-slide
@@ -1924,6 +2005,8 @@ textarea.input__text
     opacity: 0
     pointer-events: none
     transition: all .3s
+    .title p
+        margin: 18px 0
     &__overflow
         content: ''
         display: block
@@ -2004,8 +2087,8 @@ textarea.input__text
                 path
                     fill: #FFFFFF
         svg
-            width: 26em
-            height: 26em
+            width: 26px
+            height: 26px
 
 .modal-gal
     padding: 200em 20em 30em
@@ -2198,22 +2281,39 @@ textarea.input__text
     .title__anim
         b
             display: inline-flex
-            &:nth-child(1)  span
-                transition-delay: 0.4s !important
-            &:nth-child(2)  span
-                transition-delay: 0.4s !important
     &+.practic
         .title__anim
             h2
                 span
-                    transition-delay: 0.6s !important
+                    transition-delay: 0.8s !important
             p
                 b
                     &:nth-child(1)  span
-                        transition-delay: 0.8s !important
-                    &:nth-child(2)  span
                         transition-delay: 1s !important
+                    &:nth-child(2)  span
+                        transition-delay: 1.2s !important
 
+.policy-header
+    h1.title__anim
+        b
+            display: inline-block
+    
+.policy-content
+    padding: 180em 0
+    &+.footer
+        margin: 0
+    p
+        font-family: $font-family
+        font-weight: 700
+        font-size: 20em
+        line-height: 1.5
+        font-weight: 400
+        color: $new-color---text
+        b
+            font-weight: 700
+
+.wpcf7-response-output
+    display: none !important
 
 
 
@@ -2346,13 +2446,10 @@ textarea.input__text
             padding: 70em 20em 80em
     .input
         &__text
-            padding: 1.25em 1.25em
+            padding: 1em 1em
             font-size: 20em
         &__select
             position: relative
-            input
-                padding: 1.25em 1.25em
-                font-size: 20em
             svg
                 right: 25em
             ul
@@ -2457,7 +2554,7 @@ textarea.input__text
                     font-size: 20em
                     p
                         margin: 0
-                .modal-consult__call
+                .modal-phone__call
                     margin: 1.5em 0 0
         &__drop
             gap: 7em
@@ -2506,6 +2603,8 @@ textarea.input__text
             display: flex
         &.active
             transform: translate(0)
+        &__thanks
+            transform: translate(0)
         a
             width: 60em
             height: 60em
@@ -2516,7 +2615,7 @@ textarea.input__text
             font-weight: 400
             color: $new-color---white
             span
-                font-size: 22px
+                font-size: 23em
             svg
                 width: 23em
                 height: 23em
@@ -2527,8 +2626,9 @@ textarea.input__text
             height: auto
             padding-top: 0
             padding-bottom: 0
-    .modal-b1
-        display: none
+    .b24-widget-button-position-bottom-left
+        left: 10em !important
+        bottom: 70em !important
     .header-section
         padding: 133em 0 60em
         h1
@@ -2641,6 +2741,9 @@ textarea.input__text
         &__thumb
             img
                 height: 100em
+        &__info
+            p+p
+                font-size: 28em
     .cookie
         width: calc( 100% - 40em )
     .modal-gal
@@ -2673,15 +2776,31 @@ textarea.input__text
                         transition-delay: 0.6s !important
                     &:nth-child(3)  span
                         transition-delay: 0.8s !important
-    .practic-list-header
-        .title__anim
+            p
+                b
+                    &:nth-child(1)  span
+                        transition-delay: 1s !important
+                    &:nth-child(2)  span
+                        transition-delay: 1.2s !important
+                    &:nth-child(3)  span
+                        transition-delay: 1.4s !important
+    .policy-header
+        h1.title__anim
             b
-                display: block
                 &:nth-child(1)  span
                     transition-delay: 0.4s !important
                 &:nth-child(2)  span
                     transition-delay: 0.6s !important
-
+                &:nth-child(3)  span
+                    transition-delay: 0.8s !important
+                &:nth-child(4)  span
+                    transition-delay: 1s !important
+    .practic
+        position: relative
+        overflow: hidden
+        &__slider
+            overflow: visible   
+            margin: 30em 0 0
 
 @media ( max-width: 768px )
     textarea.input__text
@@ -2701,7 +2820,7 @@ textarea.input__text
     .container
         padding: 0 10em
     .nav
-        z-index: 100
+        z-index: 90
         &__overflow
             display: none
         &-info
@@ -2750,7 +2869,7 @@ textarea.input__text
         //             &::after
         //                 animation: navHumA 1s reverse forwards
         &.open
-            z-index: 150
+            z-index: 95
             top: 0 !important
             .nav
                 &__container
@@ -2819,8 +2938,9 @@ textarea.input__text
             gap: 10em
     .input
         &__text
-            padding: 1.4em 1.4em
+            padding: 1.35em 1.35em
             font-size: 17em
+            border-width: 1px
         &__select
             input
                 padding: 1.4em 1.4em
@@ -2930,7 +3050,7 @@ textarea.input__text
                     font-size: 15em
                     p
                         margin: 0
-                .modal-consult__call
+                .modal-phone__call
                     margin: 0em 0 0
         &__drop
             gap: 7em
@@ -2971,6 +3091,8 @@ textarea.input__text
             svg
                 width: 20em
                 height: 20em
+            span
+                font-size: 20em
         .btn__brown
             font-size: 15em
     .nav-menu
@@ -2988,7 +3110,7 @@ textarea.input__text
         left: 0
         background: $new-bg---main
         transform: translateY(-100%)
-        transition: all .3s
+        transition: all .6s
         z-index: 90
         &__row
             display: flex
@@ -3032,7 +3154,7 @@ textarea.input__text
                         transform: rotate(180deg) translateY(50%)
                     ol
                         padding: 5em 20em 24em
-                        max-height: 300em
+                        max-height: 400em
             a
                 display: block
                 width: 100%
@@ -3148,7 +3270,7 @@ textarea.input__text
             width: calc( (100vw - 48px) / 2 )
             p
                 font-size: 22em
-                max-width: calc( 100% - 25em )
+                max-width: calc( 100% - 2em )
                 &+p
                     font-size: 15em
                     max-width: 100%
@@ -3215,7 +3337,7 @@ textarea.input__text
                 span
                     font-size: 15em
         .btn__gray
-            margin: 0.8em 0 0
+            margin: 0.9em 0 0
     .practic
         position: relative  
         overflow: hidden
@@ -3279,9 +3401,13 @@ textarea.input__text
             gap: 15em
             div
                 gap: 15em
-            p
+            p,
+            ol,
+            ul
                 font-size: 15em
     .service-table
+        .btn__brown
+            margin: 0.58em 0 0
         &__wrapper
             margin: 30em 0 0
         &__title
@@ -3374,6 +3500,8 @@ textarea.input__text
         padding: 30em 0 20em
         h1
             font-size: 35em
+        .breadcrumbs
+            margin: 0 0 14em
     .result
         .container
             grid-template-columns: 369em 267em
@@ -3411,6 +3539,8 @@ textarea.input__text
         padding: 49em 0 102em
         .title__anim
             max-width: 390em
+            p
+                margin: 1.4em 0 0
         h1.title__anim_more
             b
                 display: inline-block
@@ -3444,10 +3574,10 @@ textarea.input__text
             grid-template-columns: 1fr calc( 50% - 5em )
         &__info
             p
-                font-size: 13px
+                font-size: 13em
                 line-height: 1.4
                 &+p
-                    font-size: 22px
+                    font-size: 22em
                     letter-spacing: -0.02em
         &__slider
             img
@@ -3485,6 +3615,7 @@ textarea.input__text
                 line-height: 1
     .modal
         padding: 60em 10em
+        max-height: 100%
         &__close
             &_style
                 top: 15em
@@ -3500,19 +3631,19 @@ textarea.input__text
             .btn__brown
                 margin: 10em 0 0
                 span
-                    font-size: 17px
+                    font-size: 17em
         &__text
             margin: 30em 0 0
             p
-                font-size: 14px
+                font-size: 14em
         &__soc
             margin: 15em 0 0
             a
                 width: 50em
                 height: 50em
             svg
-                width: 18em
-                height: 18em
+                width: 18px
+                height: 18px
     .modal-gal
         padding: 80em 20em 20em
         &__wrapper
@@ -3533,16 +3664,33 @@ textarea.input__text
                         transition-delay: 0.4s !important
                     &:nth-child(3)  span
                         transition-delay: 0.6s !important
+            p
+                b
+                    &:nth-child(1)  span
+                        transition-delay: .8s !important
+                    &:nth-child(2)  span
+                        transition-delay: 1s !important
+                    &:nth-child(3)  span
+                        transition-delay: 1.2s !important
     .practic-list-header
         .title__anim
             b
                 display: inline-flex
+    .policy-header
+        h1.title__anim
+            b
                 &:nth-child(1)  span
                     transition-delay: 0.4s !important
                 &:nth-child(2)  span
                     transition-delay: 0.4s !important
-
-
+                &:nth-child(3)  span
+                    transition-delay: 0.6s !important
+                &:nth-child(4)  span
+                    transition-delay: .6s !important
+    .policy-content
+        padding: 100em 0
+        p
+            font-size: 15px       
 
 @media ( max-width: 500px )
     .title__anim
@@ -3598,6 +3746,8 @@ textarea.input__text
         &__wrapper
             grid-template-columns: 1fr
     .consult
+        .input__select input 
+            margin: 0
         .container
             padding: 40em 10em
             grid-template-columns: 1fr
@@ -3697,11 +3847,21 @@ textarea.input__text
         &__list
             &:nth-child(5)
                 grid-column: 1/3
+            ul
+                li
+                    line-height: 1.2
+                    &.un
+                        line-height: 1.4
     .nav-fix
         gap: 5em
         .btn__brown
             padding: 1em 0
             min-width: auto
+        &__mob
+            span
+                margin: -0.3em 0 0
+        a span
+            margin: -0.3em 0 0
     .nav-menu
         &__list
             margin: 60em 0 auto
@@ -3716,13 +3876,18 @@ textarea.input__text
         &__item
             width: calc( 100vw - 40px )
     .service-list
+        &__title
+            grid-template-columns: 7fr 5fr
         &__item
             align-items: start
+            grid-template-columns: 7fr 5fr
             &_block
                 gap: 10em
         &__mob
             flex-direction: column
             align-items: start
+            min-height: 100%
+            justify-content: start
             .btn__brown
                 font-size: 1em
                 padding: 15em 0
@@ -3742,6 +3907,8 @@ textarea.input__text
             height: 230em
         &__wrapper
             grid-template-columns: 1fr
+        &__body
+            gap: 20em
     .service-table
         &__title,
         &__item
@@ -3834,10 +4001,16 @@ textarea.input__text
             a
                 width: 110em
                 height: 67em
+    .page-error
+        .title__anim h1+p b:nth-child(1) span
+            transition-delay: .6s !important
     .contact
         .container
             grid-template-columns: 100%
             gap: 50em
+        &__info
+            div
+                gap: 11em
     .cookie
         width: 100%
         right: 0
@@ -3850,7 +4023,23 @@ textarea.input__text
                     transition-delay: 0.4s !important
                 &:nth-child(2)  span
                     transition-delay: 0.6s !important
-                        
+                &:nth-child(3)  span
+                    transition-delay: 0.8s !important
+                &:nth-child(4)  span
+                    transition-delay: 1s !important
+                &:nth-child(5)  span
+                    transition-delay: 1.2s !important
+    .policy-header
+        h1.title__anim
+            b
+                &:nth-child(1)  span
+                    transition-delay: 0.4s !important
+                &:nth-child(2)  span
+                    transition-delay: 0.6s !important
+                &:nth-child(3)  span
+                    transition-delay: 0.8s !important
+                &:nth-child(4)  span
+                    transition-delay: 1s !important                       
             
 
 

@@ -132,42 +132,81 @@ aboutImg.forEach(block => observer.observe(block));
 statItem.forEach(block => observer.observe(block));
 mapItem.forEach(block => observer.observe(block));
 
-[].forEach.call( document.querySelectorAll('input.wpcf7-tel'), function(input) {
-    var keyCode;
+[].forEach.call(document.querySelectorAll("input.wpcf7-tel"), function (input) {
+    function normalizeDigits(value) {
+        var digits = value.replace(/\D/g, "");
+
+        if (value.trim().indexOf("+7") === 0) {
+            digits = digits.slice(1);
+        } else if (digits.length > 10 && (digits.charAt(0) === "7" || digits.charAt(0) === "8")) {
+            digits = digits.slice(1);
+        }
+
+        return digits.slice(0, 10);
+    }
+
+    function formatPhoneValue(digits) {
+        if (!digits.length) {
+            return "";
+        }
+
+        var value = "+7";
+        var firstBlock = digits.slice(0, 3);
+        var secondBlock = digits.slice(3, 6);
+        var thirdBlock = digits.slice(6, 8);
+        var fourthBlock = digits.slice(8, 10);
+
+        if (firstBlock.length) {
+            value += " (" + firstBlock;
+
+            if (firstBlock.length === 3) {
+                value += ")";
+            }
+        }
+
+        if (secondBlock.length) {
+            value += secondBlock;
+        }
+
+        if (thirdBlock.length) {
+            value += "-" + thirdBlock;
+        }
+
+        if (fourthBlock.length) {
+            value += "-" + fourthBlock;
+        }
+
+        return value;
+    }
+
     function mask(event) {
-        event.keyCode && (keyCode = event.keyCode);
-        var pos = this.selectionStart;
-        if (pos < 3) event.preventDefault();
-        var matrix = "+7 (___) ___-__-__",
-            i = 0,
-            def = matrix.replace(/\D/g, ""),
-            val = this.value.replace(/\D/g, ""),
-            new_value = matrix.replace(/[_\d]/g, function(a) {
-                return i < val.length ? val.charAt(i++) : a
-            });
-        i = new_value.indexOf("_");
-        if (i != -1) {
-            i < 5 && (i = 3);
-            new_value = new_value.slice(0, i)
+        var rawValue = this.value;
+        var digits = normalizeDigits(rawValue);
+        var previousDigits = this.dataset.previousDigits || "";
+        var previousValue = this.dataset.previousValue || "";
+        var inputType = event && event.inputType ? event.inputType : "";
+
+        if (
+            inputType === "deleteContentBackward" &&
+            digits === previousDigits &&
+            rawValue.length < previousValue.length
+        ) {
+            digits = digits.slice(0, -1);
         }
-        var reg = matrix.substr(0, this.value.length).replace(/_+/g,
-            function(a) {
-                return "\\d{1," + a.length + "}"
-            }).replace(/[+()]/g, "\\$&");
-        reg = new RegExp("^" + reg + "$");
-        if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) {
-        this.value = new_value;
-        }
-        if (event.type == "blur" && this.value.length < 5) {
+
+        this.value = formatPhoneValue(digits);
+        this.dataset.previousDigits = digits;
+        this.dataset.previousValue = this.value;
+
+        if (event.type === "blur" && !digits.length) {
             this.value = "";
+            this.dataset.previousDigits = "";
+            this.dataset.previousValue = "";
         }
     }
 
     input.addEventListener("input", mask, false);
-    input.addEventListener("focus", mask, false);
     input.addEventListener("blur", mask, false);
-    input.addEventListener("keydown", mask, false);
-
 });
 
 const selects = document.querySelectorAll(".input__select");
@@ -390,12 +429,52 @@ if(modalGalBtn !== null) {
     })
 }
 
+let modalPhone = document.querySelector('.modal-phone'),
+    modalPhoneBtn = document.querySelectorAll('.modal-phone__call');
+
+if(modalPhoneBtn !== null) {
+    modalPhoneBtn.forEach((item)=>{
+        item.addEventListener('click', (e)=>{
+            e.preventDefault();
+            modalPhone.classList.add('active')
+            document.body.classList.add('fix')
+        })
+    })
+}
+
+let modalBid = document.querySelector('.modal-bid'),
+    modalBidBtn = document.querySelectorAll('.modal-bid__call');
+
+if(modalBidBtn !== null) {
+    modalBidBtn.forEach((item)=>{
+        item.addEventListener('click', (e)=>{
+            e.preventDefault();
+            modalBid.classList.add('active')
+            document.body.classList.add('fix')
+        })
+    })
+}
+
+let modalCost = document.querySelector('.modal-cost'),
+    modalCostBtn = document.querySelectorAll('.modal-cost__call');
+
+if(modalCostBtn !== null) {
+    modalCostBtn.forEach((item)=>{
+        item.addEventListener('click', (e)=>{
+            e.preventDefault();
+            modalCost.classList.add('active')
+            document.body.classList.add('fix')
+        })
+    })
+}
+
 let modalCons = document.querySelector('.modal-consult'),
     modalConsBtn = document.querySelectorAll('.modal-consult__call');
 
 if(modalConsBtn !== null) {
     modalConsBtn.forEach((item)=>{
-        item.addEventListener('click', ()=>{
+        item.addEventListener('click', (e)=>{
+            e.preventDefault();
             modalCons.classList.add('active')
             document.body.classList.add('fix')
         })
